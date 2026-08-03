@@ -1,0 +1,44 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import { localePath } from '../lib/urls';
+import { LANGUAGE_META, SITE, SUPPORTED_LOCALES } from '../site.config';
+
+const descriptions = {
+  ru: 'Перейти к русской версии',
+  kk: 'Қазақша нұсқаға өту',
+  en: 'Continue to the English version',
+} as const;
+---
+
+<BaseLayout
+  title={`${SITE.umbrellaName} — language selection`}
+  description="Choose the Russian, Kazakh, or English version of Autism Hub Kazakhstan."
+>
+  <section class="language-landing">
+    <div class="container">
+      <div class="language-landing__intro">
+        <p class="eyebrow">{SITE.umbrellaName}</p>
+        <h1>Choose your language</h1>
+        <p>
+          Autism Hub Kazakhstan is being prepared in Russian, Kazakh, and English.
+          Select a language to view the current technical version.
+        </p>
+      </div>
+
+      <div class="language-cards" aria-label="Available languages">
+        {
+          SUPPORTED_LOCALES.map((locale) => (
+            <a
+              class="language-card"
+              href={localePath(locale)}
+              lang={LANGUAGE_META[locale].htmlLang}
+            >
+              <strong>{LANGUAGE_META[locale].label}</strong>
+              <span>{descriptions[locale]} →</span>
+            </a>
+          ))
+        }
+      </div>
+    </div>
+  </section>
+</BaseLayout>

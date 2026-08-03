@@ -1,0 +1,32 @@
+---
+interface Props {
+  href: string;
+  title: string;
+  description: string;
+  number: string;
+  variant?: 'large' | 'medium' | 'compact';
+  tone?: 'parents' | 'help' | 'research' | 'learning' | 'neutral';
+}
+
+const {
+  href,
+  title,
+  description,
+  number,
+  variant = 'medium',
+  tone = 'neutral',
+} = Astro.props;
+---
+
+<article
+  class:list={[
+    'section-card',
+    `section-card--${variant}`,
+    `section-card--${tone}`,
+  ]}
+>
+  <span class="section-card__number" aria-hidden="true">{number}</span>
+  <h3><a href={href}>{title}</a></h3>
+  <p>{description}</p>
+  <span class="section-card__arrow" aria-hidden="true">→</span>
+</article>

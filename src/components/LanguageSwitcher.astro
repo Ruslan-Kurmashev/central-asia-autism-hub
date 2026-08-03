@@ -1,0 +1,51 @@
+---
+import { UI } from '../i18n/ui';
+import { CONTENT_UI } from '../i18n/content';
+import { localePath } from '../lib/urls';
+import { LANGUAGE_META, type Locale } from '../site.config';
+
+interface Props {
+  current: Locale;
+  path?: string;
+  paths?: Partial<Record<Locale, string>>;
+}
+
+const { current, path = '', paths } = Astro.props;
+
+const compactLanguageLabel: Record<Locale, string> = {
+  kk: 'ҚАЗ',
+  ru: 'РУС',
+  en: 'ENG',
+};
+
+const languageOrder: Locale[] = ['kk', 'ru', 'en'];
+---
+
+<nav class="language-switcher" aria-label={UI[current].languageNavigation}>
+  <span class="language-switcher__label">{UI[current].languageLabel}</span>
+  <ul>
+    {
+      languageOrder.map((locale) => {
+        const translationMissing = Boolean(paths && !paths[locale]);
+        const label = translationMissing
+          ? `${LANGUAGE_META[locale].label} — ${CONTENT_UI[current].translationUnavailable}`
+          : LANGUAGE_META[locale].label;
+
+        return (
+          <li>
+            <a
+              href={localePath(locale, paths?.[locale] ?? path)}
+              lang={LANGUAGE_META[locale].htmlLang}
+              aria-label={label}
+              title={label}
+              aria-current={locale === current ? 'page' : undefined}
+              data-translation-missing={translationMissing ? '' : undefined}
+            >
+              {compactLanguageLabel[locale]}
+            </a>
+          </li>
+        );
+      })
+    }
+  </ul>
+</nav>

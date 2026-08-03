@@ -1,0 +1,129 @@
+---
+import SectionCard from '../../../components/SectionCard.astro';
+import { UI } from '../../../i18n/ui';
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+import { sectionPath } from '../../../lib/urls';
+import {
+  SITE,
+  SUPPORTED_LOCALES,
+  type Locale,
+  type Section,
+} from '../../../site.config';
+
+export function getStaticPaths() {
+  return SUPPORTED_LOCALES.map((locale) => ({
+    params: { lang: locale },
+    props: { locale },
+  }));
+}
+
+interface Props {
+  locale: Locale;
+}
+
+const { locale } = Astro.props;
+const copy = UI[locale];
+
+const homeSections: Array<{
+  section: Section;
+  variant: 'large' | 'medium' | 'compact';
+  tone: 'parents' | 'help' | 'research' | 'learning' | 'neutral';
+}> = [
+  { section: 'parents', variant: 'large', tone: 'parents' },
+  { section: 'help-kazakhstan', variant: 'large', tone: 'help' },
+  { section: 'research', variant: 'medium', tone: 'research' },
+  { section: 'learning', variant: 'medium', tone: 'learning' },
+  { section: 'professionals', variant: 'compact', tone: 'neutral' },
+  { section: 'about', variant: 'compact', tone: 'neutral' },
+];
+
+const parentsPath = sectionPath(locale, 'parents');
+---
+
+<BaseLayout
+  title={`${SITE.name} — ${copy.eyebrow}`}
+  description={copy.lead}
+  locale={locale}
+>
+  <div class="beta-strip" role="status">
+    <div class="container beta-strip__inner">
+      <strong>{copy.statusTitle}</strong>
+      <span>{copy.statusText}</span>
+    </div>
+  </div>
+
+  <section class="hero">
+    <div class="container hero__layout">
+      <div class="hero__content">
+        <p class="eyebrow">{copy.eyebrow}</p>
+        <h1>{copy.title}</h1>
+        <p class="hero__lead">{copy.lead}</p>
+
+        <div class="hero__actions">
+          <a class="button button--primary" href={`${parentsPath}#autism-basics`}>
+            {copy.heroPrimaryAction}
+          </a>
+          <a class="button button--secondary" href={parentsPath}>
+            {copy.heroSecondaryAction}
+          </a>
+          <a class="hero__professional-link" href={sectionPath(locale, 'professionals')}>
+            {copy.heroProfessionalAction} <span aria-hidden="true">→</span>
+          </a>
+        </div>
+
+        <ul class="hero__points" aria-label={copy.eyebrow}>
+          {copy.heroPoints.map((point) => <li>{point}</li>)}
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section class="section-grid-wrap" aria-labelledby="sections-title">
+    <div class="container">
+      <div class="section-intro">
+        <h2 id="sections-title">{copy.exploreTitle}</h2>
+        <p>{copy.exploreText}</p>
+      </div>
+
+      <div class="section-grid section-grid--hierarchical">
+        {
+          homeSections.map(({ section, variant, tone }, index) => (
+            <SectionCard
+              href={sectionPath(locale, section)}
+              title={copy.sections[section].title}
+              description={copy.sections[section].description}
+              number={String(index + 1).padStart(2, '0')}
+              variant={variant}
+              tone={tone}
+            />
+          ))
+        }
+      </div>
+    </div>
+  </section>
+
+  <section class="principles-section" aria-labelledby="principles-title">
+    <div class="container principles-layout">
+      <div class="principles-heading">
+        <p class="eyebrow">{SITE.umbrellaName}</p>
+        <h2 id="principles-title">{copy.principlesTitle}</h2>
+        <p>{copy.principlesText}</p>
+      </div>
+
+      <div class="principles-list">
+        {
+          copy.principles.map((principle, index) => (
+            <article class="principle-item">
+              <span aria-hidden="true">{String(index + 1).padStart(2, '0')}</span>
+              <div>
+                <h3>{principle.title}</h3>
+                <p>{principle.description}</p>
+              </div>
+            </article>
+          ))
+        }
+        <p class="principles-boundary">{copy.principlesBoundary}</p>
+      </div>
+    </div>
+  </section>
+</BaseLayout>

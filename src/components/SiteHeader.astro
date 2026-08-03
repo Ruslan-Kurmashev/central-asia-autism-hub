@@ -1,0 +1,54 @@
+---
+import { UI } from '../i18n/ui';
+import { localePath, sectionPath, sitePath } from '../lib/urls';
+import { SECTIONS, SITE, type Locale, type Section } from '../site.config';
+import LanguageSwitcher from './LanguageSwitcher.astro';
+
+interface Props {
+  locale?: Locale;
+  currentSection?: Section;
+  alternatePath?: string;
+  alternatePaths?: Partial<Record<Locale, string>>;
+}
+
+const { locale, currentSection, alternatePath = '', alternatePaths } = Astro.props;
+const homeHref = locale ? localePath(locale) : sitePath();
+---
+
+<header class="site-header">
+  <div class="site-header__top container">
+    <a class="brand" href={homeHref} aria-label={SITE.name}>
+      <span class="brand__symbol" aria-hidden="true">CA</span>
+      <span class="brand__text">
+        <span class="brand__name">{SITE.name}</span>
+        <span class="brand__parent">{SITE.umbrellaName}</span>
+      </span>
+    </a>
+
+    {
+      locale && (
+        <div class="site-header__controls">
+          <LanguageSwitcher
+            current={locale}
+            path={alternatePath}
+            paths={alternatePaths}
+          />
+          <nav class="primary-nav" aria-label={UI[locale].primaryNavigation}>
+          <ul>
+            {SECTIONS.map((section) => (
+              <li>
+                <a
+                  href={sectionPath(locale, section)}
+                  aria-current={currentSection === section ? 'page' : undefined}
+                >
+                  {UI[locale].sections[section].title}
+                </a>
+              </li>
+            ))}
+          </ul>
+          </nav>
+        </div>
+      )
+    }
+  </div>
+</header>

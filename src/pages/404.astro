@@ -1,0 +1,21 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import { sitePath } from '../lib/urls';
+import { SITE } from '../site.config';
+---
+
+<BaseLayout
+  title={`Page not found — ${SITE.name}`}
+  description="The requested page could not be found."
+>
+  <section class="content-page">
+    <div class="container content-page__inner">
+      <p class="eyebrow">404</p>
+      <h1>Page not found</h1>
+      <p class="content-page__description">
+        Страница не найдена · Бет табылмады · The requested page could not be found.
+      </p>
+      <a class="back-link" href={sitePath()}>← Choose a language</a>
+    </div>
+  </section>
+</BaseLayout>

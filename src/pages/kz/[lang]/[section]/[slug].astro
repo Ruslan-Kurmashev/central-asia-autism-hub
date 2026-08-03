@@ -1,0 +1,51 @@
+---
+import { getCollection, render, type CollectionEntry } from 'astro:content';
+import ArticleLayout from '../../../../layouts/ArticleLayout.astro';
+import type { Locale } from '../../../../site.config';
+
+export async function getStaticPaths() {
+  const entries = await getCollection(
+    'pages',
+    ({ data }) =>
+      !data.draft &&
+      data.translationStatus !== 'pending' &&
+      Boolean(data.publishedAt) &&
+      Boolean(data.updatedAt),
+  );
+
+  return Promise.all(
+    entries.map(async (entry) => {
+      const translations = entries.filter(
+        (candidate) => candidate.data.translationKey === entry.data.translationKey,
+      );
+      const alternatePaths = Object.fromEntries(
+        translations.map((translation) => [
+          translation.data.language,
+          `${translation.data.section}/${translation.data.slug}`,
+        ]),
+      ) as Partial<Record<Locale, string>>;
+
+      return {
+        params: {
+          lang: entry.data.language,
+          section: entry.data.section,
+          slug: entry.data.slug,
+        },
+        props: { entry, alternatePaths },
+      };
+    }),
+  );
+}
+
+interface Props {
+  entry: CollectionEntry<'pages'>;
+  alternatePaths: Partial<Record<Locale, string>>;
+}
+
+const { entry, alternatePaths } = Astro.props;
+const { Content } = await render(entry);
+---
+
+<ArticleLayout entry={entry} alternatePaths={alternatePaths}>
+  <Content />
+</ArticleLayout>

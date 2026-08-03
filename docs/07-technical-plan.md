@@ -4,8 +4,9 @@
 **Country implementation:** Autism Hub Kazakhstan  
 **Document:** 07 — Technical Plan  
 **Status:** Approved for the first website version  
-**Version:** 1.0  
+**Version:** 1.1
 **Decision date:** 31 July 2026
+**Last updated:** 2 August 2026
 
 ## 1. Purpose
 
@@ -116,7 +117,8 @@ central-asia-autism-hub/
 │   ├── 04-editorial-evidence-medical-safety.md
 │   ├── 05-privacy-and-data.md
 │   ├── 06-design-and-accessibility.md
-│   └── 07-technical-plan.md
+│   ├── 07-technical-plan.md
+│   └── 08-content-material-template.md
 ├── public/
 │   ├── favicon files
 │   ├── robots.txt
@@ -307,6 +309,11 @@ The exact implementation types will be defined in `src/content.config.ts`. Commo
 | `draft` | Excludes unfinished content from public output |
 | `sources` | Structured references or source links |
 | `description` | Search and social metadata description |
+| `slug` | Stable localised URL segment |
+| `translationStatus` | Source version, checked translation, or pending review |
+| `disclaimerType` | Informational or medical boundary notice |
+| `conflictOfInterest` | Visible conflict-of-interest declaration |
+| `versionNote` | Optional correction or substantive-update note |
 
 The schema must not require an external reviewer. This is consistent with the approved one-person editorial-responsibility model.
 
@@ -342,7 +349,7 @@ Learning records should additionally support:
 - `lastVerifiedAt`;
 - `projectOwned`;
 - `registrationStatus`, when applicable;
-- `disclaimerType`.
+- `resourceDisclaimerType`, distinguishing project-owned and external learning.
 
 External listings must be visibly labelled. The schema and page templates must prevent an external course from appearing as an Autism Hub Kazakhstan programme merely because both records use the same collection.
 
@@ -475,7 +482,7 @@ The root language-choice page may serve as the `x-default` alternate.
 
 The site must provide:
 
-- `sitemap.xml`;
+- a generated sitemap index (`sitemap-index.xml`) and numbered sitemap files;
 - `robots.txt`;
 - an accessible 404 page;
 - consistent canonical URLs that include the GitHub Pages base path until a custom domain is introduced.

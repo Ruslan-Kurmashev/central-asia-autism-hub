@@ -1,0 +1,4 @@
+User-agent: *
+Disallow: /
+
+# The site is not yet approved for public indexing.

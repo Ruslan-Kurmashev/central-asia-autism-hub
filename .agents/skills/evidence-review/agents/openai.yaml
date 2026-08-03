@@ -1,0 +1,4 @@
+interface:
+  display_name: "Evidence Review"
+  short_description: "Audit scientific and medical claims by source"
+  default_prompt: "Use $evidence-review to audit every factual, scientific, and medical claim in this draft against its supplied sources."

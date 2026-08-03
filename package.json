@@ -1,0 +1,26 @@
+{
+  "name": "central-asia-autism-hub",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "astro dev",
+    "start": "astro dev",
+    "check": "astro check",
+    "build": "astro build",
+    "preview": "astro preview",
+    "validate": "npm run check && npm run build"
+  },
+  "dependencies": {
+    "@astrojs/sitemap": "3.7.3",
+    "astro": "7.1.6"
+  },
+  "devDependencies": {
+    "@astrojs/check": "0.9.10",
+    "typescript": "6.0.3"
+  },
+  "engines": {
+    "node": ">=22.12.0",
+    "npm": ">=9.6.5"
+  }
+}

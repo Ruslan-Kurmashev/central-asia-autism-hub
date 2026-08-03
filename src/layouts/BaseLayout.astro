@@ -1,0 +1,82 @@
+---
+import SiteFooter from '../components/SiteFooter.astro';
+import SiteHeader from '../components/SiteHeader.astro';
+import { UI } from '../i18n/ui';
+import { localePath, sitePath } from '../lib/urls';
+import {
+  LANGUAGE_META,
+  SITE,
+  SUPPORTED_LOCALES,
+  type Locale,
+  type Section,
+} from '../site.config';
+import '../styles/global.css';
+
+interface Props {
+  title: string;
+  description: string;
+  locale?: Locale;
+  currentSection?: Section;
+  alternatePath?: string;
+  alternatePaths?: Partial<Record<Locale, string>>;
+}
+
+const {
+  title,
+  description,
+  locale,
+  currentSection,
+  alternatePath = '',
+  alternatePaths,
+} = Astro.props;
+
+const pageLocale = locale ?? 'en';
+const origin = Astro.site ?? Astro.url.origin;
+const canonicalUrl = new URL(Astro.url.pathname, origin);
+---
+
+<!doctype html>
+<html lang={LANGUAGE_META[pageLocale].htmlLang}>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="generator" content={Astro.generator} />
+    <meta name="description" content={description} />
+    <meta name="theme-color" content="#0f6b67" />
+    {!SITE.isLive && <meta name="robots" content="noindex, nofollow" />}
+    <link rel="canonical" href={canonicalUrl} />
+    <link rel="alternate" hreflang="x-default" href={new URL(sitePath(), origin)} />
+    {
+      locale &&
+        SUPPORTED_LOCALES.filter(
+          (language) => !alternatePaths || Boolean(alternatePaths[language]),
+        ).map((language) => (
+          <link
+            rel="alternate"
+            hreflang={LANGUAGE_META[language].hreflang}
+            href={new URL(
+              localePath(
+                language,
+                alternatePaths?.[language] ?? alternatePath,
+              ),
+              origin,
+            )}
+          />
+        ))
+    }
+    <title>{title}</title>
+  </head>
+  <body>
+    <a class="skip-link" href="#main-content">{UI[pageLocale].skipLink}</a>
+    <SiteHeader
+      locale={locale}
+      currentSection={currentSection}
+      alternatePath={alternatePath}
+      alternatePaths={alternatePaths}
+    />
+    <main id="main-content">
+      <slot />
+    </main>
+    <SiteFooter locale={locale} />
+  </body>
+</html>

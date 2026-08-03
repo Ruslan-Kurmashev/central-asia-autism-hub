@@ -1,0 +1,169 @@
+---
+import type { CollectionEntry } from 'astro:content';
+import { CONTENT_UI, DATE_LOCALES } from '../i18n/content';
+import { UI } from '../i18n/ui';
+import { localePath, sectionPath } from '../lib/urls';
+import { SITE, type Locale } from '../site.config';
+import BaseLayout from './BaseLayout.astro';
+
+interface Props {
+  entry: CollectionEntry<'pages'>;
+  alternatePaths: Partial<Record<Locale, string>>;
+}
+
+const { entry, alternatePaths } = Astro.props;
+const data = entry.data;
+const locale = data.language;
+const copy = CONTENT_UI[locale];
+const sectionCopy = UI[locale].sections[data.section];
+const dateFormatter = new Intl.DateTimeFormat(DATE_LOCALES[locale], {
+  day: 'numeric',
+  month: 'long',
+  year: 'numeric',
+});
+const audienceText = data.audience
+  .map((audience) => copy.audiences[audience])
+  .join(', ');
+const hasEveryTranslation = Object.keys(alternatePaths).length === 3;
+const boundaryTitle =
+  data.disclaimerType === 'medical'
+    ? copy.medicalBoundaryTitle
+    : copy.informationBoundaryTitle;
+const boundaryText =
+  data.disclaimerType === 'medical'
+    ? copy.medicalBoundaryText
+    : copy.informationBoundaryText;
+---
+
+<BaseLayout
+  title={`${data.title} — ${SITE.name}`}
+  description={data.description}
+  locale={locale}
+  currentSection={data.section}
+  alternatePath={data.section}
+  alternatePaths={alternatePaths}
+>
+  <article class="article-page">
+    <header class="article-header">
+      <div class="container article-shell">
+        <p class="breadcrumb">
+          <a href={localePath(locale)}>{UI[locale].homeLabel}</a>
+          <span aria-hidden="true"> / </span>
+          <a href={sectionPath(locale, data.section)}>{sectionCopy.title}</a>
+          <span aria-hidden="true"> / </span>
+          <span aria-current="page">{data.title}</span>
+        </p>
+        <p class="eyebrow">{copy.articleLabel}</p>
+        <h1>{data.title}</h1>
+        <p class="article-header__summary">{data.summary}</p>
+        <p class="article-header__audience">
+          <strong>{copy.audienceLabel}:</strong> {audienceText}
+        </p>
+
+        <dl class="article-meta">
+          {data.publishedAt && (
+            <div>
+              <dt>{copy.publishedLabel}</dt>
+              <dd><time datetime={data.publishedAt.toISOString()}>{dateFormatter.format(data.publishedAt)}</time></dd>
+            </div>
+          )}
+          {data.updatedAt && (
+            <div>
+              <dt>{copy.updatedLabel}</dt>
+              <dd><time datetime={data.updatedAt.toISOString()}>{dateFormatter.format(data.updatedAt)}</time></dd>
+            </div>
+          )}
+          {data.reviewDueAt && (
+            <div>
+              <dt>{copy.reviewDueLabel}</dt>
+              <dd><time datetime={data.reviewDueAt.toISOString()}>{dateFormatter.format(data.reviewDueAt)}</time></dd>
+            </div>
+          )}
+        </dl>
+      </div>
+    </header>
+
+    <div class="container article-shell article-content">
+      {!hasEveryTranslation && (
+        <aside class="article-notice article-notice--translation">
+          <p>{copy.translationNotice}</p>
+        </aside>
+      )}
+
+      {data.keyPoints.length > 0 && (
+        <section class="article-key-points" aria-labelledby="key-points-title">
+          <h2 id="key-points-title">{copy.keyPointsTitle}</h2>
+          <ul>
+            {data.keyPoints.map((point) => <li>{point}</li>)}
+          </ul>
+        </section>
+      )}
+
+      <div class="article-body">
+        <slot />
+      </div>
+
+      {data.evidenceLimitations && (
+        <section class="article-limitations" aria-labelledby="limitations-title">
+          <h2 id="limitations-title">{copy.limitationsTitle}</h2>
+          <p>{data.evidenceLimitations}</p>
+        </section>
+      )}
+
+      <section class="article-sources" aria-labelledby="sources-title">
+        <h2 id="sources-title">{copy.sourcesTitle}</h2>
+        <ol>
+          {data.sources.map((source) => (
+            <li>
+              <a href={source.url} rel="external">{source.title}</a>
+              {source.organisation && <span>. {source.organisation}</span>}
+              {source.publicationYear && <span> ({source.publicationYear})</span>}
+              {source.note && <span>. {source.note}</span>}
+              {source.accessedAt && (
+                <span>. {copy.accessedLabel}: {dateFormatter.format(source.accessedAt)}</span>
+              )}
+            </li>
+          ))}
+        </ol>
+      </section>
+
+      <section class="article-responsibility" aria-label={copy.authorAndEditorLabel}>
+        <dl>
+          {data.author === data.editor ? (
+            <div>
+              <dt>{copy.authorAndEditorLabel}</dt>
+              <dd>{data.author}</dd>
+            </div>
+          ) : (
+            <>
+              <div><dt>{copy.authorLabel}</dt><dd>{data.author}</dd></div>
+              <div><dt>{copy.editorLabel}</dt><dd>{data.editor}</dd></div>
+            </>
+          )}
+          {data.externalReviewer && (
+            <div><dt>{copy.reviewerLabel}</dt><dd>{data.externalReviewer}</dd></div>
+          )}
+          <div><dt>{copy.conflictLabel}</dt><dd>{data.conflictOfInterest}</dd></div>
+        </dl>
+        <p>{copy.sourceResponsibility}</p>
+        {!data.externalReviewer && <p>{copy.noIndependentReview}</p>}
+      </section>
+
+      <aside class="article-notice article-notice--boundary">
+        <h2>{boundaryTitle}</h2>
+        <p>{boundaryText}</p>
+      </aside>
+
+      {data.versionNote && (
+        <aside class="article-version-note">
+          <h2>{copy.versionLabel}</h2>
+          <p>{data.versionNote}</p>
+        </aside>
+      )}
+
+      <a class="back-link" href={sectionPath(locale, data.section)}>
+        ← {copy.backToSection}: {sectionCopy.title}
+      </a>
+    </div>
+  </article>
+</BaseLayout>

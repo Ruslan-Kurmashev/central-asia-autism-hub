@@ -1,0 +1,135 @@
+---
+import { getCollection } from 'astro:content';
+import ArticleCard from '../../../../components/ArticleCard.astro';
+import { CONTENT_UI } from '../../../../i18n/content';
+import { UI } from '../../../../i18n/ui';
+import BaseLayout from '../../../../layouts/BaseLayout.astro';
+import { articlePath, localePath } from '../../../../lib/urls';
+import {
+  SECTIONS,
+  SITE,
+  SUPPORTED_LOCALES,
+  type Locale,
+  type Section,
+} from '../../../../site.config';
+
+export function getStaticPaths() {
+  return SUPPORTED_LOCALES.flatMap((locale) =>
+    SECTIONS.map((section) => ({
+      params: { lang: locale, section },
+      props: { locale, section },
+    })),
+  );
+}
+
+interface Props {
+  locale: Locale;
+  section: Section;
+}
+
+const { locale, section } = Astro.props;
+const copy = UI[locale];
+const contentCopy = CONTENT_UI[locale];
+const sectionCopy = copy.sections[section];
+const materials = (
+  await getCollection(
+    'pages',
+    ({ data }) =>
+      !data.draft &&
+      data.language === locale &&
+      data.section === section &&
+      data.translationStatus !== 'pending' &&
+      Boolean(data.publishedAt) &&
+      Boolean(data.updatedAt),
+  )
+).sort(
+  (left, right) =>
+    (right.data.updatedAt?.getTime() ?? 0) -
+    (left.data.updatedAt?.getTime() ?? 0),
+);
+---
+
+<BaseLayout
+  title={`${sectionCopy.title} — ${SITE.name}`}
+  description={sectionCopy.description}
+  locale={locale}
+  currentSection={section}
+  alternatePath={section}
+  >
+  <article class="content-page">
+    <header class="content-page__header">
+      <div class="container content-page__inner">
+        <p class="breadcrumb">
+          <a href={localePath(locale)}>{copy.homeLabel}</a>
+          <span aria-hidden="true"> / </span>
+          <span aria-current="page">{sectionCopy.title}</span>
+        </p>
+        <p class="eyebrow">{SITE.name}</p>
+        <h1>{sectionCopy.title}</h1>
+        <p class="content-page__description">{sectionCopy.description}</p>
+      </div>
+    </header>
+
+    {
+      materials.length > 0 && (
+        <section class="materials-section" aria-labelledby="materials-title">
+          <div class="container">
+            <div class="section-intro">
+              <h2 id="materials-title">{contentCopy.materialsTitle}</h2>
+              <p>{contentCopy.materialsText}</p>
+            </div>
+            <div class="materials-grid">
+              {materials.map((material) => (
+                <ArticleCard
+                  href={articlePath(locale, section, material.data.slug)}
+                  title={material.data.title}
+                  summary={material.data.summary}
+                  audience={material.data.audience}
+                  updatedAt={material.data.updatedAt!}
+                  locale={locale}
+                />
+              ))}
+            </div>
+          </div>
+        </section>
+      )
+    }
+
+    <section class="topic-section" aria-labelledby="topics-title">
+      <div class="container">
+        <div class="section-intro section-intro--top">
+          <h2 id="topics-title">{copy.topicsTitle}</h2>
+          <p>{copy.topicsText}</p>
+        </div>
+
+        <div class="topic-grid">
+          {
+            sectionCopy.topics.map((topic, index) => (
+              <article class="topic-card" id={topic.id}>
+                <span class="topic-card__number" aria-hidden="true">
+                  {String(index + 1).padStart(2, '0')}
+                </span>
+                <h3>{topic.title}</h3>
+                <p>{topic.description}</p>
+              </article>
+            ))
+          }
+        </div>
+
+        {
+          materials.length === 0 && (
+            <aside class="status-panel status-panel--section" aria-labelledby="section-status-title">
+              <span class="status-panel__mark" aria-hidden="true"></span>
+              <div>
+                <h2 id="section-status-title">{copy.sectionStatus}</h2>
+                <p>{copy.sectionStatusText}</p>
+              </div>
+            </aside>
+          )
+        }
+
+        <a class="back-link" href={localePath(locale)}>← {copy.backHome}</a>
+      </div>
+    </section>
+  </article>
+</BaseLayout>

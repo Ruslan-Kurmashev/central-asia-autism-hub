@@ -1,0 +1,40 @@
+---
+import { UI } from '../i18n/ui';
+import { sectionPath } from '../lib/urls';
+import { SITE, type Locale } from '../site.config';
+
+interface Props {
+  locale?: Locale;
+}
+
+const { locale = 'en' } = Astro.props;
+const copy = UI[locale];
+const year = new Date().getUTCFullYear();
+const aboutPath = sectionPath(locale, 'about');
+---
+
+<footer class="site-footer">
+  <div class="container site-footer__grid">
+    <div>
+      <p class="site-footer__brand">{SITE.name}</p>
+      <p>{copy.footerBoundary}</p>
+    </div>
+    <div>
+      <p class="site-footer__status">{copy.footerStatus}</p>
+      <nav class="site-footer__nav" aria-label={copy.footerNavigation}>
+        <ul>
+          <li><a href={`${aboutPath}#editorial`}>{copy.footerLinks.editorial}</a></li>
+          <li><a href={`${aboutPath}#privacy`}>{copy.footerLinks.privacy}</a></li>
+          <li><a href={`${aboutPath}#accessibility`}>{copy.footerLinks.accessibility}</a></li>
+          <li><a href={`${aboutPath}#contact`}>{copy.footerLinks.contact}</a></li>
+        </ul>
+      </nav>
+      <a class="site-footer__repository" href={SITE.repositoryUrl} rel="external">
+        {copy.repositoryLabel} <span aria-hidden="true">↗</span>
+      </a>
+    </div>
+  </div>
+  <div class="container site-footer__legal">
+    <p>© {year} {SITE.umbrellaName}</p>
+  </div>
+</footer>

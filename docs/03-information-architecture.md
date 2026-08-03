@@ -4,8 +4,9 @@
 **Country implementation:** Autism Hub Kazakhstan  
 **Document:** 03 — Information Architecture and Navigation  
 **Status:** Approved for the first website version  
-**Version:** 1.0  
+**Version:** 1.1
 **Decision date:** 28 July 2026
+**Last updated:** 2 August 2026
 
 ## 1. Purpose
 
@@ -38,8 +39,10 @@ Kazakh interface wording must receive native-language review before public launc
 The language selector displays:
 
 ```text
-Русский · Қазақша · English
+ҚАЗ · РУС · ENG
 ```
+
+The visible labels are intentionally compact. Each language link retains its full language name as an accessible label.
 
 ## 3. Approved site map
 
@@ -48,81 +51,82 @@ Home
 │
 ├── For Parents
 │   ├── Understanding autism
-│   ├── Child development and early questions
+│   ├── Child development
 │   ├── Assessment and diagnosis
-│   ├── After an assessment or diagnosis
-│   ├── Everyday support
-│   ├── Kindergarten, school, and inclusion
-│   ├── Interventions, evidence, and safety
-│   └── Parent and family wellbeing
+│   ├── Approaches to support
+│   ├── Everyday family life
+│   └── Frequently asked questions and glossary
 │
 ├── Research Explained
-│   ├── New research
-│   ├── Assessment and development
-│   ├── Genetics and biology
-│   ├── Communication and behaviour
-│   ├── Support and interventions
-│   ├── Education and inclusion
-│   └── Reviews and guidelines
+│   ├── New research explainers
+│   ├── How to read research
+│   ├── Causes and biology
+│   ├── Evidence about support
+│   ├── Research in Kazakhstan
+│   └── Research participation (future phase)
 │
 ├── Help in Kazakhstan
-│   ├── Overview of the support pathway
-│   ├── Healthcare and assessment
-│   ├── PMPK and educational pathways
-│   └── Verified external resources
+│   ├── Where to begin
+│   ├── Assessment and ongoing support
+│   ├── Kindergarten and school
+│   ├── Rights and social support
+│   ├── Organisations and services
+│   └── How to check a service
 │
 ├── Learning
 │   ├── Autism School Kazakhstan
-│   ├── Courses for parents
-│   ├── Courses for professionals
-│   ├── Webinars and lectures
-│   └── Archive
+│   ├── Learning for parents
+│   ├── Learning for professionals
+│   ├── Events and webinars
+│   ├── External courses
+│   └── How to choose learning
 │
 ├── For Professionals
-│   ├── Professional resources
+│   ├── Guidelines and standards
 │   ├── Communication with families
-│   └── Education and events
+│   ├── Assessment context
+│   ├── Evidence-informed support
+│   ├── Ethics and safety
+│   └── Learning and events
 │
 └── About
-    ├── Mission and principles
-    ├── Team and roles
+    ├── Mission and brand structure
     ├── Editorial policy
     ├── Evidence and medical safety
-    ├── Privacy
-    ├── Disclaimer
-    └── Contact
+    ├── Privacy and data
+    ├── Design and accessibility
+    └── Contact and corrections
 ```
 
 ## 4. Homepage structure
 
-The homepage should present the platform in the following order:
+The homepage presents the platform in the following order:
 
-1. platform name, purpose, and primary parent-facing action;
-2. key information topics for parents;
-3. selected reviewed resources;
-4. Research Explained;
-5. Help in Kazakhstan;
-6. Learning, including a prominent Autism School Kazakhstan block;
-7. trust information: sources, review, authorship, and update dates;
-8. a smaller section for professionals;
-9. confirmed information about the project, team, and partners.
+1. a compact beta-status strip;
+2. the platform purpose, a concise content boundary, and focused entry actions;
+3. six permanent primary sections presented with visual hierarchy: For Parents and Help in Kazakhstan are prominent, Research Explained and Learning are secondary, and For Professionals and About are compact;
+4. trust principles: plain language, verifiable sources, visible update dates, Kazakhstan context, and clear medical boundaries;
+5. footer access to editorial, privacy, accessibility, and contact information.
 
 The primary homepage action is:
 
-> View resources for parents
+> Start with essential information
 
 Secondary actions are:
 
-> Help in Kazakhstan  
-> Autism School Kazakhstan
+> Resources for parents
+>
+> For professionals
 
 The first viewport must not contain diagnostic questions, symptom scoring, urgent marketing language, or an excessive number of competing actions.
+
+A service map, provider catalogue, and location-based navigation are deferred until there is enough verified Kazakhstan-specific information to make them useful and maintainable.
 
 ## 5. For Parents
 
 The For Parents landing page is the primary content-library entry point.
 
-During the initial launch, the eight parent topics should appear as sections on one landing page. Each section contains:
+During the initial launch, the six parent topics appear as sections on one landing page. Each section contains:
 
 - a short, plain-language explanation;
 - available reviewed resources;

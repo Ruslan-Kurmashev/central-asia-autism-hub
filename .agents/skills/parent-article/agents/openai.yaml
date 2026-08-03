@@ -1,0 +1,4 @@
+interface:
+  display_name: "Parent Article"
+  short_description: "Draft evidence-based parent articles safely"
+  default_prompt: "Use $parent-article to create a source-grounded parent-facing draft for Autism Hub Kazakhstan."
