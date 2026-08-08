@@ -21,9 +21,6 @@ const dateFormatter = new Intl.DateTimeFormat(DATE_LOCALES[locale], {
   month: 'long',
   year: 'numeric',
 });
-const audienceText = data.audience
-  .map((audience) => copy.audiences[audience])
-  .join(', ');
 const boundaryTitle =
   data.disclaimerType === 'medical'
     ? copy.medicalBoundaryTitle
@@ -55,27 +52,12 @@ const boundaryText =
         <p class="eyebrow">{copy.articleLabel}</p>
         <h1>{data.title}</h1>
         <p class="article-header__summary">{data.summary}</p>
-        <p class="article-header__audience">
-          <strong>{copy.audienceLabel}:</strong> {audienceText}
-        </p>
 
         <dl class="article-meta">
           {data.publishedAt && (
             <div>
               <dt>{copy.publishedLabel}</dt>
               <dd><time datetime={data.publishedAt.toISOString()}>{dateFormatter.format(data.publishedAt)}</time></dd>
-            </div>
-          )}
-          {data.updatedAt && (
-            <div>
-              <dt>{copy.updatedLabel}</dt>
-              <dd><time datetime={data.updatedAt.toISOString()}>{dateFormatter.format(data.updatedAt)}</time></dd>
-            </div>
-          )}
-          {data.reviewDueAt && (
-            <div>
-              <dt>{copy.reviewDueLabel}</dt>
-              <dd><time datetime={data.reviewDueAt.toISOString()}>{dateFormatter.format(data.reviewDueAt)}</time></dd>
             </div>
           )}
         </dl>
@@ -111,9 +93,6 @@ const boundaryText =
               <a href={source.url} rel="external">{source.title}</a>
               {source.organisation && <span>. {source.organisation}</span>}
               {source.publicationYear && <span> ({source.publicationYear})</span>}
-              {source.accessedAt && (
-                <span>. {copy.accessedLabel}: {dateFormatter.format(source.accessedAt)}</span>
-              )}
             </li>
           ))}
         </ol>

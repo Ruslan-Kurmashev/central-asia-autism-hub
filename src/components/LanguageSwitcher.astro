@@ -1,6 +1,5 @@
 ---
 import { UI } from '../i18n/ui';
-import { CONTENT_UI } from '../i18n/content';
 import { localePath } from '../lib/urls';
 import { LANGUAGE_META, type Locale } from '../site.config';
 
@@ -27,9 +26,7 @@ const languageOrder: Locale[] = ['kk', 'ru', 'en'];
     {
       languageOrder.map((locale) => {
         const translationMissing = Boolean(paths && !paths[locale]);
-        const label = translationMissing
-          ? `${LANGUAGE_META[locale].label} — ${CONTENT_UI[current].translationUnavailable}`
-          : LANGUAGE_META[locale].label;
+        const label = LANGUAGE_META[locale].label;
 
         return (
           <li>
