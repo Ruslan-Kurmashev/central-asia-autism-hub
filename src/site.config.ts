@@ -3,7 +3,7 @@ export const SITE = {
   umbrellaName: 'Central Asia Autism Hub',
   country: 'kz',
   repositoryUrl: 'https://github.com/Ruslan-Kurmashev/central-asia-autism-hub',
-  isLive: false,
+  isLive: true,
 } as const;
 
 export const SUPPORTED_LOCALES = ['ru', 'kk', 'en'] as const;

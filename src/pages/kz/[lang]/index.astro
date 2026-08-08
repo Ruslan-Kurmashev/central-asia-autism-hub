@@ -38,6 +38,8 @@ const homeSections: Array<{
 ];
 
 const parentsPath = sectionPath(locale, 'parents');
+const quickSections: Section[] = ['parents', 'help-kazakhstan', 'research'];
+const heroImagePath = `${import.meta.env.BASE_URL}images/hero-family.webp`;
 ---
 
 <BaseLayout
@@ -75,6 +77,43 @@ const parentsPath = sectionPath(locale, 'parents');
           {copy.heroPoints.map((point) => <li>{point}</li>)}
         </ul>
       </div>
+
+      <div class="hero__visual">
+        <img
+          src={heroImagePath}
+          alt={copy.heroImageAlt}
+          width="1801"
+          height="873"
+          decoding="async"
+          fetchpriority="high"
+        />
+      </div>
+    </div>
+  </section>
+
+  <section class="quick-paths" aria-labelledby="quick-paths-title">
+    <div class="container">
+      <h2 id="quick-paths-title">{copy.quickPathsTitle}</h2>
+      <nav class="quick-paths__grid" aria-label={copy.quickPathsTitle}>
+        <ul>
+          {
+            quickSections.map((section, index) => (
+              <li>
+                <a href={sectionPath(locale, section)}>
+                  <span class="quick-paths__number" aria-hidden="true">
+                    {String(index + 1).padStart(2, '0')}
+                  </span>
+                  <span class="quick-paths__copy">
+                    <strong>{copy.sections[section].title}</strong>
+                    <span>{copy.sections[section].description}</span>
+                  </span>
+                  <span class="quick-paths__arrow" aria-hidden="true">→</span>
+                </a>
+              </li>
+            ))
+          }
+        </ul>
+      </nav>
     </div>
   </section>
 

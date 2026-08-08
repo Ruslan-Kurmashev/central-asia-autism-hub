@@ -20,6 +20,7 @@ type PrincipleCopy = {
 type LocaleCopy = {
   skipLink: string;
   primaryNavigation: string;
+  menuLabel: string;
   languageNavigation: string;
   languageLabel: string;
   homeLabel: string;
@@ -32,6 +33,8 @@ type LocaleCopy = {
   heroPrimaryAction: string;
   heroSecondaryAction: string;
   heroProfessionalAction: string;
+  heroImageAlt: string;
+  quickPathsTitle: string;
   exploreTitle: string;
   exploreText: string;
   principlesTitle: string;
@@ -60,6 +63,7 @@ export const UI: Record<Locale, LocaleCopy> = {
   ru: {
     skipLink: 'Перейти к основному содержанию',
     primaryNavigation: 'Основная навигация',
+    menuLabel: 'Меню',
     languageNavigation: 'Выбор языка',
     languageLabel: 'Язык',
     homeLabel: 'Главная',
@@ -78,6 +82,8 @@ export const UI: Record<Locale, LocaleCopy> = {
     heroPrimaryAction: 'Начать с основной информации',
     heroSecondaryAction: 'Материалы для родителей',
     heroProfessionalAction: 'Для специалистов',
+    heroImageAlt: 'Семья вместе занимается за столом дома.',
+    quickPathsTitle: 'С чего хотите начать?',
     exploreTitle: 'Что вы найдёте на сайте',
     exploreText:
       'Шесть постоянных разделов объединяют информацию для семей, локальные ресурсы, научные разборы и обучение.',
@@ -210,6 +216,7 @@ export const UI: Record<Locale, LocaleCopy> = {
   kk: {
     skipLink: 'Негізгі мазмұнға өту',
     primaryNavigation: 'Негізгі навигация',
+    menuLabel: 'Мәзір',
     languageNavigation: 'Тілді таңдау',
     languageLabel: 'Тіл',
     homeLabel: 'Басты бет',
@@ -224,6 +231,8 @@ export const UI: Record<Locale, LocaleCopy> = {
     heroPrimaryAction: 'Негізгі ақпараттан бастау',
     heroSecondaryAction: 'Ата-аналарға арналған материалдар',
     heroProfessionalAction: 'Мамандарға',
+    heroImageAlt: 'Отбасы үйде үстел басында бірге оқып отыр.',
+    quickPathsTitle: 'Неден бастағыңыз келеді?',
     exploreTitle: 'Сайттан не табасыз',
     exploreText:
       'Алты тұрақты бөлім отбасыларға арналған ақпаратты, жергілікті ресурстарды, ғылыми түсіндірмелерді және оқуды біріктіреді.',
@@ -326,6 +335,7 @@ export const UI: Record<Locale, LocaleCopy> = {
   en: {
     skipLink: 'Skip to main content',
     primaryNavigation: 'Primary navigation',
+    menuLabel: 'Menu',
     languageNavigation: 'Language selection',
     languageLabel: 'Language',
     homeLabel: 'Home',
@@ -338,6 +348,8 @@ export const UI: Record<Locale, LocaleCopy> = {
     heroPrimaryAction: 'Start with core information',
     heroSecondaryAction: 'Resources for parents',
     heroProfessionalAction: 'For professionals',
+    heroImageAlt: 'A family learning together at a table at home.',
+    quickPathsTitle: 'Where would you like to start?',
     exploreTitle: 'What you will find here',
     exploreText: 'Six permanent sections bring together information for families, local resources, research explainers, and learning.',
     principlesTitle: 'How we handle information',

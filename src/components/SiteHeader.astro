@@ -33,22 +33,43 @@ const homeHref = locale ? localePath(locale) : sitePath();
             path={alternatePath}
             paths={alternatePaths}
           />
-          <nav class="primary-nav" aria-label={UI[locale].primaryNavigation}>
-          <ul>
-            {SECTIONS.map((section) => (
-              <li>
-                <a
-                  href={sectionPath(locale, section)}
-                  aria-current={currentSection === section ? 'page' : undefined}
-                >
-                  {UI[locale].sections[section].title}
-                </a>
-              </li>
-            ))}
-          </ul>
-          </nav>
+          <details class="nav-disclosure" open>
+            <summary class="nav-disclosure__summary">
+              <span>{UI[locale].menuLabel}</span>
+              <span class="nav-disclosure__icon" aria-hidden="true"></span>
+            </summary>
+            <nav class="primary-nav" aria-label={UI[locale].primaryNavigation}>
+              <ul>
+                {SECTIONS.map((section) => (
+                  <li>
+                    <a
+                      href={sectionPath(locale, section)}
+                      aria-current={currentSection === section ? 'page' : undefined}
+                    >
+                      {UI[locale].sections[section].title}
+                    </a>
+                  </li>
+                ))}
+              </ul>
+            </nav>
+          </details>
         </div>
       )
     }
   </div>
 </header>
+
+<script>
+  const mobileNavigation = window.matchMedia('(max-width: 56rem)');
+
+  const syncNavigationDisclosure = (isMobile: boolean) => {
+    document.querySelectorAll<HTMLDetailsElement>('.nav-disclosure').forEach((disclosure) => {
+      disclosure.open = !isMobile;
+    });
+  };
+
+  syncNavigationDisclosure(mobileNavigation.matches);
+  mobileNavigation.addEventListener('change', (event) => {
+    syncNavigationDisclosure(event.matches);
+  });
+</script>
