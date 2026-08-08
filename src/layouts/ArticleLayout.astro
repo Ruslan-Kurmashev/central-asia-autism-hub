@@ -24,7 +24,6 @@ const dateFormatter = new Intl.DateTimeFormat(DATE_LOCALES[locale], {
 const audienceText = data.audience
   .map((audience) => copy.audiences[audience])
   .join(', ');
-const hasEveryTranslation = Object.keys(alternatePaths).length === 3;
 const boundaryTitle =
   data.disclaimerType === 'medical'
     ? copy.medicalBoundaryTitle
@@ -84,12 +83,6 @@ const boundaryText =
     </header>
 
     <div class="container article-shell article-content">
-      {!hasEveryTranslation && (
-        <aside class="article-notice article-notice--translation">
-          <p>{copy.translationNotice}</p>
-        </aside>
-      )}
-
       {data.keyPoints.length > 0 && (
         <section class="article-key-points" aria-labelledby="key-points-title">
           <h2 id="key-points-title">{copy.keyPointsTitle}</h2>
@@ -118,35 +111,12 @@ const boundaryText =
               <a href={source.url} rel="external">{source.title}</a>
               {source.organisation && <span>. {source.organisation}</span>}
               {source.publicationYear && <span> ({source.publicationYear})</span>}
-              {source.note && <span>. {source.note}</span>}
               {source.accessedAt && (
                 <span>. {copy.accessedLabel}: {dateFormatter.format(source.accessedAt)}</span>
               )}
             </li>
           ))}
         </ol>
-      </section>
-
-      <section class="article-responsibility" aria-label={copy.authorAndEditorLabel}>
-        <dl>
-          {data.author === data.editor ? (
-            <div>
-              <dt>{copy.authorAndEditorLabel}</dt>
-              <dd>{data.author}</dd>
-            </div>
-          ) : (
-            <>
-              <div><dt>{copy.authorLabel}</dt><dd>{data.author}</dd></div>
-              <div><dt>{copy.editorLabel}</dt><dd>{data.editor}</dd></div>
-            </>
-          )}
-          {data.externalReviewer && (
-            <div><dt>{copy.reviewerLabel}</dt><dd>{data.externalReviewer}</dd></div>
-          )}
-          <div><dt>{copy.conflictLabel}</dt><dd>{data.conflictOfInterest}</dd></div>
-        </dl>
-        <p>{copy.sourceResponsibility}</p>
-        {!data.externalReviewer && <p>{copy.noIndependentReview}</p>}
       </section>
 
       <aside class="article-notice article-notice--boundary">
