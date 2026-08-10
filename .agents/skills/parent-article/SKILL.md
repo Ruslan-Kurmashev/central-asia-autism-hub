@@ -58,6 +58,6 @@ Before returning the result:
 5. confirm that Kazakhstan-specific statements do not generalize across regions without evidence;
 6. validate frontmatter against `src/content.config.ts` when a file was created or edited.
 
-Return the draft together with unresolved evidence gaps, metadata still requiring human input, files changed, checks run, and readiness as `DRAFT — NOT READY FOR PUBLICATION` or `DRAFT — READY FOR EVIDENCE REVIEW`.
+Return the draft together with unresolved evidence gaps, metadata still requiring human input, files changed, checks run, and readiness as `DRAFT - NOT READY FOR PUBLICATION` or `DRAFT - READY FOR EVIDENCE REVIEW`.
 
 Do not set `draft: false`, publish, deploy, translate automatically, claim medical review, or make the final editorial decision.

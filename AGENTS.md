@@ -1,4 +1,4 @@
-# Central Asia Autism Hub — repository instructions
+# Central Asia Autism Hub - repository instructions
 
 ## Scope and sources of truth
 
@@ -27,6 +27,7 @@ Read only the documents relevant to the task, but read each selected document co
 
 ## Editorial and medical safety
 
+- Never use the U+2014 em dash in repository text, interface copy, content, metadata, templates, or documentation. Use the ordinary hyphen-minus (`-`) instead.
 - Do not invent medical, scientific, legal, service, organisation, address, price, prevalence, or Kazakhstan-specific claims.
 - Use traceable sources for factual, medical, scientific, and Kazakhstan-specific claims. Distinguish confirmed facts, inferences, assumptions, and unknowns.
 - Distinguish screening, assessment, diagnosis, triage, support, and treatment. Never imply that a screening result diagnoses autism.

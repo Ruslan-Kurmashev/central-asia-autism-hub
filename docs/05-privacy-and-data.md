@@ -2,7 +2,7 @@
 
 **Project:** Central Asia Autism Hub  
 **Country implementation:** Autism Hub Kazakhstan  
-**Document:** 05 — Privacy and Data Policy  
+**Document:** 05 - Privacy and Data Policy
 **Status:** Approved for the first website version  
 **Version:** 1.0  
 **Decision date:** 29 July 2026

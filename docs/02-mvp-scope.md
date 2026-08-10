@@ -2,7 +2,7 @@
 
 **Project:** Central Asia Autism Hub  
 **Country implementation:** Autism Hub Kazakhstan  
-**Document:** 02 — MVP Scope  
+**Document:** 02 - MVP Scope
 **Status:** Approved for the first website version  
 **Version:** 1.0  
 **Decision date:** 28 July 2026

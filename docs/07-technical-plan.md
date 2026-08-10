@@ -2,7 +2,7 @@
 
 **Project:** Central Asia Autism Hub  
 **Country implementation:** Autism Hub Kazakhstan  
-**Document:** 07 — Technical Plan  
+**Document:** 07 - Technical Plan
 **Status:** Approved for the first website version  
 **Version:** 1.1
 **Decision date:** 31 July 2026
@@ -686,7 +686,7 @@ An external reviewer is recorded only when a real independent review occurred. T
 
 ## 29. Implementation phases
 
-### Phase 1 — Repository foundation
+### Phase 1 - Repository foundation
 
 - preserve approved planning documents;
 - initialise Astro in the existing project directory without replacing the documents;
@@ -694,7 +694,7 @@ An external reviewer is recorded only when a real independent review occurred. T
 - record the selected runtime and dependency versions;
 - verify a clean local build.
 
-### Phase 2 — Routing and design foundation
+### Phase 2 - Routing and design foundation
 
 - configure static output, `site`, and `base`;
 - create country and language configuration;
@@ -702,7 +702,7 @@ An external reviewer is recorded only when a real independent review occurred. T
 - implement shared layouts, navigation, footer, language switcher, and design tokens;
 - verify responsive and keyboard behaviour.
 
-### Phase 3 — Content system
+### Phase 3 - Content system
 
 - define the three Content Collections;
 - define common, research, and learning schemas;
@@ -710,7 +710,7 @@ An external reviewer is recorded only when a real independent review occurred. T
 - implement translation-key relationships;
 - add draft, metadata, source, and disclaimer handling.
 
-### Phase 4 — Initial content
+### Phase 4 - Initial content
 
 - prepare the approved 8–12 parent-facing resources;
 - prepare Russian, Kazakh, and English versions;
@@ -719,7 +719,7 @@ An external reviewer is recorded only when a real independent review occurred. T
 - add Autism School and selected external-learning pages;
 - validate sources, translations, dates, and disclaimers.
 
-### Phase 5 — Quality and launch preparation
+### Phase 5 - Quality and launch preparation
 
 - run production and content checks;
 - review accessibility and mobile behaviour;
@@ -728,7 +728,7 @@ An external reviewer is recorded only when a real independent review occurred. T
 - review the public privacy, editorial, and medical-safety pages;
 - create and verify the GitHub Actions workflow.
 
-### Phase 6 — Publication
+### Phase 6 - Publication
 
 - explicitly approve the launch candidate;
 - enable GitHub Pages with GitHub Actions as the source;

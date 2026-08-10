@@ -2,7 +2,7 @@
 
 **Project:** Central Asia Autism Hub
 **Country implementation:** Autism Hub Kazakhstan
-**Document:** 08 — Information Material Template
+**Document:** 08 - Information Material Template
 **Status:** Approved for implementation
 **Version:** 1.0
 **Decision date:** 2 August 2026

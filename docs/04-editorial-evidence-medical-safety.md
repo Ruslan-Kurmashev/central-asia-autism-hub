@@ -2,7 +2,7 @@
 
 **Project:** Central Asia Autism Hub  
 **Country implementation:** Autism Hub Kazakhstan  
-**Document:** 04 — Editorial, Evidence, and Medical Safety Policy  
+**Document:** 04 - Editorial, Evidence, and Medical Safety Policy
 **Status:** Approved for the first website version  
 **Version:** 1.0  
 **Decision date:** 29 July 2026
@@ -344,8 +344,8 @@ Their participation should be recorded by name, role, scope of review, and date.
 This policy is informed by:
 
 - [World Health Organization: Autism](https://www.who.int/news-room/fact-sheets/detail/autism-spectrum-disorders)
-- [NICE: Autism spectrum disorder in under 19s — recognition, referral and diagnosis](https://www.nice.org.uk/guidance/cg128/chapter/Recommendations)
-- [NICE: Autism spectrum disorder in under 19s — support and management](https://www.nice.org.uk/guidance/CG170)
+- [NICE: Autism spectrum disorder in under 19s - recognition, referral and diagnosis](https://www.nice.org.uk/guidance/cg128/chapter/Recommendations)
+- [NICE: Autism spectrum disorder in under 19s - support and management](https://www.nice.org.uk/guidance/CG170)
 - [GRADE Working Group](https://www.gradeworkinggroup.org/)
 - [ICMJE Recommendations, updated January 2026](https://www.icmje.org/icmje-recommendations.pdf)
 

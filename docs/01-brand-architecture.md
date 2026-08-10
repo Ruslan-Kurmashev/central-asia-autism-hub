@@ -1,7 +1,7 @@
 # Brand Architecture
 
 **Project:** Central Asia Autism Hub  
-**Document:** 01 — Brand Architecture  
+**Document:** 01 - Brand Architecture
 **Status:** Approved for the first website version  
 **Version:** 1.0  
 **Decision date:** 28 July 2026
@@ -69,11 +69,11 @@ Shortened forms such as “Autism Hub” and “Autism School” may be used onl
 
 **Russian**
 
-> Autism Hub Kazakhstan — информационная платформа, помогающая семьям в Казахстане находить понятные, безопасные и доказательно-информированные следующие шаги при вопросах об аутизме и развитии ребёнка.
+> Autism Hub Kazakhstan - информационная платформа, помогающая семьям в Казахстане находить понятные, безопасные и доказательно-информированные следующие шаги при вопросах об аутизме и развитии ребёнка.
 
 **Kazakh**
 
-> Autism Hub Kazakhstan — Қазақстандағы отбасыларға аутизм және баланың дамуы туралы сұрақтар туындаған кезде түсінікті, қауіпсіз және дәлелді ақпаратқа негізделген келесі қадамдарды табуға көмектесетін ақпараттық платформа.
+> Autism Hub Kazakhstan - Қазақстандағы отбасыларға аутизм және баланың дамуы туралы сұрақтар туындаған кезде түсінікті, қауіпсіз және дәлелді ақпаратқа негізделген келесі қадамдарды табуға көмектесетін ақпараттық платформа.
 
 **English**
 
@@ -95,7 +95,7 @@ Shortened forms such as “Autism Hub” and “Autism School” may be used onl
 
 **Kazakh**
 
-> Autism Hub Kazakhstan — Central Asia Autism Hub бастамасының Қазақстанда әзірленіп жатқан алғашқы ұлттық нұсқасы.
+> Autism Hub Kazakhstan - Central Asia Autism Hub бастамасының Қазақстанда әзірленіп жатқан алғашқы ұлттық нұсқасы.
 
 **English**
 
@@ -107,11 +107,11 @@ This relationship statement belongs on the “About” page and in the extended 
 
 **Russian**
 
-> Autism School Kazakhstan — образовательная программа Autism Hub Kazakhstan для родителей и семей.
+> Autism School Kazakhstan - образовательная программа Autism Hub Kazakhstan для родителей и семей.
 
 **Kazakh**
 
-> Autism School Kazakhstan — ата-аналар мен отбасыларға арналған Autism Hub Kazakhstan білім беру бағдарламасы.
+> Autism School Kazakhstan - ата-аналар мен отбасыларға арналған Autism Hub Kazakhstan білім беру бағдарламасы.
 
 **English**
 

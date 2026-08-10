@@ -2,7 +2,7 @@
 
 **Project:** Central Asia Autism Hub  
 **Country implementation:** Autism Hub Kazakhstan  
-**Document:** 03 — Information Architecture and Navigation  
+**Document:** 03 - Information Architecture and Navigation
 **Status:** Approved for the first website version  
 **Version:** 1.1
 **Decision date:** 28 July 2026

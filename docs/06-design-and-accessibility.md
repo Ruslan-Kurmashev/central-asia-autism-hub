@@ -2,7 +2,7 @@
 
 **Project:** Central Asia Autism Hub  
 **Country implementation:** Autism Hub Kazakhstan  
-**Document:** 06 — Design and Accessibility Policy  
+**Document:** 06 - Design and Accessibility Policy
 **Status:** Approved for the first website version  
 **Version:** 1.0  
 **Decision date:** 29 July 2026
@@ -394,7 +394,7 @@ This policy uses the following W3C resources as its primary technical framework:
 
 - W3C, *Web Content Accessibility Guidelines (WCAG) 2.2*:  
   <https://www.w3.org/TR/WCAG22/>
-- W3C, *How to Meet WCAG 2.2 — Quick Reference*:  
+- W3C, *How to Meet WCAG 2.2 - Quick Reference*:
   <https://www.w3.org/WAI/WCAG22/quickref/>
 - W3C, *What's New in WCAG 2.2*:  
   <https://www.w3.org/WAI/standards-guidelines/wcag/new-in-22/>

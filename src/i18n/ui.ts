@@ -68,11 +68,11 @@ export const UI: Record<Locale, LocaleCopy> = {
     languageLabel: 'Язык',
     homeLabel: 'Главная',
     eyebrow: 'Информационный ресурс для семей в Казахстане',
-    title: 'Об аутизме — понятно, бережно и с опорой на источники',
+    title: 'Об аутизме - понятно, бережно и с опорой на источники',
     lead:
       'Собираем в одном месте проверяемую информацию для родителей: основные знания, научные разборы, обучение и навигацию по поддержке в Казахстане.',
     heroPoints: [
-      'В первую очередь — для родителей',
+      'В первую очередь - для родителей',
       'Русский, қазақша и English',
       'Источники и даты проверки материалов',
     ],
@@ -123,7 +123,7 @@ export const UI: Record<Locale, LocaleCopy> = {
     backHome: 'Вернуться на главную',
     footerBoundary:
       'Информационно-образовательный ресурс. Не ставит диагноз и не заменяет профессиональную консультацию.',
-    footerStatus: 'Техническая версия — содержательные материалы ещё не опубликованы.',
+    footerStatus: 'Техническая версия - содержательные материалы ещё не опубликованы.',
     footerNavigation: 'Политики и информация о проекте',
     footerLinks: {
       editorial: 'Редакционная политика',
@@ -156,7 +156,7 @@ export const UI: Record<Locale, LocaleCopy> = {
           { id: 'causes-and-biology', title: 'Причины и биология', description: 'Осторожные обзоры генетических, средовых и нейробиологических исследований без упрощений.' },
           { id: 'support-evidence', title: 'Доказательства о поддержке', description: 'Что известно об эффективности, безопасности и применимости разных подходов.' },
           { id: 'kazakhstan-research', title: 'Исследования в Казахстане', description: 'Публикации и проекты, относящиеся к Казахстану и Центральной Азии.' },
-          { id: 'research-participation', title: 'Участие в исследованиях', description: 'В будущем — только проекты с прозрачной организацией, этикой, критериями и условиями участия.' },
+          { id: 'research-participation', title: 'Участие в исследованиях', description: 'В будущем - только проекты с прозрачной организацией, этикой, критериями и условиями участия.' },
         ],
       },
       'help-kazakhstan': {
@@ -221,10 +221,10 @@ export const UI: Record<Locale, LocaleCopy> = {
     languageLabel: 'Тіл',
     homeLabel: 'Басты бет',
     eyebrow: 'Қазақстандағы отбасыларға арналған ақпараттық ресурс',
-    title: 'Аутизм туралы — түсінікті, ұқыпты және дереккөздерге сүйене отырып',
+    title: 'Аутизм туралы - түсінікті, ұқыпты және дереккөздерге сүйене отырып',
     lead:
       'Ата-аналарға арналған тексерілетін ақпаратты бір жерге жинаймыз: негізгі білім, ғылыми түсіндірмелер, оқу және Қазақстандағы қолдау жөніндегі навигация.',
-    heroPoints: ['Ең алдымен — ата-аналарға', 'Русский, қазақша және English', 'Дереккөздер және материалдарды тексеру күндері'],
+    heroPoints: ['Ең алдымен - ата-аналарға', 'Русский, қазақша және English', 'Дереккөздер және материалдарды тексеру күндері'],
     statusTitle: 'Бета-нұсқа.',
     statusText:
       'Материалдар мен бөлімдер дереккөздер мен аудармалар тексерілгеннен кейін біртіндеп қосылады.',
@@ -253,7 +253,7 @@ export const UI: Record<Locale, LocaleCopy> = {
     sectionStatusText: 'Қазір құрылым мен редакциялық талаптар бекітілді. Тексерілмеген медициналық немесе жергілікті ақпарат жарияланбайды.',
     backHome: 'Басты бетке оралу',
     footerBoundary: 'Ақпараттық-білім беру ресурсы. Диагноз қоймайды және маман кеңесін алмастырмайды.',
-    footerStatus: 'Техникалық нұсқа — мазмұндық материалдар әлі жарияланған жоқ.',
+    footerStatus: 'Техникалық нұсқа - мазмұндық материалдар әлі жарияланған жоқ.',
     footerNavigation: 'Жоба саясаты мен ақпараты',
     footerLinks: { editorial: 'Редакциялық саясат', privacy: 'Құпиялық және деректер', accessibility: 'Қолжетімділік', contact: 'Байланыс' },
     repositoryLabel: 'Жобаның GitHub репозиторийі',
@@ -279,7 +279,7 @@ export const UI: Record<Locale, LocaleCopy> = {
           { id: 'causes-and-biology', title: 'Себептер және биология', description: 'Генетикалық, қоршаған орта және нейробиологиялық зерттеулерге сақ шолу.' },
           { id: 'support-evidence', title: 'Қолдау туралы дәлелдер', description: 'Әртүрлі тәсілдердің тиімділігі, қауіпсіздігі және қолданылуы туралы не белгілі.' },
           { id: 'kazakhstan-research', title: 'Қазақстандағы зерттеулер', description: 'Қазақстан мен Орталық Азияға қатысты жарияланымдар мен жобалар.' },
-          { id: 'research-participation', title: 'Зерттеулерге қатысу', description: 'Болашақта — ұйымы, этикасы, критерийлері және қатысу шарттары ашық жобалар ғана.' },
+          { id: 'research-participation', title: 'Зерттеулерге қатысу', description: 'Болашақта - ұйымы, этикасы, критерийлері және қатысу шарттары ашық жобалар ғана.' },
         ],
       },
       'help-kazakhstan': {
@@ -340,7 +340,7 @@ export const UI: Record<Locale, LocaleCopy> = {
     languageLabel: 'Language',
     homeLabel: 'Home',
     eyebrow: 'An information resource for families in Kazakhstan',
-    title: 'Autism information — clear, careful, and grounded in sources',
+    title: 'Autism information - clear, careful, and grounded in sources',
     lead: 'We are bringing reliable information for parents into one place: core knowledge, research explainers, learning, and navigation to support in Kazakhstan.',
     heroPoints: ['Parents first', 'Русский, қазақша, and English', 'Sources and review dates for materials'],
     statusTitle: 'Beta version.',
@@ -368,7 +368,7 @@ export const UI: Record<Locale, LocaleCopy> = {
     sectionStatusText: 'The structure and editorial requirements are now defined. Unverified medical or local information is not published.',
     backHome: 'Return to the home page',
     footerBoundary: 'Information and education resource. It does not diagnose autism or replace professional advice.',
-    footerStatus: 'Technical version — substantive materials have not yet been published.',
+    footerStatus: 'Technical version - substantive materials have not yet been published.',
     footerNavigation: 'Project policies and information',
     footerLinks: { editorial: 'Editorial policy', privacy: 'Privacy and data', accessibility: 'Accessibility', contact: 'Contact' },
     repositoryLabel: 'Project repository on GitHub',

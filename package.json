@@ -6,10 +6,11 @@
   "scripts": {
     "dev": "astro dev",
     "start": "astro dev",
+    "check:typography": "node scripts/check-typography.mjs",
     "check": "astro check",
     "build": "astro build",
     "preview": "astro preview",
-    "validate": "npm run check && npm run build"
+    "validate": "npm run check:typography && npm run check && npm run build"
   },
   "dependencies": {
     "@astrojs/sitemap": "3.7.3",

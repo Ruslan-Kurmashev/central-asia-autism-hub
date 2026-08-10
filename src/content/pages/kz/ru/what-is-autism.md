@@ -22,7 +22,7 @@ updatedAt: 2026-08-08
 reviewDueAt: 2027-08-08
 draft: false
 keyPoints:
-  - "Аутизм — это разнообразная группа состояний, связанных с развитием мозга."
+  - "Аутизм - это разнообразная группа состояний, связанных с развитием мозга."
   - "Проявления, способности и потребности в поддержке различаются у разных людей и могут меняться со временем."
   - "Отдельный признак, наблюдение или результат опросника не подтверждает и не исключает аутизм."
   - "Диагноз основывается на комплексной профессиональной оценке, а не на одном тесте."
@@ -34,7 +34,7 @@ sources:
     publicationYear: 2025
     note: "Использован для определения аутизма, описания разнообразия проявлений и потребностей, а также осторожной формулировки о факторах, связанных с развитием аутизма."
     accessedAt: 2026-08-08
-  - title: "Autism spectrum disorder in under 19s: recognition, referral and diagnosis — Recommendations"
+  - title: "Autism spectrum disorder in under 19s: recognition, referral and diagnosis - Recommendations"
     url: "https://www.nice.org.uk/guidance/cg128/chapter/Recommendations"
     organisation: "National Institute for Health and Care Excellence"
     publicationYear: 2011
