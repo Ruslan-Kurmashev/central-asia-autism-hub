@@ -1,32 +1,29 @@
 ---
-import { CONTENT_UI, DATE_LOCALES, type Audience } from '../i18n/content';
+import { CONTENT_UI, DATE_LOCALES } from '../i18n/content';
 import type { Locale } from '../site.config';
 
 interface Props {
   href: string;
   title: string;
   summary: string;
-  audience: Audience[];
-  updatedAt: Date;
+  publishedAt: Date;
   locale: Locale;
 }
 
-const { href, title, summary, audience, updatedAt, locale } = Astro.props;
+const { href, title, summary, publishedAt, locale } = Astro.props;
 const copy = CONTENT_UI[locale];
 const formattedDate = new Intl.DateTimeFormat(DATE_LOCALES[locale], {
   day: 'numeric',
   month: 'long',
   year: 'numeric',
-}).format(updatedAt);
+}).format(publishedAt);
 ---
 
 <article class="material-card">
-  <p class="material-card__meta">
-    {copy.audienceLabel}: {audience.map((item) => copy.audiences[item]).join(', ')}
-  </p>
+  <p class="material-card__meta">{copy.articleLabel}</p>
   <h3><a href={href}>{title}</a></h3>
   <p>{summary}</p>
-  <p class="material-card__updated">{copy.updatedLabel}: {formattedDate}</p>
+  <p class="material-card__updated">{copy.publishedLabel}: {formattedDate}</p>
   <span class="material-card__action" aria-hidden="true">
     {copy.readMaterial} →
   </span>

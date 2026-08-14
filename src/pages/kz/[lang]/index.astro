@@ -1,8 +1,10 @@
 ---
+import { getCollection } from 'astro:content';
 import SectionCard from '../../../components/SectionCard.astro';
+import { CONTENT_UI, DATE_LOCALES } from '../../../i18n/content';
 import { UI } from '../../../i18n/ui';
 import BaseLayout from '../../../layouts/BaseLayout.astro';
-import { sectionPath } from '../../../lib/urls';
+import { articlePath, sectionPath } from '../../../lib/urls';
 import {
   SITE,
   SUPPORTED_LOCALES,
@@ -23,6 +25,7 @@ interface Props {
 
 const { locale } = Astro.props;
 const copy = UI[locale];
+const contentCopy = CONTENT_UI[locale];
 
 const homeSections: Array<{
   section: Section;
@@ -40,6 +43,28 @@ const homeSections: Array<{
 const parentsPath = sectionPath(locale, 'parents');
 const quickSections: Section[] = ['parents', 'help-kazakhstan', 'research'];
 const heroImagePath = `${import.meta.env.BASE_URL}images/hero-family.webp`;
+const featuredMaterials = (
+  await getCollection(
+    'pages',
+    ({ data }) =>
+      !data.draft &&
+      data.language === locale &&
+      data.section === 'parents' &&
+      data.translationStatus !== 'pending' &&
+      Boolean(data.publishedAt),
+  )
+)
+  .sort(
+    (left, right) =>
+      (right.data.publishedAt?.getTime() ?? 0) -
+      (left.data.publishedAt?.getTime() ?? 0),
+  )
+  .slice(0, 3);
+const dateFormatter = new Intl.DateTimeFormat(DATE_LOCALES[locale], {
+  day: 'numeric',
+  month: 'long',
+  year: 'numeric',
+});
 ---
 
 <BaseLayout
@@ -90,6 +115,55 @@ const heroImagePath = `${import.meta.env.BASE_URL}images/hero-family.webp`;
       </div>
     </div>
   </section>
+
+  {
+    featuredMaterials.length > 0 && (
+      <section class="featured-materials" aria-labelledby="featured-materials-title">
+        <div class="container">
+          <div class="featured-materials__intro">
+            <div>
+              <p class="eyebrow">{copy.featuredEyebrow}</p>
+              <h2 id="featured-materials-title">{copy.featuredTitle}</h2>
+            </div>
+            <p>{copy.featuredText}</p>
+          </div>
+
+          <div class="featured-materials__grid">
+            {featuredMaterials.map((material, index) => (
+              <article
+                class:list={[
+                  'featured-material-card',
+                  `featured-material-card--${index + 1}`,
+                ]}
+              >
+                <div class="featured-material-card__topline">
+                  <span>{index === 0 ? copy.featuredLabel : contentCopy.articleLabel}</span>
+                  <span aria-hidden="true">{String(index + 1).padStart(2, '0')}</span>
+                </div>
+                <h3>
+                  <a href={articlePath(locale, 'parents', material.data.slug)}>
+                    {material.data.title}
+                  </a>
+                </h3>
+                <p>{material.data.summary}</p>
+                <div class="featured-material-card__footer">
+                  <time datetime={material.data.publishedAt!.toISOString()}>
+                    {contentCopy.publishedLabel}:{' '}
+                    {dateFormatter.format(material.data.publishedAt!)}
+                  </time>
+                  <span aria-hidden="true">→</span>
+                </div>
+              </article>
+            ))}
+          </div>
+
+          <a class="featured-materials__all" href={parentsPath}>
+            {copy.allMaterialsAction} <span aria-hidden="true">→</span>
+          </a>
+        </div>
+      </section>
+    )
+  }
 
   <section class="quick-paths" aria-labelledby="quick-paths-title">
     <div class="container">

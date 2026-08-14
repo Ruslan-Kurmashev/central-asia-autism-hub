@@ -34,6 +34,11 @@ type LocaleCopy = {
   heroSecondaryAction: string;
   heroProfessionalAction: string;
   heroImageAlt: string;
+  featuredEyebrow: string;
+  featuredTitle: string;
+  featuredText: string;
+  featuredLabel: string;
+  allMaterialsAction: string;
   quickPathsTitle: string;
   exploreTitle: string;
   exploreText: string;
@@ -74,7 +79,7 @@ export const UI: Record<Locale, LocaleCopy> = {
     heroPoints: [
       'В первую очередь - для родителей',
       'Русский, қазақша и English',
-      'Источники и даты проверки материалов',
+      'Источники и дата публикации',
     ],
     statusTitle: 'Бета-версия.',
     statusText:
@@ -83,13 +88,19 @@ export const UI: Record<Locale, LocaleCopy> = {
     heroSecondaryAction: 'Материалы для родителей',
     heroProfessionalAction: 'Для специалистов',
     heroImageAlt: 'Семья вместе занимается за столом дома.',
+    featuredEyebrow: 'Библиотека',
+    featuredTitle: 'В центре внимания',
+    featuredText:
+      'Новые и основные материалы для родителей. Каждый текст содержит проверяемые источники и дату публикации.',
+    featuredLabel: 'Новый материал',
+    allMaterialsAction: 'Все материалы для родителей',
     quickPathsTitle: 'С чего хотите начать?',
     exploreTitle: 'Что вы найдёте на сайте',
     exploreText:
       'Шесть постоянных разделов объединяют информацию для семей, локальные ресурсы, научные разборы и обучение.',
     principlesTitle: 'Как мы работаем с информацией',
     principlesText:
-      'Для каждого материала предусмотрены понятное объяснение, проверяемые источники и видимая дата обновления.',
+      'Для каждого материала предусмотрены понятное объяснение, проверяемые источники и дата публикации.',
     principles: [
       {
         title: 'Понятный язык',
@@ -102,9 +113,9 @@ export const UI: Record<Locale, LocaleCopy> = {
           'Указываем первоисточники, силу доказательств, неопределённость и важные ограничения.',
       },
       {
-        title: 'Дата обновления',
+        title: 'Дата публикации',
         description:
-          'Показываем, когда материал опубликован, проверен и в последний раз обновлён.',
+          'Показываем, когда материал опубликован, чтобы читатель мог оценить его актуальность.',
       },
       {
         title: 'Контекст Казахстана',
@@ -123,7 +134,7 @@ export const UI: Record<Locale, LocaleCopy> = {
     backHome: 'Вернуться на главную',
     footerBoundary:
       'Информационно-образовательный ресурс. Не ставит диагноз и не заменяет профессиональную консультацию.',
-    footerStatus: 'Техническая версия - содержательные материалы ещё не опубликованы.',
+    footerStatus: 'Библиотека проверенных материалов постепенно пополняется.',
     footerNavigation: 'Политики и информация о проекте',
     footerLinks: {
       editorial: 'Редакционная политика',
@@ -224,7 +235,7 @@ export const UI: Record<Locale, LocaleCopy> = {
     title: 'Аутизм туралы - түсінікті, ұқыпты және дереккөздерге сүйене отырып',
     lead:
       'Ата-аналарға арналған тексерілетін ақпаратты бір жерге жинаймыз: негізгі білім, ғылыми түсіндірмелер, оқу және Қазақстандағы қолдау жөніндегі навигация.',
-    heroPoints: ['Ең алдымен - ата-аналарға', 'Русский, қазақша және English', 'Дереккөздер және материалдарды тексеру күндері'],
+    heroPoints: ['Ең алдымен - ата-аналарға', 'Русский, қазақша және English', 'Дереккөздер және жарияланған күні'],
     statusTitle: 'Бета-нұсқа.',
     statusText:
       'Материалдар мен бөлімдер дереккөздер мен аудармалар тексерілгеннен кейін біртіндеп қосылады.',
@@ -232,17 +243,23 @@ export const UI: Record<Locale, LocaleCopy> = {
     heroSecondaryAction: 'Ата-аналарға арналған материалдар',
     heroProfessionalAction: 'Мамандарға',
     heroImageAlt: 'Отбасы үйде үстел басында бірге оқып отыр.',
+    featuredEyebrow: 'Кітапхана',
+    featuredTitle: 'Назарда',
+    featuredText:
+      'Ата-аналарға арналған жаңа және негізгі материалдар. Әр мәтінде тексерілетін дереккөздер мен жарияланған күні көрсетіледі.',
+    featuredLabel: 'Жаңа материал',
+    allMaterialsAction: 'Ата-аналарға арналған барлық материалдар',
     quickPathsTitle: 'Неден бастағыңыз келеді?',
     exploreTitle: 'Сайттан не табасыз',
     exploreText:
       'Алты тұрақты бөлім отбасыларға арналған ақпаратты, жергілікті ресурстарды, ғылыми түсіндірмелерді және оқуды біріктіреді.',
     principlesTitle: 'Ақпаратпен қалай жұмыс істейміз',
     principlesText:
-      'Әр материал үшін түсінікті түсіндіру, тексерілетін дереккөздер және көрінетін жаңарту күні қарастырылған.',
+      'Әр материал үшін түсінікті түсіндіру, тексерілетін дереккөздер және жарияланған күні қарастырылған.',
     principles: [
       { title: 'Түсінікті тіл', description: 'Қажетті терминдерді түсіндіреміз және практикалық қорытындыны ғылыми егжей-тегжейден ажыратамыз.' },
       { title: 'Тексерілетін дереккөздер', description: 'Бастапқы дереккөздерді, дәлел деңгейін, белгісіздікті және маңызды шектеулерді көрсетеміз.' },
-      { title: 'Жаңарту күні', description: 'Материалдың қашан жарияланғанын, тексерілгенін және соңғы рет жаңартылғанын көрсетеміз.' },
+      { title: 'Жарияланған күні', description: 'Оқырман материалдың өзектілігін бағалай алуы үшін оның жарияланған күнін көрсетеміз.' },
       { title: 'Қазақстан контексті', description: 'Жергілікті ұйымдарды, құжаттарды, білім беру және әлеуметтік бағыттарды бөлек тексереміз.' },
     ],
     principlesBoundary:
@@ -253,7 +270,7 @@ export const UI: Record<Locale, LocaleCopy> = {
     sectionStatusText: 'Қазір құрылым мен редакциялық талаптар бекітілді. Тексерілмеген медициналық немесе жергілікті ақпарат жарияланбайды.',
     backHome: 'Басты бетке оралу',
     footerBoundary: 'Ақпараттық-білім беру ресурсы. Диагноз қоймайды және маман кеңесін алмастырмайды.',
-    footerStatus: 'Техникалық нұсқа - мазмұндық материалдар әлі жарияланған жоқ.',
+    footerStatus: 'Тексерілген материалдар кітапханасы біртіндеп толықтырылып келеді.',
     footerNavigation: 'Жоба саясаты мен ақпараты',
     footerLinks: { editorial: 'Редакциялық саясат', privacy: 'Құпиялық және деректер', accessibility: 'Қолжетімділік', contact: 'Байланыс' },
     repositoryLabel: 'Жобаның GitHub репозиторийі',
@@ -342,22 +359,28 @@ export const UI: Record<Locale, LocaleCopy> = {
     eyebrow: 'An information resource for families in Kazakhstan',
     title: 'Autism information - clear, careful, and grounded in sources',
     lead: 'We are bringing reliable information for parents into one place: core knowledge, research explainers, learning, and navigation to support in Kazakhstan.',
-    heroPoints: ['Parents first', 'Русский, қазақша, and English', 'Sources and review dates for materials'],
+    heroPoints: ['Parents first', 'Русский, қазақша, and English', 'Sources and publication dates'],
     statusTitle: 'Beta version.',
     statusText: 'Materials and sections are being added progressively after source and translation checks.',
     heroPrimaryAction: 'Start with core information',
     heroSecondaryAction: 'Resources for parents',
     heroProfessionalAction: 'For professionals',
     heroImageAlt: 'A family learning together at a table at home.',
+    featuredEyebrow: 'Library',
+    featuredTitle: 'Featured now',
+    featuredText:
+      'New and essential resources for parents. Each article includes traceable sources and a publication date.',
+    featuredLabel: 'New resource',
+    allMaterialsAction: 'All resources for parents',
     quickPathsTitle: 'Where would you like to start?',
     exploreTitle: 'What you will find here',
     exploreText: 'Six permanent sections bring together information for families, local resources, research explainers, and learning.',
     principlesTitle: 'How we handle information',
-    principlesText: 'Each material is designed to provide a clear explanation, verifiable sources, and a visible update date.',
+    principlesText: 'Each material is designed to provide a clear explanation, verifiable sources, and a publication date.',
     principles: [
       { title: 'Plain language', description: 'We explain necessary terms and separate practical meaning from scientific detail.' },
       { title: 'Verifiable sources', description: 'We identify primary sources, strength of evidence, uncertainty, and important limitations.' },
-      { title: 'Update date', description: 'We show when material was published, checked, and most recently updated.' },
+      { title: 'Publication date', description: 'We show when a resource was published so readers can consider how current it is.' },
       { title: 'Kazakhstan context', description: 'We separately verify local organisations, documents, education, and social-support pathways.' },
     ],
     principlesBoundary:
@@ -368,7 +391,7 @@ export const UI: Record<Locale, LocaleCopy> = {
     sectionStatusText: 'The structure and editorial requirements are now defined. Unverified medical or local information is not published.',
     backHome: 'Return to the home page',
     footerBoundary: 'Information and education resource. It does not diagnose autism or replace professional advice.',
-    footerStatus: 'Technical version - substantive materials have not yet been published.',
+    footerStatus: 'The library of reviewed resources is growing progressively.',
     footerNavigation: 'Project policies and information',
     footerLinks: { editorial: 'Editorial policy', privacy: 'Privacy and data', accessibility: 'Accessibility', contact: 'Contact' },
     repositoryLabel: 'Project repository on GitHub',
