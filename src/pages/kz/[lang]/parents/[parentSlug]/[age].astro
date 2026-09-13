@@ -98,6 +98,11 @@ const pageTitle = `Ориентиры развития в ${age.label}`;
       </p>
     </div>
 
+    <aside class="milestone-page__notice" aria-label="Как использовать лист">
+      <p><strong>Это лист наблюдений, а не тест.</strong> Здесь нет правильных или неправильных ответов, баллы не подсчитываются и результат не рассчитывается.</p>
+      <p>Отметки и заметки остаются в вашем браузере. Сайт не отправляет их на сервер и не сохраняет в базе данных.</p>
+    </aside>
+
     <MilestoneSheet age={age} copy={copy} backHref={parentHref} />
   </article>
 </BaseLayout>
@@ -107,8 +112,13 @@ const pageTitle = `Ориентиры развития в ${age.label}`;
     background: var(--color-background);
   }
 
-  .milestone-page__breadcrumb {
+  .milestone-page__breadcrumb,
+  .milestone-page__notice {
     width: min(calc(100% - 2rem), 52rem);
+    margin-inline: auto;
+  }
+
+  .milestone-page__breadcrumb {
     padding-top: 1.5rem;
   }
 
@@ -116,9 +126,35 @@ const pageTitle = `Ориентиры развития в ${age.label}`;
     margin-bottom: 0;
   }
 
+  .milestone-page__notice {
+    display: grid;
+    gap: 0.55rem;
+    margin-top: 1.2rem;
+    padding: 1rem 1.1rem;
+    border: 1px solid var(--color-border);
+    border-left: 0.3rem solid var(--color-primary);
+    border-radius: var(--radius-small);
+    background: var(--color-surface-soft);
+    color: var(--color-muted);
+    font-size: 0.94rem;
+  }
+
+  .milestone-page__notice strong {
+    color: var(--color-ink);
+  }
+
+  :global(.milestone-sheet__privacy) {
+    display: none;
+  }
+
   @media print {
     .milestone-page__breadcrumb {
       display: none;
+    }
+
+    .milestone-page__notice {
+      margin-top: 0;
+      border-left-width: 0.15rem;
     }
   }
 </style>
