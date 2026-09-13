@@ -1,5 +1,6 @@
 ---
 import { DEVELOPMENT_MILESTONES } from '../data/development-milestones';
+import { CONTENT_UI } from '../i18n/content';
 import { localePath } from '../lib/urls';
 import type { Locale } from '../site.config';
 
@@ -10,12 +11,13 @@ interface Props {
 
 const { locale, parentSlug } = Astro.props;
 const copy = DEVELOPMENT_MILESTONES[locale];
+const ui = CONTENT_UI[locale].milestones;
 
 const groups = copy
   ? [
-      { title: 'До 1 года', ages: copy.ages.slice(0, 4) },
-      { title: 'От 1 года до 2,5 лет', ages: copy.ages.slice(4, 9) },
-      { title: 'От 3 до 5 лет', ages: copy.ages.slice(9) },
+      { title: ui.groupUnderOne, ages: copy.ages.slice(0, 4) },
+      { title: ui.groupOneToTwoHalf, ages: copy.ages.slice(4, 9) },
+      { title: ui.groupThreeToFive, ages: copy.ages.slice(9) },
     ]
   : [];
 ---
@@ -24,9 +26,9 @@ const groups = copy
   copy && (
     <section class="milestone-age-selector" aria-labelledby="milestone-age-selector-title">
       <div class="milestone-age-selector__intro">
-        <p class="eyebrow">Листы наблюдений</p>
-        <h2 id="milestone-age-selector-title">Выберите возраст ребёнка</h2>
-        <p>Откройте возраст, который ребёнку уже исполнился.</p>
+        <p class="eyebrow">{ui.selectorEyebrow}</p>
+        <h2 id="milestone-age-selector-title">{ui.selectorTitle}</h2>
+        <p>{ui.selectorInstruction}</p>
       </div>
 
       <div class="milestone-age-selector__groups">
@@ -40,7 +42,7 @@ const groups = copy
                   href={localePath(locale, `parents/${parentSlug}/${age.slug}`)}
                 >
                   <strong>{age.label}</strong>
-                  <span>Открыть лист <span aria-hidden="true">→</span></span>
+                  <span>{ui.openSheet} <span aria-hidden="true">→</span></span>
                 </a>
               ))}
             </div>
@@ -49,8 +51,8 @@ const groups = copy
       </div>
 
       <div class="milestone-age-selector__note">
-        <p><strong>Если возраст находится между двумя точками</strong>, используйте предыдущую. Например, в 20 месяцев откройте лист для 18 месяцев.</p>
-        <p>Если ребёнок родился более чем на 3 недели раньше предполагаемого срока, для ранних возрастов CDC рекомендует использовать скорректированный возраст. Если вы не уверены, какой возраст учитывать, обсудите это с врачом.</p>
+        <p><strong>{ui.betweenAgesLead}</strong>, {ui.betweenAgesText}</p>
+        <p>{ui.correctedAgeText}</p>
       </div>
     </section>
   )
