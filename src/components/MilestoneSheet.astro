@@ -151,12 +151,6 @@ const numberedSections = age.sections.map((section) => ({
     <p><strong>{copy.lostSkillsText}</strong></p>
   </section>
 
-  <section class="milestone-source" aria-labelledby="milestone-source-title">
-    <h2 id="milestone-source-title">{copy.sourceTitle}</h2>
-    <p>{copy.sourceText}</p>
-    <p><a href={age.sourceUrl} rel="external">{formatAge(ui.sourceLinkTemplate)}</a></p>
-  </section>
-
   <section class="milestone-export" aria-labelledby="milestone-export-title">
     <h2 id="milestone-export-title">{exportUi.exportTitle}</h2>
     <p>{exportUi.exportHint}</p>
@@ -167,6 +161,12 @@ const numberedSections = age.sections.map((section) => ({
       </button>
     </div>
     <p class="milestone-export__pdf-hint">{exportUi.pdfHint}</p>
+  </section>
+
+  <section class="milestone-source" aria-labelledby="milestone-source-title">
+    <h2 id="milestone-source-title">{copy.sourceTitle}</h2>
+    <p>{copy.sourceText}</p>
+    <p><a href={age.sourceUrl} rel="external">{formatAge(ui.sourceLinkTemplate)}</a></p>
   </section>
 
   <section class="milestone-export-summary" data-export-summary aria-hidden="true"></section>
