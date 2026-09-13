@@ -1,0 +1,150 @@
+name: QA multilingual milestones
+
+on:
+  push:
+    branches:
+      - content/development-milestones
+
+permissions:
+  contents: read
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v7
+      - name: Set up Node.js
+        uses: actions/setup-node@v6
+        with:
+          node-version: 24
+          cache: npm
+      - name: Install dependencies
+        run: npm ci
+      - name: Validate draft branch
+        run: npm run validate
+      - name: Compare milestone structures across languages
+        run: |
+          python3 - <<'PY'
+          from pathlib import Path
+          import re
+
+          files = {
+              'ru': Path('src/data/development-milestones.ts'),
+              'kk': Path('src/data/development-milestones.kk.ts'),
+              'en': Path('src/data/development-milestones.en.ts'),
+          }
+
+          def parse(path):
+              text = path.read_text()
+              keys = re.findall(r"key:\s*'([^']+)'", text)
+              ids = re.findall(r"id:\s*'([^']+)'", text)
+              return keys, ids
+
+          parsed = {lang: parse(path) for lang, path in files.items()}
+          ru_keys, ru_ids = parsed['ru']
+          if len(ru_keys) != 12:
+              raise SystemExit(f'RU expected 12 age keys, found {len(ru_keys)}')
+          if len(ru_ids) != 159:
+              raise SystemExit(f'RU expected 159 milestone ids, found {len(ru_ids)}')
+
+          for lang in ('kk', 'en'):
+              keys, ids = parsed[lang]
+              if keys != ru_keys:
+                  raise SystemExit(f'{lang.upper()} age key sequence differs from RU')
+              if ids != ru_ids:
+                  missing = [x for x in ru_ids if x not in ids]
+                  extra = [x for x in ids if x not in ru_ids]
+                  raise SystemExit(f'{lang.upper()} milestone ids differ from RU. Missing={missing}, extra={extra}')
+
+          print('RU, KK and EN all contain the same 12 ages and 159 milestone IDs in the same order.')
+          PY
+      - name: Prepare temporary published multilingual state
+        run: |
+          python3 - <<'PY'
+          from pathlib import Path
+
+          files = {
+              'ru': Path('src/content/pages/kz/ru/development-milestones.md'),
+              'kk': Path('src/content/pages/kz/kk/development-milestones.md'),
+              'en': Path('src/content/pages/kz/en/development-milestones.md'),
+          }
+          for lang, path in files.items():
+              text = path.read_text()
+              status = 'source' if lang == 'ru' else 'checked'
+              text = text.replace('translationStatus: pending', f'translationStatus: {status}', 1)
+              text = text.replace('draft: true', 'draft: false\npublishedAt: 2026-09-13\nupdatedAt: 2026-09-13', 1)
+              path.write_text(text)
+          PY
+      - name: Build temporary multilingual state
+        run: npm run build
+      - name: Verify 39 generated milestone pages and language links
+        run: |
+          python3 - <<'PY'
+          from pathlib import Path
+
+          roots = {
+              'ru': ('orientiry-razvitiya-rebenka', ['2-mesyatsa','4-mesyatsa','6-mesyatsev','9-mesyatsev','1-god','15-mesyatsev','18-mesyatsev','2-goda','2-5-goda','3-goda','4-goda','5-let']),
+              'kk': ('balanyn-damu-bagdarlary', ['2-ai','4-ai','6-ai','9-ai','1-zhyl','15-ai','18-ai','2-zhyl','2-5-zhyl','3-zhyl','4-zhyl','5-zhyl']),
+              'en': ('child-development-milestones', ['2-months','4-months','6-months','9-months','1-year','15-months','18-months','2-years','30-months','3-years','4-years','5-years']),
+          }
+
+          total = 0
+          for lang, (root, ages) in roots.items():
+              base = Path('dist/kz') / lang / 'parents' / root
+              expected = [base / 'index.html'] + [base / age / 'index.html' for age in ages]
+              missing = [str(path) for path in expected if not path.exists()]
+              if missing:
+                  raise SystemExit(f'{lang.upper()} missing generated pages:\n' + '\n'.join(missing))
+              total += len(expected)
+
+          if total != 39:
+              raise SystemExit(f'Expected 39 pages, counted {total}')
+
+          ru18 = Path('dist/kz/ru/parents/orientiry-razvitiya-rebenka/18-mesyatsev/index.html').read_text()
+          en18 = Path('dist/kz/en/parents/child-development-milestones/18-months/index.html').read_text()
+          kk18 = Path('dist/kz/kk/parents/balanyn-damu-bagdarlary/18-ai/index.html').read_text()
+
+          required_links = [
+              ('RU->EN', ru18, '/kz/en/parents/child-development-milestones/18-months/'),
+              ('RU->KK', ru18, '/kz/kk/parents/balanyn-damu-bagdarlary/18-ai/'),
+              ('EN->RU', en18, '/kz/ru/parents/orientiry-razvitiya-rebenka/18-mesyatsev/'),
+              ('EN->KK', en18, '/kz/kk/parents/balanyn-damu-bagdarlary/18-ai/'),
+              ('KK->RU', kk18, '/kz/ru/parents/orientiry-razvitiya-rebenka/18-mesyatsev/'),
+              ('KK->EN', kk18, '/kz/en/parents/child-development-milestones/18-months/'),
+          ]
+          for label, html, href in required_links:
+              if href not in html:
+                  raise SystemExit(f'Missing language link {label}: {href}')
+
+          required_copy = [
+              ('EN', en18, 'Developmental milestones at 18 months'),
+              ('EN', en18, 'This is an observation sheet, not a test.'),
+              ('KK', kk18, 'Даму бағдарлары: 18 ай'),
+              ('KK', kk18, 'Бұл бақылау парағы, тест емес.'),
+          ]
+          for label, html, text in required_copy:
+              if text not in html:
+                  raise SystemExit(f'{label} localized UI text missing: {text}')
+
+          print('Multilingual render QA passed for 39 pages and cross-language links.')
+          PY
+      - name: Capture multilingual mobile screenshots
+        run: |
+          CHROME="$(command -v google-chrome || command -v chromium || command -v chromium-browser)"
+          test -n "$CHROME"
+          mkdir -p qa-site/central-asia-autism-hub qa-artifacts
+          cp -R dist/. qa-site/central-asia-autism-hub/
+          python3 -m http.server 4321 --directory qa-site >/tmp/qa-http.log 2>&1 &
+          SERVER_PID=$!
+          trap 'kill $SERVER_PID' EXIT
+          sleep 2
+          EN='http://127.0.0.1:4321/central-asia-autism-hub/kz/en/parents/child-development-milestones/18-months/'
+          KK='http://127.0.0.1:4321/central-asia-autism-hub/kz/kk/parents/balanyn-damu-bagdarlary/18-ai/'
+          "$CHROME" --headless --disable-gpu --no-sandbox --hide-scrollbars --window-size=390,844 --screenshot=qa-artifacts/en-18m-mobile.png "$EN"
+          "$CHROME" --headless --disable-gpu --no-sandbox --hide-scrollbars --window-size=390,844 --screenshot=qa-artifacts/kk-18m-mobile.png "$KK"
+      - name: Upload QA artifacts
+        uses: actions/upload-artifact@v6
+        with:
+          name: multilingual-milestones-qa
+          path: qa-artifacts
