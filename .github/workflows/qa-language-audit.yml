@@ -1,0 +1,114 @@
+name: QA milestone language audit
+
+on:
+  push:
+    branches:
+      - content/development-milestones
+
+permissions:
+  contents: read
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v7
+      - uses: actions/setup-node@v6
+        with:
+          node-version: 24
+          cache: npm
+      - run: npm ci
+      - name: Validate draft branch
+        run: npm run validate
+      - name: Check multilingual structures and audited Kazakh terminology
+        run: |
+          python3 - <<'PY'
+          from pathlib import Path
+          import re
+
+          files = {
+              'ru': Path('src/data/development-milestones.ts'),
+              'kk': Path('src/data/development-milestones.kk.ts'),
+              'en': Path('src/data/development-milestones.en.ts'),
+          }
+          def parse(path):
+              text = path.read_text()
+              return re.findall(r"key:\s*'([^']+)'", text), re.findall(r"id:\s*'([^']+)'", text)
+          ru_keys, ru_ids = parse(files['ru'])
+          assert len(ru_keys) == 12, len(ru_keys)
+          assert len(ru_ids) == 159, len(ru_ids)
+          for lang in ('kk','en'):
+              keys, ids = parse(files[lang])
+              assert keys == ru_keys, f'{lang} age keys differ'
+              assert ids == ru_ids, f'{lang} milestone IDs differ'
+
+          kk_paths = [
+              Path('src/data/development-milestones.kk.ts'),
+              Path('src/content/pages/kz/kk/development-milestones.md'),
+              Path('src/i18n/content.ts'),
+          ]
+          for path in kk_paths:
+              text = path.read_text()
+              if 'даму бағдарлары' in text or 'Даму бағдарлары' in text:
+                  raise SystemExit(f'Old Kazakh milestone terminology remains in {path}')
+          print('Language audit structure and Kazakh terminology checks passed.')
+          PY
+      - name: Prepare temporary published multilingual state
+        run: |
+          python3 - <<'PY'
+          from pathlib import Path
+          for lang in ('ru','kk','en'):
+              path = Path(f'src/content/pages/kz/{lang}/development-milestones.md')
+              text = path.read_text()
+              text = text.replace('translationStatus: pending', 'translationStatus: source' if lang == 'ru' else 'translationStatus: checked', 1)
+              text = text.replace('draft: true', 'draft: false\npublishedAt: 2026-09-13\nupdatedAt: 2026-09-13', 1)
+              path.write_text(text)
+          PY
+      - name: Build temporary multilingual state
+        run: npm run build
+      - name: Verify 39 pages and audited wording
+        run: |
+          python3 - <<'PY'
+          from pathlib import Path
+          roots = {
+              'ru': ('orientiry-razvitiya-rebenka', ['2-mesyatsa','4-mesyatsa','6-mesyatsev','9-mesyatsev','1-god','15-mesyatsev','18-mesyatsev','2-goda','2-5-goda','3-goda','4-goda','5-let']),
+              'kk': ('balanyn-damu-bagdarlary', ['2-ai','4-ai','6-ai','9-ai','1-zhyl','15-ai','18-ai','2-zhyl','2-5-zhyl','3-zhyl','4-zhyl','5-zhyl']),
+              'en': ('child-development-milestones', ['2-months','4-months','6-months','9-months','1-year','15-months','18-months','2-years','30-months','3-years','4-years','5-years']),
+          }
+          count = 0
+          for lang,(root,ages) in roots.items():
+              base = Path('dist/kz')/lang/'parents'/root
+              pages = [base/'index.html'] + [base/a/'index.html' for a in ages]
+              missing = [str(p) for p in pages if not p.exists()]
+              if missing: raise SystemExit('Missing pages:\n'+'\n'.join(missing))
+              count += len(pages)
+          if count != 39: raise SystemExit(f'Expected 39 pages, got {count}')
+
+          en30 = Path('dist/kz/en/parents/child-development-milestones/30-months/index.html').read_text()
+          kk30 = Path('dist/kz/kk/parents/balanyn-damu-bagdarlary/2-5-zhyl/index.html').read_text()
+          required = [
+              (en30, 'Follows simple routines when told'),
+              (en30, 'Follows two-step instructions'),
+              (kk30, 'Даму кезеңдері: 2,5 жас'),
+              (kk30, 'Екі қадамнан тұратын нұсқауды орындайды'),
+          ]
+          for html,text in required:
+              if text not in html: raise SystemExit(f'Missing audited wording: {text}')
+          print('Language audit render QA passed.')
+          PY
+      - name: Capture EN and KK mobile screenshots
+        run: |
+          CHROME="$(command -v google-chrome || command -v chromium || command -v chromium-browser)"
+          test -n "$CHROME"
+          mkdir -p qa-site/central-asia-autism-hub qa-artifacts
+          cp -R dist/. qa-site/central-asia-autism-hub/
+          python3 -m http.server 4321 --directory qa-site >/tmp/qa-http.log 2>&1 &
+          PID=$!
+          trap 'kill $PID' EXIT
+          sleep 2
+          "$CHROME" --headless --disable-gpu --no-sandbox --hide-scrollbars --window-size=390,844 --screenshot=qa-artifacts/en-30m-mobile.png 'http://127.0.0.1:4321/central-asia-autism-hub/kz/en/parents/child-development-milestones/30-months/'
+          "$CHROME" --headless --disable-gpu --no-sandbox --hide-scrollbars --window-size=390,844 --screenshot=qa-artifacts/kk-30m-mobile.png 'http://127.0.0.1:4321/central-asia-autism-hub/kz/kk/parents/balanyn-damu-bagdarlary/2-5-zhyl/'
+      - uses: actions/upload-artifact@v6
+        with:
+          name: language-audit-qa
+          path: qa-artifacts
