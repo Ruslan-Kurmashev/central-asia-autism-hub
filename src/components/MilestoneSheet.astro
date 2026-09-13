@@ -4,6 +4,7 @@ import type {
   MilestoneLocaleContent,
 } from '../data/development-milestones';
 import { CONTENT_UI } from '../i18n/content';
+import { MILESTONE_EXPORT_UI } from '../i18n/milestone-export';
 import type { Locale } from '../site.config';
 
 interface Props {
@@ -15,6 +16,7 @@ interface Props {
 
 const { age, copy, backHref, locale } = Astro.props;
 const ui = CONTENT_UI[locale].milestones;
+const exportUi = MILESTONE_EXPORT_UI[locale];
 const formatAge = (template: string) => template.replace('{age}', age.label);
 let itemNumber = 0;
 const numberedSections = age.sections.map((section) => ({
@@ -26,7 +28,16 @@ const numberedSections = age.sections.map((section) => ({
 }));
 ---
 
-<section class="milestone-sheet" aria-labelledby="milestone-sheet-title">
+<section
+  class="milestone-sheet"
+  aria-labelledby="milestone-sheet-title"
+  data-milestone-sheet
+  data-export-not-answered={exportUi.notAnswered}
+  data-export-empty-value={exportUi.emptyValue}
+  data-export-completed-label={exportUi.completedLabel}
+  data-export-file-prefix={exportUi.filePrefix}
+  data-export-age-key={age.key}
+>
   <div class="milestone-sheet__intro">
     <p class="eyebrow">{copy.sheetLabel}</p>
     <h1 id="milestone-sheet-title">{formatAge(ui.pageTitleTemplate)}</h1>
@@ -82,12 +93,12 @@ const numberedSections = age.sections.map((section) => ({
 
     <label class="milestone-notes__field">
       <span>{copy.strengthsPrompt}</span>
-      <textarea rows="3" autocomplete="off"></textarea>
+      <textarea name="strengths" rows="3" autocomplete="off"></textarea>
     </label>
 
     <label class="milestone-notes__field">
       <span>{copy.concernsPrompt}</span>
-      <textarea rows="3" autocomplete="off"></textarea>
+      <textarea name="concerns" rows="3" autocomplete="off"></textarea>
     </label>
 
     <div class="milestone-notes__examples">
@@ -95,7 +106,13 @@ const numberedSections = age.sections.map((section) => ({
       {[1, 2, 3].map((number) => (
         <label>
           <span class="sr-only">{ui.exampleLabel} {number}</span>
-          <input type="text" autocomplete="off" placeholder={`${number}.`} />
+          <input
+            type="text"
+            name={`example-${number}`}
+            data-export-example
+            autocomplete="off"
+            placeholder={`${number}.`}
+          />
         </label>
       ))}
     </div>
@@ -118,13 +135,13 @@ const numberedSections = age.sections.map((section) => ({
       </div>
       <label class="milestone-notes__field milestone-notes__field--nested">
         <span>{copy.lostSkillsDetail}</span>
-        <textarea rows="3" autocomplete="off"></textarea>
+        <textarea name="lost-skills-detail" rows="3" autocomplete="off"></textarea>
       </label>
     </fieldset>
 
     <label class="milestone-notes__field">
       <span>{copy.specialistPrompt}</span>
-      <textarea rows="3" autocomplete="off"></textarea>
+      <textarea name="specialist-question" rows="3" autocomplete="off"></textarea>
     </label>
   </section>
 
@@ -140,16 +157,276 @@ const numberedSections = age.sections.map((section) => ({
     <p><a href={age.sourceUrl} rel="external">{formatAge(ui.sourceLinkTemplate)}</a></p>
   </section>
 
+  <section class="milestone-export" aria-labelledby="milestone-export-title">
+    <h2 id="milestone-export-title">{exportUi.exportTitle}</h2>
+    <p>{exportUi.exportHint}</p>
+    <div class="milestone-export__buttons">
+      <button type="button" data-export-pdf>{exportUi.pdfButton}</button>
+      <button type="button" class="milestone-export__word" data-export-word>
+        {exportUi.wordButton}
+      </button>
+    </div>
+    <p class="milestone-export__pdf-hint">{exportUi.pdfHint}</p>
+  </section>
+
+  <section class="milestone-export-summary" data-export-summary aria-hidden="true"></section>
+
   <div class="milestone-actions">
     <a class="milestone-actions__back" href={backHref}>← {copy.backLabel}</a>
-    <button class="milestone-actions__print" type="button" data-print-sheet>{copy.printLabel}</button>
   </div>
 </section>
 
 <script>
-  document.querySelector('[data-print-sheet]')?.addEventListener('click', () => {
-    window.print();
-  });
+  type ExportItem = {
+    number: string;
+    title: string;
+    status: string;
+  };
+
+  type ExportSection = {
+    title: string;
+    items: ExportItem[];
+  };
+
+  type ExportField = {
+    label: string;
+    value: string;
+  };
+
+  type ExportData = {
+    title: string;
+    completedLabel: string;
+    completedDate: string;
+    notice: string;
+    sections: ExportSection[];
+    notesTitle: string;
+    strengths: ExportField;
+    concerns: ExportField;
+    examplesTitle: string;
+    examples: string[];
+    lostSkills: ExportField;
+    lostSkillsDetail: ExportField;
+    specialist: ExportField;
+    sourceTitle: string;
+    sourceText: string;
+    sourceLinkText: string;
+    sourceUrl: string;
+  };
+
+  const root = document.querySelector<HTMLElement>('[data-milestone-sheet]');
+
+  if (root) {
+    const notAnswered = root.dataset.exportNotAnswered ?? '';
+    const emptyValue = root.dataset.exportEmptyValue ?? '';
+    const completedLabel = root.dataset.exportCompletedLabel ?? '';
+    const filePrefix = root.dataset.exportFilePrefix ?? 'milestone-sheet';
+    const ageKey = root.dataset.exportAgeKey ?? 'age';
+
+    const getText = (element: Element | null) => element?.textContent?.trim() ?? '';
+
+    const selectedOption = (container: Element | null) => {
+      const checked = container?.querySelector<HTMLInputElement>('input[type="radio"]:checked');
+      return checked ? getText(checked.closest('label')?.querySelector('span') ?? null) : notAnswered;
+    };
+
+    const fieldData = (name: string): ExportField => {
+      const field = root.querySelector<HTMLInputElement | HTMLTextAreaElement>(`[name="${name}"]`);
+      const label = field?.closest('label');
+      return {
+        label: getText(label?.querySelector('span') ?? null),
+        value: field?.value.trim() || emptyValue,
+      };
+    };
+
+    const collectData = (): ExportData => {
+      const locale = document.documentElement.lang || 'en';
+      const completedDate = new Intl.DateTimeFormat(locale, {
+        day: 'numeric',
+        month: 'long',
+        year: 'numeric',
+      }).format(new Date());
+
+      const sections = Array.from(root.querySelectorAll('.milestone-group')).map((section) => ({
+        title: getText(section.querySelector('h2')),
+        items: Array.from(section.querySelectorAll('.milestone-item')).map((item) => ({
+          number: getText(item.querySelector('.milestone-item__number')),
+          title: getText(item.querySelector('legend span:last-child')),
+          status: selectedOption(item),
+        })),
+      }));
+
+      const examples = Array.from(
+        root.querySelectorAll<HTMLInputElement>('[data-export-example]'),
+      )
+        .map((input) => input.value.trim())
+        .filter(Boolean);
+
+      const lostSkillsContainer = root.querySelector('.milestone-notes__loss');
+      const source = root.querySelector('.milestone-source');
+      const sourceLink = source?.querySelector<HTMLAnchorElement>('a');
+      const notice = document.querySelector('.milestone-page__notice');
+
+      return {
+        title: getText(root.querySelector('#milestone-sheet-title')),
+        completedLabel,
+        completedDate,
+        notice: getText(notice),
+        sections,
+        notesTitle: getText(root.querySelector('#milestone-notes-title')),
+        strengths: fieldData('strengths'),
+        concerns: fieldData('concerns'),
+        examplesTitle: getText(root.querySelector('.milestone-notes__examples h3')),
+        examples: examples.length > 0 ? examples : [emptyValue],
+        lostSkills: {
+          label: getText(lostSkillsContainer?.querySelector('legend') ?? null),
+          value: selectedOption(lostSkillsContainer),
+        },
+        lostSkillsDetail: fieldData('lost-skills-detail'),
+        specialist: fieldData('specialist-question'),
+        sourceTitle: getText(source?.querySelector('h2') ?? null),
+        sourceText: getText(source?.querySelector('p') ?? null),
+        sourceLinkText: getText(sourceLink ?? null),
+        sourceUrl: sourceLink?.href ?? '',
+      };
+    };
+
+    const addTextElement = (
+      parent: HTMLElement,
+      tag: 'h1' | 'h2' | 'h3' | 'p' | 'li',
+      text: string,
+    ) => {
+      const element = document.createElement(tag);
+      element.textContent = text;
+      parent.append(element);
+      return element;
+    };
+
+    const buildPrintSummary = (data: ExportData) => {
+      const summary = root.querySelector<HTMLElement>('[data-export-summary]');
+      if (!summary) return;
+
+      summary.replaceChildren();
+      addTextElement(summary, 'h1', data.title);
+      addTextElement(summary, 'p', `${data.completedLabel}: ${data.completedDate}`);
+      if (data.notice) addTextElement(summary, 'p', data.notice);
+
+      data.sections.forEach((section) => {
+        addTextElement(summary, 'h2', section.title);
+        const list = document.createElement('ol');
+        section.items.forEach((item) => {
+          addTextElement(list, 'li', `${item.title}: ${item.status}`);
+        });
+        summary.append(list);
+      });
+
+      addTextElement(summary, 'h2', data.notesTitle);
+      [data.strengths, data.concerns].forEach((field) => {
+        addTextElement(summary, 'h3', field.label);
+        addTextElement(summary, 'p', field.value);
+      });
+
+      addTextElement(summary, 'h3', data.examplesTitle);
+      const examples = document.createElement('ol');
+      data.examples.forEach((example) => addTextElement(examples, 'li', example));
+      summary.append(examples);
+
+      addTextElement(summary, 'h3', data.lostSkills.label);
+      addTextElement(summary, 'p', data.lostSkills.value);
+      addTextElement(summary, 'h3', data.lostSkillsDetail.label);
+      addTextElement(summary, 'p', data.lostSkillsDetail.value);
+      addTextElement(summary, 'h3', data.specialist.label);
+      addTextElement(summary, 'p', data.specialist.value);
+
+      addTextElement(summary, 'h2', data.sourceTitle);
+      addTextElement(summary, 'p', data.sourceText);
+      addTextElement(summary, 'p', `${data.sourceLinkText}: ${data.sourceUrl}`);
+    };
+
+    const escapeRtf = (value: string) => {
+      let output = '';
+      for (let index = 0; index < value.length; index += 1) {
+        const char = value[index];
+        const code = value.charCodeAt(index);
+        if (char === '\\' || char === '{' || char === '}') {
+          output += `\\${char}`;
+        } else if (char === '\n') {
+          output += '\\par ';
+        } else if (code >= 32 && code <= 126) {
+          output += char;
+        } else {
+          const signedCode = code > 32767 ? code - 65536 : code;
+          output += `\\u${signedCode}?`;
+        }
+      }
+      return output;
+    };
+
+    const rtfParagraph = (text: string, bold = false) =>
+      `${bold ? '\\b ' : ''}${escapeRtf(text)}${bold ? '\\b0 ' : ''}\\par\n`;
+
+    const buildRtf = (data: ExportData) => {
+      let body = '';
+      body += rtfParagraph(data.title, true);
+      body += rtfParagraph(`${data.completedLabel}: ${data.completedDate}`);
+      if (data.notice) body += `${rtfParagraph(data.notice)}\\par\n`;
+
+      data.sections.forEach((section) => {
+        body += rtfParagraph(section.title, true);
+        section.items.forEach((item) => {
+          body += rtfParagraph(`${item.number}. ${item.title}: ${item.status}`);
+        });
+        body += '\\par\n';
+      });
+
+      body += rtfParagraph(data.notesTitle, true);
+      [data.strengths, data.concerns].forEach((field) => {
+        body += rtfParagraph(field.label, true);
+        body += rtfParagraph(field.value);
+      });
+
+      body += rtfParagraph(data.examplesTitle, true);
+      data.examples.forEach((example, index) => {
+        body += rtfParagraph(`${index + 1}. ${example}`);
+      });
+
+      [data.lostSkills, data.lostSkillsDetail, data.specialist].forEach((field) => {
+        body += rtfParagraph(field.label, true);
+        body += rtfParagraph(field.value);
+      });
+
+      body += rtfParagraph(data.sourceTitle, true);
+      body += rtfParagraph(data.sourceText);
+      body += rtfParagraph(`${data.sourceLinkText}: ${data.sourceUrl}`);
+
+      return `{\\rtf1\\ansi\\deff0\\uc1{\\fonttbl{\\f0 Calibri;}}\\f0\\fs22\n${body}}`;
+    };
+
+    const dateStamp = () => new Date().toISOString().slice(0, 10);
+
+    root.querySelector('[data-export-pdf]')?.addEventListener('click', () => {
+      const data = collectData();
+      buildPrintSummary(data);
+      document.body.classList.add('milestone-exporting-pdf');
+      window.print();
+    });
+
+    window.addEventListener('afterprint', () => {
+      document.body.classList.remove('milestone-exporting-pdf');
+    });
+
+    root.querySelector('[data-export-word]')?.addEventListener('click', () => {
+      const data = collectData();
+      const blob = new Blob([buildRtf(data)], { type: 'application/rtf;charset=utf-8' });
+      const url = URL.createObjectURL(blob);
+      const link = document.createElement('a');
+      link.href = url;
+      link.download = `${filePrefix}-${ageKey}-${dateStamp()}.rtf`;
+      document.body.append(link);
+      link.click();
+      link.remove();
+      URL.revokeObjectURL(url);
+    });
+  }
 </script>
 
 <style>
@@ -201,7 +478,8 @@ const numberedSections = age.sections.map((section) => ({
   .milestone-group h2,
   .milestone-notes h2,
   .milestone-next h2,
-  .milestone-source h2 {
+  .milestone-source h2,
+  .milestone-export h2 {
     font-size: clamp(1.45rem, 4vw, 2rem);
   }
 
@@ -284,7 +562,8 @@ const numberedSections = age.sections.map((section) => ({
 
   .milestone-notes,
   .milestone-next,
-  .milestone-source {
+  .milestone-source,
+  .milestone-export {
     margin-top: 3rem;
     padding: 1.25rem;
     border: 1px solid var(--color-border);
@@ -348,8 +627,52 @@ const numberedSections = age.sections.map((section) => ({
   }
 
   .milestone-next p,
-  .milestone-source p {
+  .milestone-source p,
+  .milestone-export p {
     margin-top: 0.8rem;
+  }
+
+  .milestone-export {
+    border-color: var(--color-primary);
+    background: var(--color-surface-soft);
+  }
+
+  .milestone-export__buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+    margin-top: 1.25rem;
+  }
+
+  .milestone-export__buttons button {
+    min-height: 2.9rem;
+    padding: 0.65rem 1rem;
+    border: 1px solid var(--color-primary-dark);
+    border-radius: var(--radius-small);
+    background: var(--color-primary-dark);
+    color: white;
+    font-weight: 700;
+    cursor: pointer;
+  }
+
+  .milestone-export__buttons .milestone-export__word {
+    background: white;
+    color: var(--color-primary-dark);
+  }
+
+  .milestone-export__buttons button:hover {
+    border-color: var(--color-primary);
+    background: var(--color-primary);
+    color: white;
+  }
+
+  .milestone-export__pdf-hint {
+    color: var(--color-muted);
+    font-size: 0.9rem;
+  }
+
+  .milestone-export-summary {
+    display: none;
   }
 
   .milestone-actions {
@@ -363,17 +686,6 @@ const numberedSections = age.sections.map((section) => ({
 
   .milestone-actions__back {
     font-weight: 700;
-  }
-
-  .milestone-actions__print {
-    min-height: 2.8rem;
-    padding: 0.6rem 1rem;
-    border: 0;
-    border-radius: var(--radius-small);
-    background: var(--color-primary-dark);
-    color: white;
-    font-weight: 700;
-    cursor: pointer;
   }
 
   .sr-only {
@@ -395,13 +707,22 @@ const numberedSections = age.sections.map((section) => ({
     .milestone-item__note {
       margin-left: 0;
     }
+
+    .milestone-export__buttons {
+      display: grid;
+    }
+
+    .milestone-export__buttons button {
+      width: 100%;
+    }
   }
 
   @media print {
     :global(.site-header),
     :global(.site-footer),
     :global(.skip-link),
-    .milestone-actions {
+    .milestone-actions,
+    .milestone-export {
       display: none !important;
     }
 
@@ -421,6 +742,42 @@ const numberedSections = age.sections.map((section) => ({
     .milestone-options label {
       min-height: 0;
       padding: 0.35rem 0.5rem;
+    }
+
+    :global(body.milestone-exporting-pdf) .milestone-sheet > :not(.milestone-export-summary) {
+      display: none !important;
+    }
+
+    :global(body.milestone-exporting-pdf) .milestone-export-summary {
+      display: block !important;
+      color: #111;
+      font-size: 11pt;
+      line-height: 1.45;
+    }
+
+    :global(body.milestone-exporting-pdf) .milestone-export-summary h1 {
+      max-width: none;
+      margin-bottom: 0.5rem;
+      font-size: 20pt;
+    }
+
+    :global(body.milestone-exporting-pdf) .milestone-export-summary h2 {
+      margin-top: 1.5rem;
+      font-size: 15pt;
+    }
+
+    :global(body.milestone-exporting-pdf) .milestone-export-summary h3 {
+      margin-top: 1rem;
+      font-size: 12pt;
+    }
+
+    :global(body.milestone-exporting-pdf) .milestone-export-summary p,
+    :global(body.milestone-exporting-pdf) .milestone-export-summary ol {
+      margin-top: 0.4rem;
+    }
+
+    :global(body.milestone-exporting-pdf) .milestone-export-summary li {
+      margin-bottom: 0.3rem;
     }
   }
 </style>
