@@ -6,6 +6,8 @@ import {
   type MilestoneAge,
   type MilestoneLocaleContent,
 } from '../../../../../data/development-milestones';
+import { CONTENT_UI } from '../../../../../i18n/content';
+import { UI } from '../../../../../i18n/ui';
 import BaseLayout from '../../../../../layouts/BaseLayout.astro';
 import { articlePath, localePath, sectionPath } from '../../../../../lib/urls';
 import { SITE, type Locale } from '../../../../../site.config';
@@ -74,12 +76,16 @@ interface Props {
 const { parentEntry, age, copy, alternatePaths } = Astro.props;
 const locale = parentEntry.data.language;
 const parentHref = articlePath(locale, 'parents', parentEntry.data.slug);
-const pageTitle = `Ориентиры развития в ${age.label}`;
+const ui = CONTENT_UI[locale].milestones;
+const siteUi = UI[locale];
+const formatAge = (template: string) => template.replace('{age}', age.label);
+const pageTitle = formatAge(ui.pageTitleTemplate);
+const pageDescription = formatAge(ui.pageDescriptionTemplate);
 ---
 
 <BaseLayout
   title={`${pageTitle} - ${SITE.name}`}
-  description={`Лист наблюдений для родителей: ориентиры развития ребёнка в ${age.label}. Материал не является диагностическим тестом.`}
+  description={pageDescription}
   locale={locale}
   currentSection="parents"
   alternatePath={`parents/${parentEntry.data.slug}/${age.slug}`}
@@ -88,22 +94,22 @@ const pageTitle = `Ориентиры развития в ${age.label}`;
   <article class="milestone-page">
     <div class="container milestone-page__breadcrumb">
       <p class="breadcrumb">
-        <a href={localePath(locale)}>Главная</a>
+        <a href={localePath(locale)}>{siteUi.homeLabel}</a>
         <span aria-hidden="true"> / </span>
-        <a href={sectionPath(locale, 'parents')}>Родителям</a>
+        <a href={sectionPath(locale, 'parents')}>{siteUi.sections.parents.title}</a>
         <span aria-hidden="true"> / </span>
-        <a href={parentHref}>Ориентиры развития</a>
+        <a href={parentHref}>{ui.breadcrumbLabel}</a>
         <span aria-hidden="true"> / </span>
         <span aria-current="page">{age.label}</span>
       </p>
     </div>
 
-    <aside class="milestone-page__notice" aria-label="Как использовать лист">
-      <p><strong>Это лист наблюдений, а не тест.</strong> Здесь нет правильных или неправильных ответов, баллы не подсчитываются и результат не рассчитывается.</p>
-      <p>Отметки и заметки остаются в вашем браузере. Сайт не отправляет их на сервер и не сохраняет в базе данных.</p>
+    <aside class="milestone-page__notice" aria-label={ui.noticeAriaLabel}>
+      <p><strong>{ui.noticeTitle}</strong> {ui.noticeText}</p>
+      <p>{ui.noticePrivacyText}</p>
     </aside>
 
-    <MilestoneSheet age={age} copy={copy} backHref={parentHref} />
+    <MilestoneSheet age={age} copy={copy} backHref={parentHref} locale={locale} />
   </article>
 </BaseLayout>
 
