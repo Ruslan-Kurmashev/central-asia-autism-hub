@@ -1,0 +1,34 @@
+name: QA milestone downloads
+
+on:
+  push:
+    branches:
+      - feature/milestone-downloads
+
+permissions:
+  contents: read
+
+jobs:
+  qa:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v7
+      - uses: actions/setup-node@v6
+        with:
+          node-version: 24
+          cache: npm
+      - run: npm ci
+      - run: npm run validate
+      - name: Verify export UI in generated pages
+        run: |
+          test -f dist/kz/ru/parents/orientiry-razvitiya-rebenka/18-mesyatsev/index.html
+          test -f dist/kz/kk/parents/balanyn-damu-bagdarlary/18-ai/index.html
+          test -f dist/kz/en/parents/child-development-milestones/18-months/index.html
+          grep -q 'Сохранить PDF' dist/kz/ru/parents/orientiry-razvitiya-rebenka/18-mesyatsev/index.html
+          grep -q 'Скачать для Word' dist/kz/ru/parents/orientiry-razvitiya-rebenka/18-mesyatsev/index.html
+          grep -q 'PDF ретінде сақтау' dist/kz/kk/parents/balanyn-damu-bagdarlary/18-ai/index.html
+          grep -q 'Word үшін жүктеу' dist/kz/kk/parents/balanyn-damu-bagdarlary/18-ai/index.html
+          grep -q 'Save as PDF' dist/kz/en/parents/child-development-milestones/18-months/index.html
+          grep -q 'Download for Word' dist/kz/en/parents/child-development-milestones/18-months/index.html
+          grep -q 'data-export-pdf' dist/kz/ru/parents/orientiry-razvitiya-rebenka/18-mesyatsev/index.html
+          grep -q 'data-export-word' dist/kz/ru/parents/orientiry-razvitiya-rebenka/18-mesyatsev/index.html
