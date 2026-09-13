@@ -3,14 +3,19 @@ import type {
   MilestoneAge,
   MilestoneLocaleContent,
 } from '../data/development-milestones';
+import { CONTENT_UI } from '../i18n/content';
+import type { Locale } from '../site.config';
 
 interface Props {
   age: MilestoneAge;
   copy: MilestoneLocaleContent;
   backHref: string;
+  locale: Locale;
 }
 
-const { age, copy, backHref } = Astro.props;
+const { age, copy, backHref, locale } = Astro.props;
+const ui = CONTENT_UI[locale].milestones;
+const formatAge = (template: string) => template.replace('{age}', age.label);
 let itemNumber = 0;
 const numberedSections = age.sections.map((section) => ({
   ...section,
@@ -24,13 +29,13 @@ const numberedSections = age.sections.map((section) => ({
 <section class="milestone-sheet" aria-labelledby="milestone-sheet-title">
   <div class="milestone-sheet__intro">
     <p class="eyebrow">{copy.sheetLabel}</p>
-    <h1 id="milestone-sheet-title">Ориентиры развития в {age.label}</h1>
+    <h1 id="milestone-sheet-title">{formatAge(ui.pageTitleTemplate)}</h1>
     <p>{age.intro}</p>
     <p>{copy.intro}</p>
     <p class="milestone-sheet__privacy">{copy.privacyNote}</p>
   </div>
 
-  <div class="milestone-sheet__legend" aria-label="Варианты ответа">
+  <div class="milestone-sheet__legend" aria-label={ui.answerOptionsLabel}>
     <span>✅ {copy.optionObserved}</span>
     <span>○ {copy.optionNotYet}</span>
     <span>? {copy.optionUnsure}</span>
@@ -89,7 +94,7 @@ const numberedSections = age.sections.map((section) => ({
       <h3>{copy.examplesPrompt}</h3>
       {[1, 2, 3].map((number) => (
         <label>
-          <span class="sr-only">Пример {number}</span>
+          <span class="sr-only">{ui.exampleLabel} {number}</span>
           <input type="text" autocomplete="off" placeholder={`${number}.`} />
         </label>
       ))}
@@ -132,7 +137,7 @@ const numberedSections = age.sections.map((section) => ({
   <section class="milestone-source" aria-labelledby="milestone-source-title">
     <h2 id="milestone-source-title">{copy.sourceTitle}</h2>
     <p>{copy.sourceText}</p>
-    <p><a href={age.sourceUrl} rel="external">CDC: ориентиры для возраста {age.label}</a></p>
+    <p><a href={age.sourceUrl} rel="external">{formatAge(ui.sourceLinkTemplate)}</a></p>
   </section>
 
   <div class="milestone-actions">
