@@ -173,7 +173,7 @@ export const DEVELOPMENT_MILESTONES: Partial<Record<Locale, MilestoneLocaleConte
             items: [
               { id: '4m-head', title: 'Уверенно держит голову, когда вы держите его вертикально' },
               { id: '4m-holds', title: 'Удерживает игрушку, если её вложить в руку' },
-              { id: '4m-swings', title: 'Тянет руку или ударяет рукой по игрушкам' },
+              { id: '4m-swings', title: 'Размахивает рукой в сторону игрушек или ударяет по ним рукой' },
               { id: '4m-mouth', title: 'Подносит руки ко рту' },
               { id: '4m-elbows', title: 'Лёжа на животе, приподнимается на локтях или предплечьях' },
             ],
@@ -239,7 +239,7 @@ export const DEVELOPMENT_MILESTONES: Partial<Record<Locale, MilestoneLocaleConte
             items: [
               { id: '9m-strangers', title: 'Может настороженно относиться к незнакомым людям' },
               { id: '9m-expressions', title: 'Показывает разные выражения лица' },
-              { id: '9m-name', title: 'Смотрит на вас, когда вы называете его по имени' },
+              { id: '9m-name', title: 'Смотрит или поворачивается в вашу сторону, когда вы называете его по имени' },
               { id: '9m-leave', title: 'Реагирует, когда вы уходите' },
               { id: '9m-peekaboo', title: 'Улыбается или смеётся во время игры в «ку-ку»' },
             ],
@@ -286,7 +286,11 @@ export const DEVELOPMENT_MILESTONES: Partial<Record<Locale, MilestoneLocaleConte
             items: [
               { id: '12m-bye', title: 'Машет «пока»' },
               { id: '12m-parent', title: 'Называет родителя «мама», «папа» или другим постоянным словом' },
-              { id: '12m-no', title: 'Начинает понимать слово «нет»' },
+              {
+                id: '12m-no',
+                title: 'Понимает слово «нет»',
+                example: 'Например, ненадолго останавливается или прекращает действие, когда вы говорите «нет».',
+              },
             ],
           },
           {
@@ -345,7 +349,7 @@ export const DEVELOPMENT_MILESTONES: Partial<Record<Locale, MilestoneLocaleConte
             title: 'Движение и самостоятельность',
             items: [
               { id: '15m-steps', title: 'Делает несколько самостоятельных шагов' },
-              { id: '15m-fingers', title: 'Берёт еду пальцами и ест самостоятельно' },
+              { id: '15m-fingers', title: 'Самостоятельно ест некоторые кусочки еды пальцами' },
             ],
           },
         ],
@@ -387,7 +391,6 @@ export const DEVELOPMENT_MILESTONES: Partial<Record<Locale, MilestoneLocaleConte
               {
                 id: '18m-words',
                 title: 'Пытается сказать не менее трёх слов кроме «мама» и «папа»',
-                note: 'Слова могут пока звучать нечётко.',
               },
               {
                 id: '18m-direction',
@@ -478,9 +481,13 @@ export const DEVELOPMENT_MILESTONES: Partial<Record<Locale, MilestoneLocaleConte
           {
             title: 'Речь и понимание',
             items: [
-              { id: '30m-50words', title: 'Использует примерно 50 слов', note: 'Необязательно считать каждое слово точно. Важна общая картина расширения словаря.' },
+              {
+                id: '30m-50words',
+                title: 'Использует примерно 50 слов',
+                note: 'CDC формулирует этот ориентир как примерно 50 слов. Это число не используется отдельно для постановки диагноза.',
+              },
               { id: '30m-action', title: 'Соединяет два или больше слов, включая слово-действие, например «собака бежит»' },
-              { id: '30m-book', title: 'Называет знакомые предметы в книге, когда вы на них показываете' },
+              { id: '30m-book', title: 'Называет предметы в книге, когда вы показываете на них и спрашиваете «Что это?»' },
               { id: '30m-pronouns', title: 'Использует слова вроде «я», «мне» или «мы»' },
             ],
           },
@@ -604,8 +611,8 @@ export const DEVELOPMENT_MILESTONES: Partial<Record<Locale, MilestoneLocaleConte
           {
             title: 'Общение с людьми',
             items: [
-              { id: '5y-rules', title: 'Следует простым правилам игры или ждёт своей очереди' },
-              { id: '5y-performs', title: 'Поёт, танцует или разыгрывает что-то для других' },
+              { id: '5y-rules', title: 'Следует правилам или ждёт своей очереди во время игры с другими детьми' },
+              { id: '5y-performs', title: 'Поёт, танцует или разыгрывает что-то для вас' },
               { id: '5y-chores', title: 'Выполняет простые домашние поручения, например помогает подобрать пары носков или убрать со стола' },
             ],
           },
