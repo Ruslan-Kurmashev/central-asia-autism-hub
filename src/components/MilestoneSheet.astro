@@ -11,6 +11,14 @@ interface Props {
 }
 
 const { age, copy, backHref } = Astro.props;
+let itemNumber = 0;
+const numberedSections = age.sections.map((section) => ({
+  ...section,
+  items: section.items.map((item) => ({
+    ...item,
+    number: ++itemNumber,
+  })),
+}));
 ---
 
 <section class="milestone-sheet" aria-labelledby="milestone-sheet-title">
@@ -29,14 +37,14 @@ const { age, copy, backHref } = Astro.props;
   </div>
 
   {
-    age.sections.map((section) => (
+    numberedSections.map((section) => (
       <section class="milestone-group">
         <h2>{section.title}</h2>
         <div class="milestone-group__items">
-          {section.items.map((item, itemIndex) => (
+          {section.items.map((item) => (
             <fieldset class="milestone-item">
               <legend>
-                <span class="milestone-item__number">{itemIndex + 1}</span>
+                <span class="milestone-item__number">{item.number}</span>
                 <span>{item.title}</span>
               </legend>
 
