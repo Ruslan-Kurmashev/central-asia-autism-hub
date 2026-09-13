@@ -21,5 +21,75 @@ jobs:
           cache: npm
       - name: Install dependencies
         run: npm ci
-      - name: Validate site
+      - name: Validate draft branch
         run: npm run validate
+      - name: Prepare temporary published state for render QA
+        run: |
+          python3 - <<'PY'
+          from pathlib import Path
+          path = Path('src/content/pages/kz/ru/development-milestones.md')
+          text = path.read_text()
+          text = text.replace('translationStatus: pending', 'translationStatus: source', 1)
+          text = text.replace('draft: true', 'draft: false\npublishedAt: 2026-09-13\nupdatedAt: 2026-09-13', 1)
+          path.write_text(text)
+          PY
+      - name: Build temporary published state
+        run: npm run build
+      - name: Verify generated milestone routes and controls
+        run: |
+          python3 - <<'PY'
+          from pathlib import Path
+          import re
+
+          base = Path('dist/kz/ru/parents/orientiry-razvitiya-rebenka')
+          ages = [
+              '2-mesyatsa', '4-mesyatsa', '6-mesyatsev', '9-mesyatsev',
+              '1-god', '15-mesyatsev', '18-mesyatsev', '2-goda',
+              '2-5-goda', '3-goda', '4-goda', '5-let'
+          ]
+          expected = [base / 'index.html'] + [base / age / 'index.html' for age in ages]
+          missing = [str(path) for path in expected if not path.exists()]
+          if missing:
+              raise SystemExit('Missing generated pages:\n' + '\n'.join(missing))
+
+          parent_html = (base / 'index.html').read_text()
+          missing_links = [age for age in ages if f'/{age}/' not in parent_html]
+          if missing_links:
+              raise SystemExit('Missing age links: ' + ', '.join(missing_links))
+
+          sheet_html = (base / '18-mesyatsev' / 'index.html').read_text()
+          radio_count = len(re.findall(r'type="radio"', sheet_html))
+          if radio_count != 48:
+              raise SystemExit(f'18-month sheet expected 48 radio inputs, found {radio_count}')
+          if sheet_html.count('<h1') != 1:
+              raise SystemExit('18-month sheet must contain exactly one H1')
+          if 'баллы не подсчитываются' not in sheet_html:
+              raise SystemExit('Non-test boundary notice missing')
+          if 'data-print-sheet' not in sheet_html:
+              raise SystemExit('Print control missing')
+
+          print('Render QA assertions passed for 13 milestone pages.')
+          PY
+      - name: Capture desktop and mobile screenshots
+        run: |
+          CHROME="$(command -v google-chrome || command -v chromium || command -v chromium-browser)"
+          test -n "$CHROME"
+          mkdir -p qa-site/central-asia-autism-hub qa-artifacts
+          cp -R dist/. qa-site/central-asia-autism-hub/
+          python3 -m http.server 4321 --directory qa-site >/tmp/qa-http.log 2>&1 &
+          SERVER_PID=$!
+          trap 'kill $SERVER_PID' EXIT
+          sleep 2
+          MAIN_URL='http://127.0.0.1:4321/central-asia-autism-hub/kz/ru/parents/orientiry-razvitiya-rebenka/'
+          SHEET_URL='http://127.0.0.1:4321/central-asia-autism-hub/kz/ru/parents/orientiry-razvitiya-rebenka/18-mesyatsev/'
+          "$CHROME" --headless --disable-gpu --no-sandbox --hide-scrollbars --window-size=1440,1400 --screenshot=qa-artifacts/main-desktop.png "$MAIN_URL"
+          "$CHROME" --headless --disable-gpu --no-sandbox --hide-scrollbars --window-size=390,844 --screenshot=qa-artifacts/main-mobile.png "$MAIN_URL"
+          "$CHROME" --headless --disable-gpu --no-sandbox --hide-scrollbars --window-size=1440,1600 --screenshot=qa-artifacts/sheet-desktop.png "$SHEET_URL"
+          "$CHROME" --headless --disable-gpu --no-sandbox --hide-scrollbars --window-size=390,844 --screenshot=qa-artifacts/sheet-mobile.png "$SHEET_URL"
+          cp dist/kz/ru/parents/orientiry-razvitiya-rebenka/index.html qa-artifacts/main.html
+          cp dist/kz/ru/parents/orientiry-razvitiya-rebenka/18-mesyatsev/index.html qa-artifacts/sheet-18m.html
+      - name: Upload QA artifacts
+        uses: actions/upload-artifact@v6
+        with:
+          name: development-milestones-qa
+          path: qa-artifacts
