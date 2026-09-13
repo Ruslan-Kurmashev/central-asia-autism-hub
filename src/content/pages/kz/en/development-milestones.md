@@ -8,7 +8,7 @@ section: parents
 topic: child-development
 slug: child-development-milestones
 translationKey: parents-development-milestones
-translationStatus: pending
+translationStatus: checked
 audience:
   - parents
   - families
@@ -17,7 +17,10 @@ editor: Ruslan Kurmashev
 riskLevel: moderate
 disclaimerType: medical
 conflictOfInterest: "No conflict of interest declared."
-draft: true
+publishedAt: 2026-09-13
+updatedAt: 2026-09-13
+reviewDueAt: 2027-09-13
+draft: false
 keyPoints:
   - "Developmental milestones help you observe your child's development but are not a diagnostic test."
   - "Each age has a separate short observation sheet with everyday examples."

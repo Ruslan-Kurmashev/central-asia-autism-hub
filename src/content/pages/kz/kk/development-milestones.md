@@ -8,7 +8,7 @@ section: parents
 topic: child-development
 slug: balanyn-damu-bagdarlary
 translationKey: parents-development-milestones
-translationStatus: pending
+translationStatus: checked
 audience:
   - parents
   - families
@@ -17,7 +17,10 @@ editor: Ruslan Kurmashev
 riskLevel: moderate
 disclaimerType: medical
 conflictOfInterest: "Мүдделер қақтығысы мәлімделмеген."
-draft: true
+publishedAt: 2026-09-13
+updatedAt: 2026-09-13
+reviewDueAt: 2027-09-13
+draft: false
 keyPoints:
   - "Даму кезеңдері баланың дамуын бақылауға көмектеседі, бірақ диагностикалық тест болып саналмайды."
   - "Әр жас кезеңіне күнделікті өмірден мысалдары бар жеке қысқа бақылау парағы берілген."

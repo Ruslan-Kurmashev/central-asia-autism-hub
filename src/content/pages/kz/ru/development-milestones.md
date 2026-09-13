@@ -8,7 +8,7 @@ section: parents
 topic: child-development
 slug: orientiry-razvitiya-rebenka
 translationKey: parents-development-milestones
-translationStatus: pending
+translationStatus: source
 audience:
   - parents
   - families
@@ -17,7 +17,10 @@ editor: Ruslan Kurmashev
 riskLevel: moderate
 disclaimerType: medical
 conflictOfInterest: "Конфликт интересов не заявлен."
-draft: true
+publishedAt: 2026-09-13
+updatedAt: 2026-09-13
+reviewDueAt: 2027-09-13
+draft: false
 keyPoints:
   - "Ориентиры помогают наблюдать развитие ребёнка, но не являются диагностическим тестом."
   - "Для каждого возраста используется отдельный короткий лист наблюдений с бытовыми примерами."
