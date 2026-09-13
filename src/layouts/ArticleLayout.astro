@@ -1,5 +1,6 @@
 ---
 import type { CollectionEntry } from 'astro:content';
+import DevelopmentMilestoneAgeSelector from '../components/DevelopmentMilestoneAgeSelector.astro';
 import { CONTENT_UI, DATE_LOCALES } from '../i18n/content';
 import { UI } from '../i18n/ui';
 import { localePath, sectionPath } from '../lib/urls';
@@ -29,6 +30,9 @@ const boundaryText =
   data.disclaimerType === 'medical'
     ? copy.medicalBoundaryText
     : copy.informationBoundaryText;
+const isDevelopmentMilestones =
+  data.translationKey === 'parents-development-milestones' &&
+  data.section === 'parents';
 ---
 
 <BaseLayout
@@ -65,6 +69,13 @@ const boundaryText =
     </header>
 
     <div class="container article-shell article-content">
+      {isDevelopmentMilestones && (
+        <DevelopmentMilestoneAgeSelector
+          locale={locale}
+          parentSlug={data.slug}
+        />
+      )}
+
       {data.keyPoints.length > 0 && (
         <section class="article-key-points" aria-labelledby="key-points-title">
           <h2 id="key-points-title">{copy.keyPointsTitle}</h2>

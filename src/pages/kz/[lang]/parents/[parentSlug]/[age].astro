@@ -1,0 +1,166 @@
+---
+import { getCollection, type CollectionEntry } from 'astro:content';
+import MilestoneSheet from '../../../../../components/MilestoneSheet.astro';
+import {
+  DEVELOPMENT_MILESTONES,
+  type MilestoneAge,
+  type MilestoneLocaleContent,
+} from '../../../../../data/development-milestones-all';
+import { CONTENT_UI } from '../../../../../i18n/content';
+import { UI } from '../../../../../i18n/ui';
+import BaseLayout from '../../../../../layouts/BaseLayout.astro';
+import { articlePath, localePath, sectionPath } from '../../../../../lib/urls';
+import { SITE, type Locale } from '../../../../../site.config';
+
+export async function getStaticPaths() {
+  const parentEntries = await getCollection(
+    'pages',
+    ({ data }) =>
+      data.translationKey === 'parents-development-milestones' &&
+      data.section === 'parents' &&
+      !data.draft &&
+      data.translationStatus !== 'pending' &&
+      Boolean(data.publishedAt) &&
+      Boolean(data.updatedAt),
+  );
+
+  return parentEntries.flatMap((parentEntry) => {
+    const locale = parentEntry.data.language;
+    const copy = DEVELOPMENT_MILESTONES[locale];
+
+    if (!copy) return [];
+
+    return copy.ages.map((age) => {
+      const alternatePaths = Object.fromEntries(
+        parentEntries.flatMap((translation) => {
+          const translatedCopy = DEVELOPMENT_MILESTONES[translation.data.language];
+          const translatedAge = translatedCopy?.ages.find(
+            (candidate) => candidate.key === age.key,
+          );
+
+          if (!translatedAge) return [];
+
+          return [
+            [
+              translation.data.language,
+              `parents/${translation.data.slug}/${translatedAge.slug}`,
+            ],
+          ];
+        }),
+      ) as Partial<Record<Locale, string>>;
+
+      return {
+        params: {
+          lang: locale,
+          parentSlug: parentEntry.data.slug,
+          age: age.slug,
+        },
+        props: {
+          parentEntry,
+          age,
+          copy,
+          alternatePaths,
+        },
+      };
+    });
+  });
+}
+
+interface Props {
+  parentEntry: CollectionEntry<'pages'>;
+  age: MilestoneAge;
+  copy: MilestoneLocaleContent;
+  alternatePaths: Partial<Record<Locale, string>>;
+}
+
+const { parentEntry, age, copy, alternatePaths } = Astro.props;
+const locale = parentEntry.data.language;
+const parentHref = articlePath(locale, 'parents', parentEntry.data.slug);
+const ui = CONTENT_UI[locale].milestones;
+const siteUi = UI[locale];
+const formatAge = (template: string) => template.replace('{age}', age.label);
+const pageTitle = formatAge(ui.pageTitleTemplate);
+const pageDescription = formatAge(ui.pageDescriptionTemplate);
+---
+
+<BaseLayout
+  title={`${pageTitle} - ${SITE.name}`}
+  description={pageDescription}
+  locale={locale}
+  currentSection="parents"
+  alternatePath={`parents/${parentEntry.data.slug}/${age.slug}`}
+  alternatePaths={alternatePaths}
+>
+  <article class="milestone-page">
+    <div class="container milestone-page__breadcrumb">
+      <p class="breadcrumb">
+        <a href={localePath(locale)}>{siteUi.homeLabel}</a>
+        <span aria-hidden="true"> / </span>
+        <a href={sectionPath(locale, 'parents')}>{siteUi.sections.parents.title}</a>
+        <span aria-hidden="true"> / </span>
+        <a href={parentHref}>{ui.breadcrumbLabel}</a>
+        <span aria-hidden="true"> / </span>
+        <span aria-current="page">{age.label}</span>
+      </p>
+    </div>
+
+    <aside class="milestone-page__notice" aria-label={ui.noticeAriaLabel}>
+      <p><strong>{ui.noticeTitle}</strong> {ui.noticeText}</p>
+      <p>{ui.noticePrivacyText}</p>
+    </aside>
+
+    <MilestoneSheet age={age} copy={copy} backHref={parentHref} locale={locale} />
+  </article>
+</BaseLayout>
+
+<style>
+  .milestone-page {
+    background: var(--color-background);
+  }
+
+  .milestone-page__breadcrumb,
+  .milestone-page__notice {
+    width: min(calc(100% - 2rem), 52rem);
+    margin-inline: auto;
+  }
+
+  .milestone-page__breadcrumb {
+    padding-top: 1.5rem;
+  }
+
+  .milestone-page__breadcrumb .breadcrumb {
+    margin-bottom: 0;
+  }
+
+  .milestone-page__notice {
+    display: grid;
+    gap: 0.55rem;
+    margin-top: 1.2rem;
+    padding: 1rem 1.1rem;
+    border: 1px solid var(--color-border);
+    border-left: 0.3rem solid var(--color-primary);
+    border-radius: var(--radius-small);
+    background: var(--color-surface-soft);
+    color: var(--color-muted);
+    font-size: 0.94rem;
+  }
+
+  .milestone-page__notice strong {
+    color: var(--color-ink);
+  }
+
+  :global(.milestone-sheet__privacy) {
+    display: none;
+  }
+
+  @media print {
+    .milestone-page__breadcrumb {
+      display: none;
+    }
+
+    .milestone-page__notice {
+      margin-top: 0;
+      border-left-width: 0.15rem;
+    }
+  }
+</style>
