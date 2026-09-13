@@ -1,0 +1,413 @@
+---
+import type {
+  MilestoneAge,
+  MilestoneLocaleContent,
+} from '../data/development-milestones';
+
+interface Props {
+  age: MilestoneAge;
+  copy: MilestoneLocaleContent;
+  backHref: string;
+}
+
+const { age, copy, backHref } = Astro.props;
+---
+
+<section class="milestone-sheet" aria-labelledby="milestone-sheet-title">
+  <div class="milestone-sheet__intro">
+    <p class="eyebrow">{copy.sheetLabel}</p>
+    <h1 id="milestone-sheet-title">Ориентиры развития в {age.label}</h1>
+    <p>{age.intro}</p>
+    <p>{copy.intro}</p>
+    <p class="milestone-sheet__privacy">{copy.privacyNote}</p>
+  </div>
+
+  <div class="milestone-sheet__legend" aria-label="Варианты ответа">
+    <span>✅ {copy.optionObserved}</span>
+    <span>○ {copy.optionNotYet}</span>
+    <span>? {copy.optionUnsure}</span>
+  </div>
+
+  {
+    age.sections.map((section) => (
+      <section class="milestone-group">
+        <h2>{section.title}</h2>
+        <div class="milestone-group__items">
+          {section.items.map((item, itemIndex) => (
+            <fieldset class="milestone-item">
+              <legend>
+                <span class="milestone-item__number">{itemIndex + 1}</span>
+                <span>{item.title}</span>
+              </legend>
+
+              {item.example && <p class="milestone-item__example">{item.example}</p>}
+              {item.note && <p class="milestone-item__note">{item.note}</p>}
+
+              <div class="milestone-options">
+                <label>
+                  <input type="radio" name={item.id} value="observed" />
+                  <span>✅ {copy.optionObserved}</span>
+                </label>
+                <label>
+                  <input type="radio" name={item.id} value="not-yet" />
+                  <span>○ {copy.optionNotYet}</span>
+                </label>
+                <label>
+                  <input type="radio" name={item.id} value="unsure" />
+                  <span>? {copy.optionUnsure}</span>
+                </label>
+              </div>
+            </fieldset>
+          ))}
+        </div>
+      </section>
+    ))
+  }
+
+  <section class="milestone-notes" aria-labelledby="milestone-notes-title">
+    <h2 id="milestone-notes-title">{copy.notesTitle}</h2>
+
+    <label class="milestone-notes__field">
+      <span>{copy.strengthsPrompt}</span>
+      <textarea rows="3" autocomplete="off"></textarea>
+    </label>
+
+    <label class="milestone-notes__field">
+      <span>{copy.concernsPrompt}</span>
+      <textarea rows="3" autocomplete="off"></textarea>
+    </label>
+
+    <div class="milestone-notes__examples">
+      <h3>{copy.examplesPrompt}</h3>
+      {[1, 2, 3].map((number) => (
+        <label>
+          <span class="sr-only">Пример {number}</span>
+          <input type="text" autocomplete="off" placeholder={`${number}.`} />
+        </label>
+      ))}
+    </div>
+
+    <fieldset class="milestone-notes__loss">
+      <legend>{copy.lostSkillsPrompt}</legend>
+      <div class="milestone-options milestone-options--compact">
+        <label>
+          <input type="radio" name="lost-skills" value="no" />
+          <span>{copy.lostSkillsNo}</span>
+        </label>
+        <label>
+          <input type="radio" name="lost-skills" value="yes" />
+          <span>{copy.lostSkillsYes}</span>
+        </label>
+        <label>
+          <input type="radio" name="lost-skills" value="unsure" />
+          <span>{copy.lostSkillsUnsure}</span>
+        </label>
+      </div>
+      <label class="milestone-notes__field milestone-notes__field--nested">
+        <span>{copy.lostSkillsDetail}</span>
+        <textarea rows="3" autocomplete="off"></textarea>
+      </label>
+    </fieldset>
+
+    <label class="milestone-notes__field">
+      <span>{copy.specialistPrompt}</span>
+      <textarea rows="3" autocomplete="off"></textarea>
+    </label>
+  </section>
+
+  <section class="milestone-next" aria-labelledby="milestone-next-title">
+    <h2 id="milestone-next-title">{copy.nextTitle}</h2>
+    <p>{copy.nextText}</p>
+    <p><strong>{copy.lostSkillsText}</strong></p>
+  </section>
+
+  <section class="milestone-source" aria-labelledby="milestone-source-title">
+    <h2 id="milestone-source-title">{copy.sourceTitle}</h2>
+    <p>{copy.sourceText}</p>
+    <p><a href={age.sourceUrl} rel="external">CDC: ориентиры для возраста {age.label}</a></p>
+  </section>
+
+  <div class="milestone-actions">
+    <a class="milestone-actions__back" href={backHref}>← {copy.backLabel}</a>
+    <button class="milestone-actions__print" type="button" data-print-sheet>{copy.printLabel}</button>
+  </div>
+</section>
+
+<script>
+  document.querySelector('[data-print-sheet]')?.addEventListener('click', () => {
+    window.print();
+  });
+</script>
+
+<style>
+  .milestone-sheet {
+    width: min(calc(100% - 2rem), 52rem);
+    margin-inline: auto;
+    padding-block: clamp(2.5rem, 7vw, 5rem);
+  }
+
+  .milestone-sheet__intro {
+    display: grid;
+    gap: 1rem;
+  }
+
+  .milestone-sheet__intro h1 {
+    max-width: 18ch;
+  }
+
+  .milestone-sheet__intro > p:not(.eyebrow) {
+    color: var(--color-muted);
+    font-size: 1.05rem;
+  }
+
+  .milestone-sheet__privacy {
+    padding: 0.9rem 1rem;
+    border-left: 0.25rem solid var(--color-primary);
+    background: var(--color-surface-soft);
+  }
+
+  .milestone-sheet__legend {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.65rem;
+    margin-top: 2rem;
+  }
+
+  .milestone-sheet__legend span {
+    padding: 0.5rem 0.7rem;
+    border: 1px solid var(--color-border);
+    border-radius: 999px;
+    background: var(--color-surface);
+    font-size: 0.92rem;
+  }
+
+  .milestone-group {
+    margin-top: 3rem;
+  }
+
+  .milestone-group h2,
+  .milestone-notes h2,
+  .milestone-next h2,
+  .milestone-source h2 {
+    font-size: clamp(1.45rem, 4vw, 2rem);
+  }
+
+  .milestone-group__items {
+    display: grid;
+    gap: 1rem;
+    margin-top: 1.25rem;
+  }
+
+  .milestone-item {
+    min-width: 0;
+    margin: 0;
+    padding: 1.15rem;
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-medium);
+    background: var(--color-surface);
+  }
+
+  .milestone-item legend {
+    display: grid;
+    grid-template-columns: auto minmax(0, 1fr);
+    gap: 0.75rem;
+    width: 100%;
+    padding: 0;
+    color: var(--color-ink);
+    font-weight: 720;
+    line-height: 1.35;
+  }
+
+  .milestone-item__number {
+    display: grid;
+    width: 1.85rem;
+    height: 1.85rem;
+    place-items: center;
+    border-radius: 50%;
+    background: var(--color-surface-soft);
+    color: var(--color-primary-dark);
+    font-size: 0.78rem;
+  }
+
+  .milestone-item__example,
+  .milestone-item__note {
+    margin: 0.75rem 0 0 2.6rem;
+    color: var(--color-muted);
+  }
+
+  .milestone-item__note {
+    font-size: 0.94rem;
+  }
+
+  .milestone-options {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 0.55rem;
+    margin-top: 1rem;
+  }
+
+  .milestone-options label {
+    display: flex;
+    min-height: 3rem;
+    align-items: center;
+    gap: 0.55rem;
+    padding: 0.55rem 0.7rem;
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-small);
+    cursor: pointer;
+  }
+
+  .milestone-options label:has(input:checked) {
+    border-color: var(--color-primary);
+    background: var(--color-surface-soft);
+  }
+
+  .milestone-options input {
+    width: 1.1rem;
+    height: 1.1rem;
+    flex: 0 0 auto;
+    accent-color: var(--color-primary);
+  }
+
+  .milestone-notes,
+  .milestone-next,
+  .milestone-source {
+    margin-top: 3rem;
+    padding: 1.25rem;
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-medium);
+  }
+
+  .milestone-notes {
+    background: var(--color-surface-soft);
+  }
+
+  .milestone-notes__field {
+    display: grid;
+    gap: 0.5rem;
+    margin-top: 1.25rem;
+    font-weight: 680;
+  }
+
+  .milestone-notes textarea,
+  .milestone-notes input[type='text'] {
+    width: 100%;
+    padding: 0.75rem;
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-small);
+    background: white;
+    color: var(--color-ink);
+    font-weight: 400;
+  }
+
+  .milestone-notes__examples {
+    margin-top: 1.5rem;
+  }
+
+  .milestone-notes__examples h3 {
+    font-size: 1.1rem;
+  }
+
+  .milestone-notes__examples label {
+    display: block;
+    margin-top: 0.6rem;
+  }
+
+  .milestone-notes__loss {
+    margin: 1.5rem 0 0;
+    padding: 1rem;
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-small);
+  }
+
+  .milestone-notes__loss legend {
+    padding-inline: 0.35rem;
+    font-weight: 700;
+  }
+
+  .milestone-notes__field--nested {
+    margin-top: 1rem;
+  }
+
+  .milestone-next {
+    border-left: 0.3rem solid var(--color-accent);
+    background: #fff4df;
+  }
+
+  .milestone-next p,
+  .milestone-source p {
+    margin-top: 0.8rem;
+  }
+
+  .milestone-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 2rem;
+  }
+
+  .milestone-actions__back {
+    font-weight: 700;
+  }
+
+  .milestone-actions__print {
+    min-height: 2.8rem;
+    padding: 0.6rem 1rem;
+    border: 0;
+    border-radius: var(--radius-small);
+    background: var(--color-primary-dark);
+    color: white;
+    font-weight: 700;
+    cursor: pointer;
+  }
+
+  .sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    clip: rect(0 0 0 0);
+    clip-path: inset(50%);
+    white-space: nowrap;
+  }
+
+  @media (max-width: 42rem) {
+    .milestone-options {
+      grid-template-columns: 1fr;
+    }
+
+    .milestone-item__example,
+    .milestone-item__note {
+      margin-left: 0;
+    }
+  }
+
+  @media print {
+    :global(.site-header),
+    :global(.site-footer),
+    :global(.skip-link),
+    .milestone-actions {
+      display: none !important;
+    }
+
+    .milestone-sheet {
+      width: 100%;
+      padding: 0;
+    }
+
+    .milestone-item,
+    .milestone-notes,
+    .milestone-next,
+    .milestone-source {
+      break-inside: avoid;
+      box-shadow: none;
+    }
+
+    .milestone-options label {
+      min-height: 0;
+      padding: 0.35rem 0.5rem;
+    }
+  }
+</style>
