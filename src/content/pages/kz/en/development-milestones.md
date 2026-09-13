@@ -1,5 +1,5 @@
 ---
-title: "How children develop from 2 months to 5 years: developmental milestones for parents"
+title: "Child development from 2 months to 5 years: milestones for parents"
 summary: "Choose your child's age, review developmental milestones, and write down observations you may want to discuss with a professional."
 description: "Clear developmental milestones from 2 months to 5 years, age-specific observation sheets, and practical preparation for a conversation with a professional."
 country: kz
@@ -47,7 +47,7 @@ Children learn new skills gradually. They learn to interact with people, underst
 
 Developmental milestones can help parents notice these changes. In the CDC system used here, a milestone is a skill that most children, 75% or more, can do by a certain age.
 
-Important: **developmental milestones are not an exam, not an autism test, and not a way to make a diagnosis yourself**. One skill that your child does not yet show does not by itself mean that your child has a developmental condition.
+Important: **developmental milestones are not a test for autism and cannot be used to make a diagnosis on their own**. The fact that your child is not yet showing one skill does not by itself mean they have a developmental condition.
 
 ## What are developmental milestones?
 
@@ -141,7 +141,7 @@ Before an appointment, you can write down:
 - whether any skills have been lost
 - which questions you want to ask.
 
-Each age-specific sheet includes space for these notes. The site does not send your marks or notes to a server and does not intentionally save them.
+Each age-specific sheet includes space for these notes. The site does not send your marks or notes to a server and does not save them.
 
 ## What this material cannot determine
 

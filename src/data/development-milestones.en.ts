@@ -4,7 +4,7 @@ const cdcBase = 'https://www.cdc.gov/act-early/milestones';
 
 export const DEVELOPMENT_MILESTONES_EN: MilestoneLocaleContent = {
   parentTranslationKey: 'parents-development-milestones',
-  parentTitle: 'How children develop from 2 months to 5 years: developmental milestones for parents',
+  parentTitle: 'Child development from 2 months to 5 years: milestones for parents',
   sheetLabel: 'Parent observation sheet',
   intro:
     'Mark what you observe in your child\'s everyday life. You do not need to ask your child to perform every item in sequence. This sheet is not a test and is not used to make a diagnosis.',
@@ -185,7 +185,7 @@ export const DEVELOPMENT_MILESTONES_EN: MilestoneLocaleContent = {
           items: [
             { id: '9m-strangers', title: 'May be shy, clingy, or fearful around strangers' },
             { id: '9m-expressions', title: 'Shows several different facial expressions' },
-            { id: '9m-name', title: 'Looks or turns toward you when you call their name' },
+            { id: '9m-name', title: 'Looks when you call their name' },
             { id: '9m-leave', title: 'Reacts when you leave' },
             { id: '9m-peekaboo', title: 'Smiles or laughs when you play peek-a-boo' },
           ],
@@ -272,7 +272,7 @@ export const DEVELOPMENT_MILESTONES_EN: MilestoneLocaleContent = {
             { id: '15m-shows', title: 'Shows you an object they like' },
             { id: '15m-claps', title: 'Claps when excited' },
             { id: '15m-hugs-toy', title: 'Hugs a stuffed toy or doll' },
-            { id: '15m-affection', title: 'Shows affection to familiar people, for example by hugging or cuddling' },
+            { id: '15m-affection', title: 'Shows you affection, such as hugging, cuddling, or kissing you' },
           ],
         },
         {
@@ -280,7 +280,7 @@ export const DEVELOPMENT_MILESTONES_EN: MilestoneLocaleContent = {
           items: [
             { id: '15m-words', title: 'Tries to say one or two words besides “mama” or “dada”' },
             { id: '15m-object', title: 'Looks at a familiar object when you name it' },
-            { id: '15m-direction', title: 'Follows a simple direction when words are combined with a gesture' },
+            { id: '15m-direction', title: 'Follows directions given with both a gesture and words' },
             { id: '15m-points', title: 'Points to ask for something or to get help' },
           ],
         },
@@ -288,7 +288,7 @@ export const DEVELOPMENT_MILESTONES_EN: MilestoneLocaleContent = {
           title: 'Play, learning and thinking',
           items: [
             { id: '15m-use', title: 'Tries to use familiar objects in the right way, such as a cup, phone, or book' },
-            { id: '15m-stack', title: 'Stacks one small object on top of another' },
+            { id: '15m-stack', title: 'Stacks at least two small objects, such as blocks' },
           ],
         },
         {
@@ -352,9 +352,9 @@ export const DEVELOPMENT_MILESTONES_EN: MilestoneLocaleContent = {
         {
           title: 'Movement and independence',
           items: [
-            { id: '18m-walks', title: 'Walks without holding on' },
+            { id: '18m-walks', title: 'Walks without holding on to anyone or anything' },
             { id: '18m-scribbles', title: 'Scribbles' },
-            { id: '18m-cup', title: 'Drinks from a cup without a lid', note: 'Some spilling is common at this age.' },
+            { id: '18m-cup', title: 'Drinks from a cup without a lid and may spill sometimes' },
             { id: '18m-fingers', title: 'Feeds themselves with their fingers' },
             { id: '18m-spoon', title: 'Tries to use a spoon', note: 'It does not need to be neat.' },
             { id: '18m-climbs', title: 'Climbs on and off a couch or chair without help' },
@@ -380,10 +380,10 @@ export const DEVELOPMENT_MILESTONES_EN: MilestoneLocaleContent = {
         {
           title: 'Language and understanding',
           items: [
-            { id: '24m-book', title: 'Points to an item in a book when you ask about it' },
-            { id: '24m-two-words', title: 'Says at least two words together, such as “more milk” or “mama go”' },
-            { id: '24m-body', title: 'Points to at least two body parts when you name them' },
-            { id: '24m-gestures', title: 'Uses more gestures than just waving and pointing' },
+            { id: '24m-book', title: 'Points to things in a book when you ask, such as “Where is the bear?”' },
+            { id: '24m-two-words', title: 'Says at least two words together, such as “More milk.”' },
+            { id: '24m-body', title: 'Points to at least two body parts when you ask them to show you' },
+            { id: '24m-gestures', title: 'Uses more gestures than just waving and pointing, such as blowing a kiss or nodding yes' },
           ],
         },
         {
@@ -417,8 +417,8 @@ export const DEVELOPMENT_MILESTONES_EN: MilestoneLocaleContent = {
           title: 'Social interaction',
           items: [
             { id: '30m-children', title: 'Plays next to other children and sometimes plays with them' },
-            { id: '30m-look', title: 'Shows you what they can do by saying “Look at me!” or something similar' },
-            { id: '30m-routine', title: 'Follows a simple familiar routine when reminded' },
+            { id: '30m-look', title: 'Shows you what they can do by saying “Look at me!”' },
+            { id: '30m-routine', title: 'Follows simple routines when told, such as helping to pick up toys when you say, “It’s clean-up time.”' },
           ],
         },
         {
@@ -429,7 +429,7 @@ export const DEVELOPMENT_MILESTONES_EN: MilestoneLocaleContent = {
               title: 'Says about 50 words',
               note: 'CDC describes this milestone as about 50 words. This number is not used on its own to make a diagnosis.',
             },
-            { id: '30m-action', title: 'Says two or more words together, including an action word, such as “doggie runs”' },
+            { id: '30m-action', title: 'Says two or more words together, with one action word, such as “Doggie run”' },
             { id: '30m-book', title: 'Names things in a book when you point and ask “What is this?”' },
             { id: '30m-pronouns', title: 'Uses words such as “I,” “me,” or “we”' },
           ],
@@ -437,16 +437,16 @@ export const DEVELOPMENT_MILESTONES_EN: MilestoneLocaleContent = {
         {
           title: 'Play, learning and thinking',
           items: [
-            { id: '30m-pretend', title: 'Uses objects in pretend play, such as pretending a block is food' },
+            { id: '30m-pretend', title: 'Uses things to pretend, such as feeding a block to a doll as if it were food' },
             { id: '30m-problem', title: 'Uses a simple way to solve a problem, such as standing on a small stool to reach something' },
-            { id: '30m-two-step', title: 'Follows a two-step direction' },
+            { id: '30m-two-step', title: 'Follows two-step instructions, such as “Put the toy down and close the door.”' },
             { id: '30m-color', title: 'Shows that they know at least one color' },
           ],
         },
         {
           title: 'Movement and independence',
           items: [
-            { id: '30m-twist', title: 'Twists things such as doorknobs or suitable lids' },
+            { id: '30m-twist', title: 'Uses hands to twist things, such as turning doorknobs or unscrewing lids' },
             { id: '30m-clothes', title: 'Takes off some clothes by themselves' },
             { id: '30m-jumps', title: 'Jumps off the ground with both feet' },
             { id: '30m-pages', title: 'Turns book pages one at a time' },
@@ -465,16 +465,16 @@ export const DEVELOPMENT_MILESTONES_EN: MilestoneLocaleContent = {
         {
           title: 'Social interaction',
           items: [
-            { id: '3y-calms', title: 'Usually calms down within about 10 minutes after you leave' },
+            { id: '3y-calms', title: 'Calms down within 10 minutes after you leave, such as at a childcare drop-off' },
             { id: '3y-joins', title: 'Notices other children and joins them to play' },
           ],
         },
         {
           title: 'Language and understanding',
           items: [
-            { id: '3y-conversation', title: 'Has a conversation with at least two back-and-forth exchanges' },
+            { id: '3y-conversation', title: 'Talks with you in conversation using at least two back-and-forth exchanges' },
             { id: '3y-questions', title: 'Asks “who,” “what,” “where,” or “why” questions' },
-            { id: '3y-picture', title: 'Says what is happening in a picture or book, such as “running” or “eating”' },
+            { id: '3y-picture', title: 'Says what action is happening in a picture or book when asked, such as “running” or “eating”' },
             { id: '3y-name', title: 'Says their first name when asked' },
             { id: '3y-understood', title: 'Talks well enough for other people to understand most of the time' },
           ],
@@ -483,13 +483,13 @@ export const DEVELOPMENT_MILESTONES_EN: MilestoneLocaleContent = {
           title: 'Play, learning and thinking',
           items: [
             { id: '3y-circle', title: 'Draws a circle after you show them how' },
-            { id: '3y-hot', title: 'Avoids touching a hot object after you warn them' },
+            { id: '3y-hot', title: 'Avoids touching hot objects, such as a stove, when you warn them' },
           ],
         },
         {
           title: 'Movement and independence',
           items: [
-            { id: '3y-string', title: 'Strings large safe items together, such as large beads' },
+            { id: '3y-string', title: 'Strings items together, such as large beads or macaroni' },
             { id: '3y-dresses', title: 'Puts on some clothes by themselves' },
             { id: '3y-fork', title: 'Uses a fork' },
           ],
@@ -508,9 +508,9 @@ export const DEVELOPMENT_MILESTONES_EN: MilestoneLocaleContent = {
           title: 'Social interaction',
           items: [
             { id: '4y-pretend', title: 'Pretends to be something else during play, such as a teacher, superhero, or animal' },
-            { id: '4y-children', title: 'Asks to go play with other children' },
+            { id: '4y-children', title: 'Asks to go play with children if none are around' },
             { id: '4y-comforts', title: 'Comforts other people who are hurt or sad' },
-            { id: '4y-danger', title: 'Avoids some obvious dangers' },
+            { id: '4y-danger', title: 'Avoids danger, such as not jumping from tall heights at the playground' },
             { id: '4y-helper', title: 'Likes to be a helper' },
             { id: '4y-behavior', title: 'Changes behavior based on where they are' },
           ],
@@ -562,7 +562,7 @@ export const DEVELOPMENT_MILESTONES_EN: MilestoneLocaleContent = {
         {
           title: 'Language and understanding',
           items: [
-            { id: '5y-story', title: 'Tells a story with at least two connected events' },
+            { id: '5y-story', title: 'Tells a story they heard or made up with at least two events' },
             { id: '5y-questions', title: 'Answers simple questions about a book or story after you read or tell it' },
             { id: '5y-conversation', title: 'Keeps a conversation going with more than three back-and-forth exchanges' },
             { id: '5y-rhymes', title: 'Recognizes or uses simple rhymes' },
@@ -574,7 +574,7 @@ export const DEVELOPMENT_MILESTONES_EN: MilestoneLocaleContent = {
             { id: '5y-counts', title: 'Counts to 10' },
             { id: '5y-numbers', title: 'Names some numbers between 1 and 5 when you point to them' },
             { id: '5y-time', title: 'Uses words about time, such as “yesterday,” “tomorrow,” “morning,” or “night”' },
-            { id: '5y-attention', title: 'Pays attention for about 5-10 minutes during activities, not including screen time' },
+            { id: '5y-attention', title: 'Pays attention for 5-10 minutes during activities, such as story time or arts and crafts; screen time does not count' },
             { id: '5y-name-letters', title: 'Writes some letters in their name' },
             { id: '5y-letters', title: 'Names some letters when you point to them' },
           ],
