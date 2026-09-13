@@ -69,6 +69,13 @@ const isDevelopmentMilestones =
     </header>
 
     <div class="container article-shell article-content">
+      {isDevelopmentMilestones && (
+        <DevelopmentMilestoneAgeSelector
+          locale={locale}
+          parentSlug={data.slug}
+        />
+      )}
+
       {data.keyPoints.length > 0 && (
         <section class="article-key-points" aria-labelledby="key-points-title">
           <h2 id="key-points-title">{copy.keyPointsTitle}</h2>
@@ -76,13 +83,6 @@ const isDevelopmentMilestones =
             {data.keyPoints.map((point) => <li>{point}</li>)}
           </ul>
         </section>
-      )}
-
-      {isDevelopmentMilestones && (
-        <DevelopmentMilestoneAgeSelector
-          locale={locale}
-          parentSlug={data.slug}
-        />
       )}
 
       <div class="article-body">
