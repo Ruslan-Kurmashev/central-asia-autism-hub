@@ -24,7 +24,23 @@ const formattedDate = new Intl.DateTimeFormat(DATE_LOCALES[locale], {
   <h3><a href={href}>{title}</a></h3>
   <p>{summary}</p>
   <p class="material-card__updated">{copy.publishedLabel}: {formattedDate}</p>
-  <span class="material-card__action" aria-hidden="true">
+  <a class="material-card__action" href={href}>
     {copy.readMaterial} →
-  </span>
+  </a>
 </article>
+
+<style>
+  .material-card h3 a::after {
+    content: none;
+  }
+
+  .material-card__action {
+    z-index: 1;
+    text-decoration: none;
+  }
+
+  .material-card__action:hover {
+    color: var(--color-primary);
+    text-decoration: underline;
+  }
+</style>
