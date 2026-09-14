@@ -127,3 +127,40 @@ const isDevelopmentMilestones =
     </div>
   </article>
 </BaseLayout>
+
+<style is:global>
+  .article-body {
+    min-width: 0;
+  }
+
+  .article-body table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+
+  .article-body th,
+  .article-body td {
+    vertical-align: top;
+  }
+
+  @media (max-width: 38rem) {
+    .article-body table {
+      display: block;
+      max-width: 100%;
+      overflow-x: auto;
+      overscroll-behavior-inline: contain;
+      -webkit-overflow-scrolling: touch;
+      scrollbar-width: thin;
+    }
+
+    .article-body th,
+    .article-body td {
+      min-width: 9rem;
+    }
+
+    .article-body th:first-child,
+    .article-body td:first-child {
+      min-width: 10rem;
+    }
+  }
+</style>
