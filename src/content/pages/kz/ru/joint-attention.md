@@ -452,6 +452,6 @@ Joint Attention - совместное внимание - это не требо
 
 Следующая статья:
 
-**Play-Based Interventions - игровые вмешательства.**
+[Play-Based Interventions - игровые вмешательства](/kz/ru/parents/play-based-interventions/)
 
 [← Развитие, взаимодействие и игра](/kz/ru/parents/razvitie-vzaimodeystvie-i-igra/)
