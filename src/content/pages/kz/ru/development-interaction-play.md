@@ -643,5 +643,5 @@ NICE рекомендует play-based social-communication interventions, ор�
 - [Joint Attention - совместное внимание](/kz/ru/parents/joint-attention/)
 - [Play-Based Interventions - игровые вмешательства](/kz/ru/parents/play-based-interventions/)
 - [Parent-Mediated Intervention - поддержка с участием родителей](/kz/ru/parents/parent-mediated-intervention/)
-- Peer-Mediated Intervention - поддержка через сверстников
+- [Peer-Mediated Intervention - поддержка через сверстников](/kz/ru/parents/peer-mediated-intervention/)
 - Imitation / Reciprocal Imitation - подражание и взаимное подражание.
