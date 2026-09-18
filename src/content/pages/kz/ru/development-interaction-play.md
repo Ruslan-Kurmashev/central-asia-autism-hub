@@ -639,7 +639,7 @@ NICE рекомендует play-based social-communication interventions, ор�
 Следующими отдельными страницами будут:
 
 - [Naturalistic Intervention - обучение в естественных ситуациях](/kz/ru/parents/naturalistic-intervention/)
-- NDBI - натуралистические развивающе-поведенческие вмешательства
+- [NDBI - натуралистические развивающе-поведенческие вмешательства](/kz/ru/parents/ndbi/)
 - Joint Attention - совместное внимание
 - Play-Based Interventions - игровые interventions
 - Parent-Mediated Intervention - поддержка с участием родителей
