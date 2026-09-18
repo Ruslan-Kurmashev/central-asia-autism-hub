@@ -642,6 +642,6 @@ NICE рекомендует play-based social-communication interventions, ор�
 - [NDBI - натуралистические развивающе-поведенческие вмешательства](/kz/ru/parents/ndbi/)
 - [Joint Attention - совместное внимание](/kz/ru/parents/joint-attention/)
 - [Play-Based Interventions - игровые вмешательства](/kz/ru/parents/play-based-interventions/)
-- Parent-Mediated Intervention - поддержка с участием родителей
+- [Parent-Mediated Intervention - поддержка с участием родителей](/kz/ru/parents/parent-mediated-intervention/)
 - Peer-Mediated Intervention - поддержка через сверстников
 - Imitation / Reciprocal Imitation - подражание и взаимное подражание.
