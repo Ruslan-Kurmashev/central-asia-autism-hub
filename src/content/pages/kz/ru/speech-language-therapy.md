@@ -1,0 +1,564 @@
+---
+title: "Логопедическая и речевая помощь при аутизме"
+summary: "Как оценивать и поддерживать понимание речи, язык, функциональную и социальную коммуникацию, разборчивость речи и AAC."
+description: "Практическое руководство для родителей о speech-language therapy при аутизме: assessment, language intervention, social communication, motor speech, AAC, oral-motor claims и мониторинг."
+country: kz
+language: ru
+section: parents
+topic: approaches-to-support
+slug: speech-language-therapy
+translationKey: parents-speech-language-therapy
+translationStatus: source
+audience:
+  - parents
+  - families
+author: Ruslan Kurmashev
+editor: Ruslan Kurmashev
+riskLevel: moderate
+disclaimerType: informational
+conflictOfInterest: "Конфликт интересов не заявлен."
+publishedAt: 2026-09-18
+updatedAt: 2026-09-18
+reviewDueAt: 2027-03-18
+draft: false
+keyPoints:
+  - "Speech-language therapy - это профессиональная область, а не один intervention."
+  - "Доказательства нужно оценивать по конкретной цели: language, functional communication, social communication, speech sound, motor speech или AAC."
+  - "AAC не нужно откладывать до неудачи обычной речевой терапии."
+  - "Nonspeech oral-motor exercises не имеют убедительной evidence base как универсальный способ запуска речи."
+evidenceLimitations: "Speech-language therapy включает разные interventions, поэтому единый рейтинг эффективности для всей области некорректен. Evidence зависит от конкретного протокола, цели, возраста, исхода и setting. Данные по early language/social-communication interventions нельзя автоматически переносить на все виды логопедической помощи."
+sources:
+  - title: "Autism and Autism Spectrum Disorder"
+    url: "https://www.asha.org/practice-portal/clinical-topics/autism/"
+    organisation: "American Speech-Language-Hearing Association"
+    note: "Использовано для speech-language assessment, social communication, speech sound and motor speech boundaries."
+    accessedAt: 2026-09-18
+  - title: "Augmentative and Alternative Communication (AAC)"
+    url: "https://www.asha.org/Practice-Portal/Professional-Issues/Augmentative-and-Alternative-Communication/"
+    organisation: "American Speech-Language-Hearing Association"
+    note: "Использовано для AAC integration and zero-exclusion approach."
+    accessedAt: 2026-09-18
+  - title: "Autism spectrum disorder in under 19s: support and management - Recommendations"
+    url: "https://www.nice.org.uk/guidance/cg170/chapter/recommendations"
+    organisation: "National Institute for Health and Care Excellence"
+    publicationYear: 2013
+    note: "Использовано для social-communication interventions, partner mediation and visual supports."
+    accessedAt: 2026-09-18
+  - title: "Autism spectrum disorder in under 19s: recognition, referral and diagnosis - Recommendations"
+    url: "https://www.nice.org.uk/guidance/cg128/chapter/Recommendations"
+    organisation: "National Institute for Health and Care Excellence"
+    publicationYear: 2011
+    note: "Использовано для language regression and multilingual assessment context."
+    accessedAt: 2026-09-18
+  - title: "Updated Project AIM meta-analysis of early childhood autism interventions"
+    url: "https://pubmed.ncbi.nlm.nih.gov/37963634/"
+    organisation: "PubMed"
+    publicationYear: 2023
+    note: "Использовано для intervention-specific language and social-communication effect estimates."
+    accessedAt: 2026-09-18
+  - title: "Evidence-based systematic review: effects of nonspeech oral motor exercises on speech"
+    url: "https://pubmed.ncbi.nlm.nih.gov/19638484/"
+    organisation: "PubMed"
+    publicationYear: 2009
+    note: "Использовано для oral-motor evidence boundary."
+    accessedAt: 2026-09-18
+  - title: "Non-speech oral motor treatment for children with developmental speech sound disorders"
+    url: "https://pubmed.ncbi.nlm.nih.gov/25805060/"
+    organisation: "Cochrane / PubMed"
+    publicationYear: 2015
+    note: "Использовано для ограничения claims о nonspeech oral-motor treatment."
+    accessedAt: 2026-09-18
+---
+
+[← Коммуникация и AAC](/kz/ru/parents/kommunikatsiya-i-aac/)
+
+Speech-language therapy - это не один конкретный метод.
+
+Это профессиональная область, которая может включать оценку и поддержку:
+
+- понимания речи
+- использования языка
+- функциональной коммуникации
+- социальной коммуникации
+- разборчивости речи
+- speech sound difficulties
+- motor speech difficulties
+- AAC
+- коммуникации с семьёй, школой и другими людьми.
+
+Поэтому нельзя сказать просто:
+
+**«логопедическая терапия доказана»**
+
+или
+
+**«логопедическая терапия не работает».**
+
+Доказательства зависят от конкретной цели и от того, какой именно intervention используется.
+
+## С чего начинать
+
+Сначала нужно понять:
+
+**Что именно человеку трудно делать?**
+
+Например:
+
+- понимать обращённую речь
+- сообщать о своих потребностях
+- рассказывать о событиях
+- отвечать на вопросы
+- инициировать разговор
+- поддерживать тему
+- быть понятным незнакомым людям
+- использовать речь при перегрузке
+- сообщать о боли
+- использовать AAC
+- произносить определённые звуки
+- планировать движения для речи.
+
+Эти задачи относятся к разным областям и могут требовать разной поддержки.
+
+## Оценка важнее общего ярлыка «задержка речи»
+
+Хорошая assessment должна помогать понять не только:
+
+**«сколько слов говорит ребёнок?»**
+
+Важно отдельно рассматривать:
+
+- receptive language - что человек понимает
+- expressive language - что и как он может выразить
+- communicative functions - зачем и как он общается
+- social communication
+- speech production
+- intelligibility
+- motor speech
+- AAC needs
+- коммуникацию в обычной жизни.
+
+ASHA также рекомендует оценивать social communication, initiation, reciprocity, conversational skills, gestures, play и другие компоненты коммуникации.
+
+## Если главная проблема - функциональная коммуникация
+
+Иногда человеку прежде всего трудно:
+
+- попросить помощь
+- отказаться
+- попросить перерыв
+- сообщить о боли
+- сделать выбор
+- объяснить, что произошло.
+
+В такой ситуации целью не обязательно должно быть появление большего количества устных слов.
+
+Главная цель:
+
+**человек должен получить надёжный способ передавать важные сообщения.**
+
+Это может включать:
+
+- устную речь
+- жесты
+- visual supports
+- AAC
+- несколько способов одновременно.
+
+AAC не нужно откладывать до момента, когда обычная speech therapy «не сработала».
+
+[Подробнее: AAC](/kz/ru/parents/aac/)
+
+## Поддержка понимания языка
+
+У человека может быть достаточно устной речи, но сохраняться трудности с пониманием.
+
+Например:
+
+- длинных инструкций
+- нескольких шагов подряд
+- абстрактных выражений
+- быстрых вопросов
+- информации в шумной обстановке.
+
+Помощь может включать:
+
+- упрощение формулировок
+- дополнительное время на обработку
+- visual supports
+- письменные инструкции
+- разделение задачи на шаги
+- проверку понимания.
+
+NICE рекомендует использовать визуальные средства, например слова, изображения или символы, если они подходят конкретному ребёнку.
+
+## Что говорят исследования о развитии языка
+
+Здесь важно не объединять все language interventions в одну группу.
+
+Updated Project AIM meta-analysis включил 252 исследования ранних autism interventions с 13 304 участниками.
+
+В randomized controlled trials naturalistic developmental behavioral interventions показали небольшой статистически значимый effect на language outcomes:
+
+**Hedges' g = 0.16, 95% CI 0.01-0.31.**
+
+Также были обнаружены эффекты на social communication и другие domains.
+
+Это поддерживает некоторые language-focused interventions.
+
+Но такой результат нельзя переводить в утверждение:
+
+**«любая логопедическая терапия эффективна».**
+
+Нужно знать конкретный intervention.
+
+## Social communication
+
+Для некоторых детей целью может быть не количество слов, а способность:
+
+- делиться вниманием
+- поддерживать взаимодействие
+- инициировать коммуникацию
+- отвечать партнёру
+- участвовать в игре
+- поддерживать разговор.
+
+NICE рекомендует рассматривать specific social-communication interventions, которые:
+
+- соответствуют developmental level
+- используют play-based strategies
+- повышают joint attention
+- engagement
+- reciprocal communication
+- помогают родителям, педагогам или peers лучше понимать communication patterns ребёнка
+- используют therapist modelling и другие naturalistic strategies.
+
+Это отличается от простого обучения:
+
+**«смотри в глаза»**
+
+или
+
+**«веди себя как другие дети».**
+
+## Если речь есть, но трудно разговаривать
+
+У человека может быть большой словарь и грамматически сложная речь, но оставаться трудности с:
+
+- началом разговора
+- сменой темы
+- turn-taking
+- пониманием misunderstanding
+- clarification
+- общением со сверстниками.
+
+ASHA включает такие skills в assessment social communication.
+
+Поддержка может включать:
+
+- practice в естественных ситуациях
+- peer-mediated approaches
+- visual/written supports
+- разбор communication breakdowns
+- обучение способам попросить уточнение.
+
+Главная цель:
+
+**эффективная и комфортная коммуникация**
+
+а не обучение masking.
+
+## Не нужно делать eye contact самостоятельной целью
+
+Некоторые старые программы рассматривали eye contact как обязательный marker хорошей коммуникации.
+
+Но человек может внимательно слушать и участвовать в разговоре без постоянного eye contact.
+
+Поэтому goal:
+
+**«будет смотреть в глаза 80% разговора»**
+
+сам по себе мало говорит об улучшении коммуникации.
+
+Гораздо полезнее измерять:
+
+- понимает ли собеседника
+- может ли ответить
+- может ли выразить disagreement
+- может ли попросить clarification
+- участвует ли в нужном ему interaction.
+
+## Если речь трудно понять
+
+Неразборчивая речь не обязательно означает language delay.
+
+Возможны:
+
+- speech sound disorder
+- articulation/phonological difficulties
+- motor speech disorder
+- childhood apraxia of speech
+- другие speech production difficulties.
+
+ASHA отдельно указывает, что speech sound и motor speech difficulties могут существенно затруднять spoken communication.
+
+Поэтому сначала важно определить, какая именно проблема существует.
+
+## Motor speech и апраксия
+
+Если есть подозрение на childhood apraxia of speech или другой motor speech disorder, нужен соответствующий assessment.
+
+Это отличается от:
+
+- задержки vocabulary
+- difficulties understanding language
+- social communication differences.
+
+У человека могут одновременно существовать несколько разных communication needs.
+
+Если spoken communication пока недостаточно надёжен, AAC может использоваться параллельно с speech intervention.
+
+Не нужно выбирать:
+
+**«либо речь, либо AAC».**
+
+## Oral-motor упражнения и «запуск речи»
+
+Отдельно стоит относиться к nonspeech oral-motor exercises.
+
+Например:
+
+- дуть на свечи
+- дуть через трубочку
+- надувать щёки
+- двигать языком без speech task
+- выполнять lip/tongue exercises
+- использовать массаж как универсальный способ «запустить речь».
+
+Systematic review 2009 года не обнаружил достаточных доказательств того, что nonspeech oral-motor exercises улучшают speech outcomes.
+
+Cochrane review также обнаружил очень ограниченную evidence base для nonspeech oral motor treatment при developmental speech sound disorders.
+
+Более поздние обзоры также не дают убедительной поддержки таких nonspeech techniques как общего treatment для speech sound disorders.
+
+Поэтому заявления:
+
+**«укрепим язык и появится речь»**
+
+или
+
+**«сначала нужен массаж для запуска речи»**
+
+не должны использоваться как универсальное объяснение.
+
+Это не означает, что oral structures никогда не нужно оценивать.
+
+Feeding, swallowing, structural abnormalities и specific motor problems являются отдельными клиническими вопросами.
+
+## AAC является частью коммуникационной помощи
+
+AAC не находится «за пределами логопедии».
+
+Speech-language professionals могут участвовать в:
+
+- AAC assessment
+- выборе communication system
+- vocabulary design
+- access method
+- partner training
+- monitoring.
+
+Современная AAC guidance использует zero-exclusion approach.
+
+Если spoken communication недостаточно функциональна, AAC можно рассматривать без ожидания определённого возраста или cognitive level.
+
+[Подробнее об AAC](/kz/ru/parents/aac/)
+
+## Важна работа родителей, педагогов и других партнёров
+
+Коммуникация происходит не только с терапевтом.
+
+NICE рекомендует intervention, которые помогают родителям, carers, teachers и peers:
+
+- лучше понимать communication patterns ребёнка
+- быть более responsive
+- расширять коммуникацию
+- поддерживать engagement и joint attention.
+
+Поэтому иногда изменение поведения communication partner может быть не менее важным, чем direct therapy.
+
+## Visual supports
+
+Visual supports могут включать:
+
+- изображения
+- письменные инструкции
+- visual schedules
+- first-then supports
+- symbols
+- step-by-step sequences.
+
+NICE рекомендует визуальные средства как один из способов адаптации environment и processes of care.
+
+Это support strategy.
+
+Не нужно превращать visual supports в отдельную «терапию», если они просто делают информацию доступнее.
+
+## Если семья говорит на нескольких языках
+
+Для Казахстана это особенно важно.
+
+NICE рекомендует учитывать использование и понимание первого языка ребёнка и не объяснять language delay автоматически тем, что семья использует несколько языков.
+
+То есть факт, что дома говорят:
+
+- на казахском
+- на русском
+- на английском
+- на нескольких языках одновременно
+
+сам по себе не является доказательством причины communication difficulty.
+
+Assessment должна учитывать языковую среду семьи.
+
+Не следует автоматически рекомендовать семье отказаться от домашнего языка без конкретного обоснования.
+
+## Какая цель считается полезной
+
+Вместо:
+
+**«улучшить речь»**
+
+лучше:
+
+**«самостоятельно сообщать о боли»**
+
+или
+
+**«рассказывать родителю хотя бы одну важную вещь о школьном дне доступным способом»**
+
+или
+
+**«понимать двухэтапную инструкцию с visual support»**
+
+или
+
+**«быть понятным незнакомому человеку в большинстве повседневных ситуаций».**
+
+Хорошая цель связана с реальной жизнью.
+
+## Как понять, помогает ли речевая поддержка
+
+До начала выберите 1-3 outcomes.
+
+Например:
+
+- самостоятельные сообщения
+- понимание instructions
+- intelligibility
+- количество communication breakdowns
+- ability to repair misunderstanding
+- use across settings.
+
+Дополнительно отслеживайте:
+
+- prompts
+- generalisation
+- distress
+- нагрузку
+- использование навыка дома и в школе.
+
+Если человек правильно выполняет задания только в кабинете после подсказок, это ещё не означает meaningful communication change.
+
+[Подробнее: как понять, помогает ли выбранная помощь](/kz/ru/parents/kak-ponyat-pomogaet-li-podderzhka/)
+
+## Когда план стоит пересмотреть
+
+Стоит пересмотреть подход, если:
+
+- цель остаётся непонятной
+- нет meaningful progress после заранее определённого периода
+- навык существует только с терапевтом
+- prompts не уменьшаются
+- занятия вызывают устойчивый distress
+- AAC не рассматривают только потому, что хотят добиться речи
+- communication goals не переносятся в повседневную жизнь
+- большая часть времени уходит на упражнения, не связанные с исходной communication need.
+
+Больше занятий не автоматически означает больше пользы.
+
+## Если появилась регрессия речи
+
+Внезапная потеря ранее приобретённых language или communication skills требует отдельной оценки.
+
+NICE рекомендует направлять детей младше 3 лет с regression in language or social skills в autism team, а детей старше 3 лет с language regression сначала к paediatrician или paediatric neurologist.
+
+То есть новая регрессия не должна автоматически интерпретироваться как:
+
+**«нужно просто больше логопеда».**
+
+## Что спросить специалиста
+
+1. Что именно вы оценили?
+2. Какая конкретная communication difficulty обнаружена?
+3. Какая цель предлагается?
+4. Как называется intervention?
+5. Какие evidence есть именно для этой цели?
+6. Рассматривалась ли AAC?
+7. Как будут участвовать родители и школа?
+8. Что именно будет измеряться?
+9. Как проверят generalisation?
+10. Как будут уменьшаться prompts?
+11. Через какой период пересмотрят результат?
+12. Что станет основанием изменить intervention?
+
+## Что важно знать в Казахстане
+
+В Казахстане можно встретить разные названия специалистов:
+
+- логопед
+- логопед-дефектолог
+- дефектолог
+- speech therapist
+- AAC specialist.
+
+Эти названия не всегда означают одинаковое образование, профессиональную роль или scope of practice.
+
+Поэтому нужно отдельно проверять:
+
+- базовое образование
+- профессиональную должность
+- организацию, где оказывается услуга
+- требования к конкретной регулируемой роли
+- дополнительное обучение.
+
+Сертификат курса PECS, AAC, oral-motor therapy или другого отдельного метода не заменяет базовую профессиональную квалификацию и не является доказательством эффективности intervention.
+
+## Короткий итог
+
+Speech-language therapy - это не один метод.
+
+Она может включать разные виды assessment и intervention.
+
+Наиболее полезно спрашивать не:
+
+**«Нужен ли ребёнку логопед?»**
+
+а:
+
+> **Какая конкретная communication difficulty существует и какой intervention лучше всего соответствует этой цели?**
+
+Доказательства поддерживают ряд language и social-communication interventions, но они не распространяются автоматически на всё, что называется «логопедической терапией».
+
+## Что делать дальше
+
+Если основная проблема в том, что у человека нет надёжного способа сообщать важные сообщения:
+
+[AAC: альтернативная и дополнительная коммуникация](/kz/ru/parents/aac/)
+
+Если уже используется picture exchange:
+
+[PECS](/kz/ru/parents/pecs/)
+
+Если нужно вернуться к общей карте:
+
+[Коммуникация и AAC](/kz/ru/parents/kommunikatsiya-i-aac/)
