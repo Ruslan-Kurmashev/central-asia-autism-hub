@@ -392,6 +392,6 @@ Peer-Mediated Intervention - это способ использовать ест
 
 Следующая статья:
 
-**Imitation / Reciprocal Imitation - подражание и взаимное подражание.**
+[Imitation / Reciprocal Imitation - подражание и взаимное подражание](/kz/ru/parents/imitation-reciprocal-imitation/)
 
 [← Развитие, взаимодействие и игра](/kz/ru/parents/razvitie-vzaimodeystvie-i-igra/)
