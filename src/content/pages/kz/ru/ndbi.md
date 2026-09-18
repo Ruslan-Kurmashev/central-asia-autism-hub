@@ -518,6 +518,6 @@ NDBI - это не одна терапия.
 
 Следующая статья:
 
-**Joint Attention - совместное внимание.**
+[Joint Attention - совместное внимание](/kz/ru/parents/joint-attention/)
 
 [← Развитие, взаимодействие и игра](/kz/ru/parents/razvitie-vzaimodeystvie-i-igra/)
