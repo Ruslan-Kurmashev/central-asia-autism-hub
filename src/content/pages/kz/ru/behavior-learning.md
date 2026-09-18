@@ -1,0 +1,329 @@
+---
+title: "Поведение и обучение"
+summary: "Как разбираться в причинах сложного поведения, выбирать function-based поддержку и обучать новым навыкам без сведения помощи к послушанию."
+description: "Навигационная страница для родителей о functional assessment, FCT, antecedent strategies, reinforcement, prompting, Task Analysis, Video Modeling и Self-Management."
+country: kz
+language: ru
+section: parents
+topic: approaches-to-support
+slug: povedenie-i-obuchenie
+translationKey: parents-behavior-learning
+translationStatus: source
+audience:
+  - parents
+  - families
+author: Ruslan Kurmashev
+editor: Ruslan Kurmashev
+riskLevel: moderate
+disclaimerType: informational
+conflictOfInterest: "Конфликт интересов не заявлен."
+publishedAt: 2026-09-18
+updatedAt: 2026-09-18
+reviewDueAt: 2027-03-18
+draft: false
+keyPoints:
+  - "Сложное поведение сначала нужно понять, а не просто подавлять."
+  - "Боль, сон, тревога, коммуникация, сенсорная среда и demands могут быть важнее самой behavioral technique."
+  - "Обучение должно увеличивать функциональные навыки и самостоятельность, а не compliance как самоцель."
+  - "Результат оценивают по реальной жизни: communication, participation, distress, independence and quality of life."
+evidenceLimitations: "Раздел объединяет разные assessment tools and interventions. Нельзя переносить evidence одной procedure на всю behavioral support. Function-based approaches требуют индивидуальной assessment, а большинство focused-practice studies неоднородны по population, outcomes and setting."
+sources:
+  - title: "Autism spectrum disorder in under 19s: support and management - Recommendations"
+    url: "https://www.nice.org.uk/guidance/cg170/chapter/recommendations"
+    organisation: "National Institute for Health and Care Excellence"
+    accessedAt: 2026-09-18
+  - title: "Challenging behaviour and learning disabilities - Recommendations"
+    url: "https://www.nice.org.uk/guidance/ng11/chapter/Recommendations"
+    organisation: "National Institute for Health and Care Excellence"
+    accessedAt: 2026-09-18
+  - title: "Evidence-Based Practices for Children, Youth, and Young Adults with Autism"
+    url: "https://ncaep.fpg.unc.edu/sites/ncaep.fpg.unc.edu/files/imce/documents/EBP%20Executive%20Summary.pdf"
+    organisation: "National Clearinghouse on Autism Evidence and Practice"
+    publicationYear: 2020
+    accessedAt: 2026-09-18
+---
+
+[← Какие виды помощи и поддержки бывают при аутизме](/kz/ru/parents/vidy-pomoshchi-i-podderzhki-pri-autizme/)
+
+# Поведение и обучение
+
+Этот раздел нужен, когда родители сталкиваются с вопросами:
+
+- почему ребёнок кричит, убегает, отказывается или причиняет себе вред
+- как понять функцию поведения
+- когда сначала нужно искать медицинскую причину
+- как изменить среду до возникновения сложной ситуации
+- как обучить более безопасной коммуникации
+- как использовать подкрепление и подсказки
+- как развивать бытовые и учебные навыки
+- как уменьшать зависимость от постоянной помощи взрослого.
+
+Главный принцип:
+
+> **Сначала понять, что происходит и какую проблему нужно решить. Потом выбирать intervention.**
+
+## Если поведение внезапно изменилось
+
+Сначала проверьте возможные причины:
+
+- боль
+- gastrointestinal problems - проблемы ЖКТ
+- нарушения сна
+- medication effects - эффекты лекарств
+- тревогу
+- sensory overload - сенсорную перегрузку
+- изменения routine
+- communication barriers - трудности коммуникации
+- bullying, trauma or abuse - травлю, травму или насилие.
+
+Если behavior новый, резко усилился или опасен, сначала может быть нужен medical or multidisciplinary review - медицинская или мультидисциплинарная оценка.
+
+## 1. Functional Behavior Assessment - функциональная оценка поведения
+
+FBA помогает определить:
+
+- что именно происходит
+- когда behavior возникает
+- когда его нет
+- что происходит до него
+- что происходит после него
+- какие medical, communication and environmental factors могут участвовать.
+
+FBA - это assessment, а не therapy.
+
+[Подробнее: Functional Behavior Assessment](/kz/ru/parents/functional-behavior-assessment/)
+
+## 2. Functional Communication Training - обучение функциональной коммуникации
+
+Если assessment показывает, что behavior помогает человеку сообщать:
+
+- «перерыв»
+- «помоги»
+- «нет»
+- «слишком громко»
+- «я не понимаю»,
+
+можно обучать более доступному replacement communication - альтернативному способу сообщения.
+
+[Подробнее: Functional Communication Training](/kz/ru/parents/functional-communication-training/)
+
+## 3. Antecedent-Based Interventions - изменение условий до поведения
+
+Иногда эффективнее изменить:
+
+- шум
+- ожидание
+- predictability - предсказуемость
+- сложность задания
+- длительность activity
+- доступ к visual support
+- возможность выбора.
+
+Это proactive strategies - стратегии до возникновения сложного поведения.
+
+[Подробнее: Antecedent-Based Interventions](/kz/ru/parents/antecedent-based-interventions/)
+
+## 4. Подкрепление
+
+Reinforcement - подкрепление - это принцип обучения, при котором consequence увеличивает вероятность определённого поведения.
+
+Важно различать:
+
+- positive reinforcement - положительное подкрепление
+- negative reinforcement - отрицательное подкрепление
+- punishment - наказание.
+
+Отрицательное подкрепление не является наказанием.
+
+[Подробнее: Подкрепление](/kz/ru/parents/reinforcement/)
+
+## 5. Дифференциальное подкрепление
+
+К нему относятся:
+
+- DRA - подкрепление альтернативного поведения
+- DRI - подкрепление несовместимого поведения
+- DRO - подкрепление отсутствия целевого поведения
+- DRL - подкрепление более низкой частоты поведения.
+
+Эти procedures решают разные задачи и не должны использоваться без понятной цели.
+
+[Подробнее: Дифференциальное подкрепление](/kz/ru/parents/differential-reinforcement/)
+
+## 6. Подсказки и постепенное уменьшение подсказок
+
+Prompting - использование подсказок - помогает освоить новый навык.
+
+Prompt fading - постепенное уменьшение подсказок - помогает увеличить самостоятельность.
+
+Важно отдельно считать:
+
+- independent responses - самостоятельные ответы
+- prompted responses - ответы после подсказки.
+
+[Подробнее: Подсказки и постепенное уменьшение подсказок](/kz/ru/parents/prompting-and-prompt-fading/)
+
+## 7. Task Analysis - разбиение навыка на шаги
+
+Сложный бытовой или учебный навык можно разбить на последовательные шаги.
+
+Это помогает понять:
+
+- что уже самостоятельно
+- где нужна помощь
+- где есть конкретный barrier - барьер
+- как измерять progress - прогресс.
+
+[Подробнее: Task Analysis](/kz/ru/parents/task-analysis/)
+
+## 8. Modeling и Video Modeling - обучение через показ
+
+Человек может учиться, наблюдая:
+
+- живой образец
+- видео
+- video self-modeling - видео с собственным успешным выполнением
+- video prompting - видеоподсказки по отдельным шагам.
+
+[Подробнее: Обучение через показ и видеомоделирование](/kz/ru/parents/video-modeling/)
+
+## 9. Self-Management - самоуправление
+
+Self-Management помогает переносить часть контроля от взрослого к самому человеку.
+
+Например, человек сам использует:
+
+- checklist
+- timer
+- activity schedule
+- reminders
+- self-monitoring.
+
+Самостоятельность не означает отсутствие поддержки. Она может означать, что человек сам управляет нужными ему supports.
+
+[Подробнее: Self-Management](/kz/ru/parents/self-management/)
+
+## Не каждое необычное поведение нужно менять
+
+Не нужно автоматически уменьшать:
+
+- безопасный stimming
+- повторяющиеся движения
+- необычный способ выражать эмоции
+- autistic traits - аутичные особенности,
+
+если они не причиняют meaningful harm - значимого вреда.
+
+Цель intervention должна быть связана с:
+
+- safety - безопасностью
+- pain - болью
+- communication - коммуникацией
+- independence - самостоятельностью
+- participation - участием
+- quality of life - качеством жизни.
+
+## Compliance - послушание - не является универсальной целью
+
+Если ребёнок отказывается, нужно понять почему.
+
+Отказ может означать:
+
+- боль
+- страх
+- перегрузку
+- непонимание
+- preference - предпочтение
+- желание прекратить activity.
+
+Поэтому хорошая behavioral support не должна сводиться к:
+
+**«как заставить ребёнка выполнить instruction».**
+
+## Как выбирать подход
+
+Полезная последовательность:
+
+1. Определить проблему.
+2. Проверить health and environment.
+3. Собрать baseline.
+4. Провести functional assessment, если он нужен.
+5. Выбрать конкретную functional goal - функциональную цель.
+6. Выбрать подход, соответствующий этой цели.
+7. Заранее определить outcome measures - показатели результата.
+8. Проверить generalisation - перенос в реальную жизнь.
+9. Пересмотреть plan, если meaningful benefit отсутствует.
+
+## Как понять, помогает ли выбранный подход
+
+Не оценивайте только:
+
+**«поведение стало реже».**
+
+Смотрите также:
+
+- появился ли новый полезный навык
+- уменьшилась ли зависимость от подсказок
+- стало ли человеку легче сообщать потребности
+- уменьшился ли distress
+- выросла ли participation
+- улучшилась ли самостоятельность
+- переносится ли результат домой, в школу и community.
+
+[Подробнее: Как понять, помогает ли выбранная помощь](/kz/ru/parents/kak-ponyat-pomogaet-li-podderzhka/)
+
+## Что спросить специалиста
+
+1. Какую конкретную проблему мы решаем?
+2. Проверялись ли medical and sensory causes?
+3. Проводилась ли functional assessment?
+4. Как называется intervention по-русски?
+5. Какую evidence она имеет именно для этой цели?
+6. Как будет измеряться самостоятельность?
+7. Как учитывается отказ?
+8. Какие supports останутся доступными?
+9. Как проверят generalisation?
+10. Когда plan будет пересмотрен?
+
+## Что важно знать в Казахстане
+
+Поведенческие techniques могут использоваться специалистами из разных областей:
+
+- psychology - психологии
+- education - образования
+- speech-language support - логопедической и коммуникационной помощи
+- developmental services - программ развития
+- multidisciplinary support - мультидисциплинарной помощи.
+
+Название отдельной техники или сертификат курса не определяет профессиональную квалификацию специалиста.
+
+Нужно отдельно проверять:
+
+- базовое образование
+- professional role - профессиональную роль
+- scope of practice - область компетенции
+- требования к конкретной услуге в Казахстане.
+
+## Короткий итог
+
+Поведенческая поддержка не должна начинаться с вопроса:
+
+**«Как убрать это поведение?»**
+
+Полезнее спросить:
+
+> **«Почему это происходит, что человеку сейчас трудно и какой навык, изменение среды или способ коммуникации реально улучшит его жизнь?»**
+
+## Что делать дальше
+
+Если нужно вернуться к общей карте:
+
+[Какие виды помощи и поддержки бывают при аутизме](/kz/ru/parents/vidy-pomoshchi-i-podderzhki-pri-autizme/)
+
+Если нужно выбрать помощь под конкретную цель:
+
+[Как выбирать помощь под конкретную цель](/kz/ru/parents/kak-vybirat-pomoshch-pod-konkretnuyu-tsel/)
+
+Если нужно проверить evidence:
+
+[Как понять доказательность метода](/kz/ru/parents/kak-ponyat-dokazatelnost-metoda/)
