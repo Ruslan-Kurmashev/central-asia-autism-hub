@@ -1,0 +1,504 @@
+---
+title: "PECS: система обмена изображениями для коммуникации"
+summary: "Что такое PECS, чем он отличается от AAC в целом, что показывают исследования, как оценивать результат и когда рассматривать другие варианты."
+description: "Практическое руководство для родителей о PECS при аутизме: протокол, доказательства, отличие от AAC, влияние на речь, generalisation, ограничения и выбор специалиста."
+country: kz
+language: ru
+section: parents
+topic: approaches-to-support
+slug: pecs
+translationKey: parents-pecs
+translationStatus: source
+audience:
+  - parents
+  - families
+author: Ruslan Kurmashev
+editor: Ruslan Kurmashev
+riskLevel: lower
+disclaimerType: informational
+conflictOfInterest: "Конфликт интересов не заявлен."
+publishedAt: 2026-09-18
+updatedAt: 2026-09-18
+reviewDueAt: 2027-03-18
+draft: false
+keyPoints:
+  - "PECS - это один конкретный AAC-подход, а не синоним всей AAC."
+  - "Данные поддерживают некоторые communication outcomes, особенно initiation и requesting, но не гарантируют развитие речи."
+  - "PECS не является обязательной ступенью перед high-tech AAC."
+  - "Результат важно оценивать по самостоятельной функциональной коммуникации и generalisation, а не по номеру освоенной фазы."
+evidenceLimitations: "Evidence base PECS неоднородна. Ранние trials и reviews показывали ограниченные или умеренные communication effects и слабые speech outcomes. Новый meta-analysis 2026 года в Mainland China сообщил крупный pooled communication effect, но его переносимость на другие страны и settings требует осторожности. Maintenance, generalisation и broader communication functions изучены менее последовательно."
+sources:
+  - title: "Augmentative and Alternative Communication (AAC)"
+    url: "https://www.asha.org/Practice-Portal/Professional-Issues/Augmentative-and-Alternative-Communication/"
+    organisation: "American Speech-Language-Hearing Association"
+    note: "Использовано для описания PECS как одного из AAC approaches и структуры протокола."
+    accessedAt: 2026-09-18
+  - title: "Effectiveness of the Picture Exchange Communication System (PECS) on communication and speech for children with autism spectrum disorders: a meta-analysis"
+    url: "https://pubmed.ncbi.nlm.nih.gov/20181849/"
+    organisation: "PubMed"
+    publicationYear: 2010
+    note: "Ранний meta-analysis: small-to-moderate communication gains, limited speech effects, maintenance/generalisation limitations."
+    accessedAt: 2026-09-18
+  - title: "The effectiveness of Picture Exchange Communication System (PECS) training for teachers of children with autism: a pragmatic, group randomised controlled trial"
+    url: "https://pubmed.ncbi.nlm.nih.gov/17501728/"
+    organisation: "PubMed"
+    publicationYear: 2007
+    note: "Cluster RCT: increased PECS use and communication initiations, no significant increase in speech frequency or standardized language outcomes."
+    accessedAt: 2026-09-18
+  - title: "A communication-based intervention for nonverbal children with autism: what changes? Who benefits?"
+    url: "https://pubmed.ncbi.nlm.nih.gov/21787048/"
+    organisation: "PubMed"
+    publicationYear: 2011
+    note: "Secondary analysis: spontaneous communication gains, especially instrumental requesting."
+    accessedAt: 2026-09-18
+  - title: "Communication interventions for autism spectrum disorder in minimally verbal children"
+    url: "https://www.cochrane.org/evidence/CD012324_are-communication-interventions-effective-minimally-verbal-children-autism-spectrum-disorder"
+    organisation: "Cochrane"
+    note: "Older review with search cutoff 2017; very low-certainty PECS RCT evidence at that time."
+    accessedAt: 2026-09-18
+  - title: "Meta-analysis of Picture Exchange Communication System efficacy in autistic children in Mainland China"
+    url: "https://pubmed.ncbi.nlm.nih.gov/41442835/"
+    organisation: "PubMed"
+    publicationYear: 2026
+    note: "37 RCTs, 34 in quantitative synthesis, n=2343; large pooled communication effect, no significant pooled effect on language development."
+    accessedAt: 2026-09-18
+  - title: "A systematic review of acquisition and mastery of PECS phases"
+    url: "https://pubmed.ncbi.nlm.nih.gov/38300727/"
+    organisation: "PubMed"
+    publicationYear: 2024
+    note: "Использовано для limitations around phase mastery and heterogeneous criteria."
+    accessedAt: 2026-09-18
+  - title: "Barriers and facilitators to implementation of the Picture Exchange Communication System: a systematic review"
+    url: "https://www.frontiersin.org/journals/education/articles/10.3389/feduc.2024.1206410/full"
+    organisation: "Frontiers in Education"
+    publicationYear: 2024
+    note: "Использовано для implementation fidelity, training, context and supervision limitations."
+    accessedAt: 2026-09-18
+---
+
+[← Коммуникация и AAC](/kz/ru/parents/kommunikatsiya-i-aac/)
+
+[← AAC: альтернативная и дополнительная коммуникация](/kz/ru/parents/aac/)
+
+PECS - Picture Exchange Communication System - это конкретный структурированный AAC-подход, в котором человека обучают инициировать коммуникацию с помощью обмена изображениями.
+
+Важно сразу различать:
+
+**PECS является одним из вариантов AAC.**
+
+Но:
+
+**PECS не является синонимом всей AAC.**
+
+AAC включает гораздо больше способов коммуникации: жесты, communication boards, приложения, speech-generating devices, письмо и другие варианты.
+
+PECS также не является обязательной первой ступенью, которую человек должен пройти перед использованием high-tech AAC.
+
+## Как работает PECS
+
+PECS представляет собой manualized protocol с шестью последовательными фазами обучения.
+
+Сначала человек учится обменивать одно изображение на желаемый объект или действие, затем увеличивается самостоятельность и расстояние до communication partner, появляется выбор между изображениями, построение простой фразы, ответы на вопрос и позднее комментарии.
+
+То есть PECS - не просто использование карточек.
+
+## PECS и обычные карточки - не одно и то же
+
+Ребёнок может использовать:
+
+- visual schedule;
+- карточку «перерыв»;
+- choice board;
+- изображения предметов;
+- визуальные инструкции.
+
+Это ещё не означает, что используется PECS.
+
+PECS - конкретный protocol обучения.
+
+Picture-based AAC в целом значительно шире.
+
+## Кому PECS может быть полезен
+
+PECS чаще всего изучался у детей с аутизмом и другими developmental disabilities, особенно когда функциональная устная речь ограничена.
+
+Он может быть одним из вариантов, если:
+
+- человеку подходит коммуникация через изображения;
+- важной целью является самостоятельное initiation;
+- текущего способа коммуникации недостаточно;
+- picture exchange удобен в реальных ситуациях.
+
+Но диагноз, возраст или отсутствие речи сами по себе не означают, что PECS обязательно будет лучшим вариантом.
+
+Выбор между PECS и другими AAC-системами должен происходить после оценки коммуникационных потребностей.
+
+## Что показывали более ранние исследования
+
+Meta-analysis 2010 года включил 8 single-subject experiments и 3 group studies.
+
+Авторы обнаружили небольшие или умеренные улучшения communication outcomes после PECS, но gains in speech были небольшими или отрицательными.
+
+Также были отмечены проблемы с maintenance и generalisation.
+
+Это была относительно небольшая evidence base, поэтому тогда PECS характеризовался скорее как promising intervention, чем как окончательно установленный стандарт.
+
+## Что показал крупный школьный RCT
+
+В Великобритании был проведён cluster randomized controlled trial с участием 84 детей.
+
+Учителя проходили обучение PECS и получали консультации специалистов в течение пяти месяцев.
+
+После intervention увеличились:
+
+- communicative initiations;
+- использование PECS.
+
+Но исследование не обнаружило значимого увеличения частоты речи, улучшения standardized language scores или ADOS communication scores.
+
+После прекращения active intervention эффекты PECS usage и communication initiations не сохранялись.
+
+Это важный пример того, почему нельзя говорить просто:
+
+**«PECS улучшает коммуникацию».**
+
+Нужно уточнять, какой именно communication outcome.
+
+## Что показал последующий анализ
+
+Дополнительный анализ того же RCT показал увеличение spontaneous communication после PECS training.
+
+Особенно заметно увеличилось spontaneous requesting объектов.
+
+При этом requesting для социальных целей статистически значимо не увеличилось.
+
+Часть результатов также зависела от исходных характеристик ребёнка.
+
+Поэтому strongest evidence исторически относился прежде всего к инструментальной функциональной коммуникации, а не ко всем возможным видам общения.
+
+## Что говорил Cochrane
+
+Cochrane review по communication interventions у minimally verbal autistic children включил только один подходящий PECS randomized trial.
+
+Авторы оценили certainty evidence как **very low** из-за:
+
+- risk of bias;
+- небольших выборок;
+- широких confidence intervals;
+- фактически одного RCT для PECS.
+
+Важно помнить, что поиск в этом обзоре заканчивался в 2017 году, поэтому он не включает более новую литературу.
+
+## Новые данные 2026 года
+
+В январе 2026 года опубликован крупный systematic review and meta-analysis PECS у детей с аутизмом в Mainland China.
+
+В него вошли 37 randomized controlled trials, из которых 34 вошли в meta-analysis, всего 2343 участника.
+
+Авторы сообщили крупный pooled effect на communication skills:
+
+**SMD 0.94, 95% CI 0.67-1.21.**
+
+Также были заявлены улучшения ряда collateral outcomes.
+
+При этом статистически значимого эффекта на **language development** не обнаружили:
+
+**SMD 0.44, 95% CI -0.53 to 1.41.**
+
+Это существенно расширяет современную PECS evidence base.
+
+## Почему новый meta-analysis не означает «PECS доказан для всего»
+
+Этот результат важен, но его нужно интерпретировать осторожно.
+
+Все включённые исследования были проведены в Mainland China.
+
+Это означает, что:
+
+- системы помощи могли отличаться;
+- settings могли отличаться;
+- professional training мог отличаться;
+- comparison conditions могли отличаться;
+- культурный и образовательный контекст отличается от Казахстана и других стран.
+
+Кроме того, некоторые pooled collateral effects в meta-analysis были очень крупными, поэтому особенно важны independent replication и study-level appraisal.
+
+Поэтому разумный вывод сегодня:
+
+**PECS имеет подтверждающие данные для некоторых communication outcomes, но нельзя переносить этот вывод на все возможные результаты или на каждого ребёнка.**
+
+## PECS и развитие речи
+
+PECS иногда рекламируют как метод, который должен «запустить речь».
+
+Такая формулировка слишком сильная.
+
+Meta-analysis 2010 года не показал убедительных speech gains.
+
+School RCT не обнаружил улучшения frequency of speech или standardized language scores.
+
+А meta-analysis 2026 года не выявил статистически значимого pooled effect на language development.
+
+Это не означает, что у отдельных детей речь никогда не меняется после PECS.
+
+Но обещание:
+
+**«PECS запускает речь»**
+
+не соответствует текущей evidence base.
+
+Основная цель PECS - функциональная коммуникация.
+
+## Нужно ли начинать именно с PECS
+
+Нет.
+
+PECS является одним из AAC options.
+
+Другими вариантами могут быть:
+
+- communication board;
+- low-tech AAC;
+- manual signs;
+- speech-generating device;
+- tablet-based AAC;
+- комбинированная multimodal communication.
+
+Современный AAC framework не требует проходить PECS перед использованием electronic AAC.
+
+Поэтому правильный вопрос:
+
+**Какой способ коммуникации лучше соответствует потребностям этого человека?**
+
+а не:
+
+**«Прошёл ли он PECS перед планшетом?»**
+
+[Подробнее об AAC](/kz/ru/parents/aac/)
+
+## Нужно ли пройти все шесть фаз
+
+Не обязательно считать прохождение всех фаз главным результатом.
+
+Systematic review 2024 года изучал acquisition and mastery skills across PECS studies и показал, что исследования существенно различались в определении mastery и далеко не все участники проходили все шесть фаз.
+
+Поэтому:
+
+**завершение phase VI не равно автоматически успешной коммуникации.**
+
+Важнее проверить, помогает ли система человеку в реальной жизни.
+
+## Качество реализации имеет значение
+
+Systematic review 2024 года изучал barriers and facilitators implementation PECS в 49 исследованиях.
+
+Авторы обнаружили, что ключевые details implementation часто сообщались недостаточно.
+
+В литературе встречались такие возможные факторы, как:
+
+- context and environment;
+- training and consultation;
+- supervision;
+- implementation fidelity;
+- adherence to protocol.
+
+Но имеющихся данных оказалось недостаточно, чтобы уверенно определить, какие именно факторы reliably предсказывают лучший результат.
+
+То есть формула:
+
+**«главное строго соблюдать protocol и результат будет»**
+
+тоже слишком упрощённая.
+
+## Возможные ограничения PECS
+
+PECS обычно не относится к физически рискованным intervention.
+
+Но возможны другие проблемы.
+
+### Communication остаётся только requesting
+
+Если ребёнок умеет только:
+
+**«хочу сок»**
+
+или
+
+**«хочу игрушку»**,
+
+это ещё не полноценная коммуникационная система.
+
+Нужны также возможности:
+
+- отказа;
+- комментария;
+- сообщения о боли;
+- вопросов;
+- рассказа;
+- общения со сверстниками;
+- self-advocacy.
+
+### Prompt dependence
+
+Если ребёнок использует PECS только после:
+
+**«дай карточку»**
+
+или физической подсказки, самостоятельная коммуникация остаётся ограниченной.
+
+### Нет generalisation
+
+Навык может существовать только:
+
+- в кабинете;
+- с одним специалистом;
+- с одним набором карточек.
+
+Нужно проверять его в обычной жизни.
+
+### PECS продолжают использовать, хотя другой AAC уже удобнее
+
+Иногда человек мог бы быстрее и свободнее общаться через SGD, текст или другую систему.
+
+Не стоит сохранять PECS только потому, что в него уже вложено много времени.
+
+## Как понять, помогает ли PECS
+
+Не оценивайте PECS только по:
+
+- количеству exchanged pictures;
+- количеству выполненных trials;
+- номеру освоенной phase.
+
+Лучше определить конкретный functional outcome.
+
+Например:
+
+**самостоятельно попросить помощь**
+
+**отказаться**
+
+**попросить перерыв**
+
+**инициировать общение**
+
+**сделать комментарий**
+
+После этого отслеживайте:
+
+- baseline;
+- число самостоятельных initiations;
+- число prompts;
+- количество communication partners;
+- использование дома;
+- использование в школе;
+- разнообразие сообщений;
+- distress;
+- удобство системы.
+
+Главный вопрос:
+
+**становится ли человеку легче самостоятельно сообщать то, что он действительно хочет сказать?**
+
+[Как понять, помогает ли выбранная помощь](/kz/ru/parents/kak-ponyat-pomogaet-li-podderzhka/)
+
+## Когда стоит пересмотреть PECS
+
+Пересмотреть систему полезно, если:
+
+- коммуникация остаётся только просьбами;
+- человеку постоянно нужны prompts;
+- PECS не используется вне занятий;
+- exchange cards физически неудобен;
+- vocabulary плохо расширяется;
+- ребёнок избегает communication book;
+- другой AAC быстрее или удобнее;
+- появились новые motor, vision или literacy skills;
+- система ограничивает самостоятельность.
+
+Изменение AAC-системы не означает неудачу.
+
+Цель - не сохранить конкретный protocol.
+
+Цель - сохранить эффективную коммуникацию.
+
+## Что спросить специалиста
+
+1. Почему предлагается именно PECS?
+2. Какие другие AAC options рассматривались?
+3. Какова конкретная коммуникационная цель?
+4. Как будет измеряться spontaneous initiation?
+5. Как будут уменьшаться prompts?
+6. Как проверят generalisation?
+7. Как ребёнок сможет отказаться?
+8. Как будут добавляться comments и другие функции кроме requesting?
+9. Когда PECS сравнят с другими AAC options?
+10. Что будет основанием сменить систему?
+11. Какая базовая профессиональная квалификация у специалиста?
+12. Является ли его PECS certificate дополнительным training или основной квалификацией?
+
+## Сертификат PECS и квалификация специалиста
+
+Прохождение PECS training подтверждает обучение конкретному protocol.
+
+Но само по себе оно не означает, что человек автоматически является:
+
+- логопедом;
+- психологом;
+- врачом;
+- педагогом;
+- occupational therapist;
+- другим регулируемым специалистом.
+
+Это отдельные вопросы.
+
+## Что важно знать в Казахстане
+
+В Казахстане PECS может использоваться в:
+
+- образовательных организациях;
+- коррекционных центрах;
+- медицинских учреждениях;
+- психологических службах;
+- частной практике.
+
+Поэтому при выборе специалиста отдельно проверяйте:
+
+**его базовую профессиональную квалификацию**
+
+и
+
+**обучение PECS**.
+
+Сертификат PECS:
+
+**не заменяет базовую профессиональную квалификацию**
+
+и
+
+**не является доказательством эффективности услуги у конкретного ребёнка.**
+
+## Короткий итог
+
+PECS - это один конкретный AAC approach.
+
+Современные данные поддерживают его способность улучшать некоторые виды функциональной коммуникации, особенно initiation и requesting.
+
+При этом:
+
+- PECS не равен всей AAC;
+- PECS не обязателен перед electronic AAC;
+- убедительного гарантированного эффекта на речь нет;
+- generalisation и maintenance нужно проверять отдельно;
+- completion of phases не является главным outcome;
+- новый крупный meta-analysis 2026 года усиливает evidence для communication outcomes, но требует осторожного переноса за пределы исследованного контекста.
+
+## Что делать дальше
+
+Если вы выбираете между PECS и другими способами коммуникации, сначала вернитесь к общей странице:
+
+[AAC: альтернативная и дополнительная коммуникация](/kz/ru/parents/aac/)
+
+Сравнивайте не названия методов, а:
+
+**насколько самостоятельно, разнообразно и удобно человек сможет общаться в реальной жизни.**
