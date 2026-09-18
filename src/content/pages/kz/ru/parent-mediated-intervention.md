@@ -463,6 +463,6 @@ Parent-Mediated Intervention означает, что специалист по�
 
 Следующая статья:
 
-**Peer-Mediated Intervention - поддержка через сверстников.**
+[Peer-Mediated Intervention - поддержка через сверстников](/kz/ru/parents/peer-mediated-intervention/)
 
 [← Развитие, взаимодействие и игра](/kz/ru/parents/razvitie-vzaimodeystvie-i-igra/)
