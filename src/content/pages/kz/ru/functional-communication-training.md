@@ -1,0 +1,320 @@
+---
+title: "Functional Communication Training: когда поведение заменяет сообщение"
+summary: "Как FCT помогает обучать более доступной коммуникации после functional assessment и исключения медицинских и средовых причин."
+description: "Практическое руководство для родителей о Functional Communication Training: function-based assessment, evidence, AAC, safety, generalisation и monitoring."
+country: kz
+language: ru
+section: parents
+topic: approaches-to-support
+slug: functional-communication-training
+translationKey: parents-functional-communication-training
+translationStatus: source
+audience:
+  - parents
+  - families
+author: Ruslan Kurmashev
+editor: Ruslan Kurmashev
+riskLevel: moderate
+disclaimerType: medical
+conflictOfInterest: "Конфликт интересов не заявлен."
+publishedAt: 2026-09-18
+updatedAt: 2026-09-18
+reviewDueAt: 2027-03-18
+draft: false
+keyPoints:
+  - "FCT начинается не с подавления поведения, а с functional assessment и проверки медицинских, сенсорных и средовых причин."
+  - "Replacement communication должна быть доступной и реально приводить к понятному ответу партнёра."
+  - "Современные данные показывают сильный signal efficacy, но generalisation, maintenance и real-world effectiveness изучены слабее."
+  - "Не каждое необычное или повторяющееся поведение требует intervention."
+evidenceLimitations: "Evidence for FCT largely comes from single-case experimental designs. A 2025 meta-analysis found large effects but only a minority of studies met WWC standards, while maintenance, generalisation, treatment fidelity and social validity were often underreported. Strong efficacy evidence should not be equated with guaranteed everyday effectiveness."
+sources:
+  - title: "Autism spectrum disorder in under 19s: support and management - Recommendations"
+    url: "https://www.nice.org.uk/guidance/cg170/chapter/recommendations"
+    organisation: "National Institute for Health and Care Excellence"
+    accessedAt: 2026-09-18
+  - title: "Meta-analysis of Functional Communication Training for autistic children in natural settings"
+    url: "https://pubmed.ncbi.nlm.nih.gov/41464031/"
+    organisation: "PubMed"
+    publicationYear: 2025
+    accessedAt: 2026-09-18
+  - title: "Functional Communication Training: efficacy and effectiveness review"
+    url: "https://pubmed.ncbi.nlm.nih.gov/32929757/"
+    organisation: "PubMed"
+    publicationYear: 2021
+    accessedAt: 2026-09-18
+  - title: "Ecological validity of school-based Functional Communication Training"
+    url: "https://pubmed.ncbi.nlm.nih.gov/39056488/"
+    organisation: "PubMed"
+    publicationYear: 2024
+    accessedAt: 2026-09-18
+  - title: "Schedule thinning and resurgence following FCT"
+    url: "https://pubmed.ncbi.nlm.nih.gov/35164521/"
+    organisation: "PubMed"
+    publicationYear: 2022
+    accessedAt: 2026-09-18
+  - title: "Intervention targets and adverse-effect reporting in transition-age autism research"
+    url: "https://pubmed.ncbi.nlm.nih.gov/38389134/"
+    organisation: "PubMed"
+    publicationYear: 2024
+    accessedAt: 2026-09-18
+---
+
+[← Коммуникация и AAC](/kz/ru/parents/kommunikatsiya-i-aac/)
+
+Functional Communication Training, или FCT, - это подход, при котором человека обучают более доступному способу сообщить потребность, которая раньше выражалась через сложное или опасное поведение.
+
+Например, ребёнок может кричать, когда ему нужен перерыв.
+
+Если assessment показывает, что крик действительно помогает получить перерыв, ребёнка можно обучать сообщать:
+
+**«перерыв»**
+
+с помощью речи, жеста, карточки, AAC или другого доступного способа.
+
+Но FCT не должно начинаться с идеи:
+
+**«нам нужно убрать это поведение».**
+
+Сначала нужно понять:
+
+> **Что происходит, почему это происходит и какую потребность человек пытается удовлетворить?**
+
+## Сначала нужно исключить другие причины
+
+Поведение может меняться из-за:
+
+- боли
+- GI problems
+- сна
+- тревоги
+- sensory overload
+- шума
+- света
+- изменения routine
+- слишком сложных demands
+- communication barriers
+- mental health difficulties
+- medication effects
+- конфликтов
+- abuse or exploitation.
+
+NICE рекомендует оценивать такие факторы до выбора psychosocial intervention для behaviour that challenges.
+
+## Что значит функция поведения
+
+Function означает, какой outcome поведение помогает получить или избежать.
+
+В behavioral literature часто рассматривают доступ к предмету или attention, escape from demands и sensory/automatic outcomes.
+
+Но реальная assessment должна учитывать более широкий medical, sensory, emotional and environmental context.
+
+## Что такое functional assessment
+
+Functional assessment помогает сформулировать гипотезу:
+
+- когда поведение возникает
+- что происходит до него
+- что происходит после него
+- какую потребность человек может пытаться удовлетворить.
+
+Assessment может включать интервью, наблюдение, школьные данные, baseline, frequency, intensity, duration и environmental factors.
+
+## Пример
+
+Ребёнок кричит и падает на пол во время шумного группового занятия.
+
+Возможные причины могут включать:
+
+- noise overload
+- боль
+- непонимание инструкции
+- слишком длинную activity
+- отсутствие способа попросить перерыв
+- anxiety.
+
+Если становится ясно, что ребёнок пытается прекратить перегружающую activity, его можно обучать сообщать:
+
+**«перерыв»**
+
+или
+
+**«слишком громко».**
+
+## Replacement communication должна быть проще
+
+Новый способ коммуникации должен быть быстрым и доступным.
+
+Это может быть:
+
+- один symbol
+- кнопка
+- жест
+- карточка
+- короткое слово.
+
+## FCT и AAC
+
+Replacement communication не обязана быть устной.
+
+Можно использовать AAC, PECS, communication board, sign, gesture, speech-generating device или речь.
+
+[Подробнее об AAC](/kz/ru/parents/aac/)
+
+## Сообщение должно реально работать
+
+Если ребёнка научили нажимать:
+
+**ПЕРЕРЫВ**
+
+но взрослые обычно отвечают:
+
+**«Нет, сначала закончи»**,
+
+новый response может оказаться менее functional, чем прежнее поведение.
+
+Человек должен видеть, что новый способ коммуникации действительно имеет смысл.
+
+## Что показывают исследования
+
+Meta-analysis 2025 года включил 34 single-case studies и 79 аутичных детей 2-8 лет.
+
+FCT показал крупный effect на challenging behavior:
+
+**Tau-BC = 0.97**
+
+и moderate-to-large effect на replacement behavior:
+
+**Tau-BC = 0.78.**
+
+Но только 29.4% studies соответствовали WWC standards полностью или с reservations.
+
+Также часто недостаточно сообщались treatment fidelity, social validity, maintenance и generalisation.
+
+## Efficacy и effectiveness - не одно и то же
+
+Evidence controlled efficacy FCT сильная.
+
+Но evidence устойчивой everyday effectiveness слабее.
+
+Навык может работать в кабинете, но не переноситься домой или в школу.
+
+## Что известно о FCT в школе
+
+School-based evidence показывает хорошие experimental effects, но ecological validity остаётся ограниченной.
+
+Поэтому implementation в обычном классе нужно проверять отдельно.
+
+## Не каждое необычное поведение нужно уменьшать
+
+Intervention нужна не потому, что behavior выглядит необычно или отличается от поведения других детей.
+
+Target должен быть связан с:
+
+- safety
+- pain
+- meaningful participation
+- autonomy
+- quality of life.
+
+Не с нормализацией поведения.
+
+## Что происходит, если просьбу нельзя выполнить сразу
+
+Некоторые programs позднее обучают waiting или delay.
+
+Но schedule thinning может сопровождаться resurgence challenging behavior.
+
+Поэтому этот этап требует осторожности.
+
+## Если поведение опасное
+
+Self-injury, aggression или другое immediate-risk behavior требует профессиональной оценки и safety plan.
+
+Родителям не следует самостоятельно проводить experimental functional analysis опасного поведения.
+
+## Как понять, помогает ли FCT
+
+Измеряйте минимум две вещи:
+
+### Target behavior
+
+- frequency
+- duration
+- intensity.
+
+### Replacement communication
+
+- independent requests
+- отказ
+- просьба о помощи
+- просьба о перерыве.
+
+Также отслеживайте prompts, generalisation, distress, participation, adverse effects и quality of life.
+
+[Как понять, помогает ли выбранная помощь](/kz/ru/parents/kak-ponyat-pomogaet-li-podderzhka/)
+
+## Generalisation
+
+Проверяйте, работает ли replacement communication:
+
+- дома
+- в школе
+- с родителями
+- с педагогами
+- в разных activities.
+
+Навык только с therapist после prompt ещё не является полной functional communication.
+
+## Когда FCT стоит пересмотреть
+
+Пересмотр нужен, если:
+
+- behavior усиливается
+- появились новые medical symptoms
+- replacement communication игнорируют
+- prompts увеличиваются
+- generalisation отсутствует
+- family burden высок
+- target behavior не причиняет meaningful harm
+- hypothesis about function выглядит неправильной.
+
+## Что спросить специалиста
+
+1. Как была определена функция поведения?
+2. Какие данные это подтверждают?
+3. Проверялись ли pain и medical causes?
+4. Проверялись ли sensory и environmental factors?
+5. Какой replacement communication будет обучаться?
+6. Рассматривалась ли AAC?
+7. Что произойдёт, когда человек использует replacement communication?
+8. Как проверят generalisation?
+9. Как измеряется quality of life?
+10. Как отслеживаются adverse effects?
+
+## Что важно знать в Казахстане
+
+FCT может использоваться внутри behavioral, psychological, educational, speech-language или developmental services.
+
+Само название «FCT-специалист» не определяет профессиональную квалификацию.
+
+Нужно отдельно проверять базовое образование, professional role, scope of practice и требования к конкретной услуге.
+
+## Короткий итог
+
+FCT может быть полезным, когда challenging behavior действительно выполняет communication function и человеку можно дать более доступный способ сообщить ту же потребность.
+
+Главная цель FCT не:
+
+**«сделать ребёнка послушнее».**
+
+Главная цель:
+
+> **дать человеку более безопасный, понятный и самостоятельный способ сообщать о своих потребностях.**
+
+## Что делать дальше
+
+[AAC](/kz/ru/parents/aac/)
+
+[Обучение партнёров по коммуникации](/kz/ru/parents/communication-partner-training/)
+
+[Как понять, помогает ли выбранная помощь](/kz/ru/parents/kak-ponyat-pomogaet-li-podderzhka/)
