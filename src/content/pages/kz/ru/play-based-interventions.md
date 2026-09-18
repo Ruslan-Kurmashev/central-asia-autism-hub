@@ -474,6 +474,6 @@ NICE поддерживает использование игровых стра
 
 Следующая статья:
 
-**Parent-Mediated Intervention - поддержка с участием родителей.**
+[Parent-Mediated Intervention - поддержка с участием родителей](/kz/ru/parents/parent-mediated-intervention/)
 
 [← Развитие, взаимодействие и игра](/kz/ru/parents/razvitie-vzaimodeystvie-i-igra/)
