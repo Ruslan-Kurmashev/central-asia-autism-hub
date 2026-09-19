@@ -18,7 +18,7 @@ riskLevel: moderate
 disclaimerType: informational
 conflictOfInterest: "Конфликт интересов не заявлен."
 publishedAt: "2026-09-19T15:35:38.365Z"
-updatedAt: "2026-09-19T15:45:53.315Z"
+updatedAt: "2026-09-19T22:52:37.012Z"
 reviewDueAt: 2027-03-19
 draft: false
 keyPoints:
