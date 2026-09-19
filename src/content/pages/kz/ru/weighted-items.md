@@ -390,6 +390,6 @@ sources:
 
 Следующая статья:
 
-**Слуховые программы и Auditory Integration Training: что известно об эффективности.**
+[Слуховые программы и слуховая интеграционная тренировка: что известно об эффективности](/kz/ru/parents/auditory-integration-listening-programs/)
 
 [← Сенсорные особенности и адаптация среды](/kz/ru/parents/sensornye-osobennosti-i-adaptatsiya-sredy/)
