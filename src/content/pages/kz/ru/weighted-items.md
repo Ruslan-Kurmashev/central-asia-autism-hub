@@ -18,7 +18,7 @@ riskLevel: moderate
 disclaimerType: medical
 conflictOfInterest: "Конфликт интересов не заявлен."
 publishedAt: "2026-09-19T15:30:54.697Z"
-updatedAt: "2026-09-19T15:43:45.819Z"
+updatedAt: "2026-09-19T15:45:53.315Z"
 reviewDueAt: 2027-03-19
 draft: false
 keyPoints:
@@ -32,7 +32,7 @@ sources:
     url: "https://pubmed.ncbi.nlm.nih.gov/25022743/"
     organisation: "PubMed"
     publicationYear: 2014
-    note: "Использовано для данных об отсутствии объективного улучшения сна и предпочтении weighted blanket."
+    note: "Использовано для данных об отсутствии объективного улучшения сна и о предпочтении утяжелённого одеяла детьми и родителями."
     accessedAt: 2026-09-19
   - title: "Weighted blankets for psychiatric disorders: systematic review and meta-analysis"
     url: "https://pubmed.ncbi.nlm.nih.gov/39447684/"
