@@ -18,7 +18,7 @@ riskLevel: lower
 disclaimerType: informational
 conflictOfInterest: "Конфликт интересов не заявлен."
 publishedAt: 2026-09-18
-updatedAt: "2026-09-19T22:53:44.015Z"
+updatedAt: "2026-09-19T22:54:48.162Z"
 reviewDueAt: 2027-03-18
 draft: false
 keyPoints:
@@ -28,8 +28,8 @@ keyPoints:
   - "Главный outcome - самостоятельное выполнение meaningful skill, а не просмотр видео или копирование neurotypical поведения."
 evidenceLimitations: "Большая часть evidence по video-based interventions состоит из single-case studies. Эффекты зависят от конкретного навыка, возраста, формата видео, дополнительных компонентов и context. Generalisation and maintenance often require separate assessment."
 sources:
-  - title: "Evidence-Based Practices for Children, Youth, and Young Adults with Autism"
-    url: "https://ncaep.fpg.unc.edu/sites/ncaep.fpg.unc.edu/files/imce/documents/EBP%20Executive%20Summary.pdf"
+  - title: "Evidence-Based Practices for Children, Youth, and Young Adults with Autism: Third Generation Review"
+    url: "https://pmc.ncbi.nlm.nih.gov/articles/PMC8510990/"
     organisation: "National Clearinghouse on Autism Evidence and Practice"
     publicationYear: 2020
     accessedAt: 2026-09-18
