@@ -18,7 +18,7 @@ riskLevel: moderate
 disclaimerType: medical
 conflictOfInterest: "Конфликт интересов не заявлен."
 publishedAt: 2026-09-17
-updatedAt: "2026-09-19T15:45:05.453Z"
+updatedAt: "2026-09-19T16:15:29.025Z"
 reviewDueAt: 2027-03-17
 draft: false
 keyPoints:
@@ -73,9 +73,9 @@ sources:
 
 ## Быстрый выбор
 
-- [Не знаете, с чего начать? Выберите помощь по конкретной цели](/kz/ru/parents/kak-vybirat-pomoshch-pod-konkretnuyu-tsel/)
-- [Вам предложили конкретный метод? Проверьте, как читать доказательства](/kz/ru/parents/kak-ponyat-dokazatelnost-metoda/)
-- [Помощь уже началась? Проверьте, помогает ли она](/kz/ru/parents/kak-ponyat-pomogaet-li-podderzhka/)
+- [Не знаете, с чего начать? Выберите помощь по конкретной цели](/central-asia-autism-hub/kz/ru/parents/kak-vybirat-pomoshch-pod-konkretnuyu-tsel/)
+- [Вам предложили конкретный метод? Проверьте, как читать доказательства](/central-asia-autism-hub/kz/ru/parents/kak-ponyat-dokazatelnost-metoda/)
+- [Помощь уже началась? Проверьте, помогает ли она](/central-asia-autism-hub/kz/ru/parents/kak-ponyat-pomogaet-li-podderzhka/)
 
 ## С чего начинать
 
@@ -95,7 +95,7 @@ AAC может быть низкотехнологичной, например �
 
 Главная цель здесь не обязательно состоит в том, чтобы ребёнок говорил определённым способом. Важно, чтобы у него был доступный и надёжный способ сообщать о своих потребностях, выборе, боли, отказе и интересах.
 
-[Перейти в раздел «Коммуникация и AAC»](/kz/ru/parents/kommunikatsiya-i-aac/)
+[Перейти в раздел «Коммуникация и AAC»](/central-asia-autism-hub/kz/ru/parents/kommunikatsiya-i-aac/)
 
 ## 2. Поведение и обучение
 
@@ -105,7 +105,7 @@ AAC может быть низкотехнологичной, например �
 
 В зависимости от причины могут использоваться функциональная оценка поведения, Functional Communication Training, Positive Behaviour Support, изменение условий, визуальная поддержка и другие стратегии обучения.
 
-[Перейти в раздел «Поведение и обучение»](/kz/ru/parents/povedenie-i-obuchenie/)
+[Перейти в раздел «Поведение и обучение»](/central-asia-autism-hub/kz/ru/parents/povedenie-i-obuchenie/)
 
 ## 3. Развитие, взаимодействие и игра
 
@@ -117,7 +117,7 @@ AAC может быть низкотехнологичной, например �
 
 Одна программа не обязательно одинаково влияет на коммуникацию, игру, адаптивные навыки и качество жизни.
 
-[Перейти в раздел «Развитие, взаимодействие и игра»](/kz/ru/parents/razvitie-vzaimodeystvie-i-igra/)
+[Перейти в раздел «Развитие, взаимодействие и игра»](/central-asia-autism-hub/kz/ru/parents/razvitie-vzaimodeystvie-i-igra/)
 
 ## 4. Сенсорные особенности и адаптация среды
 
@@ -129,7 +129,7 @@ AAC может быть низкотехнологичной, например �
 
 Это не одно и то же. У них разные цели, протоколы и доказательная база.
 
-[Перейти в раздел «Сенсорные особенности и адаптация среды»](/kz/ru/parents/sensornye-osobennosti-i-adaptatsiya-sredy/)
+[Перейти в раздел «Сенсорные особенности и адаптация среды»](/central-asia-autism-hub/kz/ru/parents/sensornye-osobennosti-i-adaptatsiya-sredy/)
 
 ## 5. Движение и физическая активность
 
@@ -247,7 +247,7 @@ AAC может быть низкотехнологичной, например �
 
 Если значимой пользы нет, возникают нежелательные эффекты, ребёнок испытывает стойкий distress, нагрузка становится чрезмерной или цель больше не актуальна, план можно изменить или остановить.
 
-[Пошагово: как выбирать помощь под конкретную цель](/kz/ru/parents/kak-vybirat-pomoshch-pod-konkretnuyu-tsel/)
+[Пошагово: как выбирать помощь под конкретную цель](/central-asia-autism-hub/kz/ru/parents/kak-vybirat-pomoshch-pod-konkretnuyu-tsel/)
 
 ## Что важно знать в Казахстане
 
@@ -285,6 +285,6 @@ AAC может быть низкотехнологичной, например �
 
 **для какой цели его используют; что показывают исследования; насколько надёжны данные; какие существуют риски; что известно о его использовании и регулировании в Казахстане.**
 
-- [Как выбирать помощь под конкретную цель](/kz/ru/parents/kak-vybirat-pomoshch-pod-konkretnuyu-tsel/)
-- [Как понять доказательность метода](/kz/ru/parents/kak-ponyat-dokazatelnost-metoda/)
-- [Как понять, помогает ли выбранная помощь](/kz/ru/parents/kak-ponyat-pomogaet-li-podderzhka/)
+- [Как выбирать помощь под конкретную цель](/central-asia-autism-hub/kz/ru/parents/kak-vybirat-pomoshch-pod-konkretnuyu-tsel/)
+- [Как понять доказательность метода](/central-asia-autism-hub/kz/ru/parents/kak-ponyat-dokazatelnost-metoda/)
+- [Как понять, помогает ли выбранная помощь](/central-asia-autism-hub/kz/ru/parents/kak-ponyat-pomogaet-li-podderzhka/)
