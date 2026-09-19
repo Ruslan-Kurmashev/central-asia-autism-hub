@@ -18,7 +18,7 @@ riskLevel: lower
 disclaimerType: informational
 conflictOfInterest: "Конфликт интересов не заявлен."
 publishedAt: "2026-09-18T20:41:00Z"
-updatedAt: "2026-09-19T22:56:00.823Z"
+updatedAt: "2026-09-19T23:03:07.525Z"
 reviewDueAt: 2027-03-18
 draft: false
 keyPoints:
@@ -55,8 +55,6 @@ sources:
 ---
 
 [← Развитие, взаимодействие и игра](/kz/ru/parents/razvitie-vzaimodeystvie-i-igra/)
-
-# Parent-Mediated Intervention - поддержка с участием родителей
 
 Поддержка с участием родителей (Parent-Mediated Intervention) - это подход, при котором специалист работает не только с ребёнком, но и обучает родителей стратегиям, которые можно использовать в обычной жизни.
 
