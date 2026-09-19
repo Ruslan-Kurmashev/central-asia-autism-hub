@@ -18,7 +18,7 @@ riskLevel: moderate
 disclaimerType: informational
 conflictOfInterest: "Конфликт интересов не заявлен."
 publishedAt: 2026-09-18
-updatedAt: 2026-09-18
+updatedAt: "2026-09-19T22:53:27.410Z"
 reviewDueAt: 2027-03-18
 draft: false
 keyPoints:
@@ -62,6 +62,8 @@ sources:
     publicationYear: 2024
     accessedAt: 2026-09-18
 ---
+
+[← Поведение и обучение](/kz/ru/parents/povedenie-i-obuchenie/)
 
 Дифференциальное подкрепление - это группа поведенческих методов, при которых один вариант поведения получает более последовательное или более значимое подкрепление, чем другой.
 
@@ -307,3 +309,5 @@ Systematic review 2024 года показал, что более сильное
 [Functional Communication Training: обучение функциональной коммуникации](/kz/ru/parents/functional-communication-training/)
 
 [Как понять, помогает ли выбранная помощь](/kz/ru/parents/kak-ponyat-pomogaet-li-podderzhka/)
+
+[← Поведение и обучение](/kz/ru/parents/povedenie-i-obuchenie/)
