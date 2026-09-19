@@ -18,7 +18,7 @@ riskLevel: lower
 disclaimerType: informational
 conflictOfInterest: "Конфликт интересов не заявлен."
 publishedAt: "2026-09-18T20:50:00Z"
-updatedAt: "2026-09-19T22:56:06.283Z"
+updatedAt: "2026-09-19T23:03:25.461Z"
 reviewDueAt: 2027-03-18
 draft: false
 keyPoints:
@@ -55,8 +55,6 @@ sources:
 ---
 
 [← Развитие, взаимодействие и игра](/kz/ru/parents/razvitie-vzaimodeystvie-i-igra/)
-
-# Подражание и взаимное подражание
 
 Подражание (Imitation) - это способность повторять действие, жест, звук или способ использования предмета после другого человека.
 
