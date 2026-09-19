@@ -18,7 +18,7 @@ riskLevel: moderate
 disclaimerType: informational
 conflictOfInterest: "Конфликт интересов не заявлен."
 publishedAt: "2026-09-19T14:58:00Z"
-updatedAt: "2026-09-19T22:52:23.893Z"
+updatedAt: "2026-09-19T23:03:40.743Z"
 reviewDueAt: 2027-03-19
 draft: false
 keyPoints:
@@ -42,8 +42,6 @@ sources:
 ---
 
 [← Сенсорные особенности и адаптация среды](/kz/ru/parents/sensornye-osobennosti-i-adaptatsiya-sredy/)
-
-# Сенсорные стратегии: что это такое и когда они могут быть полезны
 
 Сенсорные стратегии (Sensory-Based Strategies) - это отдельные способы изменить сенсорную нагрузку или дать человеку определённый вид ощущений, чтобы ему было легче выполнять конкретную деятельность.
 
