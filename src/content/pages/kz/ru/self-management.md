@@ -18,7 +18,7 @@ riskLevel: lower
 disclaimerType: informational
 conflictOfInterest: "Конфликт интересов не заявлен."
 publishedAt: 2026-09-18
-updatedAt: "2026-09-19T22:53:46.745Z"
+updatedAt: "2026-09-19T22:54:50.982Z"
 reviewDueAt: 2027-03-18
 draft: false
 keyPoints:
@@ -28,8 +28,8 @@ keyPoints:
   - "Если проблема находится в environment, ответственность нельзя перекладывать только на самого человека."
 evidenceLimitations: "Research supports Self-Management for several daily living, task-performance and self-monitoring outcomes, but the literature is heterogeneous and often based on single-case designs. Generalisation, maintenance and real-world employment outcomes require separate assessment."
 sources:
-  - title: "Evidence-Based Practices for Children, Youth, and Young Adults with Autism"
-    url: "https://ncaep.fpg.unc.edu/sites/ncaep.fpg.unc.edu/files/imce/documents/EBP%20Executive%20Summary.pdf"
+  - title: "Evidence-Based Practices for Children, Youth, and Young Adults with Autism: Third Generation Review"
+    url: "https://pmc.ncbi.nlm.nih.gov/articles/PMC8510990/"
     organisation: "National Clearinghouse on Autism Evidence and Practice"
     publicationYear: 2020
     accessedAt: 2026-09-18
