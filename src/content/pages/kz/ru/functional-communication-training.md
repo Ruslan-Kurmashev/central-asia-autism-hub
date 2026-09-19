@@ -1,6 +1,6 @@
 ---
 title: "Functional Communication Training: когда поведение заменяет сообщение"
-summary: "Как FCT помогает обучать более доступной коммуникации после functional assessment и исключения медицинских и средовых причин."
+summary: "Как FCT помогает обучать более доступной коммуникации после функциональной оценки и проверки медицинских, сенсорных и средовых причин."
 description: "Практическое руководство для родителей о Functional Communication Training: function-based assessment, evidence, AAC, safety, generalisation и monitoring."
 country: kz
 language: ru
@@ -18,15 +18,15 @@ riskLevel: moderate
 disclaimerType: medical
 conflictOfInterest: "Конфликт интересов не заявлен."
 publishedAt: 2026-09-18
-updatedAt: "2026-09-19T22:57:01.982Z"
+updatedAt: "2026-09-19T23:05:25.133Z"
 reviewDueAt: 2027-03-18
 draft: false
 keyPoints:
-  - "FCT начинается не с подавления поведения, а с functional assessment и проверки медицинских, сенсорных и средовых причин."
-  - "Replacement communication должна быть доступной и реально приводить к понятному ответу партнёра."
-  - "Современные данные показывают сильный signal efficacy, но generalisation, maintenance и real-world effectiveness изучены слабее."
-  - "Не каждое необычное или повторяющееся поведение требует intervention."
-evidenceLimitations: "Evidence for FCT largely comes from single-case experimental designs. A 2025 meta-analysis found large effects but only a minority of studies met WWC standards, while maintenance, generalisation, treatment fidelity and social validity were often underreported. Strong efficacy evidence should not be equated with guaranteed everyday effectiveness."
+  - "FCT начинается не с подавления поведения, а с функциональной оценки и проверки медицинских, сенсорных и средовых причин."
+  - "Альтернативный способ коммуникации должен быть доступным и реально приводить к понятному ответу партнёра."
+  - "Современные данные показывают выраженный эффект в контролируемых исследованиях, но перенос навыка, его сохранение и эффективность в обычной жизни изучены слабее."
+  - "Не каждое необычное или повторяющееся поведение требует вмешательства."
+evidenceLimitations: "Большая часть данных по FCT получена в экспериментальных исследованиях с единичными случаями. Метаанализ 2025 года показал крупные эффекты, но только часть исследований соответствовала строгим стандартам WWC, а сохранение и перенос навыка, соответствие протоколу и социальная значимость часто описывались недостаточно. Сильные результаты в контролируемых условиях не означают гарантированную эффективность в повседневной жизни."
 sources:
   - title: "Autism spectrum disorder in under 19s: support and management - Recommendations"
     url: "https://www.nice.org.uk/guidance/cg170/chapter/recommendations"
