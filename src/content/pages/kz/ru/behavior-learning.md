@@ -1,6 +1,6 @@
 ---
 title: "Поведение и обучение"
-summary: "Как разбираться в причинах сложного поведения, выбирать function-based поддержку и обучать новым навыкам без сведения помощи к послушанию."
+summary: "Как разбираться в причинах поведения, которое вызывает трудности, выбирать поддержку с учётом функции поведения и обучать новым навыкам без сведения помощи к послушанию."
 description: "Навигационная страница для родителей о functional assessment, FCT, antecedent strategies, reinforcement, prompting, Task Analysis, Video Modeling и Self-Management."
 country: kz
 language: ru
@@ -18,15 +18,15 @@ riskLevel: moderate
 disclaimerType: informational
 conflictOfInterest: "Конфликт интересов не заявлен."
 publishedAt: "2026-09-18T15:00:30Z"
-updatedAt: "2026-09-19T23:02:45.561Z"
+updatedAt: "2026-09-19T23:05:43.787Z"
 reviewDueAt: 2027-03-18
 draft: false
 keyPoints:
   - "Сложное поведение сначала нужно понять, а не просто подавлять."
-  - "Боль, сон, тревога, коммуникация, сенсорная среда и demands могут быть важнее самой behavioral technique."
-  - "Обучение должно увеличивать функциональные навыки и самостоятельность, а не compliance как самоцель."
-  - "Результат оценивают по реальной жизни: communication, participation, distress, independence and quality of life."
-evidenceLimitations: "Раздел объединяет разные assessment tools and interventions. Нельзя переносить evidence одной procedure на всю behavioral support. Function-based approaches требуют индивидуальной assessment, а большинство focused-practice studies неоднородны по population, outcomes and setting."
+  - "Боль, сон, тревога, коммуникация, сенсорная среда и требования могут быть важнее самой поведенческой техники."
+  - "Обучение должно увеличивать функциональные навыки и самостоятельность, а не делать выполнение требований самоцелью."
+  - "Результат оценивают по реальной жизни: коммуникации, участию, уровню дискомфорта, самостоятельности и качеству жизни."
+evidenceLimitations: "Раздел объединяет разные инструменты оценки и вмешательства. Нельзя переносить доказательства одной процедуры на всю поведенческую поддержку. Подходы, основанные на функции поведения, требуют индивидуальной оценки, а исследования отдельных практик неоднородны по группам участников, результатам и условиям."
 sources:
   - title: "Autism spectrum disorder in under 19s: support and management - Recommendations"
     url: "https://www.nice.org.uk/guidance/cg170/chapter/recommendations"
