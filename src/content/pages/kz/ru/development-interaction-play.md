@@ -18,7 +18,7 @@ riskLevel: moderate
 disclaimerType: informational
 conflictOfInterest: "Конфликт интересов не заявлен."
 publishedAt: "2026-09-18T15:14:40Z"
-updatedAt: "2026-09-19T22:55:29.873Z"
+updatedAt: "2026-09-19T23:02:48.029Z"
 reviewDueAt: 2027-03-18
 draft: false
 keyPoints:
@@ -67,8 +67,6 @@ sources:
 ---
 
 [← Какие виды помощи и поддержки бывают при аутизме](/kz/ru/parents/vidy-pomoshchi-i-podderzhki-pri-autizme/)
-
-# Развитие, взаимодействие и игра
 
 В этом разделе собраны подходы, направленные на развитие:
 
