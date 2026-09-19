@@ -18,7 +18,7 @@ riskLevel: moderate
 disclaimerType: informational
 conflictOfInterest: "Конфликт интересов не заявлен."
 publishedAt: "2026-09-18T15:00:30Z"
-updatedAt: "2026-09-19T22:54:43.095Z"
+updatedAt: "2026-09-19T22:56:56.712Z"
 reviewDueAt: 2027-03-18
 draft: false
 keyPoints:
@@ -67,14 +67,14 @@ sources:
 Сначала проверьте возможные причины:
 
 - боль
-- gastrointestinal problems - проблемы ЖКТ
+- проблемы ЖКТ
 - нарушения сна
-- medication effects - эффекты лекарств
+- эффекты лекарств
 - тревогу
-- sensory overload - сенсорную перегрузку
+- сенсорную перегрузку
 - изменения routine
-- communication barriers - трудности коммуникации
-- bullying, trauma or abuse - травлю, травму или насилие.
+- трудности коммуникации
+- травлю, травматический опыт или насилие.
 
 Если behavior новый, резко усилился или опасен, сначала может быть нужен medical or multidisciplinary review - медицинская или мультидисциплинарная оценка.
 
@@ -87,9 +87,9 @@ FBA помогает определить:
 - когда его нет
 - что происходит до него
 - что происходит после него
-- какие medical, communication and environmental factors могут участвовать.
+- какие медицинские, коммуникационные и средовые факторы могут участвовать.
 
-FBA - это assessment, а не therapy.
+FBA - это оценка, а не терапия.
 
 [Подробнее: Functional Behavior Assessment](/kz/ru/parents/functional-behavior-assessment/)
 
@@ -116,7 +116,7 @@ FBA - это assessment, а не therapy.
 - predictability - предсказуемость
 - сложность задания
 - длительность activity
-- доступ к visual support
+- доступ к визуальной поддержке
 - возможность выбора.
 
 Это proactive strategies - стратегии до возникновения сложного поведения.
@@ -129,8 +129,8 @@ Reinforcement - подкрепление - это принцип обучени�
 
 Важно различать:
 
-- positive reinforcement - положительное подкрепление
-- negative reinforcement - отрицательное подкрепление
+- положительное подкрепление (positive reinforcement)
+- отрицательное подкрепление (negative reinforcement)
 - punishment - наказание.
 
 Отрицательное подкрепление не является наказанием.
@@ -158,8 +158,8 @@ Prompt fading - постепенное уменьшение подсказок -
 
 Важно отдельно считать:
 
-- independent responses - самостоятельные ответы
-- prompted responses - ответы после подсказки.
+- самостоятельные ответы
+- ответы после подсказки.
 
 [Подробнее: Подсказки и постепенное уменьшение подсказок](/kz/ru/parents/prompting-and-prompt-fading/)
 
