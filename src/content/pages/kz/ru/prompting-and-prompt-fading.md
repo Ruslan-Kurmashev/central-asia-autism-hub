@@ -18,7 +18,7 @@ riskLevel: lower
 disclaimerType: informational
 conflictOfInterest: "Конфликт интересов не заявлен."
 publishedAt: 2026-09-18
-updatedAt: 2026-09-18
+updatedAt: "2026-09-19T22:53:38.888Z"
 reviewDueAt: 2027-03-18
 draft: false
 keyPoints:
@@ -54,6 +54,8 @@ sources:
     publicationYear: 2024
     accessedAt: 2026-09-18
 ---
+
+[← Поведение и обучение](/kz/ru/parents/povedenie-i-obuchenie/)
 
 Prompting - использование подсказок.
 
@@ -388,3 +390,5 @@ Prompt fading - постепенное уменьшение подсказок -
 [Functional Communication Training](/kz/ru/parents/functional-communication-training/)
 
 [Как понять, помогает ли выбранная помощь](/kz/ru/parents/kak-ponyat-pomogaet-li-podderzhka/)
+
+[← Поведение и обучение](/kz/ru/parents/povedenie-i-obuchenie/)
