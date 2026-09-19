@@ -348,7 +348,7 @@ Ayres Sensory Integration, или ASI - сенсорная интеграция 
 
 [Подробнее: утяжелённые одеяла, жилеты и другие утяжелённые средства](/kz/ru/parents/weighted-items/)
 
-### Listening Programs - слуховые программы
+### [Listening Programs - слуховые программы](/kz/ru/parents/auditory-integration-listening-programs/)
 
 Существуют программы, которые используют:
 
