@@ -18,7 +18,7 @@ riskLevel: moderate
 disclaimerType: informational
 conflictOfInterest: "Конфликт интересов не заявлен."
 publishedAt: "2026-09-19T14:45:00Z"
-updatedAt: "2026-09-19T22:52:18.166Z"
+updatedAt: "2026-09-19T23:03:29.247Z"
 reviewDueAt: 2027-03-19
 draft: false
 keyPoints:
@@ -59,8 +59,6 @@ sources:
 ---
 
 [← Какие виды помощи и поддержки бывают при аутизме](/kz/ru/parents/vidy-pomoshchi-i-podderzhki-pri-autizme/)
-
-# Сенсорные особенности и адаптация среды
 
 Некоторые аутичные дети воспринимают звуки, свет, прикосновения, запахи, движение или другие ощущения иначе, чем окружающие.
 
