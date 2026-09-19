@@ -18,7 +18,7 @@ riskLevel: moderate
 disclaimerType: informational
 conflictOfInterest: "Конфликт интересов не заявлен."
 publishedAt: "2026-09-19T14:50:00Z"
-updatedAt: "2026-09-19T22:52:21.409Z"
+updatedAt: "2026-09-19T23:03:37.208Z"
 reviewDueAt: 2027-03-19
 draft: false
 keyPoints:
@@ -48,8 +48,6 @@ sources:
 ---
 
 [← Сенсорные особенности и адаптация среды](/kz/ru/parents/sensornye-osobennosti-i-adaptatsiya-sredy/)
-
-# Сенсорная интеграция по Айрес
 
 Ayres Sensory Integration, или ASI - сенсорная интеграция по Айрес - это конкретный подход эрготерапии.
 
