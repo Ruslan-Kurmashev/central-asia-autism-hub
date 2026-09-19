@@ -18,7 +18,7 @@ riskLevel: moderate
 disclaimerType: medical
 conflictOfInterest: "Конфликт интересов не заявлен."
 publishedAt: "2026-09-19T15:30:54.697Z"
-updatedAt: "2026-09-19T15:45:53.315Z"
+updatedAt: "2026-09-19T15:47:12.620Z"
 reviewDueAt: 2027-03-19
 draft: false
 keyPoints:
@@ -124,7 +124,7 @@ sources:
 
 Но это не то же самое, что:
 
-**«одеяло доказанно улучшает сон».**
+**«доказано, что одеяло улучшает сон».**
 
 ## Что говорят более новые обзоры
 
