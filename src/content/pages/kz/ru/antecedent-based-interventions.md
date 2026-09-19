@@ -18,7 +18,7 @@ riskLevel: lower
 disclaimerType: informational
 conflictOfInterest: "Конфликт интересов не заявлен."
 publishedAt: 2026-09-18
-updatedAt: "2026-09-19T22:53:22.171Z"
+updatedAt: "2026-09-19T22:57:05.345Z"
 reviewDueAt: 2027-03-18
 draft: false
 keyPoints:
@@ -59,11 +59,11 @@ sources:
 
 [← Поведение и обучение](/kz/ru/parents/povedenie-i-obuchenie/)
 
-Antecedent-Based Interventions, или ABI, - это proactive strategies, которые меняют условия до возникновения challenging behavior или другого target behavior.
+Вмешательства на основе предшествующих условий (Antecedent-Based Interventions, ABI) - это профилактические стратегии, которые меняют условия до возникновения поведения, вызывающего трудности, или другого целевого поведения.
 
 Важно:
 
-**ABI - это не один конкретный protocol.**
+**ABI - это не один конкретный протокол.**
 
 Это группа стратегий.
 
@@ -73,26 +73,26 @@ Antecedent-Based Interventions, или ABI, - это proactive strategies, ко�
 - изменить сложность задания
 - сократить ожидание
 - заранее предупредить о переходе
-- использовать visual support
-- дать meaningful choice
-- изменить последовательность activities.
+- использовать визуальную поддержку
+- дать значимый выбор
+- изменить последовательность занятиями.
 
 Но конкретная стратегия должна соответствовать реальной проблеме.
 
 ## Что такое antecedent
 
-Antecedent - это событие, условие или context, который происходит до поведения и может влиять на вероятность его появления.
+Предшествующий фактор (antecedent) - это событие, условие или контекст, который происходит до поведения и может влиять на вероятность его появления.
 
 Например:
 
 - начало трудного задания
 - громкий шум
 - ожидание
-- переход между activities
-- неожиданное изменение routine
-- отсутствие доступа к communication system
+- переход между занятиями
+- неожиданное изменение распорядка
+- отсутствие доступа к системы коммуникации
 - слишком длинная инструкция
-- crowded environment.
+- многолюдной среды.
 
 Но событие произошло раньше - не означает автоматически, что оно является причиной.
 
@@ -100,40 +100,40 @@ Antecedent - это событие, условие или context, которы�
 
 ## Сначала нужно понять, что именно происходит
 
-NICE рекомендует до psychosocial intervention оценивать communication difficulties, pain, mental health, sensory and social environment, changes in routine, predictability and reinforcement.
+NICE рекомендует до psychosocial вмешательство оценивать communication difficulties, pain, mental health, sensory and social environment, changes in распорядка, predictability and reinforcement.
 
-Поэтому ABI не должны использоваться вместо assessment.
+Поэтому ABI не должны использоваться вместо оценки.
 
-## Environmental adaptations
+## Адаптация среды
 
-Иногда наиболее подходящий intervention - изменить среду.
+Иногда наиболее подходящий вмешательство - изменить среду.
 
 Например:
 
 - уменьшить шум
-- изменить lighting
-- предоставить больше personal space
+- изменить освещение
+- предоставить больше личное пространство
 - выбрать менее crowded место
-- уменьшить waiting time
-- изменить seating
-- использовать quieter room.
+- уменьшить время ожидания
+- изменить место для сидения
+- использовать более тихое помещение.
 
 Это не означает, что ребёнок должен «привыкнуть ко всему».
 
-Иногда reasonable accommodation и есть правильное решение.
+Иногда разумная адаптация и есть правильное решение.
 
-## Predictability и structure
+## Предсказуемость и структура
 
 В зависимости от человека могут помочь:
 
-- visual schedule
-- first-then support
-- предупреждение о transition
+- визуальное расписание
+- схема «сначала - потом»
+- предупреждение о переходе
 - понятная последовательность событий
-- timer
-- written plan.
+- таймер
+- письменный план.
 
-## Изменение task demands
+## Изменение требования задания
 
 Задание может быть слишком длинным, сложным, непонятным или слишком быстрым.
 
@@ -141,14 +141,14 @@ NICE рекомендует до psychosocial intervention оценивать co
 
 - размер задания
 - количество шагов
-- pace
-- support
-- duration
-- последовательность tasks.
+- темп
+- поддержку
+- длительность
+- последовательность заданий.
 
-## Choice
+## Выбор
 
-Meaningful choice может быть частью antecedent strategy.
+Meaningful choice может быть частью стратегии изменения предшествующих условий.
 
 Например:
 
@@ -158,29 +158,29 @@ Meaningful choice может быть частью antecedent strategy.
 
 Также возможность выбора не должна отменять право человека отказаться, если отказ допустим.
 
-## Visual supports
+## Visual поддержкуs
 
-Visual supports могут включать:
+Visual поддержкуs могут включать:
 
-- visual schedule
-- written steps
-- photographs
-- symbols
-- first-then board.
+- визуальное расписание
+- письменные шаги
+- фотографии
+- символы
+- таблицу «сначала - потом».
 
-Systematic review 2023 года отнёс visual supports и Antecedent-Based Interventions к strategies с наиболее сильной evidence base для emotion dysregulation/challenging behavior.
+Систематический обзор 2023 года отнёс визуальную поддержкуs и Antecedent-Based Interventions к стратегий с наиболее сильной доказательной базой для эмоциональной дисрегуляции и поведения, вызывающего трудности.
 
-## High-probability request sequence
+## Последовательность частых успешных просьб (high-probability request sequence)
 
-Одна из специфических behavioral strategies называется high-probability request sequence.
+Одна из специфических поведенческих стратегий называется high-probability request sequence.
 
-Перед более трудным task человеку дают несколько requests, которые он обычно выполняет успешно.
+Перед более трудным заданием человеку дают несколько просьб, которые он обычно выполняет успешно.
 
-Meta-analysis autism single-case research обнаружил дополнительную поддержку подхода для compliance и on-task performance.
+Метаанализ исследований единичных случаев при аутизме обнаружил дополнительную поддержку подхода для выполнения требований и on-заданием performance.
 
-Но если человек отказывается из-за pain, sensory overload, fear или misunderstanding, задача не должна состоять в простом повышении compliance.
+Но если человек отказывается из-за боли, сенсорной перегрузки, страха или непонимания, задача не должна состоять в простом повышении выполнения требований.
 
-## Не каждая цель должна быть compliance
+## Не каждая цель должна быть выполнения требований
 
 Фраза:
 
@@ -188,28 +188,28 @@ Meta-analysis autism single-case research обнаружил дополните�
 
 слишком широкая.
 
-Перед intervention нужно спросить:
+Перед вмешательство нужно спросить:
 
-**Почему мы хотим увеличить compliance именно здесь?**
+**Почему мы хотим увеличить выполнения требований именно здесь?**
 
-## Что показывают systematic reviews
+## Что показывают систематические обзоры
 
-Systematic review 2023 года включил 95 исследований.
+Систематический обзор 2023 года включил 95 исследований.
 
-Среди strategies с наиболее сильной evidence base были:
+Среди стратегий с наиболее сильной доказательной базой были:
 
-- Parent-Implemented Intervention
-- Emotion Regulation Training
-- Reinforcement
-- Visual Supports
-- Cognitive Behavioral/Instructional Strategies
+- вмешательства, реализуемые родителями
+- обучение эмоциональной регуляции
+- подкрепление
+- визуальные опоры
+- когнитивно-поведенческие и обучающие стратегии
 - Antecedent-Based Interventions.
 
 Но ABI остаётся широкой категорией.
 
 Эффект конкретной strategy зависит от target, function, context and implementation.
 
-## Antecedent intervention редко существует изолированно
+## Antecedent вмешательство редко существует изолированно
 
 Человеку также может быть нужно:
 
@@ -234,16 +234,16 @@ Assessment показывает:
 
 Plan может включать:
 
-- visual transition cue
+- visual переходе cue
 - предупреждение заранее
-- более короткий waiting time
+- более короткий время ожидания
 - другой маршрут
 - noise protection, если ребёнок этого хочет
 - AAC message «перерыв».
 
-## Exercise как antecedent strategy
+## Exercise как стратегии изменения предшествующих условий
 
-Physical activity иногда исследовалась как antecedent intervention.
+Physical activity иногда исследовалась как antecedent вмешательство.
 
 Evidence небольшая и неоднородная.
 
@@ -263,7 +263,7 @@ Harmless stereotypy сама по себе не обязательно треб�
 
 Это не должно превращаться ни в forced exposure, ни в blanket avoidance.
 
-## Как понять, помогает ли antecedent strategy
+## Как понять, помогает ли стратегии изменения предшествующих условий
 
 Смотрите не только на visible behavior.
 
@@ -288,7 +288,7 @@ Harmless stereotypy сама по себе не обязательно треб�
 - accommodation сильно ограничивает participation
 - strategy работает только с одним взрослым
 - burden слишком высок
-- человек явно не принимает intervention
+- человек явно не принимает вмешательство
 - target behavior не причиняет meaningful harm
 - initial hypothesis оказалась неверной.
 
@@ -306,7 +306,7 @@ Harmless stereotypy сама по себе не обязательно треб�
 
 ## Что важно знать в Казахстане
 
-Antecedent strategies могут использоваться внутри education, psychology, behavior support, speech-language services или multidisciplinary support.
+Antecedent strategies могут использоваться внутри education, psychology, behavior поддержку, speech-language services или multidisciplinary поддержку.
 
 Сам термин Antecedent-Based Intervention не определяет qualification provider.
 
