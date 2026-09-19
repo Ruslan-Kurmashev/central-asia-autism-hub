@@ -1,6 +1,6 @@
 ---
 title: "Functional Behavior Assessment: как понять причины сложного поведения"
-summary: "Как Functional Behavior Assessment помогает разобраться в причинах challenging behavior, собрать baseline и выбрать function-based support."
+summary: "Как функциональная оценка поведения (Functional Behavior Assessment, FBA) помогает разобраться в причинах поведения, собрать исходные данные и выбрать поддержку с учётом функции поведения."
 description: "Практическое руководство для родителей о FBA: medical and environmental checks, ABC data, direct observation, functional hypotheses, safety и planning."
 country: kz
 language: ru
@@ -18,15 +18,15 @@ riskLevel: moderate
 disclaimerType: medical
 conflictOfInterest: "Конфликт интересов не заявлен."
 publishedAt: 2026-09-18
-updatedAt: "2026-09-19T22:56:59.242Z"
+updatedAt: "2026-09-19T23:05:47.380Z"
 reviewDueAt: 2027-03-18
 draft: false
 keyPoints:
-  - "FBA - это assessment and planning process, а не therapy."
-  - "Перед выводами о функции нужно проверить medical, communication, sensory and environmental factors."
-  - "Direct observation и baseline важнее догадки по одному интервью."
-  - "Functional Analysis и FBA - не одно и то же, особенно при dangerous behavior."
-evidenceLimitations: "FBA is an assessment framework rather than a single treatment, so its usefulness depends on data quality, context and expertise. ABC records and indirect tools can generate hypotheses but do not prove function. Experimental functional analysis has different safety and expertise requirements."
+  - "FBA - это процесс оценки и планирования, а не терапия."
+  - "Перед выводами о функции нужно проверить медицинские, коммуникационные, сенсорные и средовые факторы."
+  - "Прямое наблюдение и исходные данные важнее догадки по одному интервью."
+  - "Экспериментальный функциональный анализ и FBA - не одно и то же, особенно при опасном поведении."
+evidenceLimitations: "FBA - это система оценки, а не одно лечение, поэтому её полезность зависит от качества данных, контекста и компетенции специалистов. Записи по схеме ABC и косвенные инструменты помогают формировать гипотезы, но сами по себе не доказывают функцию поведения. Экспериментальный функциональный анализ имеет отдельные требования к безопасности и квалификации."
 sources:
   - title: "Autism spectrum disorder in under 19s: support and management - Recommendations"
     url: "https://www.nice.org.uk/guidance/cg170/chapter/recommendations"
