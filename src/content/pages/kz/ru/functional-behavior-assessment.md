@@ -18,7 +18,7 @@ riskLevel: moderate
 disclaimerType: medical
 conflictOfInterest: "Конфликт интересов не заявлен."
 publishedAt: 2026-09-18
-updatedAt: "2026-09-19T22:53:16.147Z"
+updatedAt: "2026-09-19T22:56:59.242Z"
 reviewDueAt: 2027-03-18
 draft: false
 keyPoints:
@@ -50,7 +50,7 @@ Functional Behavior Assessment, или FBA, - это процесс оценки
 
 **FBA - это не терапия.**
 
-Это assessment и planning process.
+Это процесс оценки и планирования.
 
 Его задача не просто дать поведению ярлык вроде:
 
@@ -69,11 +69,11 @@ FBA может быть полезна, если поведение:
 - создаёт риск для человека или окружающих
 - существенно мешает повседневной жизни
 - ограничивает участие в школе или community
-- связано с self-injury
+- связано с самоповреждением
 - связано с aggression
 - регулярно приводит к сильному distress
 - повторяется в определённых ситуациях
-- рассматривается как target для behavioral intervention.
+- рассматривается как целью поведенческого вмешательства.
 
 Но необычное поведение само по себе не является причиной проводить FBA.
 
@@ -83,32 +83,32 @@ FBA может быть полезна, если поведение:
 
 До предположения:
 
-**«у поведения есть behavioral function»**
+**«у поведения есть поведенческая функция»**
 
 нужно проверить другие возможные объяснения.
 
 NICE рекомендует учитывать:
 
 - pain
-- gastrointestinal problems
-- physical disorders
+- проблемы ЖКТ
+- соматические заболевания
 - anxiety
 - depression
-- ADHD и другие coexisting conditions
-- communication difficulties
+- СДВГ и другие сопутствующие состояния
+- трудности коммуникации
 - lighting
 - noise
-- social environment
-- changes in routine
-- developmental changes
-- exploitation or abuse
-- lack of predictability or structure.
+- социальная среда
+- изменения распорядка
+- изменения развития
+- эксплуатация или насилие
+- недостаток предсказуемости или структуры.
 
 Это особенно важно, если поведение появилось внезапно или резко усилилось.
 
 ## Что именно должна изучать FBA
 
-Functional assessment должна определять:
+Функциональная оценка должна определять:
 
 - что именно происходит
 - ситуации, в которых behavior появляется
@@ -137,7 +137,7 @@ Functional assessment должна определять:
 - intensity
 - context.
 
-## Нужен baseline
+## Нужен исходного уровня
 
 До intervention полезно знать, что происходит сейчас:
 
@@ -148,7 +148,7 @@ Functional assessment должна определять:
 - с кем происходит чаще
 - где почти не происходит.
 
-Без baseline трудно потом понять, произошло ли meaningful change.
+Без исходного уровня трудно потом понять, произошло ли значимое изменение.
 
 ## Что такое ABC-дневник
 
@@ -168,25 +168,25 @@ Functional assessment должна определять:
 
 Что произошло сразу после?
 
-ABC data могут показать patterns.
+данные ABC - «предшествующее событие, поведение, последствие» могут показать закономерности.
 
 Но:
 
-**ABC data сами по себе не доказывают функцию поведения.**
+**данные ABC - «предшествующее событие, поведение, последствие» сами по себе не доказывают функцию поведения.**
 
 Они помогают сформировать hypothesis.
 
-## Interviews и questionnaires
+## Интервью и опросники
 
 Assessment может включать интервью с родителями, педагогами, carers и самим человеком, если это возможно.
 
-Structured tools могут помогать initial hypothesis generation.
+Структурированные инструменты могут помогать формированию первоначальной гипотезы.
 
 Но questionnaire не должен превращаться в:
 
 **«тест показал функцию поведения».**
 
-## Direct observation
+## Прямое наблюдение
 
 Особенно важна direct observation.
 
@@ -206,13 +206,13 @@ Structured tools могут помогать initial hypothesis generation.
 
 Широкий assessment process.
 
-Он может включать interviews, records, observation, ABC data, baseline и hypothesis building.
+Он может включать interviews, records, observation, данные ABC - «предшествующее событие, поведение, последствие», исходного уровня и hypothesis building.
 
 ### Experimental Functional Analysis
 
 Более специальная процедура, где условия намеренно изменяют, чтобы проверить hypothesis.
 
-Если behavior включает severe self-injury, aggression, elopement или другой immediate safety risk, родителям не следует экспериментально проверять функцию самостоятельно.
+Если behavior включает severe самоповреждением, aggression, elopement или другой immediate safety risk, родителям не следует экспериментально проверять функцию самостоятельно.
 
 ## Функция поведения не всегда одна
 
@@ -337,7 +337,7 @@ Assessment должна привести к plan.
 3. Какие sensory factors оценивались?
 4. Какие environmental factors рассматривались?
 5. Какие direct observations проводились?
-6. Есть ли baseline?
+6. Есть ли исходного уровня?
 7. Какова current hypothesis о функции?
 8. Какие данные её подтверждают?
 9. Какие данные ей противоречат?
@@ -352,9 +352,9 @@ Assessment должна привести к plan.
 
 - после нескольких минут разговора
 - без observation
-- без baseline
+- без исходного уровня
 - без проверки pain
-- без проверки communication difficulties
+- без проверки трудности коммуникации
 - без оценки environment.
 
 Также слишком упрощёнными выглядят утверждения:
@@ -385,7 +385,7 @@ Functional Behavior Assessment - это не therapy и не способ быс
 
 - проверить health and environmental factors
 - конкретно определить behavior
-- собрать baseline
+- собрать исходного уровня
 - использовать direct observation
 - сформировать проверяемую hypothesis
 - учитывать communication and sensory needs
