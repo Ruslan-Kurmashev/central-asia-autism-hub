@@ -550,6 +550,6 @@ Ayres Sensory Integration, или ASI - сенсорная интеграция 
 
 Следующая статья:
 
-**Сенсорные стратегии: что это такое и когда они могут быть полезны.**
+[Сенсорные стратегии: что это такое и когда они могут быть полезны](/kz/ru/parents/sensory-based-strategies/)
 
 [← Сенсорные особенности и адаптация среды](/kz/ru/parents/sensornye-osobennosti-i-adaptatsiya-sredy/)
