@@ -18,7 +18,7 @@ riskLevel: lower
 disclaimerType: informational
 conflictOfInterest: "Конфликт интересов не заявлен."
 publishedAt: 2026-09-18
-updatedAt: 2026-09-18
+updatedAt: "2026-09-19T22:53:24.980Z"
 reviewDueAt: 2027-03-18
 draft: false
 keyPoints:
@@ -46,6 +46,8 @@ sources:
     publicationYear: 2024
     accessedAt: 2026-09-18
 ---
+
+[← Поведение и обучение](/kz/ru/parents/povedenie-i-obuchenie/)
 
 Подкрепление - это последствие поведения, после которого вероятность этого поведения в похожих ситуациях увеличивается.
 
@@ -378,3 +380,5 @@ reinforcing effect - подкрепляющий эффект
 [Antecedent-Based Interventions](/kz/ru/parents/antecedent-based-interventions/)
 
 [Functional Communication Training](/kz/ru/parents/functional-communication-training/)
+
+[← Поведение и обучение](/kz/ru/parents/povedenie-i-obuchenie/)
