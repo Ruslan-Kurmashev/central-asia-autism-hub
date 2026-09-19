@@ -18,12 +18,12 @@ riskLevel: moderate
 disclaimerType: informational
 conflictOfInterest: "Конфликт интересов не заявлен."
 publishedAt: "2026-09-19T14:58:00Z"
-updatedAt: "2026-09-19T15:43:45.819Z"
+updatedAt: "2026-09-19T15:45:53.315Z"
 reviewDueAt: 2027-03-19
 draft: false
 keyPoints:
   - "Сенсорная стратегия - это отдельный инструмент для конкретной функциональной цели, а не универсальная терапия аутизма."
-  - "Сенсорные стратегии отличаются от Ayres Sensory Integration и не должны автоматически назначаться всем детям с одним диагнозом."
+  - "Сенсорные стратегии отличаются от сенсорной интеграции по Айрес (Ayres Sensory Integration) и не должны автоматически назначаться всем детям с одним диагнозом."
   - "Научные данные различаются по конкретной стратегии: результаты одной техники нельзя переносить на другую."
   - "Главный критерий - помогает ли выбранная стратегия ребёнку участвовать в важной деятельности более комфортно и самостоятельно."
 evidenceLimitations: "Исследования сенсорных стратегий неоднородны по группам участников, вмешательствам и измеряемым результатам. Положительные результаты для отдельных техник не означают эффективность всех сенсорных средств. Часть исследований включает детей и молодых людей с различными особенностями сенсорной обработки, а не только аутичных детей."
@@ -32,12 +32,12 @@ sources:
     url: "https://www.frontiersin.org/journals/pediatrics/articles/10.3389/fped.2025.1720179/full"
     organisation: "Frontiers in Pediatrics"
     publicationYear: 2025
-    note: "21 study; использовано для данных по deep pressure, alternative seating, fidgets, noise-reduction headphones, caregiver training и ограничениям evidence."
+    note: "21 исследование; использовано для данных по глубокому давлению, вариантам сидения, фиджетам, наушникам для снижения шума, обучению родителей и ограничениям доказательности."
     accessedAt: 2026-09-19
   - title: "Sensory Integration and Processing"
     url: "https://www.aota.org/practice/clinical-topics/sensory-integration-and-processing"
     organisation: "American Occupational Therapy Association"
-    note: "Использовано для необходимости documented assessment перед sensory-based interventions и разграничения подходов."
+    note: "Использовано для необходимости документированной оценки перед сенсорными вмешательствами и для разграничения подходов."
     accessedAt: 2026-09-19
 ---
 
