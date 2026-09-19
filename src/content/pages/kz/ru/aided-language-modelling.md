@@ -1,6 +1,6 @@
 ---
 title: "Aided Language Modelling: как взрослый моделирует AAC"
-summary: "Как работает aided language modelling, что показывают исследования, как моделировать AAC без давления и как оценивать результат."
+summary: "Как работает моделирование AAC (Aided Language Modelling), что показывают исследования, как давать языковой пример без давления и как оценивать результат."
 description: "Практическое руководство для родителей об aided language modelling и augmented input: evidence, modelling vs prompting, multilingual AAC, generalisation и мониторинг."
 country: kz
 language: ru
@@ -18,15 +18,15 @@ riskLevel: lower
 disclaimerType: informational
 conflictOfInterest: "Конфликт интересов не заявлен."
 publishedAt: 2026-09-18
-updatedAt: "2026-09-19T22:59:10.647Z"
+updatedAt: "2026-09-19T23:05:09.434Z"
 reviewDueAt: 2027-03-18
 draft: false
 keyPoints:
-  - "Aided language modelling - это компонент AAC support, а не отдельная универсальная терапия."
-  - "Modelling означает показать пример использования AAC, а не требовать немедленного повторения."
-  - "Evidence поддерживает aided AAC modelling для ряда expressive communication outcomes, но studies heterogeneous."
-  - "Результат нужно оценивать по spontaneous communication и generalisation, а не по числу моделей взрослого."
-evidenceLimitations: "Исследования aided language modelling различаются по populations, designs, prompts and outcomes. Autism-specific studies часто небольшие и используют modelling как часть multicomponent intervention, поэтому isolated effect modelling оценить трудно."
+  - "Моделирование AAC - это компонент коммуникационной поддержки, а не отдельная универсальная терапия."
+  - "Моделирование означает показать пример использования AAC, а не требовать немедленного повторения."
+  - "Исследования поддерживают этот подход для ряда показателей выразительной коммуникации, но данные неоднородны."
+  - "Результат нужно оценивать по самостоятельной коммуникации и переносу навыка в обычную жизнь, а не по числу моделей взрослого."
+evidenceLimitations: "Исследования моделирования AAC различаются по группам участников, дизайну, подсказкам и измеряемым результатам. Исследования именно при аутизме часто небольшие и используют моделирование как часть многокомпонентного вмешательства, поэтому отдельный эффект моделирования оценить трудно."
 sources:
   - title: "Augmentative and Alternative Communication (AAC)"
     url: "https://www.asha.org/Practice-Portal/Professional-Issues/Augmentative-and-Alternative-Communication/"
