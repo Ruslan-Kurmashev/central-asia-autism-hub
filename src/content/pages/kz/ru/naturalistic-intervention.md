@@ -18,7 +18,7 @@ riskLevel: lower
 disclaimerType: informational
 conflictOfInterest: "Конфликт интересов не заявлен."
 publishedAt: "2026-09-18T16:33:14Z"
-updatedAt: "2026-09-19T22:51:42.744Z"
+updatedAt: "2026-09-19T22:55:32.567Z"
 reviewDueAt: 2027-03-18
 draft: false
 keyPoints:
@@ -311,7 +311,7 @@ Naturalistic Intervention становится именно обучением, 
 
 Naturalistic Intervention относится к подходам с подтверждающей научной базой.
 
-National Clearinghouse on Autism Evidence and Practice, или NCAEP, включил Naturalistic Intervention в список evidence-based practices - практик, для которых есть достаточные научные данные.
+National Clearinghouse on Autism Evidence and Practice (NCAEP) - американский проект по обзору научно обоснованных практик при аутизме - включил Naturalistic Intervention в перечень практик с достаточной научной поддержкой.
 
 В обзоре NCAEP эта практика опиралась на **75 научных публикаций за 1990-2017 годы**.
 
@@ -357,7 +357,7 @@ NICE не выделяет Naturalistic Intervention как отдельный �
 
 **NDBI - натуралистические развивающе-поведенческие вмешательства** - более широкая группа программ, которые объединяют принципы развития и поведенческого обучения.
 
-Некоторые конкретные программы NDBI используют naturalistic strategies.
+Некоторые конкретные программы NDBI используют стратегии обучения в естественных ситуациях.
 
 Но эти понятия не являются полными синонимами.
 
