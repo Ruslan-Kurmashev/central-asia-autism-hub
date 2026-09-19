@@ -18,7 +18,7 @@ riskLevel: moderate
 disclaimerType: informational
 conflictOfInterest: "Конфликт интересов не заявлен."
 publishedAt: "2026-09-18T15:00:30Z"
-updatedAt: "2026-09-19T22:51:35.834Z"
+updatedAt: "2026-09-19T22:54:43.095Z"
 reviewDueAt: 2027-03-18
 draft: false
 keyPoints:
@@ -36,8 +36,8 @@ sources:
     url: "https://www.nice.org.uk/guidance/ng11/chapter/Recommendations"
     organisation: "National Institute for Health and Care Excellence"
     accessedAt: 2026-09-18
-  - title: "Evidence-Based Practices for Children, Youth, and Young Adults with Autism"
-    url: "https://ncaep.fpg.unc.edu/sites/ncaep.fpg.unc.edu/files/imce/documents/EBP%20Executive%20Summary.pdf"
+  - title: "Evidence-Based Practices for Children, Youth, and Young Adults with Autism: Third Generation Review"
+    url: "https://pmc.ncbi.nlm.nih.gov/articles/PMC8510990/"
     organisation: "National Clearinghouse on Autism Evidence and Practice"
     publicationYear: 2020
     accessedAt: 2026-09-18
