@@ -1,6 +1,6 @@
 ---
 title: "Разбиение сложного навыка на шаги: Task Analysis"
-summary: "Как Task Analysis помогает разбить бытовой, учебный или функциональный навык на последовательные шаги и измерять самостоятельность."
+summary: "Как разбиение задачи на шаги (Task Analysis) помогает обучать бытовым, учебным и функциональным навыкам и измерять самостоятельность."
 description: "Практическое руководство для родителей о Task Analysis: chaining, prompting, visual supports, video modeling, adaptations, generalisation и monitoring."
 country: kz
 language: ru
@@ -18,15 +18,15 @@ riskLevel: lower
 disclaimerType: informational
 conflictOfInterest: "Конфликт интересов не заявлен."
 publishedAt: 2026-09-18
-updatedAt: "2026-09-19T22:57:47.410Z"
+updatedAt: "2026-09-19T23:06:14.783Z"
 reviewDueAt: 2027-03-18
 draft: false
 keyPoints:
-  - "Task Analysis - разбиение сложного навыка на последовательные небольшие шаги."
-  - "Forward chaining, backward chaining и total-task teaching - разные способы обучения цепочке действий."
-  - "Подсказки и визуальные опоры нужно отделять от постоянных адаптаций."
-  - "Главный outcome - самостоятельное функциональное выполнение, а не только завершение задания."
-evidenceLimitations: "Task Analysis часто изучается как часть multicomponent interventions вместе с prompting, reinforcement, visual supports, video modeling or caregiver training. Поэтому эффект конкретного multicomponent package нельзя полностью приписывать одному Task Analysis."
+  - "Разбиение задачи на шаги помогает сделать сложный навык последовательным и измеримым."
+  - "Обучение с первого шага, с последнего шага или всей последовательности целиком - разные способы обучения цепочке действий."
+  - "Подсказки и визуальные опоры нужно отличать от постоянных необходимых адаптаций."
+  - "Главный результат - самостоятельное функциональное выполнение, а не только завершение задания."
+evidenceLimitations: "Разбиение задачи на шаги часто изучается как часть многокомпонентных вмешательств вместе с подсказками, подкреплением, визуальными опорами, видеомоделированием или обучением родителей и других взрослых. Поэтому эффект всего комплекса нельзя полностью приписывать одному компоненту."
 sources:
   - title: "Evidence-Based Practices for Children, Youth, and Young Adults with Autism: Third Generation Review"
     url: "https://pmc.ncbi.nlm.nih.gov/articles/PMC8510990/"
