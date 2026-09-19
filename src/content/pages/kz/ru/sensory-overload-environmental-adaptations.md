@@ -18,7 +18,7 @@ riskLevel: lower
 disclaimerType: informational
 conflictOfInterest: "Конфликт интересов не заявлен."
 publishedAt: "2026-09-19T15:40:59.203Z"
-updatedAt: "2026-09-19T22:52:39.509Z"
+updatedAt: "2026-09-19T23:04:18.585Z"
 reviewDueAt: 2027-03-19
 draft: false
 keyPoints:
@@ -43,8 +43,6 @@ sources:
 ---
 
 [← Сенсорные особенности и адаптация среды](/kz/ru/parents/sensornye-osobennosti-i-adaptatsiya-sredy/)
-
-# Адаптация среды при сенсорной перегрузке
 
 Сенсорная перегрузка - это ситуация, когда звуков, света, движения, прикосновений, запахов или других ощущений становится для человека слишком много.
 
