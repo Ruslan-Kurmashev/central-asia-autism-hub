@@ -632,6 +632,6 @@ Ayres Sensory Integration, или ASI - сенсорная интеграция 
 
 Следующая статья:
 
-**Ayres Sensory Integration - сенсорная интеграция по Айрес.**
+[Ayres Sensory Integration - сенсорная интеграция по Айрес](/kz/ru/parents/ayres-sensory-integration/)
 
 [← Какие виды помощи и поддержки бывают при аутизме](/kz/ru/parents/vidy-pomoshchi-i-podderzhki-pri-autizme/)
