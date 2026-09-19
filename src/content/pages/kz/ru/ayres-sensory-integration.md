@@ -1,6 +1,6 @@
 ---
 title: "Сенсорная интеграция по Айрес"
-summary: "Что такое Ayres Sensory Integration, чем полноценный ASI отличается от обычных занятий в сенсорной комнате и как оценивать его пользу для ребёнка."
+summary: "Что такое сенсорная интеграция по Айрес (Ayres Sensory Integration), чем полноценный ASI отличается от обычных занятий в сенсорной комнате и как оценивать его пользу для ребёнка."
 description: "Практическое руководство для родителей о сенсорной интеграции по Айрес: оценка, функциональные цели, шкала соответствия протоколу ASI, научные данные, ограничения и вопросы специалисту."
 country: kz
 language: ru
@@ -18,7 +18,7 @@ riskLevel: moderate
 disclaimerType: informational
 conflictOfInterest: "Конфликт интересов не заявлен."
 publishedAt: "2026-09-19T14:50:00Z"
-updatedAt: "2026-09-19T15:43:45.819Z"
+updatedAt: "2026-09-19T15:45:53.315Z"
 reviewDueAt: 2027-03-19
 draft: false
 keyPoints:
@@ -31,19 +31,19 @@ sources:
   - title: "Sensory Integration and Processing"
     url: "https://www.aota.org/practice/clinical-topics/sensory-integration-and-processing"
     organisation: "American Occupational Therapy Association"
-    note: "Использовано для профессионального контекста ASI, необходимости оценки и разграничения ASI и sensory-based interventions."
+    note: "Использовано для профессионального контекста ASI, необходимости оценки и разграничения ASI и отдельных сенсорных вмешательств."
     accessedAt: 2026-09-19
   - title: "Research Update: Ayres Sensory Integration"
     url: "https://www.aota.org/publications/ot-practice/ot-practice-issues/2022/research-update-ayres-interventions"
     organisation: "American Occupational Therapy Association"
     publicationYear: 2022
-    note: "Использовано для описания индивидуализированного игрового подхода, подготовки специалиста и fidelity."
+    note: "Использовано для описания индивидуализированного игрового подхода, подготовки специалиста и соответствия протоколу."
     accessedAt: 2026-09-19
   - title: "Ayres Sensory Integration for autistic children: systematic review of randomized controlled trials"
     url: "https://pubmed.ncbi.nlm.nih.gov/40193295/"
     organisation: "PubMed"
     publicationYear: 2025
-    note: "9 randomized controlled trials, 344 participants; использовано для outcome-specific conclusions, individualized goals, limitations and findings for irritability and noncompliance."
+    note: "9 рандомизированных контролируемых исследований, 344 участника; использовано для выводов по индивидуальным целям, ограничениям данных, раздражительности и невыполнению требований."
     accessedAt: 2026-09-19
 ---
 
