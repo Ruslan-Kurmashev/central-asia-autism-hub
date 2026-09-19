@@ -18,7 +18,7 @@ riskLevel: moderate
 disclaimerType: informational
 conflictOfInterest: "Конфликт интересов не заявлен."
 publishedAt: "2026-09-18T17:36:00Z"
-updatedAt: "2026-09-19T22:55:35.487Z"
+updatedAt: "2026-09-19T23:02:54.512Z"
 reviewDueAt: 2027-03-18
 draft: false
 keyPoints:
@@ -61,8 +61,6 @@ sources:
 ---
 
 [← Развитие, взаимодействие и игра](/kz/ru/parents/razvitie-vzaimodeystvie-i-igra/)
-
-# NDBI - натуралистические развивающе-поведенческие вмешательства
 
 NDBI - это группа подходов, которые объединяют две идеи:
 
