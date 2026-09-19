@@ -18,15 +18,15 @@ riskLevel: lower
 disclaimerType: informational
 conflictOfInterest: "Конфликт интересов не заявлен."
 publishedAt: 2026-09-18
-updatedAt: "2026-09-19T22:57:44.968Z"
+updatedAt: "2026-09-19T23:06:11.790Z"
 reviewDueAt: 2027-03-18
 draft: false
 keyPoints:
   - "Подсказки помогают освоить навык, но цель обучения - рост самостоятельности."
   - "Словесные, жестовые, визуальные, модельные и физические подсказки имеют разные функции и ограничения."
-  - "Нет одной универсально лучшей prompting hierarchy для всех людей и всех навыков."
+  - "Нет одной универсально лучшей последовательности подсказок для всех людей и всех навыков."
   - "AAC, визуальные расписания и другие необходимые адаптации не нужно автоматически убирать как подсказки."
-evidenceLimitations: "Comparative prompting studies are generally small and task-specific. Different learners may respond differently to most-to-least, least-to-most, time delay, modeling and other prompting systems. High accuracy does not equal independence when responses remain prompt-dependent."
+evidenceLimitations: "Сравнительные исследования систем подсказок обычно небольшие и зависят от конкретной задачи. Разные люди могут по-разному реагировать на подсказки от сильной к слабой, от слабой к сильной, временную задержку, моделирование и другие способы. Высокая точность выполнения не равна самостоятельности, если ответы остаются зависимыми от подсказок."
 sources:
   - title: "Comparison of prompting procedures in autism"
     url: "https://pubmed.ncbi.nlm.nih.gov/27606243/"
