@@ -18,15 +18,15 @@ riskLevel: lower
 disclaimerType: informational
 conflictOfInterest: "Конфликт интересов не заявлен."
 publishedAt: 2026-09-18
-updatedAt: "2026-09-19T22:59:13.403Z"
+updatedAt: "2026-09-19T23:05:12.345Z"
 reviewDueAt: 2027-03-18
 draft: false
 keyPoints:
-  - "Коммуникация зависит не только от навыков ребёнка, но и от поведения communication partners."
-  - "Partner training может улучшать responsiveness, AAC use и некоторые child communication outcomes."
-  - "Улучшение parent fidelity не равно автоматически улучшению child outcomes."
-  - "Родители не должны становиться терапевтами 24/7, а отказ и self-advocacy должны поддерживаться."
-evidenceLimitations: "Partner-mediated and parent-mediated interventions heterogeneous by program, age, setting and outcomes. Meta-analyses show small to moderate effects with variable certainty and high heterogeneity. Improved caregiver strategy use does not always produce between-group gains in child outcomes."
+  - "Коммуникация зависит не только от навыков ребёнка, но и от поведения партнёров по коммуникации."
+  - "Обучение партнёров может улучшать их отзывчивость, использование AAC и некоторые коммуникационные результаты у ребёнка."
+  - "То, что взрослый лучше использует стратегию, не означает автоматически улучшение результатов у ребёнка."
+  - "Родители не должны становиться терапевтами 24/7, а отказ и самостоятельное выражение своих потребностей должны поддерживаться."
+evidenceLimitations: "Вмешательства с участием родителей и других партнёров по коммуникации сильно различаются по программам, возрасту, условиям и результатам. Метаанализы показывают небольшие или умеренные эффекты при заметной неоднородности исследований. Улучшение навыков взрослого не всегда приводит к значимым различиям в результатах ребёнка."
 sources:
   - title: "Autism spectrum disorder in under 19s: support and management - Recommendations"
     url: "https://www.nice.org.uk/guidance/cg170/chapter/recommendations"
