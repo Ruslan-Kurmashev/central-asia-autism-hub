@@ -18,7 +18,7 @@ riskLevel: lower
 disclaimerType: informational
 conflictOfInterest: "Конфликт интересов не заявлен."
 publishedAt: "2026-09-18T20:45:00Z"
-updatedAt: "2026-09-19T22:56:03.442Z"
+updatedAt: "2026-09-19T23:03:10.239Z"
 reviewDueAt: 2027-03-18
 draft: false
 keyPoints:
@@ -43,8 +43,6 @@ sources:
 ---
 
 [← Развитие, взаимодействие и игра](/kz/ru/parents/razvitie-vzaimodeystvie-i-igra/)
-
-# Peer-Mediated Intervention - поддержка через сверстников
 
 Поддержка через сверстников (Peer-Mediated Intervention) - это подход, при котором сверстников обучают простым способам поддерживать общение, совместную игру и участие аутичного ребёнка.
 
