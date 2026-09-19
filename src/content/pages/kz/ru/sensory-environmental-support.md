@@ -297,7 +297,7 @@ AAC помогает человеку общаться.
 - тихое место
 - возможность перерыва.
 
-### Sensory-Based Strategies - сенсорные стратегии
+### [Sensory-Based Strategies - сенсорные стратегии](/kz/ru/parents/sensory-based-strategies/)
 
 Это отдельные средства или действия.
 
