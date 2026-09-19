@@ -18,7 +18,7 @@ riskLevel: moderate
 disclaimerType: informational
 conflictOfInterest: "Конфликт интересов не заявлен."
 publishedAt: "2026-09-19T15:25:27.388Z"
-updatedAt: "2026-09-19T15:43:45.819Z"
+updatedAt: "2026-09-19T15:45:53.315Z"
 reviewDueAt: 2027-03-19
 draft: false
 keyPoints:
@@ -37,19 +37,19 @@ sources:
   - title: "Supporting students with sensory processing challenges"
     url: "https://autismhub.education.qld.gov.au/ah-research/Documents/supporting-students-sensory-processing-challenges.pdf"
     organisation: "Autism Hub Queensland"
-    note: "Использовано для обзора evidence по sensory diet и sensory approaches в образовательной среде."
+    note: "Использовано для обзора доказательности сенсорных диет и сенсорных подходов в образовательной среде."
     accessedAt: 2026-09-19
   - title: "Systematic review of sensory-based interventions for children and youth (2015-2024)"
     url: "https://www.frontiersin.org/journals/pediatrics/articles/10.3389/fped.2025.1720179/full"
     organisation: "Frontiers in Pediatrics"
     publicationYear: 2025
-    note: "Использовано для современных данных по отдельным sensory-based strategies и ограничениям обобщения."
+    note: "Использовано для современных данных по отдельным сенсорным стратегиям и ограничениям обобщения."
     accessedAt: 2026-09-19
   - title: "The effect of occupational therapist-led sensory diet intervention in autistic children"
     url: "https://publish.kne-publishing.com/index.php/JMR/article/view/17507"
     organisation: "Journal of Modern Rehabilitation"
     publicationYear: 2025
-    note: "Использовано как пример исследования, где обе группы получали sensory diet, поэтому дизайн не позволяет оценить эффект самой sensory diet по сравнению с её отсутствием."
+    note: "Использовано как пример исследования, где обе группы получали сенсорную диету, поэтому дизайн не позволяет оценить эффект самой сенсорной диеты по сравнению с её отсутствием."
     accessedAt: 2026-09-19
 ---
 
