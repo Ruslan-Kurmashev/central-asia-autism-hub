@@ -18,7 +18,7 @@ riskLevel: lower
 disclaimerType: informational
 conflictOfInterest: "Конфликт интересов не заявлен."
 publishedAt: "2026-09-18T17:35:00Z"
-updatedAt: "2026-09-19T22:55:58.021Z"
+updatedAt: "2026-09-19T23:03:04.085Z"
 reviewDueAt: 2027-03-18
 draft: false
 keyPoints:
@@ -49,8 +49,6 @@ sources:
 ---
 
 [← Развитие, взаимодействие и игра](/kz/ru/parents/razvitie-vzaimodeystvie-i-igra/)
-
-# Игровые вмешательства
 
 Игровые вмешательства (Play-Based Interventions) - это подходы, в которых игра используется как основная среда для развития навыков и взаимодействия.
 
