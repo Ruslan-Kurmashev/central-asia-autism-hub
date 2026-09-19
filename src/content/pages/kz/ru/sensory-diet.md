@@ -18,7 +18,7 @@ riskLevel: moderate
 disclaimerType: informational
 conflictOfInterest: "Конфликт интересов не заявлен."
 publishedAt: "2026-09-19T15:25:27.388Z"
-updatedAt: "2026-09-19T22:52:30.633Z"
+updatedAt: "2026-09-19T23:04:01.034Z"
 reviewDueAt: 2027-03-19
 draft: false
 keyPoints:
@@ -54,8 +54,6 @@ sources:
 ---
 
 [← Сенсорные особенности и адаптация среды](/kz/ru/parents/sensornye-osobennosti-i-adaptatsiya-sredy/)
-
-# Сенсорная диета: что это такое и что известно о её эффективности
 
 Сенсорная диета (Sensory Diet) - это название для заранее подобранного набора сенсорных и двигательных активностей, которые ребёнку предлагают в течение дня.
 
