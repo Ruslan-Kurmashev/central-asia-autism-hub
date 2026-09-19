@@ -1,6 +1,6 @@
 ---
 title: "Слуховые программы и слуховая интеграционная тренировка: что известно об эффективности"
-summary: "Что такое Auditory Integration Training, чем слуховые программы отличаются от обычной защиты от шума и что показывают исследования и клинические рекомендации."
+summary: "Что такое слуховая интеграционная тренировка (Auditory Integration Training, AIT), чем слуховые программы отличаются от обычной защиты от шума и что показывают исследования и клинические рекомендации."
 description: "Практическое руководство для родителей о слуховой интеграционной тренировке, методе Томатиса и других слуховых программах при аутизме: доказательства, ограничения, адаптация среды и вопросы специалисту."
 country: kz
 language: ru
@@ -18,12 +18,12 @@ riskLevel: moderate
 disclaimerType: informational
 conflictOfInterest: "Конфликт интересов не заявлен."
 publishedAt: "2026-09-19T15:35:38.365Z"
-updatedAt: "2026-09-19T15:43:45.819Z"
+updatedAt: "2026-09-19T15:45:53.315Z"
 reviewDueAt: 2027-03-19
 draft: false
 keyPoints:
   - "Слуховая чувствительность может серьёзно мешать ребёнку, но это не означает, что ему нужна слуховая интеграционная тренировка."
-  - "Auditory Integration Training, или AIT - слуховая интеграционная тренировка - отличается от обычной защиты от шума и адаптации среды."
+  - "Слуховая интеграционная тренировка (Auditory Integration Training, AIT) отличается от обычной защиты от шума и адаптации среды."
   - "Cochrane не нашёл достаточных доказательств эффективности AIT и похожих звуковых терапий при аутизме."
   - "NICE не рекомендует AIT для коррекции речевых и языковых трудностей у аутичных детей и подростков."
 evidenceLimitations: "Исследования AIT небольшие, в основном старые и неоднородные по протоколам и измеряемым результатам. Существуют отдельные обзоры с положительными выводами, но их результаты расходятся с Cochrane и клиническими рекомендациями NICE. Данные одной слуховой программы нельзя переносить на другие коммерческие программы."
@@ -32,19 +32,19 @@ sources:
     url: "https://www.cochrane.org/evidence/CD003681_auditory-integration-therapy-autism-spectrum-disorders"
     organisation: "Cochrane"
     publicationYear: 2022
-    note: "7 небольших исследований, 182 участника; использовано для общего вывода об отсутствии достаточных доказательств в пользу AIT и похожих sound therapies."
+    note: "7 небольших исследований, 182 участника; использовано для общего вывода об отсутствии достаточных доказательств в пользу AIT и похожих звуковых терапий."
     accessedAt: 2026-09-19
   - title: "Autism spectrum disorder in under 19s: support and management - Recommendations"
     url: "https://www.nice.org.uk/guidance/cg170/chapter/recommendations"
     organisation: "National Institute for Health and Care Excellence"
     publicationYear: 2013
-    note: "Использовано для рекомендации не применять auditory integration training для коррекции speech and language problems."
+    note: "Использовано для рекомендации не применять слуховую интеграционную тренировку для коррекции речевых и языковых трудностей."
     accessedAt: 2026-09-19
   - title: "The association of auditory integration training in children with autism spectrum disorders among Chinese: a meta-analysis"
     url: "https://pubmed.ncbi.nlm.nih.gov/30429234/"
     organisation: "PubMed"
     publicationYear: 2018
-    note: "13 RCT, 976 children; использовано для отражения существующих положительных выводов, которые расходятся с Cochrane и NICE."
+    note: "13 рандомизированных исследований, 976 детей; использовано для отражения существующих положительных выводов, которые расходятся с Cochrane и NICE."
     accessedAt: 2026-09-19
 ---
 
