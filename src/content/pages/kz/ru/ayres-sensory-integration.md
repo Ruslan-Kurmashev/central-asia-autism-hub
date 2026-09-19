@@ -18,7 +18,7 @@ riskLevel: moderate
 disclaimerType: informational
 conflictOfInterest: "Конфликт интересов не заявлен."
 publishedAt: "2026-09-19T14:50:00Z"
-updatedAt: "2026-09-19T15:45:53.315Z"
+updatedAt: "2026-09-19T15:47:12.620Z"
 reviewDueAt: 2027-03-19
 draft: false
 keyPoints:
@@ -325,7 +325,7 @@ Ayres Sensory Integration, или ASI - сенсорная интеграция 
 
 Но неправильно говорить:
 
-**«сенсорная интеграция доказанно лечит аутизм».**
+**«доказано, что сенсорная интеграция лечит аутизм».**
 
 ASI не является лечением аутизма.
 
