@@ -18,7 +18,7 @@ riskLevel: lower
 disclaimerType: informational
 conflictOfInterest: "Конфликт интересов не заявлен."
 publishedAt: 2026-09-18
-updatedAt: "2026-09-19T22:53:41.693Z"
+updatedAt: "2026-09-19T22:54:45.640Z"
 reviewDueAt: 2027-03-18
 draft: false
 keyPoints:
@@ -28,8 +28,8 @@ keyPoints:
   - "Главный outcome - самостоятельное функциональное выполнение, а не только завершение задания."
 evidenceLimitations: "Task Analysis часто изучается как часть multicomponent interventions вместе с prompting, reinforcement, visual supports, video modeling or caregiver training. Поэтому эффект конкретного multicomponent package нельзя полностью приписывать одному Task Analysis."
 sources:
-  - title: "Evidence-Based Practices for Children, Youth, and Young Adults with Autism Spectrum Disorder"
-    url: "https://autismpdc.fpg.unc.edu/sites/autismpdc.fpg.unc.edu/files/imce/documents/2014-EBP-Report.pdf"
+  - title: "Evidence-Based Practices for Children, Youth, and Young Adults with Autism: Third Generation Review"
+    url: "https://pmc.ncbi.nlm.nih.gov/articles/PMC8510990/"
     organisation: "National Professional Development Center on Autism Spectrum Disorder"
     publicationYear: 2014
     accessedAt: 2026-09-18
