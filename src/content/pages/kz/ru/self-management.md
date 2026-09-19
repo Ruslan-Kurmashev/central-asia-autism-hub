@@ -1,6 +1,6 @@
 ---
 title: "Самоуправление: как постепенно уменьшать зависимость от контроля взрослых"
-summary: "Как Self-Management помогает человеку самому отслеживать, планировать и регулировать действия с меньшим количеством внешних подсказок."
+summary: "Как самоуправление (Self-Management) помогает человеку самому отслеживать, планировать и регулировать действия с меньшим количеством внешних подсказок."
 description: "Практическое руководство для родителей о Self-Management: self-monitoring, goal setting, self-recording, self-reinforcement, technology, autonomy и maintenance."
 country: kz
 language: ru
@@ -18,15 +18,15 @@ riskLevel: lower
 disclaimerType: informational
 conflictOfInterest: "Конфликт интересов не заявлен."
 publishedAt: 2026-09-18
-updatedAt: "2026-09-19T22:57:52.588Z"
+updatedAt: "2026-09-19T23:06:22.009Z"
 reviewDueAt: 2027-03-18
 draft: false
 keyPoints:
-  - "Self-Management - самоуправление - помогает уменьшать ненужную зависимость от постоянных prompts and supervision."
-  - "Самостоятельность может включать использование checklist, timer, AAC, calendar or apps."
-  - "Self-monitoring не должно использоваться для masking или подавления безопасных аутичных особенностей."
-  - "Если проблема находится в environment, ответственность нельзя перекладывать только на самого человека."
-evidenceLimitations: "Research supports Self-Management for several daily living, task-performance and self-monitoring outcomes, but the literature is heterogeneous and often based on single-case designs. Generalisation, maintenance and real-world employment outcomes require separate assessment."
+  - "Самоуправление помогает уменьшать ненужную зависимость от постоянных подсказок и контроля взрослого."
+  - "Самостоятельность может включать чек-лист, таймер, AAC, календарь или приложения."
+  - "Самонаблюдение не должно использоваться для маскирования или подавления безопасных аутичных особенностей."
+  - "Если проблема находится в окружающей среде, ответственность нельзя перекладывать только на самого человека."
+evidenceLimitations: "Исследования поддерживают самоуправление для ряда бытовых навыков, выполнения задач и самонаблюдения, но литература неоднородна и часто основана на дизайне единичных случаев. Перенос, сохранение навыков и результаты в реальной занятости требуют отдельной оценки."
 sources:
   - title: "Evidence-Based Practices for Children, Youth, and Young Adults with Autism: Third Generation Review"
     url: "https://pmc.ncbi.nlm.nih.gov/articles/PMC8510990/"
