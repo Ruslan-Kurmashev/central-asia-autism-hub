@@ -1,6 +1,6 @@
 ---
 title: "Antecedent-Based Interventions: как менять условия до возникновения сложного поведения"
-summary: "Как proactive antecedent strategies меняют условия до challenging behavior: environment, predictability, tasks, choice и visual supports."
+summary: "Как профилактические стратегии меняют условия до возникновения поведения, вызывающего трудности: среду, предсказуемость, задания, выбор и визуальные опоры."
 description: "Практическое руководство для родителей об Antecedent-Based Interventions: evidence, FBA, environmental adaptations, visual supports, choice, task modification и monitoring."
 country: kz
 language: ru
@@ -18,15 +18,15 @@ riskLevel: lower
 disclaimerType: informational
 conflictOfInterest: "Конфликт интересов не заявлен."
 publishedAt: 2026-09-18
-updatedAt: "2026-09-19T22:57:05.345Z"
+updatedAt: "2026-09-19T23:05:51.294Z"
 reviewDueAt: 2027-03-18
 draft: false
 keyPoints:
-  - "Antecedent-Based Interventions - это группа proactive strategies, а не один protocol."
-  - "Стратегии должны опираться на assessment и конкретные triggers/function."
-  - "Environmental adaptation может быть правильной помощью, если проблема создаётся средой."
-  - "Снижение visible behavior не должно быть единственным outcome."
-evidenceLimitations: "Antecedent-Based Interventions are heterogeneous. Evidence varies by strategy, target, population and context. Strong evidence for the strategy class does not mean every antecedent technique is equally effective. Some approaches are supported mainly by single-case studies and narrow outcomes."
+  - "Вмешательства на основе предшествующих условий (Antecedent-Based Interventions) - это группа профилактических стратегий, а не один протокол."
+  - "Стратегии должны опираться на оценку и конкретные факторы, связанные с поведением."
+  - "Адаптация среды может быть правильной помощью, если проблема создаётся самой средой."
+  - "Уменьшение видимого поведения не должно быть единственным результатом."
+evidenceLimitations: "Вмешательства на основе предшествующих условий неоднородны. Доказательства различаются в зависимости от стратегии, цели, группы участников и контекста. Поддержка категории в целом не означает, что каждая отдельная техника одинаково эффективна. Некоторые подходы изучены преимущественно в исследованиях с единичными случаями и по узким результатам."
 sources:
   - title: "Autism spectrum disorder in under 19s: support and management - Recommendations"
     url: "https://www.nice.org.uk/guidance/cg170/chapter/recommendations"
