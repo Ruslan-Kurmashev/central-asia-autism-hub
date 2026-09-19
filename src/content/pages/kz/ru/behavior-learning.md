@@ -18,7 +18,7 @@ riskLevel: moderate
 disclaimerType: informational
 conflictOfInterest: "Конфликт интересов не заявлен."
 publishedAt: "2026-09-18T15:00:30Z"
-updatedAt: "2026-09-19T22:56:56.712Z"
+updatedAt: "2026-09-19T23:02:45.561Z"
 reviewDueAt: 2027-03-18
 draft: false
 keyPoints:
@@ -44,8 +44,6 @@ sources:
 ---
 
 [← Какие виды помощи и поддержки бывают при аутизме](/kz/ru/parents/vidy-pomoshchi-i-podderzhki-pri-autizme/)
-
-# Поведение и обучение
 
 Этот раздел нужен, когда родители сталкиваются с вопросами:
 
