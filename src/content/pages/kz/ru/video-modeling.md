@@ -1,6 +1,6 @@
 ---
 title: "Обучение через показ и видеомоделирование"
-summary: "Как live modeling, video modeling, video self-modeling, point-of-view и video prompting помогают обучать конкретным навыкам."
+summary: "Как показ вживую, видеомоделирование, самомоделирование, видео от первого лица и видеоподсказки могут помогать обучать конкретным навыкам."
 description: "Практическое руководство для родителей о моделировании и видеомоделировании: evidence, бытовые, рабочие и разговорные навыки, generalisation, prompting и safety."
 country: kz
 language: ru
@@ -18,15 +18,15 @@ riskLevel: lower
 disclaimerType: informational
 conflictOfInterest: "Конфликт интересов не заявлен."
 publishedAt: 2026-09-18
-updatedAt: "2026-09-19T22:57:49.864Z"
+updatedAt: "2026-09-19T23:06:17.914Z"
 reviewDueAt: 2027-03-18
 draft: false
 keyPoints:
-  - "Modeling - обучение через показ образца; Video Modeling - видеомоделирование."
-  - "Video Modeling имеет supporting evidence для ряда функциональных, бытовых, социальных и рабочих навыков."
-  - "Video Modeling часто используется вместе с Task Analysis, prompting, reinforcement and feedback, поэтому effect пакета нельзя автоматически приписывать только видео."
-  - "Главный outcome - самостоятельное выполнение meaningful skill, а не просмотр видео или копирование neurotypical поведения."
-evidenceLimitations: "Большая часть evidence по video-based interventions состоит из single-case studies. Эффекты зависят от конкретного навыка, возраста, формата видео, дополнительных компонентов и context. Generalisation and maintenance often require separate assessment."
+  - "Моделирование - это обучение через показ образца; Video Modeling - видеомоделирование."
+  - "Видеомоделирование имеет научную поддержку для ряда функциональных, бытовых, социальных и рабочих навыков."
+  - "Оно часто используется вместе с разбиением задачи, подсказками, подкреплением и обратной связью, поэтому эффект всего комплекса нельзя автоматически приписывать только видео."
+  - "Главный результат - самостоятельное выполнение значимого навыка, а не просмотр видео или копирование нейротипичного поведения."
+evidenceLimitations: "Большая часть данных по вмешательствам на основе видео получена в исследованиях с единичными случаями. Эффекты зависят от конкретного навыка, возраста, формата видео, дополнительных компонентов и контекста. Перенос и сохранение навыка нужно оценивать отдельно."
 sources:
   - title: "Evidence-Based Practices for Children, Youth, and Young Adults with Autism: Third Generation Review"
     url: "https://pmc.ncbi.nlm.nih.gov/articles/PMC8510990/"
