@@ -18,13 +18,13 @@ riskLevel: moderate
 disclaimerType: informational
 conflictOfInterest: "Конфликт интересов не заявлен."
 publishedAt: "2026-09-19T14:45:00Z"
-updatedAt: "2026-09-19T15:43:19.205Z"
+updatedAt: "2026-09-19T15:45:53.315Z"
 reviewDueAt: 2027-03-19
 draft: false
 keyPoints:
   - "Сенсорные особенности могут существенно влиять на участие ребёнка в повседневной жизни, но не каждая трудность требует специальной сенсорной терапии."
   - "Первым полезным шагом часто бывает изменение окружающей среды: шума, света, пространства, одежды или возможности сделать перерыв."
-  - "Ayres Sensory Integration, sensory-based strategies, sensory diet и listening programs - это разные подходы с разной доказательной базой."
+  - "Сенсорная интеграция по Айрес (Ayres Sensory Integration), сенсорные стратегии, сенсорная диета и слуховые программы - это разные подходы с разной доказательной базой."
   - "Результат лучше оценивать по участию, комфорту и самостоятельности ребёнка, а не по расплывчатой цели «нормализовать сенсорную систему»."
 evidenceLimitations: "Сенсорная поддержка объединяет разные подходы: от адаптации среды до сенсорной интеграции по Айрес и отдельных сенсорных стратегий. Доказательность различается в зависимости от конкретного подхода и измеряемого результата. Нельзя переносить результаты исследований ASI на любые занятия в сенсорной комнате или на все сенсорные вмешательства."
 sources:
@@ -32,29 +32,29 @@ sources:
     url: "https://www.nice.org.uk/guidance/cg170/chapter/recommendations"
     organisation: "National Institute for Health and Care Excellence"
     publicationYear: 2013
-    note: "Использовано для учёта sensory sensitivities, physical environment, noise, lighting и факторов, связанных с behaviour that challenges."
+    note: "Использовано для учёта сенсорной чувствительности, физической среды, шума, освещения и факторов, связанных с поведением, которое вызывает трудности."
     accessedAt: 2026-09-19
   - title: "Autism - Quality standard"
     url: "https://www.nice.org.uk/guidance/qs51"
     organisation: "National Institute for Health and Care Excellence"
-    note: "Использовано для принципов адаптации physical environment и учёта sensory sensitivities."
+    note: "Использовано для принципов адаптации физической среды и учёта сенсорной чувствительности."
     accessedAt: 2026-09-19
   - title: "Sensory Integration and Processing"
     url: "https://www.aota.org/practice/clinical-topics/sensory-integration-and-processing"
     organisation: "American Occupational Therapy Association"
-    note: "Использовано для разграничения sensory integration, sensory processing и sensory-based interventions и необходимости documented assessment."
+    note: "Использовано для разграничения сенсорной интеграции, обработки сенсорной информации и отдельных сенсорных вмешательств, а также необходимости документированной оценки."
     accessedAt: 2026-09-19
   - title: "Ayres Sensory Integration for autistic children: systematic review of randomized controlled trials"
     url: "https://pubmed.ncbi.nlm.nih.gov/40193295/"
     organisation: "PubMed"
     publicationYear: 2025
-    note: "Использовано для обзора RCT по ASI и outcome-specific findings."
+    note: "Использовано для обзора рандомизированных контролируемых исследований ASI и результатов по конкретным целям."
     accessedAt: 2026-09-19
   - title: "Systematic review of sensory-based interventions for children and youth"
     url: "https://pubmed.ncbi.nlm.nih.gov/41321460/"
     organisation: "PubMed"
     publicationYear: 2025
-    note: "Использовано для разграничения sensory-based interventions и необходимости оценивать конкретные functional outcomes."
+    note: "Использовано для разграничения сенсорных вмешательств и необходимости оценивать конкретные функциональные результаты."
     accessedAt: 2026-09-19
 ---
 
