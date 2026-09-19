@@ -18,7 +18,7 @@ riskLevel: moderate
 disclaimerType: medical
 conflictOfInterest: "Конфликт интересов не заявлен."
 publishedAt: 2026-09-18
-updatedAt: 2026-09-18
+updatedAt: "2026-09-19T22:53:16.147Z"
 reviewDueAt: 2027-03-18
 draft: false
 keyPoints:
@@ -41,6 +41,8 @@ sources:
     organisation: "National Institute for Health and Care Excellence"
     accessedAt: 2026-09-18
 ---
+
+[← Поведение и обучение](/kz/ru/parents/povedenie-i-obuchenie/)
 
 Functional Behavior Assessment, или FBA, - это процесс оценки, который помогает понять, какие факторы могут провоцировать или поддерживать сложное поведение.
 
@@ -405,3 +407,5 @@ Functional Behavior Assessment - это не therapy и не способ быс
 [AAC](/kz/ru/parents/aac/)
 
 [Как понять, помогает ли выбранная помощь](/kz/ru/parents/kak-ponyat-pomogaet-li-podderzhka/)
+
+[← Поведение и обучение](/kz/ru/parents/povedenie-i-obuchenie/)
