@@ -18,7 +18,7 @@ riskLevel: moderate
 disclaimerType: medical
 conflictOfInterest: "Конфликт интересов не заявлен."
 publishedAt: "2026-09-19T15:30:54.697Z"
-updatedAt: "2026-09-19T22:52:33.730Z"
+updatedAt: "2026-09-19T23:04:04.698Z"
 reviewDueAt: 2027-03-19
 draft: false
 keyPoints:
@@ -65,8 +65,6 @@ sources:
 ---
 
 [← Сенсорные особенности и адаптация среды](/kz/ru/parents/sensornye-osobennosti-i-adaptatsiya-sredy/)
-
-# Утяжелённые одеяла, жилеты и другие утяжелённые средства: польза и безопасность
 
 Утяжелённые средства - это изделия, которые создают дополнительное давление на тело.
 
