@@ -18,7 +18,7 @@ riskLevel: lower
 disclaimerType: informational
 conflictOfInterest: "Конфликт интересов не заявлен."
 publishedAt: "2026-09-18T16:33:14Z"
-updatedAt: "2026-09-19T22:55:32.567Z"
+updatedAt: "2026-09-19T23:02:51.519Z"
 reviewDueAt: 2027-03-18
 draft: false
 keyPoints:
@@ -49,8 +49,6 @@ sources:
 ---
 
 [← Развитие, взаимодействие и игра](/kz/ru/parents/razvitie-vzaimodeystvie-i-igra/)
-
-# Обучение в естественных ситуациях
 
 Naturalistic Intervention - обучение в естественных ситуациях - это способ развивать и закреплять полезные навыки прямо во время обычной жизни ребёнка.
 
