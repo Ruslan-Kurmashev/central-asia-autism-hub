@@ -18,7 +18,7 @@ riskLevel: lower
 disclaimerType: informational
 conflictOfInterest: "Конфликт интересов не заявлен."
 publishedAt: 2026-09-18
-updatedAt: 2026-09-18
+updatedAt: "2026-09-19T22:53:46.745Z"
 reviewDueAt: 2027-03-18
 draft: false
 keyPoints:
@@ -54,6 +54,8 @@ sources:
     publicationYear: 2024
     accessedAt: 2026-09-18
 ---
+
+[← Поведение и обучение](/kz/ru/parents/povedenie-i-obuchenie/)
 
 Self-Management - самоуправление.
 
@@ -316,3 +318,5 @@ Self-Management - самоуправление - помогает постепе
 [Обучение через показ и видеомоделирование](/kz/ru/parents/video-modeling/)
 
 [Подкрепление](/kz/ru/parents/reinforcement/)
+
+[← Поведение и обучение](/kz/ru/parents/povedenie-i-obuchenie/)
