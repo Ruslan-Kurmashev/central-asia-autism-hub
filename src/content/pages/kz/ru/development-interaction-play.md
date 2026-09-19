@@ -18,7 +18,7 @@ riskLevel: moderate
 disclaimerType: informational
 conflictOfInterest: "Конфликт интересов не заявлен."
 publishedAt: "2026-09-18T15:14:40Z"
-updatedAt: "2026-09-19T22:51:39.989Z"
+updatedAt: "2026-09-19T22:54:53.864Z"
 reviewDueAt: 2027-03-18
 draft: false
 keyPoints:
@@ -34,8 +34,8 @@ sources:
     publicationYear: 2013
     note: "Использовано для play-based social-communication interventions, joint attention, engagement, reciprocal communication, parent/carer/teacher mediation и peer mediation."
     accessedAt: 2026-09-18
-  - title: "Evidence-Based Practices for Children, Youth, and Young Adults with Autism - Executive Summary"
-    url: "https://ncaep.fpg.unc.edu/sites/ncaep.fpg.unc.edu/files/imce/documents/EBP%20Executive%20Summary.pdf"
+  - title: "Evidence-Based Practices for Children, Youth, and Young Adults with Autism: Third Generation Review"
+    url: "https://pmc.ncbi.nlm.nih.gov/articles/PMC8510990/"
     organisation: "National Clearinghouse on Autism Evidence and Practice"
     publicationYear: 2020
     note: "Использовано для классификации Naturalistic Intervention и других focused practices."
