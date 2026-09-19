@@ -18,7 +18,7 @@ riskLevel: moderate
 disclaimerType: informational
 conflictOfInterest: "Конфликт интересов не заявлен."
 publishedAt: "2026-09-19T15:35:38.365Z"
-updatedAt: "2026-09-19T22:52:37.012Z"
+updatedAt: "2026-09-19T23:04:15.061Z"
 reviewDueAt: 2027-03-19
 draft: false
 keyPoints:
@@ -49,8 +49,6 @@ sources:
 ---
 
 [← Сенсорные особенности и адаптация среды](/kz/ru/parents/sensornye-osobennosti-i-adaptatsiya-sredy/)
-
-# Слуховые программы и слуховая интеграционная тренировка: что известно об эффективности
 
 Некоторые аутичные дети очень чувствительны к определённым звукам.
 
