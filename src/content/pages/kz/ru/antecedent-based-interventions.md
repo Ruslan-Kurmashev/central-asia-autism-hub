@@ -18,7 +18,7 @@ riskLevel: lower
 disclaimerType: informational
 conflictOfInterest: "Конфликт интересов не заявлен."
 publishedAt: 2026-09-18
-updatedAt: 2026-09-18
+updatedAt: "2026-09-19T22:53:22.171Z"
 reviewDueAt: 2027-03-18
 draft: false
 keyPoints:
@@ -56,6 +56,8 @@ sources:
     organisation: "PubMed Central"
     accessedAt: 2026-09-18
 ---
+
+[← Поведение и обучение](/kz/ru/parents/povedenie-i-obuchenie/)
 
 Antecedent-Based Interventions, или ABI, - это proactive strategies, которые меняют условия до возникновения challenging behavior или другого target behavior.
 
@@ -325,3 +327,5 @@ Antecedent-Based Interventions работают с условиями, кото�
 [Functional Communication Training](/kz/ru/parents/functional-communication-training/)
 
 [Как понять, помогает ли выбранная помощь](/kz/ru/parents/kak-ponyat-pomogaet-li-podderzhka/)
+
+[← Поведение и обучение](/kz/ru/parents/povedenie-i-obuchenie/)
