@@ -18,7 +18,7 @@ riskLevel: moderate
 disclaimerType: medical
 conflictOfInterest: "Конфликт интересов не заявлен."
 publishedAt: 2026-09-18
-updatedAt: 2026-09-18
+updatedAt: "2026-09-19T22:53:19.050Z"
 reviewDueAt: 2027-03-18
 draft: false
 keyPoints:
@@ -58,6 +58,8 @@ sources:
     publicationYear: 2024
     accessedAt: 2026-09-18
 ---
+
+[← Поведение и обучение](/kz/ru/parents/povedenie-i-obuchenie/)
 
 [← Коммуникация и AAC](/kz/ru/parents/kommunikatsiya-i-aac/)
 
@@ -318,3 +320,5 @@ FCT может быть полезным, когда challenging behavior дей
 [Обучение партнёров по коммуникации](/kz/ru/parents/communication-partner-training/)
 
 [Как понять, помогает ли выбранная помощь](/kz/ru/parents/kak-ponyat-pomogaet-li-podderzhka/)
+
+[← Поведение и обучение](/kz/ru/parents/povedenie-i-obuchenie/)
