@@ -18,7 +18,7 @@ riskLevel: lower
 disclaimerType: informational
 conflictOfInterest: "Конфликт интересов не заявлен."
 publishedAt: "2026-09-18T17:35:00Z"
-updatedAt: "2026-09-19T22:55:38.424Z"
+updatedAt: "2026-09-19T23:03:01.739Z"
 reviewDueAt: 2027-03-18
 draft: false
 keyPoints:
@@ -55,8 +55,6 @@ sources:
 ---
 
 [← Развитие, взаимодействие и игра](/kz/ru/parents/razvitie-vzaimodeystvie-i-igra/)
-
-# Совместное внимание
 
 Joint Attention - совместное внимание - это ситуация, когда ребёнок и другой человек обращают внимание на один и тот же предмет, событие или действие и каким-то образом разделяют этот интерес друг с другом.
 
