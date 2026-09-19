@@ -18,7 +18,7 @@ riskLevel: moderate
 disclaimerType: informational
 conflictOfInterest: "Конфликт интересов не заявлен."
 publishedAt: "2026-09-18T17:36:00Z"
-updatedAt: "2026-09-19T22:51:45.782Z"
+updatedAt: "2026-09-19T22:55:35.487Z"
 reviewDueAt: 2027-03-18
 draft: false
 keyPoints:
@@ -71,7 +71,7 @@ NDBI - это группа подходов, которые объединяют
 
 Полное название:
 
-**Naturalistic Developmental Behavioral Interventions - натуралистические развивающе-поведенческие вмешательства.**
+**Натуралистические развивающе-поведенческие вмешательства (Naturalistic Developmental Behavioral Interventions, NDBI).**
 
 Звучит сложно, но смысл довольно простой:
 
@@ -222,10 +222,10 @@ NDBI - не название одной конкретной терапии.
 
 К NDBI обычно относят разные программы, например:
 
-- Early Start Denver Model, или ESDM
-- Pivotal Response Treatment, или PRT
+- модель раннего старта Денвера (Early Start Денверская модель, ESDM)
+- терапия ключевых реакций (Pivotal Response Treatment, PRT)
 - JASPER
-- другие naturalistic developmental programs.
+- другие натуралистические развивающие программы.
 
 У них есть общие принципы, но сами программы отличаются.
 
@@ -249,9 +249,9 @@ Naturalistic Intervention описывает способы обучения в�
 
 NDBI идёт дальше и специально объединяет:
 
-- naturalistic teaching - обучение в естественных ситуациях
-- developmental principles - принципы развития
-- behavioral learning principles - поведенческие принципы обучения.
+- обучение в естественных ситуациях (naturalistic teaching)
+- принципы развития (developmental principles)
+- поведенческие принципы обучения (behavioral learning principles).
 
 Поэтому эти понятия связаны, но не являются полными синонимами.
 
@@ -270,7 +270,7 @@ Meta-analysis 27 исследований с групповым дизайном
 
 **g = 0.28**
 
-а для joint attention - совместного внимания:
+а для совместного внимания (joint attention):
 
 **g = 0.14.**
 
@@ -356,7 +356,7 @@ AAC можно использовать вместе с NDBI.
 
 Особенно важно не откладывать AAC в ожидании устной речи.
 
-Systematic review and meta-analysis 2025 года по детям с минимальной устной речью включил 29 исследований NDBI.
+Систематический обзор и метаанализ 2025 года по аутичным детям с минимальной устной речью включил 29 исследований NDBI.
 
 Результаты указывали, что языковые outcomes могли быть лучше, когда aided AAC включалась в NDBI.
 
@@ -472,9 +472,9 @@ NDBI может предлагаться под разными названия�
 
 - NDBI
 - ESDM
-- Denver Model
+- Денверская модель
 - PRT
-- developmental behavioral intervention
+- развивающе-поведенческое вмешательство
 - игровая поведенческая программа.
 
 Название само по себе не подтверждает квалификацию специалиста.
