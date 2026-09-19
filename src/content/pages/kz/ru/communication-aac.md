@@ -18,7 +18,7 @@ riskLevel: moderate
 disclaimerType: medical
 conflictOfInterest: "Конфликт интересов не заявлен."
 publishedAt: 2026-09-18
-updatedAt: 2026-09-18
+updatedAt: "2026-09-19T22:53:53.255Z"
 reviewDueAt: 2027-03-18
 draft: false
 keyPoints:
@@ -45,6 +45,8 @@ sources:
     note: "Использовано для social-communication interventions, visual supports и functional assessment."
     accessedAt: 2026-09-18
 ---
+
+[← Какие виды помощи и поддержки бывают при аутизме](/kz/ru/parents/vidy-pomoshchi-i-podderzhki-pri-autizme/)
 
 Коммуникация - это не только устная речь.
 
@@ -352,3 +354,5 @@ AAC не должна превращаться только в способ по
 Если коммуникационная система уже используется, проверьте:
 
 > **Стала ли коммуникация более самостоятельной, разнообразной и доступной человеку в реальной жизни?**
+
+[← Какие виды помощи и поддержки бывают при аутизме](/kz/ru/parents/vidy-pomoshchi-i-podderzhki-pri-autizme/)
