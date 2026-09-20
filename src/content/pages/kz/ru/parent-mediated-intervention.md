@@ -1,7 +1,7 @@
 ---
 title: "Поддержка с участием родителей"
 summary: "Как родители могут участвовать в поддержке коммуникации, игры и взаимодействия ребёнка без превращения семейной жизни в круглосуточную терапию."
-description: "Практическое руководство для родителей о Parent-Mediated Intervention при аутизме: цели, примеры, домашняя нагрузка, AAC, evidence, family burden и оценка результата."
+description: "Практическое руководство для родителей о поддержке с участием родителей при аутизме: цели, примеры, домашняя нагрузка, AAC, доказательства, нагрузка на семью и оценка результата."
 country: kz
 language: ru
 section: parents
@@ -18,39 +18,39 @@ riskLevel: lower
 disclaimerType: informational
 conflictOfInterest: "Конфликт интересов не заявлен."
 publishedAt: "2026-09-18T20:41:00Z"
-updatedAt: "2026-09-20T13:57:48.545Z"
+updatedAt: "2026-09-20T14:08:55.783Z"
 reviewDueAt: 2027-03-18
 draft: false
 keyPoints:
-  - "Parent-Mediated Intervention обучает родителей стратегиям, которые можно использовать в обычной жизни ребёнка."
+  - "Поддержка с участием родителей (Parent-Mediated Intervention) обучает родителей стратегиям, которые можно использовать в обычной жизни ребёнка."
   - "Родитель не должен становиться круглосуточным терапевтом, а нагрузка семьи должна учитываться."
-  - "Улучшение parent strategy use не равно автоматически улучшению child outcomes."
+  - "Лучшее освоение стратегии родителем не означает автоматического улучшения результатов у ребёнка."
   - "Результат важно оценивать по функциональным изменениям у ребёнка и переносу навыков в повседневную жизнь."
-evidenceLimitations: "Parent-mediated interventions включают разные программы, возрастные группы, intensity и outcomes. Meta-analyses показывают небольшие или умеренные эффекты по отдельным областям и неоднородность результатов. Улучшение использования стратегии родителем не всегда сопровождается значимым улучшением child outcomes."
+evidenceLimitations: "Вмешательства с участием родителей включают разные программы, возрастные группы, интенсивность и измеряемые результаты. Метаанализы показывают небольшие или умеренные эффекты по отдельным областям и неоднородность результатов. Лучшее использование стратегии родителем не всегда сопровождается значимым улучшением результатов у ребёнка."
 sources:
   - title: "Parent-mediated interventions for infants and toddlers with autism: systematic review and meta-analysis"
     url: "https://pubmed.ncbi.nlm.nih.gov/40358871/"
     organisation: "PubMed"
     publicationYear: 2025
-    note: "31 randomized controlled trials у детей младше 3 лет; использовано для общего effect и отдельных outcomes parent responsiveness, parent-child interaction и social communication."
+    note: "31 рандомизированное контролируемое исследование у детей младше 3 лет; использовано для общего эффекта и отдельных результатов по отзывчивости родителей, взаимодействию родителя и ребёнка и социальной коммуникации."
     accessedAt: 2026-09-18
   - title: "Parent-implemented interventions for autistic children: a meta-analysis"
     url: "https://pubmed.ncbi.nlm.nih.gov/35996037/"
     organisation: "PubMed"
     publicationYear: 2022
-    note: "Использовано для broader evidence по parent-implemented interventions и неоднородности результатов."
+    note: "Использовано для более широкой доказательной базы вмешательств, реализуемых родителями, и неоднородности результатов."
     accessedAt: 2026-09-18
   - title: "Parent-mediated interventions for young children with autism spectrum disorders"
     url: "https://pubmed.ncbi.nlm.nih.gov/34867556/"
     organisation: "PubMed"
     publicationYear: 2021
-    note: "Использовано для evidence по parent-mediated approaches у маленьких детей."
+    note: "Использовано для доказательной базы подходов с участием родителей у маленьких детей."
     accessedAt: 2026-09-18
   - title: "Autism spectrum disorder in under 19s: support and management - Recommendations"
     url: "https://www.nice.org.uk/guidance/cg170/chapter/recommendations"
     organisation: "National Institute for Health and Care Excellence"
     publicationYear: 2013
-    note: "Использовано для social-communication interventions с участием родителей, carers и teachers, joint attention, engagement и reciprocal communication."
+    note: "Использовано для вмешательств в области социальной коммуникации с участием родителей, ухаживающих взрослых и педагогов, совместного внимания, вовлечённости и взаимной коммуникации."
     accessedAt: 2026-09-18
 ---
 
