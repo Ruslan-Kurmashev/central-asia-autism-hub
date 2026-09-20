@@ -1,7 +1,7 @@
 ---
 title: "Поведение и обучение"
 summary: "Как разбираться в причинах поведения, которое вызывает трудности, выбирать поддержку с учётом функции поведения и обучать новым навыкам без сведения помощи к послушанию."
-description: "Навигационная страница для родителей о functional assessment, FCT, antecedent strategies, reinforcement, prompting, Task Analysis, Video Modeling и Self-Management."
+description: "Навигационная страница для родителей о функциональной оценке, FCT, изменении условий до поведения, подкреплении, подсказках, разбиении навыка на шаги, видеомоделировании и самоуправлении."
 country: kz
 language: ru
 section: parents
@@ -18,7 +18,7 @@ riskLevel: moderate
 disclaimerType: informational
 conflictOfInterest: "Конфликт интересов не заявлен."
 publishedAt: "2026-09-18T15:00:30Z"
-updatedAt: "2026-09-20T13:56:17.108Z"
+updatedAt: "2026-09-20T14:05:49.250Z"
 reviewDueAt: 2027-03-18
 draft: false
 keyPoints:
