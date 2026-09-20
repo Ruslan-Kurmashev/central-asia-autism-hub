@@ -1,7 +1,7 @@
 ---
 title: "Игровые вмешательства"
 summary: "Как игра может использоваться для развития коммуникации, совместного внимания и участия, чем игровое вмешательство отличается от обычной игры и как понять, помогает ли подход."
-description: "Практическое руководство для родителей о Play-Based Interventions при аутизме: цели, примеры, AAC, совместное внимание, evidence, риски превращения игры в постоянный урок и оценка результата."
+description: "Практическое руководство для родителей об игровых вмешательствах при аутизме: цели, примеры, AAC, совместное внимание, доказательства, риски превращения игры в постоянный урок и оценка результата."
 country: kz
 language: ru
 section: parents
@@ -18,33 +18,33 @@ riskLevel: lower
 disclaimerType: informational
 conflictOfInterest: "Конфликт интересов не заявлен."
 publishedAt: "2026-09-18T17:35:00Z"
-updatedAt: "2026-09-20T13:57:48.545Z"
+updatedAt: "2026-09-20T14:08:55.783Z"
 reviewDueAt: 2027-03-18
 draft: false
 keyPoints:
   - "Игровое вмешательство - не то же самое, что просто игра: у него есть конкретная цель и способ оценить результат."
   - "Игра не должна превращаться в постоянный урок или использоваться для нормализации поведения."
-  - "Play-based approaches - широкая категория, поэтому evidence нужно оценивать для конкретной программы и цели."
+  - "Игровые подходы - широкая категория, поэтому доказательства нужно оценивать для конкретной программы и цели."
   - "Самостоятельная игра тоже важна и не вся игра должна быть совместной."
-evidenceLimitations: "Play-based interventions включают неоднородные программы, возрастные группы, outcomes и study designs. Положительные результаты отдельных reviews и meta-analyses не означают одинаковую эффективность любой услуги под названием 'игровая терапия'. Высокая heterogeneity в части новых meta-analyses ограничивает обобщение результатов."
+evidenceLimitations: "Игровые вмешательства включают неоднородные программы, возрастные группы, измеряемые результаты и дизайны исследований. Положительные результаты отдельных систематических обзоров и метаанализов не означают одинаковую эффективность любой услуги под названием 'игровая терапия'. Высокая неоднородность части новых метаанализов ограничивает обобщение результатов."
 sources:
   - title: "Autism spectrum disorder in under 19s: support and management - Recommendations"
     url: "https://www.nice.org.uk/guidance/cg170/chapter/recommendations"
     organisation: "National Institute for Health and Care Excellence"
     publicationYear: 2013
-    note: "Использовано для play-based social-communication interventions, joint attention, engagement, reciprocal communication, interactive play и участия родителей, carers, teachers и peers."
+    note: "Использовано для игровых вмешательств в области социальной коммуникации, совместного внимания, вовлечённости, взаимной коммуникации, интерактивной игры и участия родителей, ухаживающих взрослых, педагогов и сверстников."
     accessedAt: 2026-09-18
   - title: "Play-based interventions for autistic children and their parents: a systematic review"
     url: "https://pubmed.ncbi.nlm.nih.gov/34853960/"
     organisation: "PubMed"
     publicationYear: 2023
-    note: "Использовано для общей оценки неоднородной evidence base play-based interventions."
+    note: "Использовано для общей оценки неоднородной доказательной базы игровых вмешательств."
     accessedAt: 2026-09-18
   - title: "The effect of play-based interventions on social and play skills in autistic children: a systematic review and meta-analysis"
     url: "https://pubmed.ncbi.nlm.nih.gov/42287507/"
     organisation: "PubMed"
     publicationYear: 2026
-    note: "Использовано для более новых данных по social and play outcomes и высокой heterogeneity."
+    note: "Использовано для более новых данных по социальным и игровым результатам и высокой неоднородности исследований."
     accessedAt: 2026-09-18
 ---
 
