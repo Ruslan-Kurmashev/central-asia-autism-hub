@@ -18,7 +18,7 @@ riskLevel: moderate
 disclaimerType: informational
 conflictOfInterest: "Конфликт интересов не заявлен."
 publishedAt: 2026-09-18
-updatedAt: "2026-09-20T15:00:04.447Z"
+updatedAt: "2026-09-20T15:01:58.458Z"
 reviewDueAt: 2027-03-18
 draft: false
 keyPoints:
@@ -551,14 +551,11 @@ NICE рекомендует направлять детей младше 3 ле�
 
 ## Что делать дальше
 
-Если основная проблема в том, что у человека нет надёжного способа сообщать важные сообщения:
+[← Вернуться в раздел «Коммуникация и AAC»](/kz/ru/parents/kommunikatsiya-i-aac/)
 
-[AAC: альтернативная и дополнительная коммуникация](/kz/ru/parents/aac/)
+[Проверить, помогает ли выбранная поддержка](/kz/ru/parents/kak-ponyat-pomogaet-li-podderzhka/)
 
-Если уже используется picture exchange:
+Также полезно:
 
-[PECS](/kz/ru/parents/pecs/)
-
-Если нужно вернуться к общей карте:
-
-[Коммуникация и AAC](/kz/ru/parents/kommunikatsiya-i-aac/)
+- [AAC: альтернативная и дополнительная коммуникация](/kz/ru/parents/aac/)
+- [PECS](/kz/ru/parents/pecs/)
