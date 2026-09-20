@@ -18,7 +18,7 @@ riskLevel: moderate
 disclaimerType: informational
 conflictOfInterest: "Конфликт интересов не заявлен."
 publishedAt: "2026-09-18T17:36:00Z"
-updatedAt: "2026-09-19T23:06:44.540Z"
+updatedAt: "2026-09-20T13:57:48.545Z"
 reviewDueAt: 2027-03-18
 draft: false
 keyPoints:
@@ -32,7 +32,7 @@ sources:
     url: "https://pubmed.ncbi.nlm.nih.gov/31018655/"
     organisation: "PubMed"
     publicationYear: 2019
-    note: "27 group-design studies; использовано для outcome-specific effect sizes по expressive language, play, social engagement, cognition, joint attention и receptive language."
+    note: "27 group-design studies; использовано для outcome-specific effect sizes по expressive language, play, social engagement, cognition, совместное внимание и receptive language."
     accessedAt: 2026-09-18
   - title: "Naturalistic Developmental Behavioral Interventions for Autism Spectrum Disorder: A Meta-analytic Review"
     url: "https://pubmed.ncbi.nlm.nih.gov/38170431/"
@@ -44,7 +44,7 @@ sources:
     url: "https://pubmed.ncbi.nlm.nih.gov/41454358/"
     organisation: "PubMed"
     publicationYear: 2025
-    note: "Использовано для более свежих данных по adaptive behavior, daily living, language и joint attention, а также ограничений risk of bias и certainty."
+    note: "Использовано для более свежих данных по adaptive behavior, daily living, language и совместное внимание, а также ограничений risk of bias и certainty."
     accessedAt: 2026-09-18
   - title: "The Effect of Naturalistic Developmental Behavioral Interventions and Aided AAC on the Language Development of Children on the Autism Spectrum with Minimal Speech: A Systematic Review and Meta-analysis"
     url: "https://pubmed.ncbi.nlm.nih.gov/38848009/"
@@ -56,7 +56,7 @@ sources:
     url: "https://www.nice.org.uk/guidance/cg170/chapter/recommendations"
     organisation: "National Institute for Health and Care Excellence"
     publicationYear: 2013
-    note: "Использовано для play-based social-communication interventions, joint attention, engagement, reciprocal communication и участия родителей, carers и teachers."
+    note: "Использовано для play-based social-communication interventions, совместное внимание, engagement, reciprocal communication и участия родителей, carers и teachers."
     accessedAt: 2026-09-18
 ---
 
@@ -96,9 +96,9 @@ NDBI - это группа подходов, которые объединяют
 
 При этом игра остаётся интересной для ребёнка.
 
-## Почему здесь есть слово «developmental»
+## Что означает «развивающий»
 
-Developmental - развивающий - означает, что специалист учитывает развитие ребёнка.
+Развивающий компонент означает, что специалист учитывает уровень и особенности развития ребёнка.
 
 То есть цель выбирают не только потому, что взрослому хотелось бы видеть определённое поведение.
 
@@ -134,9 +134,9 @@ Behavioral - поведенческий - означает, что внутри 
 
 **«просто играть и ждать, что развитие произойдёт само».**
 
-## Почему здесь есть слово «naturalistic»
+## Что означает «натуралистический»
 
-Naturalistic - естественный - означает, что обучение стараются проводить в обычном взаимодействии.
+Натуралистический компонент означает, что обучение стараются проводить в обычном взаимодействии.
 
 Например:
 
@@ -268,7 +268,7 @@ Meta-analysis 27 исследований с групповым дизайном
 
 **g = 0.28**
 
-а для совместного внимания (joint attention):
+а для совместного внимания (совместное внимание):
 
 **g = 0.14.**
 
@@ -294,9 +294,9 @@ Meta-analysis 27 исследований с групповым дизайном
 
 Более новые обзоры продолжают находить данные в пользу NDBI, но одновременно подчёркивают ограничения исследований.
 
-Meta-analytic review 2024 года рассматривал NDBI у детей младшего возраста и также показал, что результат зависит от конкретного outcome и характеристик исследований.
+Метааналитический обзор 2024 года рассматривал NDBI у детей младшего возраста и также показал, что результат зависит от конкретного результата и характеристик исследований.
 
-В systematic review 2025 года положительные результаты были найдены для ряда областей, включая язык, адаптивные и повседневные навыки и joint attention.
+В систематическом обзоре 2025 года положительные результаты были найдены для ряда областей, включая язык, адаптивные и повседневные навыки и совместное внимание.
 
 Но авторы также отмечали высокий risk of bias - риск систематической ошибки - во многих исследованиях и низкую или умеренную уверенность в части результатов.
 
@@ -329,7 +329,7 @@ Meta-analytic review 2024 года рассматривал NDBI у детей �
 
 ## Должны ли родители участвовать
 
-Во многих NDBI родители могут участвовать в intervention.
+Во многих NDBI родители могут участвовать во вмешательстве.
 
 Например, специалист может показать, как:
 
@@ -356,7 +356,7 @@ AAC можно использовать вместе с NDBI.
 
 Систематический обзор и метаанализ 2025 года по аутичным детям с минимальной устной речью включил 29 исследований NDBI.
 
-Результаты указывали, что языковые outcomes могли быть лучше, когда aided AAC включалась в NDBI.
+Результаты указывали, что языковые результаты могли быть лучше, когда AAC с внешними средствами включалась в NDBI.
 
 Но прямых сравнений NDBI с AAC и без AAC было только три, поэтому точную дополнительную пользу AAC пока нельзя оценить уверенно.
 
@@ -506,7 +506,7 @@ NDBI - это не одна терапия.
 - интересы ребёнка
 - конкретные измеримые цели.
 
-Исследования показывают положительные результаты для некоторых областей развития, особенно социальной вовлечённости, языка, игры и когнитивных навыков, но эффект различается между программами и outcomes.
+Исследования показывают положительные результаты для некоторых областей развития, особенно социальной вовлечённости, языка, игры и когнитивных навыков, но эффект различается между программами и измеряемыми результатами.
 
 Главный вопрос для родителей:
 
