@@ -18,7 +18,7 @@ riskLevel: lower
 disclaimerType: informational
 conflictOfInterest: "Конфликт интересов не заявлен."
 publishedAt: 2026-09-18
-updatedAt: "2026-09-20T15:03:49.689Z"
+updatedAt: "2026-09-20T15:05:25.596Z"
 reviewDueAt: 2027-03-18
 draft: false
 keyPoints:
@@ -56,19 +56,19 @@ sources:
     organisation: "Cochrane"
     note: "Более старый обзор с поиском до 2017 года; на тот момент уверенность в данных рандомизированных исследований PECS была очень низкой."
     accessedAt: 2026-09-18
-  - title: "Meta-analysis of Picture Exchange Communication System efficacy in autistic children in Mainland China"
+  - title: "Efficacy of the Picture Exchange Communication System for children with autism in Mainland China: A systematic review and meta-analysis of randomized controlled trials"
     url: "https://pubmed.ncbi.nlm.nih.gov/41442835/"
     organisation: "PubMed"
     publicationYear: 2026
     note: "37 рандомизированных исследований, 34 включены в количественный синтез, всего 2343 участника; сообщён крупный объединённый эффект для коммуникации и отсутствие значимого объединённого эффекта для развития языка."
     accessedAt: 2026-09-18
-  - title: "A systematic review of acquisition and mastery of PECS phases"
+  - title: "A systematic review of acquisition and mastery of skills taught using the Picture Exchange Communication System"
     url: "https://pubmed.ncbi.nlm.nih.gov/38300727/"
     organisation: "PubMed"
     publicationYear: 2024
     note: "Использовано для ограничений, связанных с освоением фаз и неоднородностью критериев."
     accessedAt: 2026-09-18
-  - title: "Barriers and facilitators to implementation of the Picture Exchange Communication System: a systematic review"
+  - title: "Facilitators and barriers to the implementation of the picture exchange communication system (PECS): a systematic review"
     url: "https://www.frontiersin.org/journals/education/articles/10.3389/feduc.2024.1206410/full"
     organisation: "Frontiers in Education"
     publicationYear: 2024
