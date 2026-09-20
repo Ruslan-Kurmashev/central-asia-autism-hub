@@ -18,7 +18,7 @@ riskLevel: moderate
 disclaimerType: medical
 conflictOfInterest: "Конфликт интересов не заявлен."
 publishedAt: 2026-09-18
-updatedAt: "2026-09-20T14:06:44.232Z"
+updatedAt: "2026-09-20T14:56:35.348Z"
 reviewDueAt: 2027-03-18
 draft: false
 keyPoints:
@@ -36,7 +36,7 @@ sources:
   - title: "Autism and Autism Spectrum Disorder"
     url: "https://www.asha.org/practice-portal/clinical-topics/autism/"
     organisation: "American Speech-Language-Hearing Association"
-    note: "Использовано для communication support, social communication и разграничения речевых и языковых трудностей."
+    note: "Использовано для поддержки коммуникации, социальной коммуникации и разграничения речевых и языковых трудностей."
     accessedAt: 2026-09-18
   - title: "Autism spectrum disorder in under 19s: support and management - Recommendations"
     url: "https://www.nice.org.uk/guidance/cg170/chapter/recommendations"
@@ -147,7 +147,7 @@ AAC может включать:
 
 Это способ моделировать использование системы, а не экзамен для ребёнка.
 
-[Подробнее: Aided Language Modelling](/kz/ru/parents/aided-language-modelling/)
+[Подробнее: моделирование AAC](/kz/ru/parents/aided-language-modelling/)
 
 ## Обучение партнёров по коммуникации
 
@@ -179,7 +179,7 @@ AAC значительно шире и включает много других 
 
 [Подробнее: PECS - система обмена изображениями для коммуникации](/kz/ru/parents/pecs/)
 
-## обучение функциональной коммуникации (Functional Communication Training)
+## Обучение функциональной коммуникации (Functional Communication Training)
 
 Иногда сложная ситуация связана с тем, что человеку трудно сообщить о потребности.
 
@@ -232,7 +232,7 @@ AAC значительно шире и включает много других 
 - что человек может пытаться сообщить;
 - понимают ли его окружающие.
 
-Термины гештальт-обработку языка (Gestalt Language Processing) и естественное освоение языка (Natural Language Acquisition) нужно отделять от самого факта существования эхолалии. Специфические утверждения о этапах NLA и протоколе вмешательства требуют большей доказательной базы.
+Термины «гештальт-обработка языка» (Gestalt Language Processing) и «естественное освоение языка» (Natural Language Acquisition) нужно отличать от самого факта существования эхолалии. Специфические утверждения об этапах NLA и соответствующем протоколе вмешательства требуют большей доказательной базы.
 
 ## Если речь трудно понять
 
