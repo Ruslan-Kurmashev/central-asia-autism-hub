@@ -18,7 +18,7 @@ riskLevel: moderate
 disclaimerType: medical
 conflictOfInterest: "Конфликт интересов не заявлен."
 publishedAt: 2026-09-18
-updatedAt: "2026-09-20T15:00:04.447Z"
+updatedAt: "2026-09-20T15:00:59.152Z"
 reviewDueAt: 2027-03-18
 draft: false
 keyPoints:
@@ -63,7 +63,7 @@ sources:
 
 [← Коммуникация и AAC](/kz/ru/parents/kommunikatsiya-i-aac/)
 
-Functional Communication Training, или FCT, - это подход, при котором человека обучают более доступному способу сообщить потребность, которая раньше выражалась через сложное или опасное поведение.
+Обучение функциональной коммуникации (Functional Communication Training, FCT) - это подход, при котором человека обучают более доступному способу сообщить потребность, которая раньше выражалась через сложное или опасное поведение.
 
 Например, ребёнок может кричать, когда ему нужен перерыв.
 
