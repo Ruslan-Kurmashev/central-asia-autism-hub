@@ -18,7 +18,7 @@ riskLevel: moderate
 disclaimerType: informational
 conflictOfInterest: "Конфликт интересов не заявлен."
 publishedAt: 2026-09-18
-updatedAt: "2026-09-20T15:01:58.458Z"
+updatedAt: "2026-09-20T15:05:25.596Z"
 reviewDueAt: 2027-03-18
 draft: false
 keyPoints:
@@ -50,7 +50,7 @@ sources:
     publicationYear: 2011
     note: "Использовано для регресса речевых навыков и оценки в многоязычном контексте."
     accessedAt: 2026-09-18
-  - title: "Updated Project AIM meta-analysis of early childhood autism interventions"
+  - title: "Autism intervention meta-analysis of early childhood studies (Project AIM): updated systematic review and secondary analysis"
     url: "https://pubmed.ncbi.nlm.nih.gov/37963634/"
     organisation: "PubMed"
     publicationYear: 2023
@@ -66,7 +66,7 @@ sources:
     url: "https://pubmed.ncbi.nlm.nih.gov/25805060/"
     organisation: "Cochrane / PubMed"
     publicationYear: 2015
-    note: "Использовано для ограничения claims о nonspeech oral-motor treatment."
+    note: "Использовано для ограничения утверждений об эффективности неречевой орально-моторной терапии."
     accessedAt: 2026-09-18
 ---
 
