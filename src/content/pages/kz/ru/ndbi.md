@@ -18,7 +18,7 @@ riskLevel: moderate
 disclaimerType: informational
 conflictOfInterest: "Конфликт интересов не заявлен."
 publishedAt: "2026-09-18T17:36:00Z"
-updatedAt: "2026-09-20T14:01:38.337Z"
+updatedAt: "2026-09-20T14:08:55.783Z"
 reviewDueAt: 2027-03-18
 draft: false
 keyPoints:
@@ -32,31 +32,31 @@ sources:
     url: "https://pubmed.ncbi.nlm.nih.gov/31018655/"
     organisation: "PubMed"
     publicationYear: 2019
-    note: "27 group-design studies; использовано для outcome-specific effect sizes по expressive language, play, social engagement, cognition, совместное внимание и receptive language."
+    note: "27 групповых исследований; использовано для эффектов по экспрессивной речи, игре, социальной вовлечённости, когнитивным навыкам, совместному вниманию и пониманию речи."
     accessedAt: 2026-09-18
   - title: "Naturalistic Developmental Behavioral Interventions for Autism Spectrum Disorder: A Meta-analytic Review"
     url: "https://pubmed.ncbi.nlm.nih.gov/38170431/"
     organisation: "PubMed"
     publicationYear: 2024
-    note: "Использовано для более современной оценки NDBI у детей младшего возраста и различий между outcomes и исследованиями."
+    note: "Использовано для более современной оценки NDBI у детей младшего возраста и различий между результатами и исследованиями."
     accessedAt: 2026-09-18
   - title: "Effectiveness and experiences of early intensive behavioral and naturalistic developmental behavior interventions for autism spectrum disorders: a mixed-methods systematic review and meta-analysis"
     url: "https://pubmed.ncbi.nlm.nih.gov/41454358/"
     organisation: "PubMed"
     publicationYear: 2025
-    note: "Использовано для более свежих данных по adaptive behavior, daily living, language и совместное внимание, а также ограничений risk of bias и certainty."
+    note: "Использовано для более свежих данных по адаптивному поведению, повседневным навыкам, языку и совместному вниманию, а также ограничений, связанных с риском систематической ошибки и уверенностью в доказательствах."
     accessedAt: 2026-09-18
   - title: "The Effect of Naturalistic Developmental Behavioral Interventions and Aided AAC on the Language Development of Children on the Autism Spectrum with Minimal Speech: A Systematic Review and Meta-analysis"
     url: "https://pubmed.ncbi.nlm.nih.gov/38848009/"
     organisation: "PubMed"
     publicationYear: 2025
-    note: "29 studies; использовано для раздела о совместимости NDBI и aided AAC и ограничения прямых сравнений AAC vs no AAC."
+    note: "29 исследований; использовано для раздела о совместимости NDBI и AAC с внешними средствами и ограничениях прямых сравнений NDBI с AAC и без AAC."
     accessedAt: 2026-09-18
   - title: "Autism spectrum disorder in under 19s: support and management - Recommendations"
     url: "https://www.nice.org.uk/guidance/cg170/chapter/recommendations"
     organisation: "National Institute for Health and Care Excellence"
     publicationYear: 2013
-    note: "Использовано для play-based social-communication interventions, совместное внимание, engagement, reciprocal communication и участия родителей, carers и teachers."
+    note: "Использовано для игровых вмешательств в области социальной коммуникации, совместного внимания, вовлечённости, взаимной коммуникации и участия родителей, ухаживающих взрослых и педагогов."
     accessedAt: 2026-09-18
 ---
 
