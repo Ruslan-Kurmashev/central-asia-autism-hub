@@ -1,7 +1,7 @@
 ---
 title: "PECS: система обмена изображениями для коммуникации"
 summary: "Что такое PECS, чем он отличается от AAC в целом, что показывают исследования, как оценивать результат и когда рассматривать другие варианты."
-description: "Практическое руководство для родителей о PECS при аутизме: протокол, доказательства, отличие от AAC, влияние на речь, generalisation, ограничения и выбор специалиста."
+description: "Практическое руководство для родителей о PECS при аутизме: протокол, доказательства, отличие от AAC, влияние на речь, перенос навыка, ограничения и выбор специалиста."
 country: kz
 language: ru
 section: parents
@@ -18,7 +18,7 @@ riskLevel: lower
 disclaimerType: informational
 conflictOfInterest: "Конфликт интересов не заявлен."
 publishedAt: 2026-09-18
-updatedAt: "2026-09-20T13:59:52.330Z"
+updatedAt: "2026-09-20T14:05:49.250Z"
 reviewDueAt: 2027-03-18
 draft: false
 keyPoints:
@@ -37,13 +37,13 @@ sources:
     url: "https://pubmed.ncbi.nlm.nih.gov/20181849/"
     organisation: "PubMed"
     publicationYear: 2010
-    note: "Ранний meta-analysis: small-to-moderate communication gains, limited speech effects, maintenance/generalisation limitations."
+    note: "Ранний метаанализ: небольшие или умеренные улучшения коммуникации, ограниченный эффект на речь и ограничения по сохранению и переносу навыка."
     accessedAt: 2026-09-18
   - title: "The effectiveness of Picture Exchange Communication System (PECS) training for teachers of children with autism: a pragmatic, group randomised controlled trial"
     url: "https://pubmed.ncbi.nlm.nih.gov/17501728/"
     organisation: "PubMed"
     publicationYear: 2007
-    note: "Cluster RCT: increased PECS use and communication initiations, no significant increase in speech frequency or standardized language outcomes."
+    note: "Кластерное рандомизированное исследование: использование PECS и коммуникативные инициативы увеличились, но значимого роста частоты речи или стандартизированных языковых показателей не было."
     accessedAt: 2026-09-18
   - title: "A communication-based intervention for nonverbal children with autism: what changes? Who benefits?"
     url: "https://pubmed.ncbi.nlm.nih.gov/21787048/"
@@ -54,7 +54,7 @@ sources:
   - title: "Communication interventions for autism spectrum disorder in minimally verbal children"
     url: "https://www.cochrane.org/evidence/CD012324_are-communication-interventions-effective-minimally-verbal-children-autism-spectrum-disorder"
     organisation: "Cochrane"
-    note: "Older review with search cutoff 2017; very low-certainty PECS RCT evidence at that time."
+    note: "Более старый обзор с поиском до 2017 года; на тот момент уверенность в данных рандомизированных исследований PECS была очень низкой."
     accessedAt: 2026-09-18
   - title: "Meta-analysis of Picture Exchange Communication System efficacy in autistic children in Mainland China"
     url: "https://pubmed.ncbi.nlm.nih.gov/41442835/"
@@ -72,7 +72,7 @@ sources:
     url: "https://www.frontiersin.org/journals/education/articles/10.3389/feduc.2024.1206410/full"
     organisation: "Frontiers in Education"
     publicationYear: 2024
-    note: "Использовано для implementation fidelity, training, context and supervision limitations."
+    note: "Использовано для ограничений, связанных с качеством реализации, обучением, контекстом и супервизией."
     accessedAt: 2026-09-18
 ---
 
