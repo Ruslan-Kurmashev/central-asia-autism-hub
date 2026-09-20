@@ -1,7 +1,7 @@
 ---
 title: "AAC: альтернативная и дополнительная коммуникация"
 summary: "Что такое AAC, кому она может быть полезна, какие бывают системы, как их выбирают и как понять, помогает ли коммуникационная поддержка."
-description: "Практическое руководство для родителей об AAC при аутизме: low-tech и high-tech AAC, выбор системы, влияние на речь, доказательства, generalisation и мониторинг."
+description: "Практическое руководство для родителей об AAC при аутизме: низкотехнологичные и высокотехнологичные средства, выбор системы, влияние на речь, доказательства, перенос навыка и мониторинг."
 country: kz
 language: ru
 section: parents
@@ -18,7 +18,7 @@ riskLevel: lower
 disclaimerType: informational
 conflictOfInterest: "Конфликт интересов не заявлен."
 publishedAt: 2026-09-18
-updatedAt: "2026-09-20T13:54:56.372Z"
+updatedAt: "2026-09-20T14:05:49.250Z"
 reviewDueAt: 2027-03-18
 draft: false
 keyPoints:
@@ -31,13 +31,13 @@ sources:
   - title: "Augmentative and Alternative Communication (AAC)"
     url: "https://www.asha.org/Practice-Portal/Professional-Issues/Augmentative-and-Alternative-Communication/"
     organisation: "American Speech-Language-Hearing Association"
-    note: "Использовано для определения AAC, zero-exclusion approach, отсутствия prerequisites, assessment, augmented input и постоянного доступа к communication tools."
+    note: "Использовано для определения AAC, принципа отсутствия исключающих критериев, отсутствия обязательных предварительных требований, оценки, дополненного языкового ввода и постоянного доступа к средствам коммуникации."
     accessedAt: 2026-09-18
   - title: "Augmentative and Alternative Communication and Speech Production for Individuals with ASD: A Systematic Review"
     url: "https://pubmed.ncbi.nlm.nih.gov/33511525/"
     organisation: "PubMed"
     publicationYear: 2021
-    note: "Систематический обзор 25 single-case и 3 group studies: AAC сопровождалась улучшением speech production, при этом speech gains обычно не превосходили использование AAC."
+    note: "Систематический обзор 25 исследований единичных случаев и 3 групповых исследований: AAC сопровождалась улучшением устной речи, при этом речевые улучшения обычно не превосходили использование самой AAC."
     accessedAt: 2026-09-18
   - title: "A systematic review of AAC interventions using speech generating devices for autistic preschoolers"
     url: "https://pubmed.ncbi.nlm.nih.gov/40164143/"
@@ -49,13 +49,13 @@ sources:
     url: "https://pubmed.ncbi.nlm.nih.gov/42059383/"
     organisation: "PubMed"
     publicationYear: 2026
-    note: "69 studies; большая часть исследовала speech-generating devices и low-tech picture exchange, с выраженным фокусом на proximal/requesting outcomes."
+    note: "69 исследований; большая часть изучала устройства с синтезом речи и низкотехнологичный обмен изображениями, с выраженным фокусом на непосредственных результатах и просьбах."
     accessedAt: 2026-09-18
   - title: "The Effect of Naturalistic Developmental Behavioral Interventions and Aided AAC on the Language Development of Children on the Autism Spectrum with Minimal Speech: A Systematic Review and Meta-analysis"
     url: "https://pubmed.ncbi.nlm.nih.gov/38848009/"
     organisation: "PubMed"
     publicationYear: 2025
-    note: "29 studies; only three direct AAC vs no-AAC comparisons within NDBI, with larger aggregate and comparative effects when AAC was included."
+    note: "29 исследований; только три напрямую сравнивали NDBI с AAC и без AAC, при этом совокупные и сравнительные эффекты были выше при включении AAC."
     accessedAt: 2026-09-18
 ---
 
