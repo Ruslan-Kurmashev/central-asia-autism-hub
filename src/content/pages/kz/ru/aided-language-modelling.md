@@ -1,7 +1,7 @@
 ---
 title: "Aided Language Modelling: как взрослый моделирует AAC"
 summary: "Как работает моделирование AAC (Aided Language Modelling), что показывают исследования, как давать языковой пример без давления и как оценивать результат."
-description: "Практическое руководство для родителей об aided language modelling и augmented input: evidence, modelling vs prompting, multilingual AAC, generalisation и мониторинг."
+description: "Практическое руководство для родителей о моделировании AAC и дополненном языковом вводе: доказательства, отличие моделирования от подсказок, многоязычная AAC, перенос навыка и мониторинг."
 country: kz
 language: ru
 section: parents
@@ -18,7 +18,7 @@ riskLevel: lower
 disclaimerType: informational
 conflictOfInterest: "Конфликт интересов не заявлен."
 publishedAt: 2026-09-18
-updatedAt: "2026-09-20T13:59:52.330Z"
+updatedAt: "2026-09-20T14:05:49.250Z"
 reviewDueAt: 2027-03-18
 draft: false
 keyPoints:
@@ -37,19 +37,19 @@ sources:
     url: "https://pubmed.ncbi.nlm.nih.gov/30198767/"
     organisation: "PubMed"
     publicationYear: 2018
-    note: "48 experimental studies, 267 participants; supportive evidence with substantial heterogeneity."
+    note: "48 экспериментальных исследований, 267 участников; данные в целом поддерживают подход, но исследования существенно различаются."
     accessedAt: 2026-09-18
   - title: "Systematic instruction and aided AAC modelling in minimally speaking autistic children"
     url: "https://pubs.asha.org/doi/10.1044/2024_AJSLP-23-00313"
     organisation: "American Speech-Language-Hearing Association"
     publicationYear: 2024
-    note: "Small-N autism-specific study with acquisition, maintenance and generalisation outcomes within a multicomponent package."
+    note: "Небольшое исследование с аутичными участниками оценивало освоение, сохранение и перенос навыка в составе многокомпонентной программы."
     accessedAt: 2026-09-18
   - title: "AAC interventions targeting commenting"
     url: "https://apps.asha.org/EvidenceMaps/Articles/ArticleSummary/a3b092bd-1722-f011-8159-005056834e2b"
     organisation: "ASHA Evidence Maps"
     publicationYear: 2025
-    note: "Used for mixed evidence on commenting outcomes."
+    note: "Использовано для неоднозначных данных по развитию комментирования."
     accessedAt: 2026-09-18
   - title: "The Effect of Naturalistic Developmental Behavioral Interventions and Aided AAC on Language Development"
     url: "https://pubmed.ncbi.nlm.nih.gov/38848009/"
@@ -61,7 +61,7 @@ sources:
     url: "https://pubs.asha.org/doi/10.1044/2024_PERSP-23-00111"
     organisation: "American Speech-Language-Hearing Association"
     publicationYear: 2024
-    note: "Used for multilingual AAC evidence gaps and language-access considerations."
+    note: "Использовано для пробелов в доказательной базе многоязычной AAC и вопросов языковой доступности."
     accessedAt: 2026-09-18
 ---
 
