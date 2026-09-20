@@ -1,7 +1,7 @@
 ---
 title: "Разбиение сложного навыка на шаги: Task Analysis"
 summary: "Как разбиение задачи на шаги (Task Analysis) помогает обучать бытовым, учебным и функциональным навыкам и измерять самостоятельность."
-description: "Практическое руководство для родителей о Task Analysis: chaining, prompting, visual supports, video modeling, adaptations, generalisation и monitoring."
+description: "Практическое руководство для родителей о разбиении сложного навыка на шаги: цепочки действий, подсказки, визуальная поддержка, видеомоделирование, адаптации, перенос навыка и мониторинг."
 country: kz
 language: ru
 section: parents
@@ -18,7 +18,7 @@ riskLevel: lower
 disclaimerType: informational
 conflictOfInterest: "Конфликт интересов не заявлен."
 publishedAt: 2026-09-18
-updatedAt: "2026-09-20T13:56:17.108Z"
+updatedAt: "2026-09-20T14:07:29.176Z"
 reviewDueAt: 2027-03-18
 draft: false
 keyPoints:
