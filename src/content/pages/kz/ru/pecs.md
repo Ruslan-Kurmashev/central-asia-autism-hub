@@ -18,7 +18,7 @@ riskLevel: lower
 disclaimerType: informational
 conflictOfInterest: "Конфликт интересов не заявлен."
 publishedAt: 2026-09-18
-updatedAt: "2026-09-20T15:01:58.458Z"
+updatedAt: "2026-09-20T15:03:49.689Z"
 reviewDueAt: 2027-03-18
 draft: false
 keyPoints:
@@ -31,7 +31,7 @@ sources:
   - title: "Augmentative and Alternative Communication (AAC)"
     url: "https://www.asha.org/Practice-Portal/Professional-Issues/Augmentative-and-Alternative-Communication/"
     organisation: "American Speech-Language-Hearing Association"
-    note: "Использовано для описания PECS как одного из AAC approaches и структуры протокола."
+    note: "Использовано для описания PECS как одного из подходов AAC и структуры протокола."
     accessedAt: 2026-09-18
   - title: "Effectiveness of the Picture Exchange Communication System (PECS) on communication and speech for children with autism spectrum disorders: a meta-analysis"
     url: "https://pubmed.ncbi.nlm.nih.gov/20181849/"
