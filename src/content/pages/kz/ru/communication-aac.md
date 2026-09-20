@@ -18,7 +18,7 @@ riskLevel: moderate
 disclaimerType: medical
 conflictOfInterest: "Конфликт интересов не заявлен."
 publishedAt: 2026-09-18
-updatedAt: "2026-09-19T22:58:24.617Z"
+updatedAt: "2026-09-20T14:05:49.250Z"
 reviewDueAt: 2027-03-18
 draft: false
 keyPoints:
@@ -31,7 +31,7 @@ sources:
   - title: "Augmentative and Alternative Communication (AAC)"
     url: "https://www.asha.org/Practice-Portal/Professional-Issues/Augmentative-and-Alternative-Communication/"
     organisation: "American Speech-Language-Hearing Association"
-    note: "Использовано для определения AAC, zero-exclusion approach, отсутствия prerequisites, assessment и partner support."
+    note: "Использовано для определения AAC, принципа отсутствия исключающих критериев, отсутствия обязательных предварительных требований, оценки и поддержки партнёров по коммуникации."
     accessedAt: 2026-09-18
   - title: "Autism and Autism Spectrum Disorder"
     url: "https://www.asha.org/practice-portal/clinical-topics/autism/"
@@ -42,7 +42,7 @@ sources:
     url: "https://www.nice.org.uk/guidance/cg170/chapter/recommendations"
     organisation: "National Institute for Health and Care Excellence"
     publicationYear: 2013
-    note: "Использовано для social-communication interventions, visual supports и functional assessment."
+    note: "Использовано для вмешательств в области социальной коммуникации, визуальной поддержки и функциональной оценки."
     accessedAt: 2026-09-18
 ---
 
