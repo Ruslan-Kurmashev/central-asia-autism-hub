@@ -18,7 +18,7 @@ riskLevel: lower
 disclaimerType: informational
 conflictOfInterest: "Конфликт интересов не заявлен."
 publishedAt: 2026-09-18
-updatedAt: "2026-09-19T23:05:53.909Z"
+updatedAt: "2026-09-20T13:56:17.108Z"
 reviewDueAt: 2027-03-18
 draft: false
 keyPoints:
@@ -138,7 +138,7 @@ sources:
 - слишком сложные требования
 - проблемы в окружающей среде.
 
-[Функциональная оценка поведения](/kz/ru/parents/functional-поведения-assessment/)
+[Функциональная оценка поведения](/kz/ru/parents/functional-behavior-assessment/)
 
 ## Что рекомендует NICE
 
@@ -256,7 +256,7 @@ AAC - средство коммуникации.
 
 ## Подсказка и самостоятельность - разные результаты
 
-Подсказка (prompt).
+Подсказка.
 
 Самостоятельное выполнение навыка и выполнение после подсказки нужно учитывать отдельно.
 
@@ -375,9 +375,9 @@ AAC - средство коммуникации.
 
 [Дифференциальное подкрепление](/kz/ru/parents/differential-reinforcement/)
 
-[Функциональная оценка поведения](/kz/ru/parents/functional-поведения-assessment/)
+[Функциональная оценка поведения](/kz/ru/parents/functional-behavior-assessment/)
 
-[Antecedent-Based Interventions](/kz/ru/parents/antecedent-based-вмешательстваs/)
+[Antecedent-Based Interventions](/kz/ru/parents/antecedent-based-interventions/)
 
 [Functional Communication Training](/kz/ru/parents/functional-communication-training/)
 
