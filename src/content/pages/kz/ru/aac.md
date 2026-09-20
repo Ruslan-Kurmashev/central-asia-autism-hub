@@ -18,7 +18,7 @@ riskLevel: lower
 disclaimerType: informational
 conflictOfInterest: "Конфликт интересов не заявлен."
 publishedAt: 2026-09-18
-updatedAt: "2026-09-20T14:06:44.232Z"
+updatedAt: "2026-09-20T14:56:35.348Z"
 reviewDueAt: 2027-03-18
 draft: false
 keyPoints:
@@ -277,7 +277,7 @@ ASHA описывает дополненный языковой ввод (augmen
 
 Ребёнок не обязан немедленно повторять действия взрослого.
 
-[Подробнее: Aided Language Modelling](/kz/ru/parents/aided-language-modelling/)
+[Подробнее: моделирование AAC](/kz/ru/parents/aided-language-modelling/)
 
 ## Важна работа партнёров по коммуникации
 
