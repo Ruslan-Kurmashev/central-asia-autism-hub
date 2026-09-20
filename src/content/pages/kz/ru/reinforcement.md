@@ -1,7 +1,7 @@
 ---
 title: "Подкрепление: что это такое и как использовать его безопасно"
 summary: "Что такое положительное и отрицательное подкрепление, чем оно отличается от награды и наказания и как оценивать его безопасное применение."
-description: "Практическое руководство для родителей о подкреплении: positive and negative reinforcement, rewards, prompts, autonomy, AAC, safety и monitoring."
+description: "Практическое руководство для родителей о подкреплении: положительное и отрицательное подкрепление, награды, подсказки, автономия, AAC, безопасность и мониторинг."
 country: kz
 language: ru
 section: parents
@@ -18,7 +18,7 @@ riskLevel: lower
 disclaimerType: informational
 conflictOfInterest: "Конфликт интересов не заявлен."
 publishedAt: 2026-09-18
-updatedAt: "2026-09-20T13:56:17.108Z"
+updatedAt: "2026-09-20T14:07:29.176Z"
 reviewDueAt: 2027-03-18
 draft: false
 keyPoints:
