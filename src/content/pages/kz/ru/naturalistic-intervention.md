@@ -1,7 +1,7 @@
 ---
 title: "Обучение в естественных ситуациях"
 summary: "Как развивать полезные навыки во время игры, еды, прогулки и других обычных ситуаций, не превращая весь день ребёнка в занятие."
-description: "Практическое руководство для родителей о Naturalistic Intervention: как выглядит обучение в естественных ситуациях, какие навыки можно развивать, как использовать интересы ребёнка, AAC и подсказки и как оценивать результат."
+description: "Практическое руководство для родителей об обучении в естественных ситуациях (Naturalistic Intervention): как выглядит подход, какие навыки можно развивать, как использовать интересы ребёнка, AAC и подсказки и как оценивать результат."
 country: kz
 language: ru
 section: parents
@@ -18,11 +18,11 @@ riskLevel: lower
 disclaimerType: informational
 conflictOfInterest: "Конфликт интересов не заявлен."
 publishedAt: "2026-09-18T16:33:14Z"
-updatedAt: "2026-09-20T13:57:48.545Z"
+updatedAt: "2026-09-20T14:08:55.783Z"
 reviewDueAt: 2027-03-18
 draft: false
 keyPoints:
-  - "Naturalistic Intervention - обучение в естественных ситуациях - встраивает обучение в обычные занятия и повседневные ситуации ребёнка."
+  - "Обучение в естественных ситуациях (Naturalistic Intervention) встраивает обучение в обычные занятия и повседневные ситуации ребёнка."
   - "Это не просто свободная игра: у обучения есть конкретная цель, поддержка и способ оценить результат."
   - "Навык важно проверять в реальной жизни и отличать самостоятельное выполнение от ответа после подсказки."
   - "Родителям не нужно превращать весь день ребёнка в непрерывное занятие."
@@ -32,19 +32,19 @@ sources:
     url: "https://pmc.ncbi.nlm.nih.gov/articles/PMC8510990/"
     organisation: "National Clearinghouse on Autism Evidence and Practice"
     publicationYear: 2020
-    note: "Использовано для определения Naturalistic Intervention и её классификации как evidence-based practice. В категории Naturalistic Intervention учтено 75 научных публикаций за 1990-2017 годы."
+    note: "Использовано для определения Naturalistic Intervention и её классификации как практики с научными подтверждениями. В категории Naturalistic Intervention учтено 75 научных публикаций за 1990-2017 годы."
     accessedAt: 2026-09-18
   - title: "Naturalistic Intervention"
     url: "https://files.eric.ed.gov/fulltext/ED595337.pdf"
     organisation: "Autism Focused Intervention Resources and Modules"
     publicationYear: 2017
-    note: "Использовано для практической структуры: выбор целевого навыка и routine, организация среды, использование естественных последствий, prompting, modeling и monitoring."
+    note: "Использовано для практической структуры: выбор целевого навыка и повседневной ситуации, организация среды, использование естественных последствий, подсказок, моделирования и мониторинга."
     accessedAt: 2026-09-18
   - title: "Autism spectrum disorder in under 19s: support and management - Recommendations"
     url: "https://www.nice.org.uk/guidance/cg170/chapter/recommendations"
     organisation: "National Institute for Health and Care Excellence"
     publicationYear: 2013
-    note: "Использовано для рекомендаций по play-based social-communication interventions, joint attention, engagement, reciprocal communication и адаптации к developmental level ребёнка."
+    note: "Использовано для рекомендаций по игровым вмешательствам в области социальной коммуникации, совместному вниманию, вовлечённости, взаимной коммуникации и адаптации к уровню развития ребёнка."
     accessedAt: 2026-09-18
 ---
 
