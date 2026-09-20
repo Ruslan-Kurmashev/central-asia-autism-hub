@@ -1,7 +1,7 @@
 ---
 title: "Functional Communication Training: когда поведение заменяет сообщение"
 summary: "Как FCT помогает обучать более доступной коммуникации после функциональной оценки и проверки медицинских, сенсорных и средовых причин."
-description: "Практическое руководство для родителей о Functional Communication Training: function-based assessment, evidence, AAC, safety, generalisation и monitoring."
+description: "Практическое руководство для родителей об обучении функциональной коммуникации: функциональная оценка, доказательства, AAC, безопасность, перенос навыка и мониторинг."
 country: kz
 language: ru
 section: parents
@@ -18,7 +18,7 @@ riskLevel: moderate
 disclaimerType: medical
 conflictOfInterest: "Конфликт интересов не заявлен."
 publishedAt: 2026-09-18
-updatedAt: "2026-09-20T13:59:52.330Z"
+updatedAt: "2026-09-20T14:05:49.250Z"
 reviewDueAt: 2027-03-18
 draft: false
 keyPoints:
