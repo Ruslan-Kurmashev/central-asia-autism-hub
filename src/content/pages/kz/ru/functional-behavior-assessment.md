@@ -18,7 +18,7 @@ riskLevel: moderate
 disclaimerType: medical
 conflictOfInterest: "Конфликт интересов не заявлен."
 publishedAt: 2026-09-18
-updatedAt: "2026-09-20T13:56:17.108Z"
+updatedAt: "2026-09-20T14:00:41.511Z"
 reviewDueAt: 2027-03-18
 draft: false
 keyPoints:
@@ -192,7 +192,7 @@ NICE рекомендует учитывать:
 
 Специалист может наблюдать:
 
-- когда behavior возникает
+- когда поведение возникает
 - когда его нет
 - какие demands были предъявлены
 - что делали окружающие
@@ -367,7 +367,7 @@ FBA не должна заканчиваться только словом:
 
 ## Что важно знать в Казахстане
 
-FBA может использоваться внутри psychological, behavioral, educational, developmental или multidisciplinary services.
+FBA может использоваться в психологической, поведенческой, образовательной, развивающей или мультидисциплинарной помощи.
 
 Само название:
 
