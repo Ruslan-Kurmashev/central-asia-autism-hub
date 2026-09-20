@@ -1,7 +1,7 @@
 ---
 title: "Развитие, взаимодействие и игра"
 summary: "Как ориентироваться в развивающей и игровой поддержке: совместное внимание, вовлечённость, игра, обучение в естественных ситуациях, NDBI и участие родителей."
-description: "Навигационный раздел для родителей о developmental и play-based interventions при аутизме: joint attention, engagement, play, Naturalistic Intervention, NDBI, parent-mediated и peer-mediated support."
+description: "Навигационный раздел для родителей о развивающих и игровых вмешательствах при аутизме: совместное внимание, вовлечённость, игра, обучение в естественных ситуациях, NDBI, поддержка с участием родителей и сверстников."
 country: kz
 language: ru
 section: parents
@@ -18,7 +18,7 @@ riskLevel: moderate
 disclaimerType: informational
 conflictOfInterest: "Конфликт интересов не заявлен."
 publishedAt: "2026-09-18T15:14:40Z"
-updatedAt: "2026-09-20T13:57:48.545Z"
+updatedAt: "2026-09-20T14:08:55.783Z"
 reviewDueAt: 2027-03-18
 draft: false
 keyPoints:
@@ -32,13 +32,13 @@ sources:
     url: "https://www.nice.org.uk/guidance/cg170/chapter/recommendations"
     organisation: "National Institute for Health and Care Excellence"
     publicationYear: 2013
-    note: "Использовано для play-based social-communication interventions, joint attention, engagement, reciprocal communication, parent/carer/teacher mediation и peer mediation."
+    note: "Использовано для игровых вмешательств в области социальной коммуникации, совместного внимания, вовлечённости, взаимной коммуникации, участия родителей, ухаживающих взрослых, педагогов и сверстников."
     accessedAt: 2026-09-18
   - title: "Evidence-Based Practices for Children, Youth, and Young Adults with Autism: Third Generation Review"
     url: "https://pmc.ncbi.nlm.nih.gov/articles/PMC8510990/"
     organisation: "National Clearinghouse on Autism Evidence and Practice"
     publicationYear: 2020
-    note: "Использовано для классификации Naturalistic Intervention и других focused practices."
+    note: "Использовано для классификации обучения в естественных ситуациях и других отдельных практик с научными подтверждениями."
     accessedAt: 2026-09-18
   - title: "The Effects of Joint Attention Interventions for Young Children With Autism Spectrum Disorder: A Meta-analysis"
     url: "https://pubmed.ncbi.nlm.nih.gov/41493690/"
@@ -50,19 +50,19 @@ sources:
     url: "https://pubmed.ncbi.nlm.nih.gov/31018655/"
     organisation: "PubMed"
     publicationYear: 2019
-    note: "27 group-design studies; outcome-specific effects for expressive language, play, social engagement, cognition, joint attention and receptive language."
+    note: "27 групповых исследований; использовано для эффектов по экспрессивной речи, игре, социальной вовлечённости, когнитивным навыкам, совместному вниманию и пониманию речи."
     accessedAt: 2026-09-18
   - title: "Effectiveness and experiences of early intensive behavioral and naturalistic developmental behavior interventions for autism spectrum disorders: a mixed-methods systematic review and meta-analysis"
     url: "https://pubmed.ncbi.nlm.nih.gov/41454358/"
     organisation: "PubMed"
     publicationYear: 2025
-    note: "Used for adaptive behavior, daily living, language and joint attention outcomes and limitations related to risk of bias and certainty."
+    note: "Использовано для данных по адаптивному поведению, повседневным навыкам, языку, совместному вниманию и ограничениям, связанным с риском систематической ошибки и уверенностью в доказательствах."
     accessedAt: 2026-09-18
   - title: "The Effect of Naturalistic Developmental Behavioral Interventions and Aided AAC on the Language Development of Children on the Autism Spectrum with Minimal Speech: A Systematic Review and Meta-analysis"
     url: "https://pubmed.ncbi.nlm.nih.gov/38848009/"
     organisation: "PubMed"
     publicationYear: 2025
-    note: "29 studies; only three direct AAC-vs-no-AAC comparisons within NDBI."
+    note: "29 исследований; только три напрямую сравнивали NDBI с AAC и без AAC."
     accessedAt: 2026-09-18
 ---
 
