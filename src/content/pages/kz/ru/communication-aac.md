@@ -18,7 +18,7 @@ riskLevel: moderate
 disclaimerType: medical
 conflictOfInterest: "Конфликт интересов не заявлен."
 publishedAt: 2026-09-18
-updatedAt: "2026-09-20T14:56:35.348Z"
+updatedAt: "2026-09-20T15:06:01.803Z"
 reviewDueAt: 2027-03-18
 draft: false
 keyPoints:
@@ -44,6 +44,12 @@ sources:
     publicationYear: 2013
     note: "Использовано для вмешательств в области социальной коммуникации, визуальной поддержки и функциональной оценки."
     accessedAt: 2026-09-18
+  - title: "Natural language acquisition and gestalt language processing: A critical analysis of their application to autism and speech language therapy"
+    url: "https://pubmed.ncbi.nlm.nih.gov/38784430/"
+    organisation: "PubMed"
+    publicationYear: 2024
+    note: "Использовано для осторожной оценки утверждений о Gestalt Language Processing и протоколе Natural Language Acquisition."
+    accessedAt: 2026-09-20
 ---
 
 [← Какие виды помощи и поддержки бывают при аутизме](/kz/ru/parents/vidy-pomoshchi-i-podderzhki-pri-autizme/)
