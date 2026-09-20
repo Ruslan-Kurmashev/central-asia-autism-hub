@@ -18,7 +18,7 @@ riskLevel: lower
 disclaimerType: informational
 conflictOfInterest: "Конфликт интересов не заявлен."
 publishedAt: 2026-09-18
-updatedAt: "2026-09-20T15:03:26.569Z"
+updatedAt: "2026-09-20T15:05:25.596Z"
 reviewDueAt: 2027-03-18
 draft: false
 keyPoints:
@@ -39,25 +39,25 @@ sources:
     publicationYear: 2018
     note: "48 экспериментальных исследований, 267 участников; данные в целом поддерживают подход, но исследования существенно различаются."
     accessedAt: 2026-09-18
-  - title: "Systematic instruction and aided AAC modelling in minimally speaking autistic children"
+  - title: "Effects of an Augmentative and Alternative Communication Intervention Package on Socio-Communicative Behaviors Between Minimally Speaking Autistic Children and Their Peers"
     url: "https://pubs.asha.org/doi/10.1044/2024_AJSLP-23-00313"
     organisation: "American Speech-Language-Hearing Association"
     publicationYear: 2024
     note: "Небольшое исследование с аутичными участниками оценивало освоение, сохранение и перенос навыка в составе многокомпонентной программы."
     accessedAt: 2026-09-18
-  - title: "AAC interventions targeting commenting"
+  - title: "Augmentative and Alternative Communication (AAC) Interventions That Promote Commenting: A Systematic Review"
     url: "https://apps.asha.org/EvidenceMaps/Articles/ArticleSummary/a3b092bd-1722-f011-8159-005056834e2b"
     organisation: "ASHA Evidence Maps"
     publicationYear: 2025
     note: "Использовано для неоднозначных данных по развитию комментирования."
     accessedAt: 2026-09-18
-  - title: "The Effect of Naturalistic Developmental Behavioral Interventions and Aided AAC on Language Development"
+  - title: "The Effect of Naturalistic Developmental Behavioral Interventions and Aided AAC on the Language Development of Children on the Autism Spectrum with Minimal Speech: A Systematic Review and Meta-analysis"
     url: "https://pubmed.ncbi.nlm.nih.gov/38848009/"
     organisation: "PubMed"
     publicationYear: 2025
     note: "Использовано как косвенная поддержка интеграции AAC в NDBI, но не как доказательство отдельного причинного эффекта моделирования."
     accessedAt: 2026-09-18
-  - title: "Multilingual Augmentative and Alternative Communication"
+  - title: "Multilingualism and Augmentative and Alternative Communication: A Review of the Literature"
     url: "https://pubs.asha.org/doi/10.1044/2024_PERSP-23-00111"
     organisation: "American Speech-Language-Hearing Association"
     publicationYear: 2024
