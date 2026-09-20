@@ -1,7 +1,7 @@
 ---
 title: "Самоуправление: как постепенно уменьшать зависимость от контроля взрослых"
 summary: "Как самоуправление (Self-Management) помогает человеку самому отслеживать, планировать и регулировать действия с меньшим количеством внешних подсказок."
-description: "Практическое руководство для родителей о Self-Management: self-monitoring, goal setting, self-recording, self-reinforcement, technology, autonomy и maintenance."
+description: "Практическое руководство для родителей о самоуправлении: самонаблюдение, постановка целей, самостоятельная фиксация результатов, самоподкрепление, технологии, автономия и сохранение навыков."
 country: kz
 language: ru
 section: parents
@@ -18,7 +18,7 @@ riskLevel: lower
 disclaimerType: informational
 conflictOfInterest: "Конфликт интересов не заявлен."
 publishedAt: 2026-09-18
-updatedAt: "2026-09-20T14:01:20.903Z"
+updatedAt: "2026-09-20T14:07:29.176Z"
 reviewDueAt: 2027-03-18
 draft: false
 keyPoints:
