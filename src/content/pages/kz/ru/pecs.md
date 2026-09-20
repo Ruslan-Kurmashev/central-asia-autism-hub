@@ -18,7 +18,7 @@ riskLevel: lower
 disclaimerType: informational
 conflictOfInterest: "Конфликт интересов не заявлен."
 publishedAt: 2026-09-18
-updatedAt: "2026-09-20T14:06:44.232Z"
+updatedAt: "2026-09-20T14:56:35.348Z"
 reviewDueAt: 2027-03-18
 draft: false
 keyPoints:
@@ -49,7 +49,7 @@ sources:
     url: "https://pubmed.ncbi.nlm.nih.gov/21787048/"
     organisation: "PubMed"
     publicationYear: 2011
-    note: "Secondary analysis: spontaneous communication gains, especially instrumental requesting."
+    note: "Вторичный анализ: отмечены улучшения спонтанной коммуникации, особенно просьб о предметах или действиях."
     accessedAt: 2026-09-18
   - title: "Communication interventions for autism spectrum disorder in minimally verbal children"
     url: "https://www.cochrane.org/evidence/CD012324_are-communication-interventions-effective-minimally-verbal-children-autism-spectrum-disorder"
@@ -60,7 +60,7 @@ sources:
     url: "https://pubmed.ncbi.nlm.nih.gov/41442835/"
     organisation: "PubMed"
     publicationYear: 2026
-    note: "37 RCTs, 34 in quantitative synthesis, n=2343; large pooled communication effect, no significant pooled effect on language development."
+    note: "37 рандомизированных исследований, 34 включены в количественный синтез, всего 2343 участника; сообщён крупный объединённый эффект для коммуникации и отсутствие значимого объединённого эффекта для развития языка."
     accessedAt: 2026-09-18
   - title: "A systematic review of acquisition and mastery of PECS phases"
     url: "https://pubmed.ncbi.nlm.nih.gov/38300727/"
@@ -257,10 +257,10 @@ PECS является одним из вариантов AAC.
 
 Другими вариантами могут быть:
 
-- communication board;
+- коммуникационная доска;
 - низкотехнологичная AAC;
 - жесты;
-- speech-generating device;
+- устройство с синтезом речи;
 - AAC на планшете;
 - комбинированная мультимодальная коммуникация.
 
@@ -290,7 +290,7 @@ PECS является одним из вариантов AAC.
 
 ## Качество реализации имеет значение
 
-Systematic review 2024 года изучал barriers and facilitators implementation PECS в 49 исследованиях.
+Систематический обзор 2024 года изучал факторы, которые мешают или помогают внедрять PECS, в 49 исследованиях.
 
 Авторы обнаружили, что ключевые details implementation часто сообщались недостаточно.
 
@@ -299,7 +299,7 @@ Systematic review 2024 года изучал barriers and facilitators implement
 - context and environment;
 - training and consultation;
 - supervision;
-- implementation fidelity;
+- соответствие протоколу;
 - adherence to protocol.
 
 Но имеющихся данных оказалось недостаточно, чтобы уверенно определить, какие именно факторы reliably предсказывают лучший результат.
@@ -316,7 +316,7 @@ PECS обычно не относится к физически рискован
 
 Но возможны другие проблемы.
 
-### Communication остаётся только просьбы
+### Коммуникация остаётся только на уровне просьб
 
 Если ребёнок умеет только:
 
@@ -411,7 +411,7 @@ PECS обычно не относится к физически рискован
 - PECS не используется вне занятий;
 - exchange cards физически неудобен;
 - vocabulary плохо расширяется;
-- ребёнок избегает communication book;
+- ребёнок избегает коммуникационной книги;
 - другой AAC быстрее или удобнее;
 - появились новые motor, vision или literacy skills;
 - система ограничивает самостоятельность.
@@ -491,7 +491,7 @@ PECS - это один конкретный подход AAC.
 - убедительного гарантированного эффекта на речь нет;
 - переносом навыка и сохранением навыка нужно проверять отдельно;
 - прохождение всех фаз не является главным результатом;
-- новый крупный meta-analysis 2026 года усиливает evidence для коммуникационных результатов, но требует осторожного переноса за пределы исследованного контекста.
+- новый крупный метаанализ 2026 года сообщает положительные результаты для коммуникации, но переносить эти выводы за пределы изученного контекста нужно осторожно.
 
 ## Что делать дальше
 
