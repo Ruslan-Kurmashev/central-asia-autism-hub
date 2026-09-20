@@ -1,7 +1,7 @@
 ---
 title: "Поддержка через сверстников"
 summary: "Как сверстники могут поддерживать общение, совместную игру и участие аутичного ребёнка без превращения других детей в терапевтов."
-description: "Практическое руководство для родителей о Peer-Mediated Intervention при аутизме: цели, примеры, AAC, добровольность участия, риски стигматизации и оценка результата."
+description: "Практическое руководство для родителей о поддержке через сверстников при аутизме: цели, примеры, AAC, добровольность участия, риски стигматизации и оценка результата."
 country: kz
 language: ru
 section: parents
@@ -18,27 +18,27 @@ riskLevel: lower
 disclaimerType: informational
 conflictOfInterest: "Конфликт интересов не заявлен."
 publishedAt: "2026-09-18T20:45:00Z"
-updatedAt: "2026-09-20T13:57:48.545Z"
+updatedAt: "2026-09-20T14:08:55.783Z"
 reviewDueAt: 2027-03-18
 draft: false
 keyPoints:
-  - "Peer-Mediated Intervention использует естественное взаимодействие со сверстниками для поддержки участия, коммуникации и совместной деятельности."
+  - "Поддержка через сверстников (Peer-Mediated Intervention) использует естественное взаимодействие со сверстниками для поддержки участия, коммуникации и совместной деятельности."
   - "Сверстники не должны становиться терапевтами или нести ответственность за поведение аутичного ребёнка."
   - "Участие всех детей должно быть добровольным, подходящим по возрасту и учитывать возможность отказа."
   - "Результат важно оценивать по реальному участию и самостоятельности, а не только по физическому присутствию рядом с другими детьми."
-evidenceLimitations: "Peer-mediated interventions различаются по возрасту, setting, целям, способам обучения сверстников и outcomes. Положительные данные по социальному взаимодействию и участию не означают одинаковую эффективность любой buddy или peer-support программы."
+evidenceLimitations: "Вмешательства с участием сверстников различаются по возрасту, условиям проведения, целям, способам обучения сверстников и измеряемым результатам. Положительные данные по социальному взаимодействию и участию не означают одинаковую эффективность любой программы поддержки сверстниками."
 sources:
   - title: "Autism spectrum disorder in under 19s: support and management - Recommendations"
     url: "https://www.nice.org.uk/guidance/cg170/chapter/recommendations"
     organisation: "National Institute for Health and Care Excellence"
     publicationYear: 2013
-    note: "Использовано для рекомендации peer mediation у school-aged children внутри social-communication interventions."
+    note: "Использовано для рекомендации участия сверстников у детей школьного возраста внутри вмешательств в области социальной коммуникации."
     accessedAt: 2026-09-18
   - title: "Evidence-Based Practices for Children, Youth, and Young Adults with Autism: Third Generation Review"
     url: "https://pmc.ncbi.nlm.nih.gov/articles/PMC8510990/"
     organisation: "National Clearinghouse on Autism Evidence and Practice"
     publicationYear: 2020
-    note: "Использовано для классификации peer-based instruction and intervention как evidence-based focused practice."
+    note: "Использовано для классификации обучения и вмешательства с участием сверстников как отдельной практики с научными подтверждениями."
     accessedAt: 2026-09-18
 ---
 
