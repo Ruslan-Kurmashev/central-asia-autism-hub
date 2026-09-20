@@ -18,7 +18,7 @@ riskLevel: moderate
 disclaimerType: medical
 conflictOfInterest: "Конфликт интересов не заявлен."
 publishedAt: 2026-09-18
-updatedAt: "2026-09-20T15:06:01.803Z"
+updatedAt: "2026-09-20T15:09:11.373Z"
 reviewDueAt: 2027-03-18
 draft: false
 keyPoints:
@@ -49,6 +49,12 @@ sources:
     organisation: "PubMed"
     publicationYear: 2024
     note: "Использовано для осторожной оценки утверждений о Gestalt Language Processing и протоколе Natural Language Acquisition."
+    accessedAt: 2026-09-20
+  - title: "A systematic review of interventions for echolalia in autistic children"
+    url: "https://pubmed.ncbi.nlm.nih.gov/37462136/"
+    organisation: "PubMed"
+    publicationYear: 2023
+    note: "Использовано для данных о функциональном и значимом характере эхолалии и слабом качестве исследований, направленных на её уменьшение."
     accessedAt: 2026-09-20
 ---
 
@@ -244,7 +250,7 @@ AAC значительно шире и включает много других 
 
 Неразборчивая речь и языковые трудности - не одно и то же.
 
-Причиной могут быть нарушение звукопроизношения, моторные речевые трудности, детскую апраксию речи или другие речевые особенности.
+Причиной могут быть нарушения звукопроизношения, моторные речевые трудности, детская апраксия речи или другие речевые особенности.
 
 Нужна соответствующая оценка.
 
