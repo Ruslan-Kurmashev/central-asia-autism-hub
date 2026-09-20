@@ -1,7 +1,7 @@
 ---
 title: "Логопедическая и речевая помощь при аутизме"
 summary: "Как оценивать и поддерживать понимание речи, язык, функциональную и социальную коммуникацию, разборчивость речи и AAC."
-description: "Практическое руководство для родителей о speech-language therapy при аутизме: assessment, language intervention, social communication, motor speech, AAC, oral-motor claims и мониторинг."
+description: "Практическое руководство для родителей о логопедической и речевой помощи при аутизме: оценка, языковые вмешательства, социальная коммуникация, моторная речь, AAC, орально-моторные методы и мониторинг."
 country: kz
 language: ru
 section: parents
@@ -18,7 +18,7 @@ riskLevel: moderate
 disclaimerType: informational
 conflictOfInterest: "Конфликт интересов не заявлен."
 publishedAt: 2026-09-18
-updatedAt: "2026-09-20T13:59:52.330Z"
+updatedAt: "2026-09-20T14:05:49.250Z"
 reviewDueAt: 2027-03-18
 draft: false
 keyPoints:
@@ -31,7 +31,7 @@ sources:
   - title: "Autism and Autism Spectrum Disorder"
     url: "https://www.asha.org/practice-portal/clinical-topics/autism/"
     organisation: "American Speech-Language-Hearing Association"
-    note: "Использовано для speech-language assessment, social communication, speech sound and motor speech boundaries."
+    note: "Использовано для оценки речи и языка, социальной коммуникации, нарушений звукопроизношения и моторных речевых трудностей."
     accessedAt: 2026-09-18
   - title: "Augmentative and Alternative Communication (AAC)"
     url: "https://www.asha.org/Practice-Portal/Professional-Issues/Augmentative-and-Alternative-Communication/"
@@ -42,25 +42,25 @@ sources:
     url: "https://www.nice.org.uk/guidance/cg170/chapter/recommendations"
     organisation: "National Institute for Health and Care Excellence"
     publicationYear: 2013
-    note: "Использовано для social-communication interventions, partner mediation and visual supports."
+    note: "Использовано для вмешательств в области социальной коммуникации, участия партнёров и визуальной поддержки."
     accessedAt: 2026-09-18
   - title: "Autism spectrum disorder in under 19s: recognition, referral and diagnosis - Recommendations"
     url: "https://www.nice.org.uk/guidance/cg128/chapter/Recommendations"
     organisation: "National Institute for Health and Care Excellence"
     publicationYear: 2011
-    note: "Использовано для language regression and multilingual assessment context."
+    note: "Использовано для регресса речевых навыков и оценки в многоязычном контексте."
     accessedAt: 2026-09-18
   - title: "Updated Project AIM meta-analysis of early childhood autism interventions"
     url: "https://pubmed.ncbi.nlm.nih.gov/37963634/"
     organisation: "PubMed"
     publicationYear: 2023
-    note: "Использовано для intervention-specific language and social-communication effect estimates."
+    note: "Использовано для оценок языковых и социально-коммуникативных эффектов конкретных вмешательств."
     accessedAt: 2026-09-18
   - title: "Evidence-based systematic review: effects of nonspeech oral motor exercises on speech"
     url: "https://pubmed.ncbi.nlm.nih.gov/19638484/"
     organisation: "PubMed"
     publicationYear: 2009
-    note: "Использовано для oral-motor evidence boundary."
+    note: "Использовано для оценки границ доказательности орально-моторных методов."
     accessedAt: 2026-09-18
   - title: "Non-speech oral motor treatment for children with developmental speech sound disorders"
     url: "https://pubmed.ncbi.nlm.nih.gov/25805060/"
