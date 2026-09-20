@@ -18,7 +18,7 @@ riskLevel: moderate
 disclaimerType: medical
 conflictOfInterest: "Конфликт интересов не заявлен."
 publishedAt: 2026-09-18
-updatedAt: "2026-09-20T15:01:58.458Z"
+updatedAt: "2026-09-20T15:05:25.596Z"
 reviewDueAt: 2027-03-18
 draft: false
 keyPoints:
@@ -32,27 +32,27 @@ sources:
     url: "https://www.nice.org.uk/guidance/cg170/chapter/recommendations"
     organisation: "National Institute for Health and Care Excellence"
     accessedAt: 2026-09-18
-  - title: "Meta-analysis of Functional Communication Training for autistic children in natural settings"
+  - title: "A Meta-Analysis of Functional Communication Training for Young Children with ASD and Challenging Behavior in Natural Settings"
     url: "https://pubmed.ncbi.nlm.nih.gov/41464031/"
     organisation: "PubMed"
     publicationYear: 2025
     accessedAt: 2026-09-18
-  - title: "Functional Communication Training: efficacy and effectiveness review"
+  - title: "Functional communication training: From efficacy to effectiveness"
     url: "https://pubmed.ncbi.nlm.nih.gov/32929757/"
     organisation: "PubMed"
     publicationYear: 2021
     accessedAt: 2026-09-18
-  - title: "Ecological validity of school-based Functional Communication Training"
+  - title: "Functional Communication Training in Schools: A Systematic Analysis of the Evidence for Ecological Validity"
     url: "https://pubmed.ncbi.nlm.nih.gov/39056488/"
     organisation: "PubMed"
     publicationYear: 2024
     accessedAt: 2026-09-18
-  - title: "Schedule thinning and resurgence following FCT"
+  - title: "Using Chained or Tandem Schedules With Functional Communication Training: A Systematic Review"
     url: "https://pubmed.ncbi.nlm.nih.gov/35164521/"
     organisation: "PubMed"
     publicationYear: 2022
     accessedAt: 2026-09-18
-  - title: "Intervention targets and adverse-effect reporting in transition-age autism research"
+  - title: "Problems with problem behavior: A secondary systematic review of intervention research on transition-age autistic youth"
     url: "https://pubmed.ncbi.nlm.nih.gov/38389134/"
     organisation: "PubMed"
     publicationYear: 2024
