@@ -1,7 +1,7 @@
 ---
 title: "Совместное внимание"
 summary: "Что такое совместное внимание (joint attention), как оно выглядит в повседневной жизни, почему оно не равно обязательному зрительному контакту и как понять, помогает ли поддержка."
-description: "Практическое руководство для родителей о совместном внимании при аутизме: initiating и responding joint attention, примеры, AAC, игровые стратегии, evidence и оценка результата."
+description: "Практическое руководство для родителей о совместном внимании при аутизме: инициирование и реакция на совместное внимание, примеры, AAC, игровые стратегии, доказательства и оценка результата."
 country: kz
 language: ru
 section: parents
@@ -18,7 +18,7 @@ riskLevel: lower
 disclaimerType: informational
 conflictOfInterest: "Конфликт интересов не заявлен."
 publishedAt: "2026-09-18T17:35:00Z"
-updatedAt: "2026-09-20T13:57:48.545Z"
+updatedAt: "2026-09-20T14:08:55.783Z"
 reviewDueAt: 2027-03-18
 draft: false
 keyPoints:
@@ -38,7 +38,7 @@ sources:
     url: "https://www.nice.org.uk/guidance/cg170/chapter/recommendations"
     organisation: "National Institute for Health and Care Excellence"
     publicationYear: 2013
-    note: "Использовано для play-based social-communication interventions, направленных на joint attention, engagement, reciprocal communication, interactive play и social routines."
+    note: "Использовано для игровых вмешательств в области социальной коммуникации, направленных на совместное внимание, вовлечённость, взаимную коммуникацию, интерактивную игру и социальные повседневные взаимодействия."
     accessedAt: 2026-09-18
   - title: "Disentangling the initiation from the response in joint attention: an eye-tracking study in toddlers with autism spectrum disorders"
     url: "https://pmc.ncbi.nlm.nih.gov/articles/PMC5070062/"
