@@ -1,7 +1,7 @@
 ---
 title: "Подражание и взаимное подражание"
 summary: "Что такое imitation и reciprocal imitation, как взаимное подражание используется в игре и чем полезный навык отличается от простого выполнения команды «повтори»."
-description: "Практическое руководство для родителей о подражании и Reciprocal Imitation Training при аутизме: виды подражания, игровые примеры, evidence, AAC, перенос навыка и оценка результата."
+description: "Практическое руководство для родителей о подражании и тренинге взаимного подражания (Reciprocal Imitation Training): виды подражания, игровые примеры, доказательства, AAC, перенос навыка и оценка результата."
 country: kz
 language: ru
 section: parents
@@ -18,7 +18,7 @@ riskLevel: lower
 disclaimerType: informational
 conflictOfInterest: "Конфликт интересов не заявлен."
 publishedAt: "2026-09-18T20:50:00Z"
-updatedAt: "2026-09-20T13:57:48.545Z"
+updatedAt: "2026-09-20T14:08:55.783Z"
 reviewDueAt: 2027-03-18
 draft: false
 keyPoints:
@@ -26,7 +26,7 @@ keyPoints:
   - "Reciprocal Imitation - взаимное подражание - включает не только повторение действий взрослого ребёнком, но и подражание взрослого действиям ребёнка."
   - "Reciprocal Imitation Training имеет небольшую, но подтверждающую исследовательскую базу; результаты нельзя автоматически переносить на всех детей."
   - "Результат важно оценивать по самостоятельному использованию навыка и его переносу в игру и повседневную жизнь."
-evidenceLimitations: "Исследования Reciprocal Imitation Training включают небольшие выборки и ограниченное число controlled studies. Положительные результаты по imitation не означают гарантированного улучшения речи, социальной коммуникации или других областей развития. Evidence по generalisation и broader outcomes остаётся ограниченной."
+evidenceLimitations: "Исследования Reciprocal Imitation Training включают небольшие выборки и ограниченное число контролируемых исследований. Положительные результаты по подражанию не означают гарантированного улучшения речи, социальной коммуникации или других областей развития. Данные по переносу навыка и более широким результатам остаются ограниченными."
 sources:
   - title: "Randomized comparison of reciprocal imitation training and treatment as usual for young children with autism spectrum disorders"
     url: "https://pubmed.ncbi.nlm.nih.gov/20155309/"
@@ -38,19 +38,19 @@ sources:
     url: "https://pubmed.ncbi.nlm.nih.gov/16568355/"
     organisation: "PubMed"
     publicationYear: 2006
-    note: "Небольшое исследование пяти детей; использовано для данных по imitation и возможному переносу на broader developmental outcomes."
+    note: "Небольшое исследование пяти детей; использовано для данных по подражанию и возможному переносу на более широкие результаты развития."
     accessedAt: 2026-09-18
   - title: "A comparison of video modeling and reciprocal imitation training in teaching imitation to children with autism"
     url: "https://pubmed.ncbi.nlm.nih.gov/20697791/"
     organisation: "PubMed"
     publicationYear: 2010
-    note: "Небольшое сравнительное исследование шести детей; использовано для ограничений evidence."
+    note: "Небольшое сравнительное исследование шести детей; использовано для описания ограничений доказательной базы."
     accessedAt: 2026-09-18
   - title: "Parent training in reciprocal imitation training for young children with autism"
     url: "https://pubmed.ncbi.nlm.nih.gov/16603337/"
     organisation: "PubMed"
     publicationYear: 2006
-    note: "Исследование трёх семей; использовано для раздела о parent-mediated RIT и ограниченности evidence."
+    note: "Исследование трёх семей; использовано для раздела о RIT с участием родителей и ограниченности доказательной базы."
     accessedAt: 2026-09-18
 ---
 
