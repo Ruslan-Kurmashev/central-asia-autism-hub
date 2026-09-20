@@ -1,7 +1,7 @@
 ---
 title: "Подсказки и постепенное уменьшение подсказок"
 summary: "Какие бывают подсказки, как постепенно уменьшать помощь и как отличить самостоятельный навык от ответа после подсказки."
-description: "Практическое руководство для родителей о prompting и prompt fading: виды подсказок, least-to-most, most-to-least, time delay, prompt dependence, accommodations и generalisation."
+description: "Практическое руководство для родителей о подсказках и их постепенном уменьшении: виды подсказок, переход от минимальной к большей помощи и обратно, задержка подсказки, зависимость от подсказок, адаптации и перенос навыка."
 country: kz
 language: ru
 section: parents
@@ -18,7 +18,7 @@ riskLevel: lower
 disclaimerType: informational
 conflictOfInterest: "Конфликт интересов не заявлен."
 publishedAt: 2026-09-18
-updatedAt: "2026-09-20T13:56:17.108Z"
+updatedAt: "2026-09-20T14:07:29.176Z"
 reviewDueAt: 2027-03-18
 draft: false
 keyPoints:
