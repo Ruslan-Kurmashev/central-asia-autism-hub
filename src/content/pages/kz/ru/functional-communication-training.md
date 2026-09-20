@@ -18,7 +18,7 @@ riskLevel: moderate
 disclaimerType: medical
 conflictOfInterest: "Конфликт интересов не заявлен."
 publishedAt: 2026-09-18
-updatedAt: "2026-09-20T15:00:59.152Z"
+updatedAt: "2026-09-20T15:01:58.458Z"
 reviewDueAt: 2027-03-18
 draft: false
 keyPoints:
@@ -315,10 +315,10 @@ FCT может быть полезным, когда поведение, выз�
 
 ## Что делать дальше
 
-[AAC](/kz/ru/parents/aac/)
+[← Вернуться в раздел «Коммуникация и AAC»](/kz/ru/parents/kommunikatsiya-i-aac/)
 
-[Обучение партнёров по коммуникации](/kz/ru/parents/communication-partner-training/)
+[Следующий материал: Логопедическая и речевая помощь при аутизме](/kz/ru/parents/speech-language-therapy/)
 
-[Как понять, помогает ли выбранная помощь](/kz/ru/parents/kak-ponyat-pomogaet-li-podderzhka/)
+FCT также относится к разделу:
 
-[← Поведение и обучение](/kz/ru/parents/povedenie-i-obuchenie/)
+[Поведение и обучение](/kz/ru/parents/povedenie-i-obuchenie/)
