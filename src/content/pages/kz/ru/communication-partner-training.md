@@ -1,7 +1,7 @@
 ---
 title: "Обучение партнёров по коммуникации"
 summary: "Как родители, педагоги и другие партнёры могут поддерживать коммуникацию, AAC, инициативу и самостоятельность без превращения семьи в терапевтов."
-description: "Практическое руководство о Communication Partner Training: evidence, parent-mediated interventions, AAC partner instruction, wait time, refusal, family burden и monitoring."
+description: "Практическое руководство об обучении партнёров по коммуникации: доказательства, участие родителей, обучение использованию AAC, время ожидания ответа, отказ, нагрузка на семью и мониторинг."
 country: kz
 language: ru
 section: parents
@@ -18,7 +18,7 @@ riskLevel: lower
 disclaimerType: informational
 conflictOfInterest: "Конфликт интересов не заявлен."
 publishedAt: 2026-09-18
-updatedAt: "2026-09-20T13:59:52.330Z"
+updatedAt: "2026-09-20T14:05:49.250Z"
 reviewDueAt: 2027-03-18
 draft: false
 keyPoints:
