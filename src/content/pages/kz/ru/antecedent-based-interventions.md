@@ -1,7 +1,7 @@
 ---
 title: "Antecedent-Based Interventions: как менять условия до возникновения сложного поведения"
 summary: "Как профилактические стратегии меняют условия до возникновения поведения, вызывающего трудности: среду, предсказуемость, задания, выбор и визуальные опоры."
-description: "Практическое руководство для родителей об Antecedent-Based Interventions: evidence, FBA, environmental adaptations, visual supports, choice, task modification и monitoring."
+description: "Практическое руководство для родителей о вмешательствах на основе предшествующих условий: доказательства, FBA, адаптация среды, визуальная поддержка, выбор, изменение заданий и мониторинг."
 country: kz
 language: ru
 section: parents
@@ -18,7 +18,7 @@ riskLevel: lower
 disclaimerType: informational
 conflictOfInterest: "Конфликт интересов не заявлен."
 publishedAt: 2026-09-18
-updatedAt: "2026-09-20T14:01:10.305Z"
+updatedAt: "2026-09-20T14:05:49.250Z"
 reviewDueAt: 2027-03-18
 draft: false
 keyPoints:
