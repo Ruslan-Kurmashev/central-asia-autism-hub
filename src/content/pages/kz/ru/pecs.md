@@ -18,7 +18,7 @@ riskLevel: lower
 disclaimerType: informational
 conflictOfInterest: "Конфликт интересов не заявлен."
 publishedAt: 2026-09-18
-updatedAt: "2026-09-20T15:00:04.447Z"
+updatedAt: "2026-09-20T15:00:59.152Z"
 reviewDueAt: 2027-03-18
 draft: false
 keyPoints:
@@ -207,7 +207,7 @@ PECS чаще всего изучался у детей с аутизмом и �
 
 Это существенно расширяет современную PECS доказательная база.
 
-## Почему новый meta-analysis не означает «PECS доказан для всего»
+## Почему новый метаанализ не означает «PECS доказан для всего»
 
 Этот результат важен, но его нужно интерпретировать осторожно.
 
@@ -297,7 +297,7 @@ PECS является одним из вариантов AAC.
 В литературе встречались такие возможные факторы, как:
 
 - context and environment;
-- training and consultation;
+- обучение и консультации;
 - supervision;
 - соответствие протоколу;
 - adherence to protocol.
