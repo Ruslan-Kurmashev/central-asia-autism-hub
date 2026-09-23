@@ -9,11 +9,11 @@ permissions:
 
 jobs:
   clean:
-    if: github.event.head_commit.message == 'Retry articles 11-15 QA cleanup'
+    if: github.event.head_commit.message == 'Final language cleanup articles 11-15'
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v7
-      - name: Clean terminology, evidence metadata and navigation
+      - name: Final Russian terminology cleanup
         shell: bash
         run: |
           python - <<'PY'
@@ -21,134 +21,31 @@ jobs:
 
           base = Path('src/content/pages/kz/ru')
 
-          def load(name):
-              return (base / name).read_text(encoding='utf-8')
+          fixes = {
+              'types-of-autism-support.md': [
+                  ('До начала поддержки желательно определить исходную точку (baseline) - и заранее решить, когда вы будете пересматривать результат.',
+                   'До начала поддержки желательно определить исходную точку (baseline) и заранее решить, когда вы будете пересматривать результат.'),
+              ],
+              'how-to-read-evidence.md': [
+                  ('Использован для guideline position и примеров вмешательств, которые не следует использовать.',
+                   'Использован для позиции клинической рекомендации и примеров вмешательств, которые не следует использовать.'),
+              ],
+          }
 
-          def save(name, text):
+          for name, replacements in fixes.items():
+              p = base / name
+              text = p.read_text(encoding='utf-8')
+              for old, new in replacements:
+                  if old not in text:
+                      raise SystemExit(f'Expected text not found in {name}: {old}')
+                  text = text.replace(old, new)
               if '—' in text:
                   raise SystemExit(f'Long dash found in {name}')
-              (base / name).write_text(text, encoding='utf-8')
-
-          def rep(text, old, new, label):
-              if old not in text:
-                  raise SystemExit(f'Expected text not found: {label}')
-              return text.replace(old, new)
-
-          name = 'how-to-choose-autism-specialist-support.md'
-          s = load(name)
-          old = '- [Как развивается ребёнок от 2 месяцев до 5 лет: ориентиры для родителей](../orientiry-razvitiya-rebenka/)'
-          new = old + '\n- [Какие виды помощи и поддержки бывают при аутизме](../vidy-pomoshchi-i-podderzhki-pri-autizme/)'
-          s = rep(s, old, new, 'article 10 onward link')
-          save(name, s)
-
-          name = 'types-of-autism-support.md'
-          s = load(name)
-          s = rep(s, 'organisation: "Autism CRC"', 'organisation: "Autism CRC, ныне Sylvia Rodger Institute"', 'article 11 organisation rename')
-          anchor = '''    accessedAt: 2026-09-17\n  - title: "Autism spectrum disorder in under 19s: support and management - Recommendations"'''
-          insert = '''    accessedAt: 2026-09-17\n  - title: "National Guidance for best practice in inclusive education for autistic students"\n    url: "https://www.autismcrc.com.au/our-work/general/national-guidance-best-practice-inclusive-education-autistic-students"\n    organisation: "Autism CRC, ныне Sylvia Rodger Institute"\n    publicationYear: 2026\n    note: "Использовано как дополнительный источник для раздела об инклюзивной образовательной среде, участии, благополучии и поддержке аутичных учащихся."\n    accessedAt: 2026-09-23\n  - title: "Autism spectrum disorder in under 19s: support and management - Recommendations"'''
-          s = rep(s, anchor, insert, 'article 11 inclusive education source')
-          s = s.replace('/central-asia-autism-hub/kz/', '/kz/')
-          s = rep(s, 'функциональная оценка поведения, Functional Communication Training, Positive Behaviour Support, изменение условий', 'функциональная оценка поведения, обучение функциональной коммуникации (Functional Communication Training, FCT), поддержка позитивного поведения (Positive Behaviour Support, PBS), изменение условий', 'article 11 behavior terms')
-          s = rep(s, 'различные developmental или play-based программы', 'различные развивающие (developmental) или игровые (play-based) программы', 'article 11 developmental terms')
-          s = rep(s, 'изменения сенсорной среды, peer support, индивидуальный образовательный', 'изменения сенсорной среды, поддержку сверстников (peer support), индивидуальный образовательный', 'article 11 peer support')
-          s = rep(s, 'могут потребоваться feeding assessment, диетологическая поддержка и индивидуальные feeding interventions', 'могут потребоваться оценка трудностей питания (feeding assessment), диетологическая поддержка и индивидуальные вмешательства при трудностях питания (feeding interventions)', 'article 11 feeding terms')
-          s = rep(s, 'программы caregiver support, психологическая помощь, поддержка братьев и сестёр, respite или short breaks', 'программы поддержки родителей и других заботящихся взрослых (caregiver support), психологическая помощь, поддержка братьев и сестёр, временная передышка для семьи (respite care или short breaks)', 'article 11 family support terms')
-          s = rep(s, 'самостоятельная жизнь и self-advocacy', 'самостоятельная жизнь и самостоятельное отстаивание своих потребностей и прав (self-advocacy)', 'article 11 self advocacy')
-          s = rep(s, 'определить исходную точку - baseline -', 'определить исходную точку (baseline) -', 'article 11 baseline')
-          s = rep(s, 'ребёнок испытывает стойкий distress', 'ребёнок испытывает стойкий выраженный дискомфорт или стресс (distress)', 'article 11 distress')
-          if '## Навигация по маршруту' not in s:
-              s += '''\n\n## Навигация по маршруту\n\n- Предыдущий материал: [«Как выбрать специалиста и помощь для ребёнка с аутизмом»](/kz/ru/parents/kak-vybrat-spetsialista-i-pomoshch-pri-autizme/)\n- Следующий материал: [«Как выбирать помощь под конкретную цель»](/kz/ru/parents/kak-vybirat-pomoshch-pod-konkretnuyu-tsel/)\n'''
-          if '/central-asia-autism-hub/kz/' in s:
-              raise SystemExit('Hardcoded GitHub Pages base remains in article 11')
-          save(name, s)
-
-          name = 'choosing-support-by-goal.md'
-          s = load(name)
-          s = rep(s, 'квалификация специалиста, baseline, мониторинг', 'квалификация специалиста, исходный уровень, мониторинг', 'article 12 description')
-          s = rep(s, 'определите baseline, 1-3 показателя', 'определите исходный уровень (baseline), 1-3 показателя', 'article 12 keypoint')
-          s = rep(s, 'organisation: "Autism CRC"', 'organisation: "Autism CRC, ныне Sylvia Rodger Institute"', 'article 12 organisation rename')
-          s = rep(s, 'Использован для goal-first, family-centred и participation-oriented decision framework.', 'Использован для подхода, в котором выбор начинается с цели, учитывает семью и участие человека в повседневной жизни.', 'article 12 source note')
-          s = rep(s, 'Functional Communication Training и изменение школьной среды', 'обучение функциональной коммуникации (Functional Communication Training, FCT) и изменение школьной среды', 'article 12 FCT')
-          s = rep(s, 'визуальная последовательность, occupational therapy или обучение конкретному навыку', 'визуальная последовательность, эрготерапия (occupational therapy) или обучение конкретному навыку', 'article 12 OT')
-          anchor = 'Сертификат прохождения курса сам по себе не доказывает ни профессиональную правоспособность, ни эффективность метода.'
-          replacement = anchor + '\n\n[Подробнее: как выбрать специалиста и помощь для ребёнка с аутизмом](/kz/ru/parents/kak-vybrat-spetsialista-i-pomoshch-pri-autizme/).'
-          s = rep(s, anchor, replacement, 'article 12 specialist link')
-          old = '''## Что делать дальше\n\n- [Вернуться к карте видов помощи](/kz/ru/parents/vidy-pomoshchi-i-podderzhki-pri-autizme/)\n- [Проверить, как читать доказательства](/kz/ru/parents/kak-ponyat-dokazatelnost-metoda/)\n- [Проверить, помогает ли уже начатая поддержка](/kz/ru/parents/kak-ponyat-pomogaet-li-podderzhka/)'''
-          new = '''## Навигация по маршруту\n\n- Предыдущий материал: [«Какие виды помощи и поддержки бывают при аутизме»](/kz/ru/parents/vidy-pomoshchi-i-podderzhki-pri-autizme/)\n- Следующий материал: [«Как понять доказательность метода»](/kz/ru/parents/kak-ponyat-dokazatelnost-metoda/)\n- Также по теме: [«Как понять, помогает ли выбранная помощь»](/kz/ru/parents/kak-ponyat-pomogaet-li-podderzhka/)'''
-          s = rep(s, old, new, 'article 12 navigation')
-          save(name, s)
-
-          name = 'how-to-read-evidence.md'
-          s = load(name)
-          s = rep(s, 'как оценивать исследования, certainty, meaningful outcomes, независимое воспроизведение, harms и маркетинговые заявления', 'как оценивать исследования, уверенность в доказательствах (certainty), значимые результаты (meaningful outcomes), независимое воспроизведение, возможный вред (harms) и маркетинговые заявления', 'article 13 summary')
-          s = rep(s, 'что изучали, для кого, какие outcomes, насколько надёжны исследования', 'что изучали, для кого, какие результаты (outcomes) оценивали, насколько надёжны исследования', 'article 13 description')
-          s = rep(s, 'по конкретной группе, цели, outcome и условиям применения', 'по конкретной группе, цели, результату (outcome) и условиям применения', 'article 13 keypoint')
-          s = rep(s, 'Статья объясняет принципы evidence literacy и не заменяет метод-специфический обзор. Оценка конкретного вмешательства должна учитывать актуальные systematic reviews, guidelines и исследования по соответствующей цели, популяции и setting.', 'Статья объясняет основы грамотного чтения доказательств (evidence literacy) и не заменяет обзор конкретного метода. Оценка вмешательства должна учитывать актуальные систематические обзоры (systematic reviews), клинические рекомендации (guidelines) и исследования по соответствующей цели, группе людей и условиям применения (setting). Описательные уровни уверенности AutismHub не следует считать формальной оценкой GRADE, если для конкретного обзора не выполнена полноценная процедура GRADE.', 'article 13 limitations')
-          old = '''  - title: "Evidence-Based Practices for Children, Youth, and Young Adults with Autism: Third Generation Review"\n    url: "https://doi.org/10.1007/s10803-020-04844-2"\n    organisation: "Steinbrenner et al."\n    publicationYear: 2020\n    note: "Использован как пример систематического evidence review с ограниченным временным cutoff."\n    accessedAt: 2026-09-17'''
-          new = '''  - title: "Evidence-Based Practices for Children, Youth, and Young Adults with Autism: Third Generation Review"\n    url: "https://doi.org/10.1007/s10803-020-04844-2"\n    organisation: "Hume et al."\n    publicationYear: 2021\n    note: "Использован как пример систематического обзора доказательных практик с ограниченной датой поиска; обзор охватывал публикации 1990-2017 годов."\n    accessedAt: 2026-09-23\n  - title: "Chapter 14: Completing Summary of findings tables and grading the certainty of the evidence"\n    url: "https://training.cochrane.org/handbook/current/chapter-14"\n    organisation: "Cochrane"\n    publicationYear: 2024\n    note: "Использован для объяснения формального подхода GRADE: четыре уровня уверенности и основные домены оценки уверенности в совокупности доказательств. Глава обновлена в 2025 году."\n    accessedAt: 2026-09-23'''
-          s = rep(s, old, new, 'article 13 Hume and GRADE sources')
-          s = rep(s, 'organisation: "Autism CRC"', 'organisation: "Autism CRC, ныне Sylvia Rodger Institute"', 'article 13 organisation rename')
-          old = '''## 9. Насколько мы уверены в выводе?\n\nНа AutismHub результат исследований и уверенность в этом результате показываются отдельно.\n\n**Высокая уверенность** означает, что общий вывод относительно устойчив.\n\n**Умеренная уверенность** означает, что новые исследования могут изменить силу или детали вывода.\n\n**Низкая уверенность** означает, что новые качественные исследования вполне могут существенно изменить вывод.\n\n**Очень низкая уверенность** означает, что существующих данных недостаточно для уверенного заключения.\n\nЭто не оценка метода по шкале «хороший - плохой».'''
-          new = '''## 9. Насколько мы уверены в выводе?\n\nНа AutismHub результат исследований и уверенность в этом результате показываются отдельно.\n\nВ формальной системе GRADE используются четыре уровня уверенности в совокупности доказательств: высокая, умеренная, низкая и очень низкая. При GRADE оценивают, в частности, риск систематической ошибки, неоднородность результатов, косвенность данных, неточность оценок и риск публикационного смещения.\n\nAutismHub может использовать похожие словесные уровни как понятный читателю ориентир. Но если для конкретного обзора не проведена полноценная процедура GRADE, такой уровень не называется формальной оценкой GRADE.\n\n**Высокая уверенность** означает, что общий вывод относительно устойчив.\n\n**Умеренная уверенность** означает, что новые исследования могут изменить силу или детали вывода.\n\n**Низкая уверенность** означает, что новые качественные исследования вполне могут существенно изменить вывод.\n\n**Очень низкая уверенность** означает, что существующих данных недостаточно для уверенного заключения.\n\nЭто не оценка метода по шкале «хороший - плохой».'''
-          s = rep(s, old, new, 'article 13 GRADE clarification')
-          s = s.replace('follow-up', 'последующее наблюдение (follow-up)')
-          s = rep(s, '## 18. Рекомендация guideline и отдельное исследование - не одно и то же', '## 18. Клиническая рекомендация (guideline) и отдельное исследование - не одно и то же', 'article 13 guideline heading')
-          s = rep(s, 'Однако guidelines могут различаться по стране', 'Однако клинические рекомендации (guidelines) могут различаться по стране', 'article 13 guideline body')
-          s = rep(s, 'Certainty показывается отдельно от направления результата.', 'Уверенность в доказательствах (certainty) показывается отдельно от направления результата.', 'article 13 certainty body')
-          s = rep(s, 'Что говорят актуальные systematic reviews и guidelines?', 'Что говорят актуальные систематические обзоры и клинические рекомендации?', 'article 13 quick check')
-          old = '''## Что делать дальше\n\n- [Вернуться к карте видов помощи](/kz/ru/parents/vidy-pomoshchi-i-podderzhki-pri-autizme/)\n- [Выбрать помощь под конкретную цель](/kz/ru/parents/kak-vybirat-pomoshch-pod-konkretnuyu-tsel/)\n- [Проверить, помогает ли уже начатая поддержка](/kz/ru/parents/kak-ponyat-pomogaet-li-podderzhka/)'''
-          new = '''## Навигация по маршруту\n\n- Предыдущий материал: [«Как выбирать помощь под конкретную цель»](/kz/ru/parents/kak-vybirat-pomoshch-pod-konkretnuyu-tsel/)\n- Следующий материал: [«Как понять, помогает ли выбранная помощь»](/kz/ru/parents/kak-ponyat-pomogaet-li-podderzhka/)\n- Вернуться к карте: [«Какие виды помощи и поддержки бывают при аутизме»](/kz/ru/parents/vidy-pomoshchi-i-podderzhki-pri-autizme/)'''
-          s = rep(s, old, new, 'article 13 navigation')
-          save(name, s)
-
-          name = 'monitoring-support-outcomes.md'
-          s = load(name)
-          s = rep(s, 'organisation: "Autism CRC"', 'organisation: "Autism CRC, ныне Sylvia Rodger Institute"', 'article 14 organisation rename')
-          s = rep(s, 'Снижение общего балла по autism-related questionnaire не всегда означает', 'Снижение общего балла по опроснику, оценивающему характеристики, связанные с аутизмом, не всегда означает', 'article 14 questionnaire wording')
-          old = '''## Что делать дальше\n\n- [Вернуться к карте видов помощи](/kz/ru/parents/vidy-pomoshchi-i-podderzhki-pri-autizme/)\n- [Выбрать помощь под конкретную цель](/kz/ru/parents/kak-vybirat-pomoshch-pod-konkretnuyu-tsel/)\n- [Проверить доказательность метода](/kz/ru/parents/kak-ponyat-dokazatelnost-metoda/)'''
-          new = '''## Навигация по маршруту\n\n- Предыдущий материал: [«Как понять доказательность метода»](/kz/ru/parents/kak-ponyat-dokazatelnost-metoda/)\n- Следующий материал: [«Коммуникация и AAC»](/kz/ru/parents/kommunikatsiya-i-aac/)\n- Вернуться к карте: [«Какие виды помощи и поддержки бывают при аутизме»](/kz/ru/parents/vidy-pomoshchi-i-podderzhki-pri-autizme/)'''
-          s = rep(s, old, new, 'article 14 navigation')
-          save(name, s)
-
-          name = 'communication-aac.md'
-          s = load(name)
-          anchor = '''  - title: "Autism and Autism Spectrum Disorder"\n    url: "https://www.asha.org/practice-portal/clinical-topics/autism/"\n    organisation: "American Speech-Language-Hearing Association"\n    note: "Использовано для поддержки коммуникации, социальной коммуникации и разграничения речевых и языковых трудностей."\n    accessedAt: 2026-09-18'''
-          insert = anchor + '''\n  - title: "Augmentative and Alternative Communication and Speech Production for Individuals with ASD: A Systematic Review"\n    url: "https://pubmed.ncbi.nlm.nih.gov/33511525/"\n    organisation: "White et al."\n    publicationYear: 2021\n    note: "Систематический обзор 25 исследований единичных случаев и 3 групповых исследований: AAC не препятствовала развитию устной речи; в совокупности отмечалось улучшение речевой продукции, хотя речевые улучшения не превосходили использование самой AAC."\n    accessedAt: 2026-09-23'''
-          s = rep(s, anchor, insert, 'article 15 White review')
-          s = rep(s, '**PECS - Picture Exchange Communication System** - структурированный подход', '**PECS - система обмена изображениями для коммуникации (Picture Exchange Communication System)** - структурированный подход', 'article 15 PECS translation')
-          s = rep(s, '## Обучение функциональной коммуникации (Functional Communication Training)', '## Обучение функциональной коммуникации (Functional Communication Training, FCT)', 'article 15 FCT heading')
-          s = rep(s, '- дополненным языковым вводом (augmented input).', '- дополненный языковой ввод (augmented input).', 'article 15 augmented input bullet')
-          s = rep(s, 'Рассматривайте понимание языка, визуальные опоры и дополненным языковым вводом (augmented input).', 'Рассматривайте оценку понимания языка, визуальные опоры и дополненный языковой ввод (augmented input).', 'article 15 augmented input scenario')
-          old = '[← Какие виды помощи и поддержки бывают при аутизме](/kz/ru/parents/vidy-pomoshchi-i-podderzhki-pri-autizme/)'
-          new = '''## Навигация по маршруту\n\n- Предыдущий материал: [«Как понять, помогает ли выбранная помощь»](/kz/ru/parents/kak-ponyat-pomogaet-li-podderzhka/)\n- Следующий материал: [«AAC: альтернативная и дополнительная коммуникация»](/kz/ru/parents/aac/)\n- Вернуться к карте: [«Какие виды помощи и поддержки бывают при аутизме»](/kz/ru/parents/vidy-pomoshchi-i-podderzhki-pri-autizme/)'''
-          if old not in s:
-              raise SystemExit('Expected final map link not found in article 15')
-          head, tail = s.rsplit(old, 1)
-          s = head + new + tail
-          save(name, s)
-
-          checks = {
-              'types-of-autism-support.md': ['/central-asia-autism-hub/kz/'],
-              'choosing-support-by-goal.md': ['occupational therapy или', 'Functional Communication Training и изменение'],
-              'how-to-read-evidence.md': ['organisation: "Steinbrenner et al."', 'publicationYear: 2020\n    note: "Использован как пример систематического evidence review'],
-              'monitoring-support-outcomes.md': ['autism-related questionnaire'],
-              'communication-aac.md': ['- дополненным языковым вводом (augmented input).', 'Рассматривайте понимание языка, визуальные опоры и дополненным языковым вводом'],
-          }
-          for fname, forbidden in checks.items():
-              text = load(fname)
-              for phrase in forbidden:
-                  if phrase in text:
-                      raise SystemExit(f'Forbidden stale phrase remains in {fname}: {phrase}')
-
+              p.write_text(text, encoding='utf-8')
           PY
           git config user.name "AutismHub QA"
           git config user.email "actions@users.noreply.github.com"
-          git add src/content/pages/kz/ru/how-to-choose-autism-specialist-support.md \
-                  src/content/pages/kz/ru/types-of-autism-support.md \
-                  src/content/pages/kz/ru/choosing-support-by-goal.md \
-                  src/content/pages/kz/ru/how-to-read-evidence.md \
-                  src/content/pages/kz/ru/monitoring-support-outcomes.md \
-                  src/content/pages/kz/ru/communication-aac.md
+          git add src/content/pages/kz/ru/types-of-autism-support.md src/content/pages/kz/ru/how-to-read-evidence.md
           git diff --cached --check
-          git commit -m "Clean and link articles 11-15"
+          git commit -m "Finish language cleanup articles 11-15"
           git push origin main
