@@ -448,3 +448,4 @@ WHO Caregiver Skills Training показывает один из возможн�
 - [Что делать после оценки на аутизм в Казахстане](../posle-otsenki-na-autizm-v-kazakhstane/)
 - [Первые 30 дней после диагноза аутизма в Казахстане](../pervye-30-dney-posle-diagnoza-autizma-v-kazakhstane/)
 - [Как развивается ребёнок от 2 месяцев до 5 лет: ориентиры для родителей](../orientiry-razvitiya-rebenka/)
+- [Какие виды помощи и поддержки бывают при аутизме](../vidy-pomoshchi-i-podderzhki-pri-autizme/)

@@ -30,7 +30,7 @@ evidenceLimitations: "Домашний мониторинг помогает с�
 sources:
   - title: "National Guideline for supporting the learning, participation, and wellbeing of autistic children and their families in Australia"
     url: "https://www.autismcrc.com.au/best-practice/supporting-children/guideline"
-    organisation: "Autism CRC"
+    organisation: "Autism CRC, ныне Sylvia Rodger Institute"
     note: "Использован для принципов значимые результаты, участия, семейных приоритетов и пересмотра поддержки."
     accessedAt: 2026-09-17
   - title: "Autism spectrum disorder in under 19s: support and management - Recommendations"
@@ -104,7 +104,7 @@ sources:
 
 ## 4. Не измеряйте только «симптомы аутизма»
 
-Снижение общего балла по autism-related questionnaire не всегда означает, что жизнь человека стала лучше.
+Снижение общего балла по опроснику, оценивающему характеристики, связанные с аутизмом, не всегда означает, что жизнь человека стала лучше.
 
 Гораздо важнее спросить, улучшилась ли функциональная коммуникация, самостоятельность, участие, сон, боль, комфорт, отношения или качество жизни.
 
@@ -295,8 +295,8 @@ sources:
 7. **Остаётся ли цель актуальной?**
 8. **Нужно ли продолжить, изменить, остановить или обратиться за медицинской оценкой?**
 
-## Что делать дальше
+## Навигация по маршруту
 
-- [Вернуться к карте видов помощи](/kz/ru/parents/vidy-pomoshchi-i-podderzhki-pri-autizme/)
-- [Выбрать помощь под конкретную цель](/kz/ru/parents/kak-vybirat-pomoshch-pod-konkretnuyu-tsel/)
-- [Проверить доказательность метода](/kz/ru/parents/kak-ponyat-dokazatelnost-metoda/)
+- Предыдущий материал: [«Как понять доказательность метода»](/kz/ru/parents/kak-ponyat-dokazatelnost-metoda/)
+- Следующий материал: [«Коммуникация и AAC»](/kz/ru/parents/kommunikatsiya-i-aac/)
+- Вернуться к карте: [«Какие виды помощи и поддержки бывают при аутизме»](/kz/ru/parents/vidy-pomoshchi-i-podderzhki-pri-autizme/)

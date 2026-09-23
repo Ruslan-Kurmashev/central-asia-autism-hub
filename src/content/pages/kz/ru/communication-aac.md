@@ -38,6 +38,12 @@ sources:
     organisation: "American Speech-Language-Hearing Association"
     note: "Использовано для поддержки коммуникации, социальной коммуникации и разграничения речевых и языковых трудностей."
     accessedAt: 2026-09-18
+  - title: "Augmentative and Alternative Communication and Speech Production for Individuals with ASD: A Systematic Review"
+    url: "https://pubmed.ncbi.nlm.nih.gov/33511525/"
+    organisation: "White et al."
+    publicationYear: 2021
+    note: "Систематический обзор 25 исследований единичных случаев и 3 групповых исследований: AAC не препятствовала развитию устной речи; в совокупности отмечалось улучшение речевой продукции, хотя речевые улучшения не превосходили использование самой AAC."
+    accessedAt: 2026-09-23
   - title: "Autism spectrum disorder in under 19s: support and management - Recommendations"
     url: "https://www.nice.org.uk/guidance/cg170/chapter/recommendations"
     organisation: "National Institute for Health and Care Excellence"
@@ -179,7 +185,7 @@ AAC может включать:
 
 ## PECS
 
-**PECS - Picture Exchange Communication System** - структурированный подход к обучению коммуникации с помощью обмена изображениями.
+**PECS - система обмена изображениями для коммуникации (Picture Exchange Communication System)** - структурированный подход к обучению коммуникации с помощью обмена изображениями.
 
 PECS относится к AAC.
 
@@ -191,7 +197,7 @@ AAC значительно шире и включает много других 
 
 [Подробнее: PECS - система обмена изображениями для коммуникации](/kz/ru/parents/pecs/)
 
-## Обучение функциональной коммуникации (Functional Communication Training)
+## Обучение функциональной коммуникации (Functional Communication Training, FCT)
 
 Иногда сложная ситуация связана с тем, что человеку трудно сообщить о потребности.
 
@@ -214,7 +220,7 @@ AAC значительно шире и включает много других 
 - дополнительное время на обработку;
 - визуальные опоры;
 - письменные инструкции;
-- дополненным языковым вводом (augmented input).
+- дополненный языковой ввод (augmented input).
 
 Если есть опасения относительно слуха, нужна отдельная проверка слуха.
 
@@ -345,7 +351,7 @@ AAC не должна превращаться только в способ по
 
 **Ребёнку трудно понимать речь**
 
-Рассматривайте понимание языка, визуальные опоры и дополненным языковым вводом (augmented input).
+Рассматривайте оценку понимания языка, визуальные опоры и дополненный языковой ввод (augmented input).
 
 **Речь есть, но трудно разговаривать**
 
@@ -367,4 +373,8 @@ AAC не должна превращаться только в способ по
 
 > **Стала ли коммуникация более самостоятельной, разнообразной и доступной человеку в реальной жизни?**
 
-[← Какие виды помощи и поддержки бывают при аутизме](/kz/ru/parents/vidy-pomoshchi-i-podderzhki-pri-autizme/)
+## Навигация по маршруту
+
+- Предыдущий материал: [«Как понять, помогает ли выбранная помощь»](/kz/ru/parents/kak-ponyat-pomogaet-li-podderzhka/)
+- Следующий материал: [«AAC: альтернативная и дополнительная коммуникация»](/kz/ru/parents/aac/)
+- Вернуться к карте: [«Какие виды помощи и поддержки бывают при аутизме»](/kz/ru/parents/vidy-pomoshchi-i-podderzhki-pri-autizme/)
