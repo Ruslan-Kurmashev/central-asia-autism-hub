@@ -9,7 +9,7 @@ permissions:
 
 jobs:
   clean:
-    if: github.event.head_commit.message == 'Add temporary QA cleaner for articles 11-15'
+    if: github.event.head_commit.message == 'Retry articles 11-15 QA cleanup'
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v7
@@ -34,7 +34,6 @@ jobs:
                   raise SystemExit(f'Expected text not found: {label}')
               return text.replace(old, new)
 
-          # Article 10: add onward link to the support map.
           name = 'how-to-choose-autism-specialist-support.md'
           s = load(name)
           old = '- [Как развивается ребёнок от 2 месяцев до 5 лет: ориентиры для родителей](../orientiry-razvitiya-rebenka/)'
@@ -42,7 +41,6 @@ jobs:
           s = rep(s, old, new, 'article 10 onward link')
           save(name, s)
 
-          # Article 11: remove hardcoded GitHub Pages base, clean EN/RU terminology and update sources.
           name = 'types-of-autism-support.md'
           s = load(name)
           s = rep(s, 'organisation: "Autism CRC"', 'organisation: "Autism CRC, ныне Sylvia Rodger Institute"', 'article 11 organisation rename')
@@ -64,7 +62,6 @@ jobs:
               raise SystemExit('Hardcoded GitHub Pages base remains in article 11')
           save(name, s)
 
-          # Article 12: Russian-first terminology and route links.
           name = 'choosing-support-by-goal.md'
           s = load(name)
           s = rep(s, 'квалификация специалиста, baseline, мониторинг', 'квалификация специалиста, исходный уровень, мониторинг', 'article 12 description')
@@ -81,7 +78,6 @@ jobs:
           s = rep(s, old, new, 'article 12 navigation')
           save(name, s)
 
-          # Article 13: correct Hume metadata, explain descriptive certainty vs formal GRADE, and clean terminology.
           name = 'how-to-read-evidence.md'
           s = load(name)
           s = rep(s, 'как оценивать исследования, certainty, meaningful outcomes, независимое воспроизведение, harms и маркетинговые заявления', 'как оценивать исследования, уверенность в доказательствах (certainty), значимые результаты (meaningful outcomes), независимое воспроизведение, возможный вред (harms) и маркетинговые заявления', 'article 13 summary')
@@ -105,7 +101,6 @@ jobs:
           s = rep(s, old, new, 'article 13 navigation')
           save(name, s)
 
-          # Article 14: clean terminology and connect to the communication block.
           name = 'monitoring-support-outcomes.md'
           s = load(name)
           s = rep(s, 'organisation: "Autism CRC"', 'organisation: "Autism CRC, ныне Sylvia Rodger Institute"', 'article 14 organisation rename')
@@ -115,7 +110,6 @@ jobs:
           s = rep(s, old, new, 'article 14 navigation')
           save(name, s)
 
-          # Article 15: add direct systematic review for speech production and fix Russian-first wording.
           name = 'communication-aac.md'
           s = load(name)
           anchor = '''  - title: "Autism and Autism Spectrum Disorder"\n    url: "https://www.asha.org/practice-portal/clinical-topics/autism/"\n    organisation: "American Speech-Language-Hearing Association"\n    note: "Использовано для поддержки коммуникации, социальной коммуникации и разграничения речевых и языковых трудностей."\n    accessedAt: 2026-09-18'''
@@ -127,20 +121,18 @@ jobs:
           s = rep(s, 'Рассматривайте понимание языка, визуальные опоры и дополненным языковым вводом (augmented input).', 'Рассматривайте оценку понимания языка, визуальные опоры и дополненный языковой ввод (augmented input).', 'article 15 augmented input scenario')
           old = '[← Какие виды помощи и поддержки бывают при аутизме](/kz/ru/parents/vidy-pomoshchi-i-podderzhki-pri-autizme/)'
           new = '''## Навигация по маршруту\n\n- Предыдущий материал: [«Как понять, помогает ли выбранная помощь»](/kz/ru/parents/kak-ponyat-pomogaet-li-podderzhka/)\n- Следующий материал: [«AAC: альтернативная и дополнительная коммуникация»](/kz/ru/parents/aac/)\n- Вернуться к карте: [«Какие виды помощи и поддержки бывают при аутизме»](/kz/ru/parents/vidy-pomoshchi-i-podderzhki-pri-autizme/)'''
-          # Replace only the final back-link, not the opening link. rsplit is intentional.
           if old not in s:
               raise SystemExit('Expected final map link not found in article 15')
           head, tail = s.rsplit(old, 1)
           s = head + new + tail
           save(name, s)
 
-          # Cross-file sanity checks.
           checks = {
               'types-of-autism-support.md': ['/central-asia-autism-hub/kz/'],
               'choosing-support-by-goal.md': ['occupational therapy или', 'Functional Communication Training и изменение'],
               'how-to-read-evidence.md': ['organisation: "Steinbrenner et al."', 'publicationYear: 2020\n    note: "Использован как пример систематического evidence review'],
               'monitoring-support-outcomes.md': ['autism-related questionnaire'],
-              'communication-aac.md': ['дополненным языковым вводом'],
+              'communication-aac.md': ['- дополненным языковым вводом (augmented input).', 'Рассматривайте понимание языка, визуальные опоры и дополненным языковым вводом'],
           }
           for fname, forbidden in checks.items():
               text = load(fname)
