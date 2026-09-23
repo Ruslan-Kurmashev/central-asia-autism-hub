@@ -1,0 +1,48 @@
+name: Final QA cleanup articles 16-20
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - '.github/workflows/qa-clean-articles-16-20-v3-temp.yml'
+
+permissions:
+  contents: write
+
+jobs:
+  clean:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v7
+        with:
+          fetch-depth: 0
+
+      - name: Apply verified article cleanup
+        shell: bash
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+
+          workflow = Path('.github/workflows/qa-clean-articles-16-20-v2-temp.yml').read_text(encoding='utf-8')
+          marker_start = "          python - <<'PY'\n"
+          marker_end = "\n          PY\n\n          npm ci"
+          start = workflow.index(marker_start) + len(marker_start)
+          end = workflow.index(marker_end, start)
+          block = workflow[start:end]
+          source = '\n'.join(line[10:] if line.startswith('          ') else line for line in block.splitlines())
+          exec(compile(source, 'articles-16-20-cleanup', 'exec'))
+          PY
+
+          npm install
+          npm run validate
+
+          git config user.name "AutismHub QA"
+          git config user.email "actions@users.noreply.github.com"
+          git add src/content/pages/kz/ru/aac.md \
+                  src/content/pages/kz/ru/aided-language-modelling.md \
+                  src/content/pages/kz/ru/communication-partner-training.md \
+                  src/content/pages/kz/ru/pecs.md \
+                  src/content/pages/kz/ru/functional-communication-training.md
+          git diff --cached --quiet && { echo "No changes to commit"; exit 1; }
+          git commit -m "Clean and link articles 16-20"
+          git push origin HEAD:main
