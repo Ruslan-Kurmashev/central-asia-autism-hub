@@ -49,7 +49,7 @@ sources:
     url: "https://www.nice.org.uk/guidance/cg170/chapter/recommendations"
     organisation: "National Institute for Health and Care Excellence"
     publicationYear: 2013
-    note: "Использован для guideline position и примеров вмешательств, которые не следует использовать."
+    note: "Использован для позиции клинической рекомендации и примеров вмешательств, которые не следует использовать."
     accessedAt: 2026-09-17
   - title: "Проверка разрешений и лицензий"
     url: "https://egov.kz/cms/ru/services/proverka-razresheniy-i-licenziy"
