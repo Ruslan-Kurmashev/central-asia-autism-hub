@@ -1,0 +1,177 @@
+name: Temporary QA content fix
+
+on:
+  push:
+    branches: [main]
+
+permissions:
+  contents: write
+
+jobs:
+  fix:
+    if: github.event.head_commit.message == 'Add temporary content QA fixer'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v7
+        with:
+          fetch-depth: 0
+      - name: Apply reviewed article corrections
+        shell: bash
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+
+          root = Path('src/content/pages/kz/ru')
+
+          def load(name):
+              p = root / name
+              return p, p.read_text(encoding='utf-8')
+
+          def must_replace(text, old, new, label):
+              if old not in text:
+                  raise SystemExit(f'Missing expected text: {label}')
+              return text.replace(old, new)
+
+          # Article 5: connect the post-assessment page to the Kazakhstan diagnostic route.
+          p, s = load('after-autism-assessment-kazakhstan.md')
+          old = "## Куда двигаться дальше\n\n- Если хотите вернуться к наблюдению за развитием ребёнка: [«Как развивается ребёнок от 2 месяцев до 5 лет: ориентиры для родителей»](../orientiry-razvitiya-rebenka/)."
+          new = "## Куда двигаться дальше\n\n- Если нужно понять, как в Казахстане устанавливается медицинский диагноз РАС: [«Как ребёнку ставят диагноз аутизма в Казахстане»](../kak-stavyat-diagnoz-autizma-v-kazakhstane/).\n- Если хотите вернуться к наблюдению за развитием ребёнка: [«Как развивается ребёнок от 2 месяцев до 5 лет: ориентиры для родителей»](../orientiry-razvitiya-rebenka/)."
+          s = must_replace(s, old, new, 'article 5 route link')
+          p.write_text(s, encoding='utf-8')
+
+          # Article 6: legal precision + replace future placeholders with live links.
+          p, s = load('autism-diagnosis-kazakhstan.md')
+          s = must_replace(
+              s,
+              '  - "Медицинский диагноз психического или поведенческого расстройства в Казахстане устанавливает врач-психиатр."',
+              '  - "Медицинская диагностика РАС в Казахстане относится к компетенции врача-психиатра; для ПМСП предусмотрена ограниченная компетенция по отдельным пограничным психическим и поведенческим расстройствам."',
+              'article 6 key point',
+          )
+          s = must_replace(
+              s,
+              'reviewDueAt: 2027-03-14',
+              'reviewDueAt: 2026-12-01',
+              'article 6 review date',
+          )
+          s = must_replace(
+              s,
+              'В Казахстане медицинский диагноз психического или поведенческого расстройства устанавливает **врач-психиатр** в соответствии с критериями международной классификации болезней. Педиатр, врач общей практики, психолог, логопед, невролог и другие специалисты могут участвовать в выявлении особенностей развития и дополнительном обследовании, но их заключения сами по себе не заменяют медицинский диагноз психиатра.',
+              'В Казахстане медицинская диагностика РАС относится к компетенции **врача-психиатра**. Для врачей ПМСП предусмотрена ограниченная компетенция в отношении отдельных пограничных психических и поведенческих расстройств; РАС к этому ограниченному перечню не относится. Педиатр, врач общей практики, психолог, логопед, невролог и другие специалисты могут участвовать в выявлении особенностей развития и дополнительном обследовании, но их заключения сами по себе не заменяют медицинскую диагностику психиатра.',
+              'article 6 opening competence',
+          )
+          s = must_replace(
+              s,
+              'Медицинский диагноз и заключение ПМПК выполняют разные функции. Подробно эту разницу мы разберём в отдельном материале о психиатре, ПМПК, ВКК и МСЭ.',
+              'Медицинский диагноз и заключение ПМПК выполняют разные функции. Подробнее: [«Психиатр, ПМПК, ВКК и МСЭ: кто за что отвечает в Казахстане»](../psihiatr-pmpk-vkk-mse-kazakhstan/).',
+              'article 6 PMPK placeholder',
+          )
+          s = must_replace(
+              s,
+              'Отдельно мы подготовим материал о том, когда могут понадобиться ADOS-2, ADI-R, ЭЭГ, МРТ, проверка слуха, психологическая и генетическая оценка.',
+              'Подробнее о дополнительных методах и обследованиях: [«Какие обследования нужны при подозрении на аутизм в Казахстане»](../obsledovaniya-pri-podozrenii-na-autizm/).',
+              'article 6 assessments placeholder 1',
+          )
+          s = must_replace(
+              s,
+              'Подробный разбор обследований будет вынесен в отдельную статью, чтобы не перегружать диагностический маршрут.',
+              'Подробный разбор обследований доступен в материале [«Какие обследования нужны при подозрении на аутизм в Казахстане»](../obsledovaniya-pri-podozrenii-na-autizm/).',
+              'article 6 assessments placeholder 2',
+          )
+          s = must_replace(
+              s,
+              'Образовательный маршрут, ПМПК, ВКК, МСЭ и вопросы дальнейшей поддержки являются отдельными процедурами. Мы разберём их в связанных материалах.',
+              'Образовательный маршрут, ПМПК, ВКК, МСЭ и вопросы дальнейшей поддержки являются отдельными процедурами. Их различия разобраны в материале [«Психиатр, ПМПК, ВКК и МСЭ: кто за что отвечает в Казахстане»](../psihiatr-pmpk-vkk-mse-kazakhstan/).',
+              'article 6 related procedures placeholder',
+          )
+          s = must_replace(
+              s,
+              'Следующие материалы этого раздела будут отдельно посвящены обследованиям при подозрении на РАС и различиям между медицинским диагнозом, ПМПК, ВКК и МСЭ.',
+              '## Навигация по маршруту\n\n- Предыдущий материал: [«Что делать после оценки на аутизм в Казахстане: как понять результат и следующие шаги»](../posle-otsenki-na-autizm-v-kazakhstane/)\n- Следующий материал: [«Какие обследования нужны при подозрении на аутизм в Казахстане»](../obsledovaniya-pri-podozrenii-na-autizm/)\n- Также по теме: [«Психиатр, ПМПК, ВКК и МСЭ: кто за что отвечает в Казахстане»](../psihiatr-pmpk-vkk-mse-kazakhstan/)',
+              'article 6 closing navigation',
+          )
+          p.write_text(s, encoding='utf-8')
+
+          # Article 7: complete WES source metadata + live navigation.
+          p, s = load('autism-assessments-kazakhstan.md')
+          s = must_replace(s, 'reviewDueAt: 2027-03-14', 'reviewDueAt: 2026-12-01', 'article 7 review date')
+          s = must_replace(
+              s,
+              '  - title: "Клинический протокол медицинского вмешательства «Полноэкзомное секвенирование ДНК человека с использованием NGS технологий»"',
+              '  - title: "Клинический протокол медицинского вмешательства «Полноэкзомное секвенирование ДНК человека с использованием NGS технологий», протокол №160"',
+              'article 7 WES title',
+          )
+          marker = '    organisation: "Министерство здравоохранения Республики Казахстан / ННЦРЗ"\n    note: "Использован для раздела о возможной роли полноэкзомного секвенирования у отдельных пациентов при наличии соответствующих клинических показаний."'
+          replacement = '    organisation: "Министерство здравоохранения Республики Казахстан / ННЦРЗ"\n    publicationYear: 2022\n    note: "Использован для раздела о возможной роли полноэкзомного секвенирования у отдельных пациентов при наличии соответствующих клинических показаний."'
+          s = must_replace(s, marker, replacement, 'article 7 WES publication year')
+          s = must_replace(
+              s,
+              'Следующие материалы этого раздела будут отдельно объяснять различия между медицинским диагнозом, ПМПК, ВКК и МСЭ, а также дальнейшие действия семьи после оценки или диагноза.',
+              '## Навигация по маршруту\n\n- Предыдущий материал: [«Как ребёнку ставят диагноз аутизма в Казахстане»](../kak-stavyat-diagnoz-autizma-v-kazakhstane/)\n- Следующий материал: [«Психиатр, ПМПК, ВКК и МСЭ: кто за что отвечает в Казахстане»](../psihiatr-pmpk-vkk-mse-kazakhstan/)\n- Дальнейшие действия: [«Первые 30 дней после диагноза аутизма в Казахстане»](../pervye-30-dney-posle-diagnoza-autizma-v-kazakhstane/)',
+              'article 7 closing navigation',
+          )
+          p.write_text(s, encoding='utf-8')
+
+          # Article 8: replace future placeholder with actual next page.
+          p, s = load('autism-pmpk-vkk-mse-kazakhstan.md')
+          s = must_replace(
+              s,
+              'Следующий материал этого маршрута будет посвящён тому, что делать после оценки или установленного диагноза РАС в Казахстане.',
+              '## Навигация по маршруту\n\n- Предыдущий материал: [«Какие обследования нужны при подозрении на аутизм в Казахстане»](../obsledovaniya-pri-podozrenii-na-autizm/)\n- Следующий материал: [«Первые 30 дней после диагноза аутизма в Казахстане»](../pervye-30-dney-posle-diagnoza-autizma-v-kazakhstane/)',
+              'article 8 closing navigation',
+          )
+          p.write_text(s, encoding='utf-8')
+
+          # Article 9: link directly to the already published specialist-selection article.
+          p, s = load('first-30-days-after-autism-diagnosis-kazakhstan.md')
+          s = must_replace(s, 'reviewDueAt: 2027-03-14', 'reviewDueAt: 2026-12-01', 'article 9 review date')
+          s = must_replace(
+              s,
+              'Подробно вопрос выбора помощи будет разобран в отдельном материале **«Как выбрать помощь и специалиста для ребёнка с аутизмом»**.',
+              'Подробно вопрос выбора помощи разобран в материале [«Как выбрать специалиста и помощь для ребёнка с аутизмом»](../kak-vybrat-spetsialista-i-pomoshch-pri-autizme/).',
+              'article 9 support placeholder',
+          )
+          s = must_replace(
+              s,
+              'Следующий материал этого кластера будет посвящён вопросу **«Как выбрать помощь и специалиста для ребёнка с аутизмом»**.',
+              '## Навигация по маршруту\n\n- Предыдущий материал: [«Психиатр, ПМПК, ВКК и МСЭ: кто за что отвечает в Казахстане»](../psihiatr-pmpk-vkk-mse-kazakhstan/)\n- Следующий материал: [«Как выбрать специалиста и помощь для ребёнка с аутизмом»](../kak-vybrat-spetsialista-i-pomoshch-pri-autizme/)',
+              'article 9 closing navigation',
+          )
+          p.write_text(s, encoding='utf-8')
+
+          # Safety/typography assertions for all touched content.
+          touched = [
+              'after-autism-assessment-kazakhstan.md',
+              'autism-diagnosis-kazakhstan.md',
+              'autism-assessments-kazakhstan.md',
+              'autism-pmpk-vkk-mse-kazakhstan.md',
+              'first-30-days-after-autism-diagnosis-kazakhstan.md',
+          ]
+          for name in touched:
+              text = (root / name).read_text(encoding='utf-8')
+              if '—' in text:
+                  raise SystemExit(f'Long dash found in {name}')
+
+          stale = [
+              'Следующие материалы этого раздела будут',
+              'Подробный разбор обследований будет вынесен',
+              'Отдельно мы подготовим материал о том, когда могут понадобиться',
+              'Следующий материал этого маршрута будет посвящён',
+              'Подробно вопрос выбора помощи будет разобран в отдельном материале',
+              'Следующий материал этого кластера будет посвящён',
+          ]
+          combined = '\n'.join((root / name).read_text(encoding='utf-8') for name in touched)
+          leftovers = [x for x in stale if x in combined]
+          if leftovers:
+              raise SystemExit(f'Stale placeholders remain: {leftovers}')
+          PY
+
+          git config user.name "AutismHub QA"
+          git config user.email "actions@users.noreply.github.com"
+          git add src/content/pages/kz/ru/after-autism-assessment-kazakhstan.md \
+                  src/content/pages/kz/ru/autism-diagnosis-kazakhstan.md \
+                  src/content/pages/kz/ru/autism-assessments-kazakhstan.md \
+                  src/content/pages/kz/ru/autism-pmpk-vkk-mse-kazakhstan.md \
+                  src/content/pages/kz/ru/first-30-days-after-autism-diagnosis-kazakhstan.md
+          git diff --cached --check
+          git commit -m "Correct and connect parent articles 6-10"
+          git push origin main
