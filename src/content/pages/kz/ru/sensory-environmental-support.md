@@ -44,13 +44,13 @@ sources:
     organisation: "American Occupational Therapy Association"
     note: "Использовано для разграничения сенсорной интеграции, обработки сенсорной информации и отдельных сенсорных вмешательств, а также необходимости документированной оценки."
     accessedAt: 2026-09-19
-  - title: "Ayres Sensory Integration for autistic children: systematic review of randomized controlled trials"
+  - title: "Ayres Sensory Integration® With Children Ages 0 to 12: A Systematic Review of Randomized Controlled Trials"
     url: "https://pubmed.ncbi.nlm.nih.gov/40193295/"
     organisation: "PubMed"
     publicationYear: 2025
-    note: "Использовано для обзора рандомизированных контролируемых исследований ASI и результатов по конкретным целям."
+    note: "9 рандомизированных контролируемых исследований, 344 участника; 6 исследований включали аутичных детей. Использовано для результатов по индивидуализированным целям и отсутствию пользы для раздражительности и невыполнения требований."
     accessedAt: 2026-09-19
-  - title: "Systematic review of sensory-based interventions for children and youth"
+  - title: "Systematic review of sensory-based interventions for children and youth (2015-2024)"
     url: "https://pubmed.ncbi.nlm.nih.gov/41321460/"
     organisation: "PubMed"
     publicationYear: 2025
@@ -58,7 +58,9 @@ sources:
     accessedAt: 2026-09-19
 ---
 
-[← Какие виды помощи и поддержки бывают при аутизме](/kz/ru/parents/vidy-pomoshchi-i-podderzhki-pri-autizme/)
+[← Подражание и взаимное подражание](/kz/ru/parents/imitation-reciprocal-imitation/)
+
+[К общей карте помощи](/kz/ru/parents/vidy-pomoshchi-i-podderzhki-pri-autizme/)
 
 Некоторые аутичные дети воспринимают звуки, свет, прикосновения, запахи, движение или другие ощущения иначе, чем окружающие.
 
@@ -330,9 +332,9 @@ Ayres Sensory Integration, или ASI - сенсорная интеграция 
 
 Для ASI существуют отдельные принципы проведения и требования к соответствию протоколу.
 
-Систематический обзор рандомизированных контролируемых исследований 2025 года включил 9 исследований с 344 участниками. Наиболее убедительные данные касались достижения индивидуальных целей у аутичных детей. При этом пользы ASI для раздражительности и невыполнения требований показано не было.
+Систематический обзор 2025 года включил 9 рандомизированных контролируемых исследований с 344 участниками в целом; 6 из этих исследований проводились с аутичными детьми. Наиболее убедительные данные касались достижения индивидуализированных целей у аутичных детей. При этом пользы ASI для раздражительности и невыполнения требований показано не было.
 
-Этому будет посвящена отдельная статья.
+[Подробнее: сенсорная интеграция по Айрес](/kz/ru/parents/ayres-sensory-integration/)
 
 ### [Сенсорная диета](/kz/ru/parents/sensory-diet/)
 
@@ -345,7 +347,7 @@ Ayres Sensory Integration, или ASI - сенсорная интеграция 
 - подходит ли это ребёнку
 - как оценивается результат.
 
-Это тоже разберём отдельно.
+[Подробнее: сенсорная диета](/kz/ru/parents/sensory-diet/)
 
 ### Утяжелённые средства
 
@@ -515,7 +517,7 @@ Ayres Sensory Integration, или ASI - сенсорная интеграция 
 
 Современные систематические обзоры рассматривают отдельно:
 
-- сенсорную интеграцию по Айрес
+- сенсорная интеграция по Айрес
 - отдельные сенсорные вмешательства
 - отдельные сенсорные стратегии.
 
@@ -601,7 +603,7 @@ Ayres Sensory Integration, или ASI - сенсорная интеграция 
 - занятия на качелях
 - массаж
 - сенсорная диета
-- сенсорную интеграцию по Айрес
+- сенсорная интеграция по Айрес
 - комплекс из нескольких разных методов.
 
 Это не одно и то же.
@@ -655,4 +657,6 @@ Ayres Sensory Integration, или ASI - сенсорная интеграция 
 
 [Сенсорная интеграция по Айрес](/kz/ru/parents/ayres-sensory-integration/)
 
-[← Какие виды помощи и поддержки бывают при аутизме](/kz/ru/parents/vidy-pomoshchi-i-podderzhki-pri-autizme/)
+[← Подражание и взаимное подражание](/kz/ru/parents/imitation-reciprocal-imitation/)
+
+[К общей карте помощи](/kz/ru/parents/vidy-pomoshchi-i-podderzhki-pri-autizme/)

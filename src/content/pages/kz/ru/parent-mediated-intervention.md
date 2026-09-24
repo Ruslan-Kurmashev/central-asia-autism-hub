@@ -28,19 +28,19 @@ keyPoints:
   - "Результат важно оценивать по функциональным изменениям у ребёнка и переносу навыков в повседневную жизнь."
 evidenceLimitations: "Вмешательства с участием родителей включают разные программы, возрастные группы, интенсивность и измеряемые результаты. Метаанализы показывают небольшие или умеренные эффекты по отдельным областям и неоднородность результатов. Лучшее использование стратегии родителем не всегда сопровождается значимым улучшением результатов у ребёнка."
 sources:
-  - title: "Parent-mediated interventions for infants and toddlers with autism: systematic review and meta-analysis"
+  - title: "Parent-Mediated Interventions for ASD Under 3 Years: A Systematic Review, Meta Analysis, and Moderator Analyses"
     url: "https://pubmed.ncbi.nlm.nih.gov/40358871/"
     organisation: "PubMed"
     publicationYear: 2025
-    note: "31 рандомизированное контролируемое исследование у детей младше 3 лет; использовано для общего эффекта и отдельных результатов по отзывчивости родителей, взаимодействию родителя и ребёнка и социальной коммуникации."
+    note: "31 рандомизированное контролируемое исследование у детей младше 3 лет; использовано для общего эффекта, отзывчивости родителей, взаимодействия родителя и ребёнка, социальной коммуникации и оценки уверенности в доказательствах по GRADE."
     accessedAt: 2026-09-18
-  - title: "Parent-implemented interventions for autistic children: a meta-analysis"
+  - title: "Effects of Parent-Implemented Interventions on Outcomes of Children with Autism: A Meta-Analysis"
     url: "https://pubmed.ncbi.nlm.nih.gov/35996037/"
     organisation: "PubMed"
-    publicationYear: 2022
+    publicationYear: 2023
     note: "Использовано для более широкой доказательной базы вмешательств, реализуемых родителями, и неоднородности результатов."
     accessedAt: 2026-09-18
-  - title: "Parent-mediated interventions for young children with autism spectrum disorders"
+  - title: "Parent-Mediated Interventions for Children and Adolescents With Autism Spectrum Disorders: A Systematic Review and Meta-Analysis"
     url: "https://pubmed.ncbi.nlm.nih.gov/34867556/"
     organisation: "PubMed"
     publicationYear: 2021
@@ -54,7 +54,7 @@ sources:
     accessedAt: 2026-09-18
 ---
 
-[← Развитие, взаимодействие и игра](/kz/ru/parents/razvitie-vzaimodeystvie-i-igra/)
+[← Игровые вмешательства](/kz/ru/parents/play-based-interventions/)
 
 Поддержка с участием родителей (Parent-Mediated Intervention) - это подход, при котором специалист работает не только с ребёнком, но и обучает родителей стратегиям, которые можно использовать в обычной жизни.
 
@@ -228,7 +228,7 @@ NICE рекомендует рассматривать для дошкольни
 
 ## Что говорят исследования
 
-Meta-analysis 2025 года включил **31 randomized controlled trial** с детьми младше 3 лет.
+Метаанализ 2025 года включил **31 рандомизированное контролируемое исследование** с детьми младше 3 лет.
 
 В среднем общий эффект вмешательств с участием родителей был небольшим:
 
@@ -236,11 +236,11 @@ Meta-analysis 2025 года включил **31 randomized controlled trial** с
 
 Отдельно были обнаружены положительные эффекты для:
 
-- responsiveness родителей: **g = 0.23**
+- отзывчивости родителей (responsiveness): **g = 0.23**
 - взаимодействия родитель-ребёнок: **g = 0.35**
 - социальной коммуникации ребёнка: **g = 0.18**.
 
-При этом значимого общего эффекта на языковые навыки в этом meta-analysis не было.
+При этом значимого общего эффекта на языковые навыки в этом метаанализе не было. По оценке GRADE уверенность в доказательствах по разным результатам была от умеренной до низкой, поэтому величины эффекта нужно интерпретировать осторожно.
 
 Практический смысл:
 
@@ -463,4 +463,4 @@ AAC не нужно убирать ради стимулирования уст�
 
 [Поддержка через сверстников (Peer-Mediated Intervention)](/kz/ru/parents/peer-mediated-intervention/)
 
-[← Развитие, взаимодействие и игра](/kz/ru/parents/razvitie-vzaimodeystvie-i-igra/)
+[← Игровые вмешательства](/kz/ru/parents/play-based-interventions/)
