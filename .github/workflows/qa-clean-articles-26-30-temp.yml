@@ -1,0 +1,112 @@
+name: QA clean articles 26-30
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - '.github/workflows/qa-clean-articles-26-30-temp.yml'
+
+permissions:
+  contents: write
+
+jobs:
+  clean:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v7
+        with:
+          fetch-depth: 0
+      - name: Apply editorial and evidence fixes
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+
+          def rep(path, old, new):
+              p = Path(path)
+              text = p.read_text(encoding='utf-8')
+              if old not in text:
+                  raise SystemExit(f'Missing expected text in {path}: {old!r}')
+              p.write_text(text.replace(old, new), encoding='utf-8')
+
+          p26 = 'src/content/pages/kz/ru/play-based-interventions.md'
+          p27 = 'src/content/pages/kz/ru/parent-mediated-intervention.md'
+          p28 = 'src/content/pages/kz/ru/peer-mediated-intervention.md'
+          p29 = 'src/content/pages/kz/ru/imitation-reciprocal-imitation.md'
+          p30 = 'src/content/pages/kz/ru/sensory-environmental-support.md'
+
+          # 26. Play-based interventions
+          rep(p26, '  - title: "Play-based interventions for autistic children and their parents: a systematic review"', '  - title: "Effectivity of Play-Based Interventions in Children with Autism Spectrum Disorder and Their Parents: A Systematic Review"')
+          rep(p26, '    note: "Использовано для общей оценки неоднородной доказательной базы игровых вмешательств."', '    note: "32 рандомизированных контролируемых исследования; 25 из 32 были оценены как имеющие высокий риск систематической ошибки. Использовано для общей оценки неоднородной доказательной базы игровых вмешательств."')
+          rep(p26, '  - title: "The effect of play-based interventions on social and play skills in autistic children: a systematic review and meta-analysis"', '  - title: "The effects of play-based interventions on social and play skills in children with autism spectrum disorder: a meta-analysis"')
+          rep(p26, '[← Развитие, взаимодействие и игра](/kz/ru/parents/razvitie-vzaimodeystvie-i-igra/)', '[← Совместное внимание](/kz/ru/parents/joint-attention/)')
+          rep(p26, '- социальные routines.', '- социальные повседневные взаимодействия.')
+          rep(p26, 'Для дошкольников NICE предлагает рассматривать участие родителей, carers или педагогов, а для школьников - в некоторых случаях peer mediation.', 'Для дошкольников NICE предлагает рассматривать участие родителей, ухаживающих взрослых или педагогов, а для школьников - в некоторых случаях поддержку с участием сверстников (peer mediation).')
+          rep(p26, 'Научная литература по игровые вмешательства неоднородна.', 'Научная литература по игровым вмешательствам неоднородна.')
+          rep(p26, 'Систематический обзор, опубликованный в 2023 году, рассматривал разные игровые вмешательства у аутичных детей и их родителей.\n\nАвторы отмечали положительные результаты в ряде исследований, но программы, дизайны исследований и результаты заметно различались.', 'Систематический обзор, опубликованный в 2023 году, включил 32 рандомизированных контролируемых исследования игровых вмешательств у аутичных детей и их родителей. Авторы отмечали положительные результаты в ряде исследований, но 25 из 32 исследований имели высокий риск систематической ошибки, а программы и измеряемые результаты заметно различались.')
+          rep(p26, 'более 90% для обоих результаты.', 'более 90% для обоих результатов.')
+          rep(p26, 'В новом метаанализ были крупные средние effects, но выборка исследований была небольшой, а неоднородность результатов очень высокой.', 'В новом метаанализе были крупные средние размеры эффекта, но выборка исследований была небольшой, а неоднородность результатов очень высокой.')
+          rep(p26, 'NICE поддерживает использование игровых стратегий внутри конкретных вмешательства для социальной коммуникации', 'NICE поддерживает использование игровых стратегий внутри конкретных вмешательств для социальной коммуникации')
+
+          # 27. Parent-mediated intervention
+          rep(p27, '  - title: "Parent-mediated interventions for infants and toddlers with autism: systematic review and meta-analysis"', '  - title: "Parent-Mediated Interventions for ASD Under 3 Years: A Systematic Review, Meta Analysis, and Moderator Analyses"')
+          rep(p27, '    note: "31 рандомизированное контролируемое исследование у детей младше 3 лет; использовано для общего эффекта и отдельных результатов по отзывчивости родителей, взаимодействию родителя и ребёнка и социальной коммуникации."', '    note: "31 рандомизированное контролируемое исследование у детей младше 3 лет; использовано для общего эффекта, отзывчивости родителей, взаимодействия родителя и ребёнка, социальной коммуникации и оценки уверенности в доказательствах по GRADE."')
+          rep(p27, '  - title: "Parent-implemented interventions for autistic children: a meta-analysis"', '  - title: "Effects of Parent-Implemented Interventions on Outcomes of Children with Autism: A Meta-Analysis"')
+          rep(p27, '    publicationYear: 2022', '    publicationYear: 2023')
+          rep(p27, '  - title: "Parent-mediated interventions for young children with autism spectrum disorders"', '  - title: "Parent-Mediated Interventions for Children and Adolescents With Autism Spectrum Disorders: A Systematic Review and Meta-Analysis"')
+          rep(p27, '[← Развитие, взаимодействие и игра](/kz/ru/parents/razvitie-vzaimodeystvie-i-igra/)', '[← Игровые вмешательства](/kz/ru/parents/play-based-interventions/)')
+          rep(p27, 'Meta-analysis 2025 года включил **31 randomized controlled trial** с детьми младше 3 лет.', 'Метаанализ 2025 года включил **31 рандомизированное контролируемое исследование** с детьми младше 3 лет.')
+          rep(p27, '- responsiveness родителей: **g = 0.23**', '- отзывчивости родителей (responsiveness): **g = 0.23**')
+          rep(p27, 'При этом значимого общего эффекта на языковые навыки в этом meta-analysis не было.', 'При этом значимого общего эффекта на языковые навыки в этом метаанализе не было. По оценке GRADE уверенность в доказательствах по разным результатам была от умеренной до низкой, поэтому величины эффекта нужно интерпретировать осторожно.')
+
+          # 28. Peer-mediated intervention
+          rep(p28, '    organisation: "National Clearinghouse on Autism Evidence and Practice"\n    publicationYear: 2020\n    note: "Использовано для классификации обучения и вмешательства с участием сверстников как отдельной практики с научными подтверждениями."', '    organisation: "Hume et al."\n    publicationYear: 2021\n    note: "Использовано для классификации вмешательств с участием сверстников как практики с научными подтверждениями на основе литературы, опубликованной до конца 2017 года."')
+          rep(p28, '    accessedAt: 2026-09-18\n---', '    accessedAt: 2026-09-18\n  - title: "Peer-Mediated Social Skills Interventions in Primary School Settings for Autistic Children in the Light of the ICF Bio-psycho-social Model. A Systematic Review"\n    url: "https://pubmed.ncbi.nlm.nih.gov/39467895/"\n    organisation: "PubMed"\n    publicationYear: 2026\n    note: "24 исследования у детей 6-12 лет. Большинство показало положительные результаты, но только 5 исследований включали последующее наблюдение, и его результаты были неоднозначными."\n    accessedAt: 2026-09-24\n---')
+          rep(p28, '[← Развитие, взаимодействие и игра](/kz/ru/parents/razvitie-vzaimodeystvie-i-igra/)', '[← Поддержка с участием родителей](/kz/ru/parents/parent-mediated-intervention/)')
+          rep(p28, 'NICE рекомендует рассматривать участие сверстников (сверстника mediation) - в вмешательства для социальной коммуникации для детей школьного возраста.', 'NICE рекомендует рассматривать поддержку с участием сверстников (peer mediation) во вмешательствах для социальной коммуникации у детей школьного возраста.')
+          rep(p28, 'Это не означает, что любой программа поддержки сверстниками автоматически является научно обоснованное вмешательство.', 'Это не означает, что любая программа поддержки сверстниками автоматически является научно обоснованным вмешательством.')
+          rep(p28, 'NCAEP относит вмешательства с участием сверстников к практикам с научными подтверждениями.', 'В обзоре Hume et al. вмешательства с участием сверстников были отнесены к практикам с научными подтверждениями на основе исследований, опубликованных до конца 2017 года.')
+          rep(p28, 'Но результаты зависят от:\n\n- возраста\n- среды\n- того, как обучены сверстники\n- конкретной цели\n- длительности программы.\n\nПоэтому корректнее говорить:', 'Но результаты зависят от:\n\n- возраста\n- среды\n- того, как обучены сверстники\n- конкретной цели\n- длительности программы.\n\nСистематический обзор, опубликованный в 2026 году, включил 24 исследования программ для аутичных детей 6-12 лет в начальной школе. Большинство исследований сообщало положительные результаты, но только 5 включали последующее наблюдение, причём долгосрочные результаты различались. Это ограничивает уверенность в устойчивости эффекта после завершения программы.\n\nПоэтому корректнее говорить:')
+          rep(p28, '- самостоятельная игра часть времени.', '- самостоятельная игра в течение части времени.')
+          rep(p28, 'обязательной частью план помощи.', 'обязательной частью плана помощи.')
+          rep(p28, 'на одном назначенного сверстника-помощника', 'на одном назначенном сверстнике-помощнике')
+          rep(p28, '- сверстника support\n- сверстника mediation', '- поддержка сверстников (peer support)\n- медиация сверстников (peer mediation)')
+
+          # 29. Imitation and RIT
+          rep(p29, 'summary: "Что такое imitation и reciprocal imitation, как взаимное подражание используется в игре и чем полезный навык отличается от простого выполнения команды «повтори»."', 'summary: "Что такое подражание и взаимное подражание (imitation и reciprocal imitation), как они используются в игре и чем полезный навык отличается от простого выполнения команды «повтори»."')
+          rep(p29, '  - "Reciprocal Imitation - взаимное подражание - включает не только повторение действий взрослого ребёнком, но и подражание взрослого действиям ребёнка."', '  - "Взаимное подражание (Reciprocal Imitation) включает не только повторение действий взрослого ребёнком, но и подражание взрослого действиям ребёнка."')
+          rep(p29, '  - title: "Randomized comparison of reciprocal imitation training and treatment as usual for young children with autism spectrum disorders"', '  - title: "Pilot randomized controlled trial of Reciprocal Imitation Training for teaching elicited and spontaneous imitation to children with autism"')
+          rep(p29, '    note: "Pilot randomized controlled trial с 21 ребёнком; использовано для данных по elicited и spontaneous imitation."', '    note: "Пилотное рандомизированное контролируемое исследование с 21 ребёнком; использовано для данных по вызванному (elicited) и спонтанному (spontaneous) подражанию."')
+          rep(p29, '    accessedAt: 2026-09-18\n---', '    accessedAt: 2026-09-18\n  - title: "Methods to improve imitation in young children with autism: a review"\n    url: "https://doi.org/10.1016/B978-0-323-85031-5.00010-4"\n    organisation: "Academic Press"\n    publicationYear: 2021\n    note: "Обзор 10 исследований вмешательств для развития моторного подражания: 4 по RIT, 3 по видеомоделированию, 2 по ABA и 1 по натуралистическому развивающе-поведенческому подходу. Только одно исследование имело рандомизированный контролируемый дизайн."\n    accessedAt: 2026-09-24\n---')
+          rep(p29, '[← Развитие, взаимодействие и игра](/kz/ru/parents/razvitie-vzaimodeystvie-i-igra/)', '[← Поддержка через сверстников](/kz/ru/parents/peer-mediated-intervention/)')
+          rep(p29, 'Взаимное подражание (Reciprocal Imitation).\n\nЗдесь идея отличается', 'Взаимное подражание (Reciprocal Imitation) строится на взаимном обмене действиями.\n\nЗдесь идея отличается')
+          rep(p29, '## тренинг взаимного подражания (Reciprocal Imitation Training, RIT)\n\nтренинг взаимного подражания (Reciprocal Imitation Training, RIT), или RIT, - это конкретный подход', '## Тренинг взаимного подражания (Reciprocal Imitation Training, RIT)\n\nТренинг взаимного подражания (Reciprocal Imitation Training, RIT) - это конкретный подход')
+          rep(p29, 'Это уже конкретная вмешательство, а не просто любое взаимное копирование.', 'Это уже конкретное вмешательство, а не просто любое взаимное копирование.')
+          rep(p29, 'Пилотное рандомизированное контролируемое исследование включил **21 маленького аутичного ребёнка**.', 'Пилотное рандомизированное контролируемое исследование включало **21 маленького аутичного ребёнка**.')
+          rep(p29, '- вызванного подражания - повторения после предложения взрослого\n- самостоятельного подражания (spontaneous imitation)', '- вызванного подражания (elicited imitation) - повторения после предложения взрослого\n- спонтанного подражания (spontaneous imitation)')
+          rep(p29, 'Но это был небольшой пилотное исследование.', 'Но это было небольшое пилотное исследование.')
+          rep(p29, 'Поэтому результат нельзя автоматически переносить на всех детей.\n\n## Есть ли данные о переносе навыка', 'Поэтому результат нельзя автоматически переносить на всех детей.\n\nОбзор 2021 года нашёл 10 исследований вмешательств для развития моторного подражания у маленьких аутичных детей. Четыре из них изучали RIT, но только одно из всех 10 исследований имело рандомизированный контролируемый дизайн. Авторы оценили результаты как перспективные, но указали на необходимость более крупных и строгих исследований.\n\n## Есть ли данные о переносе навыка')
+          rep(p29, 'не говорит, какой именно доказательная база-based approach используется.', 'не говорит, какой именно научно обоснованный подход используется.')
+          rep(p29, 'Подражание (Imitation) - может быть полезным способом учиться через наблюдение.', 'Подражание (Imitation) может быть полезным способом учиться через наблюдение.')
+          rep(p29, 'Взаимное подражание (Reciprocal Imitation) - добавляет важную идею:', 'Взаимное подражание (Reciprocal Imitation) добавляет важную идею:')
+          rep(p29, 'доказательная база пока намного меньше, чем у более широких вмешательство classes.', 'доказательная база пока намного меньше, чем у более широких классов вмешательств.')
+          rep(p29, '> **Помогает ли подражание ребёнку осваивать полезные действия и участвовать во взаимодействии, а не просто учит его выполнять команду «повтори»?**\n\n[← Поддержка через сверстников](/kz/ru/parents/peer-mediated-intervention/)', '> **Помогает ли подражание ребёнку осваивать полезные действия и участвовать во взаимодействии, а не просто учит его выполнять команду «повтори»?**\n\n## Дальше\n\nСледующий раздел:\n\n[Сенсорные особенности и адаптация среды](/kz/ru/parents/sensornye-osobennosti-i-adaptatsiya-sredy/)\n\n[← Поддержка через сверстников](/kz/ru/parents/peer-mediated-intervention/)')
+
+          # 30. Sensory and environmental support
+          rep(p30, '  - title: "Ayres Sensory Integration for autistic children: systematic review of randomized controlled trials"', '  - title: "Ayres Sensory Integration® With Children Ages 0 to 12: A Systematic Review of Randomized Controlled Trials"')
+          rep(p30, '    note: "Использовано для обзора рандомизированных контролируемых исследований ASI и результатов по конкретным целям."', '    note: "9 рандомизированных контролируемых исследований, 344 участника; 6 исследований включали аутичных детей. Использовано для результатов по индивидуализированным целям и отсутствию пользы для раздражительности и невыполнения требований."')
+          rep(p30, '  - title: "Systematic review of sensory-based interventions for children and youth"', '  - title: "Systematic review of sensory-based interventions for children and youth (2015-2024)"')
+          rep(p30, '[← Какие виды помощи и поддержки бывают при аутизме](/kz/ru/parents/vidy-pomoshchi-i-podderzhki-pri-autizme/)', '[← Подражание и взаимное подражание](/kz/ru/parents/imitation-reciprocal-imitation/)\n\n[К общей карте помощи](/kz/ru/parents/vidy-pomoshchi-i-podderzhki-pri-autizme/)')
+          rep(p30, 'Систематический обзор рандомизированных контролируемых исследований 2025 года включил 9 исследований с 344 участниками. Наиболее убедительные данные касались достижения индивидуальных целей у аутичных детей. При этом пользы ASI для раздражительности и невыполнения требований показано не было.', 'Систематический обзор 2025 года включил 9 рандомизированных контролируемых исследований с 344 участниками в целом; 6 из этих исследований проводились с аутичными детьми. Наиболее убедительные данные касались достижения индивидуализированных целей у аутичных детей. При этом пользы ASI для раздражительности и невыполнения требований показано не было.')
+          rep(p30, 'Этому будет посвящена отдельная статья.', '[Подробнее: сенсорная интеграция по Айрес](/kz/ru/parents/ayres-sensory-integration/)')
+          rep(p30, 'Это тоже разберём отдельно.', '[Подробнее: сенсорная диета](/kz/ru/parents/sensory-diet/)')
+          rep(p30, '- сенсорную интеграцию по Айрес', '- сенсорная интеграция по Айрес')
+          rep(p30, '[← Подражание и взаимное подражание](/kz/ru/parents/imitation-reciprocal-imitation/)\n\n[К общей карте помощи](/kz/ru/parents/vidy-pomoshchi-i-podderzhki-pri-autizme/)\n\nНекоторые аутичные дети', '[← Подражание и взаимное подражание](/kz/ru/parents/imitation-reciprocal-imitation/)\n\n[К общей карте помощи](/kz/ru/parents/vidy-pomoshchi-i-podderzhki-pri-autizme/)\n\nНекоторые аутичные дети')
+
+          PY
+          npm install
+          npm run validate
+          git config user.name "AutismHub QA"
+          git config user.email "actions@users.noreply.github.com"
+          git add src/content/pages/kz/ru/play-based-interventions.md src/content/pages/kz/ru/parent-mediated-intervention.md src/content/pages/kz/ru/peer-mediated-intervention.md src/content/pages/kz/ru/imitation-reciprocal-imitation.md src/content/pages/kz/ru/sensory-environmental-support.md
+          git commit -m "Clean and update articles 26-30"
+          git push origin main
