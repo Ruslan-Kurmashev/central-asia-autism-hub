@@ -1,0 +1,77 @@
+name: Final language QA articles 21-25
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - '.github/workflows/qa-micro-articles-21-25-temp.yml'
+
+permissions:
+  contents: write
+
+jobs:
+  clean:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v7
+        with:
+          fetch-depth: 0
+      - name: Apply final micro fixes and validate
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+
+          def replace(path, old, new):
+              p = Path(path)
+              text = p.read_text(encoding='utf-8')
+              if old not in text:
+                  raise SystemExit(f'Missing expected text in {path}: {old!r}')
+              p.write_text(text.replace(old, new), encoding='utf-8')
+
+          replace('src/content/pages/kz/ru/speech-language-therapy.md',
+                  '- функции коммуникации\n- социальная коммуникация\n- устная речь\n- разборчивость речи\n- моторная речь',
+                  '- функции коммуникации\n- социальную коммуникацию\n- устную речь\n- разборчивость речи\n- моторную речь')
+
+          replace('src/content/pages/kz/ru/development-interaction-play.md',
+                  '- 1,165 аутичных детей младше 5 лет.',
+                  '- 1 165 аутичных детей младше 5 лет.')
+          replace('src/content/pages/kz/ru/development-interaction-play.md',
+                  'Engagement можно перевести как:\n\n**вовлечённость в деятельность или взаимодействие.**',
+                  'Термин engagement здесь означает:\n\n**вовлечённость в деятельность или взаимодействие.**')
+          replace('src/content/pages/kz/ru/development-interaction-play.md',
+                  'Naturalistic Intervention рассматривается NCAEP как отдельная практика с научными подтверждениями.',
+                  'В обзоре NCAEP эта категория была отнесена к практикам с научными подтверждениями на основе литературы, опубликованной до 2017 года.')
+          replace('src/content/pages/kz/ru/development-interaction-play.md',
+                  '- [Naturalistic Intervention - обучение в естественных ситуациях](/kz/ru/parents/naturalistic-intervention/)\n- [NDBI - натуралистические развивающе-поведенческие вмешательства](/kz/ru/parents/ndbi/)\n- [Joint Attention - совместное внимание](/kz/ru/parents/joint-attention/)\n- [Play-Based Interventions - игровые вмешательства](/kz/ru/parents/play-based-interventions/)\n- [Parent-Mediated Intervention - поддержка с участием родителей](/kz/ru/parents/parent-mediated-intervention/)\n- [Peer-Mediated Intervention - поддержка через сверстников](/kz/ru/parents/peer-mediated-intervention/)\n- [Imitation / Reciprocal Imitation - подражание и взаимное подражание](/kz/ru/parents/imitation-reciprocal-imitation/).',
+                  '- [Обучение в естественных ситуациях (Naturalistic Intervention)](/kz/ru/parents/naturalistic-intervention/)\n- [NDBI - натуралистические развивающе-поведенческие вмешательства](/kz/ru/parents/ndbi/)\n- [Совместное внимание (Joint Attention)](/kz/ru/parents/joint-attention/)\n- [Игровые вмешательства (Play-Based Interventions)](/kz/ru/parents/play-based-interventions/)\n- [Поддержка с участием родителей (Parent-Mediated Intervention)](/kz/ru/parents/parent-mediated-intervention/)\n- [Поддержка через сверстников (Peer-Mediated Intervention)](/kz/ru/parents/peer-mediated-intervention/)\n- [Подражание и взаимное подражание (Imitation / Reciprocal Imitation)](/kz/ru/parents/imitation-reciprocal-imitation/).')
+
+          replace('src/content/pages/kz/ru/ndbi.md',
+                  'NDBI идёт дальше и специально объединяет:',
+                  'NDBI описывает отдельный класс вмешательств, который объединяет:')
+
+          replace('src/content/pages/kz/ru/joint-attention.md',
+                  '    note: "Использовано для разграничения initiating joint attention и responding to joint attention."',
+                  '    note: "Использовано для разграничения инициирования совместного внимания (initiating joint attention) и реакции на совместное внимание (responding to joint attention)."')
+          replace('src/content/pages/kz/ru/joint-attention.md',
+                  '    note: "Использовано для примеров способов initiating joint attention, включая pointing, showing, gestures, vocalization и eye contact."',
+                  '    note: "Использовано для примеров инициирования совместного внимания, включая указательный жест (pointing), показ предмета (showing), другие жесты, вокализации и зрительный контакт (eye contact)."')
+          replace('src/content/pages/kz/ru/joint-attention.md',
+                  '**Реакция на совместное внимание (Responding to Joint Attention - RJA).**',
+                  '**Реакция на совместное внимание (Responding to Joint Attention, RJA).**')
+          replace('src/content/pages/kz/ru/joint-attention.md',
+                  '**Инициирование совместного внимания (Initiating Joint Attention - IJA).**',
+                  '**Инициирование совместного внимания (Initiating Joint Attention, IJA).**')
+          replace('src/content/pages/kz/ru/joint-attention.md',
+                  '> **Поддержка совместного внимания имеет подтверждающие исследования, но результат не одинаков для всех детей и всех программ.**',
+                  '> **Для поддержки совместного внимания есть подтверждающие исследования, но результат не одинаков для всех детей и всех программ.**')
+          replace('src/content/pages/kz/ru/joint-attention.md',
+                  '[Joint Attention - совместное внимание](/kz/ru/parents/joint-attention/)',
+                  '[Совместное внимание (Joint Attention)](/kz/ru/parents/joint-attention/)') if False else None
+          PY
+          npm install
+          npm run validate
+          git config user.name "AutismHub QA"
+          git config user.email "actions@users.noreply.github.com"
+          git add src/content/pages/kz/ru/speech-language-therapy.md src/content/pages/kz/ru/development-interaction-play.md src/content/pages/kz/ru/ndbi.md src/content/pages/kz/ru/joint-attention.md
+          git commit -m "Finish QA cleanup articles 21-25"
+          git push origin main
