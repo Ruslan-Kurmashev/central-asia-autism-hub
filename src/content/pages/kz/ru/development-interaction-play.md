@@ -118,7 +118,7 @@ sources:
 Метаанализ 2026 года включил:
 
 - 18 рандомизированных контролируемых исследований
-- 1,165 аутичных детей младше 5 лет.
+- 1 165 аутичных детей младше 5 лет.
 
 Вмешательства показали улучшение навыков совместного внимания:
 
@@ -136,7 +136,7 @@ sources:
 
 ## Вовлечённость (engagement)
 
-Engagement можно перевести как:
+Термин engagement здесь означает:
 
 **вовлечённость в деятельность или взаимодействие.**
 
@@ -251,7 +251,7 @@ NICE рекомендует вмешательства для социально
 
 Вместо того чтобы создавать только искусственную учебную ситуацию (artificial teaching situation), специалист использует естественные возможности для обучения.
 
-Naturalistic Intervention рассматривается NCAEP как отдельная практика с научными подтверждениями.
+В обзоре NCAEP эта категория была отнесена к практикам с научными подтверждениями на основе литературы, опубликованной до 2017 года.
 
 ## Почему обучение в естественных ситуациях может быть полезно
 
@@ -640,10 +640,10 @@ NICE рекомендует игровые вмешательства в обл�
 
 Отдельные материалы этого раздела:
 
-- [Naturalistic Intervention - обучение в естественных ситуациях](/kz/ru/parents/naturalistic-intervention/)
+- [Обучение в естественных ситуациях (Naturalistic Intervention)](/kz/ru/parents/naturalistic-intervention/)
 - [NDBI - натуралистические развивающе-поведенческие вмешательства](/kz/ru/parents/ndbi/)
-- [Joint Attention - совместное внимание](/kz/ru/parents/joint-attention/)
-- [Play-Based Interventions - игровые вмешательства](/kz/ru/parents/play-based-interventions/)
-- [Parent-Mediated Intervention - поддержка с участием родителей](/kz/ru/parents/parent-mediated-intervention/)
-- [Peer-Mediated Intervention - поддержка через сверстников](/kz/ru/parents/peer-mediated-intervention/)
-- [Imitation / Reciprocal Imitation - подражание и взаимное подражание](/kz/ru/parents/imitation-reciprocal-imitation/).
+- [Совместное внимание (Joint Attention)](/kz/ru/parents/joint-attention/)
+- [Игровые вмешательства (Play-Based Interventions)](/kz/ru/parents/play-based-interventions/)
+- [Поддержка с участием родителей (Parent-Mediated Intervention)](/kz/ru/parents/parent-mediated-intervention/)
+- [Поддержка через сверстников (Peer-Mediated Intervention)](/kz/ru/parents/peer-mediated-intervention/)
+- [Подражание и взаимное подражание (Imitation / Reciprocal Imitation)](/kz/ru/parents/imitation-reciprocal-imitation/).

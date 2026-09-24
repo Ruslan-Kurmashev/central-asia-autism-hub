@@ -44,13 +44,13 @@ sources:
     url: "https://pmc.ncbi.nlm.nih.gov/articles/PMC5070062/"
     organisation: "PubMed Central"
     publicationYear: 2016
-    note: "Использовано для разграничения initiating joint attention и responding to joint attention."
+    note: "Использовано для разграничения инициирования совместного внимания (initiating joint attention) и реакции на совместное внимание (responding to joint attention)."
     accessedAt: 2026-09-18
   - title: "Joint attention revisited: Finding strengths among children with autism"
     url: "https://pmc.ncbi.nlm.nih.gov/articles/PMC5461167/"
     organisation: "PubMed Central"
     publicationYear: 2017
-    note: "Использовано для примеров способов initiating joint attention, включая pointing, showing, gestures, vocalization и eye contact."
+    note: "Использовано для примеров инициирования совместного внимания, включая указательный жест (pointing), показ предмета (showing), другие жесты, вокализации и зрительный контакт (eye contact)."
     accessedAt: 2026-09-18
 ---
 
@@ -119,7 +119,7 @@ sources:
 
 Это называется:
 
-**Реакция на совместное внимание (Responding to Joint Attention - RJA).**
+**Реакция на совместное внимание (Responding to Joint Attention, RJA).**
 
 ### Ребёнок сам привлекает внимание другого человека
 
@@ -127,7 +127,7 @@ sources:
 
 Это называется:
 
-**Инициирование совместного внимания (Initiating Joint Attention - IJA).**
+**Инициирование совместного внимания (Initiating Joint Attention, IJA).**
 
 Оба навыка связаны, но это не одно и то же.
 
@@ -288,7 +288,7 @@ sources:
 
 Поэтому правильный вывод:
 
-> **Поддержка совместного внимания имеет подтверждающие исследования, но результат не одинаков для всех детей и всех программ.**
+> **Для поддержки совместного внимания есть подтверждающие исследования, но результат не одинаков для всех детей и всех программ.**
 
 ## Что рекомендует NICE
 
