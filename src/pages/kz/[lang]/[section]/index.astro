@@ -43,17 +43,17 @@ const materials = (
       Boolean(data.updatedAt),
   )
 ).sort((left, right) => {
-  const updatedDiff =
-    (right.data.updatedAt?.getTime() ?? 0) -
-    (left.data.updatedAt?.getTime() ?? 0);
-
-  if (updatedDiff !== 0) return updatedDiff;
-
   const publishedDiff =
     (right.data.publishedAt?.getTime() ?? 0) -
     (left.data.publishedAt?.getTime() ?? 0);
 
   if (publishedDiff !== 0) return publishedDiff;
+
+  const updatedDiff =
+    (right.data.updatedAt?.getTime() ?? 0) -
+    (left.data.updatedAt?.getTime() ?? 0);
+
+  if (updatedDiff !== 0) return updatedDiff;
 
   return left.data.title.localeCompare(right.data.title, locale);
 });
