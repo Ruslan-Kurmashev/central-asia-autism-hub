@@ -17,7 +17,7 @@ editor: Ruslan Kurmashev
 riskLevel: moderate
 disclaimerType: medical
 conflictOfInterest: "Конфликт интересов не заявлен."
-publishedAt: "2026-09-19T15:30:54.697Z"
+publishedAt: "2026-09-26T16:20:37Z"
 updatedAt: "2026-09-19T23:04:04.698Z"
 reviewDueAt: 2027-03-26
 draft: false

@@ -17,7 +17,7 @@ editor: Ruslan Kurmashev
 riskLevel: moderate
 disclaimerType: informational
 conflictOfInterest: "Конфликт интересов не заявлен."
-publishedAt: "2026-09-19T15:25:27.388Z"
+publishedAt: "2026-09-26T15:02:53Z"
 updatedAt: "2026-09-19T23:04:01.034Z"
 reviewDueAt: 2027-03-26
 draft: false
