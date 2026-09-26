@@ -1,0 +1,63 @@
+name: Fix publication dates temp
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - '.github/workflows/fix-publication-dates-temp.yml'
+
+permissions:
+  contents: write
+
+jobs:
+  update-dates:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v7
+        with:
+          ref: main
+      - name: Update publication dates
+        shell: bash
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+          import re
+
+          updates = {
+              'src/content/pages/kz/ru/ayres-sensory-integration.md': '2026-09-24T21:16:43Z',
+              'src/content/pages/kz/ru/sensory-based-strategies.md': '2026-09-26T09:16:50Z',
+              'src/content/pages/kz/ru/sensory-diet.md': '2026-09-26T15:02:53Z',
+              'src/content/pages/kz/ru/weighted-items.md': '2026-09-26T16:20:37Z',
+          }
+
+          for filename, value in updates.items():
+              path = Path(filename)
+              text = path.read_text(encoding='utf-8')
+              updated, count = re.subn(
+                  r'^publishedAt:.*$',
+                  f'publishedAt: "{value}"',
+                  text,
+                  count=1,
+                  flags=re.MULTILINE,
+              )
+              if count != 1:
+                  raise SystemExit(f'Expected exactly one publishedAt in {filename}, found {count}')
+              path.write_text(updated, encoding='utf-8')
+          PY
+      - name: Install dependencies
+        run: npm install
+      - name: Validate site
+        run: npm run validate
+      - name: Commit publication dates
+        shell: bash
+        run: |
+          git config user.name "Ruslan Kurmashev"
+          git config user.email "tigrrustik0@gmail.com"
+          git add src/content/pages/kz/ru/ayres-sensory-integration.md \
+                  src/content/pages/kz/ru/sensory-based-strategies.md \
+                  src/content/pages/kz/ru/sensory-diet.md \
+                  src/content/pages/kz/ru/weighted-items.md
+          git diff --cached --quiet && exit 0
+          git commit -m "Align sensory article publication dates"
+          git push origin HEAD:main
