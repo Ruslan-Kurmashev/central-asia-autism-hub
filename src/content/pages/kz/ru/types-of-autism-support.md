@@ -18,10 +18,10 @@ riskLevel: moderate
 disclaimerType: medical
 conflictOfInterest: "Конфликт интересов не заявлен."
 publishedAt: 2026-09-17
-updatedAt: "2026-09-28T14:05:00+01:00"
+updatedAt: "2026-09-28T16:49:00+01:00"
 reviewDueAt: 2027-03-17
 draft: false
-versionNote: "28 сентября 2026: на основной карте помощи дополнен прямой список опубликованных материалов раздела «Развитие, взаимодействие и игра», включая поддержку через сверстников."
+versionNote: "28 сентября 2026: завершён прямой список опубликованных материалов раздела «Развитие, взаимодействие и игра»; добавлена статья о подражании и Reciprocal Imitation Training."
 keyPoints:
   - "При аутизме нет одного универсального метода: помощь выбирают под конкретную функциональную цель."
   - "Поддержка может включать развитие навыков, изменение среды, медицинскую помощь, психологическую поддержку и инструменты оценки или планирования."
@@ -146,6 +146,7 @@ AAC может быть низкотехнологичной, например �
 - [Игровые вмешательства (Play-Based Interventions)](/kz/ru/parents/play-based-interventions/)
 - [Поддержка с участием родителей (Parent-Mediated Intervention)](/kz/ru/parents/parent-mediated-intervention/)
 - [Поддержка через сверстников (Peer-Mediated Intervention)](/kz/ru/parents/peer-mediated-intervention/)
+- [Подражание и взаимное подражание (Imitation / Reciprocal Imitation)](/kz/ru/parents/imitation-reciprocal-imitation/)
 
 ## 4. Сенсорные особенности и адаптация среды
 
