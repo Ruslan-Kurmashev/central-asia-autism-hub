@@ -174,7 +174,7 @@ sources:
 
 Поэтому переводить Physical Therapy просто словом «ЛФК» не всегда корректно.
 
-[Подробнее: физическая терапия и физиотерапия при аутизме](/kz/ru/parents/physical-therapy-physiotherapy/)
+[Подробнее: физическая терапия и физиотерапия при аутизме](/kz/ru/parents/fizicheskaya-terapiya-fizioterapiya/)
 
 ## ЛФК не равна физиопроцедурам
 
