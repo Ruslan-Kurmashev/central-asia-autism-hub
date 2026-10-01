@@ -8,7 +8,7 @@ section: parents
 topic: approaches-to-support
 slug: neyropsihologicheskaya-korrektsiya
 translationKey: parents-neuropsychological-correction
-translationStatus: pending
+translationStatus: source
 audience:
   - parents
   - families
@@ -17,7 +17,7 @@ editor: Ruslan Kurmashev
 riskLevel: moderate
 disclaimerType: medical
 conflictOfInterest: "Конфликт интересов не заявлен."
-draft: true
+draft: false
 keyPoints:
   - "«Нейропсихологическая коррекция» не является одним стандартизированным протоколом. Под этим названием могут предлагаться разные когнитивные, метакогнитивные, сенсомоторные, технологические и образовательные программы."
   - "Отдельные вмешательства, направленные на исполнительные функции, социальное познание или конкретные когнитивные навыки, изучались у аутичных людей разных возрастов и могут показывать пользу для отдельных исходов."
