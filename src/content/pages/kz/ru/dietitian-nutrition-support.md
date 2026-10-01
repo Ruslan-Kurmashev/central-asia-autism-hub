@@ -226,4 +226,4 @@ NICE прямо рекомендует **не использовать искл�
 
 Хороший план начинается с оценки фактического рациона и риска, использует анализы и добавки только по показаниям, не вводит ненужных ограничений и регулярно проверяет, остаётся ли питание полноценным и выполнимым для ребёнка и семьи.
 
-[← Оценка трудностей питания](/kz/ru/parents/otsenka-trudnostey-pitaniya/) | [Общая карточка feeding therapy](/kz/ru/parents/feeding-therapy/) | [Сенсорные подходы к питанию](/kz/ru/parents/sensory-based-feeding-approaches/)
+[← Оценка трудностей питания](/kz/ru/parents/otsenka-trudnostey-pitaniya/) | [Общая карточка feeding therapy](/kz/ru/parents/feeding-therapy/) | [Сенсорные подходы к питанию](/kz/ru/parents/sensory-based-feeding-approaches/) | [ARFID: оценка и помощь](/kz/ru/parents/arfid-assessment-support/)
