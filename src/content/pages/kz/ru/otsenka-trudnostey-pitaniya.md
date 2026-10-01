@@ -8,7 +8,7 @@ section: parents
 topic: feeding-nutrition
 slug: otsenka-trudnostey-pitaniya
 translationKey: parents-feeding-assessment
-translationStatus: pending
+translationStatus: source
 audience:
   - parents
   - families
@@ -17,8 +17,11 @@ editor: Ruslan Kurmashev
 riskLevel: moderate
 disclaimerType: medical
 conflictOfInterest: "Конфликт интересов не заявлен."
-draft: true
-versionNote: "1 октября 2026: evidence/editorial QA FEED-001. Уточнены границы PFD и ARFID, добавлены критерии безопасности глотания, развивающиеся инструменты оценки, мониторинг исходов и актуальный Казахстанский контекст по нутрициологии и лицензированию медицинской деятельности."
+publishedAt: "2026-10-01T15:20:00+01:00"
+updatedAt: "2026-10-01T15:20:00+01:00"
+reviewDueAt: 2027-04-01
+draft: false
+versionNote: "1 октября 2026: evidence/editorial QA завершён. Опубликована P1-статья об оценке трудностей питания с отдельными блоками по безопасности глотания, PFD/ARFID, нутриционному риску, мониторингу и Казахстанскому контексту."
 keyPoints:
   - "Трудности питания при аутизме не следует автоматически объяснять сенсорными особенностями или поведением: медицинские, пищевые, навыковые и психосоциальные факторы могут сочетаться."
   - "Оценка должна начинаться с безопасности и состояния здоровья, затем учитывать питание и рост, навыки еды и глотания, условия приёма пищи и семейный контекст."
