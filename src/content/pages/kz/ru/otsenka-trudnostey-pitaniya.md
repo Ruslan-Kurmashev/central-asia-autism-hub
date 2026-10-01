@@ -418,3 +418,4 @@ PFD и ARFID могут пересекаться, но не являются о�
 - [Как выбирать помощь под конкретную цель](/kz/ru/parents/kak-vybirat-pomoshch-pod-konkretnuyu-tsel/)
 - [Как понять доказательность метода](/kz/ru/parents/kak-ponyat-dokazatelnost-metoda/)
 - [Как понять, помогает ли выбранная помощь](/kz/ru/parents/kak-ponyat-pomogaet-li-podderzhka/)
+- [Терапия и помощь при трудностях питания](/kz/ru/parents/feeding-therapy/)
