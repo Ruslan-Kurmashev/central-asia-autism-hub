@@ -149,4 +149,4 @@ Autism-specific данные есть, но база пока небольшая
 
 Поведенческие подходы могут быть полезны для отдельных feeding-задач, но сначала нужно понять причину трудностей и обеспечить медицинскую и swallowing-безопасность. Выбор процедуры должен быть конкретным, наименее интрузивным из подходящих, с измеряемой целью и мониторингом distress.
 
-[← Оценка трудностей питания](/kz/ru/parents/otsenka-trudnostey-pitaniya/) | [Общая карточка feeding therapy](/kz/ru/parents/feeding-therapy/)
+[← Оценка трудностей питания](/kz/ru/parents/otsenka-trudnostey-pitaniya/) | [Общая карточка feeding therapy](/kz/ru/parents/feeding-therapy/) | [Следующая карточка: сенсорные подходы к питанию →](/kz/ru/parents/sensory-based-feeding-approaches/)
