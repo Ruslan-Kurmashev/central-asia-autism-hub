@@ -12,7 +12,7 @@ translationStatus: source
 audience:
   - parents
   - families
-  - autistic-young-people
+  - general
 author: Ruslan Kurmashev
 editor: Ruslan Kurmashev
 riskLevel: moderate
