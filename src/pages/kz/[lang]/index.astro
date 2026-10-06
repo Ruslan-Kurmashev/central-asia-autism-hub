@@ -159,51 +159,58 @@ const dateFormatter = new Intl.DateTimeFormat(DATE_LOCALES[locale], {
               </div>
 
               <div class="home-v2__masonry">
-                {homeMaterials.map((material, index) => (
-                  <article
-                    class:list={[
-                      'home-v2__card',
-                      index % 4 === 0 && 'home-v2__card--image',
-                      index === 1 && 'home-v2__card--accent',
-                      index === 4 && 'home-v2__card--dark',
-                    ]}
-                  >
-                    {index % 4 === 0 && (
-                      <img
-                        src={heroImagePath}
-                        alt=""
-                        width="900"
-                        height="540"
-                        loading="lazy"
-                        decoding="async"
-                      />
-                    )}
+                {homeMaterials.map((material, index) => {
+                  const cardImage =
+                    material.data.featuredImage ?? (index === 0 ? heroImagePath : undefined);
+                  const cardImageAlt =
+                    material.data.featuredImageAlt ?? (index === 0 ? copy.heroImageAlt : '');
 
-                    <div class="home-v2__card-body">
-                      <span class="home-v2__card-tag">
-                        {copy.sections[material.data.section].title}
-                      </span>
-                      <h3>
-                        <a
-                          href={articlePath(
-                            locale,
-                            material.data.section,
-                            material.data.slug,
-                          )}
-                        >
-                          {material.data.title}
-                        </a>
-                      </h3>
-                      <p>{material.data.summary}</p>
-                      <div class="home-v2__card-meta">
-                        <time datetime={material.data.publishedAt!.toISOString()}>
-                          {dateFormatter.format(material.data.publishedAt!)}
-                        </time>
-                        <span aria-hidden="true">→</span>
+                  return (
+                    <article
+                      class:list={[
+                        'home-v2__card',
+                        cardImage && 'home-v2__card--image',
+                        index === 1 && 'home-v2__card--accent',
+                        index === 4 && 'home-v2__card--dark',
+                      ]}
+                    >
+                      {cardImage && (
+                        <img
+                          src={cardImage}
+                          alt={cardImageAlt}
+                          width="900"
+                          height="540"
+                          loading="lazy"
+                          decoding="async"
+                        />
+                      )}
+
+                      <div class="home-v2__card-body">
+                        <span class="home-v2__card-tag">
+                          {copy.sections[material.data.section].title}
+                        </span>
+                        <h3>
+                          <a
+                            href={articlePath(
+                              locale,
+                              material.data.section,
+                              material.data.slug,
+                            )}
+                          >
+                            {material.data.title}
+                          </a>
+                        </h3>
+                        <p>{material.data.summary}</p>
+                        <div class="home-v2__card-meta">
+                          <time datetime={material.data.publishedAt!.toISOString()}>
+                            {dateFormatter.format(material.data.publishedAt!)}
+                          </time>
+                          <span aria-hidden="true">→</span>
+                        </div>
                       </div>
-                    </div>
-                  </article>
-                ))}
+                    </article>
+                  );
+                })}
 
                 <article class="home-v2__card home-v2__card--statement">
                   <div class="home-v2__card-body">
