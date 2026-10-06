@@ -415,3 +415,293 @@ collections:
           - { label: "Note", name: "note", widget: "text", required: false }
           - { label: "Accessed", name: "accessedAt", widget: "datetime", required: false, default: "", format: "YYYY-MM-DD", date_format: "DD.MM.YYYY", time_format: false, picker_utc: true }
       - { label: "Body", name: "body", widget: "richtext" }
+
+  - name: "site_content"
+    label: "Сайт - главная, меню, footer"
+    description: "Редактируемые тексты интерфейса. Структура и дизайн остаются в Astro."
+    files:
+      - name: "site_ru"
+        label: "Русская версия сайта"
+        file: "src/data/site-copy/ru.json"
+        format: "json"
+        fields:
+          - { label: "ARIA: основная навигация", name: "primaryNavigation", widget: "string" }
+          - { label: "Подпись меню", name: "menuLabel", widget: "string" }
+          - { label: "ARIA: выбор языка", name: "languageNavigation", widget: "string" }
+          - { label: "Подпись языка", name: "languageLabel", widget: "string" }
+          - { label: "Главная", name: "homeLabel", widget: "string" }
+          - { label: "Eyebrow над заголовком", name: "eyebrow", widget: "string" }
+          - { label: "Главный заголовок", name: "title", widget: "string" }
+          - { label: "Лид главной страницы", name: "lead", widget: "text" }
+          - label: "Короткие пункты hero"
+            name: "heroPoints"
+            widget: "list"
+            min: 1
+            field: { label: "Пункт", name: "point", widget: "string" }
+          - { label: "Заголовок beta/status", name: "statusTitle", widget: "string" }
+          - { label: "Текст beta/status", name: "statusText", widget: "text" }
+          - { label: "Главная кнопка", name: "heroPrimaryAction", widget: "string" }
+          - { label: "Вторая кнопка", name: "heroSecondaryAction", widget: "string" }
+          - { label: "Ссылка для специалистов", name: "heroProfessionalAction", widget: "string" }
+          - { label: "Alt главного изображения", name: "heroImageAlt", widget: "string" }
+          - { label: "Featured eyebrow", name: "featuredEyebrow", widget: "string" }
+          - { label: "Featured заголовок", name: "featuredTitle", widget: "string" }
+          - { label: "Featured описание", name: "featuredText", widget: "text" }
+          - { label: "Featured label", name: "featuredLabel", widget: "string" }
+          - { label: "Ссылка на все материалы", name: "allMaterialsAction", widget: "string" }
+          - { label: "Заголовок быстрых путей", name: "quickPathsTitle", widget: "string" }
+          - { label: "Заголовок разделов", name: "exploreTitle", widget: "string" }
+          - { label: "Описание разделов", name: "exploreText", widget: "text" }
+          - { label: "Заголовок принципов", name: "principlesTitle", widget: "string" }
+          - { label: "Описание принципов", name: "principlesText", widget: "text" }
+          - label: "Принципы"
+            name: "principles"
+            widget: "list"
+            min: 1
+            summary: "{{fields.title}}"
+            fields:
+              - { label: "Название", name: "title", widget: "string" }
+              - { label: "Описание", name: "description", widget: "text" }
+          - { label: "Граница ответственности", name: "principlesBoundary", widget: "text" }
+          - { label: "Footer: медицинская граница", name: "footerBoundary", widget: "text" }
+          - { label: "Footer: статус", name: "footerStatus", widget: "text" }
+          - { label: "Footer: ARIA навигации", name: "footerNavigation", widget: "string" }
+          - label: "Footer: подписи ссылок"
+            name: "footerLinks"
+            widget: "object"
+            fields:
+              - { label: "Редакционная политика", name: "editorial", widget: "string" }
+              - { label: "Приватность", name: "privacy", widget: "string" }
+              - { label: "Доступность", name: "accessibility", widget: "string" }
+              - { label: "Контакты", name: "contact", widget: "string" }
+          - { label: "Подпись GitHub repository", name: "repositoryLabel", widget: "string" }
+          - label: "Разделы сайта"
+            name: "sections"
+            widget: "object"
+            fields:
+              - label: "Родителям"
+                name: "parents"
+                widget: "object"
+                fields:
+                  - { label: "Название", name: "title", widget: "string" }
+                  - { label: "Описание", name: "description", widget: "text" }
+              - label: "Наука / Research"
+                name: "research"
+                widget: "object"
+                fields:
+                  - { label: "Название", name: "title", widget: "string" }
+                  - { label: "Описание", name: "description", widget: "text" }
+              - label: "Помощь в Казахстане"
+                name: "help-kazakhstan"
+                widget: "object"
+                fields:
+                  - { label: "Название", name: "title", widget: "string" }
+                  - { label: "Описание", name: "description", widget: "text" }
+              - label: "Обучение"
+                name: "learning"
+                widget: "object"
+                fields:
+                  - { label: "Название", name: "title", widget: "string" }
+                  - { label: "Описание", name: "description", widget: "text" }
+              - label: "Специалистам"
+                name: "professionals"
+                widget: "object"
+                fields:
+                  - { label: "Название", name: "title", widget: "string" }
+                  - { label: "Описание", name: "description", widget: "text" }
+              - label: "О проекте"
+                name: "about"
+                widget: "object"
+                fields:
+                  - { label: "Название", name: "title", widget: "string" }
+                  - { label: "Описание", name: "description", widget: "text" }
+      - name: "site_kk"
+        label: "Қазақша нұсқа"
+        file: "src/data/site-copy/kk.json"
+        format: "json"
+        fields:
+          - { label: "ARIA: основная навигация", name: "primaryNavigation", widget: "string" }
+          - { label: "Подпись меню", name: "menuLabel", widget: "string" }
+          - { label: "ARIA: выбор языка", name: "languageNavigation", widget: "string" }
+          - { label: "Подпись языка", name: "languageLabel", widget: "string" }
+          - { label: "Главная", name: "homeLabel", widget: "string" }
+          - { label: "Eyebrow над заголовком", name: "eyebrow", widget: "string" }
+          - { label: "Главный заголовок", name: "title", widget: "string" }
+          - { label: "Лид главной страницы", name: "lead", widget: "text" }
+          - label: "Короткие пункты hero"
+            name: "heroPoints"
+            widget: "list"
+            min: 1
+            field: { label: "Пункт", name: "point", widget: "string" }
+          - { label: "Заголовок beta/status", name: "statusTitle", widget: "string" }
+          - { label: "Текст beta/status", name: "statusText", widget: "text" }
+          - { label: "Главная кнопка", name: "heroPrimaryAction", widget: "string" }
+          - { label: "Вторая кнопка", name: "heroSecondaryAction", widget: "string" }
+          - { label: "Ссылка для специалистов", name: "heroProfessionalAction", widget: "string" }
+          - { label: "Alt главного изображения", name: "heroImageAlt", widget: "string" }
+          - { label: "Featured eyebrow", name: "featuredEyebrow", widget: "string" }
+          - { label: "Featured заголовок", name: "featuredTitle", widget: "string" }
+          - { label: "Featured описание", name: "featuredText", widget: "text" }
+          - { label: "Featured label", name: "featuredLabel", widget: "string" }
+          - { label: "Ссылка на все материалы", name: "allMaterialsAction", widget: "string" }
+          - { label: "Заголовок быстрых путей", name: "quickPathsTitle", widget: "string" }
+          - { label: "Заголовок разделов", name: "exploreTitle", widget: "string" }
+          - { label: "Описание разделов", name: "exploreText", widget: "text" }
+          - { label: "Заголовок принципов", name: "principlesTitle", widget: "string" }
+          - { label: "Описание принципов", name: "principlesText", widget: "text" }
+          - label: "Принципы"
+            name: "principles"
+            widget: "list"
+            min: 1
+            summary: "{{fields.title}}"
+            fields:
+              - { label: "Название", name: "title", widget: "string" }
+              - { label: "Описание", name: "description", widget: "text" }
+          - { label: "Граница ответственности", name: "principlesBoundary", widget: "text" }
+          - { label: "Footer: медицинская граница", name: "footerBoundary", widget: "text" }
+          - { label: "Footer: статус", name: "footerStatus", widget: "text" }
+          - { label: "Footer: ARIA навигации", name: "footerNavigation", widget: "string" }
+          - label: "Footer: подписи ссылок"
+            name: "footerLinks"
+            widget: "object"
+            fields:
+              - { label: "Редакционная политика", name: "editorial", widget: "string" }
+              - { label: "Приватность", name: "privacy", widget: "string" }
+              - { label: "Доступность", name: "accessibility", widget: "string" }
+              - { label: "Контакты", name: "contact", widget: "string" }
+          - { label: "Подпись GitHub repository", name: "repositoryLabel", widget: "string" }
+          - label: "Разделы сайта"
+            name: "sections"
+            widget: "object"
+            fields:
+              - label: "Родителям"
+                name: "parents"
+                widget: "object"
+                fields:
+                  - { label: "Название", name: "title", widget: "string" }
+                  - { label: "Описание", name: "description", widget: "text" }
+              - label: "Наука / Research"
+                name: "research"
+                widget: "object"
+                fields:
+                  - { label: "Название", name: "title", widget: "string" }
+                  - { label: "Описание", name: "description", widget: "text" }
+              - label: "Помощь в Казахстане"
+                name: "help-kazakhstan"
+                widget: "object"
+                fields:
+                  - { label: "Название", name: "title", widget: "string" }
+                  - { label: "Описание", name: "description", widget: "text" }
+              - label: "Обучение"
+                name: "learning"
+                widget: "object"
+                fields:
+                  - { label: "Название", name: "title", widget: "string" }
+                  - { label: "Описание", name: "description", widget: "text" }
+              - label: "Специалистам"
+                name: "professionals"
+                widget: "object"
+                fields:
+                  - { label: "Название", name: "title", widget: "string" }
+                  - { label: "Описание", name: "description", widget: "text" }
+              - label: "О проекте"
+                name: "about"
+                widget: "object"
+                fields:
+                  - { label: "Название", name: "title", widget: "string" }
+                  - { label: "Описание", name: "description", widget: "text" }
+      - name: "site_en"
+        label: "English site copy"
+        file: "src/data/site-copy/en.json"
+        format: "json"
+        fields:
+          - { label: "ARIA: основная навигация", name: "primaryNavigation", widget: "string" }
+          - { label: "Подпись меню", name: "menuLabel", widget: "string" }
+          - { label: "ARIA: выбор языка", name: "languageNavigation", widget: "string" }
+          - { label: "Подпись языка", name: "languageLabel", widget: "string" }
+          - { label: "Главная", name: "homeLabel", widget: "string" }
+          - { label: "Eyebrow над заголовком", name: "eyebrow", widget: "string" }
+          - { label: "Главный заголовок", name: "title", widget: "string" }
+          - { label: "Лид главной страницы", name: "lead", widget: "text" }
+          - label: "Короткие пункты hero"
+            name: "heroPoints"
+            widget: "list"
+            min: 1
+            field: { label: "Пункт", name: "point", widget: "string" }
+          - { label: "Заголовок beta/status", name: "statusTitle", widget: "string" }
+          - { label: "Текст beta/status", name: "statusText", widget: "text" }
+          - { label: "Главная кнопка", name: "heroPrimaryAction", widget: "string" }
+          - { label: "Вторая кнопка", name: "heroSecondaryAction", widget: "string" }
+          - { label: "Ссылка для специалистов", name: "heroProfessionalAction", widget: "string" }
+          - { label: "Alt главного изображения", name: "heroImageAlt", widget: "string" }
+          - { label: "Featured eyebrow", name: "featuredEyebrow", widget: "string" }
+          - { label: "Featured заголовок", name: "featuredTitle", widget: "string" }
+          - { label: "Featured описание", name: "featuredText", widget: "text" }
+          - { label: "Featured label", name: "featuredLabel", widget: "string" }
+          - { label: "Ссылка на все материалы", name: "allMaterialsAction", widget: "string" }
+          - { label: "Заголовок быстрых путей", name: "quickPathsTitle", widget: "string" }
+          - { label: "Заголовок разделов", name: "exploreTitle", widget: "string" }
+          - { label: "Описание разделов", name: "exploreText", widget: "text" }
+          - { label: "Заголовок принципов", name: "principlesTitle", widget: "string" }
+          - { label: "Описание принципов", name: "principlesText", widget: "text" }
+          - label: "Принципы"
+            name: "principles"
+            widget: "list"
+            min: 1
+            summary: "{{fields.title}}"
+            fields:
+              - { label: "Название", name: "title", widget: "string" }
+              - { label: "Описание", name: "description", widget: "text" }
+          - { label: "Граница ответственности", name: "principlesBoundary", widget: "text" }
+          - { label: "Footer: медицинская граница", name: "footerBoundary", widget: "text" }
+          - { label: "Footer: статус", name: "footerStatus", widget: "text" }
+          - { label: "Footer: ARIA навигации", name: "footerNavigation", widget: "string" }
+          - label: "Footer: подписи ссылок"
+            name: "footerLinks"
+            widget: "object"
+            fields:
+              - { label: "Редакционная политика", name: "editorial", widget: "string" }
+              - { label: "Приватность", name: "privacy", widget: "string" }
+              - { label: "Доступность", name: "accessibility", widget: "string" }
+              - { label: "Контакты", name: "contact", widget: "string" }
+          - { label: "Подпись GitHub repository", name: "repositoryLabel", widget: "string" }
+          - label: "Разделы сайта"
+            name: "sections"
+            widget: "object"
+            fields:
+              - label: "Родителям"
+                name: "parents"
+                widget: "object"
+                fields:
+                  - { label: "Название", name: "title", widget: "string" }
+                  - { label: "Описание", name: "description", widget: "text" }
+              - label: "Наука / Research"
+                name: "research"
+                widget: "object"
+                fields:
+                  - { label: "Название", name: "title", widget: "string" }
+                  - { label: "Описание", name: "description", widget: "text" }
+              - label: "Помощь в Казахстане"
+                name: "help-kazakhstan"
+                widget: "object"
+                fields:
+                  - { label: "Название", name: "title", widget: "string" }
+                  - { label: "Описание", name: "description", widget: "text" }
+              - label: "Обучение"
+                name: "learning"
+                widget: "object"
+                fields:
+                  - { label: "Название", name: "title", widget: "string" }
+                  - { label: "Описание", name: "description", widget: "text" }
+              - label: "Специалистам"
+                name: "professionals"
+                widget: "object"
+                fields:
+                  - { label: "Название", name: "title", widget: "string" }
+                  - { label: "Описание", name: "description", widget: "text" }
+              - label: "О проекте"
+                name: "about"
+                widget: "object"
+                fields:
+                  - { label: "Название", name: "title", widget: "string" }
+                  - { label: "Описание", name: "description", widget: "text" }
