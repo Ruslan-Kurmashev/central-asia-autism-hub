@@ -53,26 +53,35 @@ const legacyHomeSections: Array<{
 
 const parentsPath = sectionPath(locale, 'parents');
 const quickSections: Section[] = ['parents', 'help-kazakhstan', 'research'];
-const quickTopics = copy.sections.parents.topics.slice(0, 4);
 const heroImagePath = `${import.meta.env.BASE_URL}images/hero-family.webp`;
 
-const featuredMaterials = (
+const publishedPages = (
   await getCollection(
     'pages',
     ({ data }) =>
       !data.draft &&
       data.language === locale &&
-      data.section === 'parents' &&
       data.translationStatus !== 'pending' &&
       Boolean(data.publishedAt),
   )
-)
-  .sort(
-    (left, right) =>
-      (right.data.publishedAt?.getTime() ?? 0) -
-      (left.data.publishedAt?.getTime() ?? 0),
-  )
+).sort(
+  (left, right) =>
+    (right.data.publishedAt?.getTime() ?? 0) -
+    (left.data.publishedAt?.getTime() ?? 0),
+);
+
+const homeMaterials = publishedPages.slice(0, 9);
+const featuredMaterials = publishedPages
+  .filter((entry) => entry.data.section === 'parents')
   .slice(0, 3);
+
+const topicBarSections: Section[] = [
+  'parents',
+  'help-kazakhstan',
+  'research',
+  'learning',
+  'professionals',
+];
 
 const dateFormatter = new Intl.DateTimeFormat(DATE_LOCALES[locale], {
   day: 'numeric',
@@ -90,158 +99,151 @@ const dateFormatter = new Intl.DateTimeFormat(DATE_LOCALES[locale], {
   {
     useHomeV2 ? (
       <>
-        <section class="home-v2__hero">
-          <div class="container home-v2__hero-grid">
-            <div class="home-v2__hero-copy">
-              <p class="home-v2__eyebrow">{copy.eyebrow}</p>
-              <h1>{copy.title}</h1>
-              <p class="home-v2__lead">{copy.lead}</p>
+        <section class="home-v2__hero" aria-labelledby="home-v2-title">
+          <img
+            class="home-v2__hero-image"
+            src={heroImagePath}
+            alt={copy.heroImageAlt}
+            width="1801"
+            height="873"
+            decoding="async"
+            fetchpriority="high"
+          />
+          <div class="home-v2__hero-overlay" aria-hidden="true"></div>
 
-              <div class="home-v2__actions">
-                <a
-                  class="home-v2__button home-v2__button--primary"
-                  href={`${parentsPath}#autism-basics`}
-                >
-                  {copy.heroPrimaryAction} <span aria-hidden="true">→</span>
-                </a>
-                <a
-                  class="home-v2__button home-v2__button--secondary"
-                  href={parentsPath}
-                >
-                  {copy.heroSecondaryAction}
-                </a>
-              </div>
-
-            </div>
-
-            <div class="home-v2__visual">
-              <img
-                src={heroImagePath}
-                alt={copy.heroImageAlt}
-                width="1801"
-                height="873"
-                decoding="async"
-                fetchpriority="high"
-              />
-              <p class="home-v2__visual-note">{copy.heroPoints[0]}</p>
-            </div>
+          <div class="container home-v2__hero-content">
+            <p class="home-v2__eyebrow">{copy.eyebrow}</p>
+            <h1 id="home-v2-title">{copy.title}</h1>
+            <p class="home-v2__lead">{copy.lead}</p>
+            <a
+              class="home-v2__hero-button"
+              href={`${parentsPath}#autism-basics`}
+            >
+              {copy.heroPrimaryAction}
+            </a>
           </div>
         </section>
 
-        <section class="home-v2__start" aria-labelledby="home-v2-start-title">
-          <div class="container home-v2__start-layout">
-            <h2 id="home-v2-start-title">{copy.quickPathsTitle}</h2>
-            <ol class="home-v2__start-list">
-              {quickTopics.map((topic, index) => (
+        <nav class="home-v2__topicbar" aria-label="Основные разделы">
+          <div class="container">
+            <ul>
+              <li>
+                <a href="#materials">Все материалы</a>
+              </li>
+              {topicBarSections.map((section) => (
                 <li>
-                  <a href={`${parentsPath}#${topic.id}`}>
-                    <span class="home-v2__start-number" aria-hidden="true">
-                      {String(index + 1).padStart(2, '0')}
-                    </span>
-                    <span class="home-v2__start-copy">
-                      <strong>{topic.title}</strong>
-                      <span>{topic.description}</span>
-                      <span class="home-v2__start-arrow" aria-hidden="true">→</span>
-                    </span>
+                  <a href={sectionPath(locale, section)}>
+                    {copy.sections[section].title}
                   </a>
                 </li>
               ))}
-            </ol>
+            </ul>
           </div>
-        </section>
+        </nav>
 
-        {featuredMaterials.length > 0 && (
-          <section class="home-v2__featured" aria-labelledby="home-v2-featured-title">
+        <main class="home-v2__content">
+          <section
+            id="materials"
+            class="home-v2__materials"
+            aria-labelledby="home-v2-materials-title"
+          >
             <div class="container">
-              <div class="home-v2__section-heading">
+              <div class="home-v2__materials-heading">
                 <div>
-                  <p class="home-v2__eyebrow">{copy.featuredEyebrow}</p>
-                  <h2 id="home-v2-featured-title">{copy.featuredTitle}</h2>
+                  <p class="home-v2__kicker">{copy.featuredEyebrow}</p>
+                  <h2 id="home-v2-materials-title">{copy.featuredTitle}</h2>
                 </div>
-                <p>{copy.featuredText}</p>
+                <a href={parentsPath}>
+                  {copy.allMaterialsAction} <span aria-hidden="true">→</span>
+                </a>
               </div>
 
-              <div class="home-v2__featured-grid">
-                {featuredMaterials.map((material, index) => (
+              <div class="home-v2__masonry">
+                {homeMaterials.map((material, index) => (
                   <article
                     class:list={[
-                      'home-v2__feature',
-                      index === 0 && 'home-v2__feature--lead',
+                      'home-v2__card',
+                      index % 4 === 0 && 'home-v2__card--image',
+                      index === 1 && 'home-v2__card--accent',
+                      index === 4 && 'home-v2__card--dark',
                     ]}
                   >
-                    <span class="home-v2__feature-label">
-                      {index === 0 ? copy.featuredLabel : contentCopy.articleLabel}
-                    </span>
-                    <h3>
-                      <a href={articlePath(locale, 'parents', material.data.slug)}>
-                        {material.data.title}
-                      </a>
-                    </h3>
-                    <p class="home-v2__feature-summary">{material.data.summary}</p>
-                    <div class="home-v2__feature-meta">
-                      <time datetime={material.data.publishedAt!.toISOString()}>
-                        {dateFormatter.format(material.data.publishedAt!)}
-                      </time>
-                      <span class="home-v2__feature-arrow" aria-hidden="true">→</span>
+                    {index % 4 === 0 && (
+                      <img
+                        src={heroImagePath}
+                        alt=""
+                        width="900"
+                        height="540"
+                        loading="lazy"
+                        decoding="async"
+                      />
+                    )}
+
+                    <div class="home-v2__card-body">
+                      <span class="home-v2__card-tag">
+                        {copy.sections[material.data.section].title}
+                      </span>
+                      <h3>
+                        <a
+                          href={articlePath(
+                            locale,
+                            material.data.section,
+                            material.data.slug,
+                          )}
+                        >
+                          {material.data.title}
+                        </a>
+                      </h3>
+                      <p>{material.data.summary}</p>
+                      <div class="home-v2__card-meta">
+                        <time datetime={material.data.publishedAt!.toISOString()}>
+                          {dateFormatter.format(material.data.publishedAt!)}
+                        </time>
+                        <span aria-hidden="true">→</span>
+                      </div>
                     </div>
                   </article>
                 ))}
+
+                <article class="home-v2__card home-v2__card--statement">
+                  <div class="home-v2__card-body">
+                    <span class="home-v2__card-tag">Autism Hub Kazakhstan</span>
+                    <p class="home-v2__statement">
+                      Проверенная информация, понятная навигация и контекст Казахстана в одном месте.
+                    </p>
+                    <a href={sectionPath(locale, 'about')}>О проекте →</a>
+                  </div>
+                </article>
+
+                <article class="home-v2__card home-v2__card--principles">
+                  <div class="home-v2__card-body">
+                    <span class="home-v2__card-tag">{copy.principlesTitle}</span>
+                    <ul>
+                      {copy.principles.map((principle) => (
+                        <li>{principle.title}</li>
+                      ))}
+                    </ul>
+                    <a href={sectionPath(locale, 'about')}>Подробнее →</a>
+                  </div>
+                </article>
               </div>
             </div>
           </section>
-        )}
 
-        <section class="home-v2__explore" aria-labelledby="home-v2-sections-title">
-          <div class="container">
-            <div class="home-v2__section-heading">
-              <div>
-                <p class="home-v2__eyebrow">Autism Hub Kazakhstan</p>
-                <h2 id="home-v2-sections-title">{copy.exploreTitle}</h2>
+          <section class="home-v2__sources" aria-labelledby="home-v2-sources-title">
+            <div class="container">
+              <p class="home-v2__kicker">Наш подход</p>
+              <h2 id="home-v2-sources-title">На что мы опираемся</h2>
+              <div class="home-v2__source-grid" aria-label="Типы источников">
+                <span>Научные публикации</span>
+                <span>Клинические рекомендации</span>
+                <span>Официальные источники</span>
+                <span>Материалы для семей</span>
               </div>
-              <p>{copy.exploreText}</p>
+              <p class="home-v2__source-note">{copy.principlesBoundary}</p>
             </div>
-
-            <ol class="home-v2__section-list">
-              {homeSections.map((section, index) => (
-                <li>
-                  <a class="home-v2__section-link" href={sectionPath(locale, section)}>
-                    <span class="home-v2__section-index" aria-hidden="true">
-                      {String(index + 1).padStart(2, '0')}
-                    </span>
-                    <span class="home-v2__section-copy">
-                      <strong>{copy.sections[section].title}</strong>
-                      <span>{copy.sections[section].description}</span>
-                    </span>
-                    <span class="home-v2__section-arrow" aria-hidden="true">→</span>
-                  </a>
-                </li>
-              ))}
-            </ol>
-          </div>
-        </section>
-
-        <section class="home-v2__principles" aria-labelledby="home-v2-principles-title">
-          <div class="container home-v2__principles-grid">
-            <div class="home-v2__principles-intro">
-              <p class="home-v2__eyebrow">{SITE.umbrellaName}</p>
-              <h2 id="home-v2-principles-title">{copy.principlesTitle}</h2>
-              <p>{copy.principlesText}</p>
-              <p class="home-v2__boundary">{copy.principlesBoundary}</p>
-            </div>
-
-            <div class="home-v2__principles-list">
-              {copy.principles.map((principle, index) => (
-                <article class="home-v2__principle">
-                  <span aria-hidden="true">{String(index + 1).padStart(2, '0')}</span>
-                  <div>
-                    <h3>{principle.title}</h3>
-                    <p>{principle.description}</p>
-                  </div>
-                </article>
-              ))}
-            </div>
-          </div>
-        </section>
+          </section>
+        </main>
       </>
     ) : (
       <>
