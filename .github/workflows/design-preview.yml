@@ -1,0 +1,21 @@
+name: Build design preview
+
+on:
+  push:
+    branches: [design-v2-homepage]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v7
+      - name: Validate and build preview
+        uses: withastro/action@v6
+        with:
+          node-version: 24
+          build-cmd: npm run validate
