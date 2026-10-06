@@ -45,6 +45,14 @@ General information materials use the validated `pages` Content Collection. Star
 
 Drafts and translations marked `pending` do not receive public routes and do not appear in section lists.
 
+### Decap CMS
+
+A browser-based Decap CMS authoring interface is available under `/admin/`. It edits the same Markdown files used by Astro, so Git remains the source of truth and the existing validation/build pipeline is preserved.
+
+The CMS currently covers Russian, Kazakh and English information articles plus the `research` and `learning` collections. Editorial workflow is enabled so drafts are reviewed through a CMS branch / pull request before publication.
+
+See [`docs/decap-cms.md`](docs/decap-cms.md) for setup, authentication and media-path details.
+
 ## Medical boundary
 
 This project is an information and education resource. It does not diagnose autism, provide individual medical advice, or replace professional assessment or care.
