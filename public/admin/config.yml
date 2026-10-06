@@ -424,6 +424,7 @@ collections:
         label: "Русская версия сайта"
         file: "src/data/site-copy/ru.json"
         format: "json"
+        preview_path: "kz/ru/"
         fields:
           - { label: "ARIA: основная навигация", name: "primaryNavigation", widget: "string" }
           - { label: "Подпись меню", name: "menuLabel", widget: "string" }
@@ -519,6 +520,7 @@ collections:
         label: "Қазақша нұсқа"
         file: "src/data/site-copy/kk.json"
         format: "json"
+        preview_path: "kz/kk/"
         fields:
           - { label: "ARIA: основная навигация", name: "primaryNavigation", widget: "string" }
           - { label: "Подпись меню", name: "menuLabel", widget: "string" }
@@ -614,6 +616,7 @@ collections:
         label: "English site copy"
         file: "src/data/site-copy/en.json"
         format: "json"
+        preview_path: "kz/en/"
         fields:
           - { label: "ARIA: основная навигация", name: "primaryNavigation", widget: "string" }
           - { label: "Подпись меню", name: "menuLabel", widget: "string" }
