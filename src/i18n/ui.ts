@@ -1,3 +1,6 @@
+import ruSiteCopy from '../data/site-copy/ru.json';
+import kkSiteCopy from '../data/site-copy/kk.json';
+import enSiteCopy from '../data/site-copy/en.json';
 import type { Locale, Section } from '../site.config';
 
 type TopicCopy = {
@@ -64,7 +67,7 @@ type LocaleCopy = {
   sections: Record<Section, SectionCopy>;
 };
 
-export const UI: Record<Locale, LocaleCopy> = {
+const BASE_UI: Record<Locale, LocaleCopy> = {
   ru: {
     skipLink: 'Перейти к основному содержанию',
     primaryNavigation: 'Основная навигация',
@@ -470,4 +473,72 @@ export const UI: Record<Locale, LocaleCopy> = {
       },
     },
   },
+};
+
+type EditableLocaleCopy = Pick<
+  LocaleCopy,
+  | 'primaryNavigation'
+  | 'menuLabel'
+  | 'languageNavigation'
+  | 'languageLabel'
+  | 'homeLabel'
+  | 'eyebrow'
+  | 'title'
+  | 'lead'
+  | 'heroPoints'
+  | 'statusTitle'
+  | 'statusText'
+  | 'heroPrimaryAction'
+  | 'heroSecondaryAction'
+  | 'heroProfessionalAction'
+  | 'heroImageAlt'
+  | 'featuredEyebrow'
+  | 'featuredTitle'
+  | 'featuredText'
+  | 'featuredLabel'
+  | 'allMaterialsAction'
+  | 'quickPathsTitle'
+  | 'exploreTitle'
+  | 'exploreText'
+  | 'principlesTitle'
+  | 'principlesText'
+  | 'principles'
+  | 'principlesBoundary'
+  | 'footerBoundary'
+  | 'footerStatus'
+  | 'footerNavigation'
+  | 'footerLinks'
+  | 'repositoryLabel'
+> & {
+  sections: Record<Section, Pick<SectionCopy, 'title' | 'description'>>;
+};
+
+function mergeEditableCopy(
+  base: LocaleCopy,
+  editable: EditableLocaleCopy,
+): LocaleCopy {
+  const sections = { ...base.sections };
+
+  for (const section of Object.keys(editable.sections) as Section[]) {
+    sections[section] = {
+      ...base.sections[section],
+      ...editable.sections[section],
+    };
+  }
+
+  return {
+    ...base,
+    ...editable,
+    footerLinks: {
+      ...base.footerLinks,
+      ...editable.footerLinks,
+    },
+    sections,
+  };
+}
+
+export const UI: Record<Locale, LocaleCopy> = {
+  ru: mergeEditableCopy(BASE_UI.ru, ruSiteCopy as EditableLocaleCopy),
+  kk: mergeEditableCopy(BASE_UI.kk, kkSiteCopy as EditableLocaleCopy),
+  en: mergeEditableCopy(BASE_UI.en, enSiteCopy as EditableLocaleCopy),
 };
