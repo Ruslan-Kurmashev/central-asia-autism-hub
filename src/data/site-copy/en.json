@@ -1,0 +1,86 @@
+{
+  "primaryNavigation": "Primary navigation",
+  "menuLabel": "Menu",
+  "languageNavigation": "Language selection",
+  "languageLabel": "Language",
+  "homeLabel": "Home",
+  "eyebrow": "An information resource for families in Kazakhstan",
+  "title": "Autism information - clear, careful, and grounded in sources",
+  "lead": "We are bringing reliable information for parents into one place: core knowledge, research explainers, learning, and navigation to support in Kazakhstan.",
+  "heroPoints": [
+    "Parents first",
+    "Русский, қазақша, and English",
+    "Sources and publication dates"
+  ],
+  "statusTitle": "Beta version.",
+  "statusText": "Materials and sections are being added progressively after source and translation checks.",
+  "heroPrimaryAction": "Start with core information",
+  "heroSecondaryAction": "Resources for parents",
+  "heroProfessionalAction": "For professionals",
+  "heroImageAlt": "A family learning together at a table at home.",
+  "featuredEyebrow": "Library",
+  "featuredTitle": "Featured now",
+  "featuredText": "New and essential resources for parents. Each article includes traceable sources and a publication date.",
+  "featuredLabel": "New resource",
+  "allMaterialsAction": "All resources for parents",
+  "quickPathsTitle": "Where would you like to start?",
+  "exploreTitle": "What you will find here",
+  "exploreText": "Six permanent sections bring together information for families, local resources, research explainers, and learning.",
+  "principlesTitle": "How we handle information",
+  "principlesText": "Each material is designed to provide a clear explanation, verifiable sources, and a publication date.",
+  "principles": [
+    {
+      "title": "Plain language",
+      "description": "We explain necessary terms and separate practical meaning from scientific detail."
+    },
+    {
+      "title": "Verifiable sources",
+      "description": "We identify primary sources, strength of evidence, uncertainty, and important limitations."
+    },
+    {
+      "title": "Publication date",
+      "description": "We show when a resource was published so readers can consider how current it is."
+    },
+    {
+      "title": "Kazakhstan context",
+      "description": "We separately verify local organisations, documents, education, and social-support pathways."
+    }
+  ],
+  "principlesBoundary": "The site does not diagnose autism or replace professional advice.",
+  "footerBoundary": "Information and education resource. It does not diagnose autism or replace professional advice.",
+  "footerStatus": "The library of reviewed resources is growing progressively.",
+  "footerNavigation": "Project policies and information",
+  "footerLinks": {
+    "editorial": "Editorial policy",
+    "privacy": "Privacy and data",
+    "accessibility": "Accessibility",
+    "contact": "Contact"
+  },
+  "repositoryLabel": "Project repository on GitHub",
+  "sections": {
+    "parents": {
+      "title": "For Parents",
+      "description": "Clear information about autism, development, assessment, everyday support, and family wellbeing."
+    },
+    "research": {
+      "title": "Research Explained",
+      "description": "Research summaries covering what was studied, what was reported, and which limitations matter."
+    },
+    "help-kazakhstan": {
+      "title": "Help in Kazakhstan",
+      "description": "General information about support pathways and verified links to relevant organisations and services."
+    },
+    "learning": {
+      "title": "Learning",
+      "description": "Autism School Kazakhstan and selected external courses, lectures, and webinars for parents and professionals."
+    },
+    "professionals": {
+      "title": "For Professionals",
+      "description": "A secondary section with evidence-informed resources and principles for respectful work with families."
+    },
+    "about": {
+      "title": "About",
+      "description": "Project purpose, editorial responsibility, medical boundaries, privacy, and future development."
+    }
+  }
+}
