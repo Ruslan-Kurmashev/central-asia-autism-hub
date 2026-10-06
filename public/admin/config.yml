@@ -1,0 +1,417 @@
+backend:
+  name: turbo-github
+  turbo_site_id: REPLACE_WITH_DECAP_TURBO_SITE_ID
+  branch: main
+  squash_merges: true
+
+publish_mode: editorial_workflow
+local_backend: true
+
+site_url: "https://ruslan-kurmashev.github.io/central-asia-autism-hub"
+display_url: "https://ruslan-kurmashev.github.io/central-asia-autism-hub"
+
+media_folder: "public/images/uploads"
+public_folder: "/central-asia-autism-hub/images/uploads"
+
+slug:
+  encoding: "unicode"
+  clean_accents: true
+  sanitize_replacement: "-"
+
+collections:
+  - name: "pages_ru"
+    label: "Статьи - Русский"
+    label_singular: "Статья"
+    description: "Основные информационные материалы Autism Hub Kazakhstan на русском языке."
+    folder: "src/content/pages/kz/ru"
+    create: true
+    extension: "md"
+    format: "frontmatter"
+    identifier_field: "title"
+    slug: "{{fields.slug}}"
+    preview_path: "kz/ru/{{section}}/{{fields.slug}}/"
+    summary: "{{title}} | {{section}} | draft={{draft}}"
+    sortable_fields: ["title", "updatedAt", "publishedAt"]
+    view_filters:
+      - label: "Черновики"
+        field: "draft"
+        pattern: true
+      - label: "Опубликованные"
+        field: "draft"
+        pattern: false
+    fields: &page_fields_ru
+      - { label: "Название", name: "title", widget: "string" }
+      - { label: "Краткое резюме", name: "summary", widget: "text" }
+      - { label: "SEO-описание", name: "description", widget: "text" }
+      - { label: "Страна", name: "country", widget: "hidden", default: "kz" }
+      - { label: "Язык", name: "language", widget: "hidden", default: "ru" }
+      - label: "Раздел"
+        name: "section"
+        widget: "select"
+        options:
+          - { label: "Родителям", value: "parents" }
+          - { label: "Исследования", value: "research" }
+          - { label: "Помощь в Казахстане", value: "help-kazakhstan" }
+          - { label: "Обучение", value: "learning" }
+          - { label: "Специалистам", value: "professionals" }
+          - { label: "О проекте", value: "about" }
+      - { label: "Тема / topic key", name: "topic", widget: "string", hint: "Стабильный технический ключ темы, например autism-basics." }
+      - { label: "URL slug", name: "slug", widget: "string", hint: "Только буквы, цифры и одиночные дефисы. Это адрес статьи." }
+      - { label: "Ключ перевода", name: "translationKey", widget: "string", hint: "Одинаковый ключ связывает RU / KK / EN версии." }
+      - label: "Статус перевода"
+        name: "translationStatus"
+        widget: "select"
+        options:
+          - { label: "Исходная версия", value: "source" }
+          - { label: "Проверено", value: "checked" }
+          - { label: "Ожидает проверки", value: "pending" }
+      - label: "Аудитория"
+        name: "audience"
+        widget: "select"
+        multiple: true
+        min: 1
+        options:
+          - { label: "Родители", value: "parents" }
+          - { label: "Семьи", value: "families" }
+          - { label: "Специалисты", value: "professionals" }
+          - { label: "Все читатели", value: "general" }
+      - { label: "Автор", name: "author", widget: "string" }
+      - { label: "Редактор", name: "editor", widget: "string" }
+      - { label: "Внешний reviewer", name: "externalReviewer", widget: "string", required: false }
+      - { label: "Дата публикации", name: "publishedAt", widget: "datetime", required: false, default: "", format: "YYYY-MM-DD", date_format: "DD.MM.YYYY", time_format: false, picker_utc: true }
+      - { label: "Дата обновления", name: "updatedAt", widget: "datetime", required: false, default: "", format: "YYYY-MM-DD", date_format: "DD.MM.YYYY", time_format: false, picker_utc: true }
+      - { label: "Следующий evidence review", name: "reviewDueAt", widget: "datetime", required: false, default: "", format: "YYYY-MM-DD", date_format: "DD.MM.YYYY", time_format: false, picker_utc: true }
+      - label: "Уровень риска"
+        name: "riskLevel"
+        widget: "select"
+        options:
+          - { label: "Низкий", value: "lower" }
+          - { label: "Средний", value: "moderate" }
+          - { label: "Высокий", value: "high" }
+      - label: "Тип дисклеймера"
+        name: "disclaimerType"
+        widget: "select"
+        options:
+          - { label: "Информационный", value: "informational" }
+          - { label: "Медицинский", value: "medical" }
+      - { label: "Конфликт интересов", name: "conflictOfInterest", widget: "text" }
+      - { label: "Примечание к версии", name: "versionNote", widget: "text", required: false }
+      - { label: "Черновик", name: "draft", widget: "boolean", default: true, hint: "Не отключайте до завершения evidence/editorial QA." }
+      - label: "Ключевые пункты"
+        name: "keyPoints"
+        widget: "list"
+        required: false
+        default: []
+        field: { label: "Пункт", name: "point", widget: "string" }
+      - { label: "Ограничения доказательств", name: "evidenceLimitations", widget: "text", required: false }
+      - label: "Источники"
+        name: "sources"
+        widget: "list"
+        required: false
+        default: []
+        summary: "{{fields.title}}"
+        fields:
+          - { label: "Название", name: "title", widget: "string" }
+          - { label: "URL", name: "url", widget: "string" }
+          - { label: "Организация", name: "organisation", widget: "string", required: false }
+          - { label: "Год публикации", name: "publicationYear", widget: "number", value_type: "int", min: 1900, max: 2100, required: false }
+          - { label: "Как использован источник", name: "note", widget: "text", required: false }
+          - { label: "Дата доступа", name: "accessedAt", widget: "datetime", required: false, default: "", format: "YYYY-MM-DD", date_format: "DD.MM.YYYY", time_format: false, picker_utc: true }
+      - { label: "Текст статьи", name: "body", widget: "markdown" }
+
+  - name: "pages_kk"
+    label: "Мақалалар - Қазақша"
+    label_singular: "Мақала"
+    description: "Autism Hub Kazakhstan материалдары қазақ тілінде."
+    folder: "src/content/pages/kz/kk"
+    create: true
+    extension: "md"
+    format: "frontmatter"
+    identifier_field: "title"
+    slug: "{{fields.slug}}"
+    preview_path: "kz/kk/{{section}}/{{fields.slug}}/"
+    summary: "{{title}} | {{section}} | draft={{draft}}"
+    fields:
+      - { label: "Атауы", name: "title", widget: "string" }
+      - { label: "Қысқаша мазмұн", name: "summary", widget: "text" }
+      - { label: "SEO сипаттамасы", name: "description", widget: "text" }
+      - { label: "Ел", name: "country", widget: "hidden", default: "kz" }
+      - { label: "Тіл", name: "language", widget: "hidden", default: "kk" }
+      - label: "Бөлім"
+        name: "section"
+        widget: "select"
+        options:
+          - { label: "Ата-аналарға", value: "parents" }
+          - { label: "Зерттеулер", value: "research" }
+          - { label: "Қазақстандағы көмек", value: "help-kazakhstan" }
+          - { label: "Оқу", value: "learning" }
+          - { label: "Мамандарға", value: "professionals" }
+          - { label: "Жоба туралы", value: "about" }
+      - { label: "Topic key", name: "topic", widget: "string" }
+      - { label: "URL slug", name: "slug", widget: "string" }
+      - { label: "Аударма кілті", name: "translationKey", widget: "string" }
+      - label: "Аударма мәртебесі"
+        name: "translationStatus"
+        widget: "select"
+        options:
+          - { label: "Бастапқы", value: "source" }
+          - { label: "Тексерілген", value: "checked" }
+          - { label: "Тексеруді күтуде", value: "pending" }
+      - label: "Аудитория"
+        name: "audience"
+        widget: "select"
+        multiple: true
+        min: 1
+        options:
+          - { label: "Ата-аналар", value: "parents" }
+          - { label: "Отбасылар", value: "families" }
+          - { label: "Мамандар", value: "professionals" }
+          - { label: "Барлығы", value: "general" }
+      - { label: "Автор", name: "author", widget: "string" }
+      - { label: "Редактор", name: "editor", widget: "string" }
+      - { label: "Сыртқы reviewer", name: "externalReviewer", widget: "string", required: false }
+      - { label: "Жарияланған күні", name: "publishedAt", widget: "datetime", required: false, default: "", format: "YYYY-MM-DD", date_format: "DD.MM.YYYY", time_format: false, picker_utc: true }
+      - { label: "Жаңартылған күні", name: "updatedAt", widget: "datetime", required: false, default: "", format: "YYYY-MM-DD", date_format: "DD.MM.YYYY", time_format: false, picker_utc: true }
+      - { label: "Келесі evidence review", name: "reviewDueAt", widget: "datetime", required: false, default: "", format: "YYYY-MM-DD", date_format: "DD.MM.YYYY", time_format: false, picker_utc: true }
+      - label: "Тәуекел деңгейі"
+        name: "riskLevel"
+        widget: "select"
+        options:
+          - { label: "Төмен", value: "lower" }
+          - { label: "Орташа", value: "moderate" }
+          - { label: "Жоғары", value: "high" }
+      - label: "Дисклеймер түрі"
+        name: "disclaimerType"
+        widget: "select"
+        options:
+          - { label: "Ақпараттық", value: "informational" }
+          - { label: "Медициналық", value: "medical" }
+      - { label: "Мүдделер қақтығысы", name: "conflictOfInterest", widget: "text" }
+      - { label: "Нұсқа ескертпесі", name: "versionNote", widget: "text", required: false }
+      - { label: "Черновик", name: "draft", widget: "boolean", default: true }
+      - label: "Негізгі тармақтар"
+        name: "keyPoints"
+        widget: "list"
+        required: false
+        default: []
+        field: { label: "Тармақ", name: "point", widget: "string" }
+      - { label: "Дәлелдеме шектеулері", name: "evidenceLimitations", widget: "text", required: false }
+      - label: "Дереккөздер"
+        name: "sources"
+        widget: "list"
+        required: false
+        default: []
+        summary: "{{fields.title}}"
+        fields:
+          - { label: "Атауы", name: "title", widget: "string" }
+          - { label: "URL", name: "url", widget: "string" }
+          - { label: "Ұйым", name: "organisation", widget: "string", required: false }
+          - { label: "Жарияланған жыл", name: "publicationYear", widget: "number", value_type: "int", min: 1900, max: 2100, required: false }
+          - { label: "Ескерту", name: "note", widget: "text", required: false }
+          - { label: "Қаралған күні", name: "accessedAt", widget: "datetime", required: false, default: "", format: "YYYY-MM-DD", date_format: "DD.MM.YYYY", time_format: false, picker_utc: true }
+      - { label: "Мақала мәтіні", name: "body", widget: "markdown" }
+
+  - name: "pages_en"
+    label: "Articles - English"
+    label_singular: "Article"
+    description: "Autism Hub Kazakhstan information materials in English."
+    folder: "src/content/pages/kz/en"
+    create: true
+    extension: "md"
+    format: "frontmatter"
+    identifier_field: "title"
+    slug: "{{fields.slug}}"
+    preview_path: "kz/en/{{section}}/{{fields.slug}}/"
+    summary: "{{title}} | {{section}} | draft={{draft}}"
+    fields:
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Summary", name: "summary", widget: "text" }
+      - { label: "SEO description", name: "description", widget: "text" }
+      - { label: "Country", name: "country", widget: "hidden", default: "kz" }
+      - { label: "Language", name: "language", widget: "hidden", default: "en" }
+      - label: "Section"
+        name: "section"
+        widget: "select"
+        options:
+          - { label: "Parents", value: "parents" }
+          - { label: "Research", value: "research" }
+          - { label: "Help in Kazakhstan", value: "help-kazakhstan" }
+          - { label: "Learning", value: "learning" }
+          - { label: "Professionals", value: "professionals" }
+          - { label: "About", value: "about" }
+      - { label: "Topic key", name: "topic", widget: "string" }
+      - { label: "URL slug", name: "slug", widget: "string" }
+      - { label: "Translation key", name: "translationKey", widget: "string" }
+      - label: "Translation status"
+        name: "translationStatus"
+        widget: "select"
+        options:
+          - { label: "Source", value: "source" }
+          - { label: "Checked", value: "checked" }
+          - { label: "Pending review", value: "pending" }
+      - label: "Audience"
+        name: "audience"
+        widget: "select"
+        multiple: true
+        min: 1
+        options:
+          - { label: "Parents", value: "parents" }
+          - { label: "Families", value: "families" }
+          - { label: "Professionals", value: "professionals" }
+          - { label: "General", value: "general" }
+      - { label: "Author", name: "author", widget: "string" }
+      - { label: "Editor", name: "editor", widget: "string" }
+      - { label: "External reviewer", name: "externalReviewer", widget: "string", required: false }
+      - { label: "Published", name: "publishedAt", widget: "datetime", required: false, default: "", format: "YYYY-MM-DD", date_format: "DD.MM.YYYY", time_format: false, picker_utc: true }
+      - { label: "Updated", name: "updatedAt", widget: "datetime", required: false, default: "", format: "YYYY-MM-DD", date_format: "DD.MM.YYYY", time_format: false, picker_utc: true }
+      - { label: "Next evidence review", name: "reviewDueAt", widget: "datetime", required: false, default: "", format: "YYYY-MM-DD", date_format: "DD.MM.YYYY", time_format: false, picker_utc: true }
+      - label: "Risk level"
+        name: "riskLevel"
+        widget: "select"
+        options:
+          - { label: "Lower", value: "lower" }
+          - { label: "Moderate", value: "moderate" }
+          - { label: "High", value: "high" }
+      - label: "Disclaimer type"
+        name: "disclaimerType"
+        widget: "select"
+        options:
+          - { label: "Informational", value: "informational" }
+          - { label: "Medical", value: "medical" }
+      - { label: "Conflict of interest", name: "conflictOfInterest", widget: "text" }
+      - { label: "Version note", name: "versionNote", widget: "text", required: false }
+      - { label: "Draft", name: "draft", widget: "boolean", default: true }
+      - label: "Key points"
+        name: "keyPoints"
+        widget: "list"
+        required: false
+        default: []
+        field: { label: "Point", name: "point", widget: "string" }
+      - { label: "Evidence limitations", name: "evidenceLimitations", widget: "text", required: false }
+      - label: "Sources"
+        name: "sources"
+        widget: "list"
+        required: false
+        default: []
+        summary: "{{fields.title}}"
+        fields:
+          - { label: "Title", name: "title", widget: "string" }
+          - { label: "URL", name: "url", widget: "string" }
+          - { label: "Organisation", name: "organisation", widget: "string", required: false }
+          - { label: "Publication year", name: "publicationYear", widget: "number", value_type: "int", min: 1900, max: 2100, required: false }
+          - { label: "Use / note", name: "note", widget: "text", required: false }
+          - { label: "Accessed", name: "accessedAt", widget: "datetime", required: false, default: "", format: "YYYY-MM-DD", date_format: "DD.MM.YYYY", time_format: false, picker_utc: true }
+      - { label: "Article body", name: "body", widget: "markdown" }
+
+  - name: "research"
+    label: "Research"
+    label_singular: "Research item"
+    folder: "src/content/research"
+    create: true
+    extension: "md"
+    format: "frontmatter"
+    identifier_field: "title"
+    slug: "{{fields.slug}}"
+    fields:
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Summary", name: "summary", widget: "text" }
+      - { label: "Description", name: "description", widget: "text" }
+      - { label: "Country", name: "country", widget: "hidden", default: "kz" }
+      - { label: "Language", name: "language", widget: "select", options: ["ru", "kk", "en"] }
+      - { label: "Section", name: "section", widget: "hidden", default: "research" }
+      - { label: "URL slug", name: "slug", widget: "string" }
+      - { label: "Translation key", name: "translationKey", widget: "string" }
+      - { label: "Translation status", name: "translationStatus", widget: "select", options: ["source", "checked", "pending"] }
+      - { label: "Author", name: "author", widget: "string" }
+      - { label: "Editor", name: "editor", widget: "string" }
+      - { label: "External reviewer", name: "externalReviewer", widget: "string", required: false }
+      - { label: "Published", name: "publishedAt", widget: "datetime", required: false, default: "", format: "YYYY-MM-DD", date_format: "DD.MM.YYYY", time_format: false, picker_utc: true }
+      - { label: "Updated", name: "updatedAt", widget: "datetime", required: false, default: "", format: "YYYY-MM-DD", date_format: "DD.MM.YYYY", time_format: false, picker_utc: true }
+      - { label: "Review due", name: "reviewDueAt", widget: "datetime", required: false, default: "", format: "YYYY-MM-DD", date_format: "DD.MM.YYYY", time_format: false, picker_utc: true }
+      - { label: "Risk level", name: "riskLevel", widget: "select", options: ["lower", "moderate", "high"] }
+      - { label: "Disclaimer type", name: "disclaimerType", widget: "select", options: ["informational", "medical"] }
+      - { label: "Conflict of interest", name: "conflictOfInterest", widget: "text" }
+      - { label: "Version note", name: "versionNote", widget: "text", required: false }
+      - { label: "Draft", name: "draft", widget: "boolean", default: true }
+      - { label: "Original title", name: "originalTitle", widget: "string" }
+      - label: "Original authors"
+        name: "originalAuthors"
+        widget: "list"
+        field: { label: "Author", name: "author", widget: "string" }
+      - { label: "Journal / organisation", name: "journalOrOrganisation", widget: "string" }
+      - { label: "Publication year", name: "publicationYear", widget: "number", value_type: "int", min: 1900, max: 2100 }
+      - { label: "DOI", name: "doi", widget: "string", required: false }
+      - { label: "Source URL", name: "sourceUrl", widget: "string" }
+      - { label: "Study type", name: "studyType", widget: "string" }
+      - { label: "Sample size", name: "sampleSize", widget: "number", value_type: "int", min: 1, required: false }
+      - { label: "Population", name: "population", widget: "text", required: false }
+      - { label: "Source status checked", name: "sourceStatusCheckedAt", widget: "datetime", format: "YYYY-MM-DD", date_format: "DD.MM.YYYY", time_format: false, picker_utc: true }
+      - label: "Sources"
+        name: "sources"
+        widget: "list"
+        required: false
+        default: []
+        summary: "{{fields.title}}"
+        fields:
+          - { label: "Title", name: "title", widget: "string" }
+          - { label: "URL", name: "url", widget: "string" }
+          - { label: "Organisation", name: "organisation", widget: "string", required: false }
+          - { label: "Publication year", name: "publicationYear", widget: "number", value_type: "int", required: false }
+          - { label: "Note", name: "note", widget: "text", required: false }
+          - { label: "Accessed", name: "accessedAt", widget: "datetime", required: false, default: "", format: "YYYY-MM-DD", date_format: "DD.MM.YYYY", time_format: false, picker_utc: true }
+      - { label: "Body", name: "body", widget: "markdown" }
+
+  - name: "learning"
+    label: "Learning"
+    label_singular: "Learning resource"
+    folder: "src/content/learning"
+    create: true
+    extension: "md"
+    format: "frontmatter"
+    identifier_field: "title"
+    slug: "{{fields.slug}}"
+    fields:
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Summary", name: "summary", widget: "text" }
+      - { label: "Description", name: "description", widget: "text" }
+      - { label: "Country", name: "country", widget: "hidden", default: "kz" }
+      - { label: "Language", name: "language", widget: "select", options: ["ru", "kk", "en"] }
+      - { label: "Section", name: "section", widget: "hidden", default: "learning" }
+      - { label: "URL slug", name: "slug", widget: "string" }
+      - { label: "Translation key", name: "translationKey", widget: "string" }
+      - { label: "Translation status", name: "translationStatus", widget: "select", options: ["source", "checked", "pending"] }
+      - { label: "Author", name: "author", widget: "string" }
+      - { label: "Editor", name: "editor", widget: "string" }
+      - { label: "External reviewer", name: "externalReviewer", widget: "string", required: false }
+      - { label: "Published", name: "publishedAt", widget: "datetime", required: false, default: "", format: "YYYY-MM-DD", date_format: "DD.MM.YYYY", time_format: false, picker_utc: true }
+      - { label: "Updated", name: "updatedAt", widget: "datetime", required: false, default: "", format: "YYYY-MM-DD", date_format: "DD.MM.YYYY", time_format: false, picker_utc: true }
+      - { label: "Review due", name: "reviewDueAt", widget: "datetime", required: false, default: "", format: "YYYY-MM-DD", date_format: "DD.MM.YYYY", time_format: false, picker_utc: true }
+      - { label: "Risk level", name: "riskLevel", widget: "select", options: ["lower", "moderate", "high"] }
+      - { label: "Disclaimer type", name: "disclaimerType", widget: "select", options: ["informational", "medical"] }
+      - { label: "Conflict of interest", name: "conflictOfInterest", widget: "text" }
+      - { label: "Version note", name: "versionNote", widget: "text", required: false }
+      - { label: "Draft", name: "draft", widget: "boolean", default: true }
+      - { label: "Provider", name: "provider", widget: "string" }
+      - { label: "Audience", name: "audience", widget: "select", multiple: true, min: 1, options: ["parents", "professionals"] }
+      - { label: "Format", name: "format", widget: "string" }
+      - { label: "Languages", name: "languages", widget: "select", multiple: true, min: 1, options: ["ru", "kk", "en"] }
+      - { label: "Cost label", name: "costLabel", widget: "string" }
+      - { label: "External URL", name: "externalUrl", widget: "string", required: false }
+      - { label: "Last verified", name: "lastVerifiedAt", widget: "datetime", required: false, default: "", format: "YYYY-MM-DD", date_format: "DD.MM.YYYY", time_format: false, picker_utc: true }
+      - { label: "Project owned", name: "projectOwned", widget: "boolean", default: false }
+      - { label: "Registration status", name: "registrationStatus", widget: "string", required: false }
+      - { label: "Resource disclaimer type", name: "resourceDisclaimerType", widget: "select", options: ["project", "external"] }
+      - label: "Sources"
+        name: "sources"
+        widget: "list"
+        required: false
+        default: []
+        summary: "{{fields.title}}"
+        fields:
+          - { label: "Title", name: "title", widget: "string" }
+          - { label: "URL", name: "url", widget: "string" }
+          - { label: "Organisation", name: "organisation", widget: "string", required: false }
+          - { label: "Publication year", name: "publicationYear", widget: "number", value_type: "int", required: false }
+          - { label: "Note", name: "note", widget: "text", required: false }
+          - { label: "Accessed", name: "accessedAt", widget: "datetime", required: false, default: "", format: "YYYY-MM-DD", date_format: "DD.MM.YYYY", time_format: false, picker_utc: true }
+      - { label: "Body", name: "body", widget: "markdown" }
