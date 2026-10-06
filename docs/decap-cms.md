@@ -41,8 +41,9 @@ Decap Turbo authentication cannot be created from repository code because it mus
    - config path: `public/admin/config.yml`
    - admin URL: `https://ruslan-kurmashev.github.io/central-asia-autism-hub/admin/`
 4. Copy the Turbo Site ID from the site Overview.
-5. Replace `REPLACE_WITH_DECAP_TURBO_SITE_ID` in `public/admin/config.yml` with that UUID.
+5. Set `turbo_site_id` in `public/admin/config.yml` to the UUID shown in Turbo Overview.
 6. Merge and deploy.
+7. After the CMS PR is merged, change the Turbo site Branch in the Decap Turbo dashboard from `feature/decap-cms` to `main`. The CMS config itself already targets `main`, but keeping the dashboard row on `main` prevents future permission/config reads from a stale setup branch.
 
 The Turbo backend is currently distributed through the Decap CMS beta package, so `public/admin/index.html` pins the exact beta version instead of tracking an unpinned beta tag.
 
