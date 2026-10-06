@@ -19,6 +19,7 @@ interface Props {
   currentSection?: Section;
   alternatePath?: string;
   alternatePaths?: Partial<Record<Locale, string>>;
+  bodyClass?: string;
 }
 
 const {
@@ -28,6 +29,7 @@ const {
   currentSection,
   alternatePath = '',
   alternatePaths,
+  bodyClass,
 } = Astro.props;
 
 const pageLocale = locale ?? 'en';
@@ -66,7 +68,7 @@ const canonicalUrl = new URL(Astro.url.pathname, origin);
     }
     <title>{title}</title>
   </head>
-  <body>
+  <body class={bodyClass}>
     <a class="skip-link" href="#main-content">{UI[pageLocale].skipLink}</a>
     <SiteHeader
       locale={locale}
