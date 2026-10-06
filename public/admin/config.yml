@@ -117,7 +117,7 @@ collections:
           - { label: "Год публикации", name: "publicationYear", widget: "number", value_type: "int", min: 1900, max: 2100, required: false }
           - { label: "Как использован источник", name: "note", widget: "text", required: false }
           - { label: "Дата доступа", name: "accessedAt", widget: "datetime", required: false, default: "", format: "YYYY-MM-DD", date_format: "DD.MM.YYYY", time_format: false, picker_utc: true }
-      - { label: "Текст статьи", name: "body", widget: "markdown" }
+      - { label: "Текст статьи", name: "body", widget: "richtext" }
 
   - name: "pages_kk"
     label: "Мақалалар - Қазақша"
@@ -209,7 +209,7 @@ collections:
           - { label: "Жарияланған жыл", name: "publicationYear", widget: "number", value_type: "int", min: 1900, max: 2100, required: false }
           - { label: "Ескерту", name: "note", widget: "text", required: false }
           - { label: "Қаралған күні", name: "accessedAt", widget: "datetime", required: false, default: "", format: "YYYY-MM-DD", date_format: "DD.MM.YYYY", time_format: false, picker_utc: true }
-      - { label: "Мақала мәтіні", name: "body", widget: "markdown" }
+      - { label: "Мақала мәтіні", name: "body", widget: "richtext" }
 
   - name: "pages_en"
     label: "Articles - English"
@@ -301,7 +301,7 @@ collections:
           - { label: "Publication year", name: "publicationYear", widget: "number", value_type: "int", min: 1900, max: 2100, required: false }
           - { label: "Use / note", name: "note", widget: "text", required: false }
           - { label: "Accessed", name: "accessedAt", widget: "datetime", required: false, default: "", format: "YYYY-MM-DD", date_format: "DD.MM.YYYY", time_format: false, picker_utc: true }
-      - { label: "Article body", name: "body", widget: "markdown" }
+      - { label: "Article body", name: "body", widget: "richtext" }
 
   - name: "research"
     label: "Research"
@@ -359,7 +359,7 @@ collections:
           - { label: "Publication year", name: "publicationYear", widget: "number", value_type: "int", required: false }
           - { label: "Note", name: "note", widget: "text", required: false }
           - { label: "Accessed", name: "accessedAt", widget: "datetime", required: false, default: "", format: "YYYY-MM-DD", date_format: "DD.MM.YYYY", time_format: false, picker_utc: true }
-      - { label: "Body", name: "body", widget: "markdown" }
+      - { label: "Body", name: "body", widget: "richtext" }
 
   - name: "learning"
     label: "Learning"
@@ -414,4 +414,4 @@ collections:
           - { label: "Publication year", name: "publicationYear", widget: "number", value_type: "int", required: false }
           - { label: "Note", name: "note", widget: "text", required: false }
           - { label: "Accessed", name: "accessedAt", widget: "datetime", required: false, default: "", format: "YYYY-MM-DD", date_format: "DD.MM.YYYY", time_format: false, picker_utc: true }
-      - { label: "Body", name: "body", widget: "markdown" }
+      - { label: "Body", name: "body", widget: "richtext" }
