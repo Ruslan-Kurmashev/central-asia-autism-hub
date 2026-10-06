@@ -11,6 +11,7 @@ import {
   type Locale,
   type Section,
 } from '../../../site.config';
+import '../../../styles/home-v2.css';
 
 export function getStaticPaths() {
   return SUPPORTED_LOCALES.map((locale) => ({
@@ -26,8 +27,18 @@ interface Props {
 const { locale } = Astro.props;
 const copy = UI[locale];
 const contentCopy = CONTENT_UI[locale];
+const useHomeV2 = locale === 'ru';
 
-const homeSections: Array<{
+const homeSections: Section[] = [
+  'parents',
+  'help-kazakhstan',
+  'research',
+  'learning',
+  'professionals',
+  'about',
+];
+
+const legacyHomeSections: Array<{
   section: Section;
   variant: 'large' | 'medium' | 'compact';
   tone: 'parents' | 'help' | 'research' | 'learning' | 'neutral';
@@ -42,7 +53,9 @@ const homeSections: Array<{
 
 const parentsPath = sectionPath(locale, 'parents');
 const quickSections: Section[] = ['parents', 'help-kazakhstan', 'research'];
+const quickTopics = copy.sections.parents.topics.slice(0, 4);
 const heroImagePath = `${import.meta.env.BASE_URL}images/hero-family.webp`;
+
 const featuredMaterials = (
   await getCollection(
     'pages',
@@ -60,6 +73,7 @@ const featuredMaterials = (
       (left.data.publishedAt?.getTime() ?? 0),
   )
   .slice(0, 3);
+
 const dateFormatter = new Intl.DateTimeFormat(DATE_LOCALES[locale], {
   day: 'numeric',
   month: 'long',
@@ -71,172 +85,342 @@ const dateFormatter = new Intl.DateTimeFormat(DATE_LOCALES[locale], {
   title={`${SITE.name} - ${copy.eyebrow}`}
   description={copy.lead}
   locale={locale}
+  bodyClass={useHomeV2 ? 'home-v2' : undefined}
 >
-  <div class="beta-strip" role="status">
-    <div class="container beta-strip__inner">
-      <strong>{copy.statusTitle}</strong>
-      <span>{copy.statusText}</span>
-    </div>
-  </div>
-
-  <section class="hero">
-    <div class="container hero__layout">
-      <div class="hero__content">
-        <p class="eyebrow">{copy.eyebrow}</p>
-        <h1>{copy.title}</h1>
-        <p class="hero__lead">{copy.lead}</p>
-
-        <div class="hero__actions">
-          <a class="button button--primary" href={`${parentsPath}#autism-basics`}>
-            {copy.heroPrimaryAction}
-          </a>
-          <a class="button button--secondary" href={parentsPath}>
-            {copy.heroSecondaryAction}
-          </a>
-          <a class="hero__professional-link" href={sectionPath(locale, 'professionals')}>
-            {copy.heroProfessionalAction} <span aria-hidden="true">→</span>
-          </a>
-        </div>
-
-        <ul class="hero__points" aria-label={copy.eyebrow}>
-          {copy.heroPoints.map((point) => <li>{point}</li>)}
-        </ul>
-      </div>
-
-      <div class="hero__visual">
-        <img
-          src={heroImagePath}
-          alt={copy.heroImageAlt}
-          width="1801"
-          height="873"
-          decoding="async"
-          fetchpriority="high"
-        />
-      </div>
-    </div>
-  </section>
-
   {
-    featuredMaterials.length > 0 && (
-      <section class="featured-materials" aria-labelledby="featured-materials-title">
-        <div class="container">
-          <div class="featured-materials__intro">
-            <div>
-              <p class="eyebrow">{copy.featuredEyebrow}</p>
-              <h2 id="featured-materials-title">{copy.featuredTitle}</h2>
+    useHomeV2 ? (
+      <>
+        <section class="home-v2__hero">
+          <div class="container home-v2__hero-grid">
+            <div class="home-v2__hero-copy">
+              <p class="home-v2__eyebrow">{copy.eyebrow}</p>
+              <h1>{copy.title}</h1>
+              <p class="home-v2__lead">{copy.lead}</p>
+
+              <div class="home-v2__actions">
+                <a
+                  class="home-v2__button home-v2__button--primary"
+                  href={`${parentsPath}#autism-basics`}
+                >
+                  {copy.heroPrimaryAction} <span aria-hidden="true">→</span>
+                </a>
+                <a
+                  class="home-v2__button home-v2__button--secondary"
+                  href={parentsPath}
+                >
+                  {copy.heroSecondaryAction}
+                </a>
+              </div>
+
+              <div class="home-v2__status" role="status">
+                <strong>{copy.statusTitle}</strong>
+                <span>{copy.statusText}</span>
+              </div>
             </div>
-            <p>{copy.featuredText}</p>
-          </div>
 
-          <div class="featured-materials__grid">
-            {featuredMaterials.map((material, index) => (
-              <article
-                class:list={[
-                  'featured-material-card',
-                  `featured-material-card--${index + 1}`,
-                ]}
-              >
-                <div class="featured-material-card__topline">
-                  <span>{index === 0 ? copy.featuredLabel : contentCopy.articleLabel}</span>
-                  <span aria-hidden="true">{String(index + 1).padStart(2, '0')}</span>
-                </div>
-                <h3>
-                  <a href={articlePath(locale, 'parents', material.data.slug)}>
-                    {material.data.title}
+            <div class="home-v2__visual">
+              <img
+                src={heroImagePath}
+                alt={copy.heroImageAlt}
+                width="1801"
+                height="873"
+                decoding="async"
+                fetchpriority="high"
+              />
+              <p class="home-v2__visual-note">
+                Понятная информация помогает принимать более уверенные решения.
+              </p>
+            </div>
+          </div>
+        </section>
+
+        <section class="home-v2__start" aria-labelledby="home-v2-start-title">
+          <div class="container home-v2__start-layout">
+            <h2 id="home-v2-start-title">{copy.quickPathsTitle}</h2>
+            <ol class="home-v2__start-list">
+              {quickTopics.map((topic, index) => (
+                <li>
+                  <a href={`${parentsPath}#${topic.id}`}>
+                    <span class="home-v2__start-number" aria-hidden="true">
+                      {String(index + 1).padStart(2, '0')}
+                    </span>
+                    <span class="home-v2__start-copy">
+                      <strong>{topic.title}</strong>
+                      <span>{topic.description}</span>
+                      <span class="home-v2__start-arrow" aria-hidden="true">→</span>
+                    </span>
                   </a>
-                </h3>
-                <p>{material.data.summary}</p>
-                <div class="featured-material-card__footer">
-                  <time datetime={material.data.publishedAt!.toISOString()}>
-                    {contentCopy.publishedLabel}:{' '}
-                    {dateFormatter.format(material.data.publishedAt!)}
-                  </time>
-                  <span aria-hidden="true">→</span>
-                </div>
-              </article>
-            ))}
+                </li>
+              ))}
+            </ol>
           </div>
+        </section>
 
-          <a class="featured-materials__all" href={parentsPath}>
-            {copy.allMaterialsAction} <span aria-hidden="true">→</span>
-          </a>
+        {featuredMaterials.length > 0 && (
+          <section class="home-v2__featured" aria-labelledby="home-v2-featured-title">
+            <div class="container">
+              <div class="home-v2__section-heading">
+                <div>
+                  <p class="home-v2__eyebrow">{copy.featuredEyebrow}</p>
+                  <h2 id="home-v2-featured-title">{copy.featuredTitle}</h2>
+                </div>
+                <p>{copy.featuredText}</p>
+              </div>
+
+              <div class="home-v2__featured-grid">
+                {featuredMaterials.map((material, index) => (
+                  <article
+                    class:list={[
+                      'home-v2__feature',
+                      index === 0 && 'home-v2__feature--lead',
+                    ]}
+                  >
+                    <span class="home-v2__feature-label">
+                      {index === 0 ? copy.featuredLabel : contentCopy.articleLabel}
+                    </span>
+                    <h3>
+                      <a href={articlePath(locale, 'parents', material.data.slug)}>
+                        {material.data.title}
+                      </a>
+                    </h3>
+                    <p class="home-v2__feature-summary">{material.data.summary}</p>
+                    <div class="home-v2__feature-meta">
+                      <time datetime={material.data.publishedAt!.toISOString()}>
+                        {dateFormatter.format(material.data.publishedAt!)}
+                      </time>
+                      <span class="home-v2__feature-arrow" aria-hidden="true">→</span>
+                    </div>
+                  </article>
+                ))}
+              </div>
+            </div>
+          </section>
+        )}
+
+        <section class="home-v2__explore" aria-labelledby="home-v2-sections-title">
+          <div class="container">
+            <div class="home-v2__section-heading">
+              <div>
+                <p class="home-v2__eyebrow">Autism Hub Kazakhstan</p>
+                <h2 id="home-v2-sections-title">{copy.exploreTitle}</h2>
+              </div>
+              <p>{copy.exploreText}</p>
+            </div>
+
+            <ol class="home-v2__section-list">
+              {homeSections.map((section, index) => (
+                <li>
+                  <a class="home-v2__section-link" href={sectionPath(locale, section)}>
+                    <span class="home-v2__section-index" aria-hidden="true">
+                      {String(index + 1).padStart(2, '0')}
+                    </span>
+                    <span class="home-v2__section-copy">
+                      <strong>{copy.sections[section].title}</strong>
+                      <span>{copy.sections[section].description}</span>
+                    </span>
+                    <span class="home-v2__section-arrow" aria-hidden="true">→</span>
+                  </a>
+                </li>
+              ))}
+            </ol>
+          </div>
+        </section>
+
+        <section class="home-v2__principles" aria-labelledby="home-v2-principles-title">
+          <div class="container home-v2__principles-grid">
+            <div class="home-v2__principles-intro">
+              <p class="home-v2__eyebrow">{SITE.umbrellaName}</p>
+              <h2 id="home-v2-principles-title">{copy.principlesTitle}</h2>
+              <p>{copy.principlesText}</p>
+              <p class="home-v2__boundary">{copy.principlesBoundary}</p>
+            </div>
+
+            <div class="home-v2__principles-list">
+              {copy.principles.map((principle, index) => (
+                <article class="home-v2__principle">
+                  <span aria-hidden="true">{String(index + 1).padStart(2, '0')}</span>
+                  <div>
+                    <h3>{principle.title}</h3>
+                    <p>{principle.description}</p>
+                  </div>
+                </article>
+              ))}
+            </div>
+          </div>
+        </section>
+      </>
+    ) : (
+      <>
+        <div class="beta-strip" role="status">
+          <div class="container beta-strip__inner">
+            <strong>{copy.statusTitle}</strong>
+            <span>{copy.statusText}</span>
+          </div>
         </div>
-      </section>
+
+        <section class="hero">
+          <div class="container hero__layout">
+            <div class="hero__content">
+              <p class="eyebrow">{copy.eyebrow}</p>
+              <h1>{copy.title}</h1>
+              <p class="hero__lead">{copy.lead}</p>
+
+              <div class="hero__actions">
+                <a class="button button--primary" href={`${parentsPath}#autism-basics`}>
+                  {copy.heroPrimaryAction}
+                </a>
+                <a class="button button--secondary" href={parentsPath}>
+                  {copy.heroSecondaryAction}
+                </a>
+                <a
+                  class="hero__professional-link"
+                  href={sectionPath(locale, 'professionals')}
+                >
+                  {copy.heroProfessionalAction} <span aria-hidden="true">→</span>
+                </a>
+              </div>
+
+              <ul class="hero__points" aria-label={copy.eyebrow}>
+                {copy.heroPoints.map((point) => <li>{point}</li>)}
+              </ul>
+            </div>
+
+            <div class="hero__visual">
+              <img
+                src={heroImagePath}
+                alt={copy.heroImageAlt}
+                width="1801"
+                height="873"
+                decoding="async"
+                fetchpriority="high"
+              />
+            </div>
+          </div>
+        </section>
+
+        {featuredMaterials.length > 0 && (
+          <section
+            class="featured-materials"
+            aria-labelledby="featured-materials-title"
+          >
+            <div class="container">
+              <div class="featured-materials__intro">
+                <div>
+                  <p class="eyebrow">{copy.featuredEyebrow}</p>
+                  <h2 id="featured-materials-title">{copy.featuredTitle}</h2>
+                </div>
+                <p>{copy.featuredText}</p>
+              </div>
+
+              <div class="featured-materials__grid">
+                {featuredMaterials.map((material, index) => (
+                  <article
+                    class:list={[
+                      'featured-material-card',
+                      `featured-material-card--${index + 1}`,
+                    ]}
+                  >
+                    <div class="featured-material-card__topline">
+                      <span>
+                        {index === 0 ? copy.featuredLabel : contentCopy.articleLabel}
+                      </span>
+                      <span aria-hidden="true">
+                        {String(index + 1).padStart(2, '0')}
+                      </span>
+                    </div>
+                    <h3>
+                      <a href={articlePath(locale, 'parents', material.data.slug)}>
+                        {material.data.title}
+                      </a>
+                    </h3>
+                    <p>{material.data.summary}</p>
+                    <div class="featured-material-card__footer">
+                      <time datetime={material.data.publishedAt!.toISOString()}>
+                        {contentCopy.publishedLabel}:{' '}
+                        {dateFormatter.format(material.data.publishedAt!)}
+                      </time>
+                      <span aria-hidden="true">→</span>
+                    </div>
+                  </article>
+                ))}
+              </div>
+
+              <a class="featured-materials__all" href={parentsPath}>
+                {copy.allMaterialsAction} <span aria-hidden="true">→</span>
+              </a>
+            </div>
+          </section>
+        )}
+
+        <section class="quick-paths" aria-labelledby="quick-paths-title">
+          <div class="container">
+            <h2 id="quick-paths-title">{copy.quickPathsTitle}</h2>
+            <nav class="quick-paths__grid" aria-label={copy.quickPathsTitle}>
+              <ul>
+                {quickSections.map((section, index) => (
+                  <li>
+                    <a href={sectionPath(locale, section)}>
+                      <span class="quick-paths__number" aria-hidden="true">
+                        {String(index + 1).padStart(2, '0')}
+                      </span>
+                      <span class="quick-paths__copy">
+                        <strong>{copy.sections[section].title}</strong>
+                        <span>{copy.sections[section].description}</span>
+                      </span>
+                      <span class="quick-paths__arrow" aria-hidden="true">→</span>
+                    </a>
+                  </li>
+                ))}
+              </ul>
+            </nav>
+          </div>
+        </section>
+
+        <section class="section-grid-wrap" aria-labelledby="sections-title">
+          <div class="container">
+            <div class="section-intro">
+              <h2 id="sections-title">{copy.exploreTitle}</h2>
+              <p>{copy.exploreText}</p>
+            </div>
+
+            <div class="section-grid section-grid--hierarchical">
+              {legacyHomeSections.map(({ section, variant, tone }, index) => (
+                <SectionCard
+                  href={sectionPath(locale, section)}
+                  title={copy.sections[section].title}
+                  description={copy.sections[section].description}
+                  number={String(index + 1).padStart(2, '0')}
+                  variant={variant}
+                  tone={tone}
+                />
+              ))}
+            </div>
+          </div>
+        </section>
+
+        <section class="principles-section" aria-labelledby="principles-title">
+          <div class="container principles-layout">
+            <div class="principles-heading">
+              <p class="eyebrow">{SITE.umbrellaName}</p>
+              <h2 id="principles-title">{copy.principlesTitle}</h2>
+              <p>{copy.principlesText}</p>
+            </div>
+
+            <div class="principles-list">
+              {copy.principles.map((principle, index) => (
+                <article class="principle-item">
+                  <span aria-hidden="true">{String(index + 1).padStart(2, '0')}</span>
+                  <div>
+                    <h3>{principle.title}</h3>
+                    <p>{principle.description}</p>
+                  </div>
+                </article>
+              ))}
+              <p class="principles-boundary">{copy.principlesBoundary}</p>
+            </div>
+          </div>
+        </section>
+      </>
     )
   }
-
-  <section class="quick-paths" aria-labelledby="quick-paths-title">
-    <div class="container">
-      <h2 id="quick-paths-title">{copy.quickPathsTitle}</h2>
-      <nav class="quick-paths__grid" aria-label={copy.quickPathsTitle}>
-        <ul>
-          {
-            quickSections.map((section, index) => (
-              <li>
-                <a href={sectionPath(locale, section)}>
-                  <span class="quick-paths__number" aria-hidden="true">
-                    {String(index + 1).padStart(2, '0')}
-                  </span>
-                  <span class="quick-paths__copy">
-                    <strong>{copy.sections[section].title}</strong>
-                    <span>{copy.sections[section].description}</span>
-                  </span>
-                  <span class="quick-paths__arrow" aria-hidden="true">→</span>
-                </a>
-              </li>
-            ))
-          }
-        </ul>
-      </nav>
-    </div>
-  </section>
-
-  <section class="section-grid-wrap" aria-labelledby="sections-title">
-    <div class="container">
-      <div class="section-intro">
-        <h2 id="sections-title">{copy.exploreTitle}</h2>
-        <p>{copy.exploreText}</p>
-      </div>
-
-      <div class="section-grid section-grid--hierarchical">
-        {
-          homeSections.map(({ section, variant, tone }, index) => (
-            <SectionCard
-              href={sectionPath(locale, section)}
-              title={copy.sections[section].title}
-              description={copy.sections[section].description}
-              number={String(index + 1).padStart(2, '0')}
-              variant={variant}
-              tone={tone}
-            />
-          ))
-        }
-      </div>
-    </div>
-  </section>
-
-  <section class="principles-section" aria-labelledby="principles-title">
-    <div class="container principles-layout">
-      <div class="principles-heading">
-        <p class="eyebrow">{SITE.umbrellaName}</p>
-        <h2 id="principles-title">{copy.principlesTitle}</h2>
-        <p>{copy.principlesText}</p>
-      </div>
-
-      <div class="principles-list">
-        {
-          copy.principles.map((principle, index) => (
-            <article class="principle-item">
-              <span aria-hidden="true">{String(index + 1).padStart(2, '0')}</span>
-              <div>
-                <h3>{principle.title}</h3>
-                <p>{principle.description}</p>
-              </div>
-            </article>
-          ))
-        }
-        <p class="principles-boundary">{copy.principlesBoundary}</p>
-      </div>
-    </div>
-  </section>
 </BaseLayout>
