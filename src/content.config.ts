@@ -107,10 +107,22 @@ const pages = defineCollection({
       audience: z
         .array(z.enum(['parents', 'families', 'professionals', 'general']))
         .min(1),
+      featuredImage: z.string().min(1).optional(),
+      featuredImageAlt: z.string().min(1).optional(),
       keyPoints: z.array(z.string().min(1)).default([]),
       evidenceLimitations: z.string().min(1).optional(),
     })
-    .superRefine(validatePagePublication),
+    .superRefine((data, context) => {
+      validatePagePublication(data, context);
+
+      if (data.featuredImage && !data.featuredImageAlt) {
+        context.addIssue({
+          code: 'custom',
+          path: ['featuredImageAlt'],
+          message: 'A featured image requires alternative text.',
+        });
+      }
+    }),
 });
 
 const research = defineCollection({
