@@ -29,7 +29,7 @@ collections:
     format: "frontmatter"
     identifier_field: "title"
     slug: "{{fields.slug}}"
-    preview_path: "kz/ru/{{section}}/{{fields.slug}}/"
+    preview_path: "kz/ru/{{fields.section}}/{{fields.slug}}/"
     summary: "{{title}} | {{section}} | draft={{draft}}"
     sortable_fields: ["title", "updatedAt", "publishedAt"]
     view_filters:
@@ -129,7 +129,7 @@ collections:
     format: "frontmatter"
     identifier_field: "title"
     slug: "{{fields.slug}}"
-    preview_path: "kz/kk/{{section}}/{{fields.slug}}/"
+    preview_path: "kz/kk/{{fields.section}}/{{fields.slug}}/"
     summary: "{{title}} | {{section}} | draft={{draft}}"
     fields:
       - { label: "Атауы", name: "title", widget: "string" }
@@ -221,7 +221,7 @@ collections:
     format: "frontmatter"
     identifier_field: "title"
     slug: "{{fields.slug}}"
-    preview_path: "kz/en/{{section}}/{{fields.slug}}/"
+    preview_path: "kz/en/{{fields.section}}/{{fields.slug}}/"
     summary: "{{title}} | {{section}} | draft={{draft}}"
     fields:
       - { label: "Title", name: "title", widget: "string" }
