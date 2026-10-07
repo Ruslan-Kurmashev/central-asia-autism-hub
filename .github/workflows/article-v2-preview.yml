@@ -13,8 +13,18 @@ jobs:
     steps:
       - name: Check out repository
         uses: actions/checkout@v7
-      - name: Validate and build preview
-        uses: withastro/action@v6
+      - name: Set up Node.js
+        uses: actions/setup-node@v6
         with:
           node-version: 24
-          build-cmd: npm run validate
+      - name: Refresh package lock
+        run: npm install --package-lock-only --ignore-scripts
+      - name: Upload refreshed lockfile
+        uses: actions/upload-artifact@v7
+        with:
+          name: refreshed-package-lock
+          path: package-lock.json
+      - name: Clean install
+        run: npm ci
+      - name: Validate
+        run: npm run validate
