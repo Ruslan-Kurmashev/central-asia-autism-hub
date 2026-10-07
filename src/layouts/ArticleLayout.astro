@@ -44,8 +44,8 @@ const isDevelopmentMilestones =
   data.section === 'parents';
 const useArticleV2 = locale === 'ru';
 const tocHeadings = headings.filter((heading) => heading.depth === 2 || heading.depth === 3);
-const authorAndEditor =
-  data.author === data.editor ? data.author : `${data.author} / ${data.editor}`;
+const displayDate = data.updatedAt ?? data.publishedAt;
+const displayDateLabel = data.updatedAt ? copy.updatedLabel : copy.publishedLabel;
 ---
 
 <BaseLayout
@@ -75,29 +75,23 @@ const authorAndEditor =
             <p class="article-v2__summary">{data.summary}</p>
 
             <dl class="article-v2__meta">
-              {data.updatedAt && (
+              {displayDate && (
                 <div>
-                  <dt>{copy.updatedLabel}</dt>
+                  <dt>{displayDateLabel}</dt>
                   <dd>
-                    <time datetime={data.updatedAt.toISOString()}>
-                      {dateFormatter.format(data.updatedAt)}
-                    </time>
-                  </dd>
-                </div>
-              )}
-              {data.reviewDueAt && (
-                <div>
-                  <dt>{copy.reviewDueLabel}</dt>
-                  <dd>
-                    <time datetime={data.reviewDueAt.toISOString()}>
-                      {dateFormatter.format(data.reviewDueAt)}
+                    <time datetime={displayDate.toISOString()}>
+                      {dateFormatter.format(displayDate)}
                     </time>
                   </dd>
                 </div>
               )}
               <div>
-                <dt>{copy.authorAndEditorLabel}</dt>
-                <dd>{authorAndEditor}</dd>
+                <dt>{copy.authorLabel}</dt>
+                <dd>{data.author}</dd>
+              </div>
+              <div>
+                <dt>{copy.editorLabel}</dt>
+                <dd>{data.editor}</dd>
               </div>
             </dl>
           </div>
