@@ -12,6 +12,8 @@ translationStatus: source
 audience:
   - parents
   - families
+featuredImage: "/central-asia-autism-hub/images/editorial/article-family-rest.jpg"
+featuredImageAlt: "Семья отдыхает вместе дома в спокойной обстановке."
 author: Ruslan Kurmashev
 editor: Ruslan Kurmashev
 riskLevel: moderate

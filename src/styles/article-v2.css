@@ -40,6 +40,44 @@
     linear-gradient(135deg, #eaf5fb 0%, #f8fbfd 60%, #ffffff 100%);
 }
 
+.article-v2__header--image {
+  display: flex;
+  min-height: clamp(23rem, 48vw, 31rem);
+  align-items: end;
+  border-bottom: 0;
+  background:
+    linear-gradient(90deg, rgb(4 35 64 / 86%) 0%, rgb(4 35 64 / 72%) 48%, rgb(4 35 64 / 44%) 100%),
+    linear-gradient(180deg, rgb(6 45 78 / 18%) 0%, rgb(6 45 78 / 50%) 100%),
+    var(--article-hero-image);
+  background-position: center;
+  background-size: cover;
+}
+
+.article-v2__header--image .article-v2__header-inner {
+  padding-block: 2.1rem 0.25rem;
+}
+
+.article-v2__header--image .article-v2__breadcrumb,
+.article-v2__header--image .article-v2__breadcrumb a,
+.article-v2__header--image .article-v2__eyebrow,
+.article-v2__header--image .article-v2__summary,
+.article-v2__header--image .article-v2__meta dt {
+  color: rgb(255 255 255 / 78%);
+}
+
+.article-v2__header--image h1,
+.article-v2__header--image .article-v2__meta dd {
+  color: #fff;
+}
+
+.article-v2__header--image .article-v2__meta {
+  border-color: rgb(255 255 255 / 26%);
+}
+
+.article-v2__header--image .article-v2__meta > div + div {
+  border-left-color: rgb(255 255 255 / 26%);
+}
+
 .article-v2__header-inner {
   max-width: 62rem;
 }

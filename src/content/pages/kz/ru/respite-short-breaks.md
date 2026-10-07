@@ -12,6 +12,8 @@ translationStatus: source
 audience:
   - parents
   - families
+featuredImage: "/central-asia-autism-hub/images/editorial/article-forest-walk.jpg"
+featuredImageAlt: "Родитель и ребёнок идут вместе по лесной дорожке."
 author: Ruslan Kurmashev
 editor: Ruslan Kurmashev
 riskLevel: moderate

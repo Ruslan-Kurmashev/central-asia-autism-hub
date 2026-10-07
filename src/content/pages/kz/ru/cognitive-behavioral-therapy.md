@@ -13,6 +13,8 @@ audience:
   - parents
   - families
   - general
+featuredImage: "/central-asia-autism-hub/images/editorial/article-family-session.jpg"
+featuredImageAlt: "Родители и ребёнок беседуют во время семейной консультации."
 author: Ruslan Kurmashev
 editor: Ruslan Kurmashev
 riskLevel: moderate

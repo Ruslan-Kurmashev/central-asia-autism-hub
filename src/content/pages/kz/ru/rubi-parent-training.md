@@ -12,6 +12,8 @@ translationStatus: source
 audience:
   - parents
   - families
+featuredImage: "/central-asia-autism-hub/images/editorial/article-parent-training.jpg"
+featuredImageAlt: "Родители и ребёнок вместе рассматривают карточку во время занятия со специалистом."
 author: Ruslan Kurmashev
 editor: Ruslan Kurmashev
 riskLevel: moderate
