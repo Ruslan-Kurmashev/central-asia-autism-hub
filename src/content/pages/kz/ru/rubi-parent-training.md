@@ -12,8 +12,8 @@ translationStatus: source
 audience:
   - parents
   - families
-featuredImage: "/central-asia-autism-hub/images/editorial/article-parent-training.jpg"
-featuredImageAlt: "Родители и ребёнок вместе рассматривают карточку во время занятия со специалистом."
+featuredImage: "/central-asia-autism-hub/images/editorial/article-rubi-asian.jpg"
+featuredImageAlt: "Родитель играет с ребёнком с развивающими игрушками дома."
 author: Ruslan Kurmashev
 editor: Ruslan Kurmashev
 riskLevel: moderate

@@ -26,9 +26,20 @@ Pexels states that its photos can be downloaded and used for free, attribution i
 | `article-forest-walk.jpg` | Jonathan Trbic | https://www.pexels.com/photo/father-and-child-stroll-through-forest-pathway-39999216/ |
 | `article-parent-training.jpg` | Gustavo Fring | https://www.pexels.com/photo/photo-of-a-girl-looking-at-a-card-with-her-parents-7447259/ |
 
+| `article-creative-asian.jpg` | cottonbro studio | https://www.pexels.com/photo/a-close-up-shot-of-a-young-girl-painting-7898452/ |
+| `article-adapted-cbt-asian.jpg` | RDNE Stock project | https://www.pexels.com/photo/parents-looking-at-the-small-paper-the-girl-is-showing-8297670/ |
+| `article-psychological-support-asian.jpg` | Nicola Barts | https://www.pexels.com/photo/close-up-shot-of-a-mother-and-daughter-7943196/ |
+| `article-technology-asian.jpg` | Kampus Production | https://www.pexels.com/photo/man-and-a-boy-looking-at-the-screen-of-a-tablet-7417142/ |
+| `article-caregiver-wellbeing-asian.jpg` | Alex Green | https://www.pexels.com/photo/happy-children-resting-with-mother-5691810/ |
+| `article-cbt-asian.jpg` | Annushka Ahuja | https://www.pexels.com/photo/a-girl-sitting-at-the-table-8055140/ |
+| `article-respite-asian.jpg` | Trần Long | https://www.pexels.com/photo/asian-parents-with-children-walking-on-street-7743763/ |
+| `article-rubi-asian.jpg` | Mikhail Nilov | https://www.pexels.com/photo/a-woman-and-boy-playing-toys-together-7780915/ |
+| `article-who-cst-asian.jpg` | Kamaji Ogino | https://www.pexels.com/photo/positive-asian-mother-and-daughter-reading-tale-5094097/ |
+
 ## Usage rules
 
 - Images illustrate a topic or activity; they do not imply that an identifiable person is autistic or has any diagnosis.
+- For people-based imagery, use only sources whose own metadata explicitly describes an Asian family/parent/child context or identifies an Asian location; otherwise use neutral, non-identifiable imagery.
 - Avoid using a person's image to imply endorsement of Autism Hub Kazakhstan.
 - Do not use puzzle-piece imagery or stereotyped distress imagery as a generic symbol for autism.
 - Every article card displayed in the main homepage material grid should have a featured photograph. Non-article editorial blocks may remain text-only.

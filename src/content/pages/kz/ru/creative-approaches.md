@@ -13,7 +13,7 @@ audience:
   - parents
   - families
   - general
-featuredImage: "/central-asia-autism-hub/images/editorial/article-creative-art.jpg"
+featuredImage: "/central-asia-autism-hub/images/editorial/article-creative-asian.jpg"
 featuredImageAlt: "Ребёнок рисует красками во время творческого занятия."
 author: Ruslan Kurmashev
 editor: Ruslan Kurmashev

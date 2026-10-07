@@ -13,8 +13,8 @@ audience:
   - parents
   - families
   - general
-featuredImage: "/central-asia-autism-hub/images/editorial/parent-child-conversation.jpg"
-featuredImageAlt: "Родитель и ребёнок спокойно разговаривают на скамейке в парке."
+featuredImage: "/central-asia-autism-hub/images/editorial/article-adapted-cbt-asian.jpg"
+featuredImageAlt: "Родители разговаривают с ребёнком во время спокойной семейной прогулки."
 author: Ruslan Kurmashev
 editor: Ruslan Kurmashev
 riskLevel: moderate

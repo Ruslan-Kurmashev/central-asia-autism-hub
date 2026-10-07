@@ -7,11 +7,11 @@ export interface EditorialVisual {
 
 const VISUALS = {
   communication: {
-    src: 'images/editorial/family-tablet.jpg',
+    src: 'images/editorial/article-technology-asian.jpg',
     alt: 'Родители и ребёнок вместе смотрят на экран планшета.',
   },
   learning: {
-    src: 'images/editorial/parent-child-drawing.jpg',
+    src: 'images/editorial/article-creative-asian.jpg',
     alt: 'Взрослый помогает ребёнку рисовать за столом.',
   },
   sensory: {
@@ -23,11 +23,11 @@ const VISUALS = {
     alt: 'Дети выполняют упражнения на растяжку в помещении.',
   },
   conversation: {
-    src: 'images/editorial/parent-child-conversation.jpg',
+    src: 'images/editorial/article-adapted-cbt-asian.jpg',
     alt: 'Родитель и ребёнок разговаривают на скамейке в парке.',
   },
   reading: {
-    src: 'images/editorial/family-reading.jpg',
+    src: 'images/editorial/article-who-cst-asian.jpg',
     alt: 'Родители читают книгу вместе с ребёнком.',
   },
   feeding: {
