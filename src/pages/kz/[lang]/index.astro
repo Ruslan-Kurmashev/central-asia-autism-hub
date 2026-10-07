@@ -1,6 +1,7 @@
 ---
 import { getCollection } from 'astro:content';
 import SectionCard from '../../../components/SectionCard.astro';
+import { getEditorialVisual } from '../../../data/editorial-visuals';
 import { CONTENT_UI, DATE_LOCALES } from '../../../i18n/content';
 import { UI } from '../../../i18n/ui';
 import BaseLayout from '../../../layouts/BaseLayout.astro';
@@ -62,6 +63,41 @@ const publishedPages = (
 );
 
 const homeMaterials = publishedPages.slice(0, 9);
+const usedEditorialImages = new Set<string>();
+const homeCards = homeMaterials.map((material, index) => {
+  if (material.data.featuredImage) {
+    return {
+      material,
+      cardImage: material.data.featuredImage,
+      cardImageAlt: material.data.featuredImageAlt ?? '',
+    };
+  }
+
+  const curated = getEditorialVisual(
+    material.data.section,
+    material.data.topic,
+    material.data.title,
+  );
+
+  if (curated && !usedEditorialImages.has(curated.src)) {
+    usedEditorialImages.add(curated.src);
+    return {
+      material,
+      cardImage: `${import.meta.env.BASE_URL}${curated.src}`,
+      cardImageAlt: curated.alt,
+    };
+  }
+
+  if (index === 0) {
+    return {
+      material,
+      cardImage: heroImagePath,
+      cardImageAlt: copy.heroImageAlt,
+    };
+  }
+
+  return { material, cardImage: undefined, cardImageAlt: '' };
+});
 const featuredMaterials = publishedPages
   .filter((entry) => entry.data.section === 'parents')
   .slice(0, 3);
@@ -150,12 +186,7 @@ const dateFormatter = new Intl.DateTimeFormat(DATE_LOCALES[locale], {
               </div>
 
               <div class="home-v2__masonry">
-                {homeMaterials.map((material, index) => {
-                  const cardImage =
-                    material.data.featuredImage ?? (index === 0 ? heroImagePath : undefined);
-                  const cardImageAlt =
-                    material.data.featuredImageAlt ?? (index === 0 ? copy.heroImageAlt : '');
-
+                {homeCards.map(({ material, cardImage, cardImageAlt }, index) => {
                   return (
                     <article
                       class:list={[
