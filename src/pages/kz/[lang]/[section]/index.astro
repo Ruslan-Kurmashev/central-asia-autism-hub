@@ -32,7 +32,7 @@ const { locale, section } = Astro.props;
 const copy = UI[locale];
 const contentCopy = CONTENT_UI[locale];
 const sectionCopy = copy.sections[section];
-const useParentsV2 = locale === 'ru' && section === 'parents';
+const useSectionV2 = locale === 'ru';
 
 const materials = (
   await getCollection(
@@ -67,23 +67,26 @@ const dateFormatter = new Intl.DateTimeFormat(DATE_LOCALES[locale], {
   year: 'numeric',
 });
 
-const parentGroups = [
+const parentGroupDefinitions = [
   {
     id: 'autism-basics',
     title: 'Что такое аутизм',
-    description: 'Основные понятия, особенности аутистического спектра и понятный вводный материал.',
+    description:
+      'Основные понятия, особенности аутистического спектра и понятный вводный материал.',
     topics: ['autism-basics'],
   },
   {
     id: 'development',
     title: 'Развитие ребёнка',
-    description: 'Ориентиры развития и ситуации, которые стоит обсудить со специалистом.',
+    description:
+      'Ориентиры развития и ситуации, которые стоит обсудить со специалистом.',
     topics: ['child-development', 'development-concerns'],
   },
   {
     id: 'assessment',
     title: 'Оценка и диагностика',
-    description: 'Скрининг, диагностическая оценка, обследования и роли специалистов в Казахстане.',
+    description:
+      'Скрининг, диагностическая оценка, обследования и роли специалистов в Казахстане.',
     topics: [
       'assessment-and-diagnosis',
       'autism-assessments-kazakhstan',
@@ -94,7 +97,8 @@ const parentGroups = [
   {
     id: 'after-diagnosis',
     title: 'После оценки и диагноза',
-    description: 'Как понять результат оценки и какие практические шаги могут быть следующими.',
+    description:
+      'Как понять результат оценки и какие практические шаги могут быть следующими.',
     topics: [
       'after-autism-assessment-kazakhstan',
       'first-30-days-after-autism-diagnosis-kazakhstan',
@@ -103,26 +107,60 @@ const parentGroups = [
   {
     id: 'support',
     title: 'Подходы к поддержке',
-    description: 'Коммуникация, обучение, поведение, сенсорная поддержка, физическая активность и другие подходы.',
+    description:
+      'Коммуникация, обучение, поведение, сенсорная поддержка, физическая активность и другие подходы.',
     topics: ['approaches-to-support'],
   },
   {
     id: 'feeding',
     title: 'Питание и трудности кормления',
-    description: 'Оценка трудностей питания, ARFID, помощь при кормлении и нутриционная поддержка.',
+    description:
+      'Оценка трудностей питания, ARFID, помощь при кормлении и нутриционная поддержка.',
     topics: ['feeding-nutrition'],
   },
-].map((group) => ({
-  ...group,
-  materials: materials.filter((material) => group.topics.includes(material.data.topic)),
+];
+
+const genericGroupDefinitions = sectionCopy.topics.map((topic) => ({
+  id: topic.id,
+  title: topic.title,
+  description: topic.description,
+  topics: [topic.id],
 }));
 
+const groupDefinitions =
+  section === 'parents' ? parentGroupDefinitions : genericGroupDefinitions;
+
+const sectionGroups = groupDefinitions.map((group) => ({
+  ...group,
+  materials: materials.filter((material) =>
+    group.topics.includes(material.data.topic),
+  ),
+}));
+
+const visibleGroups =
+  section === 'parents'
+    ? sectionGroups
+    : sectionGroups.filter((group) => group.materials.length > 0);
+
 const groupedSlugs = new Set(
-  parentGroups.flatMap((group) => group.materials.map((material) => material.data.slug)),
+  visibleGroups.flatMap((group) =>
+    group.materials.map((material) => material.data.slug),
+  ),
 );
+
 const ungroupedMaterials = materials.filter(
   (material) => !groupedSlugs.has(material.data.slug),
 );
+
+function russianMaterialWord(count: number) {
+  const lastTwo = count % 100;
+  const last = count % 10;
+
+  if (lastTwo >= 11 && lastTwo <= 14) return 'материалов';
+  if (last === 1) return 'материал';
+  if (last >= 2 && last <= 4) return 'материала';
+  return 'материалов';
+}
 ---
 
 <BaseLayout
@@ -131,10 +169,10 @@ const ungroupedMaterials = materials.filter(
   locale={locale}
   currentSection={section}
   alternatePath={section}
-  bodyClass={useParentsV2 ? 'section-v2' : undefined}
+  bodyClass={useSectionV2 ? 'section-v2' : undefined}
 >
   {
-    useParentsV2 ? (
+    useSectionV2 ? (
       <article class="section-v2__page">
         <header class="section-v2__hero">
           <div class="container">
@@ -151,51 +189,145 @@ const ungroupedMaterials = materials.filter(
                 <p class="section-v2__description">{sectionCopy.description}</p>
               </div>
 
-              <div class="section-v2__count" aria-label={`${materials.length} материалов`}>
+              <div
+                class="section-v2__count"
+                aria-label={`${materials.length} ${russianMaterialWord(materials.length)}`}
+              >
                 <strong>{materials.length}</strong>
-                <span>материалов</span>
+                <span>{russianMaterialWord(materials.length)}</span>
               </div>
             </div>
           </div>
         </header>
 
-        <section class="section-v2__collections" aria-labelledby="section-v2-collections-title">
+        <section
+          class="section-v2__collections"
+          aria-labelledby="section-v2-collections-title"
+        >
           <div class="container">
             <div class="section-v2__intro">
               <p class="section-v2__eyebrow">Навигация по разделу</p>
-              <h2 id="section-v2-collections-title">Выберите тему</h2>
+              <h2 id="section-v2-collections-title">
+                {materials.length > 0 ? 'Материалы и темы' : 'Темы раздела'}
+              </h2>
               <p>
-                Откройте нужную тему, чтобы увидеть все материалы внутри. Список
-                построен по опубликованным статьям и обновляется автоматически.
+                {materials.length > 0
+                  ? 'Откройте тему, чтобы увидеть опубликованные материалы. Новые статьи автоматически появляются в этом разделе после публикации.'
+                  : 'Основные направления раздела уже определены. Материалы будут добавляться постепенно после проверки содержания и источников.'}
               </p>
             </div>
 
-            <div class="section-v2__accordion">
-              {parentGroups.map((group, index) => (
-                <details class="section-v2__group" id={group.id} open={index === 0}>
-                  <summary>
-                    <span class="section-v2__number" aria-hidden="true">
-                      {String(index + 1).padStart(2, '0')}
-                    </span>
-                    <span class="section-v2__group-copy">
-                      <strong>{group.title}</strong>
-                      <span>{group.description}</span>
-                    </span>
-                    <span class="section-v2__group-count">
-                      {group.materials.length}{' '}
-                      {group.materials.length === 1 ? 'материал' : 'материалов'}
-                    </span>
-                    <span class="section-v2__chevron" aria-hidden="true"></span>
-                  </summary>
+            {materials.length > 0 && (
+              <div class="section-v2__accordion">
+                {visibleGroups.map((group, index) => (
+                  <details
+                    class="section-v2__group"
+                    id={group.id}
+                    open={index === 0}
+                  >
+                    <summary>
+                      <span class="section-v2__number" aria-hidden="true">
+                        {String(index + 1).padStart(2, '0')}
+                      </span>
+                      <span class="section-v2__group-copy">
+                        <strong>{group.title}</strong>
+                        <span>{group.description}</span>
+                      </span>
+                      <span class="section-v2__group-count">
+                        {group.materials.length}{' '}
+                        {russianMaterialWord(group.materials.length)}
+                      </span>
+                      <span
+                        class="section-v2__chevron"
+                        aria-hidden="true"
+                      ></span>
+                    </summary>
 
-                  <div class="section-v2__article-list">
-                    {group.materials.length > 0 ? (
-                      group.materials.map((material, materialIndex) => (
+                    <div class="section-v2__article-list">
+                      {group.materials.length > 0 ? (
+                        group.materials.map((material, materialIndex) => (
+                          <a
+                            class="section-v2__article-row"
+                            href={articlePath(
+                              locale,
+                              section,
+                              material.data.slug,
+                            )}
+                          >
+                            <span
+                              class="section-v2__article-index"
+                              aria-hidden="true"
+                            >
+                              {String(materialIndex + 1).padStart(2, '0')}
+                            </span>
+                            <span class="section-v2__article-copy">
+                              <strong>{material.data.title}</strong>
+                              <span>{material.data.summary}</span>
+                            </span>
+                            <span class="section-v2__article-meta">
+                              <time
+                                datetime={material.data.updatedAt!.toISOString()}
+                              >
+                                {dateFormatter.format(material.data.updatedAt!)}
+                              </time>
+                              <span aria-hidden="true">→</span>
+                            </span>
+                          </a>
+                        ))
+                      ) : (
+                        <p class="section-v2__empty">
+                          Материалы этой темы готовятся.
+                        </p>
+                      )}
+                    </div>
+                  </details>
+                ))}
+
+                {ungroupedMaterials.length > 0 && (
+                  <details
+                    class="section-v2__group section-v2__group--other"
+                    open={visibleGroups.length === 0}
+                  >
+                    <summary>
+                      <span class="section-v2__number" aria-hidden="true">
+                        {String(visibleGroups.length + 1).padStart(2, '0')}
+                      </span>
+                      <span class="section-v2__group-copy">
+                        <strong>
+                          {section === 'parents'
+                            ? 'Другие материалы'
+                            : 'Все остальные материалы'}
+                        </strong>
+                        <span>
+                          {section === 'parents'
+                            ? 'Материалы, которые ещё не распределены по основной навигации.'
+                            : 'Опубликованные материалы, которые пока не привязаны к одной из навигационных тем раздела.'}
+                        </span>
+                      </span>
+                      <span class="section-v2__group-count">
+                        {ungroupedMaterials.length}{' '}
+                        {russianMaterialWord(ungroupedMaterials.length)}
+                      </span>
+                      <span
+                        class="section-v2__chevron"
+                        aria-hidden="true"
+                      ></span>
+                    </summary>
+
+                    <div class="section-v2__article-list">
+                      {ungroupedMaterials.map((material, materialIndex) => (
                         <a
                           class="section-v2__article-row"
-                          href={articlePath(locale, section, material.data.slug)}
+                          href={articlePath(
+                            locale,
+                            section,
+                            material.data.slug,
+                          )}
                         >
-                          <span class="section-v2__article-index" aria-hidden="true">
+                          <span
+                            class="section-v2__article-index"
+                            aria-hidden="true"
+                          >
                             {String(materialIndex + 1).padStart(2, '0')}
                           </span>
                           <span class="section-v2__article-copy">
@@ -203,58 +335,66 @@ const ungroupedMaterials = materials.filter(
                             <span>{material.data.summary}</span>
                           </span>
                           <span class="section-v2__article-meta">
-                            <time datetime={material.data.updatedAt!.toISOString()}>
+                            <time
+                              datetime={material.data.updatedAt!.toISOString()}
+                            >
                               {dateFormatter.format(material.data.updatedAt!)}
                             </time>
                             <span aria-hidden="true">→</span>
                           </span>
                         </a>
-                      ))
-                    ) : (
-                      <p class="section-v2__empty">Материалы этой темы готовятся.</p>
-                    )}
-                  </div>
-                </details>
-              ))}
+                      ))}
+                    </div>
+                  </details>
+                ))}
+              </div>
+            )}
 
-              {ungroupedMaterials.length > 0 && (
-                <details class="section-v2__group section-v2__group--other">
-                  <summary>
-                    <span class="section-v2__number" aria-hidden="true">07</span>
-                    <span class="section-v2__group-copy">
-                      <strong>Другие материалы</strong>
-                      <span>Материалы, которые ещё не распределены по основной навигации.</span>
-                    </span>
-                    <span class="section-v2__group-count">
-                      {ungroupedMaterials.length} материалов
-                    </span>
-                    <span class="section-v2__chevron" aria-hidden="true"></span>
-                  </summary>
-                  <div class="section-v2__article-list">
-                    {ungroupedMaterials.map((material, materialIndex) => (
-                      <a
-                        class="section-v2__article-row"
-                        href={articlePath(locale, section, material.data.slug)}
+            {section !== 'parents' && (
+              <section
+                class:list={[
+                  'section-v2__topic-map-section',
+                  materials.length === 0 &&
+                    'section-v2__topic-map-section--primary',
+                ]}
+                aria-labelledby="section-v2-topic-map-title"
+              >
+                <div class="section-v2__topic-map-heading">
+                  <p class="section-v2__eyebrow">Структура раздела</p>
+                  <h2 id="section-v2-topic-map-title">Основные темы</h2>
+                </div>
+
+                <div class="section-v2__topic-map">
+                  {sectionCopy.topics.map((topic, index) => (
+                    <article class="section-v2__topic-card" id={topic.id}>
+                      <span
+                        class="section-v2__topic-number"
+                        aria-hidden="true"
                       >
-                        <span class="section-v2__article-index" aria-hidden="true">
-                          {String(materialIndex + 1).padStart(2, '0')}
-                        </span>
-                        <span class="section-v2__article-copy">
-                          <strong>{material.data.title}</strong>
-                          <span>{material.data.summary}</span>
-                        </span>
-                        <span class="section-v2__article-meta">
-                          <time datetime={material.data.updatedAt!.toISOString()}>
-                            {dateFormatter.format(material.data.updatedAt!)}
-                          </time>
-                          <span aria-hidden="true">→</span>
-                        </span>
-                      </a>
-                    ))}
-                  </div>
-                </details>
-              )}
-            </div>
+                        {String(index + 1).padStart(2, '0')}
+                      </span>
+                      <div>
+                        <h3>{topic.title}</h3>
+                        <p>{topic.description}</p>
+                      </div>
+                    </article>
+                  ))}
+                </div>
+              </section>
+            )}
+
+            {materials.length === 0 && (
+              <aside
+                class="section-v2__status"
+                aria-labelledby="section-v2-status-title"
+              >
+                <span class="section-v2__status-mark" aria-hidden="true"></span>
+                <div>
+                  <h2 id="section-v2-status-title">{copy.sectionStatus}</h2>
+                  <p>{copy.sectionStatusText}</p>
+                </div>
+              </aside>
+            )}
 
             <a class="section-v2__back" href={localePath(locale)}>
               ← {copy.backHome}
@@ -331,7 +471,9 @@ const ungroupedMaterials = materials.filter(
               </aside>
             )}
 
-            <a class="back-link" href={localePath(locale)}>← {copy.backHome}</a>
+            <a class="back-link" href={localePath(locale)}>
+              ← {copy.backHome}
+            </a>
           </div>
         </section>
       </article>
