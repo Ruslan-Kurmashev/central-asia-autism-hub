@@ -10,7 +10,9 @@
   --article-blue-dark: #0b4f86;
   --article-blue-soft: #e5f2fb;
   --article-line: #d6e4ef;
-  --article-warm: #f7f2e8;
+  --article-warm: #fff4df;
+  --article-warm-border: #e8c57a;
+  --article-warm-accent: #c9891f;
   background: var(--article-bg);
   color: var(--article-text);
 }
@@ -306,13 +308,28 @@
 .article-v2__limitations {
   margin-top: 3rem;
   margin-bottom: 3rem;
+  padding: 1.7rem 1.8rem;
+  border: 1px solid var(--article-warm-border);
+  border-left: 5px solid var(--article-warm-accent);
   background: var(--article-warm);
+  box-shadow: 0 10px 28px rgb(122 86 25 / 8%);
+}
+
+.article-v2__limitations .article-v2__block-label {
+  color: #8a5a10;
+  font-weight: 700;
+}
+
+.article-v2__limitations h2 {
+  color: #5f4214;
+  font-size: 1.65rem;
 }
 
 .article-v2__limitations p {
   margin: 0.75rem 0 0;
-  color: var(--article-text);
-  line-height: 1.65;
+  color: #5f5138;
+  font-size: 1.02rem;
+  line-height: 1.7;
 }
 
 .article-v2__sources {
