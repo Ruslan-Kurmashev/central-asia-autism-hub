@@ -12,6 +12,8 @@ translationStatus: source
 audience:
   - parents
   - families
+featuredImage: "/central-asia-autism-hub/images/editorial/family-reading.jpg"
+featuredImageAlt: "Родители читают книгу вместе с ребёнком."
 author: Ruslan Kurmashev
 editor: Ruslan Kurmashev
 riskLevel: lower
