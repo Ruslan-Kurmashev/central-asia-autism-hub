@@ -19,10 +19,17 @@ Pexels states that its photos can be downloaded and used for free, attribution i
 | `family-meal.jpg` | Mizuno K | https://www.pexels.com/photo/family-eating-food-at-table-12788474/ |
 | `research-lab.jpg` | Tima Miroshnichenko | https://www.pexels.com/photo/man-technology-computer-white-9574355/ |
 
+| `article-creative-art.jpg` | Pavel Danilyuk | https://www.pexels.com/photo/full-shot-of-kids-painting-during-an-art-class-8382363/ |
+| `article-family-therapy.jpg` | Gustavo Fring | https://www.pexels.com/photo/photo-of-a-family-doing-a-therapy-session-7447261/ |
+| `article-family-rest.jpg` | Kampus Production | https://www.pexels.com/photo/a-family-resting-in-bed-7078782/ |
+| `article-family-session.jpg` | Tima Miroshnichenko | https://www.pexels.com/photo/a-couple-sitting-on-a-couch-with-their-daughter-at-a-therapy-session-5336939/ |
+| `article-forest-walk.jpg` | Jonathan Trbic | https://www.pexels.com/photo/father-and-child-stroll-through-forest-pathway-39999216/ |
+| `article-parent-training.jpg` | Gustavo Fring | https://www.pexels.com/photo/photo-of-a-girl-looking-at-a-card-with-her-parents-7447259/ |
+
 ## Usage rules
 
 - Images illustrate a topic or activity; they do not imply that an identifiable person is autistic or has any diagnosis.
 - Avoid using a person's image to imply endorsement of Autism Hub Kazakhstan.
 - Do not use puzzle-piece imagery or stereotyped distress imagery as a generic symbol for autism.
-- Prefer a mix of photography and text-only cards rather than an image on every card.
+- Every article card displayed in the main homepage material grid should have a featured photograph. Non-article editorial blocks may remain text-only.
 - If a future image is replaced, update this file with its source and license check date.
