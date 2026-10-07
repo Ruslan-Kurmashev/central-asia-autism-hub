@@ -13,8 +13,8 @@ audience:
   - parents
   - families
   - general
-featuredImage: "/central-asia-autism-hub/images/editorial/article-family-therapy.jpg"
-featuredImageAlt: "Семья беседует со специалистом во время консультации."
+featuredImage: "/central-asia-autism-hub/images/editorial/article-psychological-support-asian.jpg"
+featuredImageAlt: "Родитель и ребёнок разговаривают дома в спокойной обстановке."
 author: Ruslan Kurmashev
 editor: Ruslan Kurmashev
 riskLevel: moderate
