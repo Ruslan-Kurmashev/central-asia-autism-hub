@@ -96,7 +96,11 @@ const homeCards = homeMaterials.map((material, index) => {
     };
   }
 
-  return { material, cardImage: undefined, cardImageAlt: '' };
+  return {
+    material,
+    cardImage: heroImagePath,
+    cardImageAlt: copy.heroImageAlt,
+  };
 });
 const featuredMaterials = publishedPages
   .filter((entry) => entry.data.section === 'parents')
@@ -191,9 +195,8 @@ const dateFormatter = new Intl.DateTimeFormat(DATE_LOCALES[locale], {
                     <article
                       class:list={[
                         'home-v2__card',
+                        'home-v2__card--article',
                         cardImage && 'home-v2__card--image',
-                        index === 1 && 'home-v2__card--accent',
-                        index === 4 && 'home-v2__card--dark',
                       ]}
                     >
                       {cardImage && (
