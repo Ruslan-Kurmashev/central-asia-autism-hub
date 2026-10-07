@@ -25,13 +25,33 @@ export async function getStaticPaths() {
         ]),
       ) as Partial<Record<Locale, string>>;
 
+      const sameTopic = entries
+        .filter(
+          (candidate) =>
+            candidate.data.language === entry.data.language &&
+            candidate.data.section === entry.data.section &&
+            candidate.data.topic === entry.data.topic &&
+            candidate.data.slug !== entry.data.slug,
+        )
+        .sort((left, right) =>
+          left.data.title.localeCompare(right.data.title, entry.data.language),
+        );
+
+      const nextEntry = sameTopic.find(
+        (candidate) =>
+          candidate.data.title.localeCompare(
+            entry.data.title,
+            entry.data.language,
+          ) > 0,
+      ) ?? sameTopic[0];
+
       return {
         params: {
           lang: entry.data.language,
           section: entry.data.section,
           slug: entry.data.slug,
         },
-        props: { entry, alternatePaths },
+        props: { entry, alternatePaths, nextEntry },
       };
     }),
   );
@@ -40,12 +60,18 @@ export async function getStaticPaths() {
 interface Props {
   entry: CollectionEntry<'pages'>;
   alternatePaths: Partial<Record<Locale, string>>;
+  nextEntry?: CollectionEntry<'pages'>;
 }
 
-const { entry, alternatePaths } = Astro.props;
-const { Content } = await render(entry);
+const { entry, alternatePaths, nextEntry } = Astro.props;
+const { Content, headings } = await render(entry);
 ---
 
-<ArticleLayout entry={entry} alternatePaths={alternatePaths}>
+<ArticleLayout
+  entry={entry}
+  alternatePaths={alternatePaths}
+  headings={headings}
+  nextEntry={nextEntry}
+>
   <Content />
 </ArticleLayout>

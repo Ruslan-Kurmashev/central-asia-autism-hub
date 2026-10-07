@@ -3,16 +3,25 @@ import type { CollectionEntry } from 'astro:content';
 import DevelopmentMilestoneAgeSelector from '../components/DevelopmentMilestoneAgeSelector.astro';
 import { CONTENT_UI, DATE_LOCALES } from '../i18n/content';
 import { UI } from '../i18n/ui';
-import { localePath, sectionPath } from '../lib/urls';
+import { articlePath, localePath, sectionPath } from '../lib/urls';
 import { SITE, type Locale } from '../site.config';
+import '../styles/article-v2.css';
 import BaseLayout from './BaseLayout.astro';
+
+interface Heading {
+  depth: number;
+  slug: string;
+  text: string;
+}
 
 interface Props {
   entry: CollectionEntry<'pages'>;
   alternatePaths: Partial<Record<Locale, string>>;
+  headings?: Heading[];
+  nextEntry?: CollectionEntry<'pages'>;
 }
 
-const { entry, alternatePaths } = Astro.props;
+const { entry, alternatePaths, headings = [], nextEntry } = Astro.props;
 const data = entry.data;
 const locale = data.language;
 const copy = CONTENT_UI[locale];
@@ -33,6 +42,10 @@ const boundaryText =
 const isDevelopmentMilestones =
   data.translationKey === 'parents-development-milestones' &&
   data.section === 'parents';
+const useArticleV2 = locale === 'ru';
+const tocHeadings = headings.filter((heading) => heading.depth === 2 || heading.depth === 3);
+const displayDate = data.updatedAt ?? data.publishedAt;
+const displayDateLabel = data.updatedAt ? copy.updatedLabel : copy.publishedLabel;
 ---
 
 <BaseLayout
@@ -42,90 +55,247 @@ const isDevelopmentMilestones =
   currentSection={data.section}
   alternatePath={data.section}
   alternatePaths={alternatePaths}
+  bodyClass={useArticleV2 ? 'article-v2' : undefined}
 >
-  <article class="article-page">
-    <header class="article-header">
-      <div class="container article-shell">
-        <p class="breadcrumb">
-          <a href={localePath(locale)}>{UI[locale].homeLabel}</a>
-          <span aria-hidden="true"> / </span>
-          <a href={sectionPath(locale, data.section)}>{sectionCopy.title}</a>
-          <span aria-hidden="true"> / </span>
-          <span aria-current="page">{data.title}</span>
-        </p>
-        <p class="eyebrow">{copy.articleLabel}</p>
-        <h1>{data.title}</h1>
-        <p class="article-header__summary">{data.summary}</p>
+  {
+    useArticleV2 ? (
+      <article class="article-v2__page">
+        <header class="article-v2__header">
+          <div class="container article-v2__header-inner">
+            <p class="article-v2__breadcrumb">
+              <a href={localePath(locale)}>{UI[locale].homeLabel}</a>
+              <span aria-hidden="true"> / </span>
+              <a href={sectionPath(locale, data.section)}>{sectionCopy.title}</a>
+              <span aria-hidden="true"> / </span>
+              <span aria-current="page">{data.title}</span>
+            </p>
 
-        <dl class="article-meta">
-          {data.publishedAt && (
-            <div>
-              <dt>{copy.publishedLabel}</dt>
-              <dd><time datetime={data.publishedAt.toISOString()}>{dateFormatter.format(data.publishedAt)}</time></dd>
+            <p class="article-v2__eyebrow">{copy.articleLabel}</p>
+            <h1>{data.title}</h1>
+            <p class="article-v2__summary">{data.summary}</p>
+
+            <dl class="article-v2__meta">
+              {displayDate && (
+                <div>
+                  <dt>{displayDateLabel}</dt>
+                  <dd>
+                    <time datetime={displayDate.toISOString()}>
+                      {dateFormatter.format(displayDate)}
+                    </time>
+                  </dd>
+                </div>
+              )}
+              <div>
+                <dt>{copy.authorLabel}</dt>
+                <dd>{data.author}</dd>
+              </div>
+              <div>
+                <dt>{copy.editorLabel}</dt>
+                <dd>{data.editor}</dd>
+              </div>
+            </dl>
+          </div>
+        </header>
+
+        <div class="container article-v2__layout">
+          <aside class="article-v2__sidebar" aria-label="Содержание статьи">
+            <div class="article-v2__toc">
+              <p class="article-v2__toc-title">Содержание</p>
+              {tocHeadings.length > 0 ? (
+                <nav aria-label="Содержание">
+                  <ol>
+                    {tocHeadings.map((heading) => (
+                      <li class:list={[heading.depth === 3 && 'article-v2__toc-subitem']}>
+                        <a href={`#${heading.slug}`}>{heading.text}</a>
+                      </li>
+                    ))}
+                  </ol>
+                </nav>
+              ) : (
+                <p class="article-v2__toc-empty">Разделы статьи появятся здесь автоматически.</p>
+              )}
+
+              <div class="article-v2__toc-boundary">
+                <strong>{boundaryTitle}</strong>
+                <span>{boundaryText}</span>
+              </div>
             </div>
+          </aside>
+
+          <div class="article-v2__main">
+            {isDevelopmentMilestones && (
+              <DevelopmentMilestoneAgeSelector
+                locale={locale}
+                parentSlug={data.slug}
+              />
+            )}
+
+            {data.keyPoints.length > 0 && (
+              <section class="article-v2__key-points" aria-labelledby="key-points-title">
+                <p class="article-v2__block-label">01</p>
+                <div>
+                  <h2 id="key-points-title">{copy.keyPointsTitle}</h2>
+                  <ul>
+                    {data.keyPoints.map((point) => <li>{point}</li>)}
+                  </ul>
+                </div>
+              </section>
+            )}
+
+            <div class="article-v2__body article-body">
+              <slot />
+            </div>
+
+            {data.evidenceLimitations && (
+              <section
+                class="article-v2__limitations"
+                aria-labelledby="limitations-title"
+              >
+                <p class="article-v2__block-label">Важно</p>
+                <div>
+                  <h2 id="limitations-title">{copy.limitationsTitle}</h2>
+                  <p>{data.evidenceLimitations}</p>
+                </div>
+              </section>
+            )}
+
+            <section class="article-v2__sources" aria-labelledby="sources-title">
+              <div class="article-v2__sources-heading">
+                <p class="article-v2__eyebrow">Evidence</p>
+                <h2 id="sources-title">{copy.sourcesTitle}</h2>
+                <p>{copy.sourceResponsibility}</p>
+              </div>
+
+              <ol>
+                {data.sources.map((source, index) => (
+                  <li>
+                    <span class="article-v2__source-number">
+                      {String(index + 1).padStart(2, '0')}
+                    </span>
+                    <div>
+                      <a href={source.url} rel="external">{source.title}</a>
+                      <p>
+                        {source.organisation && <span>{source.organisation}</span>}
+                        {source.publicationYear && <span> · {source.publicationYear}</span>}
+                      </p>
+                    </div>
+                  </li>
+                ))}
+              </ol>
+            </section>
+
+            {data.versionNote && (
+              <aside class="article-v2__version">
+                <h2>{copy.versionLabel}</h2>
+                <p>{data.versionNote}</p>
+              </aside>
+            )}
+
+            <footer class="article-v2__footer">
+              <a class="article-v2__back" href={sectionPath(locale, data.section)}>
+                ← {copy.backToSection}: {sectionCopy.title}
+              </a>
+
+              {nextEntry && (
+                <a
+                  class="article-v2__next"
+                  href={articlePath(locale, nextEntry.data.section, nextEntry.data.slug)}
+                >
+                  <span>Следующий материал по теме</span>
+                  <strong>{nextEntry.data.title}</strong>
+                  <span aria-hidden="true">→</span>
+                </a>
+              )}
+            </footer>
+          </div>
+        </div>
+      </article>
+    ) : (
+      <article class="article-page">
+        <header class="article-header">
+          <div class="container article-shell">
+            <p class="breadcrumb">
+              <a href={localePath(locale)}>{UI[locale].homeLabel}</a>
+              <span aria-hidden="true"> / </span>
+              <a href={sectionPath(locale, data.section)}>{sectionCopy.title}</a>
+              <span aria-hidden="true"> / </span>
+              <span aria-current="page">{data.title}</span>
+            </p>
+            <p class="eyebrow">{copy.articleLabel}</p>
+            <h1>{data.title}</h1>
+            <p class="article-header__summary">{data.summary}</p>
+
+            <dl class="article-meta">
+              {data.publishedAt && (
+                <div>
+                  <dt>{copy.publishedLabel}</dt>
+                  <dd><time datetime={data.publishedAt.toISOString()}>{dateFormatter.format(data.publishedAt)}</time></dd>
+                </div>
+              )}
+            </dl>
+          </div>
+        </header>
+
+        <div class="container article-shell article-content">
+          {isDevelopmentMilestones && (
+            <DevelopmentMilestoneAgeSelector
+              locale={locale}
+              parentSlug={data.slug}
+            />
           )}
-        </dl>
-      </div>
-    </header>
 
-    <div class="container article-shell article-content">
-      {isDevelopmentMilestones && (
-        <DevelopmentMilestoneAgeSelector
-          locale={locale}
-          parentSlug={data.slug}
-        />
-      )}
+          {data.keyPoints.length > 0 && (
+            <section class="article-key-points" aria-labelledby="key-points-title">
+              <h2 id="key-points-title">{copy.keyPointsTitle}</h2>
+              <ul>
+                {data.keyPoints.map((point) => <li>{point}</li>)}
+              </ul>
+            </section>
+          )}
 
-      {data.keyPoints.length > 0 && (
-        <section class="article-key-points" aria-labelledby="key-points-title">
-          <h2 id="key-points-title">{copy.keyPointsTitle}</h2>
-          <ul>
-            {data.keyPoints.map((point) => <li>{point}</li>)}
-          </ul>
-        </section>
-      )}
+          <div class="article-body">
+            <slot />
+          </div>
 
-      <div class="article-body">
-        <slot />
-      </div>
+          {data.evidenceLimitations && (
+            <section class="article-limitations" aria-labelledby="limitations-title">
+              <h2 id="limitations-title">{copy.limitationsTitle}</h2>
+              <p>{data.evidenceLimitations}</p>
+            </section>
+          )}
 
-      {data.evidenceLimitations && (
-        <section class="article-limitations" aria-labelledby="limitations-title">
-          <h2 id="limitations-title">{copy.limitationsTitle}</h2>
-          <p>{data.evidenceLimitations}</p>
-        </section>
-      )}
+          <section class="article-sources" aria-labelledby="sources-title">
+            <h2 id="sources-title">{copy.sourcesTitle}</h2>
+            <ol>
+              {data.sources.map((source) => (
+                <li>
+                  <a href={source.url} rel="external">{source.title}</a>
+                  {source.organisation && <span>. {source.organisation}</span>}
+                  {source.publicationYear && <span> ({source.publicationYear})</span>}
+                </li>
+              ))}
+            </ol>
+          </section>
 
-      <section class="article-sources" aria-labelledby="sources-title">
-        <h2 id="sources-title">{copy.sourcesTitle}</h2>
-        <ol>
-          {data.sources.map((source) => (
-            <li>
-              <a href={source.url} rel="external">{source.title}</a>
-              {source.organisation && <span>. {source.organisation}</span>}
-              {source.publicationYear && <span> ({source.publicationYear})</span>}
-            </li>
-          ))}
-        </ol>
-      </section>
+          <aside class="article-notice article-notice--boundary">
+            <h2>{boundaryTitle}</h2>
+            <p>{boundaryText}</p>
+          </aside>
 
-      <aside class="article-notice article-notice--boundary">
-        <h2>{boundaryTitle}</h2>
-        <p>{boundaryText}</p>
-      </aside>
+          {data.versionNote && (
+            <aside class="article-version-note">
+              <h2>{copy.versionLabel}</h2>
+              <p>{data.versionNote}</p>
+            </aside>
+          )}
 
-      {data.versionNote && (
-        <aside class="article-version-note">
-          <h2>{copy.versionLabel}</h2>
-          <p>{data.versionNote}</p>
-        </aside>
-      )}
-
-      <a class="back-link" href={sectionPath(locale, data.section)}>
-        ← {copy.backToSection}: {sectionCopy.title}
-      </a>
-    </div>
-  </article>
+          <a class="back-link" href={sectionPath(locale, data.section)}>
+            ← {copy.backToSection}: {sectionCopy.title}
+          </a>
+        </div>
+      </article>
+    )
+  }
 </BaseLayout>
 
 <script is:inline>
@@ -151,12 +321,17 @@ const isDevelopmentMilestones =
 <style is:global>
   .article-page,
   .article-content,
-  .article-body {
+  .article-body,
+  .article-v2__page,
+  .article-v2__layout,
+  .article-v2__main,
+  .article-v2__body {
     min-width: 0;
     max-width: 100%;
   }
 
-  .article-page {
+  .article-page,
+  .article-v2__page {
     overflow-x: clip;
   }
 
