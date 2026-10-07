@@ -13,8 +13,8 @@ audience:
   - parents
   - families
   - general
-featuredImage: "/central-asia-autism-hub/images/editorial/family-tablet.jpg"
-featuredImageAlt: "Родители и ребёнок вместе смотрят на экран планшета."
+featuredImage: "/central-asia-autism-hub/images/editorial/article-technology-asian.jpg"
+featuredImageAlt: "Отец и ребёнок вместе используют планшет дома."
 author: Ruslan Kurmashev
 editor: Ruslan Kurmashev
 riskLevel: moderate
