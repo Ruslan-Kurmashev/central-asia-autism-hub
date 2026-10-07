@@ -46,6 +46,9 @@ const useArticleV2 = locale === 'ru';
 const tocHeadings = headings.filter((heading) => heading.depth === 2 || heading.depth === 3);
 const displayDate = data.updatedAt ?? data.publishedAt;
 const displayDateLabel = data.updatedAt ? copy.updatedLabel : copy.publishedLabel;
+const articleHeroStyle = data.featuredImage
+  ? `--article-hero-image: url("${data.featuredImage}")`
+  : undefined;
 ---
 
 <BaseLayout
@@ -60,7 +63,13 @@ const displayDateLabel = data.updatedAt ? copy.updatedLabel : copy.publishedLabe
   {
     useArticleV2 ? (
       <article class="article-v2__page">
-        <header class="article-v2__header">
+        <header
+          class:list={[
+            'article-v2__header',
+            data.featuredImage && 'article-v2__header--image',
+          ]}
+          style={articleHeroStyle}
+        >
           <div class="container article-v2__header-inner">
             <p class="article-v2__breadcrumb">
               <a href={localePath(locale)}>{UI[locale].homeLabel}</a>
