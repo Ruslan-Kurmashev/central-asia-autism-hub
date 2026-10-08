@@ -12,8 +12,8 @@ translationStatus: source
 audience:
   - parents
   - families
-featuredImage: "/central-asia-autism-hub/images/editorial/article-who-cst-asian.jpg"
-featuredImageAlt: "Родитель читает книгу вместе с ребёнком дома."
+featuredImage: "/central-asia-autism-hub/images/editorial/who-cst-cards-books.jpg"
+featuredImageAlt: "Иллюстрированные карточки и открытые книги на столе."
 author: Ruslan Kurmashev
 editor: Ruslan Kurmashev
 riskLevel: lower
