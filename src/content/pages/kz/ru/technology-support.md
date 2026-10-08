@@ -13,8 +13,8 @@ audience:
   - parents
   - families
   - general
-featuredImage: "/central-asia-autism-hub/images/editorial/article-technology-asian.jpg"
-featuredImageAlt: "Отец и ребёнок вместе используют планшет дома."
+featuredImage: "/central-asia-autism-hub/images/editorial/technology-tablet.jpg"
+featuredImageAlt: "Планшет с пустым экраном, блокнот и канцелярские принадлежности на столе."
 author: Ruslan Kurmashev
 editor: Ruslan Kurmashev
 riskLevel: moderate
