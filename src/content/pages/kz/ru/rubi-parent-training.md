@@ -12,8 +12,8 @@ translationStatus: source
 audience:
   - parents
   - families
-featuredImage: "/central-asia-autism-hub/images/editorial/article-rubi-asian.jpg"
-featuredImageAlt: "Родитель играет с ребёнком с развивающими игрушками дома."
+featuredImage: "/central-asia-autism-hub/images/editorial/rubi-wooden-blocks.jpg"
+featuredImageAlt: "Цветные деревянные развивающие блоки на светлой поверхности."
 author: Ruslan Kurmashev
 editor: Ruslan Kurmashev
 riskLevel: moderate

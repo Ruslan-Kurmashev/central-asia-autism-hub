@@ -13,8 +13,8 @@ audience:
   - parents
   - families
   - general
-featuredImage: "/central-asia-autism-hub/images/editorial/article-cbt-asian.jpg"
-featuredImageAlt: "Отец помогает ребёнку с учебным заданием за столом."
+featuredImage: "/central-asia-autism-hub/images/editorial/cbt-notebook-pen.jpg"
+featuredImageAlt: "Открытый блокнот и ручка на рабочей поверхности."
 author: Ruslan Kurmashev
 editor: Ruslan Kurmashev
 riskLevel: moderate

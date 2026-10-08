@@ -12,8 +12,8 @@ translationStatus: source
 audience:
   - parents
   - families
-featuredImage: "/central-asia-autism-hub/images/editorial/article-caregiver-wellbeing-asian.jpg"
-featuredImageAlt: "Родитель отдыхает вместе с детьми дома."
+featuredImage: "/central-asia-autism-hub/images/editorial/caregiver-wellbeing-tea-book.jpg"
+featuredImageAlt: "Чай и книга на столе в спокойной домашней обстановке."
 author: Ruslan Kurmashev
 editor: Ruslan Kurmashev
 riskLevel: moderate

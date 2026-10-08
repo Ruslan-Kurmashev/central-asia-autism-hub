@@ -13,8 +13,8 @@ audience:
   - parents
   - families
   - general
-featuredImage: "/central-asia-autism-hub/images/editorial/article-adapted-cbt-asian.jpg"
-featuredImageAlt: "Родители разговаривают с ребёнком во время спокойной семейной прогулки."
+featuredImage: "/central-asia-autism-hub/images/editorial/adapted-cbt-notebook.jpg"
+featuredImageAlt: "Блокноты и ручка на спокойном нейтральном фоне."
 author: Ruslan Kurmashev
 editor: Ruslan Kurmashev
 riskLevel: moderate

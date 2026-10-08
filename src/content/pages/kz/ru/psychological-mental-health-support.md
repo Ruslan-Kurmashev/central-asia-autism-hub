@@ -13,8 +13,8 @@ audience:
   - parents
   - families
   - general
-featuredImage: "/central-asia-autism-hub/images/editorial/article-psychological-support-asian.jpg"
-featuredImageAlt: "Родитель и ребёнок разговаривают дома в спокойной обстановке."
+featuredImage: "/central-asia-autism-hub/images/editorial/psychological-support-room.jpg"
+featuredImageAlt: "Спокойная комната с креслами для беседы и консультации."
 author: Ruslan Kurmashev
 editor: Ruslan Kurmashev
 riskLevel: moderate
