@@ -36,11 +36,34 @@ Pexels states that its photos can be downloaded and used for free, attribution i
 | `article-rubi-asian.jpg` | Mikhail Nilov | https://www.pexels.com/photo/a-woman-and-boy-playing-toys-together-7780915/ |
 | `article-who-cst-asian.jpg` | Kamaji Ogino | https://www.pexels.com/photo/positive-asian-mother-and-daughter-reading-tale-5094097/ |
 
-## Usage rules
+## Visual selection policy
 
-- Images illustrate a topic or activity; they do not imply that an identifiable person is autistic or has any diagnosis.
-- For people-based imagery, use only sources whose own metadata explicitly describes an Asian family/parent/child context or identifies an Asian location; otherwise use neutral, non-identifiable imagery.
-- Avoid using a person's image to imply endorsement of Autism Hub Kazakhstan.
-- Do not use puzzle-piece imagery or stereotyped distress imagery as a generic symbol for autism.
-- Every article card displayed in the main homepage material grid should have a featured photograph. Non-article editorial blocks may remain text-only.
-- If a future image is replaced, update this file with its source and license check date.
+The primary goal of Autism Hub Kazakhstan imagery is relevance to the Kazakhstan / Central Asian context and clear semantic fit with the article.
+
+Priority order:
+
+1. Kazakhstan-specific visual context where available: local urban or home environments, education settings, healthcare/navigation context, maps, objects, interiors, everyday details and other recognisably relevant local cues.
+2. Central Asian context when a suitable Kazakhstan-specific image is not available.
+3. Topic-specific objects, environments, close-ups, hands, tools, materials or abstract editorial imagery that communicate the article meaning without requiring identifiable people.
+4. People-based photography only when a human scene genuinely adds meaning. For those images, use sources whose own metadata explicitly places the scene in an Asian / Central Asian context or otherwise provides reliable contextual information. Do not infer ethnicity from appearance alone.
+
+Topic examples:
+- AAC / communication: tablet, communication board, symbol cards, device interaction, hands using AAC.
+- Sensory support: textures, light, headphones, tactile materials, sensory objects.
+- Physical activity: balls, mats, movement equipment, activity details.
+- Psychology / CBT: notebook, emotion cards, calm consultation setting, structured materials.
+- Feeding / nutrition: table setting, food selection, utensils, visual meal schedule.
+- Creative approaches: paints, brushes, musical instruments, craft materials.
+- Assessment / diagnosis: forms, checklists, consultation room, assessment materials.
+- Learning: books, visual schedule, educational cards, classroom materials.
+- Research: laboratory tools, laptop, charts, microscopy or data-work environment.
+- Help in Kazakhstan: local institutions, city context, Kazakhstan map or navigation imagery.
+
+Additional rules:
+- People are not required. Prefer object-based or environmental imagery when it communicates the topic more precisely.
+- Avoid generic US-style clinical stock imagery when it does not fit the Kazakhstan context.
+- Avoid stereotypes, puzzle-piece symbolism, staged distress imagery, or imagery that implies a pictured person has autism.
+- One article should have one primary visual identity: the same featured image is reused on the homepage card and in the article hero.
+- Every article card displayed in the main homepage material grid should have a featured image.
+- Image provenance, source URL, photographer and license check date must be retained.
+
