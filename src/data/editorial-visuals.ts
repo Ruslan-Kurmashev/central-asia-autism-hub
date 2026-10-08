@@ -7,12 +7,12 @@ export interface EditorialVisual {
 
 const VISUALS = {
   communication: {
-    src: 'images/editorial/article-technology-asian.jpg',
-    alt: 'Родители и ребёнок вместе смотрят на экран планшета.',
+    src: 'images/editorial/technology-tablet.jpg',
+    alt: 'Планшет с пустым экраном, блокнот и канцелярские принадлежности на столе.',
   },
   learning: {
-    src: 'images/editorial/article-creative-asian.jpg',
-    alt: 'Взрослый помогает ребёнку рисовать за столом.',
+    src: 'images/editorial/who-cst-cards-books.jpg',
+    alt: 'Иллюстрированные карточки и открытые книги на столе.',
   },
   sensory: {
     src: 'images/editorial/sensory-hands.jpg',
@@ -23,12 +23,12 @@ const VISUALS = {
     alt: 'Дети выполняют упражнения на растяжку в помещении.',
   },
   conversation: {
-    src: 'images/editorial/article-adapted-cbt-asian.jpg',
-    alt: 'Родитель и ребёнок разговаривают на скамейке в парке.',
+    src: 'images/editorial/psychological-support-room.jpg',
+    alt: 'Спокойная комната с креслами для беседы и консультации.',
   },
   reading: {
-    src: 'images/editorial/article-who-cst-asian.jpg',
-    alt: 'Родители читают книгу вместе с ребёнком.',
+    src: 'images/editorial/who-cst-cards-books.jpg',
+    alt: 'Иллюстрированные карточки и открытые книги на столе.',
   },
   feeding: {
     src: 'images/editorial/family-meal.jpg',
