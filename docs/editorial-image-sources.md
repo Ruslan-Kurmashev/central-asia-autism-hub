@@ -36,6 +36,16 @@ Pexels states that its photos can be downloaded and used for free, attribution i
 | `article-rubi-asian.jpg` | Mikhail Nilov | https://www.pexels.com/photo/a-woman-and-boy-playing-toys-together-7780915/ |
 | `article-who-cst-asian.jpg` | Kamaji Ogino | https://www.pexels.com/photo/positive-asian-mother-and-daughter-reading-tale-5094097/ |
 
+| `kz-creative-dombyra.jpg` | Aibek Skakov | https://www.pexels.com/photo/traditional-dombyra-instrument-from-kazakhstan-29446275/ |
+| `adapted-cbt-notebook.jpg` | Arina Krasnikova | https://www.pexels.com/photo/a-notebooks-and-pen-5712455/ |
+| `psychological-support-room.jpg` | Monstera Production | https://www.pexels.com/photo/interior-of-room-with-armchairs-and-empty-black-poster-6373808/ |
+| `technology-tablet.jpg` | Cup of Couple | https://www.pexels.com/photo/light-workplace-with-tablet-with-blank-screen-6177679/ |
+| `caregiver-wellbeing-tea-book.jpg` | Zeynep Sena Açar | https://www.pexels.com/photo/tea-in-a-glass-and-a-book-on-a-table-20205808/ |
+| `cbt-notebook-pen.jpg` | AlphaTradeZone | https://www.pexels.com/photo/a-pen-on-an-open-notebook-5831667/ |
+| `kz-respite-alma-arasan.jpg` | Aibek Skakov | https://www.pexels.com/photo/scenic-view-of-alma-arasan-hills-in-almaty-kazakhstan-33851736/ |
+| `rubi-wooden-blocks.jpg` | tiago alves | https://www.pexels.com/photo/wooden-toys-blocks-19693883/ |
+| `who-cst-cards-books.jpg` | Alina Matveycheva | https://www.pexels.com/photo/flat-lay-of-illustrated-cards-and-books-on-table-29857262/ |
+
 ## Visual selection policy
 
 The primary goal of Autism Hub Kazakhstan imagery is relevance to the Kazakhstan / Central Asian context and clear semantic fit with the article.
