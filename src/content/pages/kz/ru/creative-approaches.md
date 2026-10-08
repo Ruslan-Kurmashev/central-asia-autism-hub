@@ -13,8 +13,8 @@ audience:
   - parents
   - families
   - general
-featuredImage: "/central-asia-autism-hub/images/editorial/article-creative-asian.jpg"
-featuredImageAlt: "Ребёнок рисует красками во время творческого занятия."
+featuredImage: "/central-asia-autism-hub/images/editorial/kz-creative-dombyra.jpg"
+featuredImageAlt: "Казахская домбра крупным планом, Алматинская область, Казахстан."
 author: Ruslan Kurmashev
 editor: Ruslan Kurmashev
 riskLevel: moderate
