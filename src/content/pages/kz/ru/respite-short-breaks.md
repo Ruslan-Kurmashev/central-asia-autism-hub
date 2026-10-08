@@ -12,8 +12,8 @@ translationStatus: source
 audience:
   - parents
   - families
-featuredImage: "/central-asia-autism-hub/images/editorial/article-respite-asian.jpg"
-featuredImageAlt: "Семья идёт вместе на прогулке по городской улице."
+featuredImage: "/central-asia-autism-hub/images/editorial/kz-respite-alma-arasan.jpg"
+featuredImageAlt: "Зелёные холмы Алма-Арасан в Алматы, Казахстан."
 author: Ruslan Kurmashev
 editor: Ruslan Kurmashev
 riskLevel: moderate
