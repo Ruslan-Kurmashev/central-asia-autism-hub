@@ -161,17 +161,10 @@ p {
 }
 
 .brand__symbol {
-  display: grid;
-  width: 2.5rem;
-  height: 2.5rem;
-  place-items: center;
-  border-radius: 0.7rem;
-  background: linear-gradient(145deg, var(--color-primary) 0%, #16488f 100%);
-  box-shadow: 0 0.45rem 1.2rem rgb(34 102 221 / 22%);
-  color: white;
-  font-size: 0.82rem;
-  font-weight: 800;
-  letter-spacing: 0.08em;
+  width: 3rem;
+  height: 3rem;
+  flex: none;
+  object-fit: contain;
 }
 
 .brand__text {
