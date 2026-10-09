@@ -43,7 +43,7 @@ const boundaryText =
 const isDevelopmentMilestones =
   data.translationKey === 'parents-development-milestones' &&
   data.section === 'parents';
-const useArticleV2 = locale === 'ru' || locale === 'en' || locale === 'kk';
+const useArticleV2 = ['ru', 'en', 'kk'].includes(locale);
 const articleV2Text = locale === 'en'
   ? {
       toc: 'On this page',
