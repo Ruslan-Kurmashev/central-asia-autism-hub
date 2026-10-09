@@ -324,6 +324,9 @@ collections:
       - { label: "Description", name: "description", widget: "text" }
       - { label: "Card image", name: "featuredImage", widget: "image", required: false }
       - { label: "Image alt text", name: "featuredImageAlt", widget: "string", required: false }
+      - { label: "Image attribution", name: "featuredImageCredit", widget: "string", required: false }
+      - { label: "Image source URL", name: "featuredImageSourceUrl", widget: "string", required: false }
+      - { label: "Image license URL", name: "featuredImageLicenseUrl", widget: "string", required: false }
       - { label: "Key points", name: "keyPoints", widget: "list", required: false, field: { label: "Point", name: "point", widget: "string" } }
       - { label: "Evidence limitations", name: "evidenceLimitations", widget: "text", required: false }
       - { label: "Country", name: "country", widget: "hidden", default: "kz" }

@@ -2,8 +2,11 @@
 title: "Почему аутизм у всех проявляется по-разному: учёные обнаружили четыре группы особенностей"
 summary: "Учёные проанализировали 239 характеристик у 5 392 аутичных детей и подростков, выделили четыре статистические группы и затем сравнили их генетические особенности."
 description: "Простым языком об исследовании Nature Genetics 2025 года: почему аутизм проявляется по-разному, как выделили четыре группы и чего результаты пока не доказывают."
-featuredImage: "/central-asia-autism-hub/images/editorial/autism-phenotypic-diversity.svg"
-featuredImageAlt: "Абстрактная иллюстрация четырёх разных сочетаний особенностей развития, связанных сетью линий. Это исследовательские группы, а не медицинские диагнозы."
+featuredImage: "https://media.springernature.com/full/springer-static/image/art%3A10.1038%2Fs41588-025-02224-z/MediaObjects/41588_2025_2224_Fig1_HTML.png"
+featuredImageAlt: "Рисунок 1 оригинального исследования: схема анализа 5 392 участников и сравнение четырёх статистических групп по особенностям развития и поведения."
+featuredImageCredit: "Рисунок 1, Litman и соавт. (2025), Nature Genetics. Часть a создана с помощью BioRender. Изображение не изменено."
+featuredImageSourceUrl: "https://www.nature.com/articles/s41588-025-02224-z/figures/1"
+featuredImageLicenseUrl: "https://creativecommons.org/licenses/by/4.0/"
 country: kz
 language: ru
 section: research
