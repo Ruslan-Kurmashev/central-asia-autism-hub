@@ -159,14 +159,23 @@ const researchCopy = {
                     </dd>
                   </div>
                 )}
-                <div>
-                  <dt>{copy.authorLabel}</dt>
-                  <dd>{data.author}</dd>
-                </div>
-                <div>
-                  <dt>{copy.editorLabel}</dt>
-                  <dd>{data.editor}</dd>
-                </div>
+                {data.author === data.editor ? (
+                  <div>
+                    <dt>{copy.authorAndEditorLabel}</dt>
+                    <dd>{data.author}</dd>
+                  </div>
+                ) : (
+                  <>
+                    <div>
+                      <dt>{copy.authorLabel}</dt>
+                      <dd>{data.author}</dd>
+                    </div>
+                    <div>
+                      <dt>{copy.editorLabel}</dt>
+                      <dd>{data.editor}</dd>
+                    </div>
+                  </>
+                )}
               </dl>
 
               {researchDetails && (
