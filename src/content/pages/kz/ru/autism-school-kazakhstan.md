@@ -13,6 +13,8 @@ audience:
   - parents
   - families
 versionNote: "9 октября 2026: обновлены правила сопровождения, требования к школьному зачислению в 2026-2027 году и медицинская роль ВКК при обучении на дому."
+featuredImage: "/central-asia-autism-hub/images/editorial/kz-school-schedule-books.svg"
+featuredImageAlt: "Тетрадь, книги и карточки школьного расписания."
 author: Ruslan Kurmashev
 editor: Ruslan Kurmashev
 riskLevel: moderate
