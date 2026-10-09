@@ -61,6 +61,10 @@ try {
         hasMain: Boolean(q('main')),
         hasPaper: Boolean(q('.article-v2__research-facts')),
         hasArticle: Boolean(q('.article-v2__body')),
+        researchExpanded: Boolean(q('.article-v2__research-facts')?.open),
+        tocExpanded: Boolean(q('.article-v2__toc')?.open),
+        keyPointsTop: r('.article-v2__key-points')?.top,
+        firstParagraphTop: r('.article-v2__body p')?.top,
         sourceLink: q('.article-v2__research-facts a[href*="pmc.ncbi.nlm.nih.gov"]')?.getAttribute('href'),
         doiLink: q('.article-v2__research-facts a[href*="doi.org"]')?.getAttribute('href'),
         heading: style('h1'),
@@ -88,6 +92,12 @@ try {
     if ((metrics.text?.fontSize ?? 0) < 16 || (metrics.text?.lineHeight ?? 0) < 23) issues.push('Uncomfortable article typography');
     if ((metrics.heading?.fontSize ?? 0) < 28) issues.push('Title too small');
     if (metrics.tocCount < 7 || metrics.brokenToc.length) issues.push('Broken table of contents');
+    if (viewport.width <= 768) {
+      if (metrics.researchExpanded || metrics.tocExpanded) issues.push('Mobile disclosure should default to collapsed');
+      if ((metrics.keyPointsTop ?? Infinity) > 1400) issues.push('Article key points begin too far below the fold');
+    } else {
+      if (!metrics.researchExpanded || !metrics.tocExpanded) issues.push('Desktop reference information should remain visible');
+    }
     if (metrics.sourceLinksCount < 1) issues.push('Missing source links');
     if (errors.length) issues.push('Browser or network errors');
     const result = { viewport: viewport.label, width: viewport.width, metrics, errors, issues };
