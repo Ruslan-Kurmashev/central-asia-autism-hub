@@ -130,6 +130,11 @@ const research = defineCollection({
   schema: z
     .object({
       ...commonFields,
+      topic: z.string().min(1).default('research-reviews'),
+      featuredImage: z.string().min(1).optional(),
+      featuredImageAlt: z.string().min(1).optional(),
+      keyPoints: z.array(z.string().min(1)).default([]),
+      evidenceLimitations: z.string().min(1).optional(),
       originalTitle: z.string().min(1),
       originalAuthors: z.array(z.string().min(1)).min(1),
       journalOrOrganisation: z.string().min(1),
@@ -141,7 +146,17 @@ const research = defineCollection({
       population: z.string().min(1).optional(),
       sourceStatusCheckedAt: z.coerce.date(),
     })
-    .superRefine(validatePublication),
+    .superRefine((data, context) => {
+      validatePagePublication(data, context);
+
+      if (data.featuredImage && !data.featuredImageAlt) {
+        context.addIssue({
+          code: 'custom',
+          path: ['featuredImageAlt'],
+          message: 'A featured image requires alternative text.',
+        });
+      }
+    }),
 });
 
 const learning = defineCollection({
