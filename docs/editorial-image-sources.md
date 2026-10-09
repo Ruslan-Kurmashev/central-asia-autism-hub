@@ -91,3 +91,5 @@ The previously considered Pexels photo by Tara Winstead (https://www.pexels.com/
 | `kz-specialist-verification.svg` | AutismHub editorial, created 2026-10-09 | Original SVG vector | Folder, documents and magnifier, without people, for KZ-HLP-003. |
 
 | `kz-medical-license-check.svg` | AutismHub editorial, created 2026-10-09 | Original SVG vector | Screen showing permit document search; no people or external images, for KZ-HLP-004. |
+
+| `kz-kindergarten-visual-schedule.svg` | AutismHub editorial, created 2026-10-09 | Original SVG vector | Preschool objects, colored pencils and visual schedule, no identifiable people, KZ-HLP-005. |
