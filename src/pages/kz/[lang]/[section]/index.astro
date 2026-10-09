@@ -407,6 +407,17 @@ function russianMaterialWord(count: number) {
                           >
                             {String(materialIndex + 1).padStart(2, '0')}
                           </span>
+                          {material.data.featuredImage && (
+                            <img
+                              class="section-v2__article-thumb"
+                              src={material.data.featuredImage}
+                              alt=""
+                              loading="lazy"
+                              decoding="async"
+                              width="96"
+                              height="72"
+                            />
+                          )}
                           <span class="section-v2__article-copy">
                             <strong>{material.data.title}</strong>
                             <span>{material.data.summary}</span>
