@@ -46,6 +46,8 @@ Pexels states that its photos can be downloaded and used for free, attribution i
 | `rubi-wooden-blocks.jpg` | tiago alves | https://www.pexels.com/photo/wooden-toys-blocks-19693883/ |
 | `who-cst-cards-books.jpg` | Alina Matveycheva | https://www.pexels.com/photo/flat-lay-of-illustrated-cards-and-books-on-table-29857262/ |
 
+| `kz-help-start-astana-arrow.jpg` | Natalie Dmay | https://www.pexels.com/photo/top-view-of-legs-in-white-shoes-and-an-arrow-sign-on-the-asphalt-18168574/ |
+
 ## Visual selection policy
 
 The primary goal of Autism Hub Kazakhstan imagery is relevance to the Kazakhstan / Central Asian context and clear semantic fit with the article.
