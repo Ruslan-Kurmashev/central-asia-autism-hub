@@ -139,7 +139,7 @@ sources:
 
 А если вы хотите понять, какие обследования действительно нужны и какие обычно **не являются обязательной частью** диагностики РАС:
 
-[«Какие обследования нужны при подозрении на аутизм в Казахстане»](/central-asia-autism-hub/kz/ru/parents/autism-assessments-kazakhstan/).
+[«Какие обследования нужны при подозрении на аутизм в Казахстане»](/central-asia-autism-hub/kz/ru/parents/obsledovaniya-pri-podozrenii-na-autizm/).
 
 ## 3. Если вопрос касается детского сада, школы или образовательной поддержки
 
@@ -169,7 +169,7 @@ sources:
 
 Подробнее о различиях между ПМПК, врачом-психиатром, ВКК и МСЭ:
 
-[«Психиатр, ПМПК, ВКК и МСЭ: кто за что отвечает в Казахстане»](/central-asia-autism-hub/kz/ru/parents/autism-pmpk-vkk-mse-kazakhstan/).
+[«Психиатр, ПМПК, ВКК и МСЭ: кто за что отвечает в Казахстане»](/central-asia-autism-hub/kz/ru/parents/psihiatr-pmpk-vkk-mse-kazakhstan/).
 
 ## 4. Что может происходить после ПМПК
 
@@ -263,7 +263,7 @@ sources:
 
 Подробнее:
 
-[«Как выбрать специалиста и помощь для ребёнка с аутизмом»](/central-asia-autism-hub/kz/ru/parents/how-to-choose-autism-specialist-support/).
+[«Как выбрать специалиста и помощь для ребёнка с аутизмом»](/central-asia-autism-hub/kz/ru/parents/kak-vybrat-spetsialista-i-pomoshch-pri-autizme/).
 
 ## Если диагноз уже установлен
 
@@ -281,7 +281,7 @@ sources:
 
 Для первых шагов после диагноза уже есть отдельный материал:
 
-[«Первые 30 дней после диагноза аутизма в Казахстане»](/central-asia-autism-hub/kz/ru/parents/first-30-days-after-autism-diagnosis-kazakhstan/).
+[«Первые 30 дней после диагноза аутизма в Казахстане»](/central-asia-autism-hub/kz/ru/parents/pervye-30-dney-posle-diagnoza-autizma-v-kazakhstane/).
 
 ## Что взять с собой и что сохранить
 
