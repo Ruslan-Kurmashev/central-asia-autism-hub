@@ -13,6 +13,8 @@ audience:
   - parents
   - families
   - general
+featuredImage: "/central-asia-autism-hub/images/editorial/kz-specialist-verification.svg"
+featuredImageAlt: "Папка с документами, контрольные отметки и увеличительное стекло."
 author: Ruslan Kurmashev
 editor: Ruslan Kurmashev
 riskLevel: moderate
