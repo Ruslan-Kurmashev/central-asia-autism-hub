@@ -20,7 +20,9 @@ editor: Ruslan Kurmashev
 riskLevel: moderate
 disclaimerType: informational
 conflictOfInterest: "Конфликт интересов не заявлен."
-draft: true
+publishedAt: 2026-10-09
+updatedAt: 2026-10-09
+draft: false
 keyPoints:
   - "Сначала нужно определить тип услуги: медицинская, психологическая, педагогическая, социальная или иная. Для разных видов деятельности действуют разные требования."
   - "Медицинскую лицензию и её статус можно проверять через государственный сервис eGov/eLicense."
