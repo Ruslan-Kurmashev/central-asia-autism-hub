@@ -206,6 +206,10 @@ const visibleGroups =
     ? sectionGroups
     : sectionGroups.filter((group) => group.materials.length > 0);
 
+const initiallyOpenGroupId =
+  visibleGroups.find((group) => group.materials.length > 0)?.id ??
+  visibleGroups[0]?.id;
+
 const groupedSlugs = new Set(
   visibleGroups.flatMap((group) =>
     group.materials.map((material) => material.data.slug),
@@ -285,7 +289,7 @@ function russianMaterialWord(count: number) {
                   <details
                     class="section-v2__group"
                     id={group.id}
-                    open={index === 0}
+                    open={group.id === initiallyOpenGroupId}
                   >
                     <summary>
                       <span class="section-v2__number" aria-hidden="true">
