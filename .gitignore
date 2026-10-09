@@ -7,3 +7,6 @@ dist/
 .DS_Store
 Thumbs.db
 *.log
+
+# Downloaded licensed editorial photographs, reproduced during prebuild.
+/public/images/editorial/photos/
