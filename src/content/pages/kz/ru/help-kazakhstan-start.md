@@ -13,8 +13,8 @@ audience:
   - parents
   - families
   - general
-featuredImage: "/central-asia-autism-hub/images/editorial/kz-help-start-astana-arrow.jpg"
-featuredImageAlt: "Белая стрелка направления на асфальте в Астане, Казахстан."
+featuredImage: "/central-asia-autism-hub/images/editorial/photos/kz-help-001.jpg"
+featuredImageAlt: "Планировщик, документы и заметки на рабочем столе: подготовка первых шагов обращения за помощью."
 author: Ruslan Kurmashev
 editor: Ruslan Kurmashev
 riskLevel: moderate

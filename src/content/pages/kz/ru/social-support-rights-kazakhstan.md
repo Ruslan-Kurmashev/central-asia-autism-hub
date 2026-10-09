@@ -13,8 +13,8 @@ audience:
   - parents
   - families
 versionNote: "9 октября 2026: учтены изменения Социального кодекса до 6 сентября 2026 года и Правил МСЭ от 11 августа 2026 года (действуют с 25 августа)."
-featuredImage: "/central-asia-autism-hub/images/editorial/kz-social-support-documents.svg"
-featuredImageAlt: "Официальные документы, контрольные отметки и карточка социальной поддержки."
+featuredImage: "/central-asia-autism-hub/images/editorial/photos/kz-help-007.jpg"
+featuredImageAlt: "Папки, бумаги и блокнот на рабочем столе: подготовка документов для социальной поддержки."
 author: Ruslan Kurmashev
 editor: Ruslan Kurmashev
 riskLevel: moderate

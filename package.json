@@ -8,6 +8,7 @@
     "start": "astro dev",
     "check:typography": "node scripts/check-typography.mjs",
     "check": "astro check",
+    "prebuild": "node scripts/sync-editorial-photos.mjs",
     "build": "astro build",
     "preview": "astro preview",
     "validate": "npm run check:typography && npm run check && npm run build && npm run check:internal-links",

@@ -99,3 +99,24 @@ The previously considered Pexels photo by Tara Winstead (https://www.pexels.com/
 | `kz-social-support-documents.svg` | AutismHub editorial, created 2026-10-09 | Original SVG vector | Official documents, checklist and social support card; no people; KZ-HLP-007. |
 
 | `kz-service-payment-check.svg` | AutismHub editorial, created 2026-10-09 | Original SVG vector | Contract, receipt and checklist; no people, KZ-HLP-008. |
+
+## Kazakhstan help wave 1: real photographs (2026-10-09)
+
+The following eight article visuals are **actual photographs**, not AI-generated art, mockups, icons or illustrations. They replace the earlier SVG artwork and the unrelated road-arrow photograph. Subjects were selected to correspond to each specific article and to avoid identifiable families and misleading foreign-institution depictions.
+
+Each original photo is offered under the [Pexels License](https://www.pexels.com/license/): free website use and modification is permitted. Each Pexels page and named photographer were inspected on 2026-10-09. All eight source IDs are fixed in `scripts/sync-editorial-photos.mjs`.
+
+| Article | Built site photo | Photographer | Original and license source | Depicted subject |
+| --- | --- | --- | --- | --- |
+| KZ-HLP-001 | `photos/kz-help-001.jpg` | Ron Lach | https://www.pexels.com/photo/close-up-view-of-planner-on-desk-10341112/ | Planner and paperwork for initial navigation |
+| KZ-HLP-002 | `photos/kz-help-002.jpg` | Tara Winstead | https://www.pexels.com/photo/wooden-toys-on-the-corner-of-the-bedroom-6692939/ | Real early childhood playroom with developmental toys |
+| KZ-HLP-003 | `photos/kz-help-003.jpg` | Markus Winkler | https://www.pexels.com/photo/an-application-paper-on-a-clipboard-beside-pen-and-laptop-4101416/ | Document review, application form and laptop |
+| KZ-HLP-004 | `photos/kz-help-004.jpg` | Leeloo The First | https://www.pexels.com/photo/documents-on-desk-by-laptop-8970647/ | Laptop and documents for licensing lookup |
+| KZ-HLP-005 | `photos/kz-help-005.jpg` | Mikhail Nilov | https://www.pexels.com/photo/educational-toys-on-shelves-8923952/ | Preschool learning environment and educational materials |
+| KZ-HLP-006 | `photos/kz-help-006.jpg` | Katerina Holmes | https://www.pexels.com/photo/school-bench-with-stationery-in-classroom-5905445/ | Classroom desks and learning materials |
+| KZ-HLP-007 | `photos/kz-help-007.jpg` | Sora Shimazaki | https://www.pexels.com/photo/notebook-and-clipboard-with-papers-placed-on-desk-with-folders-and-pens-5668469/ | Organized folders and paperwork for social support |
+| KZ-HLP-008 | `photos/kz-help-008.jpg` | Kampus Production | https://www.pexels.com/photo/a-person-signing-a-contract-8815849/ | Contract signing and written service terms |
+
+These images are illustrative stock photography, **not photographs of Kazakhstan government offices, licensed services, actual beneficiaries or particular autism interventions**. Do not imply that photographed objects establish legal validity or clinical effectiveness.
+
+**Local static asset process:** During `npm run build`, `prebuild` downloads medium-sized JPEG versions from Pexels CDN into `public/images/editorial/photos/`. The built/deployed site then uses only its own `/central-asia-autism-hub/images/editorial/photos/` URLs, not browser hotlinks to Pexels. Downloads are verified for JPEG format and non-trivial size, and the build fails if any photo is unavailable. These generated binary artifacts are intentionally excluded from Git. If upstream photos become unavailable, the build blocks deployment and requires selecting a newly licensed replacement.
