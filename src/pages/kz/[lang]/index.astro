@@ -28,7 +28,7 @@ interface Props {
 const { locale } = Astro.props;
 const copy = UI[locale];
 const contentCopy = CONTENT_UI[locale];
-const useHomeV2 = locale === 'ru' || locale === 'en';
+const useHomeV2 = locale === 'ru' || locale === 'en' || locale === 'kk';
 
 const legacyHomeSections: Array<{
   section: Section;
@@ -83,7 +83,26 @@ const homeV2Labels = locale === 'en'
         'Resources for families',
       ],
     }
-  : {
+  : locale === 'kk'
+    ? {
+        sectionNavigation: 'Сайт бөлімдері',
+        allMaterials: 'Барлық материалдар',
+        featuredAction: homeMaterials[0]
+          ? copy.sections[homeMaterials[0].data.section].title
+          : copy.sections.parents.title,
+        statement: 'Қазақстандағы отбасыларға арналған түсінікті ақпарат, тексерілетін дереккөздер және пайдалы бағыт-бағдар.',
+        about: 'Жоба туралы',
+        more: 'Толығырақ',
+        approach: 'Біздің ұстанымымыз',
+        sourcesHeading: 'Біз сүйенетін дереккөздер',
+        sourceTypes: [
+          'Ғылыми жарияланымдар',
+          'Клиникалық ұсынымдар',
+          'Ресми дереккөздер',
+          'Отбасыларға арналған материалдар',
+        ],
+      }
+    : {
       sectionNavigation: 'Основные разделы',
       allMaterials: 'Все материалы',
       featuredAction: homeMaterials[0]
@@ -124,7 +143,9 @@ const homeCards = homeMaterials.map((material, index) => {
       cardImage: `${import.meta.env.BASE_URL}${curated.src}`,
       cardImageAlt: locale === 'en'
         ? 'Learning and information materials on a table.'
-        : curated.alt,
+        : locale === 'kk'
+          ? 'Үстелдегі оқу және ақпараттық материалдар.'
+          : curated.alt,
     };
   }
 
