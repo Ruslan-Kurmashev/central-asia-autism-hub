@@ -43,7 +43,7 @@ const boundaryText =
 const isDevelopmentMilestones =
   data.translationKey === 'parents-development-milestones' &&
   data.section === 'parents';
-const useArticleV2 = locale === 'ru' || locale === 'en';
+const useArticleV2 = locale === 'ru' || locale === 'en' || locale === 'kk';
 const articleV2Text = locale === 'en'
   ? {
       toc: 'On this page',
@@ -51,7 +51,14 @@ const articleV2Text = locale === 'en'
       important: 'Important',
       next: 'Next resource in this topic',
     }
-  : {
+  : locale === 'kk'
+    ? {
+        toc: 'Мақала мазмұны',
+        tocEmpty: 'Мақаланың бөлімдері осында автоматты түрде көрсетіледі.',
+        important: 'Маңызды',
+        next: 'Тақырып бойынша келесі материал',
+      }
+    : {
       toc: 'Содержание',
       tocEmpty: 'Разделы статьи появятся здесь автоматически.',
       important: 'Важно',
