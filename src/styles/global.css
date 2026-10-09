@@ -1561,8 +1561,23 @@ details.nav-disclosure:not([open]) > .primary-nav {
     width: min(calc(100% - 1.25rem), var(--content-width));
   }
 
+  .brand {
+    max-width: 100%;
+    gap: var(--space-2);
+  }
+
+  .brand__symbol {
+    width: 2.5rem;
+    height: 2.5rem;
+  }
+
+  .brand__text {
+    min-width: 0;
+  }
+
   .brand__parent {
-    display: none;
+    font-size: 0.68rem;
+    overflow-wrap: anywhere;
   }
 
   .hero__actions {
