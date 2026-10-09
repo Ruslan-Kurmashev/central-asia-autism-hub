@@ -89,3 +89,5 @@ Additional rules:
 The previously considered Pexels photo by Tara Winstead (https://www.pexels.com/photo/wooden-toys-on-the-corner-of-the-bedroom-6692939/) was not downloaded or embedded. The final illustration is an original editable vector, not a photo.
 
 | `kz-specialist-verification.svg` | AutismHub editorial, created 2026-10-09 | Original SVG vector | Folder, documents and magnifier, without people, for KZ-HLP-003. |
+
+| `kz-kindergarten-visual-schedule.svg` | AutismHub editorial, created 2026-10-09 | Original SVG vector | Preschool objects, colored pencils and visual schedule, no identifiable people, KZ-HLP-005. |
