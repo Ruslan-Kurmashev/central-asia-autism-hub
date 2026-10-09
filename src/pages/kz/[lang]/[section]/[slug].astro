@@ -4,7 +4,7 @@ import ArticleLayout from '../../../../layouts/ArticleLayout.astro';
 import type { Locale } from '../../../../site.config';
 
 export async function getStaticPaths() {
-  const entries = await getCollection(
+  const pages = await getCollection(
     'pages',
     ({ data }) =>
       !data.draft &&
@@ -12,6 +12,26 @@ export async function getStaticPaths() {
       Boolean(data.publishedAt) &&
       Boolean(data.updatedAt),
   );
+
+  const research = await getCollection(
+    'research',
+    ({ data }) =>
+      !data.draft &&
+      data.translationStatus !== 'pending' &&
+      Boolean(data.publishedAt) &&
+      Boolean(data.updatedAt),
+  );
+
+  const entries = [...pages, ...research];
+  const routeIds = new Set<string>();
+
+  for (const entry of entries) {
+    const routeId = `${entry.data.language}/${entry.data.section}/${entry.data.slug}`;
+    if (routeIds.has(routeId)) {
+      throw new Error(`Duplicate published material route: ${routeId}`);
+    }
+    routeIds.add(routeId);
+  }
 
   return Promise.all(
     entries.map(async (entry) => {
@@ -58,9 +78,9 @@ export async function getStaticPaths() {
 }
 
 interface Props {
-  entry: CollectionEntry<'pages'>;
+  entry: CollectionEntry<'pages'> | CollectionEntry<'research'>;
   alternatePaths: Partial<Record<Locale, string>>;
-  nextEntry?: CollectionEntry<'pages'>;
+  nextEntry?: CollectionEntry<'pages'> | CollectionEntry<'research'>;
 }
 
 const { entry, alternatePaths, nextEntry } = Astro.props;
