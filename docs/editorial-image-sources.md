@@ -79,3 +79,11 @@ Additional rules:
 - Every article card displayed in the main homepage material grid should have a featured image.
 - Image provenance, source URL, photographer and license check date must be retained.
 
+
+## Original project illustrations
+
+| Local file | Author/source | Type | Note |
+| --- | --- | --- | --- |
+| `kz-development-path-shapes.svg` | AutismHub editorial, created 2026-10-09 | Original SVG vector | Abstract path with geometric shapes, no people or third-party photographic rights. Used for KZ-HLP-002. |
+
+The previously considered Pexels photo by Tara Winstead (https://www.pexels.com/photo/wooden-toys-on-the-corner-of-the-bedroom-6692939/) was not downloaded or embedded. The final illustration is an original editable vector, not a photo.
