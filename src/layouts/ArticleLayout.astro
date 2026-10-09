@@ -42,7 +42,20 @@ const boundaryText =
 const isDevelopmentMilestones =
   data.translationKey === 'parents-development-milestones' &&
   data.section === 'parents';
-const useArticleV2 = locale === 'ru';
+const useArticleV2 = locale === 'ru' || locale === 'en';
+const articleV2Text = locale === 'en'
+  ? {
+      toc: 'On this page',
+      tocEmpty: 'Article sections will appear here automatically.',
+      important: 'Important',
+      next: 'Next resource in this topic',
+    }
+  : {
+      toc: 'Содержание',
+      tocEmpty: 'Разделы статьи появятся здесь автоматически.',
+      important: 'Важно',
+      next: 'Следующий материал по теме',
+    };
 const tocHeadings = headings.filter((heading) => heading.depth === 2 || heading.depth === 3);
 const displayDate = data.updatedAt ?? data.publishedAt;
 const displayDateLabel = data.updatedAt ? copy.updatedLabel : copy.publishedLabel;
@@ -122,11 +135,11 @@ const displayDateLabel = data.updatedAt ? copy.updatedLabel : copy.publishedLabe
         </header>
 
         <div class="container article-v2__layout">
-          <aside class="article-v2__sidebar" aria-label="Содержание статьи">
+          <aside class="article-v2__sidebar" aria-label={articleV2Text.toc}>
             <div class="article-v2__toc">
-              <p class="article-v2__toc-title">Содержание</p>
+              <p class="article-v2__toc-title">{articleV2Text.toc}</p>
               {tocHeadings.length > 0 ? (
-                <nav aria-label="Содержание">
+                <nav aria-label={articleV2Text.toc}>
                   <ol>
                     {tocHeadings.map((heading) => (
                       <li class:list={[heading.depth === 3 && 'article-v2__toc-subitem']}>
@@ -136,7 +149,7 @@ const displayDateLabel = data.updatedAt ? copy.updatedLabel : copy.publishedLabe
                   </ol>
                 </nav>
               ) : (
-                <p class="article-v2__toc-empty">Разделы статьи появятся здесь автоматически.</p>
+                <p class="article-v2__toc-empty">{articleV2Text.tocEmpty}</p>
               )}
 
               <div class="article-v2__toc-boundary">
@@ -175,7 +188,7 @@ const displayDateLabel = data.updatedAt ? copy.updatedLabel : copy.publishedLabe
                 class="article-v2__limitations"
                 aria-labelledby="limitations-title"
               >
-                <p class="article-v2__block-label">Важно</p>
+                <p class="article-v2__block-label">{articleV2Text.important}</p>
                 <div>
                   <h2 id="limitations-title">{copy.limitationsTitle}</h2>
                   <p>{data.evidenceLimitations}</p>
@@ -225,7 +238,7 @@ const displayDateLabel = data.updatedAt ? copy.updatedLabel : copy.publishedLabe
                   class="article-v2__next"
                   href={articlePath(locale, nextEntry.data.section, nextEntry.data.slug)}
                 >
-                  <span>Следующий материал по теме</span>
+                  <span>{articleV2Text.next}</span>
                   <strong>{nextEntry.data.title}</strong>
                   <span aria-hidden="true">→</span>
                 </a>
