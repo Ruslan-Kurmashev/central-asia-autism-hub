@@ -31,7 +31,7 @@ const ruHome = await inspectPage('kz/ru', 'home-v2', [
 const enParents = await inspectPage('kz/en/parents', 'section-v2', [
   'Child development',
   'section-v2__accordion',
-  'Section topics',
+  'Resources and topics',
 ]);
 const enArticle = await inspectPage(
   'kz/en/parents/child-development-milestones',
