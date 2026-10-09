@@ -48,16 +48,24 @@
 .article-v2__header-inner {
   display: grid;
   grid-template-columns: minmax(0, 1fr);
-  gap: clamp(1.5rem, 3vw, 3rem);
+  grid-template-areas: "intro" "details";
   align-items: center;
   max-width: 72rem;
 }
 
 .article-v2__header--image .article-v2__header-inner {
-  grid-template-columns: minmax(0, 1.6fr) minmax(15rem, 0.85fr);
+  grid-template-columns: minmax(0, 1.6fr) minmax(15rem, 0.95fr);
+  grid-template-areas: "intro artwork" "details artwork";
+  column-gap: clamp(1.5rem, 3vw, 3rem);
 }
 
-.article-v2__header-copy {
+.article-v2__header-intro {
+  grid-area: intro;
+  min-width: 0;
+}
+
+.article-v2__header-details {
+  grid-area: details;
   min-width: 0;
 }
 
@@ -139,12 +147,14 @@
 }
 
 .article-v2__hero-art {
+  grid-area: artwork;
   display: flex;
   align-items: center;
   justify-content: center;
   width: 100%;
-  aspect-ratio: 4 / 5;
+  aspect-ratio: 4 / 3;
   max-height: 24rem;
+  margin: 0;
   overflow: hidden;
   border: 1px solid #d0e0e8;
   border-radius: 0.8rem;
@@ -159,14 +169,26 @@
   object-fit: cover;
 }
 
+.article-v2__hero-art img[src$='.svg'] {
+  object-fit: contain;
+}
+
 @media (max-width: 56rem) {
   .article-v2__header--image .article-v2__header-inner {
     grid-template-columns: minmax(0, 1fr);
+    grid-template-areas: "intro" "artwork" "details";
+    gap: 1.1rem;
   }
 
-  /* Decorative artwork is omitted before it can push the article below the fold. */
+  /* Keep art visible and compact on narrow screens, directly below the title. */
   .article-v2__hero-art {
-    display: none;
+    display: flex;
+    aspect-ratio: 16 / 9;
+    max-height: 15rem;
+  }
+
+  .article-v2__summary {
+    margin-top: 0;
   }
 }
 

@@ -333,6 +333,11 @@
   background: #edf5f2;
 }
 
+.home-v2__card > img[src$='.svg'] {
+  object-fit: contain;
+  background: #f0f5f3;
+}
+
 .home-v2__card:nth-child(1) > img {
   object-position: 35% center;
 }

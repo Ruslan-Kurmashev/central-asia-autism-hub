@@ -36,6 +36,12 @@ function extractInternalHrefs(html) {
     .filter((href) => href.startsWith('/'));
 }
 
+function extractInternalImageSrcs(html) {
+  return [...html.matchAll(/<img\b[^>]*\bsrc=["']([^"']+)["']/g)]
+    .map((match) => match[1])
+    .filter((src) => src.startsWith('/'));
+}
+
 function stripQueryAndHash(href) {
   return href.split('#')[0].split('?')[0];
 }
@@ -75,6 +81,8 @@ function targetCandidates(href) {
 const htmlFiles = await collectHtmlFiles(distDir);
 const badBaseLinks = [];
 const missingTargets = [];
+const missingImages = [];
+const badBaseImages = [];
 
 for (const filePath of htmlFiles) {
   const html = await readFile(filePath, 'utf8');
@@ -106,9 +114,30 @@ for (const filePath of htmlFiles) {
       missingTargets.push({ source: relativeSource, href });
     }
   }
+
+  const imageSrcs = extractInternalImageSrcs(html);
+  for (const src of imageSrcs) {
+    if (src.startsWith('/images/') || src.startsWith('/brand/')) {
+      badBaseImages.push({ source: relativeSource, src });
+      continue;
+    }
+
+    if (!src.startsWith(`${base}/`)) continue;
+
+    const candidates = targetCandidates(src);
+    let found = false;
+    for (const candidate of candidates) {
+      if (await exists(candidate)) {
+        found = true;
+        break;
+      }
+    }
+
+    if (!found) missingImages.push({ source: relativeSource, src });
+  }
 }
 
-if (badBaseLinks.length > 0 || missingTargets.length > 0) {
+if (badBaseLinks.length > 0 || missingTargets.length > 0 || badBaseImages.length > 0 || missingImages.length > 0) {
   if (badBaseLinks.length > 0) {
     console.error('Broken GitHub Pages base-path links found:');
     badBaseLinks.forEach(({ source, href }) =>
@@ -123,9 +152,23 @@ if (badBaseLinks.length > 0 || missingTargets.length > 0) {
     );
   }
 
+  if (badBaseImages.length > 0) {
+    console.error('Image URLs missing the GitHub Pages base path:');
+    badBaseImages.forEach(({ source, src }) =>
+      console.error(`- ${source}: ${src}`)
+    );
+  }
+
+  if (missingImages.length > 0) {
+    console.error('Image URLs with missing build assets:');
+    missingImages.forEach(({ source, src }) =>
+      console.error(`- ${source}: ${src}`)
+    );
+  }
+
   process.exitCode = 1;
 } else {
   console.log(
-    `Internal link check passed: ${htmlFiles.length} HTML pages checked, no root /kz/ links and no missing internal targets.`
+    `Internal link check passed: ${htmlFiles.length} HTML pages checked, no root /kz/ links, missing targets, or broken image sources.`
   );
 }

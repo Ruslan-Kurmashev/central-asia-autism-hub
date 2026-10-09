@@ -67,7 +67,7 @@ const displayDateLabel = data.updatedAt ? copy.updatedLabel : copy.publishedLabe
           ]}
         >
           <div class="container article-v2__header-inner">
-            <div class="article-v2__header-copy">
+            <div class="article-v2__header-intro">
               <p class="article-v2__breadcrumb">
                 <a href={localePath(locale)}>{UI[locale].homeLabel}</a>
                 <span aria-hidden="true"> / </span>
@@ -78,6 +78,21 @@ const displayDateLabel = data.updatedAt ? copy.updatedLabel : copy.publishedLabe
 
               <p class="article-v2__eyebrow">{copy.articleLabel}</p>
               <h1>{data.title}</h1>
+            </div>
+
+            {data.featuredImage && (
+              <figure class="article-v2__hero-art">
+                <img
+                  src={data.featuredImage}
+                  alt={data.featuredImageAlt ?? ''}
+                  loading="eager"
+                  fetchpriority="high"
+                  decoding="async"
+                />
+              </figure>
+            )}
+
+            <div class="article-v2__header-details">
               <p class="article-v2__summary">{data.summary}</p>
 
               <dl class="article-v2__meta">
@@ -102,16 +117,7 @@ const displayDateLabel = data.updatedAt ? copy.updatedLabel : copy.publishedLabe
               </dl>
             </div>
 
-            {data.featuredImage && (
-              <div class="article-v2__hero-art" aria-hidden="true">
-                <img
-                  src={data.featuredImage}
-                  alt=""
-                  loading="lazy"
-                  decoding="async"
-                />
-              </div>
-            )}
+
           </div>
         </header>
 
@@ -241,6 +247,17 @@ const displayDateLabel = data.updatedAt ? copy.updatedLabel : copy.publishedLabe
             </p>
             <p class="eyebrow">{copy.articleLabel}</p>
             <h1>{data.title}</h1>
+            {data.featuredImage && (
+              <figure class="article-header__media">
+                <img
+                  src={data.featuredImage}
+                  alt={data.featuredImageAlt ?? ''}
+                  loading="eager"
+                  fetchpriority="high"
+                  decoding="async"
+                />
+              </figure>
+            )}
             <p class="article-header__summary">{data.summary}</p>
 
             <dl class="article-meta">
@@ -351,6 +368,26 @@ const displayDateLabel = data.updatedAt ? copy.updatedLabel : copy.publishedLabe
   .article-page,
   .article-v2__page {
     overflow-x: clip;
+  }
+
+  .article-header__media {
+    width: 100%;
+    max-height: 20rem;
+    aspect-ratio: 16 / 9;
+    margin: 1.5rem 0;
+    overflow: hidden;
+    border-radius: var(--radius-medium);
+    background: #eef4f3;
+  }
+
+  .article-header__media img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .article-header__media img[src$='.svg'] {
+    object-fit: contain;
   }
 
   .article-body table {
