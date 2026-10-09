@@ -51,6 +51,10 @@ const researchCopy = {
   ru: {
     label: 'Разбор научного исследования',
     originalTitle: 'Оригинальная статья',
+    originalAuthors: 'Авторы оригинала',
+    doi: 'DOI',
+    review: 'Научная проверка',
+    conflict: 'Конфликт интересов',
     journal: 'Журнал',
     year: 'Год исследования',
     studyType: 'Как проводилось исследование',
@@ -62,6 +66,10 @@ const researchCopy = {
   kk: {
     label: 'Ғылыми зерттеуді түсіндіру',
     originalTitle: 'Түпнұсқа мақала',
+    originalAuthors: 'Түпнұсқа авторлары',
+    doi: 'DOI',
+    review: 'Ғылыми тексеру',
+    conflict: 'Мүдделер қақтығысы',
     journal: 'Журнал',
     year: 'Жарияланған жылы',
     studyType: 'Зерттеу түрі',
@@ -73,6 +81,10 @@ const researchCopy = {
   en: {
     label: 'Research explained',
     originalTitle: 'Original publication',
+    originalAuthors: 'Original authors',
+    doi: 'DOI',
+    review: 'Scientific review',
+    conflict: 'Conflict of interest',
     journal: 'Journal',
     year: 'Publication year',
     studyType: 'Study design',
@@ -162,6 +174,14 @@ const researchCopy = {
                       <dd><cite>{researchDetails.originalTitle}</cite></dd>
                     </div>
                     <div>
+                      <dt>{researchCopy.originalAuthors}</dt>
+                      <dd>
+                        {researchDetails.originalAuthors.length > 3
+                          ? `${researchDetails.originalAuthors.slice(0, 3).join(', ')} et al.`
+                          : researchDetails.originalAuthors.join(', ')}
+                      </dd>
+                    </div>
+                                        <div>
                       <dt>{researchCopy.journal}</dt>
                       <dd>{researchDetails.journalOrOrganisation} ({researchDetails.publicationYear})</dd>
                     </div>
@@ -183,6 +203,16 @@ const researchCopy = {
                         </a>
                       </dd>
                     </div>
+                    {researchDetails.doi && (
+                      <div>
+                        <dt>{researchCopy.doi}</dt>
+                        <dd>
+                          <a href={`https://doi.org/${researchDetails.doi}`} rel="external">
+                            {researchDetails.doi}
+                          </a>
+                        </dd>
+                      </div>
+                    )}
                     <div>
                       <dt>{researchCopy.lastChecked}</dt>
                       <dd>
@@ -190,6 +220,14 @@ const researchCopy = {
                           {dateFormatter.format(researchDetails.sourceStatusCheckedAt)}
                         </time>
                       </dd>
+                    </div>
+                    <div>
+                      <dt>{researchCopy.review}</dt>
+                      <dd>{researchDetails.externalReviewer ?? copy.noIndependentReview}</dd>
+                    </div>
+                    <div>
+                      <dt>{researchCopy.conflict}</dt>
+                      <dd>{researchDetails.conflictOfInterest}</dd>
                     </div>
                   </dl>
                 </section>
