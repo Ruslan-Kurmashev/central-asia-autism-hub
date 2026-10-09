@@ -316,9 +316,24 @@ collections:
       - { label: "Title", name: "title", widget: "string" }
       - { label: "Summary", name: "summary", widget: "text" }
       - { label: "Description", name: "description", widget: "text" }
+      - { label: "Card image", name: "featuredImage", widget: "image", required: false }
+      - { label: "Image alt text", name: "featuredImageAlt", widget: "string", required: false }
+      - { label: "Key points", name: "keyPoints", widget: "list", required: false, field: { label: "Point", name: "point", widget: "string" } }
+      - { label: "Evidence limitations", name: "evidenceLimitations", widget: "text", required: false }
       - { label: "Country", name: "country", widget: "hidden", default: "kz" }
       - { label: "Language", name: "language", widget: "select", options: ["ru", "kk", "en"] }
       - { label: "Section", name: "section", widget: "hidden", default: "research" }
+      - label: "Research topic"
+        name: "topic"
+        widget: "select"
+        default: "research-reviews"
+        options:
+          - { label: "Research explainers", value: "research-reviews" }
+          - { label: "Reading research", value: "reading-research" }
+          - { label: "Causes and biology", value: "causes-and-biology" }
+          - { label: "Evidence about support", value: "support-evidence" }
+          - { label: "Kazakhstan research", value: "kazakhstan-research" }
+          - { label: "Research participation", value: "research-participation" }
       - { label: "URL slug", name: "slug", widget: "string" }
       - { label: "Translation key", name: "translationKey", widget: "string" }
       - { label: "Translation status", name: "translationStatus", widget: "select", options: ["source", "checked", "pending"] }
