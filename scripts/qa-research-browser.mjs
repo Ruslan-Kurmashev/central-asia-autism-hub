@@ -1,0 +1,104 @@
+import { spawn } from 'node:child_process';
+import { mkdir, cp } from 'node:fs/promises';
+import { chromium } from 'playwright';
+
+const siteBase = '/central-asia-autism-hub';
+const slug = 'pochemu-autizm-u-vseh-proyavlyaetsya-po-raznomu';
+const reportPath = `${siteBase}/kz/ru/research/${slug}/`;
+const root = 'qa-public';
+const widths = [
+  { width: 1440, height: 900, label: 'desktop' },
+  { width: 768, height: 1024, label: 'tablet' },
+  { width: 390, height: 844, label: 'mobile' },
+  { width: 320, height: 720, label: 'small-mobile' },
+];
+
+await mkdir(`${root}${siteBase}`, { recursive: true });
+await mkdir('qa-screenshots', { recursive: true });
+await cp('dist', `${root}${siteBase}`, { recursive: true });
+
+const server = spawn('python3', ['-m', 'http.server', '4173', '--bind', '127.0.0.1', '--directory', root], { stdio: 'ignore' });
+const checks = [];
+let browser;
+try {
+  for (let attempt = 0; attempt < 30; attempt++) {
+    try {
+      const response = await fetch(`http://127.0.0.1:4173${reportPath}`);
+      if (!response.ok) throw new Error(`HTTP ${response.status}`);
+      break;
+    } catch (error) {
+      if (attempt === 29) throw error;
+      await new Promise((resolve) => setTimeout(resolve, 400));
+    }
+  }
+
+  browser = await chromium.launch({ headless: true });
+  for (const viewport of widths) {
+    const page = await browser.newPage({ viewport: { width: viewport.width, height: viewport.height }, deviceScaleFactor: 1 });
+    const errors = [];
+    page.on('pageerror', (error) => errors.push(error.message));
+    page.on('response', (response) => {
+      if (response.status() >= 400 && response.url().startsWith('http://127.0.0.1')) {
+        errors.push(`HTTP ${response.status()} on ${response.url()}`);
+      }
+    });
+    await page.goto(`http://127.0.0.1:4173${reportPath}`, { waitUntil: 'networkidle' });
+    await page.screenshot({ path: `qa-screenshots/research-${viewport.label}.png`, fullPage: true });
+    await page.screenshot({ path: `qa-screenshots/research-${viewport.label}-viewport.png` });
+    const metrics = await page.evaluate(() => {
+      const q = (sel) => document.querySelector(sel);
+      const r = (sel) => q(sel)?.getBoundingClientRect();
+      const style = (sel) => {
+        const x = q(sel);
+        if (!x) return null;
+        const s = getComputedStyle(x);
+        return { fontSize: parseFloat(s.fontSize), lineHeight: parseFloat(s.lineHeight), color: s.color, background: s.backgroundColor };
+      };
+      const ids = new Set([...document.querySelectorAll('[id]')].map((e) => e.id));
+      const tocLinks = [...document.querySelectorAll('.article-v2__toc a[href^="#"]')];
+      return {
+        title: q('h1')?.textContent?.trim() ?? '',
+        hasMain: Boolean(q('main')),
+        hasPaper: Boolean(q('.article-v2__research-facts')),
+        hasArticle: Boolean(q('.article-v2__body')),
+        sourceLink: q('.article-v2__research-facts a[href*="pmc.ncbi.nlm.nih.gov"]')?.getAttribute('href'),
+        doiLink: q('.article-v2__research-facts a[href*="doi.org"]')?.getAttribute('href'),
+        heading: style('h1'),
+        text: style('.article-v2__body p'),
+        viewportWidth: window.innerWidth,
+        documentWidth: document.documentElement.scrollWidth,
+        bodyWidth: document.body.scrollWidth,
+        titleRight: r('h1')?.right,
+        textRight: r('.article-v2__body')?.right,
+        navigationRight: r('.site-header')?.right,
+        headerHeight: r('.site-header')?.height,
+        tocCount: tocLinks.length,
+        brokenToc: tocLinks.filter((a) => !ids.has(decodeURIComponent(a.getAttribute('href').slice(1)))).map((a) => a.getAttribute('href')),
+        sourceLinksCount: document.querySelectorAll('.article-v2__sources a[href^="https://"]').length,
+        cssFiles: [...document.styleSheets].length,
+      };
+    });
+    const issues = [];
+    if (!metrics.hasMain || !metrics.hasPaper || !metrics.hasArticle) issues.push('Missing document structure');
+    if (!metrics.title.includes('Почему аутизм у всех проявляется')) issues.push('Wrong title');
+    if (!metrics.sourceLink?.includes('PMC12283356')) issues.push('Missing primary source URL');
+    if (!metrics.doiLink?.includes('s41588-025-02224-z')) issues.push('Missing DOI URL');
+    if (metrics.documentWidth > viewport.width + 2 || metrics.bodyWidth > viewport.width + 2) issues.push('Horizontal overflow');
+    if (metrics.titleRight > viewport.width + 2 || metrics.textRight > viewport.width + 2) issues.push('Clipped heading or content');
+    if ((metrics.text?.fontSize ?? 0) < 16 || (metrics.text?.lineHeight ?? 0) < 23) issues.push('Uncomfortable article typography');
+    if ((metrics.heading?.fontSize ?? 0) < 28) issues.push('Title too small');
+    if (metrics.tocCount < 7 || metrics.brokenToc.length) issues.push('Broken table of contents');
+    if (metrics.sourceLinksCount < 1) issues.push('Missing source links');
+    if (errors.length) issues.push('Browser or network errors');
+    const result = { viewport: viewport.label, width: viewport.width, metrics, errors, issues };
+    checks.push(result);
+    console.log(`VISUAL_QA ${JSON.stringify(result)}`);
+    await page.close();
+  }
+} finally {
+  if (browser) await browser.close();
+  server.kill('SIGTERM');
+}
+const failures = checks.filter((c) => c.issues.length);
+console.log(`VISUAL_QA_SUMMARY ${JSON.stringify({ viewports: checks.length, failed: failures.length, artifacts: 'qa-screenshots/*.png' })}`);
+if (failures.length) process.exitCode = 1;
