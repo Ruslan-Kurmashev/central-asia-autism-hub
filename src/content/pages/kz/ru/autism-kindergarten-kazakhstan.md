@@ -13,6 +13,8 @@ audience:
   - parents
   - families
 versionNote: "9 октября 2026: проверены правила СППС в редакции приказа № 144-НҚ и типовые правила дошкольных организаций, изменённые в мае 2026 года."
+featuredImage: "/central-asia-autism-hub/images/editorial/kz-kindergarten-visual-schedule.svg"
+featuredImageAlt: "Развивающие кубики, цветные карандаши и карточки визуального расписания."
 author: Ruslan Kurmashev
 editor: Ruslan Kurmashev
 riskLevel: lower
