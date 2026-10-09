@@ -49,7 +49,7 @@ try {
       const q = (sel) => document.querySelector(sel);
       const r = (sel) => q(sel)?.getBoundingClientRect();
       const luminance = (rgb) => {
-        const values = (rgb.match(/[\\d.]+/g) ?? []).slice(0, 3).map(Number);
+        const values = (rgb.match(/[0-9.]+/g) ?? []).slice(0, 3).map(Number);
         if (values.length !== 3) return 0;
         const linear = values.map((value) => {
           const v = value / 255;
