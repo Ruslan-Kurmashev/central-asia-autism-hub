@@ -30,7 +30,7 @@ const parents = await inspectPage('kz/kk/parents', 'section-v2', [
   'Баланың дамуы',
   'section-v2__accordion',
   'Материалдар мен тақырыптар',
-  'Бөлім құрылымы',
+  'section-v2__article-list',
 ]);
 const article = await inspectPage(
   'kz/kk/parents/balanyn-damu-bagdarlary',
