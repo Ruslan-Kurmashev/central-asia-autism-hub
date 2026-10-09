@@ -34,18 +34,31 @@ const contentCopy = CONTENT_UI[locale];
 const sectionCopy = copy.sections[section];
 const useSectionV2 = locale === 'ru';
 
-const materials = (
-  await getCollection(
-    'pages',
-    ({ data }) =>
-      !data.draft &&
-      data.language === locale &&
-      data.section === section &&
-      data.translationStatus !== 'pending' &&
-      Boolean(data.publishedAt) &&
-      Boolean(data.updatedAt),
-  )
-).sort((left, right) => {
+const pageMaterials = await getCollection(
+  'pages',
+  ({ data }) =>
+    !data.draft &&
+    data.language === locale &&
+    data.section === section &&
+    data.translationStatus !== 'pending' &&
+    Boolean(data.publishedAt) &&
+    Boolean(data.updatedAt),
+);
+
+const researchMaterials =
+  section === 'research'
+    ? await getCollection(
+        'research',
+        ({ data }) =>
+          !data.draft &&
+          data.language === locale &&
+          data.translationStatus !== 'pending' &&
+          Boolean(data.publishedAt) &&
+          Boolean(data.updatedAt),
+      )
+    : [];
+
+const materials = [...pageMaterials, ...researchMaterials].sort((left, right) => {
   const publishedDiff =
     (right.data.publishedAt?.getTime() ?? 0) -
     (left.data.publishedAt?.getTime() ?? 0);
