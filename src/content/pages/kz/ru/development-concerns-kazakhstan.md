@@ -12,8 +12,8 @@ translationStatus: source
 audience:
   - parents
   - families
-featuredImage: "/central-asia-autism-hub/images/editorial/kz-development-path-shapes.svg"
-featuredImageAlt: "Геометрические фигуры и пунктирная линия как символ последовательных шагов при обращении за помощью."
+featuredImage: "/central-asia-autism-hub/images/editorial/photos/kz-help-002.jpg"
+featuredImageAlt: "Детская игровая комната с деревянными развивающими игрушками."
 author: Ruslan Kurmashev
 editor: Ruslan Kurmashev
 riskLevel: moderate
