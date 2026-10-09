@@ -82,7 +82,6 @@ const homeV2Labels = locale === 'en'
         'Official sources',
         'Resources for families',
       ],
-      parentResources: copy.sections.parents.title,
     }
   : {
       sectionNavigation: 'Основные разделы',
@@ -90,7 +89,7 @@ const homeV2Labels = locale === 'en'
       featuredAction: homeMaterials[0]
         ? copy.sections[homeMaterials[0].data.section].title
         : copy.sections.parents.title,
-      statement: '{homeV2Labels.statement}',
+      statement: 'Проверенная информация, понятная навигация и контекст Казахстана в одном месте.',
       about: 'О проекте',
       more: 'Подробнее',
       approach: 'Наш подход',
@@ -101,7 +100,6 @@ const homeV2Labels = locale === 'en'
         'Официальные источники',
         'Материалы для семей',
       ],
-      parentResources: copy.sections.parents.title,
     };
 const usedEditorialImages = new Set<string>();
 const homeCards = homeMaterials.map((material, index) => {
@@ -282,9 +280,7 @@ const dateFormatter = new Intl.DateTimeFormat(DATE_LOCALES[locale], {
                 <article class="home-v2__card home-v2__card--statement">
                   <div class="home-v2__card-body">
                     <span class="home-v2__card-tag">Autism Hub Kazakhstan</span>
-                    <p class="home-v2__statement">
-                      Проверенная информация, понятная навигация и контекст Казахстана в одном месте.
-                    </p>
+                    <p class="home-v2__statement">{homeV2Labels.statement}</p>
                     <a href={sectionPath(locale, 'about')}>{homeV2Labels.about} →</a>
                   </div>
                 </article>
