@@ -95,3 +95,5 @@ The previously considered Pexels photo by Tara Winstead (https://www.pexels.com/
 | `kz-kindergarten-visual-schedule.svg` | AutismHub editorial, created 2026-10-09 | Original SVG vector | Preschool objects, colored pencils and visual schedule, no identifiable people, KZ-HLP-005. |
 
 | `kz-school-schedule-books.svg` | AutismHub editorial, created 2026-10-09 | Original SVG vector | School notebook, books, visual schedule cards; no people, KZ-HLP-006. |
+
+| `kz-social-support-documents.svg` | AutismHub editorial, created 2026-10-09 | Original SVG vector | Official documents, checklist and social support card; no people; KZ-HLP-007. |
