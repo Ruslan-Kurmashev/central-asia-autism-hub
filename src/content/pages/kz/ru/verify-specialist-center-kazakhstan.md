@@ -13,8 +13,8 @@ audience:
   - parents
   - families
   - general
-featuredImage: "/central-asia-autism-hub/images/editorial/kz-specialist-verification.svg"
-featuredImageAlt: "Папка с документами, контрольные отметки и увеличительное стекло."
+featuredImage: "/central-asia-autism-hub/images/editorial/photos/kz-help-003.jpg"
+featuredImageAlt: "Бланк заявления на планшете с зажимом рядом с ноутбуком: проверка документов специалиста."
 author: Ruslan Kurmashev
 editor: Ruslan Kurmashev
 riskLevel: moderate
