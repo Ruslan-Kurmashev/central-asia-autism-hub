@@ -14,6 +14,8 @@ audience:
   - families
   - general
 versionNote: "9 октября 2026: сверены Закон о защите прав потребителей, официальный порядок письменной претензии и проверка лицензий через eGov."
+featuredImage: "/central-asia-autism-hub/images/editorial/kz-service-payment-check.svg"
+featuredImageAlt: "Договор, контрольный список и документ об оплате услуги."
 author: Ruslan Kurmashev
 editor: Ruslan Kurmashev
 riskLevel: lower
