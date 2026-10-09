@@ -20,7 +20,9 @@ editor: Ruslan Kurmashev
 riskLevel: moderate
 disclaimerType: informational
 conflictOfInterest: "Конфликт интересов не заявлен."
-draft: true
+publishedAt: 2026-10-09
+updatedAt: 2026-10-09
+draft: false
 keyPoints:
   - "Зачисление в школу и организация специальных условий являются отдельными вопросами; диагноз аутизма не отменяет право ребёнка на образование."
   - "ПМПК используется для оценки особых образовательных потребностей и рекомендаций по поддержке."
