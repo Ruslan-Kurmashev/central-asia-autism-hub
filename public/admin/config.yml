@@ -42,7 +42,9 @@ collections:
     fields: &page_fields_ru
       - { label: "Название", name: "title", widget: "string" }
       - { label: "Краткое резюме", name: "summary", widget: "text" }
-      - { label: "SEO-описание", name: "description", widget: "text" }\n      - { label: "Изображение карточки", name: "featuredImage", widget: "image", required: false, hint: "Необязательно. Используется на главной и в подборках." }\n      - { label: "Alt-текст изображения", name: "featuredImageAlt", widget: "string", required: false, hint: "Обязателен, если загружено изображение." }
+      - { label: "SEO-описание", name: "description", widget: "text" }
+      - { label: "Изображение карточки", name: "featuredImage", widget: "image", required: false, hint: "Необязательно. Используется на главной и в подборках." }
+      - { label: "Alt-текст изображения", name: "featuredImageAlt", widget: "string", required: false, hint: "Обязателен, если загружено изображение." }
       - { label: "Страна", name: "country", widget: "hidden", default: "kz" }
       - { label: "Язык", name: "language", widget: "hidden", default: "ru" }
       - label: "Раздел"
@@ -134,7 +136,9 @@ collections:
     fields:
       - { label: "Атауы", name: "title", widget: "string" }
       - { label: "Қысқаша мазмұн", name: "summary", widget: "text" }
-      - { label: "SEO сипаттамасы", name: "description", widget: "text" }\n      - { label: "Карточка суреті", name: "featuredImage", widget: "image", required: false }\n      - { label: "Суреттің alt мәтіні", name: "featuredImageAlt", widget: "string", required: false }
+      - { label: "SEO сипаттамасы", name: "description", widget: "text" }
+      - { label: "Карточка суреті", name: "featuredImage", widget: "image", required: false }
+      - { label: "Суреттің alt мәтіні", name: "featuredImageAlt", widget: "string", required: false }
       - { label: "Ел", name: "country", widget: "hidden", default: "kz" }
       - { label: "Тіл", name: "language", widget: "hidden", default: "kk" }
       - label: "Бөлім"
@@ -226,7 +230,9 @@ collections:
     fields:
       - { label: "Title", name: "title", widget: "string" }
       - { label: "Summary", name: "summary", widget: "text" }
-      - { label: "SEO description", name: "description", widget: "text" }\n      - { label: "Card image", name: "featuredImage", widget: "image", required: false }\n      - { label: "Image alt text", name: "featuredImageAlt", widget: "string", required: false }
+      - { label: "SEO description", name: "description", widget: "text" }
+      - { label: "Card image", name: "featuredImage", widget: "image", required: false }
+      - { label: "Image alt text", name: "featuredImageAlt", widget: "string", required: false }
       - { label: "Country", name: "country", widget: "hidden", default: "kz" }
       - { label: "Language", name: "language", widget: "hidden", default: "en" }
       - label: "Section"
