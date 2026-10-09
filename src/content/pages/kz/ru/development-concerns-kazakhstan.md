@@ -12,6 +12,8 @@ translationStatus: source
 audience:
   - parents
   - families
+featuredImage: "/central-asia-autism-hub/images/editorial/kz-development-path-shapes.svg"
+featuredImageAlt: "Геометрические фигуры и пунктирная линия как символ последовательных шагов при обращении за помощью."
 author: Ruslan Kurmashev
 editor: Ruslan Kurmashev
 riskLevel: moderate
