@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="675" viewBox="0 0 1200 675" role="img" aria-labelledby="title desc">
+<title id="title">Маршрут помощи при вопросах о развитии ребёнка</title>
+<desc id="desc">Три цветные деревянные геометрические фигуры, направляющая линия и круги на светлом фоне</desc>
+<defs>
+<linearGradient id="bg" x2="1" y2="1"><stop stop-color="#faf8f4"/><stop offset="1" stop-color="#eef3f0"/></linearGradient>
+<filter id="shadow" x="-20%" y="-20%" width="150%" height="150%"><feDropShadow dx="0" dy="14" stdDeviation="16" flood-color="#2a4545" flood-opacity=".13"/></filter>
+</defs>
+<rect width="1200" height="675" fill="url(#bg)"/>
+<circle cx="1070" cy="95" r="170" fill="#d8e7e2" opacity=".48"/>
+<circle cx="98" cy="625" r="225" fill="#f1e8df" opacity=".68"/>
+<path d="M156 458 C350 340 498 355 660 438 S910 508 1039 350" fill="none" stroke="#b9cbc7" stroke-width="13" stroke-linecap="round" stroke-dasharray="5 29"/>
+<g filter="url(#shadow)">
+<rect x="195" y="290" width="200" height="200" rx="22" fill="#bbd3cd"/>
+<rect x="218" y="313" width="154" height="154" rx="13" fill="#d5e5df"/>
+<circle cx="589" cy="340" r="119" fill="#d5ac83"/>
+<circle cx="589" cy="340" r="87" fill="#e9ccad"/>
+<path d="M816 470 L950 229 L1084 470 Z" fill="#8caea7" stroke="#6d9991" stroke-width="3"/>
+<path d="M859 450 L950 285 L1041 450 Z" fill="#b4cec7"/>
+</g>
+<g fill="#668b85"><circle cx="133" cy="480" r="10"/><circle cx="684" cy="449" r="10"/><circle cx="1110" cy="348" r="10"/></g>
+<path d="M1068 327 l47 18 -45 20" fill="none" stroke="#668b85" stroke-width="9" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
