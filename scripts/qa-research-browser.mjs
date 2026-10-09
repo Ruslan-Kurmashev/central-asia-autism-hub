@@ -48,6 +48,19 @@ try {
     const metrics = await page.evaluate(() => {
       const q = (sel) => document.querySelector(sel);
       const r = (sel) => q(sel)?.getBoundingClientRect();
+      const luminance = (rgb) => {
+        const values = (rgb.match(/[\\d.]+/g) ?? []).slice(0, 3).map(Number);
+        if (values.length !== 3) return 0;
+        const linear = values.map((value) => {
+          const v = value / 255;
+          return v <= 0.04045 ? v / 12.92 : ((v + 0.055) / 1.055) ** 2.4;
+        });
+        return linear[0] * 0.2126 + linear[1] * 0.7152 + linear[2] * 0.0722;
+      };
+      const contrastOnWhite = (sel) => {
+        const x = q(sel);
+        return x ? Number((1.05 / (luminance(getComputedStyle(x).color) + 0.05)).toFixed(2)) : null;
+      };
       const style = (sel) => {
         const x = q(sel);
         if (!x) return null;
@@ -79,6 +92,8 @@ try {
         tocCount: tocLinks.length,
         brokenToc: tocLinks.filter((a) => !ids.has(decodeURIComponent(a.getAttribute('href').slice(1)))).map((a) => a.getAttribute('href')),
         sourceLinksCount: document.querySelectorAll('.article-v2__sources a[href^="https://"]').length,
+        tocLinkContrast: contrastOnWhite('.article-v2__toc a'),
+        mutedLabelContrast: contrastOnWhite('.article-v2__sources-heading > p:last-child'),
         cssFiles: [...document.styleSheets].length,
       };
     });
@@ -99,6 +114,9 @@ try {
       if (!metrics.researchExpanded || !metrics.tocExpanded) issues.push('Desktop reference information should remain visible');
     }
     if (metrics.sourceLinksCount < 1) issues.push('Missing source links');
+    if ((metrics.tocLinkContrast ?? 0) < 4.5 || (metrics.mutedLabelContrast ?? 0) < 4.5) {
+      issues.push('Muted text does not meet WCAG AA contrast ratio');
+    }
     if (errors.length) issues.push('Browser or network errors');
     const result = { viewport: viewport.label, width: viewport.width, metrics, errors, issues };
     checks.push(result);
