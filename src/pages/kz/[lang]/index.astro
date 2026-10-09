@@ -28,7 +28,7 @@ interface Props {
 const { locale } = Astro.props;
 const copy = UI[locale];
 const contentCopy = CONTENT_UI[locale];
-const useHomeV2 = locale === 'ru';
+const useHomeV2 = locale === 'ru' || locale === 'en';
 
 const legacyHomeSections: Array<{
   section: Section;
@@ -63,6 +63,46 @@ const publishedPages = (
 );
 
 const homeMaterials = publishedPages.slice(0, 9);
+const featuredDestination = sectionPath(locale, homeMaterials[0]?.data.section ?? 'parents');
+const homeV2Labels = locale === 'en'
+  ? {
+      sectionNavigation: 'Explore website sections',
+      allMaterials: 'All resources',
+      featuredAction: homeMaterials[0]
+        ? copy.sections[homeMaterials[0].data.section].title
+        : copy.sections.parents.title,
+      statement: 'Clear information, transparent sources and practical guidance for families in Kazakhstan.',
+      about: 'About this project',
+      more: 'Learn more',
+      approach: 'Our approach',
+      sourcesHeading: 'Our information sources',
+      sourceTypes: [
+        'Scientific research',
+        'Clinical guidance',
+        'Official sources',
+        'Resources for families',
+      ],
+      parentResources: copy.sections.parents.title,
+    }
+  : {
+      sectionNavigation: 'Основные разделы',
+      allMaterials: 'Все материалы',
+      featuredAction: homeMaterials[0]
+        ? copy.sections[homeMaterials[0].data.section].title
+        : copy.sections.parents.title,
+      statement: '{homeV2Labels.statement}',
+      about: 'О проекте',
+      more: 'Подробнее',
+      approach: 'Наш подход',
+      sourcesHeading: 'На что мы опираемся',
+      sourceTypes: [
+        'Научные публикации',
+        'Клинические рекомендации',
+        'Официальные источники',
+        'Материалы для семей',
+      ],
+      parentResources: copy.sections.parents.title,
+    };
 const usedEditorialImages = new Set<string>();
 const homeCards = homeMaterials.map((material, index) => {
   if (material.data.featuredImage) {
@@ -84,7 +124,9 @@ const homeCards = homeMaterials.map((material, index) => {
     return {
       material,
       cardImage: `${import.meta.env.BASE_URL}${curated.src}`,
-      cardImageAlt: curated.alt,
+      cardImageAlt: locale === 'en'
+        ? 'Learning and information materials on a table.'
+        : curated.alt,
     };
   }
 
@@ -155,11 +197,11 @@ const dateFormatter = new Intl.DateTimeFormat(DATE_LOCALES[locale], {
           </div>
         </section>
 
-        <nav class="home-v2__topicbar" aria-label="Основные разделы">
+        <nav class="home-v2__topicbar" aria-label={homeV2Labels.sectionNavigation}>
           <div class="container">
             <ul>
               <li>
-                <a href="#materials">Все материалы</a>
+                <a href="#materials">{homeV2Labels.allMaterials}</a>
               </li>
               {topicBarSections.map((section) => (
                 <li>
@@ -184,8 +226,8 @@ const dateFormatter = new Intl.DateTimeFormat(DATE_LOCALES[locale], {
                   <p class="home-v2__kicker">{copy.featuredEyebrow}</p>
                   <h2 id="home-v2-materials-title">{copy.featuredTitle}</h2>
                 </div>
-                <a href={sectionPath(locale, 'help-kazakhstan')}>
-                  Помощь в Казахстане <span aria-hidden="true">→</span>
+                <a href={featuredDestination}>
+                  {homeV2Labels.featuredAction} <span aria-hidden="true">→</span>
                 </a>
               </div>
 
@@ -243,7 +285,7 @@ const dateFormatter = new Intl.DateTimeFormat(DATE_LOCALES[locale], {
                     <p class="home-v2__statement">
                       Проверенная информация, понятная навигация и контекст Казахстана в одном месте.
                     </p>
-                    <a href={sectionPath(locale, 'about')}>О проекте →</a>
+                    <a href={sectionPath(locale, 'about')}>{homeV2Labels.about} →</a>
                   </div>
                 </article>
 
@@ -255,7 +297,7 @@ const dateFormatter = new Intl.DateTimeFormat(DATE_LOCALES[locale], {
                         <li>{principle.title}</li>
                       ))}
                     </ul>
-                    <a href={sectionPath(locale, 'about')}>Подробнее →</a>
+                    <a href={sectionPath(locale, 'about')}>{homeV2Labels.more} →</a>
                   </div>
                 </article>
               </div>
@@ -264,13 +306,10 @@ const dateFormatter = new Intl.DateTimeFormat(DATE_LOCALES[locale], {
 
           <section class="home-v2__sources" aria-labelledby="home-v2-sources-title">
             <div class="container">
-              <p class="home-v2__kicker">Наш подход</p>
-              <h2 id="home-v2-sources-title">На что мы опираемся</h2>
-              <div class="home-v2__source-grid" aria-label="Типы источников">
-                <span>Научные публикации</span>
-                <span>Клинические рекомендации</span>
-                <span>Официальные источники</span>
-                <span>Материалы для семей</span>
+              <p class="home-v2__kicker">{homeV2Labels.approach}</p>
+              <h2 id="home-v2-sources-title">{homeV2Labels.sourcesHeading}</h2>
+              <div class="home-v2__source-grid" aria-label={homeV2Labels.sourcesHeading}>
+                {homeV2Labels.sourceTypes.map((sourceType) => <span>{sourceType}</span>)}
               </div>
               <p class="home-v2__source-note">{copy.principlesBoundary}</p>
             </div>
