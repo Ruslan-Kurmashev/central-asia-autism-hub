@@ -32,7 +32,7 @@ const { locale, section } = Astro.props;
 const copy = UI[locale];
 const contentCopy = CONTENT_UI[locale];
 const sectionCopy = copy.sections[section];
-const useSectionV2 = locale === 'ru' || locale === 'en' || locale === 'kk';
+const useSectionV2 = ['ru', 'en', 'kk'].includes(locale);
 const sectionV2Text = locale === 'en'
   ? {
       resourceWord: (count: number) => count === 1 ? 'resource' : 'resources',
