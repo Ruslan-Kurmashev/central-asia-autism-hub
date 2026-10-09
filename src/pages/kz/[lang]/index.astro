@@ -28,7 +28,7 @@ interface Props {
 const { locale } = Astro.props;
 const copy = UI[locale];
 const contentCopy = CONTENT_UI[locale];
-const useHomeV2 = locale === 'ru' || locale === 'en' || locale === 'kk';
+const useHomeV2 = ['ru', 'en', 'kk'].includes(locale);
 
 const legacyHomeSections: Array<{
   section: Section;
