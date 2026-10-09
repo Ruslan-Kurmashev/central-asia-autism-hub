@@ -44,6 +44,11 @@ sources:
     publicationYear: 2020
     note: "Маршрут из ПМСП в специализированную службу психического здоровья при необходимости."
     accessedAt: 2026-10-09
+  - title: "Экстренные номера 112 и 103"
+    url: "https://egov.kz/cms/en/articles/emergency_number_112"
+    organisation: "eGov.kz"
+    note: "Официальная информация о едином экстренном номере 112 и номере скорой помощи 103."
+    accessedAt: 2026-10-09
   - title: "Autism spectrum disorder in under 19s: recognition, referral and diagnosis"
     url: "https://www.nice.org.uk/guidance/cg128/chapter/Recommendations"
     organisation: "NICE"
