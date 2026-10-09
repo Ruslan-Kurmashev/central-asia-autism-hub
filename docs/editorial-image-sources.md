@@ -97,3 +97,5 @@ The previously considered Pexels photo by Tara Winstead (https://www.pexels.com/
 | `kz-school-schedule-books.svg` | AutismHub editorial, created 2026-10-09 | Original SVG vector | School notebook, books, visual schedule cards; no people, KZ-HLP-006. |
 
 | `kz-social-support-documents.svg` | AutismHub editorial, created 2026-10-09 | Original SVG vector | Official documents, checklist and social support card; no people; KZ-HLP-007. |
+
+| `kz-service-payment-check.svg` | AutismHub editorial, created 2026-10-09 | Original SVG vector | Contract, receipt and checklist; no people, KZ-HLP-008. |
