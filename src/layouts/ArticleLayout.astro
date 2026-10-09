@@ -110,14 +110,43 @@ const researchLabel: Record<Locale, string> = {
             </div>
 
             {data.featuredImage && (
-              <figure class="article-v2__hero-art">
-                <img
-                  src={data.featuredImage}
-                  alt={data.featuredImageAlt ?? ''}
-                  loading="eager"
-                  fetchpriority="high"
-                  decoding="async"
-                />
+              <figure class:list={['article-v2__hero-art', researchDetails?.featuredImageCredit && 'article-v2__hero-art--source']}>
+                {researchDetails?.featuredImageSourceUrl ? (
+                  <a
+                    class="article-v2__hero-original"
+                    href={researchDetails.featuredImageSourceUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label={locale === 'ru' ? 'Открыть оригинальный рисунок исследования' : 'Open original research figure'}
+                  >
+                    <img
+                      src={data.featuredImage}
+                      alt={data.featuredImageAlt ?? ''}
+                      loading="eager"
+                      fetchpriority="high"
+                      decoding="async"
+                    />
+                  </a>
+                ) : (
+                  <img
+                    src={data.featuredImage}
+                    alt={data.featuredImageAlt ?? ''}
+                    loading="eager"
+                    fetchpriority="high"
+                    decoding="async"
+                  />
+                )}
+                {researchDetails?.featuredImageCredit && (
+                  <figcaption class="article-v2__hero-credit">
+                    {researchDetails.featuredImageCredit}
+                    {researchDetails.featuredImageLicenseUrl && (
+                      <>
+                        {' '}
+                        <a href={researchDetails.featuredImageLicenseUrl} rel="external">CC BY 4.0</a>.
+                      </>
+                    )}
+                  </figcaption>
+                )}
               </figure>
             )}
 
