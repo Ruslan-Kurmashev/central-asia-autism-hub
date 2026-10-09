@@ -14,6 +14,8 @@ audience:
   - families
   - general
 versionNote: "9 октября 2026: проверены официальные ссылки на услугу и инструкцию eGov; актуальные поля поиска указаны по справке от 7 апреля 2026 года."
+featuredImage: "/central-asia-autism-hub/images/editorial/kz-medical-license-check.svg"
+featuredImageAlt: "Экран компьютера с поиском документов, отметками проверки и увеличительным стеклом."
 author: Ruslan Kurmashev
 editor: Ruslan Kurmashev
 riskLevel: lower
