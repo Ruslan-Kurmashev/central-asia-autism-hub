@@ -10,8 +10,9 @@
     "check": "astro check",
     "build": "astro build",
     "preview": "astro preview",
-    "validate": "npm run check:typography && npm run check && npm run build && npm run check:internal-links",
-    "check:internal-links": "node scripts/check-internal-links.mjs"
+    "validate": "npm run check:typography && npm run check && npm run build && npm run check:internal-links && npm run check:research-routes",
+    "check:internal-links": "node scripts/check-internal-links.mjs",
+    "check:research-routes": "node scripts/check-research-routes.mjs"
   },
   "dependencies": {
     "@astrojs/sitemap": "3.7.3",
