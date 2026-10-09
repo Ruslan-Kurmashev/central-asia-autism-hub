@@ -21,7 +21,9 @@ editor: Ruslan Kurmashev
 riskLevel: lower
 disclaimerType: informational
 conflictOfInterest: "Конфликт интересов не заявлен."
-draft: true
+publishedAt: 2026-10-09
+updatedAt: 2026-10-09
+draft: false
 keyPoints:
   - "Официальный сервис проверки разрешений и лицензий работает через eGov/eLicense и предоставляется бесплатно."
   - "Поиск можно выполнять по ИИН/БИН, номеру документа, лицензиату, виду деятельности и другим параметрам."
