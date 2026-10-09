@@ -32,7 +32,7 @@ const { locale, section } = Astro.props;
 const copy = UI[locale];
 const contentCopy = CONTENT_UI[locale];
 const sectionCopy = copy.sections[section];
-const useSectionV2 = locale === 'ru' || locale === 'en';
+const useSectionV2 = locale === 'ru' || locale === 'en' || locale === 'kk';
 const sectionV2Text = locale === 'en'
   ? {
       resourceWord: (count: number) => count === 1 ? 'resource' : 'resources',
@@ -49,7 +49,23 @@ const sectionV2Text = locale === 'en'
       primaryTopics: 'Main topics',
       emptyGroup: 'Resources for this topic are in preparation.',
     }
-  : {
+  : locale === 'kk'
+    ? {
+        resourceWord: (_count: number) => 'материал',
+        navigation: 'Бөлім бойынша навигация',
+        resourcesAndTopics: 'Материалдар мен тақырыптар',
+        topics: 'Бөлім тақырыптары',
+        hasMaterials: 'Жарияланған материалдарды көру үшін тақырыпты ашыңыз. Жаңа материалдар мазмұны мен дереккөздері тексерілгеннен кейін қосылады.',
+        noMaterials: 'Бөлімнің негізгі бағыттары анықталды. Материалдар мазмұны мен дереккөздері тексерілгеннен кейін біртіндеп қосылады.',
+        otherParent: 'Басқа материалдар',
+        otherGeneral: 'Қосымша материалдар',
+        otherParentDescription: 'Әзірге негізгі тақырыптық топтарға енгізілмеген жарияланған материалдар.',
+        otherGeneralDescription: 'Бұл бөлімнің тақырыптарына әлі бөлінбеген жарияланған материалдар.',
+        structure: 'Бөлім құрылымы',
+        primaryTopics: 'Негізгі тақырыптар',
+        emptyGroup: 'Осы тақырып бойынша материалдар әзірленіп жатыр.',
+      }
+    : {
       resourceWord: russianMaterialWord,
       navigation: 'Навигация по разделу',
       resourcesAndTopics: 'Материалы и темы',
@@ -191,6 +207,33 @@ const englishParentGroups: Record<string, { title: string; description: string }
   },
 };
 
+const kazakhParentGroups: Record<string, { title: string; description: string }> = {
+  'autism-basics': {
+    title: 'Аутизм туралы негізгі түсінік',
+    description: 'Аутизмнің ерекшеліктері, негізгі ұғымдар және түсінікті кіріспе ақпарат.',
+  },
+  development: {
+    title: 'Баланың дамуы',
+    description: 'Даму кезеңдері және маманмен талқылауға болатын мәселелер.',
+  },
+  assessment: {
+    title: 'Бағалау және диагностика',
+    description: 'Скрининг, кешенді бағалау, диагностика және Қазақстандағы мамандардың рөлі.',
+  },
+  'after-diagnosis': {
+    title: 'Бағалау мен диагноздан кейін',
+    description: 'Бағалау нәтижесін түсіну және келесі қадамдарды жоспарлау.',
+  },
+  support: {
+    title: 'Қолдау тәсілдері',
+    description: 'Коммуникация, оқу, сенсорлық қолдау және жеке қажеттіліктерге сай көмек.',
+  },
+  feeding: {
+    title: 'Тамақтану және тамақтандыру қиындықтары',
+    description: 'Тамақтану қиындықтары, оларды бағалау және тағамдық қолдау.',
+  },
+};
+
 const genericGroupDefinitions = sectionCopy.topics.map((topic) => ({
   id: topic.id,
   title: topic.title,
@@ -202,8 +245,16 @@ const groupDefinitions =
   section === 'parents'
     ? parentGroupDefinitions.map((group) => ({
         ...group,
-        title: locale === 'en' ? englishParentGroups[group.id].title : group.title,
-        description: locale === 'en' ? englishParentGroups[group.id].description : group.description,
+        title: locale === 'en'
+          ? englishParentGroups[group.id].title
+          : locale === 'kk'
+            ? kazakhParentGroups[group.id].title
+            : group.title,
+        description: locale === 'en'
+          ? englishParentGroups[group.id].description
+          : locale === 'kk'
+            ? kazakhParentGroups[group.id].description
+            : group.description,
       }))
     : genericGroupDefinitions;
 
