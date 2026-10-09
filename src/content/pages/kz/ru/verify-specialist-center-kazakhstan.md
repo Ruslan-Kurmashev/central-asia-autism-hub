@@ -50,6 +50,12 @@ sources:
     organisation: "eGov.kz"
     note: "Официальный бесплатный сервис поиска и проверки статуса лицензий и разрешений."
     accessedAt: 2026-10-09
+  - title: "Как проверить легитимность выданной лицензии или разрешения"
+    url: "https://egov.kz/cms/ru/articles/bus_lic_akk/license-checking"
+    organisation: "eGov.kz"
+    publicationYear: 2026
+    note: "Официальная инструкция, обновлённая 7 апреля 2026 года; быстрый и расширенный поиск в eLicense."
+    accessedAt: 2026-10-09
   - title: "Квалификационные характеристики должностей педагогов"
     url: "https://adilet.zan.kz/rus/docs/V090005750_"
     organisation: "ИПС «Әділет» / Министерство просвещения Республики Казахстан"
