@@ -87,3 +87,5 @@ Additional rules:
 | `kz-development-path-shapes.svg` | AutismHub editorial, created 2026-10-09 | Original SVG vector | Abstract path with geometric shapes, no people or third-party photographic rights. Used for KZ-HLP-002. |
 
 The previously considered Pexels photo by Tara Winstead (https://www.pexels.com/photo/wooden-toys-on-the-corner-of-the-bedroom-6692939/) was not downloaded or embedded. The final illustration is an original editable vector, not a photo.
+
+| `kz-specialist-verification.svg` | AutismHub editorial, created 2026-10-09 | Original SVG vector | Folder, documents and magnifier, without people, for KZ-HLP-003. |
