@@ -18,7 +18,14 @@ const homeHref = locale ? localePath(locale) : sitePath();
 <header class="site-header">
   <div class="site-header__top container">
     <a class="brand" href={homeHref} aria-label={SITE.name}>
-      <span class="brand__symbol" aria-hidden="true">CA</span>
+      <img
+        class="brand__symbol"
+        src={`${sitePath()}brand/autism-hub-kazakhstan-mark.svg`}
+        alt=""
+        width="48"
+        height="48"
+        decoding="async"
+      />
       <span class="brand__text">
         <span class="brand__name">{SITE.name}</span>
         <span class="brand__parent">{SITE.umbrellaName}</span>
