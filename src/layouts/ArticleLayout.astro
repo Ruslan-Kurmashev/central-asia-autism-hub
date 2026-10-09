@@ -15,14 +15,15 @@ interface Heading {
 }
 
 interface Props {
-  entry: CollectionEntry<'pages'>;
+  entry: CollectionEntry<'pages'> | CollectionEntry<'research'>;
   alternatePaths: Partial<Record<Locale, string>>;
   headings?: Heading[];
-  nextEntry?: CollectionEntry<'pages'>;
+  nextEntry?: CollectionEntry<'pages'> | CollectionEntry<'research'>;
 }
 
 const { entry, alternatePaths, headings = [], nextEntry } = Astro.props;
 const data = entry.data;
+const researchDetails = entry.collection === 'research' ? entry.data : null;
 const locale = data.language;
 const copy = CONTENT_UI[locale];
 const sectionCopy = UI[locale].sections[data.section];
@@ -46,6 +47,41 @@ const useArticleV2 = locale === 'ru';
 const tocHeadings = headings.filter((heading) => heading.depth === 2 || heading.depth === 3);
 const displayDate = data.updatedAt ?? data.publishedAt;
 const displayDateLabel = data.updatedAt ? copy.updatedLabel : copy.publishedLabel;
+const researchCopy = {
+  ru: {
+    label: 'Разбор научного исследования',
+    originalTitle: 'Оригинальная статья',
+    journal: 'Журнал',
+    year: 'Год исследования',
+    studyType: 'Как проводилось исследование',
+    sample: 'Основная выборка',
+    source: 'Первоисточник',
+    sourceLink: 'Открыть оригинал исследования',
+    lastChecked: 'Источник проверен',
+  },
+  kk: {
+    label: 'Ғылыми зерттеуді түсіндіру',
+    originalTitle: 'Түпнұсқа мақала',
+    journal: 'Журнал',
+    year: 'Жарияланған жылы',
+    studyType: 'Зерттеу түрі',
+    sample: 'Негізгі іріктеме',
+    source: 'Бастапқы дереккөз',
+    sourceLink: 'Зерттеудің түпнұсқасын ашу',
+    lastChecked: 'Дереккөз тексерілді',
+  },
+  en: {
+    label: 'Research explained',
+    originalTitle: 'Original publication',
+    journal: 'Journal',
+    year: 'Publication year',
+    studyType: 'Study design',
+    sample: 'Main sample',
+    source: 'Original research',
+    sourceLink: 'Read the original paper',
+    lastChecked: 'Source checked',
+  },
+}[locale];
 ---
 
 <BaseLayout
@@ -76,7 +112,9 @@ const displayDateLabel = data.updatedAt ? copy.updatedLabel : copy.publishedLabe
                 <span aria-current="page">{data.title}</span>
               </p>
 
-              <p class="article-v2__eyebrow">{copy.articleLabel}</p>
+              <p class="article-v2__eyebrow">
+                {researchDetails ? researchCopy.label : copy.articleLabel}
+              </p>
               <h1>{data.title}</h1>
             </div>
 
@@ -115,9 +153,48 @@ const displayDateLabel = data.updatedAt ? copy.updatedLabel : copy.publishedLabe
                   <dd>{data.editor}</dd>
                 </div>
               </dl>
+
+              {researchDetails && (
+                <section class="article-v2__research-facts" aria-label={researchCopy.label}>
+                  <dl>
+                    <div>
+                      <dt>{researchCopy.originalTitle}</dt>
+                      <dd><cite>{researchDetails.originalTitle}</cite></dd>
+                    </div>
+                    <div>
+                      <dt>{researchCopy.journal}</dt>
+                      <dd>{researchDetails.journalOrOrganisation} ({researchDetails.publicationYear})</dd>
+                    </div>
+                    <div>
+                      <dt>{researchCopy.studyType}</dt>
+                      <dd>{researchDetails.studyType}</dd>
+                    </div>
+                    {researchDetails.sampleSize && (
+                      <div>
+                        <dt>{researchCopy.sample}</dt>
+                        <dd>{researchDetails.sampleSize.toLocaleString(locale === 'ru' ? 'ru-RU' : 'en-US')}</dd>
+                      </div>
+                    )}
+                    <div>
+                      <dt>{researchCopy.source}</dt>
+                      <dd>
+                        <a href={researchDetails.sourceUrl} rel="external">
+                          {researchCopy.sourceLink}
+                        </a>
+                      </dd>
+                    </div>
+                    <div>
+                      <dt>{researchCopy.lastChecked}</dt>
+                      <dd>
+                        <time datetime={researchDetails.sourceStatusCheckedAt.toISOString()}>
+                          {dateFormatter.format(researchDetails.sourceStatusCheckedAt)}
+                        </time>
+                      </dd>
+                    </div>
+                  </dl>
+                </section>
+              )}
             </div>
-
-
           </div>
         </header>
 
@@ -245,7 +322,7 @@ const displayDateLabel = data.updatedAt ? copy.updatedLabel : copy.publishedLabe
               <span aria-hidden="true"> / </span>
               <span aria-current="page">{data.title}</span>
             </p>
-            <p class="eyebrow">{copy.articleLabel}</p>
+            <p class="eyebrow">{researchDetails ? researchCopy.label : copy.articleLabel}</p>
             <h1>{data.title}</h1>
             {data.featuredImage && (
               <figure class="article-header__media">
@@ -259,6 +336,13 @@ const displayDateLabel = data.updatedAt ? copy.updatedLabel : copy.publishedLabe
               </figure>
             )}
             <p class="article-header__summary">{data.summary}</p>
+            {researchDetails && (
+              <p>
+                {researchCopy.journal}: {researchDetails.journalOrOrganisation} ({researchDetails.publicationYear}).
+                {' '}
+                <a href={researchDetails.sourceUrl} rel="external">{researchCopy.sourceLink}</a>.
+              </p>
+            )}
 
             <dl class="article-meta">
               {data.publishedAt && (
@@ -354,6 +438,42 @@ const displayDateLabel = data.updatedAt ? copy.updatedLabel : copy.publishedLabe
 </script>
 
 <style is:global>
+  .article-v2__research-facts {
+    margin-top: 1.2rem;
+    padding: 1.15rem 1.25rem;
+    border: 1px solid var(--article-line, #d6e4ef);
+    border-radius: var(--radius-medium);
+    background: #ffffff;
+  }
+
+  .article-v2__research-facts dl {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 14rem), 1fr));
+    gap: 0.85rem 1.5rem;
+    margin: 0;
+  }
+
+  .article-v2__research-facts dt {
+    color: #536879;
+    font-size: 0.79rem;
+    font-weight: 720;
+    line-height: 1.4;
+  }
+
+  .article-v2__research-facts dd {
+    margin: 0.25rem 0 0;
+    color: #183a57;
+    font-size: 0.92rem;
+    line-height: 1.55;
+    overflow-wrap: anywhere;
+  }
+
+  .article-v2__research-facts a {
+    color: #145c95;
+    text-decoration: underline;
+    text-underline-offset: 0.18em;
+  }
+
   .article-page,
   .article-content,
   .article-body,
