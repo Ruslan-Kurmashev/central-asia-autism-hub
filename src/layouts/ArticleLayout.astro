@@ -46,9 +46,6 @@ const useArticleV2 = locale === 'ru';
 const tocHeadings = headings.filter((heading) => heading.depth === 2 || heading.depth === 3);
 const displayDate = data.updatedAt ?? data.publishedAt;
 const displayDateLabel = data.updatedAt ? copy.updatedLabel : copy.publishedLabel;
-const articleHeroStyle = data.featuredImage
-  ? `--article-hero-image: url("${data.featuredImage}")`
-  : undefined;
 ---
 
 <BaseLayout
@@ -68,41 +65,53 @@ const articleHeroStyle = data.featuredImage
             'article-v2__header',
             data.featuredImage && 'article-v2__header--image',
           ]}
-          style={articleHeroStyle}
         >
           <div class="container article-v2__header-inner">
-            <p class="article-v2__breadcrumb">
-              <a href={localePath(locale)}>{UI[locale].homeLabel}</a>
-              <span aria-hidden="true"> / </span>
-              <a href={sectionPath(locale, data.section)}>{sectionCopy.title}</a>
-              <span aria-hidden="true"> / </span>
-              <span aria-current="page">{data.title}</span>
-            </p>
+            <div class="article-v2__header-copy">
+              <p class="article-v2__breadcrumb">
+                <a href={localePath(locale)}>{UI[locale].homeLabel}</a>
+                <span aria-hidden="true"> / </span>
+                <a href={sectionPath(locale, data.section)}>{sectionCopy.title}</a>
+                <span aria-hidden="true"> / </span>
+                <span aria-current="page">{data.title}</span>
+              </p>
 
-            <p class="article-v2__eyebrow">{copy.articleLabel}</p>
-            <h1>{data.title}</h1>
-            <p class="article-v2__summary">{data.summary}</p>
+              <p class="article-v2__eyebrow">{copy.articleLabel}</p>
+              <h1>{data.title}</h1>
+              <p class="article-v2__summary">{data.summary}</p>
 
-            <dl class="article-v2__meta">
-              {displayDate && (
+              <dl class="article-v2__meta">
+                {displayDate && (
+                  <div>
+                    <dt>{displayDateLabel}</dt>
+                    <dd>
+                      <time datetime={displayDate.toISOString()}>
+                        {dateFormatter.format(displayDate)}
+                      </time>
+                    </dd>
+                  </div>
+                )}
                 <div>
-                  <dt>{displayDateLabel}</dt>
-                  <dd>
-                    <time datetime={displayDate.toISOString()}>
-                      {dateFormatter.format(displayDate)}
-                    </time>
-                  </dd>
+                  <dt>{copy.authorLabel}</dt>
+                  <dd>{data.author}</dd>
                 </div>
-              )}
-              <div>
-                <dt>{copy.authorLabel}</dt>
-                <dd>{data.author}</dd>
+                <div>
+                  <dt>{copy.editorLabel}</dt>
+                  <dd>{data.editor}</dd>
+                </div>
+              </dl>
+            </div>
+
+            {data.featuredImage && (
+              <div class="article-v2__hero-art" aria-hidden="true">
+                <img
+                  src={data.featuredImage}
+                  alt=""
+                  loading="lazy"
+                  decoding="async"
+                />
               </div>
-              <div>
-                <dt>{copy.editorLabel}</dt>
-                <dd>{data.editor}</dd>
-              </div>
-            </dl>
+            )}
           </div>
         </header>
 
