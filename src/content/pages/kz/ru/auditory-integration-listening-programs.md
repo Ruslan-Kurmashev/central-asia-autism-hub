@@ -2,6 +2,8 @@
 title: "Слуховая интеграция и listening-программы: что известно об эффективности"
 summary: "Что такое слуховая интеграционная тренировка (Auditory Integration Training, AIT), чем она отличается от защиты от шума и современных listening-программ и что показывают исследования и рекомендации."
 description: "Практическое руководство для родителей об AIT, методе Томатиса и современных listening-программах при аутизме: доказательства, ограничения, проверка слуха, адаптация среды и вопросы специалисту."
+featuredImage: "/central-asia-autism-hub/images/editorial/photos/parent-sensory-headphones.jpg"
+featuredImageAlt: "На столе лежат наушники, игрушка и канцелярские предметы; это не оборудование для слуховой терапии."
 country: kz
 language: ru
 section: parents
