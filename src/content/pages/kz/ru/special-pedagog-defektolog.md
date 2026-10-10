@@ -44,10 +44,10 @@ sources:
     publicationYear: 2022
     note: "Для КППК правила описывают специальную психолого-педагогическую поддержку, психолого-педагогическую оценку, разработку ИРП и консультирование семьи."
     accessedAt: 2026-10-01
-  - title: "Evidence-Based Practices for Children, Youth, and Young Adults with Autism"
-    url: "https://ncaep.fpg.unc.edu/sites/ncaep.fpg.unc.edu/files/imce/documents/EBP%20Executive%20Summary.pdf"
-    organisation: "National Clearinghouse on Autism Evidence and Practice"
-    publicationYear: 2020
+  - title: "Evidence-Based Practices for Children, Youth, and Young Adults with Autism: Third Generation Review"
+    url: "https://pubmed.ncbi.nlm.nih.gov/33449225/"
+    organisation: "Journal of Autism and Developmental Disorders / Hume et al."
+    publicationYear: 2021
     note: "Перечень evidence-based practices включает Direct Instruction, Prompting, Reinforcement, Self-Management, Task Analysis, Video Modeling, Visual Supports, Social Skills Training и другие практики."
     accessedAt: 2026-10-01
   - title: "Interventions for students with autism in inclusive settings: A best-evidence synthesis and meta-analysis"
