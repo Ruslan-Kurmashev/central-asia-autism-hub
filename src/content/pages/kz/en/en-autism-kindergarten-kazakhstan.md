@@ -6,7 +6,7 @@ country: kz
 language: en
 section: help-kazakhstan
 topic: education
-slug: autism-kindergarten-kazakhstan
+slug: autism-kindergarten-support-kazakhstan
 translationKey: help-autism-kindergarten-kazakhstan
 translationStatus: checked
 audience:
