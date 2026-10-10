@@ -2,6 +2,8 @@
 title: "Обучение повседневным навыкам при аутизме: ADL и самостоятельность в реальной жизни"
 summary: "Как обучать одеванию, гигиене, приготовлению еды, домашним делам и другим повседневным навыкам: выбор цели, анализ задачи, подсказки, визуальная поддержка, перенос и оценка самостоятельности."
 description: "Практическое руководство для родителей об обучении Activities of Daily Living (ADL) и Instrumental Activities of Daily Living (IADL) при аутизме: цели, методы, доказательства, безопасность и оценка результата."
+featuredImage: "/central-asia-autism-hub/images/editorial/photos/parent-toothbrush-routine.jpg"
+featuredImageAlt: "Руки ребёнка у раковины с зубной щёткой: иллюстрация повседневного навыка ухода за собой."
 country: kz
 language: ru
 section: parents
