@@ -35,42 +35,42 @@ sources:
     url: "https://adilet.zan.kz/rus/docs/V2200027182"
     organisation: "Adilet legal information system / Ministry of Health of Kazakhstan"
     publicationYear: 2022
-    note: "Official source cited in the Russian original. Check the current consolidated version and effective dates before relying on a specific requirement."
+    note: "Consolidated paediatric care standard after the Minister of Health's Order No. 11 of 21 February 2025; includes child development and early intervention centres and multidisciplinary teams."
     accessedAt: 2026-10-09
   - title: "Standard for medical and social care in the field of mental health in Kazakhstan"
     url: "https://adilet.zan.kz/rus/docs/V2000021712"
     organisation: "Adilet legal information system / Ministry of Health of Kazakhstan"
     publicationYear: 2020
-    note: "Official source cited in the Russian original. Check the current consolidated version and effective dates before relying on a specific requirement."
+    note: "Mental health care standard in the version amended on 27 December 2024, distinguishing primary healthcare from specialist mental health services."
     accessedAt: 2026-10-09
   - title: "Rules for state services in psychological and educational support"
     url: "https://adilet.zan.kz/rus/docs/V2000020744"
     organisation: "Adilet legal information system / Ministry of Education of Kazakhstan"
     publicationYear: 2020
-    note: "Official source cited in the Russian original. Check the current consolidated version and effective dates before relying on a specific requirement."
+    note: "State psychological and pedagogical support service rules as amended by Order No. 180-NQ dated 26 June 2026, effective from 12 July 2026."
     accessedAt: 2026-10-09
   - title: "Application for psychological and educational support for children in educational institutions"
     url: "https://www.gov.kz/services/4292?lang=ru"
     organisation: "gov.kz / Ministry of Education of Kazakhstan"
-    note: "Official source cited in the Russian original. Check the current consolidated version and effective dates before relying on a specific requirement."
+    note: "Official government service page listing application channels, timeframes and document requirements."
     accessedAt: 2026-10-09
   - title: "Standard for specialised psychological and educational support for children with disabilities"
     url: "https://adilet.zan.kz/rus/docs/V2500036137"
     organisation: "Adilet legal information system / Ministry of Education of Kazakhstan"
     publicationYear: 2025
-    note: "Official source cited in the Russian original. Check the current consolidated version and effective dates before relying on a specific requirement."
+    note: "Defines specialist psychological and educational support and use of a PMPK conclusion as its basis."
     accessedAt: 2026-10-09
   - title: "Rules for medical and social expert assessment"
     url: "https://adilet.zan.kz/rus/docs/V2300032922"
     organisation: "Adilet legal information system / Ministry of Labour and Social Protection of Kazakhstan"
     publicationYear: 2023
-    note: "Official source cited in the Russian original. Check the current consolidated version and effective dates before relying on a specific requirement."
+    note: "Medical and social expert assessment rules as amended in 2026, including Order No. 329 of 11 August 2026."
     accessedAt: 2026-10-09
   - title: "Social Code of the Republic of Kazakhstan"
     url: "https://adilet.zan.kz/rus/docs/K2300000224"
     organisation: "Adilet legal information system"
     publicationYear: 2023
-    note: "Official source cited in the Russian original. Check the current consolidated version and effective dates before relying on a specific requirement."
+    note: "Current Social Code provisions addressing specialised social services, individual programmes and protection for people with disabilities."
     accessedAt: 2026-10-09
 ---
 
