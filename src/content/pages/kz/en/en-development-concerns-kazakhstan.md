@@ -30,6 +30,12 @@ keyPoints:
   - "A sudden deterioration or new medical symptoms require an appropriate medical response, not waiting for a routine PMPK appointment."
 evidenceLimitations: "The availability of services, professionals and referral arrangements differs by region and organisation. This guide cannot determine the appropriate clinical pathway for an individual child. Check current referral rules and document requirements with the relevant official service before applying."
 sources:
+  - title: "Rules on screening, including early childhood developmental screening"
+    url: "https://old.adilet.zan.kz/rus/docs/V1000006490"
+    organisation: "ИПС «Әділет» / Министерство здравоохранения Республики Казахстан"
+    publicationYear: 2010
+    note: "Sections 80-89 as amended by Ministry of Health Order No. 82 dated 21 August 2025; developmental screening from birth to age six."
+    accessedAt: 2026-10-10
   - title: "Standard for the organisation of paediatric care in Kazakhstan"
     url: "https://adilet.zan.kz/rus/docs/V2200027182"
     organisation: "Adilet legal information system / Ministry of Health of Kazakhstan"
@@ -97,6 +103,8 @@ Saying "I think my child's development is different" is important, but concrete 
 Kazakhstan's current paediatric care standard provides for child development and early intervention centres within primary healthcare, child development rooms and psychophysical screening.
 
 This makes the child's polyclinic a reasonable first contact for questions about health, development and medical referrals.
+
+Under the [Kazakh screening rules amended by Order No. 82 of 21 August 2025](https://old.adilet.zan.kz/rus/docs/V1000006490), developmental screening is provided for children **from birth to six years of age**. The process includes information from parents and a health professional's age-appropriate developmental checks. Screening identifies possible developmental concerns; it does not itself diagnose autism.
 
 A practical question to ask is:
 
