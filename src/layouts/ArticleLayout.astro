@@ -4,7 +4,7 @@ import DevelopmentMilestoneAgeSelector from '../components/DevelopmentMilestoneA
 import { CONTENT_UI, DATE_LOCALES } from '../i18n/content';
 import { UI } from '../i18n/ui';
 import { articlePath, localePath, sectionPath } from '../lib/urls';
-import { SITE, type Locale } from '../site.config';
+import { SITE, SUPPORTED_LOCALES, type Locale } from '../site.config';
 import '../styles/article-v2.css';
 import BaseLayout from './BaseLayout.astro';
 
@@ -25,6 +25,7 @@ const { entry, alternatePaths, headings = [], nextEntry } = Astro.props;
 const data = entry.data;
 const researchDetails = entry.collection === 'research' ? entry.data : null;
 const locale = data.language;
+const hasMissingTranslations = SUPPORTED_LOCALES.some(language => !alternatePaths[language]);
 const copy = CONTENT_UI[locale];
 const sectionCopy = UI[locale].sections[data.section];
 const dateFormatter = new Intl.DateTimeFormat(DATE_LOCALES[locale], {
@@ -162,6 +163,9 @@ const researchLabel: Record<Locale, string> = {
 
             <div class="article-v2__header-details">
               <p class="article-v2__summary">{data.summary}</p>
+              {hasMissingTranslations && (
+                <p class="article-v2__translation-notice" role="note">{copy.translationNotice}</p>
+              )}
 
               <dl class="article-v2__meta">
                 {displayDate && (
