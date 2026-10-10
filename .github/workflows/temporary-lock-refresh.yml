@@ -19,7 +19,8 @@ jobs:
           node-version: 24
       - name: Regenerate lock against patched Astro
         run: |
-          npm install astro@7.3.8 --save-exact --package-lock-only --ignore-scripts --no-audit
+          npm pkg set "dependencies.astro=7.3.8" "devDependencies.@astrojs/markdown-remark=7.3.2"
+          npm install --package-lock-only --ignore-scripts --no-audit
           npm audit fix --package-lock-only --ignore-scripts --no-fund || true
       - name: Return refreshed dependency manifests for reviewed commit
         run: |
