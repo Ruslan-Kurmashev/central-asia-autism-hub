@@ -11,13 +11,14 @@
     "prebuild": "node scripts/sync-editorial-photos.mjs",
     "build": "astro build",
     "preview": "astro preview",
-    "validate": "npm run check:typography && npm run check && npm run build && npm run check:internal-links && npm run check:english-design && npm run check:research-routes && npm run check:kazakh-design && npm run check:kz-help-en-translations && npm run check:kz-help-kk-translations",
+    "validate": "npm run check:typography && npm run check && npm run build && npm run check:internal-links && npm run check:english-design && npm run check:research-routes && npm run check:kazakh-design && npm run check:kz-help-en-translations && npm run check:kz-help-kk-translations && npm run check:parent-images",
     "check:internal-links": "node scripts/check-internal-links.mjs",
     "check:english-design": "node scripts/check-english-design.mjs",
     "check:research-routes": "node scripts/check-research-routes.mjs",
     "check:kazakh-design": "node scripts/check-kazakh-design.mjs",
     "check:kz-help-en-translations": "node scripts/check-kz-help-en-translations.mjs",
-    "check:kz-help-kk-translations": "node scripts/check-kz-help-kk-translations.mjs"
+    "check:kz-help-kk-translations": "node scripts/check-kz-help-kk-translations.mjs",
+    "check:parent-images": "node scripts/check-parent-image-coverage.mjs"
   },
   "dependencies": {
     "@astrojs/sitemap": "3.7.3",
