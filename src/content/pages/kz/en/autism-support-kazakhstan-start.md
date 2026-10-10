@@ -123,7 +123,7 @@ You do not need to decide on a diagnosis yourself. Write down specific observati
 
 If your child's condition changes **suddenly**, new medical symptoms appear or there is an immediate risk to health or safety, seek medical care appropriate to the urgency rather than waiting for a routine PMPK appointment.
 
-See also: [Where to seek help if you are concerned about your child's development in Kazakhstan](/central-asia-autism-hub/kz/en/help-kazakhstan/development-concerns-kazakhstan/).
+See also: [Where to seek help if you are concerned about your child's development in Kazakhstan](/central-asia-autism-hub/kz/en/help-kazakhstan/child-development-concerns-kazakhstan/).
 
 ## 2. If you need a medical autism diagnosis
 
@@ -237,7 +237,7 @@ Keep two questions separate:
 
 These are not the same question. A licence, diploma or training certificate does not make an unproven intervention evidence-based.
 
-See: [How to check a specialist or autism support centre in Kazakhstan](/central-asia-autism-hub/kz/en/help-kazakhstan/verify-specialist-center-kazakhstan/).
+See: [How to check a specialist or autism support centre in Kazakhstan](/central-asia-autism-hub/kz/en/help-kazakhstan/check-autism-specialist-kazakhstan/).
 
 ## If your child already has an autism diagnosis
 
