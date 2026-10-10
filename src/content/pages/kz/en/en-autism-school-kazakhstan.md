@@ -12,7 +12,7 @@ translationStatus: checked
 audience:
   - parents
   - families
-versionNote: "10 October 2026: English translation checked against the Russian article updated on 9 October 2026, including the 2026 school-admission schedule, updated school support regulations and medical advisory commission rules for home education."
+versionNote: "10 October 2026: legal QA corrected the revoked 2017 PMPK source and the mismatched source notes; admission dates now explain the regional phasing."
 featuredImage: "/central-asia-autism-hub/images/editorial/photos/kz-help-006.jpg"
 featuredImageAlt: "A school classroom with desks, learning materials and a board."
 author: Ruslan Kurmashev
@@ -42,16 +42,21 @@ sources:
     organisation: "Adilet legal information system / Ministry of Education of Kazakhstan"
     publicationYear: 2026
     accessedAt: 2026-10-09
+  - title: "Regional first-grade enrolment schedule, 2026-2027"
+    url: "https://www.gov.kz/memleket/entities/tmr-roo/press/news/details/1225580?lang=ru"
+    organisation: "gov.kz / Министерство просвещения Республики Казахстан"
+    publicationYear: 2026
+    accessedAt: 2026-10-10
   - title: "Admission to a general education school"
     url: "https://www.gov.kz/situations/15/80?lang=ru"
     organisation: "gov.kz"
-    note: "For the May 2026 amendments governing psychological and pedagogical support."
+    note: "National first-grade admission window in 2026; region-specific staggered opening dates were announced separately."
     accessedAt: 2026-10-09
-  - title: "Model operating rules for types of special education organisations"
-    url: "https://adilet.zan.kz/rus/docs/V1700014995"
+  - title: "Model operating rules for education organisations of the relevant types and categories"
+    url: "https://adilet.zan.kz/rus/docs/V2200029329"
     organisation: "Adilet legal information system / Ministry of Education of Kazakhstan"
     publicationYear: 2017
-    note: "2026-2027 Grade 1 application period: 27 May to 31 August 2026, with admission channels and requirements described in the official guidance."
+    note: "The current education-organisation operating rules, including provisions on PMPK educational needs assessment."
     accessedAt: 2026-10-09
   - title: "Regulations governing the medical advisory commission"
     url: "https://adilet.zan.kz/rus/docs/V2200027505"
@@ -69,7 +74,7 @@ These are related but separate matters. They should not be determined automatica
 
 ## Starting Grade 1 in the 2026-2027 academic year
 
-According to the [official gov.kz guidance](https://www.gov.kz/situations/15/80?lang=ru), applications for Grade 1 for the **2026-2027 academic year** were accepted from **27 May to 31 August 2026**, with a phased start in different regions. Parents and legal representatives could submit applications through eGov.kz or directly through a school office. These dates apply to **that academic year only** and should not be assumed to apply to future years. The [official English-language admission page](https://www.gov.kz/situations/15/intro?lang=en) is also available.
+According to [gov.kz](https://www.gov.kz/situations/15/80?lang=ru), the national first-grade admission campaign for the **2026-2027 academic year** ran from **27 May to 31 August 2026**, but applications opened [in phases by region](https://www.gov.kz/memleket/entities/tmr-roo/press/news/details/1225580?lang=ru): 27 May (Astana and specified regions), 10 June (Almaty city and another group), 18 June (Shymkent and another group), and 29 June (remaining specified regions). Parents could apply through the official online channels or at their school. This was the schedule for **2026 only**; do not use these dates to plan applications in subsequent years.
 
 Under the admission rules, children who are six years old by 1 September are enrolled regardless of their level of academic preparation. Where a child turns six **after** 1 September, admission may take place at the request of their parent or legal representative. Other enrolment situations and transfers have their own procedures and should be checked separately.
 
