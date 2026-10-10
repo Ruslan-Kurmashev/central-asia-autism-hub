@@ -18,6 +18,11 @@ const compactLanguageLabel: Record<Locale, string> = {
 };
 
 const languageOrder: Locale[] = ['kk', 'ru', 'en'];
+const missingTranslationLabel: Record<Locale, string> = {
+  ru: 'Перевода нет. Открыть раздел на русском языке',
+  kk: 'Аудармасы жоқ. Қазақ тіліндегі бөлімді ашу',
+  en: 'Translation unavailable. Open the English section',
+};
 ---
 
 <nav class="language-switcher" aria-label={UI[current].languageNavigation}>
@@ -33,8 +38,8 @@ const languageOrder: Locale[] = ['kk', 'ru', 'en'];
             <a
               href={localePath(locale, paths?.[locale] ?? path)}
               lang={LANGUAGE_META[locale].htmlLang}
-              aria-label={label}
-              title={label}
+              aria-label={translationMissing ? `${label}: ${missingTranslationLabel[current]}` : label}
+              title={translationMissing ? `${label}: ${missingTranslationLabel[current]}` : label}
               aria-current={locale === current ? 'page' : undefined}
               data-translation-missing={translationMissing ? '' : undefined}
             >
