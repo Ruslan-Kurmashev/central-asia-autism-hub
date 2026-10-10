@@ -48,3 +48,8 @@ Release requires successful site validation, functioning English routes and imag
 ## Astro content ID collision fix
 
 Astro's glob content loader identifies these Markdown records by filename, even across the `ru` and `en` directories. Four English source **filenames** are therefore prefixed with `en-` to avoid overwriting published Russian content. The `slug` fields and public URL paths remain unchanged and readable in English. The 001 file already has a unique source filename.
+
+
+## Localised English route slugs
+
+To prevent duplicate Astro content IDs, each English translation uses a distinct, natural-language URL slug even when its Russian source filename was originally similar. English page slugs are: `autism-support-kazakhstan-start`, `child-development-concerns-kazakhstan`, `check-autism-specialist-kazakhstan`, `verify-medical-licence-kazakhstan`, and `autism-kindergarten-support-kazakhstan`. The Russian routes remain completely unchanged, and links in the English articles target the localised slugs.
