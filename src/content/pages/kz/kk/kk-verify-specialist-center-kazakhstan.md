@@ -8,7 +8,7 @@ section: help-kazakhstan
 topic: assessment-support
 slug: "autizm-maman-ortalyk-tekseru"
 translationKey: help-verify-specialist-center-kazakhstan
-translationStatus: pending
+translationStatus: checked
 audience:
   - parents
   - families
@@ -20,7 +20,9 @@ editor: Ruslan Kurmashev
 riskLevel: moderate
 disclaimerType: informational
 conflictOfInterest: "Мүдделер қақтығысы мәлімделмеген."
-draft: true
+publishedAt: 2026-10-10
+updatedAt: 2026-10-10
+draft: false
 keyPoints:
   - "Орталықтың атауы немесе көп сертификат көрсетуі оның нақты қандай қызмет атқаруға құқығы бар екенін дәлелдемейді."
   - "Ұйымның құқықтық мәртебесін де, баламен жұмыс істейтін жеке маманның біліктілігін де тексеріңіз."
