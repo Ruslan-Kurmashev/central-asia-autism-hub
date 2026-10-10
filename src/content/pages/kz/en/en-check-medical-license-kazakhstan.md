@@ -6,7 +6,7 @@ country: kz
 language: en
 section: help-kazakhstan
 topic: service-checklist
-slug: check-medical-license-kazakhstan
+slug: verify-medical-licence-kazakhstan
 translationKey: help-check-medical-license-kazakhstan
 translationStatus: checked
 audience:
@@ -140,4 +140,4 @@ If doubts remain, use an official government contact or complaint channel to cla
 
 After checking the licence, evaluate the qualifications of the **specific professional**, the service itself, evidence for the advertised method, costs and cancellation conditions.
 
-See also: [How to check an autism specialist or support centre in Kazakhstan](/central-asia-autism-hub/kz/en/help-kazakhstan/verify-specialist-center-kazakhstan/).
+See also: [How to check an autism specialist or support centre in Kazakhstan](/central-asia-autism-hub/kz/en/help-kazakhstan/check-autism-specialist-kazakhstan/).
