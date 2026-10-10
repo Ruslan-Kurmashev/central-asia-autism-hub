@@ -60,7 +60,7 @@ for (const [ruId, enId] of pairs) {
   assert.ok(translated.body.trim().length > source.body.trim().length * 0.70,
     `${enId}: translation appears severely abbreviated`);
   assert.ok(translated.front.includes('featuredImageAlt:'));
-  assert.ok(!translated.body.includes('—'), `${enId}: disallowed em dash`);
+  assert.ok(!translated.body.includes(String.fromCharCode(0x2014)), `${enId}: disallowed em dash`);
 
   const links = [...translated.body.matchAll(/\]\((\/central-asia-autism-hub\/kz\/en\/help-kazakhstan\/([^/]+)\/)\)/g)];
   for (const [, , targetSlug] of links) {
