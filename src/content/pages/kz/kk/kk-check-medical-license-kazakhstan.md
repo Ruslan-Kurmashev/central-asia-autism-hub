@@ -8,7 +8,7 @@ section: help-kazakhstan
 topic: service-checklist
 slug: "meditsinalyk-litsenziya-tekseru-kazakstan"
 translationKey: help-check-medical-license-kazakhstan
-translationStatus: pending
+translationStatus: checked
 audience:
   - parents
   - families
@@ -21,7 +21,9 @@ editor: Ruslan Kurmashev
 riskLevel: lower
 disclaimerType: informational
 conflictOfInterest: "Мүдделер қақтығысы мәлімделмеген."
-draft: true
+publishedAt: 2026-10-10
+updatedAt: 2026-10-10
+draft: false
 keyPoints:
   - "Орталық медициналық қызмет ұсынса, лицензияны жарнамалық суреттен емес, ресми eGov/eLicense жүйесінен тексеріңіз."
   - "Ұйымның БСН-ін немесе қажет болса ЖСН-ін, лицензия иесін, оның қазіргі мәртебесін және рұқсат етілген медициналық қызмет түрін салыстырыңыз."
