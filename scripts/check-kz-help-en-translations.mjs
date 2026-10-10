@@ -68,6 +68,18 @@ for (const [ruId, enId] of pairs) {
     `${enId}: translation appears severely abbreviated`);
   assert.ok(translated.front.includes('featuredImageAlt:'));
   assert.ok(!translated.body.includes(String.fromCharCode(0x2014)), `${enId}: disallowed em dash`);
+  if (property(translated.front, 'draft') === 'false') {
+    const enSlug = publicSlugs.get(enId);
+    const outputFile = path.resolve('dist', 'kz', 'en', 'help-kazakhstan', enSlug, 'index.html');
+    const builtPage = await readFile(outputFile, 'utf8');
+    assert.ok(builtPage.includes('article-v2__layout'),
+      `${enId}: expected same editorial article design as Russian pages`);
+    assert.ok(builtPage.includes(property(translated.front, 'featuredImage')),
+      `${enId}: published page must use the matching source photograph`);
+    assert.ok(builtPage.includes('/central-asia-autism-hub/kz/en/help-kazakhstan/'),
+      `${enId}: output should have English help section navigation`);
+  }
+
 
   const links = [...translated.body.matchAll(/\]\((\/central-asia-autism-hub\/kz\/en\/help-kazakhstan\/([^/]+)\/)\)/g)];
   for (const [, , targetSlug] of links) {
