@@ -6,7 +6,7 @@ country: kz
 language: en
 section: help-kazakhstan
 topic: getting-help
-slug: development-concerns-kazakhstan
+slug: child-development-concerns-kazakhstan
 translationKey: help-development-concerns-kazakhstan
 translationStatus: checked
 audience:
