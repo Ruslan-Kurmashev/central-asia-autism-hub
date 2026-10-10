@@ -149,7 +149,9 @@ const researchLabel: Record<Locale, string> = {
                               ? 'CC BY 4.0'
                               : researchDetails.featuredImageLicenseUrl.includes('/licenses/by-sa/3.0/')
                                 ? 'CC BY-SA 3.0'
-                                : 'Лицензия изображения'}
+                                : researchDetails.featuredImageLicenseUrl.includes('/licenses/by-sa/4.0/')
+                                  ? 'CC BY-SA 4.0'
+                                  : 'Лицензия изображения'}
                         </a>.
                       </>
                     )}
