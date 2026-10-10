@@ -1,4 +1,4 @@
-/* Licensed editorial photo downloads for AutismHub articles.
+/* Editorial photo downloads for Kazakhstan help and parent-facing articles.
  * Real Pexels photographs, individually credited in docs/editorial-image-sources.md.
  * Generated public files are intentionally not committed; CI downloads and validates
  * each file before the static site is built and deployed. No remote hotlinks in HTML.
@@ -17,15 +17,8 @@ const photos = [
   ['kz-help-006.jpg', '5905445'],
   ['kz-help-007.jpg', '5668469'],
   ['kz-help-008.jpg', '8815849'],
-  ['parent-movement-equipment.jpg', '36717697'],
-  ['parent-toileting-bathroom.jpg', '6444254'],
-  ['parent-communication-cards.jpg', '8250913'],
-  ['parent-sensory-headphones.jpg', '4065846'],
-  ['parent-weighted-blanket.jpg', '11125918'],
-  ['parent-schedule-planner.jpg', '30101192'],
-  ['parent-hygiene-tools.jpg', '7262385'],
-  ['parent-food-ingredients.jpg', '9407242'],
-  ['parent-food-plate.jpg', '6065175'],
+  ['parent-afk-equipment.jpg', '6339719'],
+  ['parent-feeding-meal.jpg', '7074510'],
 ];
 
 function isJpeg(bytes) {
@@ -87,5 +80,5 @@ if (errors.length > 0) {
   console.error('Failed editorial photos:', errors.join('; '));
   process.exitCode = 1;
 } else {
-  console.log(`All ${photos.length} licensed article photographs validated.`);
+  console.log(`All ${photos.length} article photographs validated.`);
 }

@@ -134,37 +134,29 @@ These 16 published Russian parent articles now have **one distinct local, real P
 | `autism-assessments-kazakhstan.md` | `psychological-support-room.jpg` | Neutral consultation room, not a photographed diagnostic procedure |
 | `communication-aac.md` | `technology-tablet.jpg` | Tablet as a possible digital communication tool |
 | `aac.md` | `article-technology-asian.jpg` | Shared tablet use, not a specific AAC intervention |
-| `types-of-autism-support.md` | `article-who-cst-asian.jpg` | A shared everyday reading activity within family support |
-| `choosing-support-by-goal.md` | `parent-child-drawing.jpg` | Shared drawing activity as a context for observable goals |
-| `how-to-choose-autism-specialist-support.md` | `article-family-session.jpg` | Family in consultation setting, no provider endorsement implied |
+| `types-of-autism-support.md` | `photos/kz-help-005.jpg` | Preschool materials and toys as one example of a support setting |
+| `choosing-support-by-goal.md` | `photos/kz-help-001.jpg` | A planner and documents for setting and checking goals |
+| `how-to-choose-autism-specialist-support.md` | `photos/kz-help-003.jpg` | Paperwork and a laptop for professional qualification checks |
 | `sensory-environmental-support.md` | `sensory-hands.jpg` | Hands exploring tactile materials |
-| `adaptive-physical-activity.md` | `children-stretching.jpg` | Physical activity, not a particular prescribed exercise or programme |
+| `adaptive-physical-activity.md` | `photos/parent-afk-equipment.jpg` | Exercise mats and simple equipment, not a prescribed intervention |
 | `development-interaction-play.md` | `article-rubi-asian.jpg` | Joint play with toys |
-| `speech-language-therapy.md` | `parent-child-conversation.jpg` | A conversation, not a demonstration of clinical speech therapy |
-| `parent-mediated-intervention.md` | `article-parent-training.jpg` | Caregivers and child engaging with illustrated cards |
-| `feeding-therapy.md` | `family-meal.jpg` | Everyday mealtime, not a clinical feeding intervention |
+| `speech-language-therapy.md` | `article-who-cst-asian.jpg` | Shared reading and speech interaction, not clinical speech therapy |
+| `parent-mediated-intervention.md` | `photos/kz-help-002.jpg` | Toys for caregiver-supported everyday play |
+| `feeding-therapy.md` | `photos/parent-feeding-meal.jpg` | Real food and place setting, not a treatment method |
 
 **Selection and ethical boundaries:** all photos are illustrative; none establishes that any pictured person is autistic or enrolled in an actual service. Keep accessibility alt text factual, and avoid asserting outcomes or clinical effectiveness from stock imagery. Object-based photography was preferred whenever it described the article well. Photos involving families were selected only for family-activity topics and should not be presented as representative of Kazakhstan services.
 
 **Production safeguards:** `npm run check:parent-images` verifies 16 distinct featured image URLs, descriptive alt text, file presence and file size in the actual repository, and reports which further published articles still need imagery. The existing build validator checks image URLs from the produced HTML. This first batch does **not** complete all missing artwork: continue with further curated, source-documented waves rather than assigning generic fallback photos in bulk.
 
+## Parent object-photo follow-up (2026-10-10)
 
-## Parent library image restoration (2026-10-10)
+A further topic-fit review replaced stock family scenes with object-only photography where the presence or origin of people did not add enough meaning. Existing Pexels photographs KZ-HLP-001, 002, 003 and 005 were reused, with their source credits already listed above. Two additional originals were selected:
 
-New real photographs for specialised topics, selected from Pexels pages under the [Pexels License](https://www.pexels.com/license/) and acquired as **local site JPGs at build time**. No AI-generated image or hotlink is used. The original pages describe the depicted objects; these photographs do not establish the effectiveness of any intervention.
-
-| Static site file | Photographer | Licensed original | Editorial subject |
+| Built asset | Photographer | Verified Pexels original | Use |
 | --- | --- | --- | --- |
-| `photos/parent-movement-equipment.jpg` | Letícia Alvares | https://www.pexels.com/photo/flat-lay-of-fitness-equipment-on-white-surface-36717697/ | Yoga mat, resistance band, dumbbell and exercise ball; a generic illustration of movement equipment |
-| `photos/parent-toileting-bathroom.jpg` | Max Vakhtbovych | https://www.pexels.com/photo/interior-of-restroom-with-toilet-and-sink-near-mirror-6444254/ | Toilet and sink in a clean, empty bathroom; daily toileting environment |
-| `photos/parent-communication-cards.jpg` | PNW Production | https://www.pexels.com/photo/blank-notes-with-hook-8250913/ | Blank paper cards; **not an actual PECS or AAC system** |
-| `photos/parent-sensory-headphones.jpg` | Lia | https://www.pexels.com/photo/green-and-gray-plastic-toy-4065846/ | Headphones, fidget spinner and desk objects; **not clinical hearing equipment** |
-| `photos/parent-weighted-blanket.jpg` | qiana zhang | https://www.pexels.com/photo/close-up-of-bent-linen-11125918/ | Soft folded textile; **not a certified or weighted medical product** |
-| `photos/parent-schedule-planner.jpg` | Florencia Ceruti | https://www.pexels.com/photo/colorful-weekly-planner-with-pens-and-confetti-30101192/ | Colourful planners and stationery illustrating routine planning, not treatment |
-| `photos/parent-hygiene-tools.jpg` | Sarah Chai | https://www.pexels.com/photo/crop-person-with-toothbrush-at-sink-7262385/ | Toothbrush at a sink; a routine daily hygiene task |
-| `photos/parent-food-ingredients.jpg` | Marina Leonova | https://www.pexels.com/photo/vegetables-on-the-table-9407242/ | Ingredients for food preparation; a generic nutrition topic illustration |
-| `photos/parent-food-plate.jpg` | Alesia Kozik | https://www.pexels.com/photo/fresh-cut-vegetables-on-a-plate-6065175/ | Assorted vegetables on a plate; not a prescribed food exposure or treatment |
+| `photos/parent-afk-equipment.jpg` | Pavel Danilyuk | https://www.pexels.com/photo/high-angle-shot-of-equipment-for-exercise-on-the-floor-6339719/ | Exercise equipment for adaptive physical activity overview |
+| `photos/parent-feeding-meal.jpg` | Mirdental network | https://www.pexels.com/photo/healthy-foods-on-table-top-7074510/ | Meal setting and food for eating difficulties support |
 
-All additional original photos and their names/IDs are recorded in `scripts/sync-editorial-photos.mjs`. The build must fetch and validate the JPEG bytes before publication.
+Both original Pexels pages identify the images as **free to use** under https://www.pexels.com/license/ . The photo IDs are fixed in the existing prebuild download manifest; the static website serves the downloaded files, not external hotlinks.
 
-Existing Pexels photographs in this document may be reused on an article only where the subject actually relates to that article. Alternative text should describe the photograph, not imply that an individual has autism, that a pictured activity is a validated therapy or that a blank card is an actual AAC communication system.
+The speech and language overview now uses an existing image explicitly described by its Pexels metadata as Asian family reading activity; that is a contextual illustration of everyday communication, not a photographed assessment or an identifiable autistic child. The new object-only images avoid assumptions about photographed individuals and match the project's Kazakhstan-first visual selection rules.
