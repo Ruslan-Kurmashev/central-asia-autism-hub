@@ -160,3 +160,23 @@ A further topic-fit review replaced stock family scenes with object-only photogr
 Both original Pexels pages identify the images as **free to use** under https://www.pexels.com/license/ . The photo IDs are fixed in the existing prebuild download manifest; the static website serves the downloaded files, not external hotlinks.
 
 The speech and language overview now uses an existing image explicitly described by its Pexels metadata as Asian family reading activity; that is a contextual illustration of everyday communication, not a photographed assessment or an identifiable autistic child. The new object-only images avoid assumptions about photographed individuals and match the project's Kazakhstan-first visual selection rules.
+
+## Parent library image restoration (2026-10-10)
+
+New real photographs for specialised topics, selected from Pexels pages under the [Pexels License](https://www.pexels.com/license/) and acquired as **local site JPGs at build time**. No AI-generated image or hotlink is used. The original pages describe the depicted objects; these photographs do not establish the effectiveness of any intervention.
+
+| Static site file | Photographer | Licensed original | Editorial subject |
+| --- | --- | --- | --- |
+| `photos/parent-movement-equipment.jpg` | Letícia Alvares | https://www.pexels.com/photo/flat-lay-of-fitness-equipment-on-white-surface-36717697/ | Yoga mat, resistance band, dumbbell and exercise ball; a generic illustration of movement equipment |
+| `photos/parent-toileting-bathroom.jpg` | Max Vakhtbovych | https://www.pexels.com/photo/interior-of-restroom-with-toilet-and-sink-near-mirror-6444254/ | Toilet and sink in a clean, empty bathroom; daily toileting environment |
+| `photos/parent-communication-cards.jpg` | PNW Production | https://www.pexels.com/photo/blank-notes-with-hook-8250913/ | Blank paper cards; **not an actual PECS or AAC system** |
+| `photos/parent-sensory-headphones.jpg` | Lia | https://www.pexels.com/photo/green-and-gray-plastic-toy-4065846/ | Headphones, fidget spinner and desk objects; **not clinical hearing equipment** |
+| `photos/parent-weighted-blanket.jpg` | qiana zhang | https://www.pexels.com/photo/close-up-of-bent-linen-11125918/ | Soft folded textile; **not a certified or weighted medical product** |
+| `photos/parent-schedule-planner.jpg` | Florencia Ceruti | https://www.pexels.com/photo/colorful-weekly-planner-with-pens-and-confetti-30101192/ | Colourful planners and stationery illustrating routine planning, not treatment |
+| `photos/parent-hygiene-tools.jpg` | Sarah Chai | https://www.pexels.com/photo/crop-person-with-toothbrush-at-sink-7262385/ | Toothbrush at a sink; a routine daily hygiene task |
+| `photos/parent-food-ingredients.jpg` | Marina Leonova | https://www.pexels.com/photo/vegetables-on-the-table-9407242/ | Ingredients for food preparation; a generic nutrition topic illustration |
+| `photos/parent-food-plate.jpg` | Alesia Kozik | https://www.pexels.com/photo/fresh-cut-vegetables-on-a-plate-6065175/ | Assorted vegetables on a plate; not a prescribed food exposure or treatment |
+
+All additional original photos and their names/IDs are recorded in `scripts/sync-editorial-photos.mjs`. The build must fetch and validate the JPEG bytes before publication.
+
+Existing Pexels photographs in this document may be reused on an article only where the subject actually relates to that article. Alternative text should describe the photograph, not imply that an individual has autism, that a pictured activity is a validated therapy or that a blank card is an actual AAC communication system.
