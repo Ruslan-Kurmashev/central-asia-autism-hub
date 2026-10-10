@@ -8,7 +8,7 @@ section: help-kazakhstan
 topic: getting-help
 slug: "bala-damuy-boyynsha-komek-kazakstan"
 translationKey: help-development-concerns-kazakhstan
-translationStatus: pending
+translationStatus: checked
 audience:
   - parents
   - families
@@ -19,7 +19,9 @@ editor: Ruslan Kurmashev
 riskLevel: moderate
 disclaimerType: medical
 conflictOfInterest: "Мүдделер қақтығысы мәлімделмеген."
-draft: true
+publishedAt: 2026-10-10
+updatedAt: 2026-10-10
+draft: false
 keyPoints:
   - "Бала дамуына қатысты сұрақты тіркелген емханадағы алғашқы медициналық-санитариялық көмек маманымен талқылауға болады."
   - "ПМПК білім беру қажеттіліктерін бағалайды; ол медициналық тексеру мен диагнозды алмастырмайды."
