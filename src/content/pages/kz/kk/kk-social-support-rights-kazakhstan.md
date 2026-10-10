@@ -8,7 +8,7 @@ section: help-kazakhstan
 topic: rights-benefits
 slug: "otbasy-aleumettik-koldau-kazakstan"
 translationKey: help-social-support-rights-kazakhstan
-translationStatus: pending
+translationStatus: checked
 audience:
   - parents
   - families
@@ -20,7 +20,9 @@ editor: Ruslan Kurmashev
 riskLevel: moderate
 disclaimerType: informational
 conflictOfInterest: "Мүдделер қақтығысы мәлімделмеген."
-draft: true
+publishedAt: 2026-10-10
+updatedAt: 2026-10-10
+draft: false
 keyPoints:
   - "Әлеуметтік қолдау тек диагнозға емес, белгіленген құқықтық мәртебеге, МӘС қорытындысына және жеке қажеттіліктерге байланысты."
   - "Қазақстанның Әлеуметтік кодексінде мүгедектігі бар адамдарға жәрдемақылар мен арнаулы әлеуметтік қызметтерді қоса алғанда, әлеуметтік қорғау шаралары көзделген."
