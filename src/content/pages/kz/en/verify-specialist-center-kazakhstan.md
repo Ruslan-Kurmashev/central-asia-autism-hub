@@ -30,38 +30,38 @@ keyPoints:
 versionNote: "10 October 2026: translated from the Russian article dated 9 October 2026, retaining its references to the 2026 psychology law, licensing checks and teaching qualification rules."
 evidenceLimitations: "Legal requirements differ between healthcare, psychological, pedagogical and other services. The 2026 psychology legislation includes transitional provisions; implementation and registry arrangements may change. Verify the current law and a provider's particular activities before making conclusions about compliance."
 sources:
-  - title: "О психологической деятельности"
+  - title: "Law on Psychological Activity"
     url: "https://adilet.zan.kz/rus/docs/Z2600000332"
     organisation: "Adilet legal information system"
     publicationYear: 2026
-    note: "Official Kazakhstan source cited in the Russian version. Confirm the latest applicable requirements and effective dates."
+    note: "Law No. 332-VIII dated 2 July 2026, including Articles 3, 13, 21 and 22 and the transition period for psychologist registration."
     accessedAt: 2026-10-09
   - title: "Kazakhstan plans a unified state registry of psychologists"
     url: "https://www.gov.kz/memleket/entities/enbek/press/news/details/1254262?lang=ru"
     organisation: "Ministry of Labour and Social Protection of Kazakhstan"
     publicationYear: 2026
-    note: "Official Kazakhstan source cited in the Russian version. Confirm the latest applicable requirements and effective dates."
+    note: "Official government information concerning phased implementation and development of the psychologist registry."
     accessedAt: 2026-10-09
   - title: "Medical activity licence"
     url: "https://egov.kz/cms/ru/online-services/for_busunesses/2F487pass_mz"
     organisation: "eGov.kz"
-    note: "Official Kazakhstan source cited in the Russian version. Confirm the latest applicable requirements and effective dates."
+    note: "Official government service for medical activity licensing."
     accessedAt: 2026-10-09
   - title: "Check permits and licences"
     url: "https://egov.kz/cms/ru/services/proverka-razresheniy-i-licenziy"
     organisation: "eGov.kz"
-    note: "Official Kazakhstan source cited in the Russian version. Confirm the latest applicable requirements and effective dates."
+    note: "Free state service for searching permits and checking their current status."
     accessedAt: 2026-10-09
   - title: "How to verify the validity of a licence or permit"
     url: "https://egov.kz/cms/ru/articles/bus_lic_akk/license-checking"
     organisation: "eGov.kz"
     publicationYear: 2026
-    note: "Official Kazakhstan source cited in the Russian version. Confirm the latest applicable requirements and effective dates."
+    note: "Official eLicense search instructions, updated on 7 April 2026, covering quick and advanced searches."
     accessedAt: 2026-10-09
   - title: "Professional qualification requirements for teachers"
     url: "https://adilet.zan.kz/rus/docs/V090005750_"
     organisation: "Adilet legal information system / Ministry of Education of Kazakhstan"
-    note: "Official Kazakhstan source cited in the Russian version. Confirm the latest applicable requirements and effective dates."
+    note: "Order No. 338 as amended by Order No. 173-NQ of 19 June 2026; applicability depends on the specific teaching role and organisation."
     accessedAt: 2026-10-09
 ---
 
