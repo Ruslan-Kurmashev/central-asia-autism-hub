@@ -8,7 +8,7 @@ section: help-kazakhstan
 topic: assessment-support
 slug: verify-specialist-center-kazakhstan
 translationKey: help-verify-specialist-center-kazakhstan
-translationStatus: pending
+translationStatus: checked
 audience:
   - parents
   - families
@@ -20,7 +20,9 @@ editor: Ruslan Kurmashev
 riskLevel: moderate
 disclaimerType: informational
 conflictOfInterest: "No conflict of interest declared."
-draft: true
+publishedAt: 2026-10-10
+updatedAt: 2026-10-10
+draft: false
 keyPoints:
   - "A centre's name or list of certificates does not tell you whether it is entitled to provide the specific service advertised."
   - "Check the organisation and the individual practitioner separately. Requirements depend on whether the service is medical, psychological, educational or another type."
