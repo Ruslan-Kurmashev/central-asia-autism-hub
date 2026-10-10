@@ -24,6 +24,8 @@ const photos = [
   ['parent-weighted-blanket.jpg', '11125918'],
   ['parent-schedule-planner.jpg', '30101192'],
   ['parent-hygiene-tools.jpg', '7262385'],
+  ['parent-food-ingredients.jpg', '9407242'],
+  ['parent-food-plate.jpg', '6065175'],
 ];
 
 function isJpeg(bytes) {
