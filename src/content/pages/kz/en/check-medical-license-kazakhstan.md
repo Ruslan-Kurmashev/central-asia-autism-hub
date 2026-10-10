@@ -33,18 +33,18 @@ sources:
   - title: "Check permits and licences"
     url: "https://egov.kz/cms/ru/services/proverka-razresheniy-i-licenziy"
     organisation: "eGov.kz"
-    note: "Official eGov guidance; check the current search interface and displayed fields before relying on a document."
+    note: "Free official government service for checking permits and licences."
     accessedAt: 2026-10-09
   - title: "How to verify a licence or permit"
     url: "https://egov.kz/cms/ru/articles/bus_lic_akk/license-checking"
     organisation: "eGov.kz"
     publicationYear: 2026
-    note: "Official eGov guidance; check the current search interface and displayed fields before relying on a document."
+    note: "Official instructions updated on 7 April 2026, describing quick and advanced licence searches."
     accessedAt: 2026-10-09
   - title: "Medical activity licence"
     url: "https://egov.kz/cms/ru/online-services/for_busunesses/2F487pass_mz"
     organisation: "eGov.kz"
-    note: "Official eGov guidance; check the current search interface and displayed fields before relying on a document."
+    note: "Official guidance about medical licences and annexes specifying medical activities."
     accessedAt: 2026-10-09
 ---
 
