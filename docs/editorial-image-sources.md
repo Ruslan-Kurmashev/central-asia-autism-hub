@@ -120,3 +120,30 @@ Each original photo is offered under the [Pexels License](https://www.pexels.com
 These images are illustrative stock photography, **not photographs of Kazakhstan government offices, licensed services, actual beneficiaries or particular autism interventions**. Do not imply that photographed objects establish legal validity or clinical effectiveness.
 
 **Local static asset process:** During `npm run build`, `prebuild` downloads medium-sized JPEG versions from Pexels CDN into `public/images/editorial/photos/`. The built/deployed site then uses only its own `/central-asia-autism-hub/images/editorial/photos/` URLs, not browser hotlinks to Pexels. Downloads are verified for JPEG format and non-trivial size, and the build fails if any photo is unavailable. These generated binary artifacts are intentionally excluded from Git. If upstream photos become unavailable, the build blocks deployment and requires selecting a newly licensed replacement.
+
+## Parent library: editorial photo assignments, batch 1 (2026-10-10)
+
+These 16 published Russian parent articles now have **one distinct local, real Pexels photo each**. All 16 source photo filenames, original creator credits and Pexels source links are already documented in the provenance table above; no new image is generated or taken from an unspecified source. The existing images are re-used from the project media library and displayed through the same site-owned image URL in the article hero and article card.
+
+| Published article (source file) | Image filename | Editorial meaning |
+| --- | --- | --- |
+| `what-is-autism.md` | `who-cst-cards-books.jpg` | Books and illustrated cards, an introduction to understanding autism |
+| `when-to-discuss-development.md` | `rubi-wooden-blocks.jpg` | Play objects, discussing observations of child development |
+| `screening-assessment-diagnosis.md` | `adapted-cbt-notebook.jpg` | Notebook for keeping observations before assessment |
+| `autism-diagnosis-kazakhstan.md` | `cbt-notebook-pen.jpg` | Questions and preparation for medical consultation |
+| `autism-assessments-kazakhstan.md` | `psychological-support-room.jpg` | Neutral consultation room, not a photographed diagnostic procedure |
+| `communication-aac.md` | `technology-tablet.jpg` | Tablet as a possible digital communication tool |
+| `aac.md` | `article-technology-asian.jpg` | Shared tablet use, not a specific AAC intervention |
+| `types-of-autism-support.md` | `article-who-cst-asian.jpg` | A shared everyday reading activity within family support |
+| `choosing-support-by-goal.md` | `parent-child-drawing.jpg` | Shared drawing activity as a context for observable goals |
+| `how-to-choose-autism-specialist-support.md` | `article-family-session.jpg` | Family in consultation setting, no provider endorsement implied |
+| `sensory-environmental-support.md` | `sensory-hands.jpg` | Hands exploring tactile materials |
+| `adaptive-physical-activity.md` | `children-stretching.jpg` | Physical activity, not a particular prescribed exercise or programme |
+| `development-interaction-play.md` | `article-rubi-asian.jpg` | Joint play with toys |
+| `speech-language-therapy.md` | `parent-child-conversation.jpg` | A conversation, not a demonstration of clinical speech therapy |
+| `parent-mediated-intervention.md` | `article-parent-training.jpg` | Caregivers and child engaging with illustrated cards |
+| `feeding-therapy.md` | `family-meal.jpg` | Everyday mealtime, not a clinical feeding intervention |
+
+**Selection and ethical boundaries:** all photos are illustrative; none establishes that any pictured person is autistic or enrolled in an actual service. Keep accessibility alt text factual, and avoid asserting outcomes or clinical effectiveness from stock imagery. Object-based photography was preferred whenever it described the article well. Photos involving families were selected only for family-activity topics and should not be presented as representative of Kazakhstan services.
+
+**Production safeguards:** `npm run check:parent-images` verifies 16 distinct featured image URLs, descriptive alt text, file presence and file size in the actual repository, and reports which further published articles still need imagery. The existing build validator checks image URLs from the produced HTML. This first batch does **not** complete all missing artwork: continue with further curated, source-documented waves rather than assigning generic fallback photos in bulk.
