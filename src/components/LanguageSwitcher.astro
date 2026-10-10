@@ -18,10 +18,10 @@ const compactLanguageLabel: Record<Locale, string> = {
 };
 
 const languageOrder: Locale[] = ['kk', 'ru', 'en'];
-const missingTranslationLabel: Record<Locale, string> = {
-  ru: 'Перевода нет. Открыть раздел на русском языке',
-  kk: 'Аудармасы жоқ. Қазақ тіліндегі бөлімді ашу',
-  en: 'Translation unavailable. Open the English section',
+const missingTranslationLabel: Record<Locale, (targetLanguage: string) => string> = {
+  ru: (targetLanguage) => `Перевода нет. Открыть раздел на языке: ${targetLanguage}`,
+  kk: (targetLanguage) => `Аудармасы жоқ. ${targetLanguage} тіліндегі бөлімді ашу`,
+  en: (targetLanguage) => `Translation unavailable. Open the ${targetLanguage} section`,
 };
 ---
 
@@ -38,8 +38,8 @@ const missingTranslationLabel: Record<Locale, string> = {
             <a
               href={localePath(locale, paths?.[locale] ?? path)}
               lang={LANGUAGE_META[locale].htmlLang}
-              aria-label={translationMissing ? `${label}: ${missingTranslationLabel[current]}` : label}
-              title={translationMissing ? `${label}: ${missingTranslationLabel[current]}` : label}
+              aria-label={translationMissing ? `${label}: ${missingTranslationLabel[current](label)}` : label}
+              title={translationMissing ? `${label}: ${missingTranslationLabel[current](label)}` : label}
               aria-current={locale === current ? 'page' : undefined}
               data-translation-missing={translationMissing ? '' : undefined}
             >
