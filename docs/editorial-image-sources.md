@@ -162,6 +162,8 @@ New real photographs for specialised topics, selected from Pexels pages under th
 | `photos/parent-weighted-blanket.jpg` | qiana zhang | https://www.pexels.com/photo/close-up-of-bent-linen-11125918/ | Soft folded textile; **not a certified or weighted medical product** |
 | `photos/parent-schedule-planner.jpg` | Florencia Ceruti | https://www.pexels.com/photo/colorful-weekly-planner-with-pens-and-confetti-30101192/ | Colourful planners and stationery illustrating routine planning, not treatment |
 | `photos/parent-hygiene-tools.jpg` | Sarah Chai | https://www.pexels.com/photo/crop-person-with-toothbrush-at-sink-7262385/ | Toothbrush at a sink; a routine daily hygiene task |
+| `photos/parent-food-ingredients.jpg` | Marina Leonova | https://www.pexels.com/photo/vegetables-on-the-table-9407242/ | Ingredients for food preparation; a generic nutrition topic illustration |
+| `photos/parent-food-plate.jpg` | Alesia Kozik | https://www.pexels.com/photo/fresh-cut-vegetables-on-a-plate-6065175/ | Assorted vegetables on a plate; not a prescribed food exposure or treatment |
 
 All additional original photos and their names/IDs are recorded in `scripts/sync-editorial-photos.mjs`. The build must fetch and validate the JPEG bytes before publication.
 
