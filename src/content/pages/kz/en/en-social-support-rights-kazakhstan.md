@@ -8,7 +8,7 @@ section: help-kazakhstan
 topic: rights-benefits
 slug: "family-rights-social-support-kazakhstan"
 translationKey: help-social-support-rights-kazakhstan
-translationStatus: pending
+translationStatus: checked
 audience:
   - parents
   - families
@@ -20,7 +20,9 @@ editor: Ruslan Kurmashev
 riskLevel: moderate
 disclaimerType: informational
 conflictOfInterest: "No conflict of interest declared."
-draft: true
+publishedAt: 2026-10-10
+updatedAt: 2026-10-10
+draft: false
 keyPoints:
   - "Access to social support depends on the child's legally established status, medical and social expert assessment (MSE) and individually determined support needs, not only on a diagnosis."
   - "Kazakhstan's Social Code provides for disability-related social protection measures, including state benefits and specialised social services."
