@@ -6,7 +6,7 @@ country: kz
 language: en
 section: help-kazakhstan
 topic: assessment-support
-slug: verify-specialist-center-kazakhstan
+slug: check-autism-specialist-kazakhstan
 translationKey: help-verify-specialist-center-kazakhstan
 translationStatus: checked
 audience:
@@ -101,7 +101,7 @@ Check **more than whether a document exists**. Compare:
 
 A licence issued to a different legal entity, or for a different medical service, does not establish permission to deliver the advertised service.
 
-For practical steps, see [How to check a medical licence through eGov and eLicense](/central-asia-autism-hub/kz/en/help-kazakhstan/check-medical-license-kazakhstan/).
+For practical steps, see [How to check a medical licence through eGov and eLicense](/central-asia-autism-hub/kz/en/help-kazakhstan/verify-medical-licence-kazakhstan/).
 
 ## Step 3. If it is psychological support, check current requirements
 
@@ -170,7 +170,7 @@ Be cautious when a provider:
 
 ## Next steps
 
-To check the legal status of healthcare services, use Kazakhstan's [official licence and permit search](https://egov.kz/cms/ru/services/proverka-razresheniy-i-licenziy) and our [step-by-step guide](/central-asia-autism-hub/kz/en/help-kazakhstan/check-medical-license-kazakhstan/).
+To check the legal status of healthcare services, use Kazakhstan's [official licence and permit search](https://egov.kz/cms/ru/services/proverka-razresheniy-i-licenziy) and our [step-by-step guide](/central-asia-autism-hub/kz/en/help-kazakhstan/verify-medical-licence-kazakhstan/).
 
 For further questions about interventions themselves, the [Russian-language guide to choosing autism support](/central-asia-autism-hub/kz/ru/parents/kak-vybrat-spetsialista-i-pomoshch-pri-autizme/) explains how to consider evidence and fit.
 
