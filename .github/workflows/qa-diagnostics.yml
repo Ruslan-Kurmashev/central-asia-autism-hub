@@ -31,8 +31,8 @@ jobs:
         run: npm run build
 
       - name: Check external URLs (report, do not fail on remote blocking)
-        run: npm run check:external-links
+        run: npm run check:external-links -- --fail-on-broken
 
       - name: Audit installed dependencies including production-only exposure
         if: always()
-        run: npm run audit:dependencies
+        run: npm run audit:dependencies -- --fail-on-high-production
