@@ -142,7 +142,13 @@ const researchLabel: Record<Locale, string> = {
                     {researchDetails.featuredImageLicenseUrl && (
                       <>
                         {' '}
-                        <a href={researchDetails.featuredImageLicenseUrl} rel="external">CC BY 4.0</a>.
+                        <a href={researchDetails.featuredImageLicenseUrl} rel="external">
+                          {researchDetails.featuredImageLicenseUrl.includes('/publicdomain/')
+                            ? 'Public Domain'
+                            : researchDetails.featuredImageLicenseUrl.includes('/licenses/by/4.0/')
+                              ? 'CC BY 4.0'
+                              : 'Лицензия изображения'}
+                        </a>.
                       </>
                     )}
                   </figcaption>
