@@ -8,7 +8,7 @@ section: help-kazakhstan
 topic: service-checklist
 slug: check-medical-license-kazakhstan
 translationKey: help-check-medical-license-kazakhstan
-translationStatus: pending
+translationStatus: checked
 audience:
   - parents
   - families
@@ -21,7 +21,9 @@ editor: Ruslan Kurmashev
 riskLevel: lower
 disclaimerType: informational
 conflictOfInterest: "No conflict of interest declared."
-draft: true
+publishedAt: 2026-10-10
+updatedAt: 2026-10-10
+draft: false
 keyPoints:
   - "If a centre advertises medical services, verify its licence yourself through the official eGov/eLicense system rather than relying on an image of a document."
   - "Check the legal entity's identification number (BIN or, where applicable, IIN), the exact licence holder, current status and permitted healthcare activities."
