@@ -2,6 +2,8 @@
 title: "Сенсорные подходы к питанию: что важно знать родителям"
 summary: "Сенсорные подходы к трудностям питания включают разные методы - от постепенного знакомства с текстурами до sensory play. Разбираем, что известно об эффективности, безопасности и границах таких программ."
 description: "Практическая evidence-and-safety карточка для родителей о сенсорных подходах к питанию при аутизме: systematic desensitization, sensory play, repeated exposure, доказательность, безопасность и мониторинг результата."
+featuredImage: "/central-asia-autism-hub/images/editorial/photos/parent-food-plate.jpg"
+featuredImageAlt: "Разные овощи, разложенные на тарелке: иллюстрация разнообразия продуктов, не протокола сенсорного кормления."
 country: kz
 language: ru
 section: parents
