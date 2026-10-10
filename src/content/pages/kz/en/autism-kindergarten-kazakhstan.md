@@ -8,7 +8,7 @@ section: help-kazakhstan
 topic: education
 slug: autism-kindergarten-kazakhstan
 translationKey: help-autism-kindergarten-kazakhstan
-translationStatus: pending
+translationStatus: checked
 audience:
   - parents
   - families
@@ -20,7 +20,9 @@ editor: Ruslan Kurmashev
 riskLevel: lower
 disclaimerType: informational
 conflictOfInterest: "No conflict of interest declared."
-draft: true
+publishedAt: 2026-10-10
+updatedAt: 2026-10-10
+draft: false
 keyPoints:
   - "There is no single mandatory kindergarten setting for every autistic child. Focus on what the child needs for participation, learning, communication and safety."
   - "General preschools, special groups and specialised preschool institutions may offer different pathways, depending on local availability."
