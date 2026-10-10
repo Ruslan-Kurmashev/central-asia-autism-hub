@@ -8,7 +8,7 @@ section: help-kazakhstan
 topic: education
 slug: "autizm-mektep-kazakstan"
 translationKey: help-autism-school-kazakhstan
-translationStatus: pending
+translationStatus: checked
 audience:
   - parents
   - families
@@ -20,7 +20,9 @@ editor: Ruslan Kurmashev
 riskLevel: moderate
 disclaimerType: informational
 conflictOfInterest: "Мүдделер қақтығысы мәлімделмеген."
-draft: true
+publishedAt: 2026-10-10
+updatedAt: 2026-10-10
+draft: false
 keyPoints:
   - "Мектепке қабылдау және ерекше білім беру жағдайларын ұйымдастыру бөлек сұрақтар; аутизм диагнозы баланың білім алу құқығын жоймайды."
   - "ПМПК ерекше білім беру қажеттіліктерін бағалап, қолдау жөнінде ұсынымдар береді."
