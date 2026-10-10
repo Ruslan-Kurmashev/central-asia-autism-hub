@@ -1,10 +1,9 @@
 /**
  * Published parent-page artwork audit.
  *
- * Core articles from the first reviewed batch are required to have distinct,
- * self-hosted, correctly described image assets. Other published pages are
- * counted and listed for the next editorial selection pass without pretending
- * that the whole library has been completed.
+ * All published Russian parent articles must have a real locally hosted
+ * editorial image and a useful alternative description. The first wave
+ * (16) and completion wave (45) have unique images within each wave.
  */
 import { readdir, readFile, stat } from 'node:fs/promises';
 import path from 'node:path';
@@ -31,7 +30,56 @@ const required = [
   'parent-mediated-intervention',
   'feeding-therapy',
 ];
+const completionWave = [
+  'after-autism-assessment-kazakhstan',
+  'aided-language-modelling',
+  'antecedent-based-interventions',
+  'arfid-assessment-support',
+  'auditory-integration-listening-programs',
+  'autism-pmpk-vkk-mse-kazakhstan',
+  'ayres-sensory-integration',
+  'behavior-learning',
+  'behavioral-feeding-interventions',
+  'communication-partner-training',
+  'daily-living-participation',
+  'daily-living-skills-training',
+  'development-milestones',
+  'dietitian-nutrition-support',
+  'differential-reinforcement',
+  'first-30-days-after-autism-diagnosis-kazakhstan',
+  'functional-behavior-assessment',
+  'functional-communication-training',
+  'how-to-read-evidence',
+  'imitation-reciprocal-imitation',
+  'joint-attention',
+  'monitoring-support-outcomes',
+  'movement-physical-activity',
+  'naturalistic-intervention',
+  'ndbi',
+  'neyropsihologicheskaya-korrektsiya',
+  'occupational-therapy',
+  'otsenka-trudnostey-pitaniya',
+  'pecs',
+  'peer-mediated-intervention',
+  'physical-therapy-physiotherapy',
+  'play-based-interventions',
+  'prompting-and-prompt-fading',
+  'reinforcement',
+  'self-management',
+  'sensory-based-feeding-approaches',
+  'sensory-based-strategies',
+  'sensory-diet',
+  'sensory-overload-environmental-adaptations',
+  'special-pedagog-defektolog',
+  'task-analysis',
+  'therapeutic-exercise-lfk',
+  'toileting-interventions',
+  'video-modeling',
+  'weighted-items',
+];
 const requiredSet = new Set(required);
+const completionSet = new Set(completionWave);
+const completionImages = new Map();
 const seenImageBy = new Map();
 const missing = [];
 const all = await readdir(parentDir);
@@ -58,28 +106,35 @@ for (const file of all.filter((name) => /\.mdx?$/.test(name)).sort()) {
 
   if (!src) {
     missing.push(id);
-    assert.ok(!requiredSet.has(id), `Core article has no featured image: ${id}`);
     continue;
   }
   withImage += 1;
   assert.ok(alt.length >= 30, `Missing descriptive featuredImageAlt on ${id}`);
+  assert.ok(src.startsWith(`${base}images/editorial/`),
+    `Article photo not hosted in site assets: ${id}`);
+  const local = path.join(publicDir, src.slice(base.length));
+  const image = await stat(local);
+  assert.ok(image.isFile() && image.size > (src.endsWith('.svg') ? 1000 : 12000),
+    `Missing, empty or truncated photo ${src}`);
   if (requiredSet.has(id)) {
-    assert.ok(src.startsWith(`${base}images/editorial/`),
-      `Core photo not hosted in own static assets: ${id}`);
-    const local = path.join(publicDir, src.slice(base.length));
-    const image = await stat(local);
-    assert.ok(image.isFile() && image.size > 12000,
-      `Missing, empty or truncated photo ${src}`);
     assert.ok(!seenImageBy.has(src),
-      `First-wave articles reuse the same editorial image: ${id}, ${seenImageBy.get(src)}`);
+      `First wave photo reused: ${id}, ${seenImageBy.get(src)}`);
     seenImageBy.set(src, id);
+  }
+  if (completionSet.has(id)) {
+    assert.ok(!completionImages.has(src),
+      `Completion wave photo reused: ${id}, ${completionImages.get(src)}`);
+    completionImages.set(src, id);
   }
 }
 
 assert.equal(seenImageBy.size, required.length, 'Some first-wave visual choices are missing');
+assert.equal(completionImages.size, completionWave.length, 'Some completion-wave visuals are missing');
+assert.equal(missing.length, 0, `Published parent pages lack images: ${missing.join(', ')}`);
+assert.equal(withImage, parents, 'All published parent pages must have a featured image');
 console.log(`Russian pages: ${published} published; ${parents} parent pages.`);
 console.log(`Parent featured images: ${withImage}/${parents}; missing: ${missing.length}.`);
-console.log(`First image wave: ${required.length} distinct images with alt text and real local files validated.`);
+console.log(`All parent visuals validated: first wave ${required.length}, completion wave ${completionWave.length}, plus previously illustrated pages.`);
 if (missing.length) {
   console.log('Parent pages still awaiting editorial photographs:');
   for (const item of missing) console.log(`- ${item}`);
