@@ -8,7 +8,7 @@ section: help-kazakhstan
 topic: getting-help
 slug: development-concerns-kazakhstan
 translationKey: help-development-concerns-kazakhstan
-translationStatus: pending
+translationStatus: checked
 audience:
   - parents
   - families
@@ -19,7 +19,9 @@ editor: Ruslan Kurmashev
 riskLevel: moderate
 disclaimerType: medical
 conflictOfInterest: "No conflict of interest declared."
-draft: true
+publishedAt: 2026-10-10
+updatedAt: 2026-10-10
+draft: false
 keyPoints:
   - "Questions about development can be discussed in primary healthcare. Kazakhstan's paediatric care standard provides for development and early intervention centres and psychophysical screening."
   - "PMPK focuses on educational needs and psychological and educational support; it does not replace medical assessment."
