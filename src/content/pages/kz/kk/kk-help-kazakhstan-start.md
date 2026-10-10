@@ -8,7 +8,7 @@ section: help-kazakhstan
 topic: getting-help
 slug: "autizm-komek-kazakstan-bastau"
 translationKey: help-kazakhstan-start
-translationStatus: pending
+translationStatus: checked
 audience:
   - parents
   - families
@@ -21,7 +21,9 @@ riskLevel: moderate
 disclaimerType: informational
 conflictOfInterest: "Мүдделер қақтығысы мәлімделмеген."
 versionNote: "2026 жылғы 10 қазан: 9 қазанда жаңартылған орысша материал негізінде қазақша аударма әзірленді. 2026 жылғы ПМПК мен МӘС қағидаларындағы өзгерістер ескерілді."
-draft: true
+publishedAt: 2026-10-10
+updatedAt: 2026-10-10
+draft: false
 keyPoints:
   - "Бала дамуына қатысты сұрақтар бойынша алдымен тіркелген емханаға жүгінуге болады. Педиатриялық көмек стандартында баланы дамыту және ерте араласу орталықтары қарастырылған."
   - "Медициналық диагнозды денсаулық сақтау жүйесі қояды; ПМПК ерекше білім беру қажеттіліктерін бағалайды және медициналық диагнозды алмастырмайды."
