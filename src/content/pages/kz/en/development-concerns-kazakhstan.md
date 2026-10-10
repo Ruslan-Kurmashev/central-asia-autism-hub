@@ -32,30 +32,30 @@ sources:
     url: "https://adilet.zan.kz/rus/docs/V2200027182"
     organisation: "Adilet legal information system / Ministry of Health of Kazakhstan"
     publicationYear: 2022
-    note: "Official source cited in the Russian original; verify the current consolidated rules and amendments before applying."
+    note: "Paediatric care standard in its amended 2025 version, including development and early intervention centres."
     accessedAt: 2026-10-09
   - title: "Rules for state psychological and educational support services"
     url: "https://adilet.zan.kz/rus/docs/V2000020744"
     organisation: "Adilet legal information system / Ministry of Education of Kazakhstan"
     publicationYear: 2020
-    note: "Official source cited in the Russian original; verify the current consolidated rules and amendments before applying."
+    note: "PMPK state service rules with amendments under Order No. 180-NQ of 26 June 2026."
     accessedAt: 2026-10-09
   - title: "Standard for medical and social care in mental health"
     url: "https://adilet.zan.kz/rus/docs/V2000021712"
     organisation: "Adilet legal information system / Ministry of Health of Kazakhstan"
     publicationYear: 2020
-    note: "Official source cited in the Russian original; verify the current consolidated rules and amendments before applying."
+    note: "Referral from primary healthcare to specialist mental health services when indicated."
     accessedAt: 2026-10-09
   - title: "Emergency numbers 112 and 103"
     url: "https://egov.kz/cms/en/articles/emergency_number_112"
     organisation: "eGov.kz"
-    note: "Official source cited in the Russian original; verify the current consolidated rules and amendments before applying."
+    note: "Official emergency contact numbers: 112 for emergency services and 103 for ambulance services."
     accessedAt: 2026-10-09
   - title: "Autism spectrum disorder in under 19s: recognition, referral and diagnosis"
     url: "https://www.nice.org.uk/guidance/cg128/chapter/Recommendations"
     organisation: "NICE"
     publicationYear: 2011
-    note: "Official source cited in the Russian original; verify the current consolidated rules and amendments before applying."
+    note: "Clinical guidance distinguishing screening from diagnosis and recognising the importance of regression in acquired skills."
     accessedAt: 2026-10-09
 ---
 
