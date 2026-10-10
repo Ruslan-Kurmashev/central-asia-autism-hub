@@ -1,0 +1,160 @@
+---
+import type { Locale } from '../site.config';
+
+interface PolicySection {
+  id: string;
+  heading: string;
+  paragraphs: string[];
+  bullets?: string[];
+  document?: string;
+}
+
+interface PolicyCopy {
+  heading: string;
+  lead: string;
+  sections: PolicySection[];
+  fullPolicy: string;
+  reportIssue: string;
+  accountNote: string;
+}
+
+interface Props {
+  locale: Locale;
+}
+
+const { locale } = Astro.props;
+const docsBase = 'https://github.com/Ruslan-Kurmashev/central-asia-autism-hub/blob/main/docs/';
+const issueUrl = 'https://github.com/Ruslan-Kurmashev/central-asia-autism-hub/issues/new';
+
+const copy: Record<Locale, PolicyCopy> = {
+  ru: {
+    heading: 'Как устроен проект и как мы отвечаем за информацию',
+    lead: 'Ниже описаны редакционная работа, границы медицинских материалов, обращение с данными и способы сообщить об ошибке. Подробные рабочие политики опубликованы в открытом репозитории.',
+    fullPolicy: 'Полный документ политики (на английском)',
+    reportIssue: 'Сообщить об ошибке через GitHub',
+    accountNote: 'Для отправки обращения в GitHub потребуется учётная запись. Не публикуйте имена детей, диагнозы, контакты или медицинские документы.',
+    sections: [
+      { id: 'mission', heading: 'Миссия и статус проекта', paragraphs: [
+        'Autism Hub Kazakhstan  –  независимый информационно-образовательный ресурс для семей и специалистов, прежде всего в Казахстане. Central Asia Autism Hub  –  название более широкой концепции проекта.',
+        'Сайт не является государственным порталом, медицинской организацией или службой диагностики. Наличие материалов не означает официального одобрения описанных методик.'
+      ], document: '01-brand-architecture.md' },
+      { id: 'editorial', heading: 'Редакционная политика', paragraphs: [
+        'На текущем этапе материалы готовятся под индивидуальной редакционной ответственностью. Публикация не означает независимого внешнего рецензирования: если оно не проводилось, это не должно подразумеваться.',
+        'В статьях указываются источники и даты; существенные исправления требуют повторной проверки утверждений и ссылок. Предпочтение отдаётся первичным исследованиям, клиническим рекомендациям и официальным документам.'
+      ], bullets: ['Дата публикации и обновления отображается на странице материала.', 'Источники должны позволять читателю проверить существенные утверждения.', 'Неточные или устаревшие материалы подлежат исправлению либо снятию с публикации.'], document: '04-editorial-evidence-medical-safety.md' },
+      { id: 'evidence-safety', heading: 'Доказательность и медицинская безопасность', paragraphs: [
+        'Сайт объясняет научные данные, но не ставит диагноз, не подбирает индивидуальное лечение и не заменяет консультацию квалифицированного специалиста.',
+        'Эффективность методов, ограничения исследований и возможные риски должны описываться отдельно. Нельзя воспринимать отдельное исследование как доказательство пригодности метода для каждого ребёнка.'
+      ], document: '04-editorial-evidence-medical-safety.md' },
+      { id: 'privacy', heading: 'Приватность и данные', paragraphs: [
+        'В текущей информационной версии нет регистрации, приёма медицинских документов, загрузки файлов, форм для описания случаев или онлайн-оплаты. Не отправляйте личную или медицинскую информацию через публичные обращения.',
+        'Если используются заметки или отметки в листах наблюдения, они обрабатываются в браузере пользователя, а не отправляются в базу данных сайта. Хостинг-провайдер и сторонние сайты могут обрабатывать технические данные в соответствии с собственными правилами.'
+      ], document: '05-privacy-and-data.md' },
+      { id: 'accessibility', heading: 'Доступность и языки', paragraphs: [
+        'Проект ориентируется на WCAG 2.2 AA: читаемый текст, понятную навигацию, управление клавиатурой и адаптацию к небольшим экранам. Это цель разработки, а не заявление о завершённой независимой сертификации.',
+        'Материалы публикуются на русском, казахском и английском по мере проверки. Отсутствие перевода не означает отсутствие статьи в исходном языке.'
+      ], document: '06-design-and-accessibility.md' },
+      { id: 'contact', heading: 'Контакты, ошибки и исправления', paragraphs: [
+        'Чтобы сообщить о неработающей ссылке, ошибке перевода, неточном источнике или проблеме доступности, откройте обращение в публичном репозитории GitHub. Укажите адрес страницы, проблему и, если возможно, ссылку на подтверждающий источник.',
+        'Этот канал не предназначен для клинических консультаций, личных историй детей или передачи медицинских данных.'
+      ] }
+    ],
+  },
+  kk: {
+    heading: 'Жоба қалай жұмыс істейді және ақпарат үшін қалай жауап береміз',
+    lead: 'Мұнда редакциялық жұмыс, медициналық ақпараттың шектері, деректер құпиялығы және қате туралы хабарлау жолдары берілген. Толық жұмыс саясаттары ашық репозиторийде жарияланған.',
+    fullPolicy: 'Саясаттың толық мәтіні (ағылшын тілінде)',
+    reportIssue: 'GitHub арқылы қате туралы хабарлау',
+    accountNote: 'GitHub-та хабарлама жіберу үшін есептік жазба қажет. Балалардың аттарын, диагноздарын, байланыс деректерін немесе медициналық құжаттарын жарияламаңыз.',
+    sections: [
+      { id: 'mission', heading: 'Миссия және жоба мәртебесі', paragraphs: [
+        'Autism Hub Kazakhstan  –  ең алдымен Қазақстандағы отбасылар мен мамандарға арналған тәуелсіз ақпараттық-білім беру ресурс. Central Asia Autism Hub  –  жобаның кеңірек тұжырымдамасының атауы.',
+        'Сайт мемлекеттік портал, медициналық ұйым немесе диагностика қызметі емес. Әдістер туралы ақпарат олардың ресми мақұлданғанын білдірмейді.'
+      ], document: '01-brand-architecture.md' },
+      { id: 'editorial', heading: 'Редакциялық саясат', paragraphs: [
+        'Қазіргі кезеңде материалдарға жеке редакциялық жауапкершілік қолданылады. Жариялану тәуелсіз сыртқы сараптамадан өтті дегенді білдірмейді; мұндай сараптама өткізілмесе, ол жөнінде жалған түсінік туғызылмайды.',
+        'Мақалаларда дереккөздер мен күндер көрсетіледі. Маңызды түзетулер тұжырымдар мен сілтемелерді қайта тексеруді талап етеді. Бастапқы зерттеулерге, клиникалық ұсынымдарға және ресми құжаттарға басымдық беріледі.'
+      ], bullets: ['Мақалада жарияланған және жаңартылған күндер көрсетіледі.', 'Маңызды мәлімдемелерді дереккөздер арқылы тексеруге болады.', 'Қате не ескірген ақпарат түзетіледі немесе жарияланымнан алынады.'], document: '04-editorial-evidence-medical-safety.md' },
+      { id: 'evidence-safety', heading: 'Дәлелдер және медициналық қауіпсіздік', paragraphs: [
+        'Сайт ғылыми ақпаратты түсіндіреді, бірақ диагноз қоймайды, жеке ем тағайындамайды және білікті маман кеңесін алмастырмайды.',
+        'Әдістердің тиімділігі, зерттеулердің шектеулері мен ықтимал қауіптер бөлек түсіндірілуі керек. Бір зерттеудің нәтижесін әр балаға жарамды дәлел деп қабылдауға болмайды.'
+      ], document: '04-editorial-evidence-medical-safety.md' },
+      { id: 'privacy', heading: 'Құпиялық және деректер', paragraphs: [
+        'Ақпараттық нұсқада тіркелу, медициналық құжаттарды қабылдау, файл жүктеу, жеке жағдайларды сипаттау нысандары немесе онлайн төлем жоқ. Ашық хабарламаларға жеке немесе медициналық ақпарат енгізбеңіз.',
+        'Даму парақтарындағы белгілер мен жазбалар сайттың дерекқорына жіберілмей, пайдаланушы браузерінде өңделеді. Хостинг провайдері мен сыртқы сайттар техникалық деректерді өз ережелеріне сай өңдеуі мүмкін.'
+      ], document: '05-privacy-and-data.md' },
+      { id: 'accessibility', heading: 'Қолжетімділік және тілдер', paragraphs: [
+        'Жобаның мақсаты  –  WCAG 2.2 AA қағидаларына сай оқылатын мәтін, түсінікті навигация, пернетақтамен басқару және мобильді экрандарға бейімделу. Бұл тәуелсіз сертификаттаудан өтті деген мәлімдеме емес.',
+        'Орыс, қазақ және ағылшын тілдеріндегі материалдар тексерілген сайын жарияланады. Аударманың болмауы бастапқы тілдегі мақаланың жоқ екенін білдірмейді.'
+      ], document: '06-design-and-accessibility.md' },
+      { id: 'contact', heading: 'Байланыс, қателер және түзетулер', paragraphs: [
+        'Сілтеме ашылмаса, аудармада қате болса, дереккөз дұрыс көрсетілмесе немесе қолжетімділік мәселесі болса, ашық GitHub репозиторийінде хабарлама қалдырыңыз. Беттің мекенжайын, мәселені және қажет болса растайтын дереккөзді көрсетіңіз.',
+        'Бұл арна медициналық кеңес алуға, балалардың жеке тарихын баяндауға немесе медициналық деректерді жіберуге арналмаған.'
+      ] }
+    ],
+  },
+  en: {
+    heading: 'How the project works and how information is reviewed',
+    lead: 'This page explains our editorial process, medical boundaries, data practices and ways to report errors. The full working policies are available in the public repository.',
+    fullPolicy: 'Read the complete policy',
+    reportIssue: 'Report an issue on GitHub',
+    accountNote: 'A GitHub account is required to submit an issue. Do not disclose children’s names, diagnoses, contact details or medical documents.',
+    sections: [
+      { id: 'mission', heading: 'Mission and project status', paragraphs: [
+        'Autism Hub Kazakhstan is an independent information and education resource primarily for families and professionals in Kazakhstan. Central Asia Autism Hub names the broader project concept.',
+        'This is not a government portal, healthcare provider or diagnostic service. Inclusion of an approach does not constitute official endorsement.'
+      ], document: '01-brand-architecture.md' },
+      { id: 'editorial', heading: 'Editorial policy', paragraphs: [
+        'Materials currently follow an individually accountable editorial model. Publication does not imply external independent peer review; where none has taken place, this must not be suggested.',
+        'Articles identify sources and dates. Material corrections require checking claims and links again. Primary research, clinical guidelines and official documents take priority.'
+      ], bullets: ['Publication and update dates appear on article pages.', 'Readers should be able to trace material claims to sources.', 'Incorrect or outdated information should be corrected or withdrawn.'], document: '04-editorial-evidence-medical-safety.md' },
+      { id: 'evidence-safety', heading: 'Evidence and medical safety', paragraphs: [
+        'The website explains research but does not diagnose autism, select individual treatments or replace advice from a qualified professional.',
+        'Effectiveness, research limitations and potential risks must be described distinctly. A single study should not be treated as proof that an approach is suitable for every child.'
+      ], document: '04-editorial-evidence-medical-safety.md' },
+      { id: 'privacy', heading: 'Privacy and data', paragraphs: [
+        'The current information site does not offer accounts, intake of medical records, uploads, personal case forms or online payments. Do not submit personal or medical information in public issue reports.',
+        'Selections and notes in developmental observation sheets are handled within the visitor’s browser, not submitted to a site database. Hosting providers and linked external sites may process technical data under their own policies.'
+      ], document: '05-privacy-and-data.md' },
+      { id: 'accessibility', heading: 'Accessibility and languages', paragraphs: [
+        'The project targets WCAG 2.2 AA through readable content, predictable navigation, keyboard support and responsive layouts. This is a development objective, not a claim of independently certified conformance.',
+        'Russian, Kazakh and English materials appear as they pass review. Not every article has a translation yet.'
+      ], document: '06-design-and-accessibility.md' },
+      { id: 'contact', heading: 'Contact, errors and corrections', paragraphs: [
+        'To report broken links, translation errors, incorrect citations or accessibility barriers, open an issue in the public GitHub repository. Include the affected page URL, a description of the issue and a verifiable source where relevant.',
+        'This channel is not for medical advice, personal case histories or submitting patient data.'
+      ] }
+    ],
+  }
+};
+
+const content = copy[locale];
+---
+<section class="about-policies" aria-labelledby="about-policies-heading">
+  <header class="about-policies__intro">
+    <h2 id="about-policies-heading">{content.heading}</h2>
+    <p>{content.lead}</p>
+  </header>
+  <div class="about-policies__grid">
+    {content.sections.map((section) => (
+      <section class="about-policies__item" id={section.id} aria-labelledby={section.id + '-title'}>
+        <h3 id={section.id + '-title'}>{section.heading}</h3>
+        {section.paragraphs.map(paragraph => <p>{paragraph}</p>)}
+        {section.bullets && (
+          <ul>{section.bullets.map(point => <li>{point}</li>)}</ul>
+        )}
+        {section.document && (
+          <p class="about-policies__document">
+            <a href={docsBase + section.document} rel="external">{content.fullPolicy} ↗</a>
+          </p>
+        )}
+        {section.id === 'contact' && (
+          <>
+            <p class="about-policies__document"><a href={issueUrl} rel="external">{content.reportIssue} ↗</a></p>
+            <p class="about-policies__note">{content.accountNote}</p>
+          </>
+        )}
+      </section>
+    ))}
+  </div>
+</section>

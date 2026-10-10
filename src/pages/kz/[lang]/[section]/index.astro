@@ -1,6 +1,7 @@
 ---
 import { getCollection } from 'astro:content';
 import ArticleCard from '../../../../components/ArticleCard.astro';
+import AboutPolicies from '../../../../components/AboutPolicies.astro';
 import { CONTENT_UI, DATE_LOCALES } from '../../../../i18n/content';
 import { UI } from '../../../../i18n/ui';
 import BaseLayout from '../../../../layouts/BaseLayout.astro';
@@ -340,12 +341,14 @@ function russianMaterialWord(count: number) {
             <div class="section-v2__intro">
               <p class="section-v2__eyebrow">{sectionV2Text.navigation}</p>
               <h2 id="section-v2-collections-title">
-                {materials.length > 0 ? sectionV2Text.resourcesAndTopics : sectionV2Text.topics}
+                {section === 'about' ? sectionCopy.title : materials.length > 0 ? sectionV2Text.resourcesAndTopics : sectionV2Text.topics}
               </h2>
               <p>
-                {materials.length > 0 ? sectionV2Text.hasMaterials : sectionV2Text.noMaterials}
+                {section === 'about' ? sectionCopy.description : materials.length > 0 ? sectionV2Text.hasMaterials : sectionV2Text.noMaterials}
               </p>
             </div>
+
+            {section === 'about' && <AboutPolicies locale={locale} />}
 
             {materials.length > 0 && (
               <div class="section-v2__accordion">
@@ -506,7 +509,7 @@ function russianMaterialWord(count: number) {
               </div>
             )}
 
-            {section !== 'parents' && (
+            {section !== 'parents' && section !== 'about' && (
               <section
                 class:list={[
                   'section-v2__topic-map-section',
@@ -539,7 +542,7 @@ function russianMaterialWord(count: number) {
               </section>
             )}
 
-            {materials.length === 0 && (
+            {materials.length === 0 && section !== 'about' && (
               <aside
                 class="section-v2__status"
                 aria-labelledby="section-v2-status-title"

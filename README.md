@@ -6,7 +6,7 @@ The first country implementation is **Autism Hub Kazakhstan**. The website is be
 
 ## Current status
 
-The repository contains the approved planning documents and the first local Astro foundation. Medical and parent-facing articles have not yet been published. GitHub Pages is intentionally disabled until the launch candidate has been reviewed.
+The site is deployed to GitHub Pages and contains published parent resources and ten Russian research explainers, with English and Kazakh translations available for the eight Kazakhstan help guides and the developmental milestones overview. Translation coverage is still incomplete and articles are not represented as independently peer reviewed. The publishing pipeline validates local links, content metadata, translated section structure and editorial image provenance; independent browser, medical and legal review remain separate release checks.
 
 ## Local development
 
