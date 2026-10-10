@@ -33,19 +33,19 @@ sources:
     url: "https://adilet.zan.kz/rus/docs/V2500036047"
     organisation: "Adilet legal information system / Ministry of Education of Kazakhstan"
     publicationYear: 2025
-    note: "Official Kazakhstan regulation cited in the Russian source article; confirm the latest consolidated version and effective dates."
+    note: "Order No. 92 of 29 April 2025 in the version amended by Order No. 144-NQ of 29 May 2026."
     accessedAt: 2026-10-09
   - title: "Amendments to the rules for psychological and educational support services"
     url: "https://adilet.zan.kz/rus/docs/V2600038856"
     organisation: "Adilet legal information system / Ministry of Education of Kazakhstan"
     publicationYear: 2026
-    note: "Official Kazakhstan regulation cited in the Russian source article; confirm the latest consolidated version and effective dates."
+    note: "Order No. 144-NQ of 29 May 2026, officially published on 4 June 2026 and effective ten calendar days after first official publication."
     accessedAt: 2026-10-09
   - title: "Model rules for educational organisations"
     url: "https://www.adilet.zan.kz/rus/docs/V2200029329"
     organisation: "Adilet legal information system / Ministry of Education of Kazakhstan"
     publicationYear: 2022
-    note: "Official Kazakhstan regulation cited in the Russian source article; confirm the latest consolidated version and effective dates."
+    note: "Order No. 385 of 31 August 2022 as amended on 25 May 2026, including preschool and support arrangements."
     accessedAt: 2026-10-09
   - title: "Standard for specialised psychological and educational support"
     url: "https://adilet.zan.kz/rus/docs/V2500036137"
