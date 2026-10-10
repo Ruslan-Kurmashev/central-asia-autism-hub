@@ -48,7 +48,7 @@ for (const name of await readdir(directory)) {
     errors.push(name + ': final primary-study reference missing');
   }
 
-  if (!/\*Материал .*не предназначен/i.test(body)) {
+  if (!/\*Материал .*не (?:предназначен|заменяет)/i.test(body)) {
     errors.push(name + ': research explainer boundary notice missing');
   }
 
