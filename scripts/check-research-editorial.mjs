@@ -8,15 +8,15 @@ const errors = [];
 let published = 0;
 
 function field(frontmatter, key) {
-  const row = frontmatter.match(new RegExp('^' + key + ':[ \\t]*(.*)$', 'm'));
+  const row = frontmatter.match(new RegExp('^' + key + ':[ \t]*(.*)$', 'm'));
   return row?.[1]?.trim().replace(/^["']|["']$/g, '') ?? '';
 }
 
 for (const name of await readdir(directory)) {
-  if (!/\\.(md|mdx)$/.test(name)) continue;
+  if (!/\.(md|mdx)$/.test(name)) continue;
 
   const markdown = await readFile(path.join(directory, name), 'utf8');
-  const match = markdown.match(/^---\\r?\\n([\\s\\S]*?)\\r?\\n---\\r?\\n([\\s\\S]*)$/);
+  const match = markdown.match(/^---\r?\n([\s\S]*?)\r?\n---\r?\n([\s\S]*)$/);
   if (!match) {
     errors.push(name + ': invalid frontmatter');
     continue;
@@ -48,7 +48,7 @@ for (const name of await readdir(directory)) {
     errors.push(name + ': final primary-study reference missing');
   }
 
-  if (!/\\*Материал .*не предназначен/i.test(body)) {
+  if (!/\*Материал .*не предназначен/i.test(body)) {
     errors.push(name + ': research explainer boundary notice missing');
   }
 
