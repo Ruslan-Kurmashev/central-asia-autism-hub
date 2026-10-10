@@ -22,7 +22,7 @@ for (const item of checks) {
   if (!fm.includes('riskLevel: ' + item.risk)) errors.push(item.name + ': risk metadata mismatch');
   if (!/^updatedAt:\s*\S+/m.test(fm)) errors.push(item.name + ': missing update date');
   for (const ref of item.refs) if (!fm.includes(ref)) errors.push(item.name + ': missing expected scientific source ' + ref);
-  for (const word of item.words) if (!body.toLocaleLowerCase('ru').includes(word.toLocaleLowerCase('ru')) errors.push(item.name + ': safety/evidence explanation absent: ' + word);
+  for (const word of item.words) if (!body.toLocaleLowerCase('ru').includes(word.toLocaleLowerCase('ru'))) errors.push(item.name + ': safety/evidence explanation absent: ' + word);
 }
 console.log('Behavior/AAC editorial regression: ' + checks.length + ' pages checked.');
 if (errors.length) {
