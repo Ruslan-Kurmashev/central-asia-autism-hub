@@ -32,7 +32,7 @@ const slugs = new Set(pairs.map(([, en]) => en));
 for (const [ruId, enId] of pairs) {
   const [ru, en] = await Promise.all([
     readFile(path.join(root, 'ru', `${ruId}.md`), 'utf8'),
-    readFile(path.join(root, 'en', `${enId}.md`), 'utf8'),
+    readFile(path.join(root, 'en', `${enId === 'autism-support-kazakhstan-start' ? enId : `en-${enId}`}.md`), 'utf8'),
   ]);
   const source = extract(ru);
   const translated = extract(en);
