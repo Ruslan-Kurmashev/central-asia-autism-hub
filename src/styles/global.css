@@ -43,6 +43,7 @@ html {
   background: var(--color-background);
   color: var(--color-ink);
   scroll-behavior: smooth;
+  scroll-padding-top: 7rem;
 }
 
 body {
@@ -235,7 +236,7 @@ details.nav-disclosure:not([open]) > .primary-nav {
 .language-switcher a {
   display: inline-flex;
   align-items: center;
-  min-height: 2.1rem;
+  min-height: 2.75rem;
   padding: 0.3rem 0.65rem;
   border-left: 1px solid var(--color-border);
   color: var(--color-muted);
@@ -1423,6 +1424,10 @@ details.nav-disclosure:not([open]) > .primary-nav {
 }
 
 @media (max-width: 56rem) {
+  html {
+    scroll-padding-top: 11rem;
+  }
+
   .section-intro,
   .featured-materials__intro,
   .site-footer__grid,
