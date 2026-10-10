@@ -48,10 +48,10 @@ sources:
     publicationYear: 2012
     note: "Использовано для психологического лечения сопутствующих состояний и индивидуальных адаптаций для аутичных взрослых."
     accessedAt: 2026-10-05
-  - title: "Evidence-Based Practices for Children, Youth, and Young Adults with Autism"
-    url: "https://ncaep.fpg.unc.edu/sites/ncaep.fpg.unc.edu/files/imce/documents/EBP%20Executive%20Summary.pdf"
-    organisation: "National Clearinghouse on Autism Evidence and Practice"
-    publicationYear: 2020
+  - title: "Evidence-Based Practices for Children, Youth, and Young Adults with Autism: Third Generation Review"
+    url: "https://pubmed.ncbi.nlm.nih.gov/33449225/"
+    organisation: "Journal of Autism and Developmental Disorders / Hume et al."
+    publicationYear: 2021
     note: "Использовано для исторической классификации Cognitive Behavioral/Instructional Strategies."
     accessedAt: 2026-10-05
   - title: "A meta-analysis of self-management interventions for students with ASD"
