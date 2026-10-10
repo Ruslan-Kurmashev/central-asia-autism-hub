@@ -9,10 +9,10 @@
 | Russian source | English draft | Topic |
 | --- | --- | --- |
 | `kz/ru/help-kazakhstan-start.md` | `kz/en/autism-support-kazakhstan-start.md` | Starting the support pathway |
-| `kz/ru/development-concerns-kazakhstan.md` | `kz/en/development-concerns-kazakhstan.md` | Developmental concerns and first contact |
-| `kz/ru/verify-specialist-center-kazakhstan.md` | `kz/en/verify-specialist-center-kazakhstan.md` | Verifying a specialist or centre |
-| `kz/ru/check-medical-license-kazakhstan.md` | `kz/en/check-medical-license-kazakhstan.md` | eGov and eLicense lookup |
-| `kz/ru/autism-kindergarten-kazakhstan.md` | `kz/en/autism-kindergarten-kazakhstan.md` | Preschool support |
+| `kz/ru/development-concerns-kazakhstan.md` | `kz/en/en-development-concerns-kazakhstan.md` | Developmental concerns and first contact |
+| `kz/ru/verify-specialist-center-kazakhstan.md` | `kz/en/en-verify-specialist-center-kazakhstan.md` | Verifying a specialist or centre |
+| `kz/ru/check-medical-license-kazakhstan.md` | `kz/en/en-check-medical-license-kazakhstan.md` | eGov and eLicense lookup |
+| `kz/ru/autism-kindergarten-kazakhstan.md` | `kz/en/en-autism-kindergarten-kazakhstan.md` | Preschool support |
 
 ## Source-parity checks
 
@@ -44,3 +44,7 @@ This is a **real, documented, AI-assisted bilingual alignment and terminology ch
 The user's instruction authorises transfer of these materials to the English site. The checked status represents this documented translation check, **not** certification by a human specialist or independent external review. No externalReviewer field has been added.
 
 Release requires successful site validation, functioning English routes and images, and publication in the existing editorial v2 design. The responsible project editor may request corrections after publication through the existing editorial policy.
+
+## Astro content ID collision fix
+
+Astro's glob content loader identifies these Markdown records by filename, even across the `ru` and `en` directories. Four English source **filenames** are therefore prefixed with `en-` to avoid overwriting published Russian content. The `slug` fields and public URL paths remain unchanged and readable in English. The 001 file already has a unique source filename.
