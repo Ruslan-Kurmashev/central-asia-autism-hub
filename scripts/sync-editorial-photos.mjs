@@ -1,4 +1,4 @@
-/* Editorial photo downloads for Kazakhstan help articles.
+/* Editorial photo downloads for Kazakhstan help and parent-facing articles.
  * Real Pexels photographs, individually credited in docs/editorial-image-sources.md.
  * Generated public files are intentionally not committed; CI downloads and validates
  * each file before the static site is built and deployed. No remote hotlinks in HTML.
@@ -17,6 +17,8 @@ const photos = [
   ['kz-help-006.jpg', '5905445'],
   ['kz-help-007.jpg', '5668469'],
   ['kz-help-008.jpg', '8815849'],
+  ['parent-afk-equipment.jpg', '6339719'],
+  ['parent-feeding-meal.jpg', '7074510'],
 ];
 
 function isJpeg(bytes) {
