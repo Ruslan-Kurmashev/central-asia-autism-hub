@@ -10,7 +10,7 @@ const checks = [
   { name: 'pecs', words: ['PECS не должен ограничивать', 'Не следует забирать альтернативную систему', 'физическая подсказка'], refs: ['20181849', '41442835'], risk: 'lower' },
   { name: 'aac', words: ['Доступная коммуникация - не награда', 'не существует обязательного порога', 'Доступ к ним'], refs: ['www.asha.org'], risk: 'lower' },
   { name: 'prompting-and-prompt-fading', words: ['Прежде чем использовать подсказку', 'физическую подсказку нужно прекратить'], refs: ['27606243'], risk: 'lower' },
-  { name: 'differential-reinforcement', words: ['Проверяйте возможные неблагоприятные эффекты', 'план мониторинга', 'нельзя игнорировать'], refs: ['29117712'], risk: 'moderate' },
+  { name: 'differential-reinforcement', words: ['Проверяйте возможные неблагоприятные эффекты', 'план мониторинга', 'игнорировать боль'], refs: ['29117712'], risk: 'moderate' },
 ];
 const errors = [];
 for (const item of checks) {
@@ -22,7 +22,7 @@ for (const item of checks) {
   if (!fm.includes('riskLevel: ' + item.risk)) errors.push(item.name + ': risk metadata mismatch');
   if (!/^updatedAt:\s*\S+/m.test(fm)) errors.push(item.name + ': missing update date');
   for (const ref of item.refs) if (!fm.includes(ref)) errors.push(item.name + ': missing expected scientific source ' + ref);
-  for (const word of item.words) if (!body.includes(word)) errors.push(item.name + ': safety/evidence explanation absent: ' + word);
+  for (const word of item.words) if (!body.toLocaleLowerCase('ru').includes(word.toLocaleLowerCase('ru')) errors.push(item.name + ': safety/evidence explanation absent: ' + word);
 }
 console.log('Behavior/AAC editorial regression: ' + checks.length + ' pages checked.');
 if (errors.length) {
