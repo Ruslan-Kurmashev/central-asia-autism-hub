@@ -138,7 +138,7 @@ sources:
 
 ## Келесі қадам
 
-Егер негізгі сұрақ аутизм диагностикасына қатысты болса, [Қазақстанда аутизмге күдік болғанда қандай тексерулер керек? (орыс тілінде)](/central-asia-autism-hub/kz/ru/parents/obsledovaniya-pri-podozrenii-na-avtizm/) материалымен танысыңыз.
+Егер негізгі сұрақ аутизм диагностикасына қатысты болса, [Қазақстанда аутизмге күдік болғанда қандай тексерулер керек? (орыс тілінде)](/central-asia-autism-hub/kz/ru/parents/obsledovaniya-pri-podozrenii-na-autizm/) материалымен танысыңыз.
 
 Егер сұрақ балабақшаға немесе мектепке қатысты болса, [балабақша](/central-asia-autism-hub/kz/kk/help-kazakhstan/autizm-balabaksha-kazakstan/) және [мектеп](/central-asia-autism-hub/kz/kk/help-kazakhstan/autizm-mektep-kazakstan/) туралы жеке нұсқаулықтарды оқыңыз.
 
