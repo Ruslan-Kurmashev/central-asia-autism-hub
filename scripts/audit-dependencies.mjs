@@ -23,6 +23,14 @@ function audit(label, args) {
     console.log('  ' + info.severity + ' | ' + name + ' | installed affected range ' + info.range +
       ' | direct=' + Boolean(info.isDirect) + ' | fix=' + fix + ' | via=' + source.slice(0, 3).join('; '));
   }
+  return totals;
 }
 audit('all dependencies, including development', []);
-audit('production dependencies only', ['--omit=dev']);
+const production = audit('production dependencies only', ['--omit=dev']);
+if (process.argv.includes('--fail-on-high-production') && production) {
+  const severe = (production.high || 0) + (production.critical || 0);
+  if (severe > 0) {
+    console.error('[AUDIT] Production dependency tree has ' + severe + ' high/critical vulnerability warnings.');
+    process.exitCode = 1;
+  }
+}
