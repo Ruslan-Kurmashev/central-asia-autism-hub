@@ -18,6 +18,10 @@ const warnings = [];
 for (const page of pages) {
   const html = await readFile(page, 'utf8');
   const relative = path.relative(dir, page);
+  if (relative === 'admin/index.html') {
+    // Decap CMS is a separate third-party editor, outside the site's public UI.
+    continue;
+  }
   const lang = html.match(/<html\b[^>]*\blang=["']([^"']+)["']/i)?.[1];
   if (!lang) errors.push(relative + ': missing html lang');
   if (!/<meta\s+name=["']viewport["']/i.test(html)) errors.push(relative + ': missing viewport meta');
@@ -37,7 +41,7 @@ for (const page of pages) {
     if (!/\brel=["'][^"']*\bnoopener\b/i.test(m[0])) warnings.push(relative + ': target=_blank without rel=noopener');
   }
 }
-console.log('Static HTML accessibility QA: ' + pages.length + ' pages; ' + errors.length + ' errors; ' + warnings.length + ' warnings.');
+console.log('Static HTML accessibility QA: ' + (pages.length - 1) + ' public pages checked (third-party Decap CMS editor excluded); ' + errors.length + ' errors; ' + warnings.length + ' warnings.');
 for (const s of errors.slice(0, 60)) console.error('[ERROR] ' + s);
 for (const s of warnings.slice(0, 30)) console.log('[WARNING] ' + s);
 if (errors.length) process.exitCode = 1;
