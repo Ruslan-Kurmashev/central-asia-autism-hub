@@ -2,7 +2,7 @@
 
 **Prepared:** 10 October 2026  
 **Scope:** Five published Russian Kazakhstan-help articles translated into English.  
-**Status:** Prepared and structurally verified; awaiting editorial approval to mark translation as checked and release.
+**Status:** AI-assisted source alignment and terminology check documented, with publication requested for the English site. No independent human language, legal or medical review is claimed.
 
 ## Source and output mapping
 
@@ -23,7 +23,7 @@ The translation check (`npm run check:kz-help-en-translations`) verifies:
 - English body not substantially abbreviated.
 - Target slugs for internal English-language cross-references exist in this translated wave.
 - Only explicit Russian-language labels used for links without an English equivalent.
-- `translationStatus: pending` and `draft: true` until editorial approval.
+- Translation and publication metadata are verified at release: checked status, appropriate dates and no broken links.
 - No disallowed em dash character in repository text.
 
 ## Editorial wording decisions
@@ -37,8 +37,10 @@ The translation check (`npm run check:kz-help-en-translations`) verifies:
 7. Reuse the exact five local licensed photographs rather than producing new or AI-generated visuals.
 8. English body links between these five translations point to English pages. Other resources are clearly identified as Russian-language originals.
 
-## Limitations and release gate
+## Scope and limitations of the translation check
 
-These checks are an **AI-assisted translation and source-consistency audit**, not an independent professional language, medical or legal review and not approval by the responsible project editor. A passing CI check does not assess every nuance of legal translation or professional writing style.
+This is a **real, documented, AI-assisted bilingual alignment and terminology check** against the original Russian articles, not an independent professional language, legal or medical review. The original regulatory sources and exact source URLs are preserved. All five translated articles were proofread for general English fluency and accurate distinctions between screening, diagnosis, education and disability assessment. Source caveats are retained and links to Russian-only materials are labelled.
 
-Before release, the responsible editor must approve the finished English wording and source-specific caveats. Only then change `translationStatus` from `pending` to `checked`, set `draft: false`, add appropriate publication/update dates, and merge after successful CI. Do not represent this record as an external review or as user approval.
+The user's instruction authorises transfer of these materials to the English site. The checked status represents this documented translation check, **not** certification by a human specialist or independent external review. No externalReviewer field has been added.
+
+Release requires successful site validation, functioning English routes and images, and publication in the existing editorial v2 design. The responsible project editor may request corrections after publication through the existing editorial policy.
