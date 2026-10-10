@@ -10,6 +10,9 @@ const pairs = [
   ['verify-specialist-center-kazakhstan', 'verify-specialist-center-kazakhstan'],
   ['check-medical-license-kazakhstan', 'check-medical-license-kazakhstan'],
   ['autism-kindergarten-kazakhstan', 'autism-kindergarten-kazakhstan'],
+  ['autism-school-kazakhstan', 'autism-school-kazakhstan'],
+  ['social-support-rights-kazakhstan', 'social-support-rights-kazakhstan'],
+  ['check-service-before-payment-kazakhstan', 'check-service-before-payment-kazakhstan'],
 ];
 
 const extract = (text) => {
@@ -33,6 +36,9 @@ const publicSlugs = new Map([
   ['verify-specialist-center-kazakhstan', 'check-autism-specialist-kazakhstan'],
   ['check-medical-license-kazakhstan', 'verify-medical-licence-kazakhstan'],
   ['autism-kindergarten-kazakhstan', 'autism-kindergarten-support-kazakhstan'],
+  ['autism-school-kazakhstan', 'autism-school-enrolment-support-kazakhstan'],
+  ['social-support-rights-kazakhstan', 'family-rights-social-support-kazakhstan'],
+  ['check-service-before-payment-kazakhstan', 'check-autism-service-before-payment-kazakhstan'],
 ]);
 const slugs = new Set(publicSlugs.values());
 
@@ -88,4 +94,4 @@ for (const [ruId, enId] of pairs) {
   console.log(`${ruId} -> ${enId}: source URLs, structure, images, keys and article links verified`);
 }
 
-console.log('All five English Kazakhstan help translations passed structural parity checks.');
+console.log('All eight English Kazakhstan help translations passed structural parity checks.');
