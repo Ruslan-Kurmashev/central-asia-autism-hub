@@ -525,7 +525,7 @@ function russianMaterialWord(count: number) {
 
                 <div class="section-v2__topic-map">
                   {sectionCopy.topics.map((topic, index) => (
-                    <article class="section-v2__topic-card" id={topic.id}>
+                    <article class="section-v2__topic-card" id={visibleGroups.some(group => group.id === topic.id) ? `${topic.id}-overview` : topic.id}>
                       <span
                         class="section-v2__topic-number"
                         aria-hidden="true"
