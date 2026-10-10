@@ -109,7 +109,7 @@ Law No. **332-VIII of 2 July 2026** enters into force 60 calendar days after its
 
 Therefore, **not being listed in a registry that is still being implemented does not, by itself, establish a legal violation**. Check the applicable date, transitional rules and current procedures. Specialist medical care remains subject to its own laws.
 
-You can review the [Law on Psychological Activity on Adilet (official Russian text)](https://adilet.zan.kz/rus/docs/Z2600000332).
+You can review the [Law on Psychological Activity on Adilet (official Russian text)](https://adilet.zan.kz/rus/docs/Z2600000332). Adilet also provides an [unofficial English translation of this law](https://www.adilet.zan.kz/eng/docs/Z2600000332), which should be read alongside the official legal text.
 
 ## Step 4. For teaching services, check the role and employer
 
