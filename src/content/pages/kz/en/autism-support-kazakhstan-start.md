@@ -8,7 +8,7 @@ section: help-kazakhstan
 topic: getting-help
 slug: "autism-support-kazakhstan-start"
 translationKey: help-kazakhstan-start
-translationStatus: pending
+translationStatus: checked
 audience:
   - parents
   - families
@@ -21,7 +21,9 @@ riskLevel: moderate
 disclaimerType: informational
 conflictOfInterest: "No conflict of interest declared."
 versionNote: "10 October 2026: English translation based on the Russian article updated on 9 October 2026. It retains the regulatory changes to PMPK services dated 26 June 2026 and MSE rules effective from 25 August 2026."
-draft: true
+publishedAt: 2026-10-10
+updatedAt: 2026-10-10
+draft: false
 keyPoints:
   - "Medical, educational and social support in Kazakhstan follow different pathways. Start by identifying the question you need to resolve."
   - "For developmental concerns, families can begin with primary healthcare. Kazakhstan's paediatric standard provides for child development and early intervention centres."
