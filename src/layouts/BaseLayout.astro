@@ -35,6 +35,7 @@ const {
 const pageLocale = locale ?? 'en';
 const origin = Astro.site ?? Astro.url.origin;
 const canonicalUrl = new URL(Astro.url.pathname, origin);
+const isNotFoundPage = /\/404(?:\/|\.html)$/.test(Astro.url.pathname);
 ---
 
 <!doctype html>
@@ -46,8 +47,10 @@ const canonicalUrl = new URL(Astro.url.pathname, origin);
     <meta name="description" content={description} />
     <meta name="theme-color" content="#315f94" />
     <link rel="icon" type="image/svg+xml" href={`${sitePath()}brand/autism-hub-kazakhstan-mark.svg`} />
-    {!SITE.isLive && <meta name="robots" content="noindex, nofollow" />}
-    <link rel="canonical" href={canonicalUrl} />
+    {(!SITE.isLive || isNotFoundPage) && (
+      <meta name="robots" content={isNotFoundPage ? 'noindex, follow' : 'noindex, nofollow'} />
+    )}
+    {!isNotFoundPage && <link rel="canonical" href={canonicalUrl} />}
     <link rel="alternate" hreflang="x-default" href={new URL(sitePath(), origin)} />
     {
       locale &&
