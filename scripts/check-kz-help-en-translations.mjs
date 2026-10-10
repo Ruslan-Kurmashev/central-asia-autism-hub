@@ -27,7 +27,14 @@ const headings = (body) => [...body.matchAll(/^#{2,3} (.+)$/gm)].map((m) => m[1]
 const keyPoints = (front) =>
   [...(front.match(/^keyPoints:\n((?:  - .+\n)+)/m)?.[1] ?? '').matchAll(/^  - /gm)].length;
 
-const slugs = new Set(pairs.map(([, en]) => en));
+const publicSlugs = new Map([
+  ['autism-support-kazakhstan-start', 'autism-support-kazakhstan-start'],
+  ['development-concerns-kazakhstan', 'child-development-concerns-kazakhstan'],
+  ['verify-specialist-center-kazakhstan', 'check-autism-specialist-kazakhstan'],
+  ['check-medical-license-kazakhstan', 'verify-medical-licence-kazakhstan'],
+  ['autism-kindergarten-kazakhstan', 'autism-kindergarten-support-kazakhstan'],
+]);
+const slugs = new Set(publicSlugs.values());
 
 for (const [ruId, enId] of pairs) {
   const [ru, en] = await Promise.all([
@@ -42,7 +49,7 @@ for (const [ruId, enId] of pairs) {
       `${ruId}: the EN ${prop} does not match the Russian source`);
   }
   assert.equal(property(translated.front, 'language'), 'en');
-  assert.equal(property(translated.front, 'slug'), enId);
+  assert.equal(property(translated.front, 'slug'), publicSlugs.get(enId));
   assert.ok(['pending', 'checked'].includes(property(translated.front, 'translationStatus')));
   assert.ok(['true', 'false'].includes(property(translated.front, 'draft')));
   assert.ok(
