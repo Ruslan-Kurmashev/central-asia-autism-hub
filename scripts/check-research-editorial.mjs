@@ -52,7 +52,7 @@ for (const name of await readdir(directory)) {
     errors.push(name + ': research explainer boundary notice missing');
   }
 
-  if (/—/.test(markdown)) errors.push(name + ': forbidden em dash');
+  if (/\u2014/.test(markdown)) errors.push(name + ': forbidden em dash');
 
   const image = field(header, 'featuredImage');
   const credit = field(header, 'featuredImageCredit');
