@@ -33,7 +33,7 @@ async function exists(filePath) {
 function extractInternalHrefs(html) {
   return [...html.matchAll(/href=["']([^"']+)["']/g)]
     .map((match) => match[1])
-    .filter((href) => href.startsWith('/'));
+    .filter((href) => href.startsWith('/') || href.startsWith('#'));
 }
 
 function extractInternalImageSrcs(html) {
@@ -83,6 +83,32 @@ const badBaseLinks = [];
 const missingTargets = [];
 const missingImages = [];
 const badBaseImages = [];
+const missingAnchors = [];
+const htmlCache = new Map();
+
+async function hasAnchor(filePath, fragment) {
+  if (!filePath.endsWith('.html')) return true;
+  let anchors = htmlCache.get(filePath);
+  if (!anchors) {
+    const content = await readFile(filePath, 'utf8');
+    anchors = new Set(
+      [...content.matchAll(/\b(?:id|name)\s*=\s*(["'])(.*?)\1/g)].map((match) => match[2]),
+    );
+    htmlCache.set(filePath, anchors);
+  }
+  return anchors.has(fragment);
+}
+
+function decodeFragment(href) {
+  const hash = href.indexOf('#');
+  if (hash === -1 || hash === href.length - 1) return null;
+  const raw = href.slice(hash + 1);
+  try {
+    return decodeURIComponent(raw);
+  } catch {
+    return raw;
+  }
+}
 
 for (const filePath of htmlFiles) {
   const html = await readFile(filePath, 'utf8');
@@ -90,6 +116,14 @@ for (const filePath of htmlFiles) {
   const hrefs = extractInternalHrefs(html);
 
   for (const href of hrefs) {
+    if (href.startsWith('#')) {
+      const fragment = decodeFragment(href);
+      if (fragment && !(await hasAnchor(filePath, fragment))) {
+        missingAnchors.push({ source: relativeSource, href });
+      }
+      continue;
+    }
+
     if (href.startsWith('/kz/')) {
       badBaseLinks.push({ source: relativeSource, href });
       continue;
@@ -102,16 +136,21 @@ for (const filePath of htmlFiles) {
     const candidates = targetCandidates(href);
     if (candidates.length === 0) continue;
 
-    let found = false;
+    let foundFile = null;
     for (const candidate of candidates) {
       if (await exists(candidate)) {
-        found = true;
+        foundFile = candidate;
         break;
       }
     }
 
-    if (!found) {
+    if (!foundFile) {
       missingTargets.push({ source: relativeSource, href });
+    } else {
+      const fragment = decodeFragment(href);
+      if (fragment && !(await hasAnchor(foundFile, fragment))) {
+        missingAnchors.push({ source: relativeSource, href });
+      }
     }
   }
 
@@ -137,7 +176,7 @@ for (const filePath of htmlFiles) {
   }
 }
 
-if (badBaseLinks.length > 0 || missingTargets.length > 0 || badBaseImages.length > 0 || missingImages.length > 0) {
+if (badBaseLinks.length > 0 || missingTargets.length > 0 || badBaseImages.length > 0 || missingImages.length > 0 || missingAnchors.length > 0) {
   if (badBaseLinks.length > 0) {
     console.error('Broken GitHub Pages base-path links found:');
     badBaseLinks.forEach(({ source, href }) =>
@@ -166,9 +205,16 @@ if (badBaseLinks.length > 0 || missingTargets.length > 0 || badBaseImages.length
     );
   }
 
+  if (missingAnchors.length > 0) {
+    console.error('Internal navigation links with missing target anchors:');
+    missingAnchors.forEach(({ source, href }) =>
+      console.error(`- ${source}: ${href}`)
+    );
+  }
+
   process.exitCode = 1;
 } else {
   console.log(
-    `Internal link check passed: ${htmlFiles.length} HTML pages checked, no root /kz/ links, missing targets, or broken image sources.`
+    `Internal link check passed: ${htmlFiles.length} HTML pages checked, no root /kz/ links, missing targets, broken image sources, or missing anchor targets.`
   );
 }
