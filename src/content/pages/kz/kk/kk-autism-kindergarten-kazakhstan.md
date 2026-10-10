@@ -8,7 +8,7 @@ section: help-kazakhstan
 topic: education
 slug: "autizm-balabaksha-kazakstan"
 translationKey: help-autism-kindergarten-kazakhstan
-translationStatus: pending
+translationStatus: checked
 audience:
   - parents
   - families
@@ -20,7 +20,9 @@ editor: Ruslan Kurmashev
 riskLevel: lower
 disclaimerType: informational
 conflictOfInterest: "Мүдделер қақтығысы мәлімделмеген."
-draft: true
+publishedAt: 2026-10-10
+updatedAt: 2026-10-10
+draft: false
 keyPoints:
   - "Аутизмі бар әр балаға міндетті бір ғана балабақша түрі белгіленбейді: бастысы баланың қатысуы, қарым-қатынасы, дамуы және қауіпсіздігі үшін қажетті жағдайлар."
   - "Өңірдегі қолжетімділікке қарай жалпы балабақша, арнайы топ немесе арнайы мектепке дейінгі ұйым қарастырылуы мүмкін."
