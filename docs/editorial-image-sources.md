@@ -147,3 +147,22 @@ These 16 published Russian parent articles now have **one distinct local, real P
 **Selection and ethical boundaries:** all photos are illustrative; none establishes that any pictured person is autistic or enrolled in an actual service. Keep accessibility alt text factual, and avoid asserting outcomes or clinical effectiveness from stock imagery. Object-based photography was preferred whenever it described the article well. Photos involving families were selected only for family-activity topics and should not be presented as representative of Kazakhstan services.
 
 **Production safeguards:** `npm run check:parent-images` verifies 16 distinct featured image URLs, descriptive alt text, file presence and file size in the actual repository, and reports which further published articles still need imagery. The existing build validator checks image URLs from the produced HTML. This first batch does **not** complete all missing artwork: continue with further curated, source-documented waves rather than assigning generic fallback photos in bulk.
+
+
+## Parent library image restoration (2026-10-10)
+
+New real photographs for specialised topics, selected from Pexels pages under the [Pexels License](https://www.pexels.com/license/) and acquired as **local site JPGs at build time**. No AI-generated image or hotlink is used. The original pages describe the depicted objects; these photographs do not establish the effectiveness of any intervention.
+
+| Static site file | Photographer | Licensed original | Editorial subject |
+| --- | --- | --- | --- |
+| `photos/parent-movement-equipment.jpg` | Letícia Alvares | https://www.pexels.com/photo/flat-lay-of-fitness-equipment-on-white-surface-36717697/ | Yoga mat, resistance band, dumbbell and exercise ball; a generic illustration of movement equipment |
+| `photos/parent-toileting-bathroom.jpg` | Max Vakhtbovych | https://www.pexels.com/photo/interior-of-restroom-with-toilet-and-sink-near-mirror-6444254/ | Toilet and sink in a clean, empty bathroom; daily toileting environment |
+| `photos/parent-communication-cards.jpg` | PNW Production | https://www.pexels.com/photo/blank-notes-with-hook-8250913/ | Blank paper cards; **not an actual PECS or AAC system** |
+| `photos/parent-sensory-headphones.jpg` | Lia | https://www.pexels.com/photo/green-and-gray-plastic-toy-4065846/ | Headphones, fidget spinner and desk objects; **not clinical hearing equipment** |
+| `photos/parent-weighted-blanket.jpg` | qiana zhang | https://www.pexels.com/photo/close-up-of-bent-linen-11125918/ | Soft folded textile; **not a certified or weighted medical product** |
+| `photos/parent-schedule-planner.jpg` | Florencia Ceruti | https://www.pexels.com/photo/colorful-weekly-planner-with-pens-and-confetti-30101192/ | Colourful planners and stationery illustrating routine planning, not treatment |
+| `photos/parent-hygiene-tools.jpg` | Sarah Chai | https://www.pexels.com/photo/crop-person-with-toothbrush-at-sink-7262385/ | Toothbrush at a sink; a routine daily hygiene task |
+
+All additional original photos and their names/IDs are recorded in `scripts/sync-editorial-photos.mjs`. The build must fetch and validate the JPEG bytes before publication.
+
+Existing Pexels photographs in this document may be reused on an article only where the subject actually relates to that article. Alternative text should describe the photograph, not imply that an individual has autism, that a pictured activity is a validated therapy or that a blank card is an actual AAC communication system.
