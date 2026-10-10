@@ -8,7 +8,7 @@ section: help-kazakhstan
 topic: education
 slug: "autism-school-enrolment-support-kazakhstan"
 translationKey: help-autism-school-kazakhstan
-translationStatus: pending
+translationStatus: checked
 audience:
   - parents
   - families
@@ -20,7 +20,9 @@ editor: Ruslan Kurmashev
 riskLevel: moderate
 disclaimerType: informational
 conflictOfInterest: "No conflict of interest declared."
-draft: true
+publishedAt: 2026-10-10
+updatedAt: 2026-10-10
+draft: false
 keyPoints:
   - "School admission and arrangements for special educational support are separate questions. An autism diagnosis does not remove a child's right to education."
   - "PMPK assesses special educational needs and provides recommendations for educational support; it does not replace a medical diagnosis."
