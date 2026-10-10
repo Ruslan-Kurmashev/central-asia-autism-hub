@@ -216,6 +216,6 @@ Whitehouse, A.J.O., Varcin, K.J., Pillar, S., Billingham, W., Alvares, G.A. *et 
 - **DOI и статья в журнале:** [JAMA Pediatrics, 10.1001/jamapediatrics.2021.3298](https://doi.org/10.1001/jamapediatrics.2021.3298)
 - **Открытый полный текст:** [PubMed Central](https://pmc.ncbi.nlm.nih.gov/articles/PMC8453361/)
 - **Библиографическая запись:** [PubMed](https://pubmed.ncbi.nlm.nih.gov/34542577/)
-- **Регистрация клинического исследования:** [ACTRN12616000819426](https://www.anzctr.org.au/Trial/Registration/TrialReview.aspx?id=370811)
+- **Регистрация клинического исследования:** ACTRN12616000819426 (номер реестра указан в оригинальной статье).
 
 *Материал представляет собой научно-популярный разбор одного клинического исследования. Он не предназначен для самостоятельной диагностики или выбора лечения.*
