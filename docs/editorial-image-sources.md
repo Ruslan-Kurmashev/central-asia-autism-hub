@@ -160,3 +160,99 @@ A further topic-fit review replaced stock family scenes with object-only photogr
 Both original Pexels pages identify the images as **free to use** under https://www.pexels.com/license/ . The photo IDs are fixed in the existing prebuild download manifest; the static website serves the downloaded files, not external hotlinks.
 
 The speech and language overview now uses an existing image explicitly described by its Pexels metadata as Asian family reading activity; that is a contextual illustration of everyday communication, not a photographed assessment or an identifiable autistic child. The new object-only images avoid assumptions about photographed individuals and match the project's Kazakhstan-first visual selection rules.
+
+## Parent library completion wave: 45 article covers (2026-10-10)
+
+**Coverage:** Combined with prior editorial work, all 70 published Russian parent articles now have a self-hosted `featuredImage` and Russian `featuredImageAlt`. This wave introduces 31 newly sourced Pexels photographs and responsibly reuses 14 photographs already credited above.
+
+All 31 new Pexels source pages were inspected through their accessible descriptions and credited authors on 2026-10-10. They were marked free to use under the [Pexels License](https://www.pexels.com/license/). The image ID is fixed in `scripts/sync-editorial-photos.mjs`; the build downloads a compressed local JPEG and verifies its format. No photography is generated with AI.
+
+### Newly sourced photographs and provenance
+
+| Built asset | Photographer/source | Pexels original |
+| --- | --- | --- |
+| `photos/parent-antecedent-checklist.jpg` | Markus Winkler | https://www.pexels.com/photo/checklist-by-pen-and-laptop-on-marble-desk-4101417/ |
+| `photos/parent-listening-headphones.jpg` | The masked Guy | https://www.pexels.com/photo/headphones-near-keyboard-on-table-6789795/ |
+| `photos/parent-behaviour-learning-cards.jpg` | Pavel Danilyuk | https://www.pexels.com/photo/colorful-cards-and-dice-8111264/ |
+| `photos/parent-behavioural-feeding.jpg` | cottonbro studio | https://www.pexels.com/photo/vegetables-for-dinner-in-a-plate-6969724/ |
+| `photos/parent-hygiene-supplies.jpg` | Cup of Couple | https://www.pexels.com/photo/soap-and-a-toothbrush-in-a-bathroom-7303901/ |
+| `photos/parent-toothbrush-routine.jpg` | Kampus Production | https://www.pexels.com/photo/washing-toothbrushes-7492908/ |
+| `photos/parent-nutrition-platter.jpg` | Vidal Balielo Jr. | https://www.pexels.com/photo/fruit-and-vegetables-on-plates-14457443/ |
+| `photos/parent-differential-shape-cards.jpg` | Lisett Kruusimäe | https://www.pexels.com/photo/close-up-of-colorful-cards-scattered-on-a-table-19866687/ |
+| `photos/parent-fba-clipboard.jpg` | Mikhail Nilov | https://www.pexels.com/photo/white-paper-on-black-clipboard-7682243/ |
+| `photos/parent-imitation-wood-blocks.jpg` | Ivan S | https://www.pexels.com/photo/kid-playing-wooden-toys-8504533/ |
+| `photos/parent-joint-attention-blocks.jpg` | Kaboompics | https://www.pexels.com/photo/photograph-of-hands-placing-wooden-blocks-7269695/ |
+| `photos/parent-outcome-planner.jpg` | cottonbro studio | https://www.pexels.com/photo/sticky-notes-on-a-planner-5185075/ |
+| `photos/parent-balance-board.jpg` | Kseniia Lopyreva | https://www.pexels.com/photo/balance-round-board-placed-on-mat-in-gym-4959806/ |
+| `photos/parent-natural-play-hands.jpg` | Ron Lach | https://www.pexels.com/photo/hands-holding-building-blocks-over-a-bag-10554833/ |
+| `photos/parent-ndbi-puzzle.jpg` | Mikhail Nilov | https://www.pexels.com/photo/child-playing-with-toys-7780905/ |
+| `photos/parent-occupational-boardgame.jpg` | Pavel Danilyuk | https://www.pexels.com/photo/hands-playing-board-games-8111328/ |
+| `photos/parent-feeding-food.jpg` | Loren Castillo | https://www.pexels.com/photo/vegetables-on-plate-9219088/ |
+| `photos/parent-peer-boardgame.jpg` | Ab Pixels | https://www.pexels.com/photo/children-playing-board-game-on-floor-32623461/ |
+| `photos/parent-physical-therapy-gym.jpg` | Karen Laårk Boshoff | https://www.pexels.com/photo/equipment-in-gym-7243602/ |
+| `photos/parent-play-blocks.jpg` | Tatiana Syrikova | https://www.pexels.com/photo/photo-of-child-playing-with-wooden-blocks-3933108/ |
+| `photos/parent-prompt-fading-notes.jpg` | DS stories | https://www.pexels.com/photo/pieces-of-sticky-notes-stuck-on-a-laptop-beside-a-notebook-with-pen-6991824/ |
+| `photos/parent-reinforcement-tiles.jpg` | Pavel Danilyuk | https://www.pexels.com/photo/hands-of-man-playing-board-game-8111368/ |
+| `photos/parent-self-management-clipboard.jpg` | Alena Darmel | https://www.pexels.com/photo/clipboard-with-paper-beside-a-black-pen-7706978/ |
+| `photos/parent-sensory-feeding.jpg` | cottonbro studio | https://www.pexels.com/photo/green-vegetables-in-a-plate-6970113/ |
+| `photos/parent-sensory-textiles.jpg` | SlipcoverKAS .COM | https://www.pexels.com/photo/soft-beige-fleece-blanket-textured-close-up-30380668/ |
+| `photos/parent-sensory-routine-exercise.jpg` | Pavel Danilyuk | https://www.pexels.com/photo/mats-skipping-ropes-and-weights-around-man-legs-6339717/ |
+| `photos/parent-sensory-noise-headphones.jpg` | Kaboompics | https://www.pexels.com/photo/headphones-on-desk-5877660/ |
+| `photos/parent-task-steps-notebook.jpg` | Merve | https://www.pexels.com/photo/colored-memo-stick-in-notebook-19736977/ |
+| `photos/parent-lfk-equipment.jpg` | Jason Morrison | https://www.pexels.com/photo/modern-gym-with-workout-equipment-28320723/ |
+| `photos/parent-bathroom-routine.jpg` | Rachel Claire | https://www.pexels.com/photo/liquid-soap-and-cup-for-toothbrushes-in-bathroom-4992457/ |
+| `photos/parent-blanket-texture.jpg` | Diana Light | https://www.pexels.com/photo/close-up-of-blanket-20074175/ |
+
+### 45 completed article-to-image assignments
+
+| Article Markdown source | Hero image |
+| --- | --- |
+| `after-autism-assessment-kazakhstan.md` | `photos/kz-help-003.jpg` |
+| `aided-language-modelling.md` | `article-parent-training.jpg` |
+| `antecedent-based-interventions.md` | `photos/parent-antecedent-checklist.jpg` |
+| `arfid-assessment-support.md` | `photos/parent-feeding-meal.jpg` |
+| `auditory-integration-listening-programs.md` | `photos/parent-listening-headphones.jpg` |
+| `autism-pmpk-vkk-mse-kazakhstan.md` | `photos/kz-help-007.jpg` |
+| `ayres-sensory-integration.md` | `sensory-hands.jpg` |
+| `behavior-learning.md` | `photos/parent-behaviour-learning-cards.jpg` |
+| `behavioral-feeding-interventions.md` | `photos/parent-behavioural-feeding.jpg` |
+| `communication-partner-training.md` | `article-who-cst-asian.jpg` |
+| `daily-living-participation.md` | `photos/parent-hygiene-supplies.jpg` |
+| `daily-living-skills-training.md` | `photos/parent-toothbrush-routine.jpg` |
+| `development-milestones.md` | `rubi-wooden-blocks.jpg` |
+| `dietitian-nutrition-support.md` | `photos/parent-nutrition-platter.jpg` |
+| `differential-reinforcement.md` | `photos/parent-differential-shape-cards.jpg` |
+| `first-30-days-after-autism-diagnosis-kazakhstan.md` | `photos/kz-help-001.jpg` |
+| `functional-behavior-assessment.md` | `photos/parent-fba-clipboard.jpg` |
+| `functional-communication-training.md` | `technology-tablet.jpg` |
+| `how-to-read-evidence.md` | `research-lab.jpg` |
+| `imitation-reciprocal-imitation.md` | `photos/parent-imitation-wood-blocks.jpg` |
+| `joint-attention.md` | `photos/parent-joint-attention-blocks.jpg` |
+| `monitoring-support-outcomes.md` | `photos/parent-outcome-planner.jpg` |
+| `movement-physical-activity.md` | `photos/parent-balance-board.jpg` |
+| `naturalistic-intervention.md` | `photos/parent-natural-play-hands.jpg` |
+| `ndbi.md` | `photos/parent-ndbi-puzzle.jpg` |
+| `neyropsihologicheskaya-korrektsiya.md` | `cbt-notebook-pen.jpg` |
+| `occupational-therapy.md` | `photos/parent-occupational-boardgame.jpg` |
+| `otsenka-trudnostey-pitaniya.md` | `photos/parent-feeding-food.jpg` |
+| `pecs.md` | `who-cst-cards-books.jpg` |
+| `peer-mediated-intervention.md` | `photos/parent-peer-boardgame.jpg` |
+| `physical-therapy-physiotherapy.md` | `photos/parent-physical-therapy-gym.jpg` |
+| `play-based-interventions.md` | `photos/parent-play-blocks.jpg` |
+| `prompting-and-prompt-fading.md` | `photos/parent-prompt-fading-notes.jpg` |
+| `reinforcement.md` | `photos/parent-reinforcement-tiles.jpg` |
+| `self-management.md` | `photos/parent-self-management-clipboard.jpg` |
+| `sensory-based-feeding-approaches.md` | `photos/parent-sensory-feeding.jpg` |
+| `sensory-based-strategies.md` | `photos/parent-sensory-textiles.jpg` |
+| `sensory-diet.md` | `photos/parent-sensory-routine-exercise.jpg` |
+| `sensory-overload-environmental-adaptations.md` | `photos/parent-sensory-noise-headphones.jpg` |
+| `special-pedagog-defektolog.md` | `photos/kz-help-006.jpg` |
+| `task-analysis.md` | `photos/parent-task-steps-notebook.jpg` |
+| `therapeutic-exercise-lfk.md` | `photos/parent-lfk-equipment.jpg` |
+| `toileting-interventions.md` | `photos/parent-bathroom-routine.jpg` |
+| `video-modeling.md` | `article-technology-asian.jpg` |
+| `weighted-items.md` | `photos/parent-blanket-texture.jpg` |
+
+**Semantics and safety:** photographs illustrate familiar objects, play, communication devices, food, documentation, classrooms and activities, not medical procedures, autism diagnoses, qualified treatment protocols, proven outcomes or disability status. Alternative descriptions explicitly avoid claiming the picture demonstrates PECS, NDBI, ASI, an ARFID diagnosis or a weighted therapeutic product. People are not required when an object can convey the article more accurately. No one depicted is identified or presented as autistic. Generic international stock does not represent an actual Kazakhstan institution.
+
+**Automated acceptance gate:** `npm run check:parent-images` now fails if *any* published parent article lacks a usable, self-hosted image and an adequate Russian alt description. It validates real file existence after image acquisition, and checks each image in the 16-article and 45-article curation waves is distinct within its wave. `npm run check:internal-links` separately inspects the built HTML. Manual desktop/mobile screenshot QA is still distinct from these technical checks.
