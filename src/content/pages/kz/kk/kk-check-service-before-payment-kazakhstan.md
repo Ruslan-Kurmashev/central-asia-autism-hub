@@ -8,7 +8,7 @@ section: help-kazakhstan
 topic: service-checklist
 slug: "kyzmetti-tolemge-deyin-tekseru-kazakstan"
 translationKey: help-check-service-before-payment-kazakhstan
-translationStatus: pending
+translationStatus: checked
 audience:
   - parents
   - families
@@ -21,7 +21,9 @@ editor: Ruslan Kurmashev
 riskLevel: lower
 disclaimerType: informational
 conflictOfInterest: "Мүдделер қақтығысы мәлімделмеген."
-draft: true
+publishedAt: 2026-10-10
+updatedAt: 2026-10-10
+draft: false
 keyPoints:
   - "Төлемге дейін қызмет көрсететін заңды тұлғаны немесе дара кәсіпкерді анықтап, түсінікті жазбаша талаптарды алыңыз."
   - "Тұтынушы қызмет туралы дұрыс ақпарат алуға және төлемді не шарт жасалғанын растайтын құжаттарға құқылы."
