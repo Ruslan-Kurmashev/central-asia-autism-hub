@@ -1,19 +1,20 @@
 /**
- * Published parent-page artwork audit.
+ * Published editorial photograph coverage audit.
  *
- * Core articles from the first reviewed batch are required to have distinct,
- * self-hosted, correctly described image assets. Other published pages are
- * counted and listed for the next editorial selection pass without pretending
- * that the whole library has been completed.
+ * Every published page, in each supported language, must display a locally
+ * hosted, documented image with descriptive alternative text. This prevents
+ * silent image omissions, missing downloaded assets and broken article heroes.
+ * The original first-wave parent photographs must also remain distinct.
  */
 import { readdir, readFile, stat } from 'node:fs/promises';
 import path from 'node:path';
 import assert from 'node:assert/strict';
 
-const parentDir = path.resolve('src/content/pages/kz/ru');
+const baseDir = path.resolve('src/content/pages/kz');
 const publicDir = path.resolve('public');
+const documentation = await readFile(path.resolve('docs/editorial-image-sources.md'), 'utf8');
 const base = '/central-asia-autism-hub/';
-const required = [
+const requiredDistinct = [
   'what-is-autism',
   'when-to-discuss-development',
   'screening-assessment-diagnosis',
@@ -31,56 +32,61 @@ const required = [
   'parent-mediated-intervention',
   'feeding-therapy',
 ];
-const requiredSet = new Set(required);
-const seenImageBy = new Map();
-const missing = [];
-const all = await readdir(parentDir);
-let published = 0;
-let withImage = 0;
-let parents = 0;
+const distinctSet = new Set(requiredDistinct);
+const firstWave = new Map();
+const totals = {};
 
-const value = (text, key) => {
-  const m = text.match(new RegExp(`^${key}:\\s*(.+)$`, 'm'));
-  return m?.[1]?.trim().replace(/^["']|["']$/g, '') ?? '';
-};
+function value(frontmatter, key) {
+  const match = frontmatter.match(new RegExp(`^${key}:\\s*(.+)$`, 'm'));
+  return match?.[1]?.trim().replace(/^["']|["']$/g, '') ?? '';
+}
 
-for (const file of all.filter((name) => /\.mdx?$/.test(name)).sort()) {
-  const raw = await readFile(path.join(parentDir, file), 'utf8');
-  const fm = raw.match(/^---\n([\s\S]*?)\n---/);
-  assert.ok(fm, `Frontmatter missing in ${file}`);
-  if (value(fm[1], 'draft') !== 'false') continue;
-  published += 1;
-  if (value(fm[1], 'section') !== 'parents') continue;
-  parents += 1;
-  const id = file.replace(/\.mdx?$/, '');
-  const src = value(fm[1], 'featuredImage');
-  const alt = value(fm[1], 'featuredImageAlt');
+for (const locale of ['ru', 'en', 'kk']) {
+  const directory = path.join(baseDir, locale);
+  const files = (await readdir(directory)).filter(name => /\.mdx?$/.test(name)).sort();
+  let published = 0;
+  let withImages = 0;
+  let parents = 0;
+  for (const file of files) {
+    const raw = await readFile(path.join(directory, file), 'utf8');
+    const matched = raw.match(/^---\n([\s\S]*?)\n---/);
+    assert.ok(matched, `Frontmatter missing: ${locale}/${file}`);
+    const frontmatter = matched[1];
+    if (value(frontmatter, 'draft') !== 'false') continue;
+    published++;
+    if (value(frontmatter, 'section') === 'parents') parents++;
+    const src = value(frontmatter, 'featuredImage');
+    const alt = value(frontmatter, 'featuredImageAlt');
+    const article = `${locale}/${file}`;
 
-  if (!src) {
-    missing.push(id);
-    assert.ok(!requiredSet.has(id), `Core article has no featured image: ${id}`);
-    continue;
-  }
-  withImage += 1;
-  assert.ok(alt.length >= 30, `Missing descriptive featuredImageAlt on ${id}`);
-  if (requiredSet.has(id)) {
+    assert.ok(src, `Published article missing featuredImage: ${article}`);
+    assert.ok(alt.length >= 30, `Missing descriptive featuredImageAlt: ${article}`);
     assert.ok(src.startsWith(`${base}images/editorial/`),
-      `Core photo not hosted in own static assets: ${id}`);
-    const local = path.join(publicDir, src.slice(base.length));
-    const image = await stat(local);
+      `Editorial image is not self-hosted: ${article}: ${src}`);
+    const localFile = path.resolve(publicDir, src.slice(base.length));
+    assert.ok(localFile.startsWith(publicDir + path.sep),
+      `Unsafe editorial image path: ${article}`);
+    const image = await stat(localFile);
     assert.ok(image.isFile() && image.size > 12000,
-      `Missing, empty or truncated photo ${src}`);
-    assert.ok(!seenImageBy.has(src),
-      `First-wave articles reuse the same editorial image: ${id}, ${seenImageBy.get(src)}`);
-    seenImageBy.set(src, id);
+      `Missing, empty or truncated editorial photograph: ${article}: ${src}`);
+    assert.ok(documentation.includes(path.basename(localFile)),
+      `Image provenance not documented: ${article}: ${src}`);
+
+    if (locale === 'ru' && distinctSet.has(file.replace(/\.mdx?$/, ''))) {
+      assert.ok(!firstWave.has(src),
+        `First-wave photographs must be distinct: ${article}, ${firstWave.get(src)}`);
+      firstWave.set(src, article);
+    }
+    withImages++;
   }
+  totals[locale] = { published, withImages, parents };
+  assert.equal(withImages, published,
+    `Published ${locale} articles lacking a featured photograph`);
 }
 
-assert.equal(seenImageBy.size, required.length, 'Some first-wave visual choices are missing');
-console.log(`Russian pages: ${published} published; ${parents} parent pages.`);
-console.log(`Parent featured images: ${withImage}/${parents}; missing: ${missing.length}.`);
-console.log(`First image wave: ${required.length} distinct images with alt text and real local files validated.`);
-if (missing.length) {
-  console.log('Parent pages still awaiting editorial photographs:');
-  for (const item of missing) console.log(`- ${item}`);
+assert.equal(firstWave.size, requiredDistinct.length,
+  'First-wave editorial images are not complete or distinct');
+for (const [locale, result] of Object.entries(totals)) {
+  console.log(`${locale}: ${result.withImages}/${result.published} published pages include verified local photographs (${result.parents} parent articles).`);
 }
+console.log('All published content pages have verified, documented images and alt text.');
