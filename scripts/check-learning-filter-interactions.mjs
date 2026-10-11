@@ -152,8 +152,13 @@ for (const lang of Object.keys(localeLabels)) {
   check(items.length,'pageshow');
 }
 
-for (const groups of [langCounts,audienceCounts,topicCounts]) {
-  assert.equal(new Set(groups.map((group) => JSON.stringify(group))).size,1,
-    'Mismatch in original-language, audience or topic totals across page translations');
+const normalizedCounts = (counts) => JSON.stringify(
+  Object.fromEntries(Object.entries(counts).sort(([left], [right]) => left.localeCompare(right))),
+);
+for (const [name, groups] of [
+  ['language', langCounts], ['audience', audienceCounts], ['topic', topicCounts],
+]) {
+  assert.equal(new Set(groups.map(normalizedCounts)).size, 1,
+    'Mismatched '+name+' totals across page translations: '+groups.map(normalizedCounts).join(' | '));
 }
 console.log('Interactive catalogue filtering PASS: audience, original language, topic, text search and counters on RU/KK/EN.');
