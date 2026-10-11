@@ -31,7 +31,8 @@ costLabel: "Тегін"
 externalUrl: "https://www.open.edu/openlearn/education-development/childhood-youth/supporting-childrens-development/"
 lastVerifiedAt: 2026-10-11
 projectOwned: false
-registrationStatus: "Материалдарды тіркелмей оқуға болады; цифрлық белгі мен қатысуды растау үшін аккаунт қажет."
+registrationStatus: "Оқу материалдарын тіркелмей оқуға болады. Үлгерімді бақылау және қорытынды тапсырмалар үшін аккаунт қажет."
+completionOutcome: "Курс талаптарын орындағаннан кейін қатысу туралы құжат пен цифрлық белгі беріледі. Ресми академиялық кредит берілмейді."
 resourceDisclaimerType: external
 sources:
   - title: "Official provider description"

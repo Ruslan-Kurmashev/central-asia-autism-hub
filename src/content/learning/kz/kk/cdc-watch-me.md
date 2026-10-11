@@ -30,12 +30,21 @@ costLabel: "Тегін"
 externalUrl: "https://www.cdc.gov/watch-me-training/modules/index.html"
 lastVerifiedAt: 2026-10-11
 projectOwned: false
-registrationStatus: "CEU алу CDC шарттарына байланысты; мұндай кредиттердің Қазақстанда танылатыны расталмаған."
+registrationStatus: "Төрт оқу модулін тіркелмей оқуға болады. CEU алу үшін CDC TRAIN жүйесінде тіркеліп, қорытынды тест пен курс бағалауын орындау қажет."
+completionOutcome: "Төрт модуль аяқталған соң бір сағат оқу көрсетілген курсты аяқтау сертификаты беріледі. CEU бірліктері де қарастырылған, бірақ оларды алудың қолданыстағы мерзімін CDC-ден нақтылау қажет."
 resourceDisclaimerType: external
 sources:
   - title: "Official provider description"
     url: "https://www.cdc.gov/watch-me-training/index.html"
     organisation: "US Centers for Disease Control and Prevention (CDC)"
+    accessedAt: 2026-10-11
+  - title: "CDC: certificate of completion and CEU instructions"
+    url: "https://www.cdc.gov/watch-me-training/continuing-education/index.html"
+    organisation: "CDC"
+    accessedAt: 2026-10-11
+  - title: "CDC: About the Watch Me course"
+    url: "https://www.cdc.gov/watch-me-training/about/index.html"
+    organisation: "CDC"
     accessedAt: 2026-10-11
 ---
 

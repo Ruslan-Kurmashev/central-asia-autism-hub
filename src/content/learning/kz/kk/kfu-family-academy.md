@@ -31,7 +31,8 @@ costLabel: "Тегін"
 externalUrl: "https://stepik.org/course/115174/"
 lastVerifiedAt: 2026-10-11
 projectOwned: false
-registrationStatus: "Оқуға жазылу үшін тіркелу қажет болуы мүмкін; қолжетімділік пен аймақтық шектеулерді курс бетінен тексеріңіз."
+registrationStatus: "Курс бетіне өтіп, қажет болған жағдайда тіркеліңіз. Қолжетімділік шарттарын ұйымдастырушы белгілейді."
+completionOutcome: "Оқу материалы мен практикалық тапсырмалар беріледі. Осы бағдарлама бойынша сертификат берілетіні әзірге расталмады."
 resourceDisclaimerType: external
 sources:
   - title: "Official provider description"

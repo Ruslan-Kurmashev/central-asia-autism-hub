@@ -31,7 +31,8 @@ costLabel: "Тегін"
 externalUrl: "https://www.open.edu/openlearn/science-maths-technology/understanding-autism"
 lastVerifiedAt: 2026-10-11
 projectOwned: false
-registrationStatus: "Материалдарды аккаунтсыз оқуға болады; оқу барысын бақылау мен цифрлық белгі үшін тіркелу қажет."
+registrationStatus: "Материалдар тіркелмей қолжетімді. Қорытынды тесттер мен қатысу туралы құжат үшін аккаунт қажет."
+completionOutcome: "Қатысу туралы құжат пен цифрлық белгі беріледі. Курс бетінде кәсіби дамудың 24 CPD ұпайы да көрсетілген; бұлар академиялық кредит емес."
 resourceDisclaimerType: external
 sources:
   - title: "Official provider description"

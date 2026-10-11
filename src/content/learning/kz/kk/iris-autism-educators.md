@@ -30,7 +30,8 @@ costLabel: "Тегін"
 externalUrl: "https://iris.peabody.vanderbilt.edu/module/asd1/"
 lastVerifiedAt: 2026-10-11
 projectOwned: false
-registrationStatus: "Материалдарды тіркелмей оқуға болады; сертификат үшін аккаунт пен қорытынды тапсырмалар қажет."
+registrationStatus: "Модульді тіркелмей оқуға болады. Құжат алу үшін аккаунт ашып, бастапқы және қорытынды тесттерді орындау қажет."
+completionOutcome: "Тесттерді орындағаннан кейін IRIS кәсіби даму (PD) сертификаты беріледі. Тіркелусіз оқығанда сертификат берілмейді."
 resourceDisclaimerType: external
 sources:
   - title: "Official provider description"
