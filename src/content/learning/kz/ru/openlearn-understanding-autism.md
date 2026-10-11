@@ -1,5 +1,5 @@
 ---
-title: "Understanding Autism: понимание аутизма"
+title: "Понимание аутизма"
 summary: "Основные сведения об аутизме, опыте аутичных людей, диагностике и поддержке на разных этапах жизни."
 description: "Основные сведения об аутизме, опыте аутичных людей, диагностике и поддержке на разных этапах жизни."
 country: kz
@@ -17,7 +17,7 @@ publishedAt: 2026-10-11
 updatedAt: 2026-10-11
 reviewDueAt: 2027-01-11
 draft: false
-provider: "The Open University (OpenLearn)"
+provider: "Открытый университет Великобритании"
 learningKind: course
 topicArea: autism
 durationLabel: "24 часа"
@@ -31,7 +31,7 @@ costLabel: "Бесплатно"
 externalUrl: "https://www.open.edu/openlearn/science-maths-technology/understanding-autism"
 lastVerifiedAt: 2026-10-11
 projectOwned: false
-registrationStatus: "Материалы можно изучать без аккаунта; для отслеживания прогресса и цифрового бейджа нужна регистрация."
+registrationStatus: "Материалы можно изучать без учётной записи; она понадобится для отслеживания прогресса и получения цифрового знака."
 resourceDisclaimerType: external
 sources:
   - title: "Official provider description"

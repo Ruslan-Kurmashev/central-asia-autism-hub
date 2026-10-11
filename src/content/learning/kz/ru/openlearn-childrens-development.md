@@ -1,5 +1,5 @@
 ---
-title: "Supporting Children's Development: развитие детей"
+title: "Поддержка развития детей"
 summary: "Особенности развития, обучения и поведения детей, включая поддержку при дополнительных образовательных потребностях."
 description: "Особенности развития, обучения и поведения детей, включая поддержку при дополнительных образовательных потребностях."
 country: kz
@@ -17,7 +17,7 @@ publishedAt: 2026-10-11
 updatedAt: 2026-10-11
 reviewDueAt: 2027-01-11
 draft: false
-provider: "The Open University (OpenLearn)"
+provider: "Открытый университет Великобритании"
 learningKind: course
 topicArea: development
 durationLabel: "15 часов"
@@ -31,7 +31,7 @@ costLabel: "Бесплатно"
 externalUrl: "https://www.open.edu/openlearn/education-development/childhood-youth/supporting-childrens-development/"
 lastVerifiedAt: 2026-10-11
 projectOwned: false
-registrationStatus: "Материалы доступны без регистрации; для цифрового бейджа и подтверждения участия потребуется аккаунт."
+registrationStatus: "Материалы доступны без регистрации; для документа об участии и цифрового знака нужна учётная запись."
 resourceDisclaimerType: external
 sources:
   - title: "Official provider description"

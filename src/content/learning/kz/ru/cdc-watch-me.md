@@ -1,5 +1,5 @@
 ---
-title: "Watch Me!  -  наблюдение за развитием ребёнка"
+title: "«Наблюдайте за мной!»: развитие ребёнка и обсуждение возникающих вопросов"
 summary: "Ориентиры развития ребёнка, наблюдение за изменениями и обсуждение возможных трудностей с семьями."
 description: "Ориентиры развития ребёнка, наблюдение за изменениями и обсуждение возможных трудностей с семьями."
 country: kz
@@ -17,7 +17,7 @@ publishedAt: 2026-10-11
 updatedAt: 2026-10-11
 reviewDueAt: 2027-01-11
 draft: false
-provider: "US Centers for Disease Control and Prevention (CDC)"
+provider: "Центры по контролю и профилактике заболеваний США (CDC)"
 learningKind: course
 topicArea: development
 durationLabel: "1 час, 4 модуля"
@@ -30,7 +30,7 @@ costLabel: "Бесплатно"
 externalUrl: "https://www.cdc.gov/watch-me-training/modules/index.html"
 lastVerifiedAt: 2026-10-11
 projectOwned: false
-registrationStatus: "Для получения CEU действуют правила CDC; признание таких кредитов в Казахстане не подтверждено."
+registrationStatus: "Для получения зачётных единиц повышения квалификации действуют правила CDC; их признание в Казахстане не подтверждено."
 resourceDisclaimerType: external
 sources:
   - title: "Official provider description"

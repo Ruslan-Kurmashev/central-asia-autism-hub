@@ -1,5 +1,5 @@
 ---
-title: "Autism (Part 1): обзор для педагогов"
+title: "Аутизм (часть 1): обзор для педагогов"
 summary: "Особенности аутизма, различия медицинской диагностики и образовательной оценки, работа команды и поддержка в классе."
 description: "Особенности аутизма, различия медицинской диагностики и образовательной оценки, работа команды и поддержка в классе."
 country: kz
@@ -17,7 +17,7 @@ publishedAt: 2026-10-11
 updatedAt: 2026-10-11
 reviewDueAt: 2027-01-11
 draft: false
-provider: "IRIS Center, Vanderbilt University"
+provider: "Центр IRIS при Университете Вандербильта"
 learningKind: module
 topicArea: autism
 durationLabel: "2 часа"
@@ -30,7 +30,7 @@ costLabel: "Бесплатно"
 externalUrl: "https://iris.peabody.vanderbilt.edu/module/asd1/"
 lastVerifiedAt: 2026-10-11
 projectOwned: false
-registrationStatus: "Материалы доступны без регистрации; для сертификата необходимы аккаунт и итоговые задания."
+registrationStatus: "Материалы доступны без регистрации; для подтверждения прохождения необходимы учётная запись и итоговые задания."
 resourceDisclaimerType: external
 sources:
   - title: "Official provider description"
