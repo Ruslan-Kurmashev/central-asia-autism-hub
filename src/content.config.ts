@@ -184,12 +184,18 @@ const learning = defineCollection({
     })
     .superRefine((data, context) => {
       validatePublication(data, context);
-      if (!data.draft && !data.completionOutcome) {
-        context.addIssue({
-          code: 'custom',
-          path: ['completionOutcome'],
-          message: 'A published course must disclose what is issued after completion.',
-        });
+      if (!data.draft) {
+        for (const field of ['registrationStatus', 'completionOutcome'] as const) {
+          if (!data[field] || data[field].trim().length < 20) {
+            context.addIssue({
+              code: 'custom',
+              path: [field],
+              message: field === 'registrationStatus'
+                ? 'A published course must explain how to start and access learning.'
+                : 'A published course must identify the exact completion document, credits, or the absence of a confirmed credential.',
+            });
+          }
+        }
       }
     }),
 });

@@ -423,8 +423,8 @@ collections:
       - { label: "External URL", name: "externalUrl", widget: "string", required: false }
       - { label: "Last verified", name: "lastVerifiedAt", widget: "datetime", required: false, default: "", format: "YYYY-MM-DD", date_format: "DD.MM.YYYY", time_format: false, picker_utc: true }
       - { label: "Project owned", name: "projectOwned", widget: "boolean", default: false }
-      - { label: "How to access the course", name: "registrationStatus", widget: "text", required: false }
-      - { label: "What is issued after completion (certificate / badge / credits / knowledge only)", name: "completionOutcome", widget: "text", required: false, hint: "Do not conflate training access with credentials. Verify the provider conditions." }
+      - { label: "How to begin learning", name: "registrationStatus", widget: "text", required: false, hint: "Required to publish. State registration, access steps and any enrolment limitations. No Kazakhstan recognition commentary." }
+      - { label: "What is issued after completion", name: "completionOutcome", widget: "text", required: false, hint: "Required to publish. State certificate, participation document, digital badge, credit units or knowledge only, and conditions. If no credential is confirmed, say so explicitly. Do not promise accreditation." }
       - { label: "Resource disclaimer type", name: "resourceDisclaimerType", widget: "select", options: ["project", "external"] }
       - label: "Sources"
         name: "sources"
