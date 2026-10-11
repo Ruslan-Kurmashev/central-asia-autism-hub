@@ -42,7 +42,6 @@ const sectionV2Text = locale === 'en'
       navigation: 'Explore this section',
       resourcesAndTopics: 'Resources and topics',
       topics: 'Section topics',
-      hasMaterials: 'Open a topic to browse published resources. New resources appear here after editorial checks.',
       noMaterials: 'This section is being prepared. Resources will be added after their content and sources have been checked.',
       otherParent: 'Other resources',
       otherGeneral: 'Additional resources',
@@ -58,7 +57,6 @@ const sectionV2Text = locale === 'en'
         navigation: 'Бөлім бойынша навигация',
         resourcesAndTopics: 'Материалдар мен тақырыптар',
         topics: 'Бөлім тақырыптары',
-        hasMaterials: 'Жарияланған материалдарды көру үшін тақырыпты ашыңыз. Жаңа материалдар мазмұны мен дереккөздері тексерілгеннен кейін қосылады.',
         noMaterials: 'Бөлімнің негізгі бағыттары анықталды. Материалдар мазмұны мен дереккөздері тексерілгеннен кейін біртіндеп қосылады.',
         otherParent: 'Басқа материалдар',
         otherGeneral: 'Қосымша материалдар',
@@ -73,7 +71,6 @@ const sectionV2Text = locale === 'en'
       navigation: 'Навигация по разделу',
       resourcesAndTopics: 'Материалы и темы',
       topics: 'Темы раздела',
-      hasMaterials: 'Откройте тему, чтобы увидеть опубликованные материалы. Новые статьи автоматически появляются в этом разделе после публикации.',
       noMaterials: 'Основные направления раздела уже определены. Материалы будут добавляться постепенно после проверки содержания и источников.',
       otherParent: 'Другие материалы',
       otherGeneral: 'Все остальные материалы',
@@ -354,9 +351,11 @@ function russianMaterialWord(count: number) {
               <h2 id="section-v2-collections-title">
                 {section === 'about' ? sectionCopy.title : displayCount > 0 ? sectionV2Text.resourcesAndTopics : sectionV2Text.topics}
               </h2>
-              <p>
-                {section === 'about' ? sectionCopy.description : displayCount > 0 ? sectionV2Text.hasMaterials : sectionV2Text.noMaterials}
-              </p>
+              {(section === 'about' || displayCount === 0) && (
+                <p>
+                  {section === 'about' ? sectionCopy.description : sectionV2Text.noMaterials}
+                </p>
+              )}
             </div>
 
             {(section === 'learning' || section === 'professionals') && (
