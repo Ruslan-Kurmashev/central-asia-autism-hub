@@ -88,8 +88,12 @@ const availableTopics = [...new Set(items.map((entry) => entry.data.topicArea).f
     <label>
       <span>{t.language}</span>
       <select data-course-language>
-        <option value="all">{t.all}</option>
-        {availableLanguages.map((lang) => <option value={lang}>{languages[locale][lang]}</option>)}
+        <option value="all">{t.all} ({items.length})</option>
+        {availableLanguages.map((lang) => (
+          <option value={lang}>
+            {languages[locale][lang]} ({items.filter((entry) => entry.data.languages.includes(lang)).length})
+          </option>
+        ))}
       </select>
     </label>
     <label>
@@ -195,11 +199,21 @@ const availableTopics = [...new Set(items.map((entry) => entry.data.topicArea).f
       }
     };
     applyLinkFilter();
+    update();
     window.addEventListener('hashchange', applyLinkFilter);
     search?.addEventListener('input', update);
     audience?.addEventListener('change', update);
-    language?.addEventListener('change', update);
+    // The language dropdown is a top-level filter. Clear previous refinements
+    // when changing language, so its visible count matches the language total.
+    // Audience, topic and keyword can then be reapplied to narrow results.
+    language?.addEventListener('change', () => {
+      if (search) search.value = '';
+      if (audience) audience.value = 'all';
+      if (topic) topic.value = 'all';
+      update();
+    });
     topic?.addEventListener('change', update);
+    window.addEventListener('pageshow', update);
   }
 </script>
 
