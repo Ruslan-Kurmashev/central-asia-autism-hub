@@ -31,7 +31,8 @@ costLabel: "Бесплатно"
 externalUrl: "https://www.open.edu/openlearn/science-maths-technology/understanding-autism"
 lastVerifiedAt: 2026-10-11
 projectOwned: false
-registrationStatus: "Материалы можно изучать без учётной записи; она понадобится для отслеживания прогресса и получения цифрового знака."
+registrationStatus: "Материалы доступны без регистрации. Для выполнения итоговых тестов и получения документа об участии нужна учётная запись."
+completionOutcome: "Документ об участии и цифровой значок. На странице курса также указаны 24 балла непрерывного профессионального развития (CPD); это не академические кредиты."
 resourceDisclaimerType: external
 sources:
   - title: "Official provider description"

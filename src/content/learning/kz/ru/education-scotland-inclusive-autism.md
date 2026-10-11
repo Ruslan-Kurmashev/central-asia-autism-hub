@@ -30,7 +30,8 @@ costLabel: "Бесплатно"
 externalUrl: "https://www.open.edu/openlearncreate/course/view.php?id=6935"
 lastVerifiedAt: 2026-10-11
 projectOwned: false
-registrationStatus: "Для получения документа об участии и цифрового знака требуется регистрация."
+registrationStatus: "Материалы доступны онлайн. Для выполнения тестов и получения документа об участии нужно зарегистрироваться."
+completionOutcome: "Документ об участии и цифровой значок после успешного завершения модуля; формальных академических кредитов не предусмотрено."
 resourceDisclaimerType: external
 sources:
   - title: "Official provider description"
