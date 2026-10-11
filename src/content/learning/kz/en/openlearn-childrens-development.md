@@ -1,0 +1,40 @@
+---
+title: "Supporting Children's Development"
+summary: "A free introductory course on child development, learning, behaviour and supporting children with additional educational needs."
+description: "A free introductory course on child development, learning, behaviour and supporting children with additional educational needs."
+country: kz
+language: en
+section: learning
+slug: openlearn-childrens-development
+translationKey: learning-openlearn-childrens-development
+translationStatus: checked
+author: "Ruslan Kurmashev"
+editor: "Ruslan Kurmashev"
+riskLevel: lower
+disclaimerType: informational
+conflictOfInterest: "No financial relationship with the provider is claimed for this editorial listing."
+publishedAt: 2026-10-11
+updatedAt: 2026-10-11
+reviewDueAt: 2027-01-11
+draft: false
+provider: "The Open University (OpenLearn)"
+audience:
+  - parents
+  - professionals
+format: "Online course · 15 hours"
+languages:
+  - en
+costLabel: "Free"
+externalUrl: "https://www.open.edu/openlearn/education-development/childhood-youth/supporting-childrens-development/"
+lastVerifiedAt: 2026-10-11
+projectOwned: false
+registrationStatus: "Study without registration. A free digital badge or statement of participation requires an account."
+resourceDisclaimerType: external
+sources:
+  - title: "Official provider description"
+    url: "https://www.open.edu/openlearn/education-development/childhood-youth/supporting-childrens-development/"
+    organisation: "The Open University (OpenLearn)"
+    accessedAt: 2026-10-11
+---
+
+External programme or open learning resource. Terms can change; check with the provider.
