@@ -9,7 +9,7 @@ const checks = [
   { slug: 'self-management', markers: ['Как понимать результаты для бытовых навыков', '5 из 15', '7 из 15'], refs: ['38709359'] },
   { slug: 'naturalistic-intervention', markers: ['Инициатива ребёнка и границы обучения в игре', 'независимо от выполнения задания', 'игра без учебных задач'], refs: ['pmc.ncbi.nlm.nih.gov/articles/PMC8510990'] },
   { slug: 'parent-mediated-intervention', markers: ['Что говорят исследования с дизайном единичного случая', '17 исследований', '3 исследования'], refs: ['s40489-024-00439-0'] },
-  { slug: 'daily-living-skills-training', markers: ['Когда навыку нужно учить иначе или отложить практику', 'острых предметов', 'лишение воды'], refs: ['37562056'] },
+  { slug: 'daily-living-skills-training', markers: ['Когда навыку нужно учить иначе или отложить практику', 'острыми предметами', 'лишение воды'], refs: ['37562056'] },
 ];
 let checked=0;
 const errors=[];
