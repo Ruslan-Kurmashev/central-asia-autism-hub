@@ -31,7 +31,8 @@ costLabel: "Бесплатно"
 externalUrl: "https://www.open.edu/openlearn/education-development/childhood-youth/supporting-childrens-development/"
 lastVerifiedAt: 2026-10-11
 projectOwned: false
-registrationStatus: "Материалы доступны без регистрации; для документа об участии и цифрового знака нужна учётная запись."
+registrationStatus: "Учебные материалы можно читать без регистрации. Для учёта прогресса и итоговых заданий понадобится учётная запись."
+completionOutcome: "Документ об участии и цифровой значок после выполнения требований курса. Формальные академические кредиты не предоставляются."
 resourceDisclaimerType: external
 sources:
   - title: "Official provider description"

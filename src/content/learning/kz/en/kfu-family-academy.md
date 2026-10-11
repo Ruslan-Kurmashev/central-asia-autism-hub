@@ -31,7 +31,8 @@ costLabel: "Free"
 externalUrl: "https://stepik.org/course/115174/"
 lastVerifiedAt: 2026-10-11
 projectOwned: false
-registrationStatus: "Registration may be required; check the course page for access and country restrictions."
+registrationStatus: "Visit the course page and register if prompted. The provider determines ongoing access conditions."
+completionOutcome: "Course learning and practical exercises; availability of a completion certificate for this specific course has not been confirmed."
 resourceDisclaimerType: external
 sources:
   - title: "Official provider description"

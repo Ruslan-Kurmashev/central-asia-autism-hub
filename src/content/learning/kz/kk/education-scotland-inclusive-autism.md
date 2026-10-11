@@ -30,7 +30,8 @@ costLabel: "Тегін"
 externalUrl: "https://www.open.edu/openlearncreate/course/view.php?id=6935"
 lastVerifiedAt: 2026-10-11
 projectOwned: false
-registrationStatus: "Қатысуды растау құжаты мен цифрлық белгі үшін тіркелу қажет."
+registrationStatus: "Материалдар онлайн қолжетімді. Тест тапсыру және қатысу туралы құжат алу үшін тіркелу керек."
+completionOutcome: "Модульді сәтті аяқтағаннан кейін қатысу туралы құжат пен цифрлық белгі беріледі; ресми академиялық кредит берілмейді."
 resourceDisclaimerType: external
 sources:
   - title: "Official provider description"

@@ -31,7 +31,8 @@ costLabel: "Бесплатно"
 externalUrl: "https://stepik.org/course/115174/"
 lastVerifiedAt: 2026-10-11
 projectOwned: false
-registrationStatus: "Для записи может потребоваться регистрация; доступ и региональные ограничения уточняйте на странице курса."
+registrationStatus: "Перейдите к курсу и зарегистрируйтесь при необходимости. Доступ к обучению определяется организатором."
+completionOutcome: "Учебные знания и практические задания. Выдача сертификата для этой программы пока не подтверждена."
 resourceDisclaimerType: external
 sources:
   - title: "Official provider description"

@@ -30,12 +30,21 @@ costLabel: "Бесплатно"
 externalUrl: "https://www.cdc.gov/watch-me-training/modules/index.html"
 lastVerifiedAt: 2026-10-11
 projectOwned: false
-registrationStatus: "Для получения зачётных единиц повышения квалификации действуют правила CDC; их признание в Казахстане не подтверждено."
+registrationStatus: "Четыре учебных модуля можно изучить без регистрации. Для оформления CEU необходимо зарегистрироваться на CDC TRAIN, пройти итоговый тест и оценить курс."
+completionOutcome: "Сертификат о завершении курса с указанием одного часа обучения. Дополнительно предусмотрены единицы профессионального образования CEU, но действующие сроки их получения требуют уточнения у CDC."
 resourceDisclaimerType: external
 sources:
   - title: "Official provider description"
     url: "https://www.cdc.gov/watch-me-training/index.html"
     organisation: "US Centers for Disease Control and Prevention (CDC)"
+    accessedAt: 2026-10-11
+  - title: "CDC: certificate of completion and CEU instructions"
+    url: "https://www.cdc.gov/watch-me-training/continuing-education/index.html"
+    organisation: "CDC"
+    accessedAt: 2026-10-11
+  - title: "CDC: About the Watch Me course"
+    url: "https://www.cdc.gov/watch-me-training/about/index.html"
+    organisation: "CDC"
     accessedAt: 2026-10-11
 ---
 

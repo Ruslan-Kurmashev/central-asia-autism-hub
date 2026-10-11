@@ -31,7 +31,8 @@ costLabel: "Free"
 externalUrl: "https://www.open.edu/openlearn/education-development/childhood-youth/supporting-childrens-development/"
 lastVerifiedAt: 2026-10-11
 projectOwned: false
-registrationStatus: "Read without registering; an account is required for a digital badge or participation record."
+registrationStatus: "Read the materials without registration. Sign in to track progress and complete assessments."
+completionOutcome: "A statement of participation and digital badge after meeting course requirements. No formal academic credit is awarded."
 resourceDisclaimerType: external
 sources:
   - title: "Official provider description"

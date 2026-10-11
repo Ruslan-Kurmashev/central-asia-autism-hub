@@ -30,7 +30,8 @@ costLabel: "Бесплатно"
 externalUrl: "https://iris.peabody.vanderbilt.edu/module/asd1/"
 lastVerifiedAt: 2026-10-11
 projectOwned: false
-registrationStatus: "Материалы доступны без регистрации; для подтверждения прохождения необходимы учётная запись и итоговые задания."
+registrationStatus: "Модуль доступен без регистрации. Для варианта с документом потребуется учётная запись и прохождение предварительного и итогового тестов."
+completionOutcome: "Сертификат профессионального развития IRIS (PD) после выполнения тестов. При изучении без регистрации сертификат не выдаётся."
 resourceDisclaimerType: external
 sources:
   - title: "Official provider description"

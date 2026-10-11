@@ -179,9 +179,19 @@ const learning = defineCollection({
       lastVerifiedAt: z.coerce.date().optional(),
       projectOwned: z.boolean(),
       registrationStatus: z.string().min(1).optional(),
+      completionOutcome: z.string().min(1).optional(),
       resourceDisclaimerType: z.enum(['project', 'external']),
     })
-    .superRefine(validatePublication),
+    .superRefine((data, context) => {
+      validatePublication(data, context);
+      if (!data.draft && !data.completionOutcome) {
+        context.addIssue({
+          code: 'custom',
+          path: ['completionOutcome'],
+          message: 'A published course must disclose what is issued after completion.',
+        });
+      }
+    }),
 });
 
 export const collections = { pages, research, learning };
