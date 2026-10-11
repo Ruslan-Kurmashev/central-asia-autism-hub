@@ -10,14 +10,14 @@ const { locale, entries } = Astro.props;
 const copy = {
   ru: {
     heading: 'Каталог курсов и учебных материалов.',
-    intro: 'Выберите тему, язык и аудиторию. В каталоге представлены конкретные бесплатные курсы и учебные модули со ссылками непосредственно на обучение.',
+    intro: 'Используйте поиск и фильтры по аудитории, языку и теме. Ссылки ведут непосредственно к курсам и модулям.',
     search: 'Поиск по названию или содержанию',
     placeholder: 'Например: коммуникация, развитие, аутизм',
     audience: 'Аудитория', language: 'Язык курса', topic: 'Тема',
     all: 'Все', parents: 'Родителям', professionals: 'Специалистам',
     topics: { autism: 'Основы аутизма', development: 'Развитие ребёнка', inclusion: 'Инклюзивное образование', support: 'Подходы к поддержке' },
     types: { course: 'Курс', module: 'Учебный модуль' },
-    free: 'Бесплатно', provider: 'Разработчик', duration: 'Продолжительность',
+    price: 'Стоимость', provider: 'Разработчик', duration: 'Продолжительность',
     open: 'Перейти к курсу', verified: 'Проверено', details: 'Условия доступа',
     count: 'Найдено', resultWord: 'курсов и модулей', noResults: 'По выбранным фильтрам курсы не найдены.',
     empty: 'Курсы пока готовятся к публикации.',
@@ -25,14 +25,14 @@ const copy = {
   },
   kk: {
     heading: 'Курстар мен оқу материалдарының каталогы.',
-    intro: 'Тақырыпты, тілді және аудиторияны таңдаңыз. Каталогта оқуға тікелей апаратын сілтемелері бар нақты тегін курстар мен оқу модульдері берілген.',
+    intro: 'Аудитория, тіл және тақырып бойынша іздеу мен сүзгілерді қолданыңыз. Сілтемелер нақты курстар мен модульдерге апарады.',
     search: 'Атауы немесе мазмұны бойынша іздеу',
     placeholder: 'Мысалы: коммуникация, даму, аутизм',
     audience: 'Кімге арналған', language: 'Курс тілі', topic: 'Тақырып',
     all: 'Барлығы', parents: 'Ата-аналарға', professionals: 'Мамандарға',
     topics: { autism: 'Аутизм негіздері', development: 'Баланың дамуы', inclusion: 'Инклюзивті білім беру', support: 'Қолдау тәсілдері' },
     types: { course: 'Курс', module: 'Оқу модулі' },
-    free: 'Тегін', provider: 'Дайындаған ұйым', duration: 'Ұзақтығы',
+    price: 'Құны', provider: 'Дайындаған ұйым', duration: 'Ұзақтығы',
     open: 'Курсқа өту', verified: 'Тексерілді', details: 'Қолжетімділік шарттары',
     count: 'Табылды', resultWord: 'курс пен модуль', noResults: 'Таңдалған сүзгілер бойынша курс табылмады.',
     empty: 'Курстар жариялауға дайындалып жатыр.',
@@ -40,14 +40,14 @@ const copy = {
   },
   en: {
     heading: 'Catalogue of courses and learning materials.',
-    intro: 'Filter by topic, language and audience. Every listing is a specific free course or learning module linked directly to the training.',
+    intro: 'Search and filter by audience, course language and topic. Links lead directly to the courses and learning modules.',
     search: 'Search by title or content',
     placeholder: 'For example: communication, development, autism',
     audience: 'Audience', language: 'Course language', topic: 'Topic',
     all: 'All', parents: 'Parents', professionals: 'Professionals',
     topics: { autism: 'Autism essentials', development: 'Child development', inclusion: 'Inclusive education', support: 'Support approaches' },
     types: { course: 'Course', module: 'Learning module' },
-    free: 'Free', provider: 'Developed by', duration: 'Duration',
+    price: 'Price', provider: 'Developed by', duration: 'Duration',
     open: 'Go to course', verified: 'Checked', details: 'Access details',
     count: 'Found', resultWord: 'courses and modules', noResults: 'No courses match the selected filters.',
     empty: 'Courses are being prepared for publication.',
@@ -118,7 +118,6 @@ const availableTopics = [...new Set(items.map((entry) => entry.data.topicArea).f
               <div class="course-catalogue__body">
                 <div class="course-catalogue__tags">
                   <span>{entry.data.learningKind === 'module' ? t.types.module : t.types.course}</span>
-                  <span>{t.free}</span>
                   {entry.data.audience.map((audience) => <span>{audience === 'parents' ? t.parents : t.professionals}</span>)}
                 </div>
                 <h3>{entry.data.title}</h3>
@@ -127,6 +126,9 @@ const availableTopics = [...new Set(items.map((entry) => entry.data.topicArea).f
                   {entry.data.durationLabel && <span><strong>{t.duration}:</strong> {entry.data.durationLabel}</span>}
                   <span><strong>{t.language}:</strong> {entry.data.languages.map((l) => languages[locale][l]).join(', ')}</span>
                   <span><strong>{t.provider}:</strong> {entry.data.provider}</span>
+                  {!['free', 'бесплатно', 'тегін'].includes(entry.data.costLabel.trim().toLocaleLowerCase()) && (
+                    <span><strong>{t.price}:</strong> {entry.data.costLabel}</span>
+                  )}
                 </div>
                 {entry.data.registrationStatus && (
                   <p class="course-catalogue__access"><strong>{t.details}:</strong> {entry.data.registrationStatus}</p>
@@ -213,7 +215,7 @@ const availableTopics = [...new Set(items.map((entry) => entry.data.topicArea).f
 .course-catalogue__item[hidden],.course-catalogue__no-results[hidden]{display:none!important}
 .course-catalogue__tags{display:flex;flex-wrap:wrap;gap:.35rem;margin-bottom:.8rem}
 .course-catalogue__tags span{border-radius:1rem;padding:.25rem .65rem;background:#eef4f8;color:#315d7b;font-size:.72rem;line-height:1.3;font-weight:600}
-.course-catalogue__tags span:nth-child(2){background:#edf6ef;color:#276242}
+
 .course-catalogue__body h3{font:600 clamp(1.14rem,1.9vw,1.38rem)/1.3 Georgia,'Times New Roman',serif;color:#12395e;margin:0 0 .55rem}
 .course-catalogue__summary{color:#4b6176;line-height:1.6;font-size:.92rem;max-width:47rem;margin:0 0 .9rem}
 .course-catalogue__meta{display:flex;flex-wrap:wrap;gap:.4rem 1.1rem;font-size:.78rem;color:#5c7183;line-height:1.5}
