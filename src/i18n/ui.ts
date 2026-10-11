@@ -189,7 +189,7 @@ const BASE_UI: Record<Locale, LocaleCopy> = {
       learning: {
         title: 'Обучение',
         description:
-          'Образовательные программы Autism School Kazakhstan, курсы и вебинары для родителей и специалистов с проверяемыми организаторами и условиями.',
+          'Курсы и обучение для родителей и специалистов: аутизм, развитие и повседневная поддержка.',
         topics: [
           { id: 'autism-school', title: 'Autism School Kazakhstan', description: 'Собственная образовательная программа проекта с ясно обозначенными целями и ответственностью.' },
           { id: 'parents-learning', title: 'Для родителей', description: 'Курсы и лекции о понимании аутизма, поддержке ребёнка и благополучии семьи.' },
@@ -316,7 +316,7 @@ const BASE_UI: Record<Locale, LocaleCopy> = {
       },
       learning: {
         title: 'Оқу',
-        description: 'Autism School Kazakhstan оқу бағдарламалары, ата-аналар мен мамандарға арналған курстар және тексерілген вебинарлар.',
+        description: 'Ата-аналар мен мамандарға арналған курстар: аутизм, даму және күнделікті қолдау.',
         topics: [
           { id: 'autism-school', title: 'Autism School Kazakhstan', description: 'Мақсаттары мен жауапкершілігі нақты көрсетілген жобаның өз білім беру бағдарламасы.' },
           { id: 'parents-learning', title: 'Ата-аналарға', description: 'Аутизмді түсіну, баланы қолдау және отбасының әл-ауқаты туралы курстар мен дәрістер.' },
@@ -437,7 +437,7 @@ const BASE_UI: Record<Locale, LocaleCopy> = {
       },
       learning: {
         title: 'Learning',
-        description: 'Autism School Kazakhstan programmes, courses and verified webinars for parents and professionals.',
+        description: 'Courses and learning for parents and professionals on autism, development and everyday support.',
         topics: [
           { id: 'autism-school', title: 'Autism School Kazakhstan', description: 'The project’s own learning programme, with clearly stated goals and responsibility.' },
           { id: 'parents-learning', title: 'For parents', description: 'Courses and lectures about understanding autism, supporting a child, and family wellbeing.' },

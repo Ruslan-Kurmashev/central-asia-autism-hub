@@ -1,7 +1,7 @@
 ---
 title: "Understanding Autism"
-summary: "A free 24-hour introductory Open University course about autism, autistic experiences, diagnosis, support and lifespan perspectives."
-description: "A free 24-hour introductory Open University course about autism, autistic experiences, diagnosis, support and lifespan perspectives."
+summary: "Autism fundamentals, autistic people's experiences, diagnosis and support across different stages of life."
+description: "Autism fundamentals, autistic people's experiences, diagnosis and support across different stages of life."
 country: kz
 language: en
 section: learning
@@ -31,7 +31,7 @@ costLabel: "Free"
 externalUrl: "https://www.open.edu/openlearn/science-maths-technology/understanding-autism"
 lastVerifiedAt: 2026-10-11
 projectOwned: false
-registrationStatus: "Read without an account; register to track progress and earn the free digital badge or statement of participation."
+registrationStatus: "Study without an account; registration is required to track progress and receive a digital badge."
 resourceDisclaimerType: external
 sources:
   - title: "Official provider description"

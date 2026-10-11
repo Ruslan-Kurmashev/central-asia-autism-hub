@@ -129,6 +129,11 @@ const materials = [...pageMaterials, ...researchMaterials].sort((left, right) =>
 });
 
 const displayCount = materials.length + learningMaterials.length;
+const displayCountLabel = section === 'learning'
+  ? locale === 'ru' ? 'курсов и модулей'
+    : locale === 'kk' ? 'курс пен модуль'
+      : 'courses and modules'
+  : sectionV2Text.resourceWord(displayCount);
 
 const dateFormatter = new Intl.DateTimeFormat(DATE_LOCALES[locale], {
   day: 'numeric',
@@ -332,10 +337,10 @@ function russianMaterialWord(count: number) {
 
               <div
                 class="section-v2__count"
-                aria-label={`${displayCount} ${sectionV2Text.resourceWord(displayCount)}`}
+                aria-label={`${displayCount} ${displayCountLabel}`}
               >
                 <strong>{displayCount}</strong>
-                <span>{sectionV2Text.resourceWord(displayCount)}</span>
+                <span>{displayCountLabel}</span>
               </div>
             </div>
           </div>
@@ -360,7 +365,7 @@ function russianMaterialWord(count: number) {
               </div>
             )}
 
-            {(section === 'learning' || section === 'professionals') && (
+            {section === 'professionals' && (
               <SectionBoundary locale={locale} section={section} />
             )}
 

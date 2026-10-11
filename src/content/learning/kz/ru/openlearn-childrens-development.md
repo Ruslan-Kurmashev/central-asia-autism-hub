@@ -1,7 +1,7 @@
 ---
 title: "Supporting Children's Development: развитие детей"
-summary: "Бесплатный вводный курс о развитии ребёнка, обучении, поведении и поддержке детей с дополнительными образовательными потребностями."
-description: "Бесплатный вводный курс о развитии ребёнка, обучении, поведении и поддержке детей с дополнительными образовательными потребностями."
+summary: "Особенности развития, обучения и поведения детей, включая поддержку при дополнительных образовательных потребностях."
+description: "Особенности развития, обучения и поведения детей, включая поддержку при дополнительных образовательных потребностях."
 country: kz
 language: ru
 section: learning
@@ -31,7 +31,7 @@ costLabel: "Бесплатно"
 externalUrl: "https://www.open.edu/openlearn/education-development/childhood-youth/supporting-childrens-development/"
 lastVerifiedAt: 2026-10-11
 projectOwned: false
-registrationStatus: "Можно читать без регистрации. Для бесплатного цифрового бейджа и подтверждения участия требуется аккаунт."
+registrationStatus: "Материалы доступны без регистрации; для цифрового бейджа и подтверждения участия потребуется аккаунт."
 resourceDisclaimerType: external
 sources:
   - title: "Official provider description"
