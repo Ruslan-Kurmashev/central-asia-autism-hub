@@ -14,3 +14,7 @@ Regression test: `npm run check:learning-language-filter` is included in `npm ru
 ## UX update (11 October 2026)
 
 Removed the redundant «Курсы на казахском» / «Қазақ тіліндегі курстар» / «Courses in Kazakh» button from all three catalogue languages. The existing «Язык курса» / «Курс тілі» / «Course language» dropdown continues to provide the Kazakh option, and free-text search still indexes language names.
+
+## Language-count and filter-state correction (11 October 2026)
+
+Users observed English + inclusion = 1, Kazakh + inclusion = 2 and Russian + inclusion = 0 when a previously selected Topic was still applied. These were intersection counts, not the totals for each teaching language. To avoid confusing language-only selection with multi-filter intersections, changing the course language now resets the keyword search, audience and topic to their default `All` state, then recalculates displayed results. Users can refine the selected language with further filters afterward. Dropdown labels include the full available count for each original teaching language, not the page translation language. On browser navigation restore (`pageshow`), the visible cards and count are synchronized with the form state. Regression coverage checks localized dropdown counts against actual built card data and verifies state resetting in the source.
