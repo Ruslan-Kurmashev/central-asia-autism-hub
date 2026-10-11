@@ -105,12 +105,14 @@ const researchMaterials =
       )
     : [];
 
-const learningMaterials = section === 'learning'
-  ? await getCollection(
-      'learning',
-      ({ data }) => !data.draft && data.language === locale && data.translationStatus !== 'pending' && Boolean(data.publishedAt) && Boolean(data.updatedAt) && Boolean(data.externalUrl),
-    )
-  : [];
+const allLearningEntries = section === 'learning' ? await getCollection('learning') : [];
+if (section === 'learning') {
+  console.log('[LEARNING DIAGNOSTICS]', locale, allLearningEntries.length,
+    JSON.stringify(allLearningEntries.map(({ id, data }) => [id, data.language, data.translationStatus, data.draft, Boolean(data.externalUrl)])));
+}
+const learningMaterials = allLearningEntries.filter(
+  ({ data }) => !data.draft && data.language === locale && data.translationStatus !== 'pending' && Boolean(data.publishedAt) && Boolean(data.updatedAt) && Boolean(data.externalUrl),
+);
 
 const materials = [...pageMaterials, ...researchMaterials].sort((left, right) => {
   const publishedDiff =
