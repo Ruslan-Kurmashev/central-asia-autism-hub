@@ -1,7 +1,7 @@
 ---
 title: "Watch Me!  -  баланың дамуын бақылау"
-summary: "Мектепке дейінгі білім беру мамандарына арналған CDC тегін курсы: даму кезеңдерін бақылау және отбасымен туындаған сұрақтарды талқылау."
-description: "Мектепке дейінгі білім беру мамандарына арналған CDC тегін курсы: даму кезеңдерін бақылау және отбасымен туындаған сұрақтарды талқылау."
+summary: "Баланың даму кезеңдерін бақылау және даму мәселелерін отбасымен дұрыс талқылау жолдары."
+description: "Баланың даму кезеңдерін бақылау және даму мәселелерін отбасымен дұрыс талқылау жолдары."
 country: kz
 language: kk
 section: learning
@@ -30,7 +30,7 @@ costLabel: "Тегін"
 externalUrl: "https://www.cdc.gov/watch-me-training/modules/index.html"
 lastVerifiedAt: 2026-10-11
 projectOwned: false
-registrationStatus: "Оқу тегін. CDC шарттары бойынша тегін CEU ұсынады; АҚШ-тағы кредиттердің Қазақстанда танылатынын білдірмейді."
+registrationStatus: "CEU алу CDC шарттарына байланысты; мұндай кредиттердің Қазақстанда танылатыны расталмаған."
 resourceDisclaimerType: external
 sources:
   - title: "Official provider description"

@@ -1,7 +1,7 @@
 ---
 title: "Introduction to Autism and Inclusive Practice"
-summary: "Педагогтерге арналған аутизм мен инклюзивті білім беру туралы тегін ағылшын тіліндегі курс; Шотландияның білім беру жүйесіне негізделген."
-description: "Педагогтерге арналған аутизм мен инклюзивті білім беру туралы тегін ағылшын тіліндегі курс; Шотландияның білім беру жүйесіне негізделген."
+summary: "Инклюзивті білім беру қағидаттары, оқытуды бейімдеу және аутист оқушыларды қолдау. Материал Шотландия білім беру жүйесіне негізделген."
+description: "Инклюзивті білім беру қағидаттары, оқытуды бейімдеу және аутист оқушыларды қолдау. Материал Шотландия білім беру жүйесіне негізделген."
 country: kz
 language: kk
 section: learning
@@ -30,7 +30,7 @@ costLabel: "Тегін"
 externalUrl: "https://www.open.edu/openlearncreate/course/view.php?id=6935"
 lastVerifiedAt: 2026-10-11
 projectOwned: false
-registrationStatus: "Материалдар ашық; қатысу туралы тегін құжат пен цифрлық белгі алу үшін тіркелу қажет."
+registrationStatus: "Қатысуды растау құжаты мен цифрлық белгі үшін тіркелу қажет."
 resourceDisclaimerType: external
 sources:
   - title: "Official provider description"

@@ -1,7 +1,7 @@
 ---
 title: "Supporting Children's Development: баланың дамуын қолдау"
-summary: "Баланың дамуы, оқу, мінез-құлық және қосымша білім беру қажеттіліктері бар балаларды қолдау туралы тегін кіріспе курс."
-description: "Баланың дамуы, оқу, мінез-құлық және қосымша білім беру қажеттіліктері бар балаларды қолдау туралы тегін кіріспе курс."
+summary: "Балалардың дамуы, оқуы және мінез-құлқы, сондай-ақ қосымша білім беру қажеттіліктері болған жағдайда қолдау тәсілдері."
+description: "Балалардың дамуы, оқуы және мінез-құлқы, сондай-ақ қосымша білім беру қажеттіліктері болған жағдайда қолдау тәсілдері."
 country: kz
 language: kk
 section: learning
@@ -31,7 +31,7 @@ costLabel: "Тегін"
 externalUrl: "https://www.open.edu/openlearn/education-development/childhood-youth/supporting-childrens-development/"
 lastVerifiedAt: 2026-10-11
 projectOwned: false
-registrationStatus: "Тіркелмей оқуға болады. Тегін цифрлық белгі мен қатысуды растау үшін аккаунт қажет."
+registrationStatus: "Материалдарды тіркелмей оқуға болады; цифрлық белгі мен қатысуды растау үшін аккаунт қажет."
 resourceDisclaimerType: external
 sources:
   - title: "Official provider description"

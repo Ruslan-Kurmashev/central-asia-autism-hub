@@ -1,7 +1,7 @@
 ---
 title: "Understanding Autism: аутизмді түсіну"
-summary: "Open University ұсынатын аутизм, аутист адамдардың тәжірибесі, диагностика және қолдау туралы ағылшын тіліндегі тегін кіріспе курс; шамамен 24 сағат."
-description: "Open University ұсынатын аутизм, аутист адамдардың тәжірибесі, диагностика және қолдау туралы ағылшын тіліндегі тегін кіріспе курс; шамамен 24 сағат."
+summary: "Аутизм туралы негізгі мәліметтер, аутист адамдардың тәжірибесі, диагностика және өмірдің әр кезеңіндегі қолдау."
+description: "Аутизм туралы негізгі мәліметтер, аутист адамдардың тәжірибесі, диагностика және өмірдің әр кезеңіндегі қолдау."
 country: kz
 language: kk
 section: learning
@@ -31,7 +31,7 @@ costLabel: "Тегін"
 externalUrl: "https://www.open.edu/openlearn/science-maths-technology/understanding-autism"
 lastVerifiedAt: 2026-10-11
 projectOwned: false
-registrationStatus: "Материалдарды тіркелмей оқуға болады; үлгерімді қадағалау және тегін цифрлық белгі алу үшін тіркелу қажет."
+registrationStatus: "Материалдарды аккаунтсыз оқуға болады; оқу барысын бақылау мен цифрлық белгі үшін тіркелу қажет."
 resourceDisclaimerType: external
 sources:
   - title: "Official provider description"
