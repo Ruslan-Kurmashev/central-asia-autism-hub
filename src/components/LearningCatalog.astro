@@ -16,7 +16,7 @@ const copy = {
     audience: 'Аудитория', language: 'Язык курса', topic: 'Тема',
     all: 'Все', parents: 'Родителям', professionals: 'Специалистам',
     topics: { autism: 'Основы аутизма', development: 'Развитие ребёнка', inclusion: 'Инклюзивное образование', support: 'Подходы к поддержке' },
-    types: { course: 'Курс', module: 'Учебный модуль' },
+    types: { course: 'Курс', module: 'Учебный модуль', lecture: 'Лекция', materials: 'Учебные материалы', webinar: 'Вебинар' },
     price: 'Стоимость', provider: 'Разработчик', duration: 'Продолжительность',
     open: 'Перейти к курсу', verified: 'Проверено', details: 'Как начать обучение', outcome: 'Что выдаётся после прохождения',
     count: 'Найдено', resultWord: 'курсов и модулей', noResults: 'По выбранным фильтрам курсы не найдены.',
@@ -31,7 +31,7 @@ const copy = {
     audience: 'Кімге арналған', language: 'Курс тілі', topic: 'Тақырып',
     all: 'Барлығы', parents: 'Ата-аналарға', professionals: 'Мамандарға',
     topics: { autism: 'Аутизм негіздері', development: 'Баланың дамуы', inclusion: 'Инклюзивті білім беру', support: 'Қолдау тәсілдері' },
-    types: { course: 'Курс', module: 'Оқу модулі' },
+    types: { course: 'Курс', module: 'Оқу модулі', lecture: 'Дәріс', materials: 'Оқу материалдары', webinar: 'Вебинар' },
     price: 'Құны', provider: 'Дайындаған ұйым', duration: 'Ұзақтығы',
     open: 'Курсқа өту', verified: 'Тексерілді', details: 'Оқуды қалай бастауға болады', outcome: 'Оқуды аяқтаған соң не беріледі',
     count: 'Табылды', resultWord: 'курс пен модуль', noResults: 'Таңдалған сүзгілер бойынша курс табылмады.',
@@ -46,7 +46,7 @@ const copy = {
     audience: 'Audience', language: 'Course language', topic: 'Topic',
     all: 'All', parents: 'Parents', professionals: 'Professionals',
     topics: { autism: 'Autism essentials', development: 'Child development', inclusion: 'Inclusive education', support: 'Support approaches' },
-    types: { course: 'Course', module: 'Learning module' },
+    types: { course: 'Course', module: 'Learning module', lecture: 'Lecture', materials: 'Learning materials', webinar: 'Webinar' },
     price: 'Price', provider: 'Developed by', duration: 'Duration',
     open: 'Go to course', verified: 'Checked', details: 'How to start', outcome: 'What you receive upon completion',
     count: 'Found', resultWord: 'courses and modules', noResults: 'No courses match the selected filters.',
@@ -117,7 +117,7 @@ const availableTopics = [...new Set(items.map((entry) => entry.data.topicArea).f
             >
               <div class="course-catalogue__body">
                 <div class="course-catalogue__tags">
-                  <span>{entry.data.learningKind === 'module' ? t.types.module : t.types.course}</span>
+                  <span>{t.types[entry.data.learningKind ?? 'course']}</span>
                   {entry.data.audience.map((audience) => <span>{audience === 'parents' ? t.parents : t.professionals}</span>)}
                 </div>
                 <h3>{entry.data.title}</h3>

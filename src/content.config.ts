@@ -168,7 +168,7 @@ const learning = defineCollection({
     .object({
       ...commonFields,
       provider: z.string().min(1),
-      learningKind: z.enum(['course', 'module']).optional(),
+      learningKind: z.enum(['course', 'module', 'lecture', 'materials', 'webinar']).optional(),
       topicArea: z.enum(['autism', 'development', 'inclusion', 'support']).optional(),
       durationLabel: z.string().min(1).optional(),
       audience: z.array(z.enum(['parents', 'professionals'])).min(1),

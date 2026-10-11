@@ -416,6 +416,9 @@ collections:
       - { label: "Version note", name: "versionNote", widget: "text", required: false }
       - { label: "Draft", name: "draft", widget: "boolean", default: true }
       - { label: "Provider", name: "provider", widget: "string" }
+      - { label: "Learning kind", name: "learningKind", widget: "select", required: false, options: ["course", "module", "lecture", "materials", "webinar"] }
+      - { label: "Topic", name: "topicArea", widget: "select", required: false, options: ["autism", "development", "inclusion", "support"] }
+      - { label: "Duration / size", name: "durationLabel", widget: "string", required: false }
       - { label: "Audience", name: "audience", widget: "select", multiple: true, min: 1, options: ["parents", "professionals"] }
       - { label: "Format", name: "format", widget: "string" }
       - { label: "Languages", name: "languages", widget: "select", multiple: true, min: 1, options: ["ru", "kk", "en"] }
