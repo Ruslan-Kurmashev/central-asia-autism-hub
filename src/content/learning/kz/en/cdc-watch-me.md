@@ -18,13 +18,16 @@ updatedAt: 2026-10-11
 reviewDueAt: 2027-01-11
 draft: false
 provider: "US Centers for Disease Control and Prevention (CDC)"
+learningKind: course
+topicArea: development
+durationLabel: "1 hour, 4 modules"
 audience:
   - professionals
 format: "Online course · 1 hour · 4 modules"
 languages:
   - en
 costLabel: "Free"
-externalUrl: "https://www.cdc.gov/watch-me-training/index.html"
+externalUrl: "https://www.cdc.gov/watch-me-training/modules/index.html"
 lastVerifiedAt: 2026-10-11
 projectOwned: false
 registrationStatus: "Training is free. CDC offers free CEU under its rules; US continuing education credit does not imply recognition in Kazakhstan."

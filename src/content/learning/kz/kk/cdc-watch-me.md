@@ -18,13 +18,16 @@ updatedAt: 2026-10-11
 reviewDueAt: 2027-01-11
 draft: false
 provider: "US Centers for Disease Control and Prevention (CDC)"
+learningKind: course
+topicArea: development
+durationLabel: "1 сағат, 4 модуль"
 audience:
   - professionals
 format: "Онлайн курс · 1 сағат · 4 модуль"
 languages:
   - en
 costLabel: "Тегін"
-externalUrl: "https://www.cdc.gov/watch-me-training/index.html"
+externalUrl: "https://www.cdc.gov/watch-me-training/modules/index.html"
 lastVerifiedAt: 2026-10-11
 projectOwned: false
 registrationStatus: "Оқу тегін. CDC шарттары бойынша тегін CEU ұсынады; АҚШ-тағы кредиттердің Қазақстанда танылатынын білдірмейді."
