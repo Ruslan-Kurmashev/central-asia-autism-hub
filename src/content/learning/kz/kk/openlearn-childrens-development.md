@@ -18,6 +18,9 @@ updatedAt: 2026-10-11
 reviewDueAt: 2027-01-11
 draft: false
 provider: "The Open University (OpenLearn)"
+learningKind: course
+topicArea: development
+durationLabel: "15 сағат"
 audience:
   - parents
   - professionals
