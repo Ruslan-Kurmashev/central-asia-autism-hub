@@ -17,7 +17,7 @@ publishedAt: 2026-10-11
 updatedAt: 2026-10-11
 reviewDueAt: 2027-01-11
 draft: false
-provider: "IRIS Center, Vanderbilt University"
+provider: "Центр IRIS при Университете Вандербильта"
 learningKind: module
 topicArea: "support"
 durationLabel: "3 часа"
@@ -30,7 +30,7 @@ costLabel: "Бесплатно"
 externalUrl: "https://iris.peabody.vanderbilt.edu/module/asd2/"
 lastVerifiedAt: 2026-10-11
 projectOwned: false
-registrationStatus: "Модуль доступен без регистрации; для сертификата необходимы аккаунт и контрольные задания."
+registrationStatus: "Модуль доступен без регистрации; для подтверждения прохождения необходимы учётная запись и контрольные задания."
 resourceDisclaimerType: external
 sources:
   - title: "Official provider description"

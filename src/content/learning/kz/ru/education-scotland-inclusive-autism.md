@@ -1,5 +1,5 @@
 ---
-title: "Introduction to Autism and Inclusive Practice"
+title: "Введение в аутизм и инклюзивное образование"
 summary: "Принципы инклюзивного образования, адаптация обучения и поддержка аутичных учащихся в контексте системы образования Шотландии."
 description: "Принципы инклюзивного образования, адаптация обучения и поддержка аутичных учащихся в контексте системы образования Шотландии."
 country: kz
@@ -17,7 +17,7 @@ publishedAt: 2026-10-11
 updatedAt: 2026-10-11
 reviewDueAt: 2027-01-11
 draft: false
-provider: "Education Scotland / The Open University (OLCreate)"
+provider: "Агентство по вопросам образования Шотландии и Открытый университет Великобритании"
 learningKind: module
 topicArea: inclusion
 durationLabel: "3 часа"
@@ -30,7 +30,7 @@ costLabel: "Бесплатно"
 externalUrl: "https://www.open.edu/openlearncreate/course/view.php?id=6935"
 lastVerifiedAt: 2026-10-11
 projectOwned: false
-registrationStatus: "Для подтверждения участия и цифрового бейджа требуется регистрация."
+registrationStatus: "Для получения документа об участии и цифрового знака требуется регистрация."
 resourceDisclaimerType: external
 sources:
   - title: "Official provider description"
