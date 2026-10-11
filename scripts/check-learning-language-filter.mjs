@@ -56,12 +56,14 @@ const component = await readFile('src/components/LearningCatalog.astro', 'utf8')
 assert.ok(!component.includes('data-course-kazakh-shortcut'), 'Redundant Kazakh quick selector must be removed');
 assert.ok(component.includes('data-search-text='));
 assert.ok(component.includes('entry.data.languages.map((l) => languages[locale][l])'));
-const handlerStart = component.indexOf("language?.addEventListener('change', () => {");
-assert.ok(handlerStart >= 0, 'Language change handler not found');
-const handler = component.slice(handlerStart, component.indexOf('});', handlerStart));
-for (const reset of ["search.value = '';", "audience.value = 'all';", "topic.value = 'all';", "update();"]) {
-  assert.ok(handler.includes(reset), `Language switching must reset other filters: ${reset}`);
+const chooser = component.indexOf('const chooseFilter = (selected:');
+assert.ok(chooser >= 0, 'Unified catalogue filter handler missing');
+const handler = component.slice(chooser, component.indexOf("window.addEventListener('pageshow', update)",chooser));
+for (const field of ['search','audience','language','topic']) {
+  assert.ok(handler.includes("chooseFilter('"+field+"')"), 'Filter event missing: '+field);
 }
-assert.ok(component.includes("window.addEventListener('pageshow', update);"),
-  'Browser-restored filter selections must update visible results');
-console.log(`Learning filters checked in RU/KK/EN: ${localeCardCounts.join('/')} cards; language totals ${JSON.stringify(perLanguageCounts[0])}. Switching language resets narrower filters.`);
+for (const reset of ["search.value = '';", "audience.value = 'all';", "language.value = 'all';", "topic.value = 'all';"]) {
+  assert.ok(handler.includes(reset), 'Filter reset missing: '+reset);
+}
+assert.ok(component.includes("window.addEventListener('pageshow', update);"));
+console.log(`Learning filters checked in RU/KK/EN: ${localeCardCounts.join('/')} cards; language totals ${JSON.stringify(perLanguageCounts[0])}. Every category switch replaces prior selections.`);
