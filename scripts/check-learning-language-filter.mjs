@@ -15,8 +15,8 @@ const expectedCourseLinks = [
 ];
 for (const [lang, [languageLabel, shortcutLabel]] of Object.entries(labels)) {
   const html = await readFile(path.join('dist', 'kz', lang, 'learning', 'index.html'), 'utf8');
-  assert.match(html, /<select\s+data-course-language>/, `Language filter missing for ${lang}`);
-  assert.ok(html.includes(`value="kk">${languageLabel}</option>`), `Kazakh option missing for ${lang}`);
+  assert.match(html, /<select\b[^>]*\bdata-course-language\b/, `Language filter missing for ${lang}`);
+  assert.ok(html.includes(`value="kk"`) && new RegExp(`<option[^>]*value="kk"[^>]*>${languageLabel}</option>`).test(html), `Kazakh option missing for ${lang}`);
   assert.ok(html.includes(shortcutLabel), `Kazakh quick selector missing for ${lang}`);
   assert.ok(html.includes('data-course-kazakh-shortcut'), `Shortcut handler target missing for ${lang}`);
   for (const link of expectedCourseLinks) assert.ok(html.includes(link), `Kazakh course link ${link} missing for ${lang}`);
