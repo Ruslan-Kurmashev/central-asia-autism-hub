@@ -18,6 +18,9 @@ updatedAt: 2026-10-11
 reviewDueAt: 2027-01-11
 draft: false
 provider: "Education Scotland / The Open University (OLCreate)"
+learningKind: module
+topicArea: inclusion
+durationLabel: "3 часа"
 audience:
   - professionals
 format: "Онлайн-курс · 3 часа"

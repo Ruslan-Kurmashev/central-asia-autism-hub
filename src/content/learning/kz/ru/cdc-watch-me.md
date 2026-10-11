@@ -18,13 +18,16 @@ updatedAt: 2026-10-11
 reviewDueAt: 2027-01-11
 draft: false
 provider: "US Centers for Disease Control and Prevention (CDC)"
+learningKind: course
+topicArea: development
+durationLabel: "1 час, 4 модуля"
 audience:
   - professionals
 format: "Онлайн-курс · 1 час · 4 модуля"
 languages:
   - en
 costLabel: "Бесплатно"
-externalUrl: "https://www.cdc.gov/watch-me-training/index.html"
+externalUrl: "https://www.cdc.gov/watch-me-training/modules/index.html"
 lastVerifiedAt: 2026-10-11
 projectOwned: false
 registrationStatus: "Обучение бесплатно. CDC предлагает бесплатные CEU по своим правилам; американские профессиональные кредиты не означают признание в Казахстане."

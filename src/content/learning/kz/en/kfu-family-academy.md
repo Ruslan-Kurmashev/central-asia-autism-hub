@@ -18,6 +18,9 @@ updatedAt: 2026-10-11
 reviewDueAt: 2027-01-11
 draft: false
 provider: "Казанский (Приволжский) федеральный университет"
+learningKind: course
+topicArea: support
+durationLabel: "29 lessons"
 audience:
   - parents
   - professionals
@@ -25,10 +28,10 @@ format: "Online course · 29 lessons"
 languages:
   - ru
 costLabel: "Free"
-externalUrl: "https://kpfu.ru/psychology/resursnyj-centr-razvitiya-detej-s-ovz/semejnaya-akademiya"
+externalUrl: "https://stepik.org/course/115174/"
 lastVerifiedAt: 2026-10-11
 projectOwned: false
-registrationStatus: "The university states that enrolment on Stepik is free. Verify platform access and any country restrictions before proceeding."
+registrationStatus: "Direct course link. Free registration may be required; verify access and regional restrictions before starting."
 resourceDisclaimerType: external
 sources:
   - title: "Official provider description"

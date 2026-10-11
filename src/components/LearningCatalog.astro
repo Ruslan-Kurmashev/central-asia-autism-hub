@@ -7,149 +7,227 @@ interface Props {
   entries: CollectionEntry<'learning'>[];
 }
 const { locale, entries } = Astro.props;
-const text = {
+const copy = {
   ru: {
-    heading: 'Бесплатные курсы и учебные материалы',
-    subtitle: 'Подборка программ сторонних организаций. Описание переведено для удобства; сами курсы проходят на языке, указанном в карточке.',
-    all: 'Для всех', parents: 'Для родителей', professionals: 'Для специалистов',
-    filter: 'Для кого вы ищете обучение?', provider: 'Организатор', language: 'Язык обучения',
-    verified: 'Проверено', format: 'Формат', access: 'Регистрация и доступ',
-    open: 'Открыть у организатора', other: 'Внешний ресурс',
-    notice: 'Autism Hub Kazakhstan не проводит эти программы и не подтверждает автоматически качество, аккредитацию или применимость сертификата в Казахстане. Стоимость, доступ и условия организатор может изменить. Проверяйте их перед регистрацией.',
-    missing: 'Пока нет опубликованных проверенных программ.',
-    visible: 'Найдено программ',
+    heading: 'Каталог курсов и учебных материалов.',
+    intro: 'Выберите тему, язык и аудиторию. В каталоге представлены конкретные бесплатные курсы и учебные модули со ссылками непосредственно на обучение.',
+    search: 'Поиск по названию или содержанию',
+    placeholder: 'Например: коммуникация, развитие, аутизм',
+    audience: 'Аудитория', language: 'Язык курса', topic: 'Тема',
+    all: 'Все', parents: 'Родителям', professionals: 'Специалистам',
+    topics: { autism: 'Основы аутизма', development: 'Развитие ребёнка', inclusion: 'Инклюзивное образование', support: 'Подходы к поддержке' },
+    types: { course: 'Курс', module: 'Учебный модуль' },
+    free: 'Бесплатно', provider: 'Разработчик', duration: 'Продолжительность',
+    open: 'Перейти к курсу', verified: 'Проверено', details: 'Условия доступа',
+    count: 'Найдено', resultWord: 'курсов и модулей', noResults: 'По выбранным фильтрам курсы не найдены.',
+    empty: 'Курсы пока готовятся к публикации.',
+    notice: 'Обучение проходит на ресурсах указанных разработчиков. Autism Hub Kazakhstan не является организатором этих курсов. Язык обучения, регистрация, условия получения документов и доступность могут измениться. Подтверждение о прохождении курса не означает профессиональную лицензию в Казахстане.',
   },
   kk: {
-    heading: 'Тегін курстар мен оқу материалдары',
-    subtitle: 'Сыртқы ұйымдардың бағдарламалары. Сипаттамалар ыңғайлы болу үшін аударылды; курстың өзі карточкада көрсетілген тілде жүргізіледі.',
-    all: 'Барлығына', parents: 'Ата-аналарға', professionals: 'Мамандарға',
-    filter: 'Кімге арналған оқуды іздейсіз?', provider: 'Ұйымдастырушы', language: 'Оқу тілі',
-    verified: 'Тексерілді', format: 'Форматы', access: 'Тіркелу және қолжетімділік',
-    open: 'Ұйымдастырушының сайтында ашу', other: 'Сыртқы ресурс',
-    notice: 'Autism Hub Kazakhstan бұл бағдарламаларды өткізбейді және олардың сапасын, аккредитациясын немесе сертификаттарының Қазақстанда жарамдылығын автоматты түрде растамайды. Құны мен қолжетімділік шарттары өзгеруі мүмкін; тіркелмес бұрын тексеріңіз.',
-    missing: 'Әзірге тексерілген бағдарламалар жарияланған жоқ.',
-    visible: 'Табылған бағдарламалар',
+    heading: 'Курстар мен оқу материалдарының каталогы.',
+    intro: 'Тақырыпты, тілді және аудиторияны таңдаңыз. Каталогта оқуға тікелей апаратын сілтемелері бар нақты тегін курстар мен оқу модульдері берілген.',
+    search: 'Атауы немесе мазмұны бойынша іздеу',
+    placeholder: 'Мысалы: коммуникация, даму, аутизм',
+    audience: 'Кімге арналған', language: 'Курс тілі', topic: 'Тақырып',
+    all: 'Барлығы', parents: 'Ата-аналарға', professionals: 'Мамандарға',
+    topics: { autism: 'Аутизм негіздері', development: 'Баланың дамуы', inclusion: 'Инклюзивті білім беру', support: 'Қолдау тәсілдері' },
+    types: { course: 'Курс', module: 'Оқу модулі' },
+    free: 'Тегін', provider: 'Дайындаған ұйым', duration: 'Ұзақтығы',
+    open: 'Курсқа өту', verified: 'Тексерілді', details: 'Қолжетімділік шарттары',
+    count: 'Табылды', resultWord: 'курс пен модуль', noResults: 'Таңдалған сүзгілер бойынша курс табылмады.',
+    empty: 'Курстар жариялауға дайындалып жатыр.',
+    notice: 'Оқу көрсетілген ұйымдардың ресурстарында өтеді. Autism Hub Kazakhstan бұл курстарды өткізбейді. Оқу тілі, тіркелу, құжат алу шарттары және қолжетімділік өзгеруі мүмкін. Курсты аяқтау Қазақстандағы кәсіби лицензияны білдірмейді.',
   },
   en: {
-    heading: 'Free courses and learning resources',
-    subtitle: 'Curated opportunities from external organisations. Descriptions are translated; courses are delivered in the languages shown on each card.',
-    all: 'Everyone', parents: 'Parents', professionals: 'Professionals',
-    filter: 'Who are you looking for?', provider: 'Provider', language: 'Course language',
-    verified: 'Checked', format: 'Format', access: 'Registration and access',
-    open: 'Open provider website', other: 'External provider',
-    notice: 'Autism Hub Kazakhstan does not deliver these programmes and does not automatically endorse their quality, accreditation or the recognition of certificates in Kazakhstan. Providers can change access, prices and terms. Check directly before registering.',
-    missing: 'No verified programmes have been published yet.',
-    visible: 'Matching resources',
+    heading: 'Catalogue of courses and learning materials.',
+    intro: 'Filter by topic, language and audience. Every listing is a specific free course or learning module linked directly to the training.',
+    search: 'Search by title or content',
+    placeholder: 'For example: communication, development, autism',
+    audience: 'Audience', language: 'Course language', topic: 'Topic',
+    all: 'All', parents: 'Parents', professionals: 'Professionals',
+    topics: { autism: 'Autism essentials', development: 'Child development', inclusion: 'Inclusive education', support: 'Support approaches' },
+    types: { course: 'Course', module: 'Learning module' },
+    free: 'Free', provider: 'Developed by', duration: 'Duration',
+    open: 'Go to course', verified: 'Checked', details: 'Access details',
+    count: 'Found', resultWord: 'courses and modules', noResults: 'No courses match the selected filters.',
+    empty: 'Courses are being prepared for publication.',
+    notice: 'Training takes place on the named providers’ resources; Autism Hub Kazakhstan does not deliver these courses. Original language, enrolment, documentation and availability may change. A course completion document does not confer a professional licence in Kazakhstan.',
   },
 } as const;
-const t = text[locale];
-const dateFmt = new Intl.DateTimeFormat(locale === 'ru' ? 'ru-KZ' : locale === 'kk' ? 'kk-KZ' : 'en-GB', { day: 'numeric', month: 'short', year: 'numeric' });
-const languages = { ru: 'Русский', kk: 'Қазақша', en: 'English' };
-const sorted = [...entries].sort((a, b) => a.data.title.localeCompare(b.data.title, locale));
+const t = copy[locale];
+const languages = {
+  ru: {ru:'Русский', kk:'Қазақша', en:'English'},
+  kk: {ru:'Орысша', kk:'Қазақша', en:'Ағылшынша'},
+  en: {ru:'Russian', kk:'Kazakh', en:'English'},
+} as const;
+const dateFormat = new Intl.DateTimeFormat(locale === 'ru' ? 'ru-KZ' : locale === 'kk' ? 'kk-KZ' : 'en-GB', { day:'numeric', month:'short', year:'numeric' });
+const items = [...entries].sort((a, b) => a.data.title.localeCompare(b.data.title, locale));
+const availableLanguages = [...new Set(items.flatMap((entry) => entry.data.languages))].sort();
+const availableTopics = [...new Set(items.map((entry) => entry.data.topicArea).filter((v): v is NonNullable<typeof v> => Boolean(v)))];
 ---
 
-<section class="learning-directory" aria-labelledby="learning-directory-title">
-  <div class="learning-directory__heading">
-    <div>
-      <p class="learning-directory__eyebrow">Autism Hub Kazakhstan · Learning</p>
-      <h2 id="learning-directory-title">{t.heading}</h2>
-      <p>{t.subtitle}</p>
-    </div>
-    <label class="learning-directory__filter">
-      <span>{t.filter}</span>
-      <select data-learning-filter>
+<section class="course-catalogue" aria-labelledby="learning-directory-title">
+  <div class="course-catalogue__heading">
+    <h2 id="learning-directory-title">{t.heading}</h2>
+    <p>{t.intro}</p>
+  </div>
+
+  <div class="course-catalogue__filters" id="professionals-learning" role="search" aria-label={t.heading}>
+    <label class="course-catalogue__search">
+      <span>{t.search}</span>
+      <input type="search" placeholder={t.placeholder} data-course-search />
+    </label>
+    <label>
+      <span>{t.audience}</span>
+      <select data-course-audience>
         <option value="all">{t.all}</option>
         <option value="parents">{t.parents}</option>
         <option value="professionals">{t.professionals}</option>
       </select>
     </label>
+    <label>
+      <span>{t.language}</span>
+      <select data-course-language>
+        <option value="all">{t.all}</option>
+        {availableLanguages.map((lang) => <option value={lang}>{languages[locale][lang]}</option>)}
+      </select>
+    </label>
+    <label>
+      <span>{t.topic}</span>
+      <select data-course-topic>
+        <option value="all">{t.all}</option>
+        {availableTopics.map((topic) => <option value={topic}>{t.topics[topic]}</option>)}
+      </select>
+    </label>
   </div>
+
   {
-    sorted.length > 0 ? (
+    items.length > 0 ? (
       <>
-        <p class="learning-directory__result" aria-live="polite" data-learning-count>
-          {t.visible}: {sorted.length}
-        </p>
-        <div class="learning-directory__grid">
-          {sorted.map((entry) => (
-            <article class="learning-directory__card" data-learning-audience={entry.data.audience.join(' ')}>
-              <div class="learning-directory__tags">
-                <span class="learning-directory__free">{entry.data.costLabel}</span>
-                {entry.data.audience.map((audience) => (
-                  <span class="learning-directory__tag">
-                    {audience === 'parents' ? t.parents : t.professionals}
-                  </span>
-                ))}
+        <p class="course-catalogue__count" data-course-result aria-live="polite">{t.count}: {items.length} {t.resultWord}</p>
+        <div class="course-catalogue__list">
+          {items.map((entry, index) => (
+            <article
+              class="course-catalogue__item"
+              data-course-item
+              data-audience={entry.data.audience.join(' ')}
+              data-language={entry.data.languages.join(' ')}
+              data-topic={entry.data.topicArea ?? ''}
+              data-search-text={`${entry.data.title} ${entry.data.summary} ${entry.data.provider}`.toLocaleLowerCase()}
+            >
+              <div class="course-catalogue__number" aria-hidden="true">{String(index + 1).padStart(2,'0')}</div>
+              <div class="course-catalogue__body">
+                <div class="course-catalogue__tags">
+                  <span>{entry.data.learningKind === 'module' ? t.types.module : t.types.course}</span>
+                  <span>{t.free}</span>
+                  {entry.data.audience.map((audience) => <span>{audience === 'parents' ? t.parents : t.professionals}</span>)}
+                </div>
+                <h3>{entry.data.title}</h3>
+                <p class="course-catalogue__summary">{entry.data.summary}</p>
+                <div class="course-catalogue__meta">
+                  {entry.data.durationLabel && <span><strong>{t.duration}:</strong> {entry.data.durationLabel}</span>}
+                  <span><strong>{t.language}:</strong> {entry.data.languages.map((l) => languages[locale][l]).join(', ')}</span>
+                  <span><strong>{t.provider}:</strong> {entry.data.provider}</span>
+                </div>
+                {entry.data.registrationStatus && (
+                  <p class="course-catalogue__access"><strong>{t.details}:</strong> {entry.data.registrationStatus}</p>
+                )}
+                {entry.data.lastVerifiedAt && (
+                  <small class="course-catalogue__checked">
+                    {t.verified}: <time datetime={entry.data.lastVerifiedAt.toISOString()}>{dateFormat.format(entry.data.lastVerifiedAt)}</time>
+                  </small>
+                )}
               </div>
-              <h3>{entry.data.title}</h3>
-              <p class="learning-directory__summary">{entry.data.summary}</p>
-              <dl class="learning-directory__facts">
-                <div><dt>{t.provider}</dt><dd>{entry.data.provider}</dd></div>
-                <div><dt>{t.language}</dt><dd>{entry.data.languages.map((language) => languages[language]).join(', ')}</dd></div>
-                <div><dt>{t.format}</dt><dd>{entry.data.format}</dd></div>
-                {entry.data.registrationStatus && <div><dt>{t.access}</dt><dd>{entry.data.registrationStatus}</dd></div>}
-                {entry.data.lastVerifiedAt && <div><dt>{t.verified}</dt><dd><time datetime={entry.data.lastVerifiedAt.toISOString()}>{dateFmt.format(entry.data.lastVerifiedAt)}</time></dd></div>}
-              </dl>
-              {entry.data.externalUrl && (
-                <a class="learning-directory__link" href={entry.data.externalUrl} target="_blank" rel="noopener noreferrer external">
-                  {t.open} <span aria-hidden="true">↗</span>
-                </a>
-              )}
+              <div class="course-catalogue__action">
+                {entry.data.externalUrl && (
+                  <a href={entry.data.externalUrl} target="_blank" rel="noopener noreferrer external">{t.open} <span aria-hidden="true">↗</span></a>
+                )}
+              </div>
             </article>
           ))}
         </div>
+        <p class="course-catalogue__no-results" data-course-empty hidden>{t.noResults}</p>
       </>
     ) : (
-      <p>{t.missing}</p>
+      <p>{t.empty}</p>
     )
   }
-  <p class="learning-directory__disclaimer">{t.notice}</p>
+  <p class="course-catalogue__notice">{t.notice}</p>
 </section>
 
 <script>
-  const filter = document.querySelector<HTMLSelectElement>('[data-learning-filter]');
-  const count = document.querySelector<HTMLElement>('[data-learning-count]');
-  const cards = document.querySelectorAll<HTMLElement>('[data-learning-audience]');
-  filter?.addEventListener('change', () => {
-    let shown = 0;
-    cards.forEach((card) => {
-      const values = (card.dataset.learningAudience ?? '').split(' ');
-      const visible = filter.value === 'all' || values.includes(filter.value);
-      card.hidden = !visible;
-      if (visible) shown++;
-    });
-    if (count) {
-      const prefix = count.textContent?.split(':')[0] ?? '';
-      count.textContent = `${prefix}: ${shown}`;
-    }
-  });
+  const catalogue = document.querySelector<HTMLElement>('.course-catalogue');
+  if (catalogue) {
+    const search = catalogue.querySelector<HTMLInputElement>('[data-course-search]');
+    const audience = catalogue.querySelector<HTMLSelectElement>('[data-course-audience]');
+    const language = catalogue.querySelector<HTMLSelectElement>('[data-course-language]');
+    const topic = catalogue.querySelector<HTMLSelectElement>('[data-course-topic]');
+    const list = catalogue.querySelectorAll<HTMLElement>('[data-course-item]');
+    const result = catalogue.querySelector<HTMLElement>('[data-course-result]');
+    const empty = catalogue.querySelector<HTMLElement>('[data-course-empty]');
+    const update = () => {
+      const query = (search?.value ?? '').trim().toLocaleLowerCase();
+      let matched = 0;
+      list.forEach((item) => {
+        const visible =
+          (query === '' || (item.dataset.searchText ?? '').includes(query)) &&
+          (audience?.value === 'all' || (item.dataset.audience ?? '').split(' ').includes(audience?.value ?? '')) &&
+          (language?.value === 'all' || (item.dataset.language ?? '').split(' ').includes(language?.value ?? '')) &&
+          (topic?.value === 'all' || item.dataset.topic === topic?.value);
+        item.hidden = !visible;
+        if (visible) matched++;
+      });
+      if (result) {
+        const prefix = result.dataset.label ?? result.textContent?.split(':')[0] ?? '';
+        result.dataset.label = prefix;
+        result.textContent = `${prefix}: ${matched}`;
+      }
+      if (empty) empty.hidden = matched !== 0;
+    };
+    const applyLinkFilter = () => {
+      if (window.location.hash === '#professionals-learning' && audience) {
+        audience.value = 'professionals';
+        update();
+      }
+    };
+    applyLinkFilter();
+    window.addEventListener('hashchange', applyLinkFilter);
+    search?.addEventListener('input', update);
+    audience?.addEventListener('change', update);
+    language?.addEventListener('change', update);
+    topic?.addEventListener('change', update);
+  }
 </script>
 
 <style>
-.learning-directory { margin: 2rem 0 3rem; }
-.learning-directory__heading { display: flex; align-items: end; justify-content: space-between; gap: 1.5rem; margin-bottom: 1.5rem; }
-.learning-directory__heading h2 { margin: .3rem 0 .6rem; font-size: clamp(1.5rem, 3vw, 2.25rem); line-height: 1.25; color: #203b53; }
-.learning-directory__heading p { color: #475569; max-width: 45rem; line-height: 1.6; }
-.learning-directory__eyebrow { color: #2d658e !important; font-size: .76rem; letter-spacing: .04em; text-transform: uppercase; font-weight: 700; }
-.learning-directory__filter { min-width: 14rem; display: grid; gap: .45rem; font-size: .83rem; font-weight: 600; color: #203b53; }
-.learning-directory__filter select { width: 100%; border: 1px solid #adc3d3; border-radius: .55rem; padding: .7rem .9rem; background: #fff; color: #1e3347; font: inherit; }
-.learning-directory__filter select:focus-visible, .learning-directory__link:focus-visible { outline: 3px solid #2b6597; outline-offset: 3px; }
-.learning-directory__result { color: #526779; font-size: .84rem; margin: 0 0 1rem; }
-.learning-directory__grid { display: grid; grid-template-columns: repeat(2,minmax(0,1fr)); gap: 1.2rem; }
-.learning-directory__card { min-width: 0; padding: clamp(1.25rem, 2.5vw, 1.65rem); border: 1px solid #d5e2eb; border-radius: 1rem; background: #fff; display: flex; flex-direction: column; }
-.learning-directory__card[hidden] { display:none; }
-.learning-directory__tags { display:flex; flex-wrap:wrap; gap:.4rem; margin-bottom:.85rem; }
-.learning-directory__free,.learning-directory__tag { display:inline-flex; align-items:center; border-radius:1rem; padding:.2rem .65rem; font-size:.72rem; font-weight:600; }
-.learning-directory__free { background:#eaf4ed; color:#256445; }
-.learning-directory__tag { background:#eef3f8; color:#31566e; }
-.learning-directory__card h3 { font-size:1.22rem; line-height:1.3; font-weight:650; color:#203b53; margin:0 0 .7rem; }
-.learning-directory__summary { line-height:1.6; color:#40566a; margin:0 0 1.15rem; }
-.learning-directory__facts { margin:auto 0 1.1rem; padding-top:1rem; display:grid; gap:.5rem; border-top:1px solid #e1eaf0; }
-.learning-directory__facts div { display:grid; grid-template-columns: 6.6rem minmax(0,1fr); gap:.6rem; font-size:.8rem; line-height:1.45; }
-.learning-directory__facts dt { color:#62758a; }
-.learning-directory__facts dd { margin:0; color:#2a4256; overflow-wrap:anywhere; }
-.learning-directory__link { display:inline-block; margin-top:auto; color:#225e8c; text-underline-offset:.2em; font-weight:700; }
-.learning-directory__disclaimer { margin:1.5rem 0 0; border-left:3px solid #9ab9cb; padding:.7rem 1rem; background:#f7fafc; color:#526578; font-size:.86rem; line-height:1.6; }
-@media(max-width:52rem) { .learning-directory__heading { flex-direction:column; align-items:stretch; } .learning-directory__filter { max-width:20rem; } .learning-directory__grid {grid-template-columns:minmax(0,1fr);} }
-@media(max-width:25rem) { .learning-directory__facts div {grid-template-columns:1fr; gap:.1rem;} }
+.course-catalogue { margin:2rem 0 2.6rem; }
+.course-catalogue__heading {margin:0 0 1.6rem}
+.course-catalogue__heading h2{font-family:Georgia,'Times New Roman',serif;font-weight:500;font-size:clamp(1.8rem,3vw,2.55rem);line-height:1.2;color:#173d68;margin:0 0 .65rem}
+.course-catalogue__heading p{color:#526c83;max-width:52rem;line-height:1.65;font-size:1rem;margin:0}
+.course-catalogue__filters{display:grid;grid-template-columns:minmax(12rem,1.7fr) repeat(3,minmax(9rem,1fr));gap:.9rem;padding:1.3rem;border-radius:.9rem;border:1px solid #d6e3ec;background:#f6f9fc}
+.course-catalogue__filters label{display:grid;gap:.48rem;font-size:.78rem;color:#405b73;font-weight:600;align-content:start}
+.course-catalogue__filters input,.course-catalogue__filters select{width:100%;min-height:2.75rem;min-width:0;border:1px solid #cadce7;border-radius:.55rem;background:#fff;color:#173955;font:inherit;font-size:.87rem;padding:.65rem .75rem}
+.course-catalogue__filters input:focus-visible,.course-catalogue__filters select:focus-visible,.course-catalogue__action a:focus-visible{outline:3px solid #2d6e9f;outline-offset:2px}
+.course-catalogue__count{color:#526b81;font-size:.86rem;margin:1.4rem 0 .9rem}
+.course-catalogue__list{display:grid;gap:.85rem}
+.course-catalogue__item{display:grid;grid-template-columns:2.8rem minmax(0,1fr) auto;gap:1.15rem;padding:1.55rem 1.4rem;border:1px solid #d6e3ec;border-radius:.9rem;background:#fff;align-items:start}
+.course-catalogue__item[hidden],.course-catalogue__no-results[hidden]{display:none!important}
+.course-catalogue__number{font:500 1.15rem Georgia,serif;color:#8fa9bc;padding-top:.35rem}
+.course-catalogue__tags{display:flex;flex-wrap:wrap;gap:.35rem;margin-bottom:.8rem}
+.course-catalogue__tags span{border-radius:1rem;padding:.25rem .65rem;background:#eef4f8;color:#315d7b;font-size:.72rem;line-height:1.3;font-weight:600}
+.course-catalogue__tags span:nth-child(2){background:#edf6ef;color:#276242}
+.course-catalogue__body h3{font:600 clamp(1.14rem,1.9vw,1.38rem)/1.3 Georgia,'Times New Roman',serif;color:#12395e;margin:0 0 .55rem}
+.course-catalogue__summary{color:#4b6176;line-height:1.6;font-size:.92rem;max-width:47rem;margin:0 0 .9rem}
+.course-catalogue__meta{display:flex;flex-wrap:wrap;gap:.4rem 1.1rem;font-size:.78rem;color:#5c7183;line-height:1.5}
+.course-catalogue__meta strong,.course-catalogue__access strong{color:#38546b;font-weight:600}
+.course-catalogue__access{margin:.65rem 0 0;color:#5c7183;font-size:.78rem;line-height:1.55}
+.course-catalogue__checked{display:block;margin-top:.6rem;font-size:.72rem;color:#72889a}
+.course-catalogue__action{align-self:center;max-width:12rem}
+.course-catalogue__action a{display:inline-block;padding:.75rem .95rem;text-align:center;background:#205f90;border-radius:.52rem;color:#fff;text-decoration:none;font-size:.82rem;font-weight:700;line-height:1.35}
+.course-catalogue__action a:hover{background:#164d78;text-decoration:none;color:#fff}
+.course-catalogue__no-results{padding:1.3rem;border:1px dashed #c2d3e0;border-radius:.7rem;color:#496277}
+.course-catalogue__notice{max-width:66rem;border-top:1px solid #d8e3eb;margin:1.7rem 0 0;padding-top:1rem;color:#65798b;font-size:.82rem;line-height:1.7}
+@media(max-width:69rem){.course-catalogue__filters{grid-template-columns:repeat(2,minmax(0,1fr))}.course-catalogue__action{align-self:start}}
+@media(max-width:47rem){.course-catalogue__filters{grid-template-columns:1fr}.course-catalogue__item{grid-template-columns:2rem minmax(0,1fr)}.course-catalogue__action{grid-column:2;max-width:none}.course-catalogue__action a{width:100%}}
+@media(max-width:26rem){.course-catalogue__item{padding:1.1rem;gap:.65rem}.course-catalogue__number{font-size:.95rem}}
 </style>

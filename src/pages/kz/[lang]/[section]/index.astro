@@ -343,20 +343,22 @@ function russianMaterialWord(count: number) {
 
         <section
           class="section-v2__collections"
-          aria-labelledby="section-v2-collections-title"
+          aria-labelledby={section === 'learning' ? 'learning-directory-title' : 'section-v2-collections-title'}
         >
           <div class="container">
-            <div class="section-v2__intro">
-              <p class="section-v2__eyebrow">{sectionV2Text.navigation}</p>
-              <h2 id="section-v2-collections-title">
-                {section === 'about' ? sectionCopy.title : displayCount > 0 ? sectionV2Text.resourcesAndTopics : sectionV2Text.topics}
-              </h2>
-              {(section === 'about' || displayCount === 0) && (
-                <p>
-                  {section === 'about' ? sectionCopy.description : sectionV2Text.noMaterials}
-                </p>
-              )}
-            </div>
+            {section !== 'learning' && (
+              <div class="section-v2__intro">
+                <p class="section-v2__eyebrow">{sectionV2Text.navigation}</p>
+                <h2 id="section-v2-collections-title">
+                  {section === 'about' ? sectionCopy.title : displayCount > 0 ? sectionV2Text.resourcesAndTopics : sectionV2Text.topics}
+                </h2>
+                {(section === 'about' || displayCount === 0) && (
+                  <p>
+                    {section === 'about' ? sectionCopy.description : sectionV2Text.noMaterials}
+                  </p>
+                )}
+              </div>
+            )}
 
             {(section === 'learning' || section === 'professionals') && (
               <SectionBoundary locale={locale} section={section} />
@@ -527,7 +529,7 @@ function russianMaterialWord(count: number) {
               </div>
             )}
 
-            {section !== 'parents' && section !== 'about' && (
+            {section !== 'parents' && section !== 'about' && section !== 'learning' && (
               <section
                 class:list={[
                   'section-v2__topic-map-section',

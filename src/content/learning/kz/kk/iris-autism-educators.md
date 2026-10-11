@@ -18,6 +18,9 @@ updatedAt: 2026-10-11
 reviewDueAt: 2027-01-11
 draft: false
 provider: "IRIS Center, Vanderbilt University"
+learningKind: module
+topicArea: autism
+durationLabel: "2 сағат"
 audience:
   - professionals
 format: "Оқу модулі · 2 сағат"
