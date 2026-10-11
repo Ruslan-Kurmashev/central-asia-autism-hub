@@ -1,7 +1,7 @@
 ---
 title: "Autism (Part 1): An Overview for Educators"
-summary: "A free IRIS module about autism, distinctions between medical diagnosis and educational determination, teamwork, families and inclusive classroom practice."
-description: "A free IRIS module about autism, distinctions between medical diagnosis and educational determination, teamwork, families and inclusive classroom practice."
+summary: "Autism characteristics, the difference between medical and educational assessment, teamwork and classroom support."
+description: "Autism characteristics, the difference between medical and educational assessment, teamwork and classroom support."
 country: kz
 language: en
 section: learning
@@ -30,7 +30,7 @@ costLabel: "Free"
 externalUrl: "https://iris.peabody.vanderbilt.edu/module/asd1/"
 lastVerifiedAt: 2026-10-11
 projectOwned: false
-registrationStatus: "View the module without logging in. A free professional development certificate requires an account and assessments."
+registrationStatus: "Read without registration; an account and final assessments are required for the completion certificate."
 resourceDisclaimerType: external
 sources:
   - title: "Official provider description"

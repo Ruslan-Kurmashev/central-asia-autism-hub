@@ -1,7 +1,7 @@
 ---
 title: "Introduction to Autism and Inclusive Practice"
-summary: "A free introductory course for education staff about autism and inclusive school practice, developed in the Scottish educational context."
-description: "A free introductory course for education staff about autism and inclusive school practice, developed in the Scottish educational context."
+summary: "Inclusive education principles, classroom adaptations and support for autistic learners in the Scottish education context."
+description: "Inclusive education principles, classroom adaptations and support for autistic learners in the Scottish education context."
 country: kz
 language: en
 section: learning
@@ -30,7 +30,7 @@ costLabel: "Free"
 externalUrl: "https://www.open.edu/openlearncreate/course/view.php?id=6935"
 lastVerifiedAt: 2026-10-11
 projectOwned: false
-registrationStatus: "Materials are available to study; free statement of participation and digital badge require registration."
+registrationStatus: "Registration is required for a statement of participation and digital badge."
 resourceDisclaimerType: external
 sources:
   - title: "Official provider description"

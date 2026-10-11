@@ -1,7 +1,7 @@
 ---
 title: "Family Academy: Supporting Children with Autism"
-summary: "Free Russian-language course from Kazan Federal University for parents and professionals: 29 lectures and practical lessons, with emphasis on behavioural approaches."
-description: "Free Russian-language course from Kazan Federal University for parents and professionals: 29 lectures and practical lessons, with emphasis on behavioural approaches."
+summary: "Video lessons and practical activities about supporting children with autism, including behavioural approaches."
+description: "Video lessons and practical activities about supporting children with autism, including behavioural approaches."
 country: kz
 language: en
 section: learning
@@ -31,7 +31,7 @@ costLabel: "Free"
 externalUrl: "https://stepik.org/course/115174/"
 lastVerifiedAt: 2026-10-11
 projectOwned: false
-registrationStatus: "Direct course link. Free registration may be required; verify access and regional restrictions before starting."
+registrationStatus: "Registration may be required; check the course page for access and country restrictions."
 resourceDisclaimerType: external
 sources:
   - title: "Official provider description"

@@ -1,7 +1,7 @@
 ---
 title: "Autism Spectrum Disorder (Part 2): Evidence-Based Practices"
-summary: "A free three-hour module for educators on strategies to teach and support autistic students across age groups, including practical considerations and limitations."
-description: "A free three-hour module for educators on strategies to teach and support autistic students across age groups, including practical considerations and limitations."
+summary: "Strategies for supporting autistic students of different ages, practical application and limits of the supporting evidence."
+description: "Strategies for supporting autistic students of different ages, practical application and limits of the supporting evidence."
 country: kz
 language: en
 section: learning
@@ -30,7 +30,7 @@ costLabel: "Free"
 externalUrl: "https://iris.peabody.vanderbilt.edu/module/asd2/"
 lastVerifiedAt: 2026-10-11
 projectOwned: false
-registrationStatus: "Read without an account. A free IRIS professional development certificate requires an account and assessments."
+registrationStatus: "Read without registration; an account and assessments are required for the certificate."
 resourceDisclaimerType: external
 sources:
   - title: "Official provider description"

@@ -1,7 +1,7 @@
 ---
 title: "Watch Me! Celebrating Milestones and Sharing Concerns"
-summary: "Free CDC training for early childhood educators on developmental monitoring and discussing developmental concerns with families."
-description: "Free CDC training for early childhood educators on developmental monitoring and discussing developmental concerns with families."
+summary: "Developmental milestones, developmental monitoring and communicating concerns with families."
+description: "Developmental milestones, developmental monitoring and communicating concerns with families."
 country: kz
 language: en
 section: learning
@@ -30,7 +30,7 @@ costLabel: "Free"
 externalUrl: "https://www.cdc.gov/watch-me-training/modules/index.html"
 lastVerifiedAt: 2026-10-11
 projectOwned: false
-registrationStatus: "Training is free. CDC offers free CEU under its rules; US continuing education credit does not imply recognition in Kazakhstan."
+registrationStatus: "CDC continuing education requirements apply; recognition of these credits in Kazakhstan is not established."
 resourceDisclaimerType: external
 sources:
   - title: "Official provider description"

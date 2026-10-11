@@ -1,7 +1,7 @@
 ---
 title: "Supporting Children's Development"
-summary: "A free introductory course on child development, learning, behaviour and supporting children with additional educational needs."
-description: "A free introductory course on child development, learning, behaviour and supporting children with additional educational needs."
+summary: "Children's development, learning and behaviour, including support for additional educational needs."
+description: "Children's development, learning and behaviour, including support for additional educational needs."
 country: kz
 language: en
 section: learning
@@ -31,7 +31,7 @@ costLabel: "Free"
 externalUrl: "https://www.open.edu/openlearn/education-development/childhood-youth/supporting-childrens-development/"
 lastVerifiedAt: 2026-10-11
 projectOwned: false
-registrationStatus: "Study without registration. A free digital badge or statement of participation requires an account."
+registrationStatus: "Read without registering; an account is required for a digital badge or participation record."
 resourceDisclaimerType: external
 sources:
   - title: "Official provider description"
