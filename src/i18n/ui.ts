@@ -152,7 +152,7 @@ const BASE_UI: Record<Locale, LocaleCopy> = {
         description:
           'Понятная информация об аутизме, развитии, оценке, повседневной поддержке и благополучии семьи.',
         topics: [
-          { id: 'autism-basics', title: 'Что такое аутизм', description: 'Основные понятия, разнообразие проявлений, сильные стороны и потребности в поддержке.' },
+          { id: 'autism-basics', title: 'Основы понимания аутизма', description: 'Термины и определения, особенности аутистического спектра и объяснение ключевых понятий простым языком.' },
           { id: 'development', title: 'Развитие ребёнка', description: 'Этапы развития, индивидуальные различия и ситуации, которые стоит обсудить со специалистом.' },
           { id: 'assessment', title: 'Оценка и заключение', description: 'Чем отличаются наблюдение, скрининг, комплексная оценка и клиническое заключение.' },
           { id: 'support', title: 'Подходы к поддержке', description: 'Как оценивать цели, доказательства, безопасность и соответствие поддержки потребностям ребёнка.' },
@@ -282,7 +282,7 @@ const BASE_UI: Record<Locale, LocaleCopy> = {
         title: 'Ата-аналарға',
         description: 'Аутизм, даму, бағалау, күнделікті қолдау және отбасының әл-ауқаты туралы түсінікті ақпарат.',
         topics: [
-          { id: 'autism-basics', title: 'Аутизм деген не', description: 'Негізгі ұғымдар, көріністердің әртүрлілігі, күшті жақтар және қолдау қажеттіліктері.' },
+          { id: 'autism-basics', title: 'Аутизмді түсіну негіздері', description: 'Негізгі терминдер мен анықтамалар, аутизм спектрінің ерекшеліктері және маңызды ұғымдардың түсінікті түсіндірмелері.' },
           { id: 'development', title: 'Баланың дамуы', description: 'Даму кезеңдері, жеке айырмашылықтар және маманмен талқылауға болатын жағдайлар.' },
           { id: 'assessment', title: 'Бағалау және қорытынды', description: 'Бақылау, скрининг, кешенді бағалау және клиникалық қорытындының айырмашылығы.' },
           { id: 'support', title: 'Қолдау тәсілдері', description: 'Мақсаттарды, дәлелдерді, қауіпсіздікті және баланың қажеттіліктеріне сәйкестікті бағалау.' },
@@ -403,7 +403,7 @@ const BASE_UI: Record<Locale, LocaleCopy> = {
         title: 'For Parents',
         description: 'Clear information about autism, development, assessment, everyday support, and family wellbeing.',
         topics: [
-          { id: 'autism-basics', title: 'What autism is', description: 'Core concepts, varied presentations, strengths, and support needs.' },
+          { id: 'autism-basics', title: 'Understanding autism: the basics', description: 'Key terms, definitions, the autism spectrum and clear explanations of essential concepts.' },
           { id: 'development', title: 'Child development', description: 'Developmental milestones, individual differences, and concerns to discuss with a professional.' },
           { id: 'assessment', title: 'Assessment and diagnosis', description: 'How observation, screening, comprehensive assessment, and a clinical diagnosis differ.' },
           { id: 'support', title: 'Approaches to support', description: 'How to consider goals, evidence, safety, and fit with a child’s needs.' },
