@@ -106,7 +106,7 @@ const availableTopics = [...new Set(items.map((entry) => entry.data.topicArea).f
       <>
         <p class="course-catalogue__count" data-course-result aria-live="polite">{t.count}: {items.length} {t.resultWord}</p>
         <div class="course-catalogue__list">
-          {items.map((entry, index) => (
+          {items.map((entry) => (
             <article
               class="course-catalogue__item"
               data-course-item
@@ -115,7 +115,6 @@ const availableTopics = [...new Set(items.map((entry) => entry.data.topicArea).f
               data-topic={entry.data.topicArea ?? ''}
               data-search-text={`${entry.data.title} ${entry.data.summary} ${entry.data.provider}`.toLocaleLowerCase()}
             >
-              <div class="course-catalogue__number" aria-hidden="true">{String(index + 1).padStart(2,'0')}</div>
               <div class="course-catalogue__body">
                 <div class="course-catalogue__tags">
                   <span>{entry.data.learningKind === 'module' ? t.types.module : t.types.course}</span>
@@ -210,9 +209,8 @@ const availableTopics = [...new Set(items.map((entry) => entry.data.topicArea).f
 .course-catalogue__filters input:focus-visible,.course-catalogue__filters select:focus-visible,.course-catalogue__action a:focus-visible{outline:3px solid #2d6e9f;outline-offset:2px}
 .course-catalogue__count{color:#526b81;font-size:.86rem;margin:1.4rem 0 .9rem}
 .course-catalogue__list{display:grid;gap:.85rem}
-.course-catalogue__item{display:grid;grid-template-columns:2.8rem minmax(0,1fr) auto;gap:1.15rem;padding:1.55rem 1.4rem;border:1px solid #d6e3ec;border-radius:.9rem;background:#fff;align-items:start}
+.course-catalogue__item{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:1.15rem;padding:1.55rem 1.4rem;border:1px solid #d6e3ec;border-radius:.9rem;background:#fff;align-items:start}
 .course-catalogue__item[hidden],.course-catalogue__no-results[hidden]{display:none!important}
-.course-catalogue__number{font:500 1.15rem Georgia,serif;color:#8fa9bc;padding-top:.35rem}
 .course-catalogue__tags{display:flex;flex-wrap:wrap;gap:.35rem;margin-bottom:.8rem}
 .course-catalogue__tags span{border-radius:1rem;padding:.25rem .65rem;background:#eef4f8;color:#315d7b;font-size:.72rem;line-height:1.3;font-weight:600}
 .course-catalogue__tags span:nth-child(2){background:#edf6ef;color:#276242}
@@ -228,6 +226,6 @@ const availableTopics = [...new Set(items.map((entry) => entry.data.topicArea).f
 .course-catalogue__no-results{padding:1.3rem;border:1px dashed #c2d3e0;border-radius:.7rem;color:#496277}
 .course-catalogue__notice{max-width:66rem;border-top:1px solid #d8e3eb;margin:1.7rem 0 0;padding-top:1rem;color:#65798b;font-size:.82rem;line-height:1.7}
 @media(max-width:69rem){.course-catalogue__filters{grid-template-columns:repeat(2,minmax(0,1fr))}.course-catalogue__action{align-self:start}}
-@media(max-width:47rem){.course-catalogue__filters{grid-template-columns:1fr}.course-catalogue__item{grid-template-columns:2rem minmax(0,1fr)}.course-catalogue__action{grid-column:2;max-width:none}.course-catalogue__action a{width:100%}}
-@media(max-width:26rem){.course-catalogue__item{padding:1.1rem;gap:.65rem}.course-catalogue__number{font-size:.95rem}}
+@media(max-width:47rem){.course-catalogue__filters{grid-template-columns:1fr}.course-catalogue__item{grid-template-columns:minmax(0,1fr)}.course-catalogue__action{grid-column:1;max-width:none}.course-catalogue__action a{width:100%}}
+@media(max-width:26rem){.course-catalogue__item{padding:1.1rem;gap:.65rem}}
 </style>
