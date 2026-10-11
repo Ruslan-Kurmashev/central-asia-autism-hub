@@ -10,7 +10,7 @@ const { locale, entries } = Astro.props;
 const copy = {
   ru: {
     heading: 'Каталог курсов и учебных материалов.',
-    intro: 'Используйте поиск и фильтры по аудитории, языку и теме. Ссылки ведут непосредственно к курсам и модулям.',
+    intro: 'Выберите аудиторию, язык или тему, чтобы увидеть подходящие материалы. Новый выбор заменяет предыдущий фильтр; поиск работает по всему каталогу.',
     search: 'Поиск по названию или содержанию',
     placeholder: 'Например: коммуникация, развитие, аутизм',
     audience: 'Аудитория', language: 'Язык курса', topic: 'Тема',
@@ -25,7 +25,7 @@ const copy = {
   },
   kk: {
     heading: 'Курстар мен оқу материалдарының каталогы.',
-    intro: 'Аудитория, тіл және тақырып бойынша іздеу мен сүзгілерді қолданыңыз. Сілтемелер нақты курстар мен модульдерге апарады.',
+    intro: 'Аудиторияны, тілді немесе тақырыпты таңдаңыз. Жаңа таңдау алдыңғы сүзгіні алмастырады; іздеу бүкіл каталог бойынша жұмыс істейді.',
     search: 'Атауы немесе мазмұны бойынша іздеу',
     placeholder: 'Мысалы: коммуникация, даму, аутизм',
     audience: 'Кімге арналған', language: 'Курс тілі', topic: 'Тақырып',
@@ -40,7 +40,7 @@ const copy = {
   },
   en: {
     heading: 'Catalogue of courses and learning materials.',
-    intro: 'Search and filter by audience, course language and topic. Links lead directly to the courses and learning modules.',
+    intro: 'Choose an audience, course language or topic. Each new choice replaces the previous filter; text search covers the full catalogue.',
     search: 'Search by title or content',
     placeholder: 'For example: communication, development, autism',
     audience: 'Audience', language: 'Course language', topic: 'Topic',
@@ -80,9 +80,9 @@ const availableTopics = [...new Set(items.map((entry) => entry.data.topicArea).f
     <label>
       <span>{t.audience}</span>
       <select data-course-audience>
-        <option value="all">{t.all}</option>
-        <option value="parents">{t.parents}</option>
-        <option value="professionals">{t.professionals}</option>
+        <option value="all">{t.all} ({items.length})</option>
+        <option value="parents">{t.parents} ({items.filter((entry) => entry.data.audience.includes('parents')).length})</option>
+        <option value="professionals">{t.professionals} ({items.filter((entry) => entry.data.audience.includes('professionals')).length})</option>
       </select>
     </label>
     <label>
@@ -99,8 +99,12 @@ const availableTopics = [...new Set(items.map((entry) => entry.data.topicArea).f
     <label>
       <span>{t.topic}</span>
       <select data-course-topic>
-        <option value="all">{t.all}</option>
-        {availableTopics.map((topic) => <option value={topic}>{t.topics[topic]}</option>)}
+        <option value="all">{t.all} ({items.length})</option>
+        {availableTopics.map((topic) => (
+          <option value={topic}>
+            {t.topics[topic]} ({items.filter((entry) => entry.data.topicArea === topic).length})
+          </option>
+        ))}
       </select>
     </label>
   </div>
@@ -201,18 +205,19 @@ const availableTopics = [...new Set(items.map((entry) => entry.data.topicArea).f
     applyLinkFilter();
     update();
     window.addEventListener('hashchange', applyLinkFilter);
-    search?.addEventListener('input', update);
-    audience?.addEventListener('change', update);
-    // The language dropdown is a top-level filter. Clear previous refinements
-    // when changing language, so its visible count matches the language total.
-    // Audience, topic and keyword can then be reapplied to narrow results.
-    language?.addEventListener('change', () => {
-      if (search) search.value = '';
-      if (audience) audience.value = 'all';
-      if (topic) topic.value = 'all';
+    // Every new category selection replaces previously selected filters.
+    // Menu counts always describe the full catalogue, not stale intersections.
+    const chooseFilter = (selected: 'audience' | 'language' | 'topic' | 'search') => {
+      if (selected !== 'search' && search) search.value = '';
+      if (selected !== 'audience' && audience) audience.value = 'all';
+      if (selected !== 'language' && language) language.value = 'all';
+      if (selected !== 'topic' && topic) topic.value = 'all';
       update();
-    });
-    topic?.addEventListener('change', update);
+    };
+    search?.addEventListener('input', () => chooseFilter('search'));
+    audience?.addEventListener('change', () => chooseFilter('audience'));
+    language?.addEventListener('change', () => chooseFilter('language'));
+    topic?.addEventListener('change', () => chooseFilter('topic'));
     window.addEventListener('pageshow', update);
   }
 </script>
