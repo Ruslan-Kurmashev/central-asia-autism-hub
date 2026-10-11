@@ -1,0 +1,40 @@
+---
+title: "Understanding Autism"
+summary: "A free 24-hour introductory Open University course about autism, autistic experiences, diagnosis, support and lifespan perspectives."
+description: "A free 24-hour introductory Open University course about autism, autistic experiences, diagnosis, support and lifespan perspectives."
+country: kz
+language: en
+section: learning
+slug: openlearn-understanding-autism
+translationKey: learning-openlearn-understanding-autism
+translationStatus: checked
+author: "Ruslan Kurmashev"
+editor: "Ruslan Kurmashev"
+riskLevel: lower
+disclaimerType: informational
+conflictOfInterest: "No financial relationship with the provider is claimed for this editorial listing."
+publishedAt: 2026-10-11
+updatedAt: 2026-10-11
+reviewDueAt: 2027-01-11
+draft: false
+provider: "The Open University (OpenLearn)"
+audience:
+  - parents
+  - professionals
+format: "Online course · 24 hours"
+languages:
+  - en
+costLabel: "Free"
+externalUrl: "https://www.open.edu/openlearn/science-maths-technology/understanding-autism"
+lastVerifiedAt: 2026-10-11
+projectOwned: false
+registrationStatus: "Read without an account; register to track progress and earn the free digital badge or statement of participation."
+resourceDisclaimerType: external
+sources:
+  - title: "Official provider description"
+    url: "https://www.open.edu/openlearn/science-maths-technology/understanding-autism"
+    organisation: "The Open University (OpenLearn)"
+    accessedAt: 2026-10-11
+---
+
+External programme or open learning resource. Terms can change; check with the provider.

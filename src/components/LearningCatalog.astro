@@ -1,0 +1,155 @@
+---
+import type { CollectionEntry } from 'astro:content';
+import type { Locale } from '../site.config';
+
+interface Props {
+  locale: Locale;
+  entries: CollectionEntry<'learning'>[];
+}
+const { locale, entries } = Astro.props;
+const text = {
+  ru: {
+    heading: 'Бесплатные курсы и учебные материалы',
+    subtitle: 'Подборка программ сторонних организаций. Описание переведено для удобства; сами курсы проходят на языке, указанном в карточке.',
+    all: 'Для всех', parents: 'Для родителей', professionals: 'Для специалистов',
+    filter: 'Для кого вы ищете обучение?', provider: 'Организатор', language: 'Язык обучения',
+    verified: 'Проверено', format: 'Формат', access: 'Регистрация и доступ',
+    open: 'Открыть у организатора', other: 'Внешний ресурс',
+    notice: 'Autism Hub Kazakhstan не проводит эти программы и не подтверждает автоматически качество, аккредитацию или применимость сертификата в Казахстане. Стоимость, доступ и условия организатор может изменить. Проверяйте их перед регистрацией.',
+    missing: 'Пока нет опубликованных проверенных программ.',
+    visible: 'Найдено программ',
+  },
+  kk: {
+    heading: 'Тегін курстар мен оқу материалдары',
+    subtitle: 'Сыртқы ұйымдардың бағдарламалары. Сипаттамалар ыңғайлы болу үшін аударылды; курстың өзі карточкада көрсетілген тілде жүргізіледі.',
+    all: 'Барлығына', parents: 'Ата-аналарға', professionals: 'Мамандарға',
+    filter: 'Кімге арналған оқуды іздейсіз?', provider: 'Ұйымдастырушы', language: 'Оқу тілі',
+    verified: 'Тексерілді', format: 'Форматы', access: 'Тіркелу және қолжетімділік',
+    open: 'Ұйымдастырушының сайтында ашу', other: 'Сыртқы ресурс',
+    notice: 'Autism Hub Kazakhstan бұл бағдарламаларды өткізбейді және олардың сапасын, аккредитациясын немесе сертификаттарының Қазақстанда жарамдылығын автоматты түрде растамайды. Құны мен қолжетімділік шарттары өзгеруі мүмкін; тіркелмес бұрын тексеріңіз.',
+    missing: 'Әзірге тексерілген бағдарламалар жарияланған жоқ.',
+    visible: 'Табылған бағдарламалар',
+  },
+  en: {
+    heading: 'Free courses and learning resources',
+    subtitle: 'Curated opportunities from external organisations. Descriptions are translated; courses are delivered in the languages shown on each card.',
+    all: 'Everyone', parents: 'Parents', professionals: 'Professionals',
+    filter: 'Who are you looking for?', provider: 'Provider', language: 'Course language',
+    verified: 'Checked', format: 'Format', access: 'Registration and access',
+    open: 'Open provider website', other: 'External provider',
+    notice: 'Autism Hub Kazakhstan does not deliver these programmes and does not automatically endorse their quality, accreditation or the recognition of certificates in Kazakhstan. Providers can change access, prices and terms. Check directly before registering.',
+    missing: 'No verified programmes have been published yet.',
+    visible: 'Matching resources',
+  },
+} as const;
+const t = text[locale];
+const dateFmt = new Intl.DateTimeFormat(locale === 'ru' ? 'ru-KZ' : locale === 'kk' ? 'kk-KZ' : 'en-GB', { day: 'numeric', month: 'short', year: 'numeric' });
+const languages = { ru: 'Русский', kk: 'Қазақша', en: 'English' };
+const sorted = [...entries].sort((a, b) => a.data.title.localeCompare(b.data.title, locale));
+---
+
+<section class="learning-directory" aria-labelledby="learning-directory-title">
+  <div class="learning-directory__heading">
+    <div>
+      <p class="learning-directory__eyebrow">Autism Hub Kazakhstan · Learning</p>
+      <h2 id="learning-directory-title">{t.heading}</h2>
+      <p>{t.subtitle}</p>
+    </div>
+    <label class="learning-directory__filter">
+      <span>{t.filter}</span>
+      <select data-learning-filter>
+        <option value="all">{t.all}</option>
+        <option value="parents">{t.parents}</option>
+        <option value="professionals">{t.professionals}</option>
+      </select>
+    </label>
+  </div>
+  {
+    sorted.length > 0 ? (
+      <>
+        <p class="learning-directory__result" aria-live="polite" data-learning-count>
+          {t.visible}: {sorted.length}
+        </p>
+        <div class="learning-directory__grid">
+          {sorted.map((entry) => (
+            <article class="learning-directory__card" data-learning-audience={entry.data.audience.join(' ')}>
+              <div class="learning-directory__tags">
+                <span class="learning-directory__free">{entry.data.costLabel}</span>
+                {entry.data.audience.map((audience) => (
+                  <span class="learning-directory__tag">
+                    {audience === 'parents' ? t.parents : t.professionals}
+                  </span>
+                ))}
+              </div>
+              <h3>{entry.data.title}</h3>
+              <p class="learning-directory__summary">{entry.data.summary}</p>
+              <dl class="learning-directory__facts">
+                <div><dt>{t.provider}</dt><dd>{entry.data.provider}</dd></div>
+                <div><dt>{t.language}</dt><dd>{entry.data.languages.map((language) => languages[language]).join(', ')}</dd></div>
+                <div><dt>{t.format}</dt><dd>{entry.data.format}</dd></div>
+                {entry.data.registrationStatus && <div><dt>{t.access}</dt><dd>{entry.data.registrationStatus}</dd></div>}
+                {entry.data.lastVerifiedAt && <div><dt>{t.verified}</dt><dd><time datetime={entry.data.lastVerifiedAt.toISOString()}>{dateFmt.format(entry.data.lastVerifiedAt)}</time></dd></div>}
+              </dl>
+              {entry.data.externalUrl && (
+                <a class="learning-directory__link" href={entry.data.externalUrl} target="_blank" rel="noopener noreferrer external">
+                  {t.open} <span aria-hidden="true">↗</span>
+                </a>
+              )}
+            </article>
+          ))}
+        </div>
+      </>
+    ) : (
+      <p>{t.missing}</p>
+    )
+  }
+  <p class="learning-directory__disclaimer">{t.notice}</p>
+</section>
+
+<script>
+  const filter = document.querySelector<HTMLSelectElement>('[data-learning-filter]');
+  const count = document.querySelector<HTMLElement>('[data-learning-count]');
+  const cards = document.querySelectorAll<HTMLElement>('[data-learning-audience]');
+  filter?.addEventListener('change', () => {
+    let shown = 0;
+    cards.forEach((card) => {
+      const values = (card.dataset.learningAudience ?? '').split(' ');
+      const visible = filter.value === 'all' || values.includes(filter.value);
+      card.hidden = !visible;
+      if (visible) shown++;
+    });
+    if (count) {
+      const prefix = count.textContent?.split(':')[0] ?? '';
+      count.textContent = `${prefix}: ${shown}`;
+    }
+  });
+</script>
+
+<style>
+.learning-directory { margin: 2rem 0 3rem; }
+.learning-directory__heading { display: flex; align-items: end; justify-content: space-between; gap: 1.5rem; margin-bottom: 1.5rem; }
+.learning-directory__heading h2 { margin: .3rem 0 .6rem; font-size: clamp(1.5rem, 3vw, 2.25rem); line-height: 1.25; color: #203b53; }
+.learning-directory__heading p { color: #475569; max-width: 45rem; line-height: 1.6; }
+.learning-directory__eyebrow { color: #2d658e !important; font-size: .76rem; letter-spacing: .04em; text-transform: uppercase; font-weight: 700; }
+.learning-directory__filter { min-width: 14rem; display: grid; gap: .45rem; font-size: .83rem; font-weight: 600; color: #203b53; }
+.learning-directory__filter select { width: 100%; border: 1px solid #adc3d3; border-radius: .55rem; padding: .7rem .9rem; background: #fff; color: #1e3347; font: inherit; }
+.learning-directory__filter select:focus-visible, .learning-directory__link:focus-visible { outline: 3px solid #2b6597; outline-offset: 3px; }
+.learning-directory__result { color: #526779; font-size: .84rem; margin: 0 0 1rem; }
+.learning-directory__grid { display: grid; grid-template-columns: repeat(2,minmax(0,1fr)); gap: 1.2rem; }
+.learning-directory__card { min-width: 0; padding: clamp(1.25rem, 2.5vw, 1.65rem); border: 1px solid #d5e2eb; border-radius: 1rem; background: #fff; display: flex; flex-direction: column; }
+.learning-directory__card[hidden] { display:none; }
+.learning-directory__tags { display:flex; flex-wrap:wrap; gap:.4rem; margin-bottom:.85rem; }
+.learning-directory__free,.learning-directory__tag { display:inline-flex; align-items:center; border-radius:1rem; padding:.2rem .65rem; font-size:.72rem; font-weight:600; }
+.learning-directory__free { background:#eaf4ed; color:#256445; }
+.learning-directory__tag { background:#eef3f8; color:#31566e; }
+.learning-directory__card h3 { font-size:1.22rem; line-height:1.3; font-weight:650; color:#203b53; margin:0 0 .7rem; }
+.learning-directory__summary { line-height:1.6; color:#40566a; margin:0 0 1.15rem; }
+.learning-directory__facts { margin:auto 0 1.1rem; padding-top:1rem; display:grid; gap:.5rem; border-top:1px solid #e1eaf0; }
+.learning-directory__facts div { display:grid; grid-template-columns: 6.6rem minmax(0,1fr); gap:.6rem; font-size:.8rem; line-height:1.45; }
+.learning-directory__facts dt { color:#62758a; }
+.learning-directory__facts dd { margin:0; color:#2a4256; overflow-wrap:anywhere; }
+.learning-directory__link { display:inline-block; margin-top:auto; color:#225e8c; text-underline-offset:.2em; font-weight:700; }
+.learning-directory__disclaimer { margin:1.5rem 0 0; border-left:3px solid #9ab9cb; padding:.7rem 1rem; background:#f7fafc; color:#526578; font-size:.86rem; line-height:1.6; }
+@media(max-width:52rem) { .learning-directory__heading { flex-direction:column; align-items:stretch; } .learning-directory__filter { max-width:20rem; } .learning-directory__grid {grid-template-columns:minmax(0,1fr);} }
+@media(max-width:25rem) { .learning-directory__facts div {grid-template-columns:1fr; gap:.1rem;} }
+</style>
