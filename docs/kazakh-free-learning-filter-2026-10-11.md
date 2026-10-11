@@ -15,6 +15,10 @@ Regression test: `npm run check:learning-language-filter` is included in `npm ru
 
 Removed the redundant «Курсы на казахском» / «Қазақ тіліндегі курстар» / «Courses in Kazakh» button from all three catalogue languages. The existing «Язык курса» / «Курс тілі» / «Course language» dropdown continues to provide the Kazakh option, and free-text search still indexes language names.
 
-## Language-count and filter-state correction (11 October 2026)
+## Combined, contextual course filtering (12 October 2026)
 
-Users observed English + inclusion = 1, Kazakh + inclusion = 2 and Russian + inclusion = 0 when a previously selected Topic was still applied. These were intersection counts, not the totals for each teaching language. To avoid confusing language-only selection with multi-filter intersections, changing the course language now resets the keyword search, audience and topic to their default `All` state, then recalculates displayed results. Users can refine the selected language with further filters afterward. Dropdown labels include the full available count for each original teaching language, not the page translation language. On browser navigation restore (`pageshow`), the visible cards and count are synchronized with the form state. Regression coverage checks localized dropdown counts against actual built card data and verifies state resetting in the source.
+The earlier single-category behaviour is superseded. Audience, original teaching language, topic and free-text search now work as **combined AND filters**. Changing one criterion must never clear another. Each `All` option resets only its own filter; clearing search resets only its query. A valid combination with zero matching courses displays the empty-state message without altering selections.
+
+Counts shown in every dropdown are **contextual facet counts**: the count for an option is calculated using the current values of all other dropdowns and the search query, but without applying the dropdown's current value. Thus a user can see how many courses would match each next choice. A separate result count shows the actual current intersection.
+
+The user-requested tests include parents + Kazakh + inclusion and professionals + English + autism, and the same combinations combined with keyword search. Test execution through `npm run check:learning-filter-interactions` runs the actual catalogue event handlers against the RU, KK and EN generated card data, including empty states, restored browser state and dynamic option counts.
