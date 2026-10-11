@@ -18,6 +18,9 @@ updatedAt: 2026-10-11
 reviewDueAt: 2027-01-11
 draft: false
 provider: "The Open University (OpenLearn)"
+learningKind: course
+topicArea: autism
+durationLabel: "24 сағат"
 audience:
   - parents
   - professionals
