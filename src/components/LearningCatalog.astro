@@ -72,7 +72,7 @@ const availableTopics = [...new Set(items.map((entry) => entry.data.topicArea).f
     <p>{t.intro}</p>
   </div>
 
-  <div class="course-catalogue__filters" role="search" aria-label={t.heading}>
+  <div class="course-catalogue__filters" id="professionals-learning" role="search" aria-label={t.heading}>
     <label class="course-catalogue__search">
       <span>{t.search}</span>
       <input type="search" placeholder={t.placeholder} data-course-search />
@@ -184,6 +184,14 @@ const availableTopics = [...new Set(items.map((entry) => entry.data.topicArea).f
       }
       if (empty) empty.hidden = matched !== 0;
     };
+    const applyLinkFilter = () => {
+      if (window.location.hash === '#professionals-learning' && audience) {
+        audience.value = 'professionals';
+        update();
+      }
+    };
+    applyLinkFilter();
+    window.addEventListener('hashchange', applyLinkFilter);
     search?.addEventListener('input', update);
     audience?.addEventListener('change', update);
     language?.addEventListener('change', update);
