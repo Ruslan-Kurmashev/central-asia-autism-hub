@@ -6,12 +6,12 @@ import path from 'node:path';
 // The language chosen in this filter is the ORIGINAL teaching language,
 // independently of the language of the AutismHub catalogue page.
 const labels = { ru: ['Казахский', 'Курсы на казахском'], kk: ['Қазақша', 'Қазақ тіліндегі курстар'], en: ['Kazakh', 'Courses in Kazakh'] };
-const expectedIds = [
-  'daryn-kazakh-inclusive-education',
-  'orleu-kazakh-ai-for-parents',
-  'daryn-kazakh-ai-education',
-  'orleu-kazakh-aac-assistive-technologies',
-  'orleu-kazakh-assistive-needs-sett',
+const expectedCourseLinks = [
+  'https://daryn.ai/courses/Inklyuziya',
+  'https://mooc.orleu.edu.kz/courses/course/4/',
+  'https://daryn.ai/courses/bilim-berudegi-zasandy-intellekt-innovaciialyq-texnologiialar-men-oqu-uderisinin-cifrlyq-transformaciiasy',
+  'https://mooc.orleu.edu.kz/courses/course/9/',
+  'https://mooc.orleu.edu.kz/courses/course/7/',
 ];
 for (const [lang, [languageLabel, shortcutLabel]] of Object.entries(labels)) {
   const html = await readFile(path.join('dist', 'kz', lang, 'learning', 'index.html'), 'utf8');
@@ -19,7 +19,7 @@ for (const [lang, [languageLabel, shortcutLabel]] of Object.entries(labels)) {
   assert.ok(html.includes(`value="kk">${languageLabel}</option>`), `Kazakh option missing for ${lang}`);
   assert.ok(html.includes(shortcutLabel), `Kazakh quick selector missing for ${lang}`);
   assert.ok(html.includes('data-course-kazakh-shortcut'), `Shortcut handler target missing for ${lang}`);
-  for (const id of expectedIds) assert.ok(html.includes(id), `Kazakh course ${id} missing for ${lang}`);
+  for (const link of expectedCourseLinks) assert.ok(html.includes(link), `Kazakh course link ${link} missing for ${lang}`);
 }
 const component = await readFile('src/components/LearningCatalog.astro', 'utf8');
 assert.ok(component.includes("language.value = language.value === 'kk' ? 'all' : 'kk';"));
