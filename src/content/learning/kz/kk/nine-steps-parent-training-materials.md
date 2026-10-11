@@ -30,8 +30,8 @@ costLabel: "Тегін"
 externalUrl: "https://9steps.autism.help/"
 lastVerifiedAt: 2026-10-11
 projectOwned: false
-registrationStatus: "Бағдарлама бетінен оқуға не жүктеуге арналған әдістемелік және жұмыс материалдарын таңдаңыз. Бұл топтық тренингке тіркелу емес."
-completionOutcome: "Өздігінен оқу үшін иллюстрацияланған құралдар мен PDF жұмыс материалдары."
+registrationStatus: "Бағдарлама бетінде оқу құралдары мен жұмыс материалдарына сілтемелер орналастырылған. Бетті ашып, тақырыпты таңдаңыз; бұл топтық тренингке тіркелу емес."
+completionOutcome: "Бағдарлама бетінде өздігінен оқуға арналған PDF оқу құралдары мен жұмыс материалдарының сілтемелері берілген."
 resourceDisclaimerType: external
 sources:
   - title: "Official resource and access details"
