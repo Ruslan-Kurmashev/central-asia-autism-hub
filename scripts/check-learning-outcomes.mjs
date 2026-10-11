@@ -15,23 +15,23 @@ async function visit(directory) {
   for (const entry of await readdir(directory, { withFileTypes: true })) {
     const filepath = path.join(directory, entry.name);
     if (entry.isDirectory()) found.push(...await visit(filepath));
-    else if (entry.isFile() && /\\.mdx?$/.test(entry.name)) found.push(filepath);
+    else if (entry.isFile() && /\.mdx?$/.test(entry.name)) found.push(filepath);
   }
   return found;
 }
 
 function getFrontmatter(text, filename) {
-  const block = text.match(/^---\\r?\\n([\\s\\S]*?)\\r?\\n---(?:\\r?\\n|$)/);
+  const block = text.match(/^---\r?\n([\s\S]*?)\r?\n---(?:\r?\n|$)/);
   if (!block) { problems.push(`${filename}: frontmatter missing`); return null; }
   const fields = {};
-  const lines = block[1].split(/\\r?\\n/);
+  const lines = block[1].split(/\r?\n/);
   for (let i = 0; i < lines.length; i++) {
-    const match = lines[i].match(/^([a-zA-Z][a-zA-Z0-9]*):\\s*(.*)$/);
+    const match = lines[i].match(/^([a-zA-Z][a-zA-Z0-9]*):\s*(.*)$/);
     if (!match) continue;
     const [, name, raw] = match;
-    if (/^[>|][-+]?\\s*$/.test(raw)) {
+    if (/^[>|][-+]?\s*$/.test(raw)) {
       let collected = [];
-      for (; i+1 < lines.length && (/^\\s+/.test(lines[i+1]) || lines[i+1] === ''); i++) {
+      for (; i+1 < lines.length && (/^\s+/.test(lines[i+1]) || lines[i+1] === ''); i++) {
         collected.push(lines[i+1].trim());
       }
       fields[name] = collected.join(' ').trim();
@@ -72,7 +72,7 @@ for (const filename of await visit(contentRoot)) {
     }
   }
   if (typeof fm.registrationStatus === 'string' &&
-      /(?:признан(?:ие|ы|о|а|ия)?|recognis(?:ed|ed)|recogniz(?:ed|ation)|таныл(?:уы|ады|ған)?)[^.!?\\n]{0,100}(?:казахстан|қазақстан|kazakhstan)|(?:казахстан|қазақстан|kazakhstan)[^.!?\\n]{0,100}(?:признан|recognis|recogniz|таныл)/iu.test(fm.registrationStatus)) {
+      /(?:признан(?:ие|ы|о|а|ия)?|recognis(?:ed|ed)|recogniz(?:ed|ation)|таныл(?:уы|ады|ған)?)[^.!?\n]{0,100}(?:казахстан|қазақстан|kazakhstan)|(?:казахстан|қазақстан|kazakhstan)[^.!?\n]{0,100}(?:признан|recognis|recogniz|таныл)/iu.test(fm.registrationStatus)) {
     problems.push(`${filename}: recognition claims do not belong in the course access field`);
   }
 }
