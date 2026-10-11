@@ -215,7 +215,7 @@ const availableTopics = [...new Set(items.map((entry) => entry.data.topicArea).f
         if (!select) return;
         Array.from(select.options).forEach((option) => {
           const label = option.dataset.baseLabel ??
-            (option.textContent ?? '').replace(/\\s*\\(\\d+\\)\\s*$/, '').trim();
+            (option.textContent ?? '').replace(/\s*\(\d+\)\s*$/, '').trim();
           option.dataset.baseLabel = label;
           const total = Array.from(list).filter((item) => matches(item, key, option.value)).length;
           option.textContent = `${label} (${total})`;
