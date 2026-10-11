@@ -56,14 +56,15 @@ const component = await readFile('src/components/LearningCatalog.astro', 'utf8')
 assert.ok(!component.includes('data-course-kazakh-shortcut'), 'Redundant Kazakh quick selector must be removed');
 assert.ok(component.includes('data-search-text='));
 assert.ok(component.includes('entry.data.languages.map((l) => languages[locale][l])'));
-const chooser = component.indexOf('const chooseFilter = (selected:');
-assert.ok(chooser >= 0, 'Unified catalogue filter handler missing');
-const handler = component.slice(chooser, component.indexOf("window.addEventListener('pageshow', update)",chooser));
 for (const field of ['search','audience','language','topic']) {
-  assert.ok(handler.includes("chooseFilter('"+field+"')"), 'Filter event missing: '+field);
+  const event = field === 'search' ? 'input' : 'change';
+  assert.ok(component.includes(field + "?.addEventListener('" + event + "', update);"),
+    'The ' + field + ' control must update results without resetting other fields');
 }
-for (const reset of ["search.value = '';", "audience.value = 'all';", "language.value = 'all';", "topic.value = 'all';"]) {
-  assert.ok(handler.includes(reset), 'Filter reset missing: '+reset);
-}
+assert.ok(component.includes('const matches = (item: HTMLElement, override?: FilterKey, candidate?: string)'),
+  'A shared matcher must combine all criteria and calculate contextual menu counts');
+assert.ok(component.includes('Array.from(select.options)'),
+  'Dropdown counts must respond to all other selected filters');
+assert.ok(!component.includes('chooseFilter('), 'Obsolete reset-on-change behavior must be removed');
 assert.ok(component.includes("window.addEventListener('pageshow', update);"));
-console.log(`Learning filters checked in RU/KK/EN: ${localeCardCounts.join('/')} cards; language totals ${JSON.stringify(perLanguageCounts[0])}. Every category switch replaces prior selections.`);
+console.log(`Learning filters checked in RU/KK/EN: ${localeCardCounts.join('/')} cards; language totals ${JSON.stringify(perLanguageCounts[0])}. All criteria remain selected and work together.`);
