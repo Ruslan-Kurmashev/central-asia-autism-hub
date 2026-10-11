@@ -4,9 +4,9 @@
 **Country implementation:** Autism Hub Kazakhstan  
 **Document:** 03 - Information Architecture and Navigation
 **Status:** Approved for the first website version  
-**Version:** 1.1
+**Version:** 1.2
 **Decision date:** 28 July 2026
-**Last updated:** 2 August 2026
+**Last updated:** 11 October 2026
 
 ## 1. Purpose
 
@@ -87,7 +87,7 @@ Home
 │   ├── Assessment context
 │   ├── Evidence-informed support
 │   ├── Ethics and safety
-│   └── Learning and events
+│   └── Practice tools and workflows
 │
 └── About
     ├── Mission and brand structure
@@ -188,78 +188,36 @@ Each country-specific claim or external resource must have a visible verificatio
 
 Comprehensive city pages, service maps, provider rankings, and professional databases remain outside the initial information architecture.
 
-## 8. Learning
+## 8. Learning: educational programmes and course directory
 
-Learning brings together project-owned education and curated external learning opportunities.
+Learning is the only place for structured education, including **Autism School Kazakhstan**, courses for parents, courses for professionals, webinars and events, external learning opportunities, and guidance on choosing quality training.
 
-### 8.1. Autism School Kazakhstan
+A project-owned course is not a collection of parent-facing articles. Courses need defined learning goals, a sequence of lessons, practice tasks, named editorial or educator responsibility, and a transparent way to check learning when appropriate. Courses and external listings must not imply clinical certification or accreditation without evidence.
 
-Autism School Kazakhstan is clearly identified as the project’s own educational programme.
+External opportunities include title, organiser, audience, language, format, cost, dates if relevant, destination link, last verified date, and a clear external-provider notice. External listings are not endorsements; do not list clinical sessions or unsupported autism “cures.”
 
-Its pages may present:
+Learning is a **process and a programme directory**, not a second professional reference library.
 
-- programme purpose and audience;
-- educational principles;
-- planned or available topics;
-- reviewed learning materials;
-- confirmed webinars, lectures, or future cohorts.
+## 9. For Professionals: reference and practice tools
 
-It must not be confused with the external resource listings.
+For Professionals is a **professional reference library**, not a course directory. Its subjects are:
 
-### 8.2. External courses and learning opportunities
+1. Guidelines and standards.
+2. Communication with families and shared decision-making.
+3. Assessment, diagnostic context and tool limitations.
+4. Evidence-informed methods and support.
+5. Ethics, safety and confidentiality.
+6. Practical workflows and checklists.
 
-External listings may include:
+Professional reference materials must identify scope, author, source, relevant jurisdiction, revision date and important limitations. They are not training certificates, professional licences or evidence of independent accreditation.
 
-- educational courses;
-- lectures;
-- webinars;
-- workshops;
-- seminars;
-- parent education;
-- professional education.
+The previous “Learning and events” professional navigation item is removed. Professional training programmes and webinars have a **single home in Learning**, with a contextual link to `/kz/{language}/learning/#professionals-learning`.
 
-The initial directory should not list individual therapy sessions for children or function as a marketplace for clinical services.
+### 9.1. Avoiding duplicate content
 
-### 8.3. Required listing information
+One resource has one canonical URL and one publishing section. Link to it from other audiences where useful. For example, a parent introduction to AAC remains in Parents, the research evidence summary remains in Research Explained, an implementation checklist belongs in For Professionals and an actual sequence of AAC lessons belongs in Learning. Reusing a topic is acceptable; copying the same article body is not.
 
-Each external listing should identify:
-
-- title;
-- organiser;
-- intended audience;
-- language;
-- online or in-person format;
-- free or paid status;
-- dates, when applicable;
-- country or region;
-- short neutral description;
-- external destination link;
-- date the information or link was last checked;
-- status such as open, ongoing, completed, or archived.
-
-Paid resources must be visibly labelled. Affiliate or financial relationships must be disclosed. The MVP should not use affiliate links.
-
-### 8.4. External-resource disclaimer
-
-Each external-learning page must clearly state:
-
-> Autism Hub Kazakhstan does not organise or control this external course unless explicitly stated. The listing is provided for information and does not constitute automatic endorsement. Users should review the programme, organiser qualifications, cost, evidence claims, and participation terms before registering.
-
-Listings must not include organisers that promote autism “cures”, guaranteed outcomes, unsupported medical protocols, or misleading professional qualifications.
-
-## 9. For Professionals
-
-This is a secondary section and must not dominate the homepage or parent navigation.
-
-It may include:
-
-- professional reference materials;
-- evidence-informed communication with families;
-- ethical and safety principles;
-- selected guidelines and external resources;
-- confirmed education and events.
-
-Professional material must be clearly labelled and must not imply accreditation, certification, or regulatory endorsement.
+Keep stable `/kz/{language}/learning/` and `/kz/{language}/professionals/` routes for all three languages. Do not replace missing translations silently.
 
 ## 10. About and trust pages
 

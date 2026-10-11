@@ -1,0 +1,102 @@
+---
+import { sectionPath } from '../lib/urls';
+import type { Locale } from '../site.config';
+
+interface Props { locale: Locale; section: 'learning' | 'professionals'; }
+const { locale, section } = Astro.props;
+const copy = {
+  ru: {
+    learning: {
+      eyebrow: 'Образовательные программы',
+      title: 'Курсы и обучение, отдельно от профессиональных рекомендаций',
+      description: 'В этом разделе собраны учебные программы Autism School Kazakhstan, курсы для родителей и специалистов, вебинары и проверенные внешние образовательные возможности. Полноценный курс предусматривает цели, последовательные уроки и практические задания.',
+      note: 'Новые курсы появляются здесь только после проверки содержания, организаторов и условий участия.',
+      related: 'Ищете профессиональные рекомендации, протоколы и инструменты?',
+      action: 'Открыть раздел «Специалистам»',
+    },
+    professionals: {
+      eyebrow: 'Профессиональная база знаний',
+      title: 'Рекомендации и инструменты для профессиональной практики',
+      description: 'Здесь размещаются клинические и образовательные рекомендации, материалы по оценке и диагностике, практические алгоритмы, научные данные и вопросы профессиональной этики. Это не каталог курсов.',
+      note: 'Профессиональные ресурсы публикуются с источниками, датами и описанием ограничений.',
+      related: 'Нужны курсы или вебинары для специалистов?',
+      action: 'Открыть обучение для специалистов',
+    },
+  },
+  kk: {
+    learning: {
+      eyebrow: 'Білім беру бағдарламалары',
+      title: 'Курстар мен оқу кәсіби ұсынымдардан бөлек',
+      description: 'Бұл бөлімде Autism School Kazakhstan оқу бағдарламалары, ата-аналар мен мамандарға арналған курстар, вебинарлар және тексерілген сыртқы білім беру мүмкіндіктері орналасады. Толыққанды курста оқу мақсаттары, сабақтар тізбегі және практикалық тапсырмалар болады.',
+      note: 'Курстар мазмұны, ұйымдастырушысы және қатысу шарттары тексерілгеннен кейін ғана жарияланады.',
+      related: 'Кәсіби ұсынымдар мен жұмыс құралдарын іздеп жүрсіз бе?',
+      action: '«Мамандарға» бөлімін ашу',
+    },
+    professionals: {
+      eyebrow: 'Кәсіби анықтамалық база',
+      title: 'Кәсіби тәжірибеге арналған ұсынымдар мен құралдар',
+      description: 'Мұнда клиникалық және білім беру ұсынымдары, бағалау мен диагностика, жұмыс алгоритмдері, ғылыми деректер және кәсіби этика туралы материалдар жарияланады. Бұл курстар каталогы емес.',
+      note: 'Кәсіби материалдар дереккөздері, күндері және шектеулерімен бірге жарияланады.',
+      related: 'Мамандарға арналған курс немесе вебинар қажет пе?',
+      action: 'Мамандарға арналған оқуды ашу',
+    },
+  },
+  en: {
+    learning: {
+      eyebrow: 'Educational programmes',
+      title: 'Courses and learning, separate from professional guidance',
+      description: 'Find Autism School Kazakhstan programmes, courses for parents and professionals, webinars and verified external learning opportunities here. A genuine course includes learning goals, sequenced lessons and practice activities.',
+      note: 'Courses are listed only after content, organisers and participation terms are checked.',
+      related: 'Looking for professional guidelines, protocols or tools?',
+      action: 'Open For Professionals',
+    },
+    professionals: {
+      eyebrow: 'Professional reference library',
+      title: 'Guidance and tools for professional practice',
+      description: 'Find clinical and educational guidance, assessment and diagnostic references, professional workflows, research evidence and ethics here. This is not a course catalogue.',
+      note: 'Professional resources include sources, update dates and relevant limitations.',
+      related: 'Need a course or webinar for professionals?',
+      action: 'Explore learning for professionals',
+    },
+  },
+} as const;
+const text=copy[locale][section];
+const relatedHref=section === 'learning'
+  ? sectionPath(locale, 'professionals')
+  : `${sectionPath(locale, 'learning')}#professionals-learning`;
+---
+
+<section class="section-boundary" aria-labelledby="section-boundary-title">
+  <div class="section-boundary__description">
+    <p class="section-boundary__eyebrow">{text.eyebrow}</p>
+    <h2 id="section-boundary-title">{text.title}</h2>
+    <p>{text.description}</p>
+    <p class="section-boundary__note">{text.note}</p>
+  </div>
+  <aside class="section-boundary__related">
+    <h3>{text.related}</h3>
+    <a href={relatedHref}>{text.action} <span aria-hidden="true">→</span></a>
+  </aside>
+</section>
+
+<style>
+  .section-boundary {
+    display: grid;
+    grid-template-columns: minmax(0, 1.4fr) minmax(15rem, 0.8fr);
+    gap: clamp(1rem, 3vw, 2rem);
+    padding: clamp(1.25rem, 3vw, 2rem);
+    border: 1px solid #d4e2ec;
+    border-radius: 1rem;
+    background: #f7fbfd;
+    margin: 1.5rem 0 2.3rem;
+  }
+  .section-boundary__description h2 { color: #203b53; margin: .3rem 0 1rem; font-size: clamp(1.4rem, 2.5vw, 1.9rem); line-height: 1.25; }
+  .section-boundary__description p { color: #41566b; line-height: 1.65; }
+  .section-boundary__eyebrow { font-size: .75rem; font-weight: 700; letter-spacing: .07em; text-transform: uppercase; color: #2a658c !important; }
+  .section-boundary__note { border-left: 3px solid #92b8d3; padding-left: .9rem; font-size: .88rem; margin-top: 1.2rem; }
+  .section-boundary__related { background: #fff; border: 1px solid #d8e5ec; padding: 1.25rem; border-radius: .8rem; align-self: start; }
+  .section-boundary__related h3 { margin: 0 0 1rem; font-size: 1.07rem; color: #203b53; }
+  .section-boundary__related a { color: #245e88; font-weight: 700; line-height: 1.6; text-underline-offset: .2em; }
+  .section-boundary__related a:focus-visible { outline: 3px solid #245e88; outline-offset: 3px; }
+  @media (max-width: 45rem) { .section-boundary { grid-template-columns: 1fr; } }
+</style>

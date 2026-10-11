@@ -189,7 +189,7 @@ const BASE_UI: Record<Locale, LocaleCopy> = {
       learning: {
         title: 'Обучение',
         description:
-          'Autism School Kazakhstan и отобранные внешние курсы, лекции и вебинары для родителей и специалистов.',
+          'Образовательные программы Autism School Kazakhstan, курсы и вебинары для родителей и специалистов с проверяемыми организаторами и условиями.',
         topics: [
           { id: 'autism-school', title: 'Autism School Kazakhstan', description: 'Собственная образовательная программа проекта с ясно обозначенными целями и ответственностью.' },
           { id: 'parents-learning', title: 'Для родителей', description: 'Курсы и лекции о понимании аутизма, поддержке ребёнка и благополучии семьи.' },
@@ -202,14 +202,14 @@ const BASE_UI: Record<Locale, LocaleCopy> = {
       professionals: {
         title: 'Специалистам',
         description:
-          'Вторичный раздел с доказательно-информированными материалами и принципами уважительной работы с семьями.',
+          'Профессиональные руководства, оценка и диагностика, инструменты практики и этика. Курсы находятся в разделе «Обучение».',
         topics: [
           { id: 'guidelines', title: 'Руководства и стандарты', description: 'Проверенные профессиональные документы с областью применения и датой версии.' },
           { id: 'family-communication', title: 'Коммуникация с семьями', description: 'Понятное информирование, совместные решения и уважение к опыту семьи.' },
           { id: 'assessment-context', title: 'Контекст оценки', description: 'Роли разных специалистов, ограничения инструментов и недопустимость дистанционной диагностики сайтом.' },
           { id: 'evidence-support', title: 'Доказательно-информированная поддержка', description: 'Баланс исследований, клинической компетентности, целей человека и семейного контекста.' },
           { id: 'ethics', title: 'Этика и безопасность', description: 'Информированное согласие, конфиденциальность, управление рисками и недопустимые обещания.' },
-          { id: 'cpd', title: 'Обучение и события', description: 'Курсы, вебинары и материалы без заявления об аккредитации, если она не подтверждена.' },
+          { id: 'practice-tools', title: 'Алгоритмы и рабочие инструменты', description: 'Профессиональные схемы, контрольные списки и оценка результатов. Курсы находятся в разделе «Обучение».' },
         ],
       },
       about: {
@@ -316,7 +316,7 @@ const BASE_UI: Record<Locale, LocaleCopy> = {
       },
       learning: {
         title: 'Оқу',
-        description: 'Autism School Kazakhstan және ата-аналар мен мамандарға арналған іріктелген сыртқы курстар, дәрістер мен вебинарлар.',
+        description: 'Autism School Kazakhstan оқу бағдарламалары, ата-аналар мен мамандарға арналған курстар және тексерілген вебинарлар.',
         topics: [
           { id: 'autism-school', title: 'Autism School Kazakhstan', description: 'Мақсаттары мен жауапкершілігі нақты көрсетілген жобаның өз білім беру бағдарламасы.' },
           { id: 'parents-learning', title: 'Ата-аналарға', description: 'Аутизмді түсіну, баланы қолдау және отбасының әл-ауқаты туралы курстар мен дәрістер.' },
@@ -328,14 +328,14 @@ const BASE_UI: Record<Locale, LocaleCopy> = {
       },
       professionals: {
         title: 'Мамандарға',
-        description: 'Дәлелдерді ескеретін материалдар және отбасылармен құрметпен жұмыс істеу қағидаттары.',
+        description: 'Кәсіби ұсынымдар, бағалау және диагностика, тәжірибелік құралдар мен этика. Курстар «Оқу» бөлімінде.',
         topics: [
           { id: 'guidelines', title: 'Нұсқаулықтар мен стандарттар', description: 'Қолданылу саласы мен нұсқа күні көрсетілген тексерілген кәсіби құжаттар.' },
           { id: 'family-communication', title: 'Отбасылармен қарым-қатынас', description: 'Түсінікті ақпарат, бірлескен шешімдер және отбасы тәжірибесіне құрмет.' },
           { id: 'assessment-context', title: 'Бағалау контексті', description: 'Әртүрлі мамандардың рөлі, құралдардың шектеулері және сайт арқылы диагностикаға жол бермеу.' },
           { id: 'evidence-support', title: 'Дәлелге негізделген қолдау', description: 'Зерттеулер, кәсіби құзырет, адамның мақсаттары және отбасы контекстінің теңгерімі.' },
           { id: 'ethics', title: 'Этика және қауіпсіздік', description: 'Ақпараттандырылған келісім, құпиялық, тәуекелдерді басқару және орынсыз уәделер.' },
-          { id: 'cpd', title: 'Оқу және іс-шаралар', description: 'Расталмаған жағдайда аккредитация туралы мәлімдемесіз курстар, вебинарлар және материалдар.' },
+          { id: 'practice-tools', title: 'Алгоритмдер мен жұмыс құралдары', description: 'Кәсіби сызбалар, тексеру тізімдері және нәтижелерді бағалау. Курстар «Оқу» бөлімінде.' },
         ],
       },
       about: {
@@ -437,7 +437,7 @@ const BASE_UI: Record<Locale, LocaleCopy> = {
       },
       learning: {
         title: 'Learning',
-        description: 'Autism School Kazakhstan and selected external courses, lectures, and webinars for parents and professionals.',
+        description: 'Autism School Kazakhstan programmes, courses and verified webinars for parents and professionals.',
         topics: [
           { id: 'autism-school', title: 'Autism School Kazakhstan', description: 'The project’s own learning programme, with clearly stated goals and responsibility.' },
           { id: 'parents-learning', title: 'For parents', description: 'Courses and lectures about understanding autism, supporting a child, and family wellbeing.' },
@@ -449,14 +449,14 @@ const BASE_UI: Record<Locale, LocaleCopy> = {
       },
       professionals: {
         title: 'For Professionals',
-        description: 'A secondary section with evidence-informed resources and principles for respectful work with families.',
+        description: 'Professional guidelines, assessment and diagnosis, practice tools and ethics. Courses belong in Learning.',
         topics: [
           { id: 'guidelines', title: 'Guidelines and standards', description: 'Verified professional documents with their scope and version date.' },
           { id: 'family-communication', title: 'Communication with families', description: 'Clear information, shared decisions, and respect for family experience.' },
           { id: 'assessment-context', title: 'Assessment context', description: 'Professional roles, limitations of tools, and why a website cannot diagnose.' },
           { id: 'evidence-support', title: 'Evidence-informed support', description: 'Balancing research, professional expertise, individual goals, and family context.' },
           { id: 'ethics', title: 'Ethics and safety', description: 'Informed consent, confidentiality, risk management, and unacceptable promises.' },
-          { id: 'cpd', title: 'Learning and events', description: 'Courses, webinars, and resources without accreditation claims unless confirmed.' },
+          { id: 'practice-tools', title: 'Practice tools and pathways', description: 'Professional workflows, checklists and outcome evaluation. Courses belong in Learning.' },
         ],
       },
       about: {
