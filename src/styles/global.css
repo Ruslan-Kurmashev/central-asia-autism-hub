@@ -1075,15 +1075,8 @@ details.nav-disclosure:not([open]) > .primary-nav {
   box-shadow: 0 0 0 0.2rem rgb(48 74 221 / 13%);
 }
 
-.topic-card__number {
-  color: var(--color-primary);
-  font-size: 0.78rem;
-  font-weight: 800;
-  letter-spacing: 0.08em;
-}
-
 .topic-card h3 {
-  margin-top: var(--space-5);
+  margin-top: 0;
 }
 
 .topic-card p {
