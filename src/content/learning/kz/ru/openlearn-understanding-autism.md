@@ -1,7 +1,7 @@
 ---
 title: "Understanding Autism: понимание аутизма"
-summary: "Бесплатный англоязычный вводный курс Open University об аутизме, жизненном опыте аутичных людей, диагностике и поддержке; рассчитан примерно на 24 часа."
-description: "Бесплатный англоязычный вводный курс Open University об аутизме, жизненном опыте аутичных людей, диагностике и поддержке; рассчитан примерно на 24 часа."
+summary: "Основные сведения об аутизме, опыте аутичных людей, диагностике и поддержке на разных этапах жизни."
+description: "Основные сведения об аутизме, опыте аутичных людей, диагностике и поддержке на разных этапах жизни."
 country: kz
 language: ru
 section: learning
@@ -31,7 +31,7 @@ costLabel: "Бесплатно"
 externalUrl: "https://www.open.edu/openlearn/science-maths-technology/understanding-autism"
 lastVerifiedAt: 2026-10-11
 projectOwned: false
-registrationStatus: "Материалы доступны без аккаунта; для отслеживания прогресса и бесплатного цифрового бейджа нужна регистрация."
+registrationStatus: "Материалы можно изучать без аккаунта; для отслеживания прогресса и цифрового бейджа нужна регистрация."
 resourceDisclaimerType: external
 sources:
   - title: "Official provider description"

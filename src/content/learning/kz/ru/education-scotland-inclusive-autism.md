@@ -1,7 +1,7 @@
 ---
 title: "Introduction to Autism and Inclusive Practice"
-summary: "Бесплатный англоязычный курс для педагогов об аутизме и инклюзивной образовательной практике, основанный на шотландском контексте."
-description: "Бесплатный англоязычный курс для педагогов об аутизме и инклюзивной образовательной практике, основанный на шотландском контексте."
+summary: "Принципы инклюзивного образования, адаптация обучения и поддержка аутичных учащихся в контексте системы образования Шотландии."
+description: "Принципы инклюзивного образования, адаптация обучения и поддержка аутичных учащихся в контексте системы образования Шотландии."
 country: kz
 language: ru
 section: learning
@@ -30,7 +30,7 @@ costLabel: "Бесплатно"
 externalUrl: "https://www.open.edu/openlearncreate/course/view.php?id=6935"
 lastVerifiedAt: 2026-10-11
 projectOwned: false
-registrationStatus: "Материалы доступны для изучения; бесплатное подтверждение участия и цифровой бейдж требуют регистрации."
+registrationStatus: "Для подтверждения участия и цифрового бейджа требуется регистрация."
 resourceDisclaimerType: external
 sources:
   - title: "Official provider description"
