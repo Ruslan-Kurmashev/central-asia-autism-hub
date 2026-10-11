@@ -10,7 +10,7 @@ const { locale, entries } = Astro.props;
 const copy = {
   ru: {
     heading: 'Каталог курсов и учебных материалов.',
-    intro: 'Выберите аудиторию, язык или тему, чтобы увидеть подходящие материалы. Новый выбор заменяет предыдущий фильтр; поиск работает по всему каталогу.',
+    intro: 'Сочетайте фильтры по аудитории, языку курса и теме. Поиск уточняет результаты с учётом всех выбранных условий.',
     search: 'Поиск по названию или содержанию',
     placeholder: 'Например: коммуникация, развитие, аутизм',
     audience: 'Аудитория', language: 'Язык курса', topic: 'Тема',
@@ -25,7 +25,7 @@ const copy = {
   },
   kk: {
     heading: 'Курстар мен оқу материалдарының каталогы.',
-    intro: 'Аудиторияны, тілді немесе тақырыпты таңдаңыз. Жаңа таңдау алдыңғы сүзгіні алмастырады; іздеу бүкіл каталог бойынша жұмыс істейді.',
+    intro: 'Аудитория, курс тілі және тақырып сүзгілерін бірге қолданыңыз. Іздеу таңдалған шарттарға сәйкес нәтижелерді нақтылайды.',
     search: 'Атауы немесе мазмұны бойынша іздеу',
     placeholder: 'Мысалы: коммуникация, даму, аутизм',
     audience: 'Кімге арналған', language: 'Курс тілі', topic: 'Тақырып',
@@ -40,7 +40,7 @@ const copy = {
   },
   en: {
     heading: 'Catalogue of courses and learning materials.',
-    intro: 'Choose an audience, course language or topic. Each new choice replaces the previous filter; text search covers the full catalogue.',
+    intro: 'Combine audience, course language and topic filters. Text search narrows the results using all selected criteria.',
     search: 'Search by title or content',
     placeholder: 'For example: communication, development, autism',
     audience: 'Audience', language: 'Course language', topic: 'Topic',
@@ -177,15 +177,23 @@ const availableTopics = [...new Set(items.map((entry) => entry.data.topicArea).f
     const list = catalogue.querySelectorAll<HTMLElement>('[data-course-item]');
     const result = catalogue.querySelector<HTMLElement>('[data-course-result]');
     const empty = catalogue.querySelector<HTMLElement>('[data-course-empty]');
-    const update = () => {
+    type FilterKey = 'audience' | 'language' | 'topic';
+    const matches = (item: HTMLElement, override?: FilterKey, candidate?: string) => {
       const query = (search?.value ?? '').trim().toLocaleLowerCase();
+      const selectedAudience = override === 'audience' ? candidate : audience?.value;
+      const selectedLanguage = override === 'language' ? candidate : language?.value;
+      const selectedTopic = override === 'topic' ? candidate : topic?.value;
+      return (
+        (query === '' || (item.dataset.searchText ?? '').includes(query)) &&
+        (!selectedAudience || selectedAudience === 'all' || (item.dataset.audience ?? '').split(' ').includes(selectedAudience)) &&
+        (!selectedLanguage || selectedLanguage === 'all' || (item.dataset.language ?? '').split(' ').includes(selectedLanguage)) &&
+        (!selectedTopic || selectedTopic === 'all' || item.dataset.topic === selectedTopic)
+      );
+    };
+    const update = () => {
       let matched = 0;
       list.forEach((item) => {
-        const visible =
-          (query === '' || (item.dataset.searchText ?? '').includes(query)) &&
-          (audience?.value === 'all' || (item.dataset.audience ?? '').split(' ').includes(audience?.value ?? '')) &&
-          (language?.value === 'all' || (item.dataset.language ?? '').split(' ').includes(language?.value ?? '')) &&
-          (topic?.value === 'all' || item.dataset.topic === topic?.value);
+        const visible = matches(item);
         item.hidden = !visible;
         if (visible) matched++;
       });
@@ -195,6 +203,24 @@ const availableTopics = [...new Set(items.map((entry) => entry.data.topicArea).f
         result.textContent = `${prefix}: ${matched}`;
       }
       if (empty) empty.hidden = matched !== 0;
+
+      // Contextual counts: each menu previews how many courses match that
+      // choice together with the OTHER active filters and the search query.
+      const facets: { key: FilterKey; select: HTMLSelectElement | null }[] = [
+        { key: 'audience', select: audience },
+        { key: 'language', select: language },
+        { key: 'topic', select: topic },
+      ];
+      facets.forEach(({ key, select }) => {
+        if (!select) return;
+        Array.from(select.options).forEach((option) => {
+          const label = option.dataset.baseLabel ??
+            (option.textContent ?? '').replace(/\\s*\\(\\d+\\)\\s*$/, '').trim();
+          option.dataset.baseLabel = label;
+          const total = Array.from(list).filter((item) => matches(item, key, option.value)).length;
+          option.textContent = `${label} (${total})`;
+        });
+      });
     };
     const applyLinkFilter = () => {
       if (window.location.hash === '#professionals-learning' && audience) {
@@ -205,19 +231,11 @@ const availableTopics = [...new Set(items.map((entry) => entry.data.topicArea).f
     applyLinkFilter();
     update();
     window.addEventListener('hashchange', applyLinkFilter);
-    // Every new category selection replaces previously selected filters.
-    // Menu counts always describe the full catalogue, not stale intersections.
-    const chooseFilter = (selected: 'audience' | 'language' | 'topic' | 'search') => {
-      if (selected !== 'search' && search) search.value = '';
-      if (selected !== 'audience' && audience) audience.value = 'all';
-      if (selected !== 'language' && language) language.value = 'all';
-      if (selected !== 'topic' && topic) topic.value = 'all';
-      update();
-    };
-    search?.addEventListener('input', () => chooseFilter('search'));
-    audience?.addEventListener('change', () => chooseFilter('audience'));
-    language?.addEventListener('change', () => chooseFilter('language'));
-    topic?.addEventListener('change', () => chooseFilter('topic'));
+    // All controls narrow the same result set. Changing one never clears others.
+    search?.addEventListener('input', update);
+    audience?.addEventListener('change', update);
+    language?.addEventListener('change', update);
+    topic?.addEventListener('change', update);
     window.addEventListener('pageshow', update);
   }
 </script>
