@@ -14,3 +14,7 @@ These two fields are mandatory **at publication**, not necessarily while a new c
 This structural check cannot independently verify a provider's current policy; source verification and editorial review remain separate responsibilities.
 
 Current inventory reviewed: seven courses in three catalogue languages (21 published entries), all with both fields.
+
+## University and institution names in translations
+
+Keep the **official name of a university in its original form** inside the `provider` field. Do not transliterate or translate an English official university name into Russian or Kazakh. Keep surrounding descriptive words and explanations in the page language. Universities whose official names are already in Russian, such as «Казанский (Приволжский) федеральный университет», retain their Russian original. An original brand or programme name may also remain unchanged when necessary to identify the source unambiguously. Refer to the official provider page rather than inventing an institutional name.

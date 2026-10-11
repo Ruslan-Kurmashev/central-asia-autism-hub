@@ -17,7 +17,7 @@ publishedAt: 2026-10-11
 updatedAt: 2026-10-11
 reviewDueAt: 2027-01-11
 draft: false
-provider: "Открытый университет Великобритании"
+provider: "The Open University (OpenLearn)"
 learningKind: course
 topicArea: development
 durationLabel: "15 часов"

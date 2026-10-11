@@ -17,7 +17,7 @@ publishedAt: 2026-10-11
 updatedAt: 2026-10-11
 reviewDueAt: 2027-01-11
 draft: false
-provider: "Агентство по вопросам образования Шотландии и Открытый университет Великобритании"
+provider: "Education Scotland и The Open University (OLCreate)"
 learningKind: module
 topicArea: inclusion
 durationLabel: "3 часа"
