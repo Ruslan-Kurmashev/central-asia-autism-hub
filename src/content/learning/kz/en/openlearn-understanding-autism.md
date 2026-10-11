@@ -31,7 +31,8 @@ costLabel: "Free"
 externalUrl: "https://www.open.edu/openlearn/science-maths-technology/understanding-autism"
 lastVerifiedAt: 2026-10-11
 projectOwned: false
-registrationStatus: "Study without an account; registration is required to track progress and receive a digital badge."
+registrationStatus: "Materials are available without registering. Create an account to take completion quizzes and receive participation documents."
+completionOutcome: "A statement of participation and digital badge. The course page also advertises 24 continuing professional development (CPD) points, not formal academic credit."
 resourceDisclaimerType: external
 sources:
   - title: "Official provider description"
