@@ -13,6 +13,7 @@ const expectedCourseLinks = [
   'https://mooc.orleu.edu.kz/courses/course/9/',
   'https://mooc.orleu.edu.kz/courses/course/7/',
 ];
+const localeCardCounts = [];
 for (const [lang, [languageLabel, shortcutLabel]] of Object.entries(labels)) {
   const html = await readFile(path.join('dist', 'kz', lang, 'learning', 'index.html'), 'utf8');
   assert.match(html, /<select\b[^>]*\bdata-course-language\b/, `Language filter missing for ${lang}`);
@@ -21,9 +22,13 @@ for (const [lang, [languageLabel, shortcutLabel]] of Object.entries(labels)) {
   assert.ok(html.includes(shortcutLabel), `Kazakh quick selector missing for ${lang}`);
   assert.ok(html.includes('data-course-kazakh-shortcut'), `Shortcut handler target missing for ${lang}`);
   for (const link of expectedCourseLinks) assert.ok(html.includes(link), `Kazakh course link ${link} missing for ${lang}`);
+  const itemCount = (html.match(/<article\b[^>]*\bdata-course-item\b/g) ?? []).length;
+  assert.ok(itemCount >= 21, `Expected complete catalogue, got ${itemCount} entries for ${lang}`);
+  localeCardCounts.push(itemCount);
 }
+assert.equal(new Set(localeCardCounts).size, 1, 'Catalogue entry counts must match across all three locales');
 const component = await readFile('src/components/LearningCatalog.astro', 'utf8');
 assert.ok(component.includes("language.value = language.value === 'kk' ? 'all' : 'kk';"));
 assert.ok(component.includes('data-search-text='));
 assert.ok(component.includes('entry.data.languages.map((l) => languages[locale][l])'));
-console.log('Kazakh language option, shortcut and five Kazakh-language course listings verified in RU/KK/EN builds.');
+console.log(`Kazakh language selector and five Kazakh-language course links verified; ${localeCardCounts.join('/')} unique catalogue cards in RU/KK/EN.`);

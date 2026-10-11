@@ -163,7 +163,13 @@ const research = defineCollection({
 });
 
 const learning = defineCollection({
-  loader: glob({ pattern: '**/*.{md,mdx}', base: './src/content/learning' }),
+  loader: glob({
+    pattern: '**/*.{md,mdx}',
+    base: './src/content/learning',
+    // The original "slug" is shared by RU/KK/EN translations. Astro requires
+    // collection IDs to be unique, so derive IDs from locale-scoped file paths.
+    generateId: ({ entry }) => entry.replace(/\.(md|mdx)$/i, '').replaceAll('/', '-'),
+  }),
   schema: z
     .object({
       ...commonFields,
