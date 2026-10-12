@@ -180,3 +180,10 @@ New real photographs for specialised topics, selected from Pexels pages under th
 All additional original photos and their names/IDs are recorded in `scripts/sync-editorial-photos.mjs`. The build must fetch and validate the JPEG bytes before publication.
 
 Existing Pexels photographs in this document may be reused on an article only where the subject actually relates to that article. Alternative text should describe the photograph, not imply that an individual has autism, that a pictured activity is a validated therapy or that a blank card is an actual AAC communication system.
+
+## Professionals: original guideline appraisal illustration (2026-10-12)
+
+| Local file | Author/source | Type | Usage and provenance |
+| --- | --- | --- | --- |
+| `professional-guideline-appraisal.svg` | AutismHub editorial, 2026-10-12 | Original self-hosted SVG illustration | Three checked documents, magnifying glass and verification mark. Uses site palette blue `#2266dd`, navy `#174b98`, gold `#e7a930`, coral `#d96f65`. No third-party assets or identifiable people. Illustration of reviewing professional guidance for PRO-G01; not an official legal document or medical certification. |
+
