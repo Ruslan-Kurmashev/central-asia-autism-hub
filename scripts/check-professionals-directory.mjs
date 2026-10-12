@@ -109,7 +109,10 @@ for (const [locale, copy] of Object.entries(expected)) {
   const hub = await readFile(path.resolve('dist/kz', locale, 'professionals/kazakhstan-documents/index.html'), 'utf8');
   assert.equal((hub.match(/class="kz-documents__card"/g) ?? []).length, 5, locale + ': expected five Kazakhstan document categories');
   assert.ok(hub.includes('<strong>25</strong>'), locale + ': roadmap must state 25 planned documents');
-  assert.ok(hub.includes('0</strong>'), locale + ': no unpublished Kazakhstan article may be counted as published');
+  const kazakhDocumentPublicationCount = locale === 'ru' ? 8 : 0;
+  assert.ok(hub.includes('Опубликовано: <strong>' + kazakhDocumentPublicationCount + '</strong>') ||
+    hub.includes((locale === 'en' ? 'Published' : locale === 'kk' ? 'Жарияланғаны' : 'Опубликовано') + ': <strong>' + kazakhDocumentPublicationCount + '</strong>'),
+    locale + ': published Kazakhstan article count is incorrect');
   const categoryData = [
     ['education-support', 8],
     ['healthcare-diagnosis', 5],
@@ -123,9 +126,33 @@ for (const [locale, copy] of Object.entries(expected)) {
     const categoryHtml = await readFile(path.resolve('dist/kz', locale, 'professionals/kazakhstan-documents', category, 'index.html'), 'utf8');
     assert.ok(categoryHtml.includes('href="' + hubHref + '"'), locale + ': missing back-to-categories link: ' + category);
     assert.equal((categoryHtml.match(/class="kz-documents__entry"/g) ?? []).length, expectedCount, locale + ': incorrect document count for ' + category);
-    assert.equal((categoryHtml.match(/class="kz-documents__status"/g) ?? []).length, expectedCount, locale + ': planned documents must be marked unpublished for ' + category);
-    assert.equal((categoryHtml.match(/class="kz-documents__article-link"/g) ?? []).length, 0, locale + ': unpublished documents cannot link to missing articles');
+    const publishedHere = locale === 'ru' && category === 'education-support' ? 8 : 0;
+    assert.equal((categoryHtml.match(/class="kz-documents__status"/g) ?? []).length, expectedCount - publishedHere, locale + ': unpublished document statuses incorrect for ' + category);
+    assert.equal((categoryHtml.match(/class="kz-documents__article-link"/g) ?? []).length, publishedHere, locale + ': published documents must link to real articles only for ' + category);
     assert.ok(!categoryHtml.includes('href="undefined"'), locale + ': undefined link in ' + category);
   }
-  console.log('Professional directory ' + locale + ': 6 directions, 5 Kazakhstan categories and 25 unlinked planned document reviews.');
+  if (locale === 'ru') {
+    const publishedDocs = [
+      ['education-law', 'zakon-ob-obrazovanii-prava-i-specialnye-usloviya', 'Статья 8'],
+      ['education-needs-order-4', 'prikaz-4-ocenka-osobyh-obrazovatelnyh-potrebnostej', 'Этапы оценки'],
+      ['school-support-order-92', 'prikaz-92-sluzhba-psihologo-pedagogicheskogo-soprovozhdeniya', 'Алгоритм работы'],
+      ['special-support-standard-117', 'prikaz-117-standart-specialnoj-podderzhki', 'Комплекс услуг'],
+      ['education-organisations-order-385', 'prikaz-385-tipovye-pravila-organizacij-obrazovaniya', 'Роль ПМПК'],
+      ['pmpk-services-rules', 'gosusluga-pmpk-pravila-obrashcheniya-i-rezultat', '30 календарных дней'],
+      ['psychological-support-centres-264', 'prikaz-264-centry-psihologicheskoj-podderzhki', 'Основные задачи'],
+      ['special-support-state-order-532', 'prikaz-532-gosudarstvennyj-zakaz-specialnoj-podderzhki', 'Кто участвует в процедуре'],
+    ];
+    const educationPage = await readFile(path.resolve('dist/kz/ru/professionals/kazakhstan-documents/education-support/index.html'), 'utf8');
+    for (const [id, slug, phrase] of publishedDocs) {
+      const href = '/central-asia-autism-hub/kz/ru/professionals/' + slug + '/';
+      assert.ok(educationPage.includes('href="' + href + '"'), 'Published legal document missing category link: ' + id);
+      assert.ok(!html.includes('href="' + href + '"'), 'Published Kazakhstan legal document must not appear in unrelated top-level list: ' + id);
+      const article = await readFile(path.resolve('dist/kz/ru/professionals', slug, 'index.html'), 'utf8');
+      assert.ok(article.includes('kz-education-' + id + '.svg'), id + ': topic-fit hero image missing');
+      assert.ok(article.includes('adilet.zan.kz'), id + ': official legislative primary source missing');
+      assert.ok(article.includes(phrase), id + ': main editorial content missing');
+      assert.ok(article.includes('Паспорт документа'), id + ': primary legal document passport missing');
+    }
+  }
+  console.log('Professional directory ' + locale + ': 6 directions, 5 Kazakhstan categories, 25 planned documents and ' + kazakhDocumentPublicationCount + ' locally published reviews.');
 }
