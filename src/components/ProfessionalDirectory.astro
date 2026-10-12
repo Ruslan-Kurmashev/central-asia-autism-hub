@@ -1,6 +1,7 @@
 ---
 import type { CollectionEntry } from 'astro:content';
 import { UI } from '../i18n/ui';
+import { kazakhstanDocumentCount, kazakhstanDocumentGroups } from '../data/kazakhstan-professional-documents';
 import { articlePath, localePath, sectionPath } from '../lib/urls';
 import type { Locale } from '../site.config';
 import '../styles/professionals-directory.css';
@@ -24,6 +25,8 @@ const text = {
     back: 'Все направления',
     preparing: 'Готовится',
     additional: 'Дополнительные опубликованные материалы',
+    kzCategories: '5 тематических групп',
+    kzDocs: '25 документов в плане',
   },
   kk: {
     eyebrow: 'Кәсіби ақпараттық кітапхана',
@@ -37,6 +40,8 @@ const text = {
     back: 'Барлық бағыттар',
     preparing: 'Әзірленуде',
     additional: 'Қосымша жарияланған материалдар',
+    kzCategories: '5 тақырыптық топ',
+    kzDocs: 'Жоспарда 25 құжат',
   },
   en: {
     eyebrow: 'Professional resource library',
@@ -50,6 +55,8 @@ const text = {
     back: 'All areas',
     preparing: 'In preparation',
     additional: 'Additional published resources',
+    kzCategories: '5 document categories',
+    kzDocs: '25 planned documents',
   },
 } as const;
 const copy = text[locale];
@@ -95,7 +102,6 @@ const groups: Group[] = [
       { id: 'g04', subgroup: 'international', title: { ru: 'NICE CG128: выявление и диагностика аутизма у детей и подростков', kk: 'NICE CG128: балалар мен жасөспірімдердегі аутизмді анықтау және диагностикалау', en: 'NICE CG128: recognising and diagnosing autism in under-19s' }},
       { id: 'g05', subgroup: 'international', title: { ru: 'NICE CG170: поддержка детей и подростков с аутизмом', kk: 'NICE CG170: аутист балалар мен жасөспірімдерді қолдау', en: 'NICE CG170: support for autistic children and young people' }},
       { id: 'g06', subgroup: 'international', title: { ru: 'NICE CG142: диагностика и поддержка аутичных взрослых', kk: 'NICE CG142: аутист ересектерді диагностикалау және қолдау', en: 'NICE CG142: diagnosis and support for autistic adults' }},
-      { id: 'g02', subgroup: 'kazakhstan', title: { ru: 'Правовые требования к психологической деятельности в Казахстане', kk: 'Қазақстандағы психологиялық қызметке қойылатын құқықтық талаптар', en: 'Legal requirements for psychological practice in Kazakhstan' }},
       { id: 'g03', subgroup: 'coordination', title: { ru: 'Междисциплинарное взаимодействие и маршрутизация семьи', kk: 'Пәнаралық өзара іс-қимыл және отбасын тиісті қызметтерге бағыттау', en: 'Multidisciplinary coordination and family referral pathways' }},
     ],
   },
@@ -152,7 +158,8 @@ const groups: Group[] = [
     ],
   },
 ];
-const plannedCount = groups.reduce((total, group) => total + group.resources.length, 0);
+const plannedCount = groups.reduce((total, group) => total + group.resources.length, kazakhstanDocumentCount);
+const kazakhstanHubHref = localePath(locale, 'professionals/kazakhstan-documents');
 const publishedCount = materials.length;
 const sectionTitle = UI[locale].sections.professionals.title;
 function countLabel(n: number) {
@@ -166,7 +173,7 @@ function countLabel(n: number) {
   return 'материалов';
 }
 const forGroup = (group: Group) => {
-  const records = materials.filter((material) => material.data.topic === group.topic);
+  const records = materials.filter((material) => material.data.topic === group.topic && !(group.id === 'guidelines' && kazakhstanDocumentGroups.some((category) => category.documents.some((document) => document.translationKey === material.data.translationKey))));
   const matched = group.resources.map((resource) => ({
     resource,
     record: records.find((material) => material.data.translationKey === 'professionals-' + resource.id),
@@ -174,7 +181,7 @@ const forGroup = (group: Group) => {
   const extra = records.filter((material) =>
     !matched.some((entry) => entry.record?.data.slug === material.data.slug)
   );
-  return { matched, extra, count: group.resources.length + extra.length };
+  return { matched, extra, count: group.resources.length + extra.length + (group.id === 'guidelines' ? kazakhstanDocumentCount : 0) };
 };
 ---
 
@@ -250,6 +257,19 @@ const forGroup = (group: Group) => {
         <ol class="professional-directory__list">
           {matched.map(({ resource, record }, index) => (
             <>
+              {group.id === 'guidelines' && resource.subgroup === 'coordination' && (
+                <>
+                  <li class="professional-directory__subgroup">
+                    <h4><a class="professional-directory__subgroup-link" href={kazakhstanHubHref}>{subgroupTitles.kazakhstan[locale]} <span aria-hidden="true">→</span></a></h4>
+                  </li>
+                  <li class="professional-directory__item professional-directory__item--folder">
+                    <a class="professional-directory__item-link" href={kazakhstanHubHref}>
+                      <span class="professional-directory__item-title">{copy.kzCategories} <small>{copy.kzDocs}</small></span>
+                      <span class="professional-directory__item-arrow" aria-hidden="true">→</span>
+                    </a>
+                  </li>
+                </>
+              )}
               {group.id === 'guidelines' && resource.subgroup && (index === 0 || matched[index - 1].resource.subgroup !== resource.subgroup) && (
                 <li class="professional-directory__subgroup"><h4>{subgroupTitles[resource.subgroup][locale]}</h4></li>
               )}
