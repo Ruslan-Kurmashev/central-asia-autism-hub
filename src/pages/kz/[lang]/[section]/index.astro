@@ -337,7 +337,7 @@ function russianMaterialWord(count: number) {
   locale={locale}
   currentSection={section}
   alternatePath={section}
-  bodyClass={section === 'professionals' ? 'professional-library-body' : section === 'parents' ? 'section-v2 parents-section-body' : useSectionV2 ? 'section-v2' : undefined}
+  bodyClass={section === 'professionals' ? 'professional-library-body' : section === 'parents' ? 'section-v2 parents-section-body' : section === 'research' ? 'section-v2 research-section-body' : useSectionV2 ? 'section-v2' : undefined}
 >
   {
     section === 'professionals' ? (
@@ -455,6 +455,11 @@ function russianMaterialWord(count: number) {
                             <span class="section-v2__article-copy">
                               <strong>{material.data.title}</strong>
                               <span>{material.data.summary}</span>
+                              {material.collection === 'research' && (
+                                <span class="section-v2__research-source">
+                                  {material.data.journalOrOrganisation} · {material.data.publicationYear}
+                                </span>
+                              )}
                             </span>
                             <span class="section-v2__article-meta">
                               <time
@@ -562,6 +567,11 @@ function russianMaterialWord(count: number) {
                           <span class="section-v2__article-copy">
                             <strong>{material.data.title}</strong>
                             <span>{material.data.summary}</span>
+                            {material.collection === 'research' && (
+                              <span class="section-v2__research-source">
+                                {material.data.journalOrOrganisation} · {material.data.publicationYear}
+                              </span>
+                            )}
                           </span>
                           <span class="section-v2__article-meta">
                             <time

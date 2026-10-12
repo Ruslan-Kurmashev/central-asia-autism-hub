@@ -813,3 +813,87 @@
     line-height: 1.45;
   }
 }
+
+/* Research Explained: readable scientific reporting, metadata and source links.
+   Semantic heading sizes always come from the central typography system. */
+.article-v2.research-article-body .article-v2__header h1 {
+  overflow-wrap: anywhere;
+  text-wrap: balance;
+}
+
+.article-v2.research-article-body .article-v2__summary {
+  font-size: var(--type-lead);
+  line-height: var(--leading-body);
+  overflow-wrap: break-word;
+}
+
+.article-v2.research-article-body .article-v2__meta dd,
+.article-v2.research-article-body .article-v2__hero-credit {
+  font-size: var(--type-small);
+  line-height: 1.55;
+  overflow-wrap: anywhere;
+}
+
+.article-v2.research-article-body .article-v2__toc a {
+  font-size: var(--type-small);
+  line-height: 1.55;
+  overflow-wrap: anywhere;
+}
+
+.article-v2.research-article-body .article-v2__toc-subitem a,
+.article-v2.research-article-body .article-v2__toc-boundary span {
+  font-size: var(--type-meta);
+}
+
+.article-v2.research-article-body .article-v2__body {
+  font-size: var(--type-reading);
+  line-height: var(--leading-reading);
+  overflow-wrap: break-word;
+}
+
+.article-v2.research-article-body .article-v2__body h2,
+.article-v2.research-article-body .article-v2__body h3 {
+  line-height: 1.3;
+  text-wrap: pretty;
+  overflow-wrap: anywhere;
+}
+
+.article-v2.research-article-body .article-v2__body ul,
+.article-v2.research-article-body .article-v2__body ol {
+  padding-inline-start: 1.65rem;
+}
+
+.article-v2.research-article-body .article-v2__body li {
+  padding-block: 0.15rem;
+  line-height: var(--leading-reading);
+}
+
+.article-v2.research-article-body .article-v2__body li + li {
+  margin-top: 0.28rem;
+}
+
+.article-v2.research-article-body .article-v2__body a {
+  overflow-wrap: anywhere;
+}
+
+.article-v2.research-article-body .article-v2__body blockquote {
+  font-size: var(--type-reading);
+  line-height: var(--leading-reading);
+}
+
+.article-v2.research-article-body .article-v2__key-points li {
+  font-size: var(--type-reading);
+  line-height: var(--leading-reading);
+}
+
+.article-v2.research-article-body .article-v2__next strong {
+  overflow-wrap: anywhere;
+}
+
+.article-v2.research-article-body .article-v2__back:focus-visible,
+.article-v2.research-article-body .article-v2__next:focus-visible,
+.article-v2.research-article-body .article-v2__toc a:focus-visible,
+.article-v2.research-article-body .article-v2__hero-original:focus-visible {
+  outline: 3px solid var(--article-blue-dark);
+  outline-offset: 3px;
+}
