@@ -140,7 +140,7 @@ for (const [locale, copy] of Object.entries(expected)) {
       ['education-organisations-order-385', 'prikaz-385-tipovye-pravila-organizacij-obrazovaniya', 'Роль ПМПК'],
       ['pmpk-services-rules', 'gosusluga-pmpk-pravila-obrashcheniya-i-rezultat', '30 календарных дней'],
       ['psychological-support-centres-264', 'prikaz-264-centry-psihologicheskoj-podderzhki', 'Основные задачи'],
-      ['special-support-state-order-532', 'prikaz-532-gosudarstvennyj-zakaz-specialnoj-podderzhki', 'Государственный образовательный заказ'],
+      ['special-support-state-order-532', 'prikaz-532-gosudarstvennyj-zakaz-specialnoj-podderzhki', 'Кто участвует в процедуре'],
     ];
     const educationPage = await readFile(path.resolve('dist/kz/ru/professionals/kazakhstan-documents/education-support/index.html'), 'utf8');
     for (const [id, slug, phrase] of publishedDocs) {
