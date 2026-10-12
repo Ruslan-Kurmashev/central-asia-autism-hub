@@ -26,12 +26,18 @@ Read only the documents relevant to the task, but read each selected document co
 - Do not add a backend, database, authentication, accounts, forms, payments, screening tools, diagnostic tools, personal-data collection, or new production dependencies without explicit approval.
 - Do not change routes, schemas, translation keys, slugs, publication filtering, or evaluation logic incidentally.
 
-## Typography contract
+## Mandatory typography and publication law (all changes)
 
 - Use only `--type-*` font-size tokens and `--font-*` family tokens from `src/styles/typography.css` in site CSS and Astro components.
 - Do not introduce raw `px`, `rem`, `em`, `vw`, or `clamp()` font-size declarations outside the token file, including article-specific and mobile styles.
 - Keep titles and article structure semantic. Do not create extra font stacks or page-specific font scales.
-- Run `npm run check:type-scale` after any CSS, layout, component, or content-style change.
+- The rule applies to every new and existing page, parent/professional/research article, glossary entry, course listing, card, translation, page template, interactive component, responsive view, print/PDF layout and CMS preview.
+- All content must use the shared layouts and semantic Markdown headings: page titles are rendered by the layout; article body starts at H2 and uses H3 for nested subsections. Do not insert manually styled headings, inline font CSS, HTML `<font>` tags or custom per-article typography.
+- Changing typography tokens requires a documented design-system decision; never silently shrink text for RU/KK/EN translations or patch a single page.
+- No publication, pull request merge or deployment is ready until `npm run check:type-scale` and `npm run validate` succeed plus responsive and zoom QA is reviewed. The automated check is a mandatory fail-closed gate, not a claim of full visual accessibility.
+- The identical CMS font token stylesheet must be kept in sync with the source. See `docs/typography-system.md` for the binding policy, checklist and exception process.
+- Run `npm run check:type-scale` after any CSS, layout, component, Markdown, CMS or content-style change.
+
 
 ## Editorial and medical safety
 
