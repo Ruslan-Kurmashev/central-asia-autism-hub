@@ -307,7 +307,7 @@ const visibleGroups =
     : sectionGroups.filter((group) => group.materials.length > 0);
 
 const initiallyOpenGroupId =
-  visibleGroups.find((group) => group.materials.length > 0)?.id ??
+  visibleGroups.find((group) => group.materials.length + group.glossaryCount > 0)?.id ??
   visibleGroups[0]?.id;
 
 const groupedSlugs = new Set(
@@ -337,7 +337,7 @@ function russianMaterialWord(count: number) {
   locale={locale}
   currentSection={section}
   alternatePath={section}
-  bodyClass={section === 'professionals' ? 'professional-library-body' : useSectionV2 ? 'section-v2' : undefined}
+  bodyClass={section === 'professionals' ? 'professional-library-body' : section === 'parents' ? 'section-v2 parents-section-body' : useSectionV2 ? 'section-v2' : undefined}
 >
   {
     section === 'professionals' ? (
@@ -379,7 +379,9 @@ function russianMaterialWord(count: number) {
               <div class="section-v2__intro">
                 <p class="section-v2__eyebrow">{sectionV2Text.navigation}</p>
                 <h2 id="section-v2-collections-title">
-                  {section === 'about' ? sectionCopy.title : displayCount > 0 ? sectionV2Text.resourcesAndTopics : sectionV2Text.topics}
+                  {section === 'parents'
+                    ? locale === 'ru' ? 'Материалы для родителей' : locale === 'kk' ? 'Ата-аналарға арналған материалдар' : 'Resources for parents'
+                    : section === 'about' ? sectionCopy.title : displayCount > 0 ? sectionV2Text.resourcesAndTopics : sectionV2Text.topics}
                 </h2>
                 {(section === 'about' || displayCount === 0) && (
                   <p>
@@ -395,7 +397,7 @@ function russianMaterialWord(count: number) {
 
             {section === 'about' && <AboutPolicies locale={locale} />}
 
-            {materials.length > 0 && (
+            {(section === 'parents' || materials.length > 0) && (
               <div class="section-v2__accordion">
                 {visibleGroups.map((group) => (
                   <details
