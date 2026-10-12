@@ -365,6 +365,18 @@ function russianMaterialWord(count: number) {
               </div>
             )}
 
+            {section === 'parents' && locale === 'ru' && (
+              <aside class="section-v2__status" aria-labelledby="parents-glossary-title">
+                <span class="section-v2__status-mark" aria-hidden="true"></span>
+                <div>
+                  <h2 id="parents-glossary-title">
+                    <a href={localePath(locale, 'parents/glossary')}>Словарь терминов</a>
+                  </h2>
+                  <p>217 понятий с понятными объяснениями, поиском по словам и тематическими категориями. Откройте карточку, чтобы прочитать полный текст и источники.</p>
+                </div>
+              </aside>
+            )}
+
             {section === 'professionals' && (
               <SectionBoundary locale={locale} section={section} />
             )}
