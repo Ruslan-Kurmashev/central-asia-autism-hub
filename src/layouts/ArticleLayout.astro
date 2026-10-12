@@ -83,7 +83,7 @@ const researchLabel: Record<Locale, string> = {
   currentSection={data.section}
   alternatePath={data.section}
   alternatePaths={alternatePaths}
-  bodyClass={useArticleV2 ? 'article-v2' : undefined}
+  bodyClass={useArticleV2 ? (data.section === 'parents' ? 'article-v2 parents-article-body' : 'article-v2') : undefined}
 >
   {
     useArticleV2 ? (
@@ -267,7 +267,7 @@ const researchLabel: Record<Locale, string> = {
             {!researchDetails && (
             <section class="article-v2__sources" aria-labelledby="sources-title">
               <div class="article-v2__sources-heading">
-                <p class="article-v2__eyebrow">{locale === 'kk' ? 'Дереккөздер' : 'Evidence'}</p>
+                <p class="article-v2__eyebrow">{locale === 'ru' ? 'Библиография' : locale === 'kk' ? 'Пайдаланылған әдебиеттер' : 'References'}</p>
                 <h2 id="sources-title">{copy.sourcesTitle}</h2>
                 <p>{copy.sourceResponsibility}</p>
               </div>
