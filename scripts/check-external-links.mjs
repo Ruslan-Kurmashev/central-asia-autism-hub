@@ -27,6 +27,11 @@ for (const file of pages) {
       const url = new URL(decodeAttribute(match[2]));
       if (!['http:', 'https:'].includes(url.protocol)) continue;
       if (/^(localhost|127\.0\.0\.1)$/i.test(url.hostname)) continue;
+      // Our own canonical and hreflang links may point to pages in this pull
+      // request which are not deployed yet. They are not external sources.
+      // Their paths and anchors are checked by the internal-link validator.
+      if (url.hostname === 'ruslan-kurmashev.github.io' &&
+          url.pathname.startsWith('/central-asia-autism-hub/')) continue;
       url.hash = '';
       const key = url.href;
       if (!sources.has(key)) sources.set(key, new Set());
