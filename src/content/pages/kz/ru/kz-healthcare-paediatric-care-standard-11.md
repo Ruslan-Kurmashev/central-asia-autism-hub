@@ -38,7 +38,7 @@ sources:
   - title: "Приказ № ҚР ДСМ-25 от 15 марта 2022 года, первоначальное утверждение стандарта"
     url: "https://old.adilet.zan.kz/rus/docs/V2200027182"
     organisation: "ИПС «Әділет» / Республика Казахстан"
-    publicationYear: 2025
+    publicationYear: 2022
     note: "Связанный нормативный акт или официальная история редакций."
     accessedAt: 2026-10-12
 ---

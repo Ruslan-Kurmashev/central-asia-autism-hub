@@ -1004,3 +1004,27 @@
     line-height: 1.45;
   }
 }
+
+/* Kazakhstan professional legislation: long legal names and primary-source
+   links must remain usable at narrow widths and increased browser zoom.
+   All font sizes continue to come from the global typography tokens. */
+.article-v2.kz-professionals-document-body .article-v2__body a,
+.article-v2.kz-professionals-document-body .article-v2__sources a,
+.article-v2.kz-professionals-document-body .article-v2__back {
+  overflow-wrap: anywhere;
+}
+
+@media (max-width: 40rem) {
+  .article-v2.kz-professionals-document-body .article-v2__body table {
+    display: block;
+    max-width: 100%;
+    overflow-x: auto;
+    overscroll-behavior-inline: contain;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .article-v2.kz-professionals-document-body .article-v2__body th,
+  .article-v2.kz-professionals-document-body .article-v2__body td {
+    overflow-wrap: anywhere;
+  }
+}

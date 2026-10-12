@@ -1,6 +1,7 @@
 ---
 import type { CollectionEntry } from 'astro:content';
 import DevelopmentMilestoneAgeSelector from '../components/DevelopmentMilestoneAgeSelector.astro';
+import { kazakhstanDocumentGroups } from '../data/kazakhstan-professional-documents';
 import { CONTENT_UI, DATE_LOCALES } from '../i18n/content';
 import { UI } from '../i18n/ui';
 import { articlePath, localePath, sectionPath } from '../lib/urls';
@@ -28,6 +29,18 @@ const locale = data.language;
 const hasMissingTranslations = SUPPORTED_LOCALES.some(language => !alternatePaths[language]);
 const copy = CONTENT_UI[locale];
 const sectionCopy = UI[locale].sections[data.section];
+// Restore the full three-level document route on all 25 Kazakhstan professional
+// reviews. The category is looked up by translationKey rather than by slug so
+// reviewed translations can retain the same navigational hierarchy later.
+const kazakhstanGroup = data.section === 'professionals'
+  ? kazakhstanDocumentGroups.find(group =>
+      group.documents.some(document => document.translationKey === data.translationKey))
+  : undefined;
+const kazakhstanHubPath = kazakhstanGroup ? localePath(locale, 'professionals/kazakhstan-documents') : undefined;
+const kazakhstanGroupPath = kazakhstanGroup
+  ? localePath(locale, 'professionals/kazakhstan-documents/' + kazakhstanGroup.id)
+  : undefined;
+const kazakhstanHubTitle = locale === 'ru' ? 'Документы Казахстана' : locale === 'kk' ? 'Қазақстан құжаттары' : 'Kazakhstan documents';
 const dateFormatter = new Intl.DateTimeFormat(DATE_LOCALES[locale], {
   day: 'numeric',
   month: 'long',
@@ -83,7 +96,7 @@ const researchLabel: Record<Locale, string> = {
   currentSection={data.section}
   alternatePath={data.section}
   alternatePaths={alternatePaths}
-  bodyClass={useArticleV2 ? (data.section === 'parents' ? 'article-v2 parents-article-body' : data.section === 'research' ? 'article-v2 research-article-body' : data.section === 'help-kazakhstan' ? 'article-v2 kz-help-article-body' : 'article-v2') : undefined}
+  bodyClass={useArticleV2 ? (data.section === 'parents' ? 'article-v2 parents-article-body' : data.section === 'research' ? 'article-v2 research-article-body' : data.section === 'help-kazakhstan' ? 'article-v2 kz-help-article-body' : kazakhstanGroup ? 'article-v2 kz-professionals-document-body' : 'article-v2') : undefined}
 >
   {
     useArticleV2 ? (
@@ -100,6 +113,14 @@ const researchLabel: Record<Locale, string> = {
                 <a href={localePath(locale)}>{UI[locale].homeLabel}</a>
                 <span aria-hidden="true"> / </span>
                 <a href={sectionPath(locale, data.section)}>{sectionCopy.title}</a>
+                {kazakhstanGroup && (
+                  <>
+                    <span aria-hidden="true"> / </span>
+                    <a href={kazakhstanHubPath}>{kazakhstanHubTitle}</a>
+                    <span aria-hidden="true"> / </span>
+                    <a href={kazakhstanGroupPath}>{kazakhstanGroup.title[locale]}</a>
+                  </>
+                )}
                 <span class="article-v2__breadcrumb-current-separator" aria-hidden="true"> / </span>
                 <span class="article-v2__breadcrumb-current" aria-current="page">{data.title}</span>
               </p>
@@ -302,8 +323,8 @@ const researchLabel: Record<Locale, string> = {
             )}
 
             <footer class="article-v2__footer">
-              <a class="article-v2__back" href={sectionPath(locale, data.section)}>
-                ← {copy.backToSection}: {sectionCopy.title}
+              <a class="article-v2__back" href={kazakhstanGroup ? kazakhstanGroupPath : sectionPath(locale, data.section)}>
+                {kazakhstanGroup ? <>← {kazakhstanGroup.title[locale]}</> : <>← {copy.backToSection}: {sectionCopy.title}</>}
               </a>
 
               {nextEntry && (
