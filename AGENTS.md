@@ -13,7 +13,8 @@ Treat the approved documents in `docs/` as the product and policy sources of tru
 - `docs/05-privacy-and-data.md` for data collection, analytics, and privacy;
 - `docs/06-design-and-accessibility.md` for visual and accessibility requirements;
 - `docs/07-technical-plan.md` for architecture, dependencies, validation, and deployment;
-- `docs/08-content-material-template.md` for information-material structure and metadata.
+- `docs/08-content-material-template.md` for information-material structure and metadata;
+- `docs/typography-system.md` for the mandatory type scale, allowed font families, and typography QA.
 
 Read only the documents relevant to the task, but read each selected document completely. Do not silently change an approved policy. If implementation and an approved document conflict, report the conflict before deciding which one to change.
 
@@ -24,6 +25,13 @@ Read only the documents relevant to the task, but read each selected document co
 - Use the installed versions and existing patterns in `package.json`, `astro.config.mjs`, `src/content.config.ts`, and `src/lib/urls.ts` as the implementation baseline.
 - Do not add a backend, database, authentication, accounts, forms, payments, screening tools, diagnostic tools, personal-data collection, or new production dependencies without explicit approval.
 - Do not change routes, schemas, translation keys, slugs, publication filtering, or evaluation logic incidentally.
+
+## Typography contract
+
+- Use only `--type-*` font-size tokens and `--font-*` family tokens from `src/styles/typography.css` in site CSS and Astro components.
+- Do not introduce raw `px`, `rem`, `em`, `vw`, or `clamp()` font-size declarations outside the token file, including article-specific and mobile styles.
+- Keep titles and article structure semantic. Do not create extra font stacks or page-specific font scales.
+- Run `npm run check:type-scale` after any CSS, layout, component, or content-style change.
 
 ## Editorial and medical safety
 
