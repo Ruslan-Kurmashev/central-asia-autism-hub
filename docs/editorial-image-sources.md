@@ -228,3 +228,15 @@ Five original self-hosted AutismHub editorial SVG illustrations with accessible 
 | `kz-healthcare-autism-clinical-protocol.svg` | AutismHub editorial, 2026-10-12 | Evidence appraisal and clinical protocol review. |
 
 Palette navy `#174b98`, blue `#2266dd`, pale blue `#edf4fc`, gold `#e7a930`. Clinical protocol 2021 is described as a reviewed professional-copy text, not automatically in-force law or a current official protocol.
+
+## Kazakhstan psychological practice and teacher-qualification documents (2026-10-12)
+
+The following three self-hosted SVG cover illustrations are original AutismHub editorial drawings. They contain no official seals or branding of government agencies, no photographs or identifiable individuals, and provide a document-specific accessible title, description, and article alt text.
+
+| Image file in `public/images/editorial/` | Provenance | Editorial meaning |
+| --- | --- | --- |
+| `kz-psychology-psychological-activity-law-332.svg` | AutismHub editorial, 2026-10-12 | Law 332-VIII: consent, psychological-practice scope and confidentiality. |
+| `kz-psychology-teacher-qualifications-order-338.svg` | AutismHub editorial, 2026-10-12 | Order 338: qualifications, professional training and role-specific competences. |
+| `kz-psychology-teacher-status-law-293.svg` | AutismHub editorial, 2026-10-12 | Law 293-VI: teacher rights, obligations and professional protection. |
+
+Brand palette: navy `#174b98`, blue `#2266dd`, pale blue `#edf4fc`, gold `#e7a930`. These are illustrative documents, not official reproductions.
