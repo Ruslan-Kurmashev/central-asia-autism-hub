@@ -253,3 +253,15 @@ Five original AutismHub self-hosted document-themed SVG covers. These are symbol
 | `kz-social-social-service-joint-order.svg` | AutismHub editorial, 2026-10-12 | Joint order 49/54/7: three ministries and interagency coordination. |
 | `kz-social-special-social-services-order-165.svg` | AutismHub editorial, 2026-10-12 | Order 165: child-protection-focused social service standards. |
 
+
+## Kazakhstan child rights, data protection, disability rights and inclusion policy (2026-10-12)
+
+Four original AutismHub editorial vector illustrations for separate professional document reviews. Locally hosted SVG assets with accessible `title`, `desc`, and document-specific `featuredImageAlt`. No official government insignia, third-party photos or identifiable people. Colors follow the project palette navy `#174b98`, blue `#2266dd`, pale blue `#edf4fc`, gold `#e7a930`.
+
+| Image path in `public/images/editorial/` | Creator/date | Editorial use |
+| --- | --- | --- |
+| `kz-rights-children-rights-law-345.svg` | AutismHub editorial, 2026-10-12 | Law No. 345: children's rights, dignity and education. |
+| `kz-rights-personal-data-law-94.svg` | AutismHub editorial, 2026-10-12 | Law No. 94-V: consent, confidentiality and data security. |
+| `kz-rights-disability-convention-ratification-288.svg` | AutismHub editorial, 2026-10-12 | CRPD ratification: equal participation and accessible communication. |
+| `kz-rights-inclusion-policy-2025-2030.svg` | AutismHub editorial, 2026-10-12 | Inclusion policy 2025-2030: milestones and planned government action. |
+
