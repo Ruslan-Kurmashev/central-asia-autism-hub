@@ -181,19 +181,6 @@ for (const lang of Object.keys(localeLabels)) {
   assert.equal(topic.value,'autism');
   check('professionals + English + autism + text');
 
-  // The search must also cover access requirements and credential outcomes.
-  // A user should be able to search for a completion certificate directly.
-  audience.value = 'all';
-  audience.fire('change');
-  language.value = 'all';
-  language.fire('change');
-  topic.value = 'all';
-  topic.fire('change');
-  search.value = lang === 'en' ? 'certificate' : 'сертификат';
-  search.fire('input');
-  assert.ok(filteredCount() > 0, lang+': course access/outcomes must be searchable');
-  check('search by certificate outcome');
-
   search.value = 'no-existing-course-such-token-zz123';
   search.fire('input');
   check('no matches under combined criteria');
@@ -216,6 +203,16 @@ for (const lang of Object.keys(localeLabels)) {
   language.fire('change');
   check('all filters cleared');
   assert.equal(filteredCount(),items.length);
+
+  // Course search must cover access requirements and credential outcomes
+  // without imposing any implicit language or audience selection.
+  search.value = lang === 'en' ? 'certificate' : 'сертификат';
+  search.fire('input');
+  assert.ok(filteredCount() > 0, lang+': course access/outcomes must be searchable');
+  check('search by certificate outcome');
+  search.value = '';
+  search.fire('input');
+  check('all courses restored after clearing certificate search');
 
   // Back/forward must restore both selection state and facet counts.
   language.value='kk';
