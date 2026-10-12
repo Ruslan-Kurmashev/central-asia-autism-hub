@@ -4,6 +4,7 @@ import ArticleCard from '../../../../components/ArticleCard.astro';
 import AboutPolicies from '../../../../components/AboutPolicies.astro';
 import SectionBoundary from '../../../../components/SectionBoundary.astro';
 import LearningCatalog from '../../../../components/LearningCatalog.astro';
+import ProfessionalDirectory from '../../../../components/ProfessionalDirectory.astro';
 import { CONTENT_UI, DATE_LOCALES } from '../../../../i18n/content';
 import { UI } from '../../../../i18n/ui';
 import BaseLayout from '../../../../layouts/BaseLayout.astro';
@@ -317,10 +318,12 @@ function russianMaterialWord(count: number) {
   locale={locale}
   currentSection={section}
   alternatePath={section}
-  bodyClass={useSectionV2 ? 'section-v2' : undefined}
+  bodyClass={section === 'professionals' ? 'professional-library-body' : useSectionV2 ? 'section-v2' : undefined}
 >
   {
-    useSectionV2 ? (
+    section === 'professionals' ? (
+      <ProfessionalDirectory locale={locale} materials={pageMaterials} />
+    ) : useSectionV2 ? (
       <article class="section-v2__page">
         <header class="section-v2__hero">
           <div class="container">
