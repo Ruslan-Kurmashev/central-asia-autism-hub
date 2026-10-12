@@ -103,12 +103,12 @@ for (const [locale, copy] of Object.entries(expected)) {
   const base = '/central-asia-autism-hub/kz/' + locale + '/professionals/kazakhstan-documents/';
   const hubHref = base;
   assert.ok(html.includes('href="' + hubHref + '"'), locale + ': Kazakhstan subgroup must open five-category hub');
-  assert.equal((html.match(/class="professional-directory__item--folder"/g) ?? []).length, 1, locale + ': Kazakhstan must display one category link rather than a legal article placeholder');
+  assert.equal((html.match(/professional-directory__item--folder/g) ?? []).length, 1, locale + ': Kazakhstan must display one category link rather than a legal article placeholder');
   assert.ok(!html.includes('Правовые требования к психологической деятельности в Казахстане'), locale + ': old Kazakhstan placeholder remains on professional landing');
 
   const hub = await readFile(path.resolve('dist/kz', locale, 'professionals/kazakhstan-documents/index.html'), 'utf8');
   assert.equal((hub.match(/class="kz-documents__card"/g) ?? []).length, 5, locale + ': expected five Kazakhstan document categories');
-  assert.ok(hub.includes('25 '), locale + ': roadmap must state 25 planned documents');
+  assert.ok(hub.includes('<strong>25</strong>'), locale + ': roadmap must state 25 planned documents');
   assert.ok(hub.includes('0</strong>'), locale + ': no unpublished Kazakhstan article may be counted as published');
   const categoryData = [
     ['education-support', 8],
