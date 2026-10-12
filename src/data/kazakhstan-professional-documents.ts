@@ -142,9 +142,3 @@ export const kazakhstanDocumentGroups: KazakhstanDocumentGroup[] = [
 
 export const kazakhstanDocumentCount = kazakhstanDocumentGroups.reduce((sum, group) => sum + group.documents.length, 0);
 
-export const kazakhstanDocumentsPath = (locale: Locale, groupId?: KazakhstanDocumentGroupId): string => {
-  const root = 'professionals/kazakhstan-documents';
-  const path = groupId ? root + '/' + groupId : root;
-  // Kept as a locale-scoped path so deploy base-path handling stays centralized.
-  return path;
-};
