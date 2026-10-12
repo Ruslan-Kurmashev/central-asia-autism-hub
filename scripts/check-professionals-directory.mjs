@@ -109,7 +109,7 @@ for (const [locale, copy] of Object.entries(expected)) {
   const hub = await readFile(path.resolve('dist/kz', locale, 'professionals/kazakhstan-documents/index.html'), 'utf8');
   assert.equal((hub.match(/class="kz-documents__card"/g) ?? []).length, 5, locale + ': expected five Kazakhstan document categories');
   assert.ok(hub.includes('<strong>25</strong>'), locale + ': roadmap must state 25 planned documents');
-  const kazakhDocumentPublicationCount = locale === 'ru' ? 21 : 0;
+  const kazakhDocumentPublicationCount = locale === 'ru' ? 25 : 0;
   assert.ok(hub.includes('Опубликовано: <strong>' + kazakhDocumentPublicationCount + '</strong>') ||
     hub.includes((locale === 'en' ? 'Published' : locale === 'kk' ? 'Жарияланғаны' : 'Опубликовано') + ': <strong>' + kazakhDocumentPublicationCount + '</strong>'),
     locale + ': published Kazakhstan article count is incorrect');
@@ -126,7 +126,7 @@ for (const [locale, copy] of Object.entries(expected)) {
     const categoryHtml = await readFile(path.resolve('dist/kz', locale, 'professionals/kazakhstan-documents', category, 'index.html'), 'utf8');
     assert.ok(categoryHtml.includes('href="' + hubHref + '"'), locale + ': missing back-to-categories link: ' + category);
     assert.equal((categoryHtml.match(/class="kz-documents__entry"/g) ?? []).length, expectedCount, locale + ': incorrect document count for ' + category);
-    const publishedHere = locale === 'ru' ? (category === 'education-support' ? 8 : category === 'healthcare-diagnosis' ? 5 : category === 'psychological-practice' ? 3 : category === 'social-support' ? 5 : 0) : 0;
+    const publishedHere = locale === 'ru' ? (category === 'education-support' ? 8 : category === 'healthcare-diagnosis' ? 5 : category === 'psychological-practice' ? 3 : category === 'social-support' ? 5 : category === 'rights-and-data' ? 4 : 0) : 0;
     assert.equal((categoryHtml.match(/class="kz-documents__status"/g) ?? []).length, expectedCount - publishedHere, locale + ': unpublished document statuses incorrect for ' + category);
     assert.equal((categoryHtml.match(/class="kz-documents__article-link"/g) ?? []).length, publishedHere, locale + ': published documents must link to real articles only for ' + category);
     assert.ok(!categoryHtml.includes('href="undefined"'), locale + ': undefined link in ' + category);
@@ -214,6 +214,28 @@ for (const [locale, copy] of Object.entries(expected)) {
       assert.ok(article.includes(officialId), id + ': official Adilet reference missing');
       assert.ok(article.includes(check), id + ': expected concrete editorial detail absent');
     }
+  }
+  if (locale === 'ru') {
+    const list = await readFile(path.resolve('dist/kz/ru/professionals/kazakhstan-documents/rights-and-data/index.html'), 'utf8');
+    const reviews = [
+      ['children-rights-law-345', 'zakon-345-prava-rebenka-obrazovanie-invalidnost', 'Статья 15', 'Z020000345_'],
+      ['personal-data-law-94', 'zakon-94-personalnye-dannye-detej-konfidencialnost', 'Статья 19-1', 'Z1300000094'],
+      ['disability-convention-ratification-288', 'konvenciya-o-pravah-invalidov-kazahstan-ratifikaciya', 'Статья 24', 'Z1500000288'],
+      ['inclusion-policy-2025-2030', 'koncepciya-inklyuzivnoj-politiki-kazahstan-2025-2030', '2030', 'P2400001143'],
+    ];
+    for (const [id, slug, phrase, documentId] of reviews) {
+      const href = '/central-asia-autism-hub/kz/ru/professionals/' + slug + '/';
+      assert.ok(list.includes('href="' + href + '"'), id + ': missing rights-category article link');
+      assert.ok(!html.includes('href="' + href + '"'), id + ': article must not be duplicated in the top-level guidelines');
+      const article = await readFile(path.resolve('dist/kz/ru/professionals', slug, 'index.html'), 'utf8');
+      assert.ok(article.includes('kz-rights-' + id + '.svg'), id + ': dedicated editorial illustration missing');
+      assert.ok(article.includes('Паспорт документа'), id + ': document passport missing');
+      assert.ok(article.includes('adilet.zan.kz'), id + ': official Adilet source missing');
+      assert.ok(article.includes(documentId), id + ': primary legal document ID missing');
+      assert.ok(article.includes(phrase), id + ': key article-specific detail missing');
+    }
+    const policy = await readFile(path.resolve('dist/kz/ru/professionals/koncepciya-inklyuzivnoj-politiki-kazahstan-2025-2030/index.html'), 'utf8');
+    assert.ok(policy.includes('плановыми целями') || policy.includes('плановых целей') || policy.includes('плановые цели'), 'Inclusion concept must clearly label planned rather than achieved indicators');
   }
   console.log('Professional directory ' + locale + ': 6 directions, 5 Kazakhstan categories, 25 planned documents and ' + kazakhDocumentPublicationCount + ' locally published reviews.');
 }
