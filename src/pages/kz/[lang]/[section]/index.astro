@@ -2,7 +2,6 @@
 import { getCollection } from 'astro:content';
 import ArticleCard from '../../../../components/ArticleCard.astro';
 import AboutPolicies from '../../../../components/AboutPolicies.astro';
-import SectionBoundary from '../../../../components/SectionBoundary.astro';
 import LearningCatalog from '../../../../components/LearningCatalog.astro';
 import ProfessionalDirectory from '../../../../components/ProfessionalDirectory.astro';
 import { CONTENT_UI, DATE_LOCALES } from '../../../../i18n/content';
@@ -368,10 +367,6 @@ function russianMaterialWord(count: number) {
                   </p>
                 )}
               </div>
-            )}
-
-            {section === 'professionals' && (
-              <SectionBoundary locale={locale} section={section} />
             )}
 
             {section === 'learning' && (
