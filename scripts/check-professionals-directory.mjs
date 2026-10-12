@@ -10,15 +10,15 @@ import path from 'node:path';
 const expected = {
   ru: {
     names: ['Рекомендации и стандарты', 'Работа с семьями', 'Оценка и диагностика', 'Доказательность методов', 'Этика и безопасность', 'Алгоритмы и инструменты'],
-    back: 'Все направления', pending: 'Готовится', cardWord: 'материала',
+    back: 'Все направления', pending: 'Готовится', cardWord: 'материала', training: 'Обучение для специалистов',
   },
   kk: {
     names: ['Ұсынымдар мен стандарттар', 'Отбасылармен жұмыс', 'Бағалау және диагностика', 'Әдістердің дәлелділігі', 'Этика және қауіпсіздік', 'Алгоритмдер мен құралдар'],
-    back: 'Барлық бағыттар', pending: 'Әзірленуде', cardWord: 'материал',
+    back: 'Барлық бағыттар', pending: 'Әзірленуде', cardWord: 'материал', training: 'Мамандарға арналған оқу',
   },
   en: {
     names: ['Guidelines and standards', 'Working with families', 'Assessment and diagnosis', 'Evidence for approaches', 'Ethics and safety', 'Workflows and tools'],
-    back: 'All areas', pending: 'In preparation', cardWord: 'resources',
+    back: 'All areas', pending: 'In preparation', cardWord: 'resources', training: 'Training for professionals',
   },
 };
 const counts = [3, 3, 4, 3, 3, 4];
@@ -33,6 +33,17 @@ for (const [locale, copy] of Object.entries(expected)) {
   assert.ok(html.includes('professional-directory__card'), locale + ': missing cards');
   assert.ok(html.includes(copy.back), locale + ': missing back navigation');
   assert.ok(html.includes(copy.pending), locale + ': missing draft markers');
+  assert.equal((html.match(/class="professional-directory__title-row"/g) ?? []).length, 7, locale + ': header and six category headings must have title rows');
+  assert.equal((html.match(/class="professional-directory__training-link"/g) ?? []).length, 7, locale + ': training link must sit beside each heading');
+  assert.equal(html.split('<h1').length - 1, 1, locale + ': page should have exactly one H1');
+  assert.ok(html.includes(copy.training), locale + ': localized training link label missing');
+  const trainingHref = '/central-asia-autism-hub/kz/' + locale + '/learning/#professionals-learning';
+  assert.equal(html.split('href="' + trainingHref + '"').length - 1, 7, locale + ': training links must point to the correct locale');
+  assert.ok(!html.includes('section-boundary'), locale + ': old professional information callout remains');
+  assert.ok(!html.includes('professional-directory__note'), locale + ': redundant editorial note remains');
+  for (const oldPhrase of ['Числа на карточках показывают', 'Карточкалардағы сандар', 'Card counts reflect the editorial roadmap', 'Профессиональные ресурсы публикуются с источниками', 'Professional resources include sources']) {
+    assert.ok(!html.includes(oldPhrase), locale + ': obsolete explanation remains: ' + oldPhrase);
+  }
   assert.ok(!html.includes('PRO-G01') && !html.includes('PRO-E03'), locale + ': internal editorial IDs leaked');
   assert.equal((html.match(/class="professional-directory__card"/g) ?? []).length, 6, locale + ': expected six area cards');
   assert.equal((html.match(/class="professional-directory__detail"/g) ?? []).length, 6, locale + ': expected six detail panels');
