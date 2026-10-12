@@ -214,3 +214,17 @@ Eight original AutismHub editorial SVG covers were produced for individual educa
 | `kz-education-pmpk-services-rules.svg` | AutismHub editorial, 2026-10-12 | PMPK state service rules: scheduling and decisions |
 | `kz-education-psychological-support-centres-264.svg` | AutismHub editorial, 2026-10-12 | Order No. 264: consultation and safe communication |
 | `kz-education-special-support-state-order-532.svg` | AutismHub editorial, 2026-10-12 | Order No. 532: state educational order and review |
+
+## Professionals: Kazakhstan healthcare, early detection and clinical documents (2026-10-12)
+
+Five original self-hosted AutismHub editorial SVG illustrations with accessible `title`, `desc`, and article-specific alt text. No third-party medical photos, no real children, no official government seals, no claim of clinical endorsement.
+
+| File | Author/date | Editorial meaning |
+| --- | --- | --- |
+| `kz-healthcare-health-code-360.svg` | AutismHub editorial, 2026-10-12 | Patient rights and medical legislation, document with shield. |
+| `kz-healthcare-paediatric-care-standard-11.svg` | AutismHub editorial, 2026-10-12 | Paediatric screening pathways, healthcare cross and document. |
+| `kz-healthcare-mental-health-standard-224.svg` | AutismHub editorial, 2026-10-12 | Coordination and referral among mental healthcare services. |
+| `kz-healthcare-preventive-examinations-264.svg` | AutismHub editorial, 2026-10-12 | Age-based preventive examination schedule and calendar. |
+| `kz-healthcare-autism-clinical-protocol.svg` | AutismHub editorial, 2026-10-12 | Evidence appraisal and clinical protocol review. |
+
+Palette navy `#174b98`, blue `#2266dd`, pale blue `#edf4fc`, gold `#e7a930`. Clinical protocol 2021 is described as a reviewed professional-copy text, not automatically in-force law or a current official protocol.
