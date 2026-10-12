@@ -240,3 +240,16 @@ The following three self-hosted SVG cover illustrations are original AutismHub e
 | `kz-psychology-teacher-status-law-293.svg` | AutismHub editorial, 2026-10-12 | Law 293-VI: teacher rights, obligations and professional protection. |
 
 Brand palette: navy `#174b98`, blue `#2266dd`, pale blue `#edf4fc`, gold `#e7a930`. These are illustrative documents, not official reproductions.
+
+## Kazakhstan social support and interagency services (2026-10-12)
+
+Five original AutismHub self-hosted document-themed SVG covers. These are symbolic editorial illustrations with `title` and `desc`; no government insignia, photos, child depictions or third-party material. Articles provide an individual alt description. Palette uses `#174b98`, `#2266dd`, `#edf4fc` and `#e7a930`.
+
+| Local SVG in `public/images/editorial/` | Authorship and date | Purpose |
+| --- | --- | --- |
+| `kz-social-child-correction-support-law-343.svg` | AutismHub editorial, 2026-10-12 | Law 343: links between health, education and social support. |
+| `kz-social-social-code-224.svg` | AutismHub editorial, 2026-10-12 | Social Code: special social services and recipient rights. |
+| `kz-social-disability-assessment-order-260.svg` | AutismHub editorial, 2026-10-12 | Order 260: assessment of functioning and disability. |
+| `kz-social-social-service-joint-order.svg` | AutismHub editorial, 2026-10-12 | Joint order 49/54/7: three ministries and interagency coordination. |
+| `kz-social-special-social-services-order-165.svg` | AutismHub editorial, 2026-10-12 | Order 165: child-protection-focused social service standards. |
+

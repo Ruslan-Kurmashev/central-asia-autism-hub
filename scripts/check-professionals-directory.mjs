@@ -109,7 +109,7 @@ for (const [locale, copy] of Object.entries(expected)) {
   const hub = await readFile(path.resolve('dist/kz', locale, 'professionals/kazakhstan-documents/index.html'), 'utf8');
   assert.equal((hub.match(/class="kz-documents__card"/g) ?? []).length, 5, locale + ': expected five Kazakhstan document categories');
   assert.ok(hub.includes('<strong>25</strong>'), locale + ': roadmap must state 25 planned documents');
-  const kazakhDocumentPublicationCount = locale === 'ru' ? 16 : 0;
+  const kazakhDocumentPublicationCount = locale === 'ru' ? 21 : 0;
   assert.ok(hub.includes('Опубликовано: <strong>' + kazakhDocumentPublicationCount + '</strong>') ||
     hub.includes((locale === 'en' ? 'Published' : locale === 'kk' ? 'Жарияланғаны' : 'Опубликовано') + ': <strong>' + kazakhDocumentPublicationCount + '</strong>'),
     locale + ': published Kazakhstan article count is incorrect');
@@ -126,7 +126,7 @@ for (const [locale, copy] of Object.entries(expected)) {
     const categoryHtml = await readFile(path.resolve('dist/kz', locale, 'professionals/kazakhstan-documents', category, 'index.html'), 'utf8');
     assert.ok(categoryHtml.includes('href="' + hubHref + '"'), locale + ': missing back-to-categories link: ' + category);
     assert.equal((categoryHtml.match(/class="kz-documents__entry"/g) ?? []).length, expectedCount, locale + ': incorrect document count for ' + category);
-    const publishedHere = locale === 'ru' ? (category === 'education-support' ? 8 : category === 'healthcare-diagnosis' ? 5 : category === 'psychological-practice' ? 3 : 0) : 0;
+    const publishedHere = locale === 'ru' ? (category === 'education-support' ? 8 : category === 'healthcare-diagnosis' ? 5 : category === 'psychological-practice' ? 3 : category === 'social-support' ? 5 : 0) : 0;
     assert.equal((categoryHtml.match(/class="kz-documents__status"/g) ?? []).length, expectedCount - publishedHere, locale + ': unpublished document statuses incorrect for ' + category);
     assert.equal((categoryHtml.match(/class="kz-documents__article-link"/g) ?? []).length, publishedHere, locale + ': published documents must link to real articles only for ' + category);
     assert.ok(!categoryHtml.includes('href="undefined"'), locale + ': undefined link in ' + category);
@@ -193,6 +193,26 @@ for (const [locale, copy] of Object.entries(expected)) {
       assert.ok(page.includes('Паспорт документа'), id + ': missing passport');
       assert.ok(page.includes('adilet.zan.kz'), id + ': missing legal source');
       assert.ok(page.includes(phrase), id + ': missing essential legal point');
+    }
+  }
+  if (locale === 'ru') {
+    const catalog = await readFile(path.resolve('dist/kz/ru/professionals/kazakhstan-documents/social-support/index.html'), 'utf8');
+    const socialDocs = [
+      ['child-correction-support-law-343', 'zakon-343-socialnaya-mediko-pedagogicheskaya-podderzhka', 'Статья 3', 'Z020000343_'],
+      ['social-code-224', 'socialnyj-kodeks-specialnye-socialnye-uslugi', 'Статья 132', 'K2300000224'],
+      ['disability-assessment-order-260', 'prikaz-260-mediko-socialnaya-ekspertiza-invalidnost', '25 августа 2026', 'V2300032922'],
+      ['social-service-joint-order', 'sovmestnyj-prikaz-49-54-7-standarty-socialnoj-podderzhki', '34117', 'V2400034117'],
+      ['special-social-services-order-165', 'prikaz-165-specialnye-socialnye-uslugi-obrazovanie', 'приложения 1', 'V2300032760'],
+    ];
+    for (const [id, slug, check, officialId] of socialDocs) {
+      const href = '/central-asia-autism-hub/kz/ru/professionals/' + slug + '/';
+      assert.ok(catalog.includes('href="' + href + '"'), id + ': published review not linked from social support');
+      assert.ok(!html.includes('href="' + href + '"'), id + ': review should not be duplicated in top-level guidelines');
+      const article = await readFile(path.resolve('dist/kz/ru/professionals', slug, 'index.html'), 'utf8');
+      assert.ok(article.includes('kz-social-' + id + '.svg'), id + ': distinct illustration missing');
+      assert.ok(article.includes('Паспорт документа'), id + ': document passport missing');
+      assert.ok(article.includes(officialId), id + ': official Adilet reference missing');
+      assert.ok(article.includes(check), id + ': expected concrete editorial detail absent');
     }
   }
   console.log('Professional directory ' + locale + ': 6 directions, 5 Kazakhstan categories, 25 planned documents and ' + kazakhDocumentPublicationCount + ' locally published reviews.');
