@@ -29,7 +29,7 @@ const home = await inspectPage('kz/kk', 'home-v2', [
 const parents = await inspectPage('kz/kk/parents', 'section-v2', [
   'Баланың дамуы',
   'section-v2__accordion',
-  'Материалдар мен тақырыптар',
+  'Ата-аналарға арналған материалдар',
   'section-v2__article-list',
 ]);
 const article = await inspectPage(
