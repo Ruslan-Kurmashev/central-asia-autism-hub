@@ -277,7 +277,7 @@
   display: block;
   margin-top: .35rem;
   color: var(--color-muted);
-  font-size: .78rem;
+  font-size: var(--type-caption);
   font-weight: 600;
 }
 .professional-directory__item {
