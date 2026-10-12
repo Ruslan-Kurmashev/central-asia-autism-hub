@@ -10,15 +10,15 @@ import path from 'node:path';
 const expected = {
   ru: {
     names: ['Рекомендации и стандарты', 'Работа с семьями', 'Оценка и диагностика', 'Доказательность методов', 'Этика и безопасность', 'Алгоритмы и инструменты'],
-    back: 'Все направления', pending: 'Готовится', cardWord: 'материала', training: 'Обучение для специалистов',
+    back: 'Все направления', pending: 'Готовится', cardWord: 'материала', training: 'Обучение для специалистов', published: 1,
   },
   kk: {
     names: ['Ұсынымдар мен стандарттар', 'Отбасылармен жұмыс', 'Бағалау және диагностика', 'Әдістердің дәлелділігі', 'Этика және қауіпсіздік', 'Алгоритмдер мен құралдар'],
-    back: 'Барлық бағыттар', pending: 'Әзірленуде', cardWord: 'материал', training: 'Мамандарға арналған оқу',
+    back: 'Барлық бағыттар', pending: 'Әзірленуде', cardWord: 'материал', training: 'Мамандарға арналған оқу', published: 0,
   },
   en: {
     names: ['Guidelines and standards', 'Working with families', 'Assessment and diagnosis', 'Evidence for approaches', 'Ethics and safety', 'Workflows and tools'],
-    back: 'All areas', pending: 'In preparation', cardWord: 'resources', training: 'Training for professionals',
+    back: 'All areas', pending: 'In preparation', cardWord: 'resources', training: 'Training for professionals', published: 0,
   },
 };
 const counts = [3, 3, 4, 3, 3, 4];
@@ -48,7 +48,17 @@ for (const [locale, copy] of Object.entries(expected)) {
   assert.equal((html.match(/class="professional-directory__card"/g) ?? []).length, 6, locale + ': expected six area cards');
   assert.equal((html.match(/class="professional-directory__detail"/g) ?? []).length, 6, locale + ': expected six detail panels');
   assert.equal((html.match(/class="professional-directory__item"/g) ?? []).length, 20, locale + ': expected 20 planned resources');
-  assert.equal((html.match(/class="professional-directory__status"/g) ?? []).length, 20, locale + ': unpublished resources must not be linked');
+  assert.equal((html.match(/class="professional-directory__status"/g) ?? []).length, 20 - copy.published, locale + ': only reviewed published entries should be linked');
+  if (locale === 'ru') {
+    const articleHref = '/central-asia-autism-hub/kz/ru/professionals/kak-rabotat-s-professionalnymi-rekomendaciyami/';
+    assert.ok(html.includes('href="' + articleHref + '"'), 'Russian first professional resource must have a working article link');
+    assert.ok(html.includes('Как работать с профессиональными рекомендациями при аутизме'));
+    const articleHtml = await readFile(path.resolve('dist/kz/ru/professionals/kak-rabotat-s-professionalnymi-rekomendaciyami/index.html'), 'utf8');
+    for (const phrase of ['Практический чек-лист: семь вопросов', 'Strengthening countries', 'Закон Республики Казахстан']) {
+      assert.ok(articleHtml.includes(phrase), 'First professional article missing ' + phrase);
+    }
+    assert.ok(articleHtml.includes('professional-guideline-appraisal.svg'), 'Professional illustration missing');
+  }
   for (const name of copy.names) assert.ok(html.includes(name), locale + ': missing category ' + name);
   ids.forEach((id, i) => {
     assert.ok(html.includes('href="#professional-' + id + '"'), locale + ': missing category target ' + id);
