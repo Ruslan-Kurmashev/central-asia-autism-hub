@@ -1,0 +1,115 @@
+---
+import type { CollectionEntry } from 'astro:content';
+import {
+  kazakhstanDocumentGroups, kazakhstanDocumentCount,
+  type KazakhstanDocumentGroupId, type KazakhstanDocumentGroup,
+} from '../data/kazakhstan-professional-documents';
+import { UI } from '../i18n/ui';
+import { articlePath, localePath, sectionPath } from '../lib/urls';
+import type { Locale } from '../site.config';
+import '../styles/kazakhstan-professional-documents.css';
+
+interface Props {
+  locale: Locale;
+  groupId?: KazakhstanDocumentGroupId;
+  materials: CollectionEntry<'pages'>[];
+}
+const { locale, groupId, materials } = Astro.props;
+const activeGroup = groupId ? kazakhstanDocumentGroups.find((item) => item.id === groupId) : undefined;
+const copy = {
+  ru: {
+    title: 'Документы Казахстана', eyebrow: 'Профессиональная библиотека',
+    intro: 'Документы сгруппированы по сфере применения. Выберите направление, чтобы увидеть план отдельных публикаций по законам, приказам, стандартам и клиническим документам.',
+    planned: 'документов в плане', published: 'Опубликовано',
+    choose: 'Выберите группу документов', documents: 'Материалы группы', preparing: 'Готовится',
+    back: 'Все группы документов',
+    note: 'Это редакционный план, а не реестр действующих нормативных актов. Перед публикацией отдельной статьи проверяются официальный текст, актуальная редакция и область применения документа.',
+  },
+  kk: {
+    title: 'Қазақстан құжаттары', eyebrow: 'Кәсіби ақпараттық кітапхана',
+    intro: 'Құжаттар қолданылу саласына қарай топтастырылған. Заңдар, бұйрықтар, стандарттар және клиникалық құжаттар бойынша жеке материалдар жоспарын көру үшін санатты таңдаңыз.',
+    planned: 'құжат жоспарда', published: 'Жарияланғаны',
+    choose: 'Құжаттар тобын таңдаңыз', documents: 'Топ материалдары', preparing: 'Әзірленуде',
+    back: 'Барлық құжат топтары',
+    note: 'Бұл қолданыстағы құқықтық актілер тізілімі емес, редакциялық жоспар. Әр материал жарияланар алдында ресми мәтін, қолданыстағы редакция және қолданылу аясы тексеріледі.',
+  },
+  en: {
+    title: 'Kazakhstan documents', eyebrow: 'Professional resource library',
+    intro: 'Documents are grouped by subject area. Choose a category to see the planned individual reviews of laws, orders, standards and clinical documents.',
+    planned: 'documents in the roadmap', published: 'Published',
+    choose: 'Choose a document category', documents: 'Resources in this category', preparing: 'In preparation',
+    back: 'All document categories',
+    note: 'This is an editorial roadmap, not a register of laws currently in force. Each document will be checked against its official text, current version and scope before a review is published.',
+  },
+}[locale];
+const overviewPath = localePath(locale, 'professionals/kazakhstan-documents');
+const professionalsPath = sectionPath(locale, 'professionals') + '#professional-guidelines';
+const recordsFor = (group: KazakhstanDocumentGroup) => group.documents.map((document) => ({
+  document, published: materials.find((material) => material.data.translationKey === document.translationKey),
+}));
+const countPublished = (group: KazakhstanDocumentGroup) => recordsFor(group).filter((entry) => Boolean(entry.published)).length;
+const totalPublished = kazakhstanDocumentGroups.reduce((sum, group) => sum + countPublished(group), 0);
+const iconSvg = {
+  education: '<svg viewBox="0 0 64 64" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"><path d="M7 15 32 5l25 10-25 10L7 15z" fill="#ffe5b0" stroke="#174b98" stroke-width="2.8"/><path d="M15 24v19c11 7 23 7 34 0V24" fill="#edf4fc" stroke="#174b98" stroke-width="2.8"/><path d="M57 17v22M49 52H15" fill="none" stroke="#2266dd" stroke-width="3" stroke-linecap="round"/></svg>',
+  healthcare: '<svg viewBox="0 0 64 64" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"><rect x="7" y="12" width="50" height="45" rx="8" fill="#edf4fc" stroke="#174b98" stroke-width="2.8"/><path d="M25 19h14v11h11v12H39v11H25V42H14V30h11z" fill="#ffe5b0" stroke="#2266dd" stroke-width="2.8"/></svg>',
+  psychology: '<svg viewBox="0 0 64 64" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"><path d="M14 9h36v36H31L18 56V45h-4a7 7 0 0 1-7-7V16a7 7 0 0 1 7-7z" fill="#edf4fc" stroke="#174b98" stroke-width="2.8"/><path d="M20 24c3-7 12-7 12 0 0-7 9-7 12 0 2 7-12 16-12 16S18 31 20 24z" fill="#ffe5b0" stroke="#2266dd" stroke-width="2.5"/></svg>',
+  social: '<svg viewBox="0 0 64 64" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"><circle cx="20" cy="19" r="8" fill="#ffe5b0" stroke="#174b98" stroke-width="2.8"/><circle cx="44" cy="19" r="8" fill="#edf4fc" stroke="#174b98" stroke-width="2.8"/><path d="M4 56v-8c0-8 7-14 16-14s16 6 16 14v8z" fill="#edf4fc" stroke="#174b98" stroke-width="2.8"/><path d="M30 56v-8c0-8 5-14 14-14s16 6 16 14v8z" fill="#ffe5b0" stroke="#174b98" stroke-width="2.8"/></svg>',
+  rights: '<svg viewBox="0 0 64 64" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"><path d="M32 5 53 13v17c0 14-9 23-21 29C20 53 11 44 11 30V13z" fill="#edf4fc" stroke="#174b98" stroke-width="2.8"/><path d="m21 32 8 8 16-18" stroke="#2266dd" stroke-width="4" fill="none" stroke-linecap="round"/><circle cx="46" cy="15" r="6" fill="#e7a930"/></svg>',
+} as const;
+---
+<div class="kz-documents">
+  <nav class="kz-documents__breadcrumb" aria-label={locale === 'ru' ? 'Навигационная цепочка' : locale === 'kk' ? 'Навигация тізбегі' : 'Breadcrumb'}>
+    <a href={localePath(locale)}>{UI[locale].homeLabel}</a><span aria-hidden="true">/</span>
+    <a href={professionalsPath}>{UI[locale].sections.professionals.title}</a><span aria-hidden="true">/</span>
+    {activeGroup ? (
+      <><a href={overviewPath}>{copy.title}</a><span aria-hidden="true">/</span>
+      <span aria-current="page">{activeGroup.title[locale]}</span></>
+    ) : <span aria-current="page">{copy.title}</span>}
+  </nav>
+  <header class="kz-documents__hero">
+    <p class="kz-documents__eyebrow">{copy.eyebrow}</p>
+    <h1>{activeGroup ? activeGroup.title[locale] : copy.title}</h1>
+    <p class="kz-documents__intro">{activeGroup ? activeGroup.description[locale] : copy.intro}</p>
+    <p class="kz-documents__count">
+      <strong>{activeGroup ? activeGroup.documents.length : kazakhstanDocumentCount}</strong> {copy.planned}
+      <span aria-hidden="true">·</span>
+      {copy.published}: <strong>{activeGroup ? countPublished(activeGroup) : totalPublished}</strong>
+    </p>
+  </header>
+  {activeGroup ? (
+    <section aria-labelledby="kz-documents-articles-title">
+      <a class="kz-documents__back" href={overviewPath}><span aria-hidden="true">←</span> {copy.back}</a>
+      <h2 id="kz-documents-articles-title">{copy.documents}</h2>
+      <ol class="kz-documents__list">
+        {recordsFor(activeGroup).map(({ document, published }, index) => (
+          <li class="kz-documents__entry">
+            <span class="kz-documents__index" aria-hidden="true">{index + 1}</span>
+            {published ? (
+              <a class="kz-documents__article-link" href={articlePath(locale, 'professionals', published.data.slug)}>
+                <strong>{published.data.title}</strong><span class="kz-documents__arrow" aria-hidden="true">→</span>
+              </a>
+            ) : (
+              <div class="kz-documents__pending"><strong>{document.title[locale]}</strong><span class="kz-documents__status">{copy.preparing}</span></div>
+            )}
+          </li>
+        ))}
+      </ol>
+    </section>
+  ) : (
+    <section aria-labelledby="kz-documents-groups-title">
+      <h2 id="kz-documents-groups-title">{copy.choose}</h2>
+      <div class="kz-documents__grid">
+        {kazakhstanDocumentGroups.map((group, index) => (
+          <a class="kz-documents__card" href={localePath(locale, 'professionals/kazakhstan-documents/' + group.id)}>
+            <span class="kz-documents__icon" set:html={iconSvg[group.icon]}></span>
+            <span class="kz-documents__ordinal">{String(index + 1).padStart(2, '0')}</span>
+            <strong class="kz-documents__card-title">{group.title[locale]}</strong>
+            <span class="kz-documents__card-description">{group.description[locale]}</span>
+            <span class="kz-documents__card-footer"><span>{group.documents.length} {copy.planned}</span><span class="kz-documents__arrow" aria-hidden="true">→</span></span>
+          </a>
+        ))}
+      </div>
+    </section>
+  )}
+  <p class="kz-documents__note">{copy.note}</p>
+</div>
