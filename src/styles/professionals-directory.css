@@ -254,6 +254,32 @@
   font-weight: 750;
   line-height: 1.5;
 }
+.professional-directory__subgroup-link {
+  display: inline-flex;
+  gap: .6rem;
+  align-items: center;
+  color: var(--color-primary-dark);
+  text-decoration: none;
+}
+.professional-directory__subgroup-link:hover {
+  text-decoration: underline;
+  text-underline-offset: .2em;
+}
+.professional-directory__subgroup-link:focus-visible {
+  outline: 3px solid var(--color-primary);
+  outline-offset: 3px;
+}
+.professional-directory__item--folder {
+  border-color: var(--color-primary);
+  background: var(--color-surface-soft);
+}
+.professional-directory__item--folder .professional-directory__item-title small {
+  display: block;
+  margin-top: .35rem;
+  color: var(--color-muted);
+  font-size: var(--type-caption);
+  font-weight: 600;
+}
 .professional-directory__item {
   display: flex;
   min-width: 0;

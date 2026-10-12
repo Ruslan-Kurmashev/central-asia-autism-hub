@@ -1,0 +1,34 @@
+---
+import { getCollection } from 'astro:content';
+import KazakhstanProfessionalDocuments from '../../../../../components/KazakhstanProfessionalDocuments.astro';
+import { UI } from '../../../../../i18n/ui';
+import BaseLayout from '../../../../../layouts/BaseLayout.astro';
+import { SITE, SUPPORTED_LOCALES, type Locale } from '../../../../../site.config';
+
+export function getStaticPaths() {
+  return SUPPORTED_LOCALES.map((locale) => ({ params: { lang: locale }, props: { locale } }));
+}
+interface Props { locale: Locale; }
+const { locale } = Astro.props;
+const materials = await getCollection('pages', ({ data }) =>
+  data.language === locale && data.section === 'professionals' &&
+  !data.draft && data.translationStatus !== 'pending' &&
+  Boolean(data.publishedAt) && Boolean(data.updatedAt),
+);
+const title = locale === 'ru' ? 'Документы Казахстана' : locale === 'kk' ? 'Қазақстан құжаттары' : 'Kazakhstan documents';
+const description = locale === 'ru'
+  ? 'Пять тематических групп нормативных и профессиональных документов Казахстана для специалистов.'
+  : locale === 'kk'
+    ? 'Мамандарға арналған Қазақстанның нормативтік және кәсіби құжаттарының бес тақырыптық тобы.'
+    : 'Five thematic groups of Kazakhstan legal and professional documents for specialists.';
+---
+<BaseLayout
+  title={title + ' - ' + SITE.name}
+  description={description}
+  locale={locale}
+  currentSection="professionals"
+  alternatePath="professionals/kazakhstan-documents"
+  bodyClass="professional-library-body"
+>
+  <KazakhstanProfessionalDocuments locale={locale} materials={materials} />
+</BaseLayout>

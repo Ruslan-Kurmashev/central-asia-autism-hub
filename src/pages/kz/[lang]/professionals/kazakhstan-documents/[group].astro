@@ -1,0 +1,35 @@
+---
+import { getCollection } from 'astro:content';
+import KazakhstanProfessionalDocuments from '../../../../../components/KazakhstanProfessionalDocuments.astro';
+import { kazakhstanDocumentGroups, type KazakhstanDocumentGroupId } from '../../../../../data/kazakhstan-professional-documents';
+import BaseLayout from '../../../../../layouts/BaseLayout.astro';
+import { SITE, SUPPORTED_LOCALES, type Locale } from '../../../../../site.config';
+
+export function getStaticPaths() {
+  return SUPPORTED_LOCALES.flatMap((locale) =>
+    kazakhstanDocumentGroups.map((group) => ({
+      params: { lang: locale, group: group.id },
+      props: { locale, groupId: group.id },
+    })),
+  );
+}
+interface Props { locale: Locale; groupId: KazakhstanDocumentGroupId; }
+const { locale, groupId } = Astro.props;
+const group = kazakhstanDocumentGroups.find((item) => item.id === groupId);
+if (!group) throw new Error('Unknown Kazakhstan document category: ' + groupId);
+const materials = await getCollection('pages', ({ data }) =>
+  data.language === locale && data.section === 'professionals' &&
+  !data.draft && data.translationStatus !== 'pending' &&
+  Boolean(data.publishedAt) && Boolean(data.updatedAt),
+);
+---
+<BaseLayout
+  title={group.title[locale] + ' - ' + SITE.name}
+  description={group.description[locale]}
+  locale={locale}
+  currentSection="professionals"
+  alternatePath={'professionals/kazakhstan-documents/' + groupId}
+  bodyClass="professional-library-body"
+>
+  <KazakhstanProfessionalDocuments locale={locale} groupId={groupId} materials={materials} />
+</BaseLayout>

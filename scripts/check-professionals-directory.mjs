@@ -21,7 +21,7 @@ const expected = {
     back: 'All areas', pending: 'In preparation', cardWord: 'resources', training: 'Training for professionals', published: 0,
   },
 };
-const counts = [6, 3, 4, 3, 3, 4];
+const counts = [30, 3, 4, 3, 3, 4];
 const ids = ['guidelines', 'family-communication', 'assessment-context', 'evidence-support', 'ethics', 'practice-tools'];
 // CSS emitted assets are content-hashed. The HTML must reference our directory stylesheet
 // indirectly via Astro's static asset pipeline.
@@ -47,8 +47,8 @@ for (const [locale, copy] of Object.entries(expected)) {
   assert.ok(!html.includes('PRO-G01') && !html.includes('PRO-E03'), locale + ': internal editorial IDs leaked');
   assert.equal((html.match(/class="professional-directory__card"/g) ?? []).length, 6, locale + ': expected six area cards');
   assert.equal((html.match(/class="professional-directory__detail"/g) ?? []).length, 6, locale + ': expected six detail panels');
-  assert.equal((html.match(/class="professional-directory__item"/g) ?? []).length, 23, locale + ': expected 23 planned resources');
-  assert.equal((html.match(/class="professional-directory__status"/g) ?? []).length, 23 - copy.published, locale + ': only reviewed published entries should be linked');
+  assert.equal((html.match(/class="professional-directory__item"/g) ?? []).length, 22, locale + ': expected 22 direct resources plus a separate Kazakhstan document hub');
+  assert.equal((html.match(/class="professional-directory__status"/g) ?? []).length, 22 - copy.published, locale + ': only reviewed published entries should be linked');
   if (locale === 'ru') {
     const articleHref = '/central-asia-autism-hub/kz/ru/professionals/kak-rabotat-s-professionalnymi-rekomendaciyami/';
     assert.ok(html.includes('href="' + articleHref + '"'), 'Russian first professional resource must have a working article link');
@@ -100,5 +100,32 @@ for (const [locale, copy] of Object.entries(expected)) {
   });
   assert.ok(!html.includes('href="undefined"'), locale + ': invalid href');
   assert.ok(!html.includes('href="/kz/'), locale + ': unprefixed locale path');
-  console.log('Professional directory ' + locale + ': 6 categories; 23 planned entries; unpublished resources not linked.');
+  const base = '/central-asia-autism-hub/kz/' + locale + '/professionals/kazakhstan-documents/';
+  const hubHref = base;
+  assert.ok(html.includes('href="' + hubHref + '"'), locale + ': Kazakhstan subgroup must open five-category hub');
+  assert.equal((html.match(/professional-directory__item--folder/g) ?? []).length, 1, locale + ': Kazakhstan must display one category link rather than a legal article placeholder');
+  assert.ok(!html.includes('Правовые требования к психологической деятельности в Казахстане'), locale + ': old Kazakhstan placeholder remains on professional landing');
+
+  const hub = await readFile(path.resolve('dist/kz', locale, 'professionals/kazakhstan-documents/index.html'), 'utf8');
+  assert.equal((hub.match(/class="kz-documents__card"/g) ?? []).length, 5, locale + ': expected five Kazakhstan document categories');
+  assert.ok(hub.includes('<strong>25</strong>'), locale + ': roadmap must state 25 planned documents');
+  assert.ok(hub.includes('0</strong>'), locale + ': no unpublished Kazakhstan article may be counted as published');
+  const categoryData = [
+    ['education-support', 8],
+    ['healthcare-diagnosis', 5],
+    ['psychological-practice', 3],
+    ['social-support', 5],
+    ['rights-and-data', 4],
+  ];
+  for (const [category, expectedCount] of categoryData) {
+    const href = base + category + '/';
+    assert.ok(hub.includes('href="' + href + '"'), locale + ': missing category link: ' + category);
+    const categoryHtml = await readFile(path.resolve('dist/kz', locale, 'professionals/kazakhstan-documents', category, 'index.html'), 'utf8');
+    assert.ok(categoryHtml.includes('href="' + hubHref + '"'), locale + ': missing back-to-categories link: ' + category);
+    assert.equal((categoryHtml.match(/class="kz-documents__entry"/g) ?? []).length, expectedCount, locale + ': incorrect document count for ' + category);
+    assert.equal((categoryHtml.match(/class="kz-documents__status"/g) ?? []).length, expectedCount, locale + ': planned documents must be marked unpublished for ' + category);
+    assert.equal((categoryHtml.match(/class="kz-documents__article-link"/g) ?? []).length, 0, locale + ': unpublished documents cannot link to missing articles');
+    assert.ok(!categoryHtml.includes('href="undefined"'), locale + ': undefined link in ' + category);
+  }
+  console.log('Professional directory ' + locale + ': 6 directions, 5 Kazakhstan categories and 25 unlinked planned document reviews.');
 }
