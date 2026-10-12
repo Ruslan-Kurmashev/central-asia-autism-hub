@@ -50,11 +50,11 @@ for (const [locale, copy] of Object.entries(expected)) {
   assert.equal((html.match(/class="professional-directory__item"/g) ?? []).length, 20, locale + ': expected 20 planned resources');
   assert.equal((html.match(/class="professional-directory__status"/g) ?? []).length, 20 - copy.published, locale + ': only reviewed published entries should be linked');
   if (locale === 'ru') {
-    const articleHref = '/central-asia-autism-hub/kz/ru/professionals/kak-rabotat-s-professionalnymi-rekomendaciyami/';
+    const articleHref = '/central-asia-autism-hub/kz/ru/professionals/kak-rabotat-s-professionalnymi-rekomendatsiyami/';
     assert.ok(html.includes('href="' + articleHref + '"'), 'Russian first professional resource must have a working article link');
     assert.ok(html.includes('Как работать с профессиональными рекомендациями при аутизме'));
-    const articleHtml = await readFile(path.resolve('dist/kz/ru/professionals/kak-rabotat-s-professionalnymi-rekomendaciyami/index.html'), 'utf8');
-    for (const phrase of ['Практический чек-лист: семь вопросов', 'Strengthening countries', 'Закон Республики Казахстан']) {
+    const articleHtml = await readFile(path.resolve('dist/kz/ru/professionals/kak-rabotat-s-professionalnymi-rekomendatsiyami/index.html'), 'utf8');
+    for (const phrase of ['Чек-лист: семь вопросов', 'Strengthening countries', 'Закон Республики Казахстан']) {
       assert.ok(articleHtml.includes(phrase), 'First professional article missing ' + phrase);
     }
     assert.ok(articleHtml.includes('professional-guideline-appraisal.svg'), 'Professional illustration missing');
