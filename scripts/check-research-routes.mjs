@@ -33,6 +33,8 @@ function metadata(markdown, file) {
     section: field('section'),
     slug: field('slug'),
     sourceUrl: field('sourceUrl'),
+    journal: field('journalOrOrganisation'),
+    publicationYear: field('publicationYear'),
   };
 }
 
@@ -81,8 +83,23 @@ for (const file of await collect(researchFolder)) {
     path.join(buildFolder, 'central-asia-autism-hub', indexRelative),
   ]);
 
-  if (!indexPath || !(await readFile(indexPath, 'utf8')).includes(`${info.slug}/`)) {
-    errors.push(`Research article not linked from its section: ${relative}`);
+  if (!indexPath) {
+    errors.push(`Missing research section index for ${relative}`);
+  } else {
+    const listing = await readFile(indexPath, 'utf8');
+    if (!listing.includes(`${info.slug}/`)) {
+      errors.push(`Research article not linked from its section: ${relative}`);
+    }
+    if (!listing.includes('research-section-body') ||
+        !listing.includes('section-v2__research-source') ||
+        !listing.includes(info.journal) ||
+        !listing.includes(info.publicationYear)) {
+      errors.push(`Missing research section type treatment or source journal/year: ${relative}`);
+    }
+  }
+
+  if (!html.includes('research-article-body')) {
+    errors.push(`Missing research long-form typography class: ${relative}`);
   }
 
   checked += 1;

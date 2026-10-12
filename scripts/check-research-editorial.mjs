@@ -6,6 +6,7 @@ import process from 'node:process';
 const directory = path.join(process.cwd(), 'src', 'content', 'research');
 const errors = [];
 let published = 0;
+let headingsChecked = 0;
 
 function field(frontmatter, key) {
   const row = frontmatter.match(new RegExp('^' + key + ':[ \t]*(.*)$', 'm'));
@@ -25,6 +26,44 @@ for (const name of await readdir(directory)) {
   const [, header, body] = match;
   if (field(header, 'draft') !== 'false') continue;
   published += 1;
+
+  if (field(header, 'section') !== 'research' || !['ru', 'kk', 'en'].includes(field(header, 'language'))) {
+    errors.push(name + ': published research entry has unexpected section or language');
+  }
+
+  // ArticleLayout renders the only H1. Published research prose begins at H2.
+  // Exclude fenced code blocks from semantic heading checks.
+  let codeFence = null;
+  const headings = [];
+  for (const [index, line] of body.split(/\r?\n/).entries()) {
+    const fence = line.match(/^\s*(`{3,}|~{3,})/);
+    if (fence) {
+      if (!codeFence) codeFence = fence[1][0];
+      else if (codeFence === fence[1][0]) codeFence = null;
+      continue;
+    }
+    if (codeFence) continue;
+    const heading = line.match(/^ {0,3}(#{1,6})[ \t]+(.+?)\s*$/);
+    if (heading) headings.push({ level: heading[1].length, text: heading[2], line: index + 1 });
+  }
+  if (!headings.length || headings[0].level !== 2) {
+    errors.push(name + ': article body must use semantic H2 sections');
+  }
+  for (let i = 0; i < headings.length; i++) {
+    const current = headings[i];
+    headingsChecked++;
+    if (current.level === 1) errors.push(name + ':' + current.line + ': duplicate H1 in article body');
+    if (i && current.level > headings[i - 1].level + 1) {
+      errors.push(name + ':' + current.line + ': skipped H' + headings[i - 1].level + ' to H' + current.level);
+    }
+  }
+  if (field(header, 'language') === 'ru' &&
+      (!headings.length || headings[headings.length - 1].text !== 'Оригинальное научное исследование')) {
+    errors.push(name + ': original scientific study must be the final section heading');
+  }
+  if (/<(?:h1|font)\b/i.test(body) || /font-(?:size|family)\s*:/i.test(body)) {
+    errors.push(name + ': inline or duplicated heading typography is not allowed');
+  }
 
   for (const key of [
     'title', 'slug', 'featuredImage', 'featuredImageAlt',
@@ -118,5 +157,5 @@ if (errors.length > 0) {
   for (const item of errors) console.error(item);
   process.exitCode = 1;
 } else {
-  console.log('Research editorial QA passed: ' + published + ' published articles with primary sources and image metadata.');
+  console.log('Research editorial QA passed: ' + published + ' published articles, ' + headingsChecked + ' semantic headings, with primary sources and image metadata.');
 }

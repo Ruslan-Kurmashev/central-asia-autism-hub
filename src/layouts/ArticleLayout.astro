@@ -83,7 +83,7 @@ const researchLabel: Record<Locale, string> = {
   currentSection={data.section}
   alternatePath={data.section}
   alternatePaths={alternatePaths}
-  bodyClass={useArticleV2 ? (data.section === 'parents' ? 'article-v2 parents-article-body' : 'article-v2') : undefined}
+  bodyClass={useArticleV2 ? (data.section === 'parents' ? 'article-v2 parents-article-body' : data.section === 'research' ? 'article-v2 research-article-body' : 'article-v2') : undefined}
 >
   {
     useArticleV2 ? (
@@ -118,7 +118,9 @@ const researchLabel: Record<Locale, string> = {
                     href={researchDetails.featuredImageSourceUrl}
                     target="_blank"
                     rel="noopener noreferrer"
-                    aria-label={locale === 'ru' ? 'Открыть оригинальный рисунок исследования' : 'Open original research figure'}
+                    aria-label={researchDetails.featuredImageSourceUrl.includes('commons.wikimedia.org')
+                      ? (locale === 'ru' ? 'Открыть страницу источника иллюстрации' : locale === 'kk' ? 'Иллюстрация дереккөзінің бетін ашу' : 'Open the illustration source page')
+                      : (locale === 'ru' ? 'Открыть оригинальный рисунок исследования' : locale === 'kk' ? 'Зерттеудің бастапқы суретін ашу' : 'Open the original research figure')}
                   >
                     <img
                       src={data.featuredImage}
