@@ -769,3 +769,47 @@
   outline: 3px solid var(--article-blue-dark);
   outline-offset: 3px;
 }
+
+/* Parents articles: consistent rhythm for long lists, notes and comparison tables. */
+.article-v2.parents-article-body .article-v2__body ul,
+.article-v2.parents-article-body .article-v2__body ol {
+  padding-inline-start: 1.65rem;
+}
+
+.article-v2.parents-article-body .article-v2__body li {
+  padding-block: 0.15rem;
+  line-height: var(--leading-reading);
+}
+
+.article-v2.parents-article-body .article-v2__body li + li {
+  margin-top: 0.28rem;
+}
+
+.article-v2.parents-article-body .article-v2__body blockquote {
+  font-size: var(--type-reading);
+  line-height: var(--leading-reading);
+}
+
+.article-v2.parents-article-body .article-v2__body th,
+.article-v2.parents-article-body .article-v2__body td {
+  font-size: var(--type-control);
+  line-height: 1.55;
+  overflow-wrap: anywhere;
+}
+
+@media (max-width: 38rem) {
+  /* At mobile width and browser zoom, stack table labels over values instead
+     of forcing two tiny text columns inside a single data cell. */
+  .article-v2.parents-article-body .article-body table[data-mobile-cards='true'] td {
+    display: block;
+    padding: 0.9rem 1rem;
+  }
+
+  .article-v2.parents-article-body .article-body table[data-mobile-cards='true'] td::before {
+    display: block;
+    margin-bottom: 0.35rem;
+    color: var(--article-ink);
+    font-size: var(--type-small);
+    line-height: 1.45;
+  }
+}
