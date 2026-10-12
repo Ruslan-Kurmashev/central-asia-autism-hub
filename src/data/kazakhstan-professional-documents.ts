@@ -75,7 +75,7 @@ export const kazakhstanDocumentGroups: KazakhstanDocumentGroup[] = [
       document('paediatric-care-standard-11','P0','Приказ № 11: стандарт организации педиатрической помощи','№ 11 бұйрық: педиатриялық көмекті ұйымдастыру стандарты','Order No. 11: standard for paediatric care'),
       document('mental-health-standard-224','P0','Приказ № ҚР ДСМ-224/2020: помощь в области психического здоровья','№ ҚР ДСМ-224/2020 бұйрық: психикалық денсаулық саласындағы көмек','Order No. ҚР ДСМ-224/2020: mental healthcare services'),
       document('preventive-examinations-264','P1','Приказ № ҚР ДСМ-264/2020: профилактические медицинские осмотры','№ ҚР ДСМ-264/2020 бұйрық: профилактикалық медициналық қарап-тексеру','Order No. ҚР ДСМ-264/2020: preventive medical examinations'),
-      document('autism-clinical-protocol','P0','Клинический протокол «Аутизм»: проверка актуальной редакции','«Аутизм» клиникалық хаттамасы: қолданыстағы редакциясын тексеру','Autism clinical protocol: current-version verification required'),
+      document('autism-clinical-protocol','P0','Клинический протокол по РАС (2021): разбор и проверка статуса','Аутизм спектрі бұзылыстарының клиникалық хаттамасы (2021): шолу және мәртебесін тексеру','Autism spectrum clinical protocol (2021): review and status verification'),
     ],
   },
   {
