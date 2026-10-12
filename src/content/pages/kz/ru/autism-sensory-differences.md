@@ -33,7 +33,6 @@ sources:
   - title: "Sensory differences"
     url: "https://www.autismcentral.nhs.uk/guidance/sensory-differences"
     organisation: "Autism Central, NHS-supported programme"
-    publicationYear: 2026
     note: "Описание индивидуальных различий в обработке звуков, прикосновений, запахов и других ощущений."
     accessedAt: 2026-10-12
   - title: "Autism spectrum disorder in under 19s: support and management - Recommendations"
