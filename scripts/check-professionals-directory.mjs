@@ -54,7 +54,7 @@ for (const [locale, copy] of Object.entries(expected)) {
     assert.ok(html.includes('href="' + articleHref + '"'), 'Russian first professional resource must have a working article link');
     assert.ok(html.includes('Как работать с профессиональными рекомендациями при аутизме'));
     const articleHtml = await readFile(path.resolve('dist/kz/ru/professionals/kak-rabotat-s-professionalnymi-rekomendaciyami/index.html'), 'utf8');
-    for (const phrase of ['Практический чек-лист: семь вопросов', 'Strengthening countries', 'AGREE II', 'Международные документы и Казахстан']) {
+    for (const phrase of ['Чек-лист: семь вопросов', 'Strengthening countries', 'AGREE II', 'Проверьте применимость в Казахстане и собственную компетенцию']) {
       assert.ok(articleHtml.includes(phrase), 'First professional article missing ' + phrase);
     }
     assert.ok(articleHtml.includes('professional-guideline-appraisal.svg'), 'Professional illustration missing');
