@@ -25,8 +25,8 @@ const text = {
     back: 'Все направления',
     preparing: 'Готовится',
     additional: 'Дополнительные опубликованные материалы',
-    kzCategories: '5 тематических групп',
-    kzDocs: '25 документов в плане',
+    kzCategories: 'тематических групп',
+    kzDocs: 'документов в плане',
   },
   kk: {
     eyebrow: 'Кәсіби ақпараттық кітапхана',
@@ -40,8 +40,8 @@ const text = {
     back: 'Барлық бағыттар',
     preparing: 'Әзірленуде',
     additional: 'Қосымша жарияланған материалдар',
-    kzCategories: '5 тақырыптық топ',
-    kzDocs: 'Жоспарда 25 құжат',
+    kzCategories: 'тақырыптық топ',
+    kzDocs: 'құжат жоспарда',
   },
   en: {
     eyebrow: 'Professional resource library',
@@ -55,8 +55,8 @@ const text = {
     back: 'All areas',
     preparing: 'In preparation',
     additional: 'Additional published resources',
-    kzCategories: '5 document categories',
-    kzDocs: '25 planned documents',
+    kzCategories: 'document categories',
+    kzDocs: 'planned documents',
   },
 } as const;
 const copy = text[locale];
@@ -264,7 +264,7 @@ const forGroup = (group: Group) => {
                   </li>
                   <li class="professional-directory__item professional-directory__item--folder">
                     <a class="professional-directory__item-link" href={kazakhstanHubHref}>
-                      <span class="professional-directory__item-title">{copy.kzCategories} <small>{copy.kzDocs}</small></span>
+                      <span class="professional-directory__item-title">{kazakhstanDocumentGroups.length} {copy.kzCategories} <small>{kazakhstanDocumentCount} {copy.kzDocs}</small></span>
                       <span class="professional-directory__item-arrow" aria-hidden="true">→</span>
                     </a>
                   </li>
