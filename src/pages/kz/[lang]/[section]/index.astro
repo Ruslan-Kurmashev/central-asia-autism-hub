@@ -7,7 +7,7 @@ import ProfessionalDirectory from '../../../../components/ProfessionalDirectory.
 import { CONTENT_UI, DATE_LOCALES } from '../../../../i18n/content';
 import { UI } from '../../../../i18n/ui';
 import BaseLayout from '../../../../layouts/BaseLayout.astro';
-import { articlePath, localePath } from '../../../../lib/urls';
+import { articlePath, localePath, sitePath } from '../../../../lib/urls';
 import {
   SECTIONS,
   SITE,
@@ -445,12 +445,21 @@ function russianMaterialWord(count: number) {
                           </a>
                           {group.glossaryCount > 0 && materialIndex === 0 && (
                             <a
-                              class="section-v2__article-row"
+                              class="section-v2__article-row section-v2__article-row--image"
                               href={localePath(locale, 'parents/glossary')}
                             >
                               <span class="section-v2__article-index" aria-hidden="true">
                                 02
                               </span>
+                              <img
+                                class="section-v2__article-thumb"
+                                src={`${sitePath()}images/glossary/terminology-desk.webp`}
+                                alt=""
+                                width="96"
+                                height="72"
+                                loading="lazy"
+                                decoding="async"
+                              />
                               <span class="section-v2__article-copy">
                                 <strong>Словарь терминов</strong>
                                 <span>217 понятий об аутизме с понятными объяснениями, поиском по словам и тематическими категориями.</span>
