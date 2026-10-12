@@ -2,7 +2,7 @@
  * Published editorial photograph coverage audit.
  *
  * Every published page, in each supported language, must display a locally
- * hosted, documented image with descriptive alternative text. This prevents
+ * hosted, documented photo or original SVG with descriptive alternative text. This prevents
  * silent image omissions, missing downloaded assets and broken article heroes.
  * The original first-wave parent photographs must also remain distinct.
  */
@@ -67,8 +67,17 @@ for (const locale of ['ru', 'en', 'kk']) {
     assert.ok(localFile.startsWith(publicDir + path.sep),
       `Unsafe editorial image path: ${article}`);
     const image = await stat(localFile);
-    assert.ok(image.isFile() && image.size > 12000,
-      `Missing, empty or truncated editorial photograph: ${article}: ${src}`);
+    const isVector = path.extname(localFile).toLowerCase() === '.svg';
+    assert.ok(image.isFile() && (isVector ? image.size > 600 : image.size > 12000),
+      `Missing, empty or truncated editorial image: ${article}: ${src}`);
+    if (isVector) {
+      const svg = await readFile(localFile, 'utf8');
+      assert.match(svg, /<svg\\b/i, `Invalid SVG image: ${article}`);
+      assert.match(svg, /<title\\b/i, `SVG lacks title: ${article}`);
+      assert.match(svg, /<desc\\b/i, `SVG lacks description: ${article}`);
+      assert.ok(!/<script\\b|onload\\s*=|javascript:|<foreignObject\\b/i.test(svg),
+        `Unsafe SVG content: ${article}`);
+    }
     assert.ok(documentation.includes(path.basename(localFile)),
       `Image provenance not documented: ${article}: ${src}`);
 
@@ -81,12 +90,12 @@ for (const locale of ['ru', 'en', 'kk']) {
   }
   totals[locale] = { published, withImages, parents };
   assert.equal(withImages, published,
-    `Published ${locale} articles lacking a featured photograph`);
+    `Published ${locale} articles lacking a featured image`);
 }
 
 assert.equal(firstWave.size, requiredDistinct.length,
   'First-wave editorial images are not complete or distinct');
 for (const [locale, result] of Object.entries(totals)) {
-  console.log(`${locale}: ${result.withImages}/${result.published} published pages include verified local photographs (${result.parents} parent articles).`);
+  console.log(`${locale}: ${result.withImages}/${result.published} published pages include verified local images (${result.parents} parent articles).`);
 }
-console.log('All published content pages have verified, documented images and alt text.');
+console.log('All published content pages have verified, documented photos or SVGs and alt text.');
