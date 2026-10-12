@@ -109,7 +109,7 @@ for (const [locale, copy] of Object.entries(expected)) {
   const hub = await readFile(path.resolve('dist/kz', locale, 'professionals/kazakhstan-documents/index.html'), 'utf8');
   assert.equal((hub.match(/class="kz-documents__card"/g) ?? []).length, 5, locale + ': expected five Kazakhstan document categories');
   assert.ok(hub.includes('<strong>25</strong>'), locale + ': roadmap must state 25 planned documents');
-  const kazakhDocumentPublicationCount = locale === 'ru' ? 13 : 0;
+  const kazakhDocumentPublicationCount = locale === 'ru' ? 16 : 0;
   assert.ok(hub.includes('Опубликовано: <strong>' + kazakhDocumentPublicationCount + '</strong>') ||
     hub.includes((locale === 'en' ? 'Published' : locale === 'kk' ? 'Жарияланғаны' : 'Опубликовано') + ': <strong>' + kazakhDocumentPublicationCount + '</strong>'),
     locale + ': published Kazakhstan article count is incorrect');
@@ -126,7 +126,7 @@ for (const [locale, copy] of Object.entries(expected)) {
     const categoryHtml = await readFile(path.resolve('dist/kz', locale, 'professionals/kazakhstan-documents', category, 'index.html'), 'utf8');
     assert.ok(categoryHtml.includes('href="' + hubHref + '"'), locale + ': missing back-to-categories link: ' + category);
     assert.equal((categoryHtml.match(/class="kz-documents__entry"/g) ?? []).length, expectedCount, locale + ': incorrect document count for ' + category);
-    const publishedHere = locale === 'ru' ? (category === 'education-support' ? 8 : category === 'healthcare-diagnosis' ? 5 : 0) : 0;
+    const publishedHere = locale === 'ru' ? (category === 'education-support' ? 8 : category === 'healthcare-diagnosis' ? 5 : category === 'psychological-practice' ? 3 : 0) : 0;
     assert.equal((categoryHtml.match(/class="kz-documents__status"/g) ?? []).length, expectedCount - publishedHere, locale + ': unpublished document statuses incorrect for ' + category);
     assert.equal((categoryHtml.match(/class="kz-documents__article-link"/g) ?? []).length, publishedHere, locale + ': published documents must link to real articles only for ' + category);
     assert.ok(!categoryHtml.includes('href="undefined"'), locale + ': undefined link in ' + category);
