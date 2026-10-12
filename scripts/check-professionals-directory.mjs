@@ -109,7 +109,7 @@ for (const [locale, copy] of Object.entries(expected)) {
   const hub = await readFile(path.resolve('dist/kz', locale, 'professionals/kazakhstan-documents/index.html'), 'utf8');
   assert.equal((hub.match(/class="kz-documents__card"/g) ?? []).length, 5, locale + ': expected five Kazakhstan document categories');
   assert.ok(hub.includes('<strong>25</strong>'), locale + ': roadmap must state 25 planned documents');
-  const kazakhDocumentPublicationCount = locale === 'ru' ? 8 : 0;
+  const kazakhDocumentPublicationCount = locale === 'ru' ? 13 : 0;
   assert.ok(hub.includes('Опубликовано: <strong>' + kazakhDocumentPublicationCount + '</strong>') ||
     hub.includes((locale === 'en' ? 'Published' : locale === 'kk' ? 'Жарияланғаны' : 'Опубликовано') + ': <strong>' + kazakhDocumentPublicationCount + '</strong>'),
     locale + ': published Kazakhstan article count is incorrect');
@@ -126,7 +126,7 @@ for (const [locale, copy] of Object.entries(expected)) {
     const categoryHtml = await readFile(path.resolve('dist/kz', locale, 'professionals/kazakhstan-documents', category, 'index.html'), 'utf8');
     assert.ok(categoryHtml.includes('href="' + hubHref + '"'), locale + ': missing back-to-categories link: ' + category);
     assert.equal((categoryHtml.match(/class="kz-documents__entry"/g) ?? []).length, expectedCount, locale + ': incorrect document count for ' + category);
-    const publishedHere = locale === 'ru' && category === 'education-support' ? 8 : 0;
+    const publishedHere = locale === 'ru' ? (category === 'education-support' ? 8 : category === 'healthcare-diagnosis' ? 5 : 0) : 0;
     assert.equal((categoryHtml.match(/class="kz-documents__status"/g) ?? []).length, expectedCount - publishedHere, locale + ': unpublished document statuses incorrect for ' + category);
     assert.equal((categoryHtml.match(/class="kz-documents__article-link"/g) ?? []).length, publishedHere, locale + ': published documents must link to real articles only for ' + category);
     assert.ok(!categoryHtml.includes('href="undefined"'), locale + ': undefined link in ' + category);
@@ -152,6 +152,30 @@ for (const [locale, copy] of Object.entries(expected)) {
       assert.ok(article.includes('adilet.zan.kz'), id + ': official legislative primary source missing');
       assert.ok(article.includes(phrase), id + ': main editorial content missing');
       assert.ok(article.includes('Паспорт документа'), id + ': primary legal document passport missing');
+    }
+  }
+  if (locale === 'ru') {
+    const healthcare = await readFile(path.resolve('dist/kz/ru/professionals/kazakhstan-documents/healthcare-diagnosis/index.html'), 'utf8');
+    const healthcareDocs = [
+      ['health-code-360', 'kodeks-o-zdorove-naroda-prava-pacientov', 'Права ребёнка и пациента', 'adilet.zan.kz'],
+      ['paediatric-care-standard-11', 'standart-pediatricheskoj-pomoshchi-m-chat-r', 'M-CHAT-R', 'adilet.zan.kz'],
+      ['mental-health-standard-224', 'standart-psihicheskogo-zdorovya-marshrutizaciya', 'Маршрутизация и компетенция', 'adilet.zan.kz'],
+      ['preventive-examinations-264', 'profilakticheskie-medosmotry-detej-prikaz-264-2026', '17 августа 2026', 'adilet.zan.kz'],
+      ['autism-clinical-protocol', 'klinicheskij-protokol-ras-2021-kazahstan', 'официальный', 'medelement.com'],
+    ];
+    for (const [id, slug, phrase, sourceDomain] of healthcareDocs) {
+      const href = '/central-asia-autism-hub/kz/ru/professionals/' + slug + '/';
+      assert.ok(healthcare.includes('href="' + href + '"'), id + ': healthcare category must link published article');
+      assert.ok(!html.includes('href="' + href + '"'), id + ': no duplicate entry in top-level professionals list');
+      const page = await readFile(path.resolve('dist/kz/ru/professionals', slug, 'index.html'), 'utf8');
+      assert.ok(page.includes('kz-healthcare-' + id + '.svg'), id + ': hero illustration absent');
+      assert.ok(page.includes('Паспорт документа'), id + ': document passport absent');
+      assert.ok(page.includes(sourceDomain), id + ': source absent');
+      assert.ok(page.includes(phrase), id + ': key topic absent');
+      if (id === 'autism-clinical-protocol') {
+        assert.ok(page.includes('не подтверждён'), 'Clinical protocol must not be presented as definitively in force');
+        assert.ok(page.includes('2015'), 'Clinical protocol must explain superseded archive version');
+      }
     }
   }
   console.log('Professional directory ' + locale + ': 6 directions, 5 Kazakhstan categories, 25 planned documents and ' + kazakhDocumentPublicationCount + ' locally published reviews.');
