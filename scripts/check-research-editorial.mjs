@@ -27,7 +27,7 @@ for (const name of await readdir(directory)) {
   if (field(header, 'draft') !== 'false') continue;
   published += 1;
 
-  if (field(header, 'section') !== 'research' || field(header, 'language') !== 'ru') {
+  if (field(header, 'section') !== 'research' || !['ru', 'kk', 'en'].includes(field(header, 'language'))) {
     errors.push(name + ': published research entry has unexpected section or language');
   }
 
@@ -57,7 +57,8 @@ for (const name of await readdir(directory)) {
       errors.push(name + ':' + current.line + ': skipped H' + headings[i - 1].level + ' to H' + current.level);
     }
   }
-  if (!headings.length || headings[headings.length - 1].text !== 'Оригинальное научное исследование') {
+  if (field(header, 'language') === 'ru' &&
+      (!headings.length || headings[headings.length - 1].text !== 'Оригинальное научное исследование')) {
     errors.push(name + ': original scientific study must be the final section heading');
   }
   if (/<(?:h1|font)\b/i.test(body) || /font-(?:size|family)\s*:/i.test(body)) {
