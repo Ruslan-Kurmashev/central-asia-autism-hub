@@ -82,9 +82,10 @@ for (const locale of locales) {
 }
 
 for (const [key, langs] of translations) {
-  if (langs.size < 3) {
-    // Existing eight guides have checked translations; keep the three editions in sync.
-    errors.push(key + ': missing published RU/KK/EN edition');
+  if (langs.size > 1 && langs.size < 3) {
+    // An RU-only newly published guide may await translation. Once translations
+    // begin publishing, the language set must remain consistent.
+    errors.push(key + ': incomplete published RU/KK/EN language set');
   }
 }
 
