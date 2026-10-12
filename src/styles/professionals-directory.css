@@ -27,7 +27,6 @@
   margin-inline: 0.3rem;
 }
 .professional-directory__intro {
-  max-width: 54rem;
   margin-bottom: clamp(2rem, 4vw, 3rem);
 }
 .professional-directory__eyebrow {
@@ -38,10 +37,39 @@
   letter-spacing: 0.1em;
   text-transform: uppercase;
 }
-.professional-directory h1 {
+.professional-directory__title-row {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem 2rem;
+}
+.professional-directory h1,
+.professional-directory__detail-title {
   max-width: none;
+  margin: 0;
   font-size: clamp(2.3rem, 4vw, 3.2rem);
+  font-weight: 720;
   line-height: 1.15;
+}
+.professional-directory__training-link {
+  display: inline-flex;
+  flex: none;
+  align-items: center;
+  gap: 0.55rem;
+  color: var(--color-primary-dark);
+  font-size: 0.96rem;
+  font-weight: 740;
+  line-height: 1.45;
+  text-decoration: underline;
+  text-underline-offset: 0.2em;
+}
+.professional-directory__training-link:hover {
+  color: var(--color-primary);
+}
+.professional-directory__training-link:focus-visible {
+  outline: 3px solid var(--color-primary);
+  outline-offset: 3px;
 }
 .professional-directory__lead {
   max-width: 48rem;
@@ -149,13 +177,6 @@
   color: var(--color-primary-dark);
   font-size: 1.3rem;
 }
-.professional-directory__note {
-  max-width: 62rem;
-  margin: 1.5rem 0 2rem;
-  color: var(--color-muted);
-  font-size: 0.82rem;
-  line-height: 1.65;
-}
 .professional-directory__detail {
   display: none;
   scroll-margin-top: 7rem;
@@ -183,9 +204,7 @@
 .professional-directory__back:hover {
   background: var(--color-surface-soft);
 }
-.professional-directory__detail-header {
-  max-width: 49rem;
-}
+
 .professional-directory__detail-header .professional-directory__icon {
   margin-bottom: 1rem;
 }
@@ -197,8 +216,10 @@
   gap: 0.75rem;
   margin: 2.8rem 0 1.1rem;
 }
-.professional-directory__list-heading h2 {
+.professional-directory__list-heading h3 {
   margin: 0;
+  font-size: clamp(1.3rem, 2vw, 1.65rem);
+  font-weight: 750;
 }
 .professional-directory__pill {
   padding: 0.4rem 0.85rem;
@@ -273,9 +294,6 @@
   font-size: 1.3rem;
   color: var(--color-primary);
 }
-.professional-directory .section-boundary {
-  margin-top: 2rem;
-}
 @media (max-width: 54rem) {
   .professional-directory__grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -290,6 +308,13 @@
   }
   .professional-directory__card {
     min-height: 16rem;
+  }
+  .professional-directory__title-row {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+  .professional-directory__training-link {
+    flex: initial;
   }
   .professional-directory__item {
     align-items: flex-start;
