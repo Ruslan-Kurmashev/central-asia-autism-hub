@@ -19,6 +19,12 @@ const availableLanguages = ['ru', 'kk', 'en'];
 for (const [lang, languageLabel] of Object.entries(labels)) {
   const html = await readFile(path.join('dist', 'kz', lang, 'learning', 'index.html'), 'utf8');
   assert.match(html, /<select\b[^>]*\bdata-course-language\b/, `Language filter missing for ${lang}`);
+  const filterPositions = ['language', 'search', 'audience', 'topic']
+    .map((field) => html.indexOf('data-course-' + field, html.indexOf('id="professionals-learning"')));
+  assert.ok(filterPositions.every((position) => position >= 0), `Filter markup incomplete for ${lang}`);
+  assert.ok(filterPositions.every((position, index) => index === 0 || filterPositions[index - 1] < position),
+    `Filter order must be language, search, audience, topic on ${lang}`);
+
   assert.match(html, /<option\b[^>]*value="kk"/, `Kazakh option missing for ${lang}`);
   assert.ok(html.includes(languageLabel), `Kazakh-language label is not localized for ${lang}`);
   assert.ok(!html.includes('data-course-kazakh-shortcut'), `Redundant Kazakh shortcut still present for ${lang}`);
