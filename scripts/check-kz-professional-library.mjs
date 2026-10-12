@@ -25,7 +25,7 @@ const overview = await readFile('dist/kz/ru/professionals/kazakhstan-documents/i
 const siteCss = await readFile('src/styles/article-v2.css', 'utf8');
 const catalogCss = await readFile('src/styles/kazakhstan-professional-documents.css', 'utf8');
 
-assert.ok(overview.includes('25 материалов'), 'Russian overview must describe published reviews, not a publication plan');
+assert.ok(overview.includes('<strong>25</strong> материалов'), 'Russian overview must describe published reviews, not a publication plan');
 assert.ok(!overview.includes('25 документов в плане'), 'Russian overview incorrectly presents published material as pending');
 assert.ok(overview.includes('Опубликовано: <strong>25</strong>'), 'Full Russian catalog must show 25 published reviews');
 assert.ok(siteCss.includes('.article-v2.kz-professionals-document-body .article-v2__body table'),
