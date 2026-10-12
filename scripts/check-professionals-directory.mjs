@@ -10,7 +10,7 @@ import path from 'node:path';
 const expected = {
   ru: {
     names: ['Рекомендации и стандарты', 'Работа с семьями', 'Оценка и диагностика', 'Доказательность методов', 'Этика и безопасность', 'Алгоритмы и инструменты'],
-    back: 'Все направления', pending: 'Готовится', cardWord: 'материала', training: 'Обучение для специалистов', published: 1,
+    back: 'Все направления', pending: 'Готовится', cardWord: 'материала', training: 'Обучение для специалистов', published: 4,
   },
   kk: {
     names: ['Ұсынымдар мен стандарттар', 'Отбасылармен жұмыс', 'Бағалау және диагностика', 'Әдістердің дәлелділігі', 'Этика және қауіпсіздік', 'Алгоритмдер мен құралдар'],
@@ -21,7 +21,7 @@ const expected = {
     back: 'All areas', pending: 'In preparation', cardWord: 'resources', training: 'Training for professionals', published: 0,
   },
 };
-const counts = [3, 3, 4, 3, 3, 4];
+const counts = [6, 3, 4, 3, 3, 4];
 const ids = ['guidelines', 'family-communication', 'assessment-context', 'evidence-support', 'ethics', 'practice-tools'];
 // CSS emitted assets are content-hashed. The HTML must reference our directory stylesheet
 // indirectly via Astro's static asset pipeline.
@@ -47,8 +47,8 @@ for (const [locale, copy] of Object.entries(expected)) {
   assert.ok(!html.includes('PRO-G01') && !html.includes('PRO-E03'), locale + ': internal editorial IDs leaked');
   assert.equal((html.match(/class="professional-directory__card"/g) ?? []).length, 6, locale + ': expected six area cards');
   assert.equal((html.match(/class="professional-directory__detail"/g) ?? []).length, 6, locale + ': expected six detail panels');
-  assert.equal((html.match(/class="professional-directory__item"/g) ?? []).length, 20, locale + ': expected 20 planned resources');
-  assert.equal((html.match(/class="professional-directory__status"/g) ?? []).length, 20 - copy.published, locale + ': only reviewed published entries should be linked');
+  assert.equal((html.match(/class="professional-directory__item"/g) ?? []).length, 23, locale + ': expected 23 planned resources');
+  assert.equal((html.match(/class="professional-directory__status"/g) ?? []).length, 23 - copy.published, locale + ': only reviewed published entries should be linked');
   if (locale === 'ru') {
     const articleHref = '/central-asia-autism-hub/kz/ru/professionals/kak-rabotat-s-professionalnymi-rekomendaciyami/';
     assert.ok(html.includes('href="' + articleHref + '"'), 'Russian first professional resource must have a working article link');
@@ -62,6 +62,29 @@ for (const [locale, copy] of Object.entries(expected)) {
       assert.ok(!articleHtml.includes(documentToKeepSeparate), 'Introductory article contains an individual-document deep dive: ' + documentToKeepSeparate);
     }
   }
+  if (locale === 'ru') {
+    const documents = [
+      { code: 'CG128', slug: 'nice-cg128-diagnostika-autizma-u-detej', phrase: 'Скрининг не равен диагнозу', graphic: 'professional-nice-cg128.svg' },
+      { code: 'CG170', slug: 'nice-cg170-podderzhka-detej-i-podrostkov', phrase: 'Адаптация среды и процессов помощи', graphic: 'professional-nice-cg170.svg' },
+      { code: 'CG142', slug: 'nice-cg142-diagnostika-i-podderzhka-vzroslyh', phrase: 'AQ-10', graphic: 'professional-nice-cg142.svg' },
+    ];
+    for (const document of documents) {
+      const expectedHref = '/central-asia-autism-hub/kz/ru/professionals/' + document.slug + '/';
+      assert.ok(html.includes('href="' + expectedHref + '"'), document.code + ' is missing from the professional directory');
+      const content = await readFile(path.resolve('dist/kz/ru/professionals', document.slug, 'index.html'), 'utf8');
+      assert.ok(content.includes(document.code), document.code + ' number missing');
+      assert.ok(content.includes(document.phrase), document.code + ' content missing: ' + document.phrase);
+      assert.ok(content.includes(document.graphic), document.code + ' illustration missing');
+      assert.ok(content.includes('Казахстан'), document.code + ' local applicability missing');
+    }
+  }
+  const subgroupLabels = locale === 'ru'
+    ? ['Основы работы с рекомендациями', 'Международные клинические руководства', 'Документы Казахстана', 'Междисциплинарная работа']
+    : locale === 'kk'
+      ? ['Ұсынымдармен жұмыс негіздері', 'Халықаралық клиникалық нұсқаулықтар', 'Қазақстан құжаттары', 'Пәнаралық жұмыс']
+      : ['Working with guidelines', 'International clinical guidelines', 'Kazakhstan documents', 'Multidisciplinary coordination'];
+  assert.equal((html.match(/class="professional-directory__subgroup"/g) ?? []).length, 4, locale + ': first category must have four subgroups');
+  for (const label of subgroupLabels) assert.ok(html.includes(label), locale + ': missing professional subgroup: ' + label);
   for (const name of copy.names) assert.ok(html.includes(name), locale + ': missing category ' + name);
   ids.forEach((id, i) => {
     assert.ok(html.includes('href="#professional-' + id + '"'), locale + ': missing category target ' + id);
@@ -74,5 +97,5 @@ for (const [locale, copy] of Object.entries(expected)) {
   });
   assert.ok(!html.includes('href="undefined"'), locale + ': invalid href');
   assert.ok(!html.includes('href="/kz/'), locale + ': unprefixed locale path');
-  console.log('Professional directory ' + locale + ': 6 categories; 20 planned entries; draft resources not linked.');
+  console.log('Professional directory ' + locale + ': 6 categories; 23 planned entries; unpublished resources not linked.');
 }
