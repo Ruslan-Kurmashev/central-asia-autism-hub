@@ -167,7 +167,7 @@ const forGroup = (group: Group) => {
   const extra = records.filter((material) =>
     !matched.some((entry) => entry.record?.data.slug === material.data.slug)
   );
-  return { matched, extra, count: matched.length + extra.length };
+  return { matched, extra, count: group.resources.length + extra.length };
 };
 ---
 
@@ -212,7 +212,6 @@ const forGroup = (group: Group) => {
       </div>
     </section>
     <p class="professional-directory__note">{copy.note}</p>
-    <SectionBoundary locale={locale} section="professionals" />
   </div>
 
   {groups.map((group) => {
@@ -262,8 +261,8 @@ const forGroup = (group: Group) => {
           ))}
         </ol>
         <p class="professional-directory__note">{copy.detailNote}</p>
-        <SectionBoundary locale={locale} section="professionals" />
       </section>
     );
   })}
+  <SectionBoundary locale={locale} section="professionals" />
 </div>
