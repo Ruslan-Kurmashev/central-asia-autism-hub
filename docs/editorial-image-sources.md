@@ -187,3 +187,15 @@ Existing Pexels photographs in this document may be reused on an article only wh
 | --- | --- | --- | --- |
 | `professional-guideline-appraisal.svg` | AutismHub editorial, 2026-10-12 | Original self-hosted SVG illustration | Three checked documents, magnifying glass and verification mark. Uses site palette blue `#2266dd`, navy `#174b98`, gold `#e7a930`, coral `#d96f65`. No third-party assets or identifiable people. Illustration of reviewing professional guidance for PRO-G01; not an official legal document or medical certification. |
 
+
+## Professionals: document-specific clinical guideline illustrations (2026-10-12)
+
+These are original AutismHub editorial SVG assets made for standalone NICE guideline reviews. They are symbolic illustrations of document review and care planning; they reproduce no NICE artwork, have no identifiable people, are self-hosted, and do not constitute official NICE endorsements.
+
+| Local file | Creator and date | Editorial use |
+| --- | --- | --- |
+| `professional-nice-cg128.svg` | AutismHub editorial, 2026-10-12 | NICE CG128 article: document, referral flow and magnifying glass representing multidisciplinary diagnostic assessment. |
+| `professional-nice-cg170.svg` | AutismHub editorial, 2026-10-12 | NICE CG170 article: communication callout and support-plan tasks representing environmental accommodation and coordinated support. |
+| `professional-nice-cg142.svg` | AutismHub editorial, 2026-10-12 | NICE CG142 article: document, personal calendar and check marks representing adult-focused individual planning. |
+
+All use site palette navy `#174b98`, blue `#2266dd`, soft blue `#edf4fc` and gold `#e7a930`. Text alternatives are stored in the corresponding content frontmatter. SVGs include an accessible `title` and `desc`.
