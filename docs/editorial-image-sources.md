@@ -199,3 +199,18 @@ These are original AutismHub editorial SVG assets made for standalone NICE guide
 | `professional-nice-cg142.svg` | AutismHub editorial, 2026-10-12 | NICE CG142 article: document, personal calendar and check marks representing adult-focused individual planning. |
 
 All use site palette navy `#174b98`, blue `#2266dd`, soft blue `#edf4fc` and gold `#e7a930`. Text alternatives are stored in the corresponding content frontmatter. SVGs include an accessible `title` and `desc`.
+
+## Professionals: Kazakhstan education and psycho-pedagogical documents (2026-10-12)
+
+Eight original AutismHub editorial SVG covers were produced for individual educational legal-document reviews. These are self-hosted vector illustrations with accessible `title` and `desc`, no external images, no real children, no official ministry seals and no implication of government endorsement. Site palette blue `#2266dd`, navy `#174b98`, pale blue `#edf4fc`, gold `#e7a930`. Each article has a factual alt text.
+
+| SVG under `public/images/editorial/` | Creator | Purpose |
+| --- | --- | --- |
+| `kz-education-education-law.svg` | AutismHub editorial, 2026-10-12 | Law on Education: open book and study access |
+| `kz-education-education-needs-order-4.svg` | AutismHub editorial, 2026-10-12 | Order No. 4: assessment through a magnifying glass |
+| `kz-education-school-support-order-92.svg` | AutismHub editorial, 2026-10-12 | Order No. 92: coordination of a support team |
+| `kz-education-special-support-standard-117.svg` | AutismHub editorial, 2026-10-12 | Order No. 117: individual support checklist |
+| `kz-education-education-organisations-order-385.svg` | AutismHub editorial, 2026-10-12 | Order No. 385: educational organisation building |
+| `kz-education-pmpk-services-rules.svg` | AutismHub editorial, 2026-10-12 | PMPK state service rules: scheduling and decisions |
+| `kz-education-psychological-support-centres-264.svg` | AutismHub editorial, 2026-10-12 | Order No. 264: consultation and safe communication |
+| `kz-education-special-support-state-order-532.svg` | AutismHub editorial, 2026-10-12 | Order No. 532: state educational order and review |
