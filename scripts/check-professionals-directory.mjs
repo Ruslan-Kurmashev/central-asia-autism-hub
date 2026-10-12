@@ -58,8 +58,11 @@ for (const [locale, copy] of Object.entries(expected)) {
       assert.ok(articleHtml.includes(phrase), 'First professional article missing ' + phrase);
     }
     assert.ok(articleHtml.includes('professional-guideline-appraisal.svg'), 'Professional illustration missing');
+    // Generated article navigation may mention a nearby NICE document. Check the
+    // introductory article's actual source, not its related-resource links.
+    const introductorySource = await readFile(path.resolve('src/content/pages/kz/ru/professional-guideline-appraisal.md'), 'utf8');
     for (const documentToKeepSeparate of ['NICE CG128', 'CG170', 'CG142', '№ 332-VIII']) {
-      assert.ok(!articleHtml.includes(documentToKeepSeparate), 'Introductory article contains an individual-document deep dive: ' + documentToKeepSeparate);
+      assert.ok(!introductorySource.includes(documentToKeepSeparate), 'Introductory article contains an individual-document deep dive: ' + documentToKeepSeparate);
     }
   }
   if (locale === 'ru') {
