@@ -119,7 +119,7 @@ const iconSvg = {
             <span class="kz-documents__ordinal">{String(index + 1).padStart(2, '0')}</span>
             <strong class="kz-documents__card-title">{group.title[locale]}</strong>
             <span class="kz-documents__card-description">{group.description[locale]}</span>
-            <span class="kz-documents__card-footer"><span>{group.documents.length} {allPublishedForLocale ? copy.available : copy.planned}</span><span class="kz-documents__arrow" aria-hidden="true">→</span></span>
+            <span class="kz-documents__card-footer"><span>{group.documents.length} {documentsCountLabel(group.documents.length)}</span><span class="kz-documents__arrow" aria-hidden="true">→</span></span>
           </a>
         ))}
       </div>
