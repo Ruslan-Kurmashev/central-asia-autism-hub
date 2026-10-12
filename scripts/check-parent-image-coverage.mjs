@@ -72,10 +72,10 @@ for (const locale of ['ru', 'en', 'kk']) {
       `Missing, empty or truncated editorial image: ${article}: ${src}`);
     if (isVector) {
       const svg = await readFile(localFile, 'utf8');
-      assert.match(svg, /<svg\\b/i, `Invalid SVG image: ${article}`);
-      assert.match(svg, /<title\\b/i, `SVG lacks title: ${article}`);
-      assert.match(svg, /<desc\\b/i, `SVG lacks description: ${article}`);
-      assert.ok(!/<script\\b|onload\\s*=|javascript:|<foreignObject\\b/i.test(svg),
+      assert.match(svg, /<svg\b/i, `Invalid SVG image: ${article}`);
+      assert.match(svg, /<title\b/i, `SVG lacks title: ${article}`);
+      assert.match(svg, /<desc\b/i, `SVG lacks description: ${article}`);
+      assert.ok(!/<script\b|onload\s*=|javascript:|<foreignObject\b/i.test(svg),
         `Unsafe SVG content: ${article}`);
     }
     assert.ok(documentation.includes(path.basename(localFile)),
