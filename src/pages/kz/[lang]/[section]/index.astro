@@ -128,7 +128,8 @@ const materials = [...pageMaterials, ...researchMaterials].sort((left, right) =>
   return left.data.title.localeCompare(right.data.title, locale);
 });
 
-const displayCount = materials.length + learningMaterials.length;
+const showRussianGlossary = section === 'parents' && locale === 'ru';
+const displayCount = materials.length + learningMaterials.length + (showRussianGlossary ? 1 : 0);
 const displayCountLabel = section === 'learning'
   ? locale === 'ru' ? 'курсов и модулей'
     : locale === 'kk' ? 'курс пен модуль'
@@ -277,6 +278,7 @@ const sectionGroups = groupDefinitions.map((group) => ({
   materials: materials.filter((material) =>
     group.topics.includes(material.data.topic),
   ),
+  glossaryCount: showRussianGlossary && group.id === 'autism-basics' ? 1 : 0,
 }));
 
 const visibleGroups =
@@ -365,18 +367,6 @@ function russianMaterialWord(count: number) {
               </div>
             )}
 
-            {section === 'parents' && locale === 'ru' && (
-              <aside class="section-v2__status" aria-labelledby="parents-glossary-title">
-                <span class="section-v2__status-mark" aria-hidden="true"></span>
-                <div>
-                  <h2 id="parents-glossary-title">
-                    <a href={localePath(locale, 'parents/glossary')}>Словарь терминов</a>
-                  </h2>
-                  <p>217 понятий с понятными объяснениями, поиском по словам и тематическими категориями. Откройте карточку, чтобы прочитать полный текст и источники.</p>
-                </div>
-              </aside>
-            )}
-
             {section === 'professionals' && (
               <SectionBoundary locale={locale} section={section} />
             )}
@@ -401,8 +391,8 @@ function russianMaterialWord(count: number) {
                         <span>{group.description}</span>
                       </span>
                       <span class="section-v2__group-count">
-                        {group.materials.length}{' '}
-                        {sectionV2Text.resourceWord(group.materials.length)}
+                        {group.materials.length + group.glossaryCount}{' '}
+                        {sectionV2Text.resourceWord(group.materials.length + group.glossaryCount)}
                       </span>
                       <span
                         class="section-v2__chevron"
@@ -413,6 +403,7 @@ function russianMaterialWord(count: number) {
                     <div class="section-v2__article-list">
                       {group.materials.length > 0 ? (
                         group.materials.map((material, materialIndex) => (
+                          <Fragment>
                           <a
                             class:list={[
                               'section-v2__article-row',
@@ -454,6 +445,25 @@ function russianMaterialWord(count: number) {
                               <span aria-hidden="true">→</span>
                             </span>
                           </a>
+                          {group.glossaryCount > 0 && materialIndex === 0 && (
+                            <a
+                              class="section-v2__article-row"
+                              href={localePath(locale, 'parents/glossary')}
+                            >
+                              <span class="section-v2__article-index" aria-hidden="true">
+                                02
+                              </span>
+                              <span class="section-v2__article-copy">
+                                <strong>Словарь терминов</strong>
+                                <span>217 понятий об аутизме с понятными объяснениями, поиском по словам и тематическими категориями.</span>
+                              </span>
+                              <span class="section-v2__article-meta">
+                                <time datetime="2026-10-12">{dateFormatter.format(new Date('2026-10-12T12:00:00Z'))}</time>
+                                <span aria-hidden="true">→</span>
+                              </span>
+                            </a>
+                          )}
+                          </Fragment>
                         ))
                       ) : (
                         <p class="section-v2__empty">{sectionV2Text.emptyGroup}</p>
