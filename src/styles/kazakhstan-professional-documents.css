@@ -11,8 +11,8 @@
 .kz-documents__breadcrumb a { color: var(--color-primary-dark); }
 .kz-documents__eyebrow { color: var(--color-primary-dark); font-weight: 800; font-size: var(--type-caption); letter-spacing: .1em; text-transform: uppercase; }
 .kz-documents__hero { margin-bottom: clamp(2rem,4vw,3rem); }
-.kz-documents h1 { max-width: 57rem; margin: .5rem 0 0; font-size: var(--type-h1); line-height: 1.17; }
-.kz-documents__intro { max-width: 51rem; margin: 1rem 0 0; color: var(--color-muted); font-size: var(--type-reading); line-height: 1.65; }
+.kz-documents h1 { overflow-wrap: anywhere; max-width: 57rem; margin: .5rem 0 0; font-size: var(--type-h1); line-height: 1.17; }
+.kz-documents__intro { overflow-wrap: anywhere; max-width: 51rem; margin: 1rem 0 0; color: var(--color-muted); font-size: var(--type-reading); line-height: 1.65; }
 .kz-documents__count { display: flex; align-items: baseline; gap: .5rem; flex-wrap: wrap; margin: 1.3rem 0 0; color: var(--color-muted); font-size: var(--type-small); }
 .kz-documents__count strong { color: var(--color-primary-dark); }
 .kz-documents h2 { margin: 0 0 1.2rem; font-size: var(--type-h2); }
@@ -23,7 +23,7 @@
 .kz-documents__icon { display: inline-flex; align-items: center; width: 4.5rem; height: 4.5rem; }
 .kz-documents__icon svg { width: 4.25rem; height: 4.25rem; }
 .kz-documents__ordinal { color: var(--color-primary-dark); font-size: var(--type-caption); font-weight: 750; letter-spacing: .08em; margin: .15rem 0 .5rem; }
-.kz-documents__card-title { font-size: var(--type-card); line-height: 1.35; font-weight: 760; }
+.kz-documents__card-title { font-size: var(--type-card); line-height: 1.35; font-weight: 760; overflow-wrap: anywhere; }
 .kz-documents__card-description { margin: .65rem 0 1rem; color: var(--color-muted); font-size: var(--type-small); line-height: 1.6; }
 .kz-documents__card-footer { margin-top: auto; padding-top: .9rem; border-top: 1px solid var(--color-border); display: flex; justify-content: space-between; align-items: center; width: 100%; gap: .65rem; color: var(--color-primary-dark); font-size: var(--type-meta); font-weight: 700; }
 .kz-documents__arrow { display: grid; flex: none; place-items: center; width: 2.1rem; height: 2.1rem; border-radius: 50%; background: var(--color-surface-soft); color: var(--color-primary-dark); font-size: var(--type-symbol); }
@@ -35,7 +35,7 @@
 .kz-documents__article-link, .kz-documents__pending { display: flex; align-items: center; justify-content: space-between; flex: 1; min-width: 0; gap: 1rem; line-height: 1.5; color: var(--color-ink); }
 .kz-documents__article-link { text-decoration: none; }
 .kz-documents__article-link:hover { color: var(--color-primary-dark); }
-.kz-documents__pending strong, .kz-documents__article-link strong { font-size: var(--type-body); font-weight: 690; }
+.kz-documents__pending strong, .kz-documents__article-link strong { overflow-wrap: anywhere; min-width: 0; font-size: var(--type-body); font-weight: 690; }
 .kz-documents__status { flex: none; padding: .34rem .75rem; border-radius: 2rem; background: #f5f6f8; color: var(--color-muted); font-size: var(--type-caption); font-weight: 650; }
 .kz-documents__note { max-width: 62rem; margin: 2rem 0 0; color: var(--color-muted); font-size: var(--type-meta); line-height: 1.7; }
 @media (max-width: 54rem) { .kz-documents__grid { grid-template-columns: repeat(2,minmax(0,1fr)); } }
