@@ -56,7 +56,14 @@ const copy = text[locale];
 const trainingHref = `${sectionPath(locale, 'learning')}#professionals-learning`;
 
 type Localized = Record<Locale, string>;
-type PlannedResource = { id: string; title: Localized };
+type GuidelineSubgroup = 'basics' | 'international' | 'kazakhstan' | 'coordination';
+type PlannedResource = { id: string; title: Localized; subgroup?: GuidelineSubgroup };
+const subgroupTitles: Record<GuidelineSubgroup, Localized> = {
+  basics: { ru: 'Основы работы с рекомендациями', kk: 'Ұсынымдармен жұмыс негіздері', en: 'Working with guidelines' },
+  international: { ru: 'Международные клинические руководства', kk: 'Халықаралық клиникалық нұсқаулықтар', en: 'International clinical guidelines' },
+  kazakhstan: { ru: 'Документы Казахстана', kk: 'Қазақстан құжаттары', en: 'Kazakhstan documents' },
+  coordination: { ru: 'Междисциплинарная работа', kk: 'Пәнаралық жұмыс', en: 'Multidisciplinary coordination' },
+};
 type Group = {
   id: string;
   icon: keyof typeof icons;
@@ -84,9 +91,12 @@ const groups: Group[] = [
     title: { ru: 'Рекомендации и стандарты', kk: 'Ұсынымдар мен стандарттар', en: 'Guidelines and standards' },
     description: { ru: 'Клинические руководства, нормативная база и междисциплинарная работа', kk: 'Клиникалық нұсқаулықтар, нормативтік база және пәнаралық жұмыс', en: 'Clinical guidance, regulations and multidisciplinary practice' },
     resources: [
-      { id: 'g01', title: { ru: 'Как пользоваться профессиональной библиотекой и определять границы компетенции', kk: 'Кәсіби кітапхананы пайдалану және құзырет шекараларын анықтау', en: 'Using the professional library and recognising the limits of competence' }},
-      { id: 'g02', title: { ru: 'Международные рекомендации и нормативная база Казахстана', kk: 'Халықаралық ұсынымдар және Қазақстанның нормативтік базасы', en: 'International guidelines and Kazakhstan regulations' }},
-      { id: 'g03', title: { ru: 'Междисциплинарное взаимодействие и маршрутизация семьи', kk: 'Пәнаралық өзара іс-қимыл және отбасын тиісті қызметтерге бағыттау', en: 'Multidisciplinary coordination and family referral pathways' }},
+      { id: 'g01', subgroup: 'basics', title: { ru: 'Как работать с профессиональными рекомендациями при аутизме', kk: 'Аутизм жөніндегі кәсіби ұсынымдармен қалай жұмыс істеуге болады', en: 'How to appraise professional autism guidelines' }},
+      { id: 'g04', subgroup: 'international', title: { ru: 'NICE CG128: выявление и диагностика аутизма у детей и подростков', kk: 'NICE CG128: балалар мен жасөспірімдердегі аутизмді анықтау және диагностикалау', en: 'NICE CG128: recognising and diagnosing autism in under-19s' }},
+      { id: 'g05', subgroup: 'international', title: { ru: 'NICE CG170: поддержка детей и подростков с аутизмом', kk: 'NICE CG170: аутист балалар мен жасөспірімдерді қолдау', en: 'NICE CG170: support for autistic children and young people' }},
+      { id: 'g06', subgroup: 'international', title: { ru: 'NICE CG142: диагностика и поддержка аутичных взрослых', kk: 'NICE CG142: аутист ересектерді диагностикалау және қолдау', en: 'NICE CG142: diagnosis and support for autistic adults' }},
+      { id: 'g02', subgroup: 'kazakhstan', title: { ru: 'Правовые требования к психологической деятельности в Казахстане', kk: 'Қазақстандағы психологиялық қызметке қойылатын құқықтық талаптар', en: 'Legal requirements for psychological practice in Kazakhstan' }},
+      { id: 'g03', subgroup: 'coordination', title: { ru: 'Междисциплинарное взаимодействие и маршрутизация семьи', kk: 'Пәнаралық өзара іс-қимыл және отбасын тиісті қызметтерге бағыттау', en: 'Multidisciplinary coordination and family referral pathways' }},
     ],
   },
   {
@@ -238,8 +248,12 @@ const forGroup = (group: Group) => {
           <span class="professional-directory__pill">{count} {countLabel(count)}</span>
         </div>
         <ol class="professional-directory__list">
-          {matched.map(({ resource, record }) => (
-            <li class="professional-directory__item">
+          {matched.map(({ resource, record }, index) => (
+            <>
+              {group.id === 'guidelines' && resource.subgroup && (index === 0 || matched[index - 1].resource.subgroup !== resource.subgroup) && (
+                <li class="professional-directory__subgroup"><h4>{subgroupTitles[resource.subgroup][locale]}</h4></li>
+              )}
+              <li class="professional-directory__item">
               {record ? (
                 <a class="professional-directory__item-link" href={articlePath(locale, 'professionals', record.data.slug)}>
                   <span class="professional-directory__item-title">{record.data.title}</span>
@@ -251,7 +265,8 @@ const forGroup = (group: Group) => {
                   <span class="professional-directory__status">{copy.preparing}</span>
                 </span>
               )}
-            </li>
+              </li>
+            </>
           ))}
           {extra.map((record) => (
             <li class="professional-directory__item">

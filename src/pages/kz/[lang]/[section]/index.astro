@@ -277,7 +277,27 @@ const sectionGroups = groupDefinitions.map((group) => ({
   ...group,
   materials: materials.filter((material) =>
     group.topics.includes(material.data.topic),
-  ),
+  ).sort((left, right) => {
+    // Keep the approved introductory sequence ahead of newer resources.
+    if (!showRussianGlossary || group.id !== 'autism-basics') return 0;
+    const editorialOrder = [
+      'chto-takoe-autizm',
+      'pochemu-voznikaet-autizm',
+      'mify-i-fakty-ob-autizme',
+      'sensornye-osobennosti-pri-autizme',
+      'autizm-u-devochek',
+      'soputstvuyushchie-sostoyaniya-pri-autizme',
+      'neyro-raznoobrazie-i-autizm',
+      'stimming-i-povtoryayushchiesya-deystviya-pri-autizme',
+      'meltdaun-i-shatdaun-pri-autizme',
+      'kak-autichnye-deti-obshchayutsya',
+    ];
+    const position = (slug: string) => {
+      const index = editorialOrder.indexOf(slug);
+      return index < 0 ? editorialOrder.length : index;
+    };
+    return position(left.data.slug) - position(right.data.slug);
+  }),
   glossaryCount: showRussianGlossary && group.id === 'autism-basics' ? 1 : 0,
 }));
 
@@ -417,7 +437,7 @@ function russianMaterialWord(count: number) {
                               class="section-v2__article-index"
                               aria-hidden="true"
                             >
-                              {String(materialIndex + 1).padStart(2, '0')}
+                              {String(materialIndex + 1 + (group.glossaryCount > 0 && materialIndex > 0 ? 1 : 0)).padStart(2, '0')}
                             </span>
                             {material.data.featuredImage && (
                               <img

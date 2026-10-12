@@ -27,6 +27,11 @@ for (const file of pages) {
       const url = new URL(decodeAttribute(match[2]));
       if (!['http:', 'https:'].includes(url.protocol)) continue;
       if (/^(localhost|127\.0\.0\.1)$/i.test(url.hostname)) continue;
+      // Skip canonical and hreflang links belonging to this same static site:
+      // new PR pages cannot resolve on the live domain before deployment.
+      // The separate internal-link audit checks these routes in dist/.
+      if (url.hostname === 'ruslan-kurmashev.github.io' &&
+          url.pathname.startsWith('/central-asia-autism-hub/')) continue;
       url.hash = '';
       const key = url.href;
       if (!sources.has(key)) sources.set(key, new Set());

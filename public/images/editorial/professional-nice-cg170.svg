@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 675" role="img" aria-labelledby="title desc">
+<title id="title">NICE CG170: поддержка и адаптация среды</title>
+<desc id="desc">Редакционная иллюстрация плана поддержки, символа общения и адаптаций в учебной среде в сине-золотой палитре.</desc>
+<rect width="1200" height="675" fill="#edf4fc"/>
+<path d="M0 566Q265 487 555 569T1200 533V675H0Z" fill="#dceaff"/>
+<g stroke="#174b98" stroke-width="10" stroke-linejoin="round">
+<rect x="180" y="138" width="433" height="410" rx="27" fill="#fff"/>
+<path d="M529 138v83h84" fill="#ffe6b1"/>
+<path d="m529 138 84 83" fill="none"/>
+</g>
+<path d="M256 268h251M256 324h251M256 380h221M256 436h251" fill="none" stroke="#2266dd" stroke-width="11" stroke-linecap="round"/>
+<path d="M256 204h203" fill="none" stroke="#e7a930" stroke-width="16" stroke-linecap="round"/>
+<path d="M711 223h256a30 30 0 0 1 30 30v144a30 30 0 0 1-30 30h-94l-66 56v-56h-96a30 30 0 0 1-30-30V253a30 30 0 0 1 30-30z" fill="#dceaff" stroke="#174b98" stroke-width="12"/><path d="M737 295h213M737 348h152" stroke="#2266dd" stroke-width="14" stroke-linecap="round"/><rect x="723" y="489" width="110" height="86" rx="16" fill="#fff" stroke="#174b98" stroke-width="10"/><rect x="864" y="489" width="110" height="86" rx="16" fill="#fff" stroke="#174b98" stroke-width="10"/><path d="m749 526 19 19 32-36m89 17 19 19 32-36" stroke="#2266dd" stroke-width="9" fill="none" stroke-linecap="round" stroke-linejoin="round"/><circle cx="823" cy="466" r="18" fill="#e7a930"/>
+<circle cx="1034" cy="204" r="18" fill="#d96f65"/>
+<path d="m850 90 16 37 37 16-37 16-16 37-16-37-37-16 37-16z" fill="#e7a930"/>
+</svg>
