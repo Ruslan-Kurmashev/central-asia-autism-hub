@@ -215,14 +215,4 @@ sources:
 
 Для более подробного сравнения международных руководств и казахстанских требований в профессиональной библиотеке запланирован отдельный материал «Международные рекомендации и нормативная база Казахстана».
 
-### Основные источники
-
-1. **WHO Regional Office for Europe (2023).** [Strengthening countries’ capacities to adopt and adapt evidence-based guidelines: a handbook for guideline contextualization](https://www.who.int/publications/i/item/9789289060028).
-2. **NICE (2025).** [Developing NICE guidelines: the manual, chapter 9](https://www.nice.org.uk/process/pmg20/chapter/9-developing-and-wording-recommendations-and-writing-the-guideline). Обновлено 23 октября 2025 года.
-3. **NICE (2011, обновлено в 2017).** [CG128: Autism spectrum disorder in under 19s: recognition, referral and diagnosis](https://www.nice.org.uk/guidance/cg128/chapter/Recommendations).
-4. **NICE (2013, обновлено в 2021).** [CG170: Autism spectrum disorder in under 19s: support and management](https://www.nice.org.uk/guidance/cg170/chapter/recommendations).
-5. **NICE (2012, обновлено в 2021).** [CG142: Autism spectrum disorder in adults: diagnosis and management](https://www.nice.org.uk/guidance/cg142/chapter/recommendations).
-6. **Республика Казахстан (2026).** [Закон № 332-VIII «О психологической деятельности» от 2 июля 2026 года](https://old.adilet.zan.kz/rus/docs/Z2600000332). ИПС «Әділет».
-7. **Премьер-Министр РК (2026).** [Распоряжение № 161-р от 28 сентября 2026 года о мерах по реализации закона](https://old.adilet.zan.kz/rus/docs/R2600000161). ИПС «Әділет».
-
-*Проверка приведённых онлайн-источников: 12 октября 2026 года. Этот материал не заменяет медицинское заключение, юридическую консультацию или внутренние инструкции организации.*
+*Дата проверки источников: 12 октября 2026 года. Полные выходные данные, действующие ссылки и назначение каждого источника приведены в разделе «Источники» ниже. Материал не заменяет медицинское заключение, юридическую консультацию или внутренние инструкции организации.*
