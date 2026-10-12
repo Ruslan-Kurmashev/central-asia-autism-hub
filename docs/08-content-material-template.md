@@ -56,6 +56,10 @@ The body should normally answer:
 
 Headings should be descriptive rather than promotional. The text must not use diagnostic quizzes, cure claims, guaranteed outcomes, fear-based language, or individual treatment instructions.
 
+### 4.1. Non-negotiable typography and structure
+
+Every article is rendered through the common typography system in `docs/typography-system.md`, regardless of language, topic, audience or editor. The shared article layout supplies the single page H1; Markdown article bodies begin at H2, then use H3 for nested points. Authors must not insert inline font styles or manual font sizes to change an article's appearance. Publication and translation QA includes the automatic typography gate and visual review for RU/KK/EN and mobile/zoom layout.
+
 ## 5. Required metadata
 
 | Field | Requirement |
@@ -94,7 +98,8 @@ A record cannot be treated as publishable when:
 - its translation is still marked as pending review;
 - required metadata is invalid;
 - its medical or scientific claims have not completed the Document 04 self-review;
-- its sources have not been checked.
+- its sources have not been checked;
+- the shared typography rules or accessibility/visual publication checks fail.
 
 Draft records remain available in the local content workspace but do not receive a public route, appear in section lists, or enter the generated sitemap.
 

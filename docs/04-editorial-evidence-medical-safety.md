@@ -23,6 +23,8 @@ Safety is supported by:
 - visible disclaimers;
 - correction and update procedures.
 
+Before publishing, also enforce the mandatory typography and readable-template requirements in `docs/typography-system.md` for all languages and content types. This is a presentation acceptance gate alongside, not a substitute for, medical and evidence review.
+
 ## 2. Editorial responsibility
 
 During the first phase, Ruslan Kurmashev performs the roles of:

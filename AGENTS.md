@@ -13,7 +13,8 @@ Treat the approved documents in `docs/` as the product and policy sources of tru
 - `docs/05-privacy-and-data.md` for data collection, analytics, and privacy;
 - `docs/06-design-and-accessibility.md` for visual and accessibility requirements;
 - `docs/07-technical-plan.md` for architecture, dependencies, validation, and deployment;
-- `docs/08-content-material-template.md` for information-material structure and metadata.
+- `docs/08-content-material-template.md` for information-material structure and metadata;
+- `docs/typography-system.md` for the mandatory type scale, allowed font families, and typography QA.
 
 Read only the documents relevant to the task, but read each selected document completely. Do not silently change an approved policy. If implementation and an approved document conflict, report the conflict before deciding which one to change.
 
@@ -24,6 +25,19 @@ Read only the documents relevant to the task, but read each selected document co
 - Use the installed versions and existing patterns in `package.json`, `astro.config.mjs`, `src/content.config.ts`, and `src/lib/urls.ts` as the implementation baseline.
 - Do not add a backend, database, authentication, accounts, forms, payments, screening tools, diagnostic tools, personal-data collection, or new production dependencies without explicit approval.
 - Do not change routes, schemas, translation keys, slugs, publication filtering, or evaluation logic incidentally.
+
+## Mandatory typography and publication law (all changes)
+
+- Use only `--type-*` font-size tokens and `--font-*` family tokens from `src/styles/typography.css` in site CSS and Astro components.
+- Do not introduce raw `px`, `rem`, `em`, `vw`, or `clamp()` font-size declarations outside the token file, including article-specific and mobile styles.
+- Keep titles and article structure semantic. Do not create extra font stacks or page-specific font scales.
+- The rule applies to every new and existing page, parent/professional/research article, glossary entry, course listing, card, translation, page template, interactive component, responsive view, print/PDF layout and CMS preview.
+- All content must use the shared layouts and semantic Markdown headings: page titles are rendered by the layout; article body starts at H2 and uses H3 for nested subsections. Do not insert manually styled headings, inline font CSS, HTML `<font>` tags or custom per-article typography.
+- Changing typography tokens requires a documented design-system decision; never silently shrink text for RU/KK/EN translations or patch a single page.
+- No publication, pull request merge or deployment is ready until `npm run check:type-scale` and `npm run validate` succeed plus responsive and zoom QA is reviewed. The automated check is a mandatory fail-closed gate, not a claim of full visual accessibility.
+- The identical CMS font token stylesheet must be kept in sync with the source. See `docs/typography-system.md` for the binding policy, checklist and exception process.
+- Run `npm run check:type-scale` after any CSS, layout, component, Markdown, CMS or content-style change.
+
 
 ## Editorial and medical safety
 

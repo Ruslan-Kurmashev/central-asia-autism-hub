@@ -102,6 +102,10 @@ Typography must use:
 
 Long article text should generally remain within a readable single column rather than stretching across the full screen.
 
+### 3.2.1. Mandatory implementation standard
+
+All pages and publications, including translations, cards, article views and the CMS preview, must use the site-wide type scale and font family roles defined in `docs/typography-system.md`. Those tokens, rather than literal font-size overrides, control the exact responsive values. The typography check is part of the PR and release validation pipeline; manual multilingual and zoom review remains necessary. The original accessibility targets in this document take priority if a token fails real-world readability tests.
+
 ### 3.3. Spacing and density
 
 Pages must use:

@@ -447,7 +447,7 @@ const numberedSections = age.sections.map((section) => ({
 
   .milestone-sheet__intro > p:not(.eyebrow) {
     color: var(--color-muted);
-    font-size: 1.05rem;
+    font-size: var(--type-lead);
   }
 
   .milestone-sheet__privacy {
@@ -468,7 +468,7 @@ const numberedSections = age.sections.map((section) => ({
     border: 1px solid var(--color-border);
     border-radius: 999px;
     background: var(--color-surface);
-    font-size: 0.92rem;
+    font-size: var(--type-small);
   }
 
   .milestone-group {
@@ -480,7 +480,7 @@ const numberedSections = age.sections.map((section) => ({
   .milestone-next h2,
   .milestone-source h2,
   .milestone-export h2 {
-    font-size: clamp(1.45rem, 4vw, 2rem);
+    font-size: var(--type-h2);
   }
 
   .milestone-group__items {
@@ -517,7 +517,7 @@ const numberedSections = age.sections.map((section) => ({
     border-radius: 50%;
     background: var(--color-surface-soft);
     color: var(--color-primary-dark);
-    font-size: 0.78rem;
+    font-size: var(--type-meta);
   }
 
   .milestone-item__example,
@@ -527,7 +527,7 @@ const numberedSections = age.sections.map((section) => ({
   }
 
   .milestone-item__note {
-    font-size: 0.94rem;
+    font-size: var(--type-meta);
   }
 
   .milestone-options {
@@ -597,7 +597,7 @@ const numberedSections = age.sections.map((section) => ({
   }
 
   .milestone-notes__examples h3 {
-    font-size: 1.1rem;
+    font-size: var(--type-h3);
   }
 
   .milestone-notes__examples label {
@@ -668,7 +668,7 @@ const numberedSections = age.sections.map((section) => ({
 
   .milestone-export__pdf-hint {
     color: var(--color-muted);
-    font-size: 0.9rem;
+    font-size: var(--type-small);
   }
 
   .milestone-export-summary {
@@ -751,24 +751,24 @@ const numberedSections = age.sections.map((section) => ({
     :global(body.milestone-exporting-pdf) .milestone-export-summary {
       display: block !important;
       color: #111;
-      font-size: 11pt;
+      font-size: var(--type-print-body);
       line-height: 1.45;
     }
 
     :global(body.milestone-exporting-pdf) .milestone-export-summary h1 {
       max-width: none;
       margin-bottom: 0.5rem;
-      font-size: 20pt;
+      font-size: var(--type-print-h1);
     }
 
     :global(body.milestone-exporting-pdf) .milestone-export-summary h2 {
       margin-top: 1.5rem;
-      font-size: 15pt;
+      font-size: var(--type-print-h2);
     }
 
     :global(body.milestone-exporting-pdf) .milestone-export-summary h3 {
       margin-top: 1rem;
-      font-size: 12pt;
+      font-size: var(--type-print-h3);
     }
 
     :global(body.milestone-exporting-pdf) .milestone-export-summary p,
