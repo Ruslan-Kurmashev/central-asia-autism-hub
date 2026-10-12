@@ -39,7 +39,6 @@ sources:
   - title: "What causes autism?"
     url: "https://www.nichd.nih.gov/health/topics/autism/conditioninfo/causes"
     organisation: "Eunice Kennedy Shriver National Institute of Child Health and Human Development"
-    publicationYear: 2025
     note: "Сложная генетическая архитектура аутизма и взаимодействие биологических факторов."
     accessedAt: 2026-10-12
   - title: "WHO expert group’s new analysis reaffirms there is no link between vaccines and autism"
