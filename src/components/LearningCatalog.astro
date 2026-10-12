@@ -10,7 +10,7 @@ const { locale, entries } = Astro.props;
 const copy = {
   ru: {
     heading: 'Каталог курсов и учебных материалов.',
-    intro: 'Сочетайте фильтры по аудитории, языку курса и теме. Поиск уточняет результаты с учётом всех выбранных условий.',
+    intro: 'Сочетайте фильтры по языку курса, аудитории и теме. Поиск уточняет результаты с учётом всех выбранных условий.',
     search: 'Поиск по названию или содержанию',
     placeholder: 'Например: коммуникация, развитие, аутизм',
     audience: 'Аудитория', language: 'Язык курса', topic: 'Тема',
@@ -25,7 +25,7 @@ const copy = {
   },
   kk: {
     heading: 'Курстар мен оқу материалдарының каталогы.',
-    intro: 'Аудитория, курс тілі және тақырып сүзгілерін бірге қолданыңыз. Іздеу таңдалған шарттарға сәйкес нәтижелерді нақтылайды.',
+    intro: 'Курс тілі, аудитория және тақырып сүзгілерін бірге қолданыңыз. Іздеу таңдалған шарттарға сәйкес нәтижелерді нақтылайды.',
     search: 'Атауы немесе мазмұны бойынша іздеу',
     placeholder: 'Мысалы: коммуникация, даму, аутизм',
     audience: 'Кімге арналған', language: 'Курс тілі', topic: 'Тақырып',
@@ -40,7 +40,7 @@ const copy = {
   },
   en: {
     heading: 'Catalogue of courses and learning materials.',
-    intro: 'Combine audience, course language and topic filters. Text search narrows the results using all selected criteria.',
+    intro: 'Combine course language, audience and topic filters. Text search narrows the results using all selected criteria.',
     search: 'Search by title or content',
     placeholder: 'For example: communication, development, autism',
     audience: 'Audience', language: 'Course language', topic: 'Topic',
@@ -73,6 +73,17 @@ const availableTopics = [...new Set(items.map((entry) => entry.data.topicArea).f
   </div>
 
   <div class="course-catalogue__filters" id="professionals-learning" role="search" aria-label={t.heading}>
+    <label>
+      <span>{t.language}</span>
+      <select data-course-language>
+        <option value="all">{t.all} ({items.length})</option>
+        {availableLanguages.map((lang) => (
+          <option value={lang}>
+            {languages[locale][lang]} ({items.filter((entry) => entry.data.languages.includes(lang)).length})
+          </option>
+        ))}
+      </select>
+    </label>
     <label class="course-catalogue__search">
       <span>{t.search}</span>
       <input type="search" placeholder={t.placeholder} data-course-search />
@@ -83,17 +94,6 @@ const availableTopics = [...new Set(items.map((entry) => entry.data.topicArea).f
         <option value="all">{t.all} ({items.length})</option>
         <option value="parents">{t.parents} ({items.filter((entry) => entry.data.audience.includes('parents')).length})</option>
         <option value="professionals">{t.professionals} ({items.filter((entry) => entry.data.audience.includes('professionals')).length})</option>
-      </select>
-    </label>
-    <label>
-      <span>{t.language}</span>
-      <select data-course-language>
-        <option value="all">{t.all} ({items.length})</option>
-        {availableLanguages.map((lang) => (
-          <option value={lang}>
-            {languages[locale][lang]} ({items.filter((entry) => entry.data.languages.includes(lang)).length})
-          </option>
-        ))}
       </select>
     </label>
     <label>
@@ -245,7 +245,7 @@ const availableTopics = [...new Set(items.map((entry) => entry.data.topicArea).f
 .course-catalogue__heading {margin:0 0 1.6rem}
 .course-catalogue__heading h2{font-family:Georgia,'Times New Roman',serif;font-weight:500;font-size:clamp(1.8rem,3vw,2.55rem);line-height:1.2;color:#173d68;margin:0 0 .65rem}
 .course-catalogue__heading p{color:#526c83;max-width:52rem;line-height:1.65;font-size:1rem;margin:0}
-.course-catalogue__filters{display:grid;grid-template-columns:minmax(12rem,1.7fr) repeat(3,minmax(9rem,1fr));gap:.9rem;padding:1.3rem;border-radius:.9rem;border:1px solid #d6e3ec;background:#f6f9fc}
+.course-catalogue__filters{display:grid;grid-template-columns:minmax(9rem,1fr) minmax(16rem,1.7fr) repeat(2,minmax(9rem,1fr));gap:.9rem;padding:1.3rem;border-radius:.9rem;border:1px solid #d6e3ec;background:#f6f9fc}
 .course-catalogue__filters label{display:grid;gap:.48rem;font-size:.78rem;color:#405b73;font-weight:600;align-content:start}
 .course-catalogue__filters input,.course-catalogue__filters select{width:100%;min-height:2.75rem;min-width:0;border:1px solid #cadce7;border-radius:.55rem;background:#fff;color:#173955;font:inherit;font-size:.87rem;padding:.65rem .75rem}
 .course-catalogue__filters input:focus-visible,.course-catalogue__filters select:focus-visible,.course-catalogue__action a:focus-visible{outline:3px solid #2d6e9f;outline-offset:2px}
