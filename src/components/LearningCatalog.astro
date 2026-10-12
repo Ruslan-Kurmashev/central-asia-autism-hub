@@ -9,7 +9,7 @@ interface Props {
 const { locale, entries } = Astro.props;
 const copy = {
   ru: {
-    heading: 'Каталог курсов и учебных материалов.',
+    heading: 'Каталог курсов и учебных материалов',
     intro: 'Сочетайте фильтры по языку курса, аудитории и теме. Поиск уточняет результаты с учётом всех выбранных условий.',
     search: 'Поиск по названию или содержанию',
     placeholder: 'Например: коммуникация, развитие, аутизм',
@@ -18,13 +18,13 @@ const copy = {
     topics: { autism: 'Основы аутизма', development: 'Развитие ребёнка', inclusion: 'Инклюзивное образование', support: 'Подходы к поддержке' },
     types: { course: 'Курс', module: 'Учебный модуль', lecture: 'Лекция', materials: 'Учебные материалы', webinar: 'Вебинар' },
     price: 'Стоимость', provider: 'Разработчик', duration: 'Продолжительность',
-    open: 'Перейти к курсу', verified: 'Проверено', details: 'Как начать обучение', outcome: 'Что выдаётся после прохождения',
-    count: 'Найдено', resultWord: 'курсов и модулей', noResults: 'По выбранным фильтрам курсы не найдены.',
+    openByKind: { course: 'Перейти к курсу', module: 'Открыть учебный модуль', lecture: 'Перейти к лекции', materials: 'Открыть материалы', webinar: 'Перейти к вебинару' }, verified: 'Проверено', details: 'Как начать обучение', outcome: 'Что выдаётся после прохождения',
+    count: 'Найдено', resultWord: 'учебных материалов', noResults: 'По выбранным условиям учебные материалы не найдены.',
     empty: 'Курсы пока готовятся к публикации.',
     notice: 'Обучение проходит на ресурсах указанных разработчиков. Autism Hub Kazakhstan не является организатором курсов. Доступ, документы и учебные единицы определяются организатором и могут изменяться.',
   },
   kk: {
-    heading: 'Курстар мен оқу материалдарының каталогы.',
+    heading: 'Курстар мен оқу материалдарының каталогы',
     intro: 'Курс тілі, аудитория және тақырып сүзгілерін бірге қолданыңыз. Іздеу таңдалған шарттарға сәйкес нәтижелерді нақтылайды.',
     search: 'Атауы немесе мазмұны бойынша іздеу',
     placeholder: 'Мысалы: коммуникация, даму, аутизм',
@@ -33,13 +33,13 @@ const copy = {
     topics: { autism: 'Аутизм негіздері', development: 'Баланың дамуы', inclusion: 'Инклюзивті білім беру', support: 'Қолдау тәсілдері' },
     types: { course: 'Курс', module: 'Оқу модулі', lecture: 'Дәріс', materials: 'Оқу материалдары', webinar: 'Вебинар' },
     price: 'Құны', provider: 'Дайындаған ұйым', duration: 'Ұзақтығы',
-    open: 'Курсқа өту', verified: 'Тексерілді', details: 'Оқуды қалай бастауға болады', outcome: 'Оқуды аяқтаған соң не беріледі',
-    count: 'Табылды', resultWord: 'курс пен модуль', noResults: 'Таңдалған сүзгілер бойынша курс табылмады.',
+    openByKind: { course: 'Курсқа өту', module: 'Оқу модуліне өту', lecture: 'Дәріске өту', materials: 'Оқу материалдарын ашу', webinar: 'Вебинарға өту' }, verified: 'Тексерілді', details: 'Оқуды қалай бастауға болады', outcome: 'Оқуды аяқтаған соң не беріледі',
+    count: 'Табылды', resultWord: 'оқу материалы', noResults: 'Таңдалған шарттарға сәйкес оқу материалы табылмады.',
     empty: 'Курстар жариялауға дайындалып жатыр.',
     notice: 'Оқу көрсетілген ұйымдардың ресурстарында өтеді. Autism Hub Kazakhstan бұл курстарды өткізбейді. Оқуға қолжетімділік, құжаттар мен оқу бірліктерінің шарттарын ұйымдастырушы белгілейді және өзгерте алады.',
   },
   en: {
-    heading: 'Catalogue of courses and learning materials.',
+    heading: 'Catalogue of courses and learning materials',
     intro: 'Combine course language, audience and topic filters. Text search narrows the results using all selected criteria.',
     search: 'Search by title or content',
     placeholder: 'For example: communication, development, autism',
@@ -48,8 +48,8 @@ const copy = {
     topics: { autism: 'Autism essentials', development: 'Child development', inclusion: 'Inclusive education', support: 'Support approaches' },
     types: { course: 'Course', module: 'Learning module', lecture: 'Lecture', materials: 'Learning materials', webinar: 'Webinar' },
     price: 'Price', provider: 'Developed by', duration: 'Duration',
-    open: 'Go to course', verified: 'Checked', details: 'How to start', outcome: 'What you receive upon completion',
-    count: 'Found', resultWord: 'courses and modules', noResults: 'No courses match the selected filters.',
+    openByKind: { course: 'Go to course', module: 'Open learning module', lecture: 'Go to lecture', materials: 'Open learning materials', webinar: 'Go to webinar' }, verified: 'Checked', details: 'How to start', outcome: 'What you receive upon completion',
+    count: 'Found', resultWord: 'learning resources', noResults: 'No learning resources match the selected filters.',
     empty: 'Courses are being prepared for publication.',
     notice: 'Training takes place on the listed providers’ resources; Autism Hub Kazakhstan does not deliver these courses. Providers determine and may change access, completion documents and continuing education credits.',
   },
@@ -112,7 +112,7 @@ const availableTopics = [...new Set(items.map((entry) => entry.data.topicArea).f
   {
     items.length > 0 ? (
       <>
-        <p class="course-catalogue__count" data-course-result aria-live="polite">{t.count}: {items.length} {t.resultWord}</p>
+        <p class="course-catalogue__count" data-course-result data-course-result-word={t.resultWord} aria-live="polite">{t.count}: {items.length} {t.resultWord}</p>
         <div class="course-catalogue__list">
           {items.map((entry) => (
             <article
@@ -121,7 +121,7 @@ const availableTopics = [...new Set(items.map((entry) => entry.data.topicArea).f
               data-audience={entry.data.audience.join(' ')}
               data-language={entry.data.languages.join(' ')}
               data-topic={entry.data.topicArea ?? ''}
-              data-search-text={`${entry.data.title} ${entry.data.summary} ${entry.data.provider} ${entry.data.languages.map((l) => languages[locale][l]).join(" ")}`.toLocaleLowerCase()}
+              data-search-text={`${entry.data.title} ${entry.data.summary} ${entry.data.provider} ${entry.data.registrationStatus ?? ""} ${entry.data.completionOutcome ?? ""} ${entry.data.costLabel} ${entry.data.durationLabel ?? ""} ${entry.data.topicArea ? t.topics[entry.data.topicArea] : ""} ${entry.data.languages.map((l) => languages[locale][l]).join(" ")}`.toLocaleLowerCase()}
             >
               <div class="course-catalogue__body">
                 <div class="course-catalogue__tags">
@@ -134,9 +134,7 @@ const availableTopics = [...new Set(items.map((entry) => entry.data.topicArea).f
                   {entry.data.durationLabel && <span><strong>{t.duration}:</strong> {entry.data.durationLabel}</span>}
                   <span><strong>{t.language}:</strong> {entry.data.languages.map((l) => languages[locale][l]).join(', ')}</span>
                   <span><strong>{t.provider}:</strong> {entry.data.provider}</span>
-                  {!['free', 'бесплатно', 'тегін'].includes(entry.data.costLabel.trim().toLocaleLowerCase()) && (
-                    <span><strong>{t.price}:</strong> {entry.data.costLabel}</span>
-                  )}
+                  <span><strong>{t.price}:</strong> {entry.data.costLabel}</span>
                 </div>
                 {entry.data.registrationStatus && (
                   <p class="course-catalogue__access"><strong>{t.details}:</strong> {entry.data.registrationStatus}</p>
@@ -152,7 +150,7 @@ const availableTopics = [...new Set(items.map((entry) => entry.data.topicArea).f
               </div>
               <div class="course-catalogue__action">
                 {entry.data.externalUrl && (
-                  <a href={entry.data.externalUrl} target="_blank" rel="noopener noreferrer external">{t.open} <span aria-hidden="true">↗</span></a>
+                  <a href={entry.data.externalUrl} target="_blank" rel="noopener noreferrer external">{t.openByKind[entry.data.learningKind ?? 'course']} <span aria-hidden="true">↗</span></a>
                 )}
               </div>
             </article>
@@ -200,7 +198,8 @@ const availableTopics = [...new Set(items.map((entry) => entry.data.topicArea).f
       if (result) {
         const prefix = result.dataset.label ?? result.textContent?.split(':')[0] ?? '';
         result.dataset.label = prefix;
-        result.textContent = `${prefix}: ${matched}`;
+        const noun = result.dataset.resultWord?.trim() ?? '';
+        result.textContent = `${prefix}: ${matched}${noun ? ' ' + noun : ''}`;
       }
       if (empty) empty.hidden = matched !== 0;
 
@@ -246,27 +245,28 @@ const availableTopics = [...new Set(items.map((entry) => entry.data.topicArea).f
 .course-catalogue__heading h2{font-family:var(--font-editorial);font-weight:500;font-size:var(--type-h2);line-height:1.2;color:#173d68;margin:0 0 .65rem}
 .course-catalogue__heading p{color:#526c83;max-width:52rem;line-height:1.65;font-size:var(--type-body);margin:0}
 .course-catalogue__filters{display:grid;grid-template-columns:minmax(9rem,1fr) minmax(16rem,1.7fr) repeat(2,minmax(9rem,1fr));gap:.9rem;padding:1.3rem;border-radius:.9rem;border:1px solid #d6e3ec;background:#f6f9fc}
-.course-catalogue__filters label{display:grid;gap:.48rem;font-size:var(--type-meta);color:#405b73;font-weight:600;align-content:start}
+.course-catalogue__filters label{display:grid;gap:.48rem;font-size:var(--type-small);color:#405b73;font-weight:600;align-content:start}
 .course-catalogue__filters input,.course-catalogue__filters select{width:100%;min-height:2.75rem;min-width:0;border:1px solid #cadce7;border-radius:.55rem;background:#fff;color:#173955;font:inherit;font-size:var(--type-control);padding:.65rem .75rem}
 .course-catalogue__filters input:focus-visible,.course-catalogue__filters select:focus-visible,.course-catalogue__action a:focus-visible{outline:3px solid #2d6e9f;outline-offset:2px}
-.course-catalogue__count{color:#526b81;font-size:var(--type-small);margin:1.4rem 0 .9rem}
+.course-catalogue__count{color:#526b81;font-size:var(--type-body);margin:1.4rem 0 .9rem}
 .course-catalogue__list{display:grid;gap:.85rem}
-.course-catalogue__item{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:1.15rem;padding:1.55rem 1.4rem;border:1px solid #d6e3ec;border-radius:.9rem;background:#fff;align-items:start}
+.course-catalogue__item{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:1.15rem;padding:1.55rem 1.4rem;border:1px solid #d6e3ec;border-radius:.9rem;background:#fff;align-items:start;overflow-wrap:anywhere}
 .course-catalogue__item[hidden],.course-catalogue__no-results[hidden]{display:none!important}
 .course-catalogue__tags{display:flex;flex-wrap:wrap;gap:.35rem;margin-bottom:.8rem}
-.course-catalogue__tags span{border-radius:1rem;padding:.25rem .65rem;background:#eef4f8;color:#315d7b;font-size:var(--type-meta);line-height:1.3;font-weight:600}
+.course-catalogue__tags span{border-radius:1rem;padding:.25rem .65rem;background:#eef4f8;color:#315d7b;font-size:var(--type-small);line-height:1.3;font-weight:600}
 
-.course-catalogue__body h3{font-family:var(--font-editorial);font-size:var(--type-card);font-weight:600;line-height:1.3;color:#12395e;margin:0 0 .55rem}
-.course-catalogue__summary{color:#4b6176;line-height:1.6;font-size:var(--type-control);max-width:47rem;margin:0 0 .9rem}
-.course-catalogue__meta{display:flex;flex-wrap:wrap;gap:.4rem 1.1rem;font-size:var(--type-meta);color:#5c7183;line-height:1.5}
+.course-catalogue__body{min-width:0}
+.course-catalogue__body h3{font-family:var(--font-editorial);font-size:var(--type-card);font-weight:600;line-height:1.35;text-wrap:pretty;overflow-wrap:anywhere;color:#12395e;margin:0 0 .65rem}
+.course-catalogue__summary{color:#4b6176;line-height:1.65;font-size:var(--type-body);max-width:47rem;margin:0 0 .9rem}
+.course-catalogue__meta{display:flex;flex-wrap:wrap;gap:.4rem 1.1rem;font-size:var(--type-small);color:#5c7183;line-height:1.5}
 .course-catalogue__meta strong,.course-catalogue__access strong,.course-catalogue__outcome strong{color:#38546b;font-weight:600}
-.course-catalogue__access,.course-catalogue__outcome{margin:.65rem 0 0;color:#5c7183;font-size:var(--type-meta);line-height:1.55}
-.course-catalogue__checked{display:block;margin-top:.6rem;font-size:var(--type-caption);color:#72889a}
+.course-catalogue__access,.course-catalogue__outcome{margin:.75rem 0 0;color:#405a70;font-size:var(--type-body);line-height:1.65}
+.course-catalogue__checked{display:block;margin-top:.75rem;font-size:var(--type-small);color:#72889a}
 .course-catalogue__action{align-self:center;max-width:12rem}
 .course-catalogue__action a{display:inline-block;padding:.75rem .95rem;text-align:center;background:#205f90;border-radius:.52rem;color:#fff;text-decoration:none;font-size:var(--type-control);font-weight:700;line-height:1.35}
 .course-catalogue__action a:hover{background:#164d78;text-decoration:none;color:#fff}
 .course-catalogue__no-results{padding:1.3rem;border:1px dashed #c2d3e0;border-radius:.7rem;color:#496277}
-.course-catalogue__notice{max-width:66rem;border-top:1px solid #d8e3eb;margin:1.7rem 0 0;padding-top:1rem;color:#65798b;font-size:var(--type-meta);line-height:1.7}
+.course-catalogue__notice{max-width:66rem;border-top:1px solid #d8e3eb;margin:1.7rem 0 0;padding-top:1rem;color:#4e6375;font-size:var(--type-small);line-height:1.7}
 @media(max-width:69rem){.course-catalogue__filters{grid-template-columns:repeat(2,minmax(0,1fr))}.course-catalogue__action{align-self:start}}
 @media(max-width:47rem){.course-catalogue__filters{grid-template-columns:1fr}.course-catalogue__item{grid-template-columns:minmax(0,1fr)}.course-catalogue__action{grid-column:1;max-width:none}.course-catalogue__action a{width:100%}}
 @media(max-width:26rem){.course-catalogue__item{padding:1.1rem;gap:.65rem}}

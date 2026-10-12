@@ -19,6 +19,8 @@ const availableLanguages = ['ru', 'kk', 'en'];
 for (const [lang, languageLabel] of Object.entries(labels)) {
   const html = await readFile(path.join('dist', 'kz', lang, 'learning', 'index.html'), 'utf8');
   assert.match(html, /<select\b[^>]*\bdata-course-language\b/, `Language filter missing for ${lang}`);
+  assert.ok(html.includes('learning-section-body'), `Learning section typography missing for ${lang}`);
+  assert.ok(html.includes('data-course-result-word='), `Missing persistent result count label for ${lang}`);
   const filterPositions = ['language', 'search', 'audience', 'topic']
     .map((field) => html.indexOf('data-course-' + field, html.indexOf('id="professionals-learning"')));
   assert.ok(filterPositions.every((position) => position >= 0), `Filter markup incomplete for ${lang}`);
@@ -31,6 +33,14 @@ for (const [lang, languageLabel] of Object.entries(labels)) {
   for (const link of expectedCourseLinks) assert.ok(html.includes(link), `Kazakh course link ${link} missing for ${lang}`);
   const cards = [...html.matchAll(/<article\b[^>]*\bdata-course-item\b[^>]*>/g)].map((match) => match[0]);
   const itemCount = cards.length;
+  const cardBlocks = [...html.matchAll(/<article\b[^>]*\bdata-course-item\b[^>]*>[\s\S]*?<\/article>/g)].map((m) => m[0]);
+  const priceLabel = { ru: 'Стоимость', kk: 'Құны', en: 'Price' }[lang];
+  assert.equal(cardBlocks.length, itemCount, `Incomplete course cards on ${lang}`);
+  for (const card of cardBlocks) {
+    assert.ok(card.includes('<strong>' + priceLabel + ':</strong>'), `Course cost hidden on ${lang}`);
+    assert.ok(card.includes('course-catalogue__outcome'), `Course credential outcome hidden on ${lang}`);
+    assert.ok(card.includes('course-catalogue__access'), `Course access instructions hidden on ${lang}`);
+  }
   assert.ok(itemCount >= 21, `Expected complete catalogue, got ${itemCount} entries for ${lang}`);
   localeCardCounts.push(itemCount);
 

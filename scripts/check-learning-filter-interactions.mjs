@@ -16,6 +16,7 @@ const localeLabels = {
   en: { ru: 'Russian', kk: 'Kazakh', en: 'English', parents: 'Parents', professionals: 'Professionals' },
 };
 const prefixes = {ru:'Найдено',kk:'Табылды',en:'Found'};
+const resultWords = {ru:'учебных материалов',kk:'оқу материалы',en:'learning resources'};
 const langCounts = [];
 const audienceCounts = [];
 const topicCounts = [];
@@ -89,7 +90,7 @@ for (const lang of Object.keys(localeLabels)) {
   const audience = input('all', initialOptions('audience'));
   const language = input('all', initialOptions('language'));
   const topic = input('all', initialOptions('topic'));
-  const result = { textContent: prefixes[lang]+': '+items.length, dataset:{} };
+  const result = { textContent: prefixes[lang]+': '+items.length+' '+resultWords[lang], dataset:{resultWord:resultWords[lang]} };
   const empty = { hidden: true };
   const controls = {
     '[data-course-search]': search,
@@ -128,7 +129,7 @@ for (const lang of Object.keys(localeLabels)) {
   function check(name) {
     const expected = filteredCount();
     assert.equal(items.filter((item) => !item.hidden).length, expected, lang+': visible count for '+name);
-    assert.equal(result.textContent, prefixes[lang]+': '+expected, lang+': displayed count for '+name);
+    assert.equal(result.textContent, prefixes[lang]+': '+expected+' '+resultWords[lang], lang+': displayed count for '+name);
     assert.equal(empty.hidden, expected !== 0, lang+': empty-state visibility for '+name);
     for (const [key, control] of Object.entries({audience,language,topic})) {
       for (const option of control.options) {
@@ -180,13 +181,26 @@ for (const lang of Object.keys(localeLabels)) {
   assert.equal(topic.value,'autism');
   check('professionals + English + autism + text');
 
+  // The search must also cover access requirements and credential outcomes.
+  // A user should be able to search for a completion certificate directly.
+  audience.value = 'all';
+  audience.fire('change');
+  language.value = 'all';
+  language.fire('change');
+  topic.value = 'all';
+  topic.fire('change');
+  search.value = lang === 'en' ? 'certificate' : 'сертификат';
+  search.fire('input');
+  assert.ok(filteredCount() > 0, lang+': course access/outcomes must be searchable');
+  check('search by certificate outcome');
+
   search.value = 'no-existing-course-such-token-zz123';
   search.fire('input');
   check('no matches under combined criteria');
 
   search.value = '';
   search.fire('input');
-  check('cleared text but preserved three selections');
+  check('cleared text, with other filters preserved');
 
   // Individual "All" choices remove only their own criterion.
   topic.value = 'all';
