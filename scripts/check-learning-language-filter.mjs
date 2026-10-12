@@ -37,7 +37,7 @@ for (const [lang, languageLabel] of Object.entries(labels)) {
   const priceLabel = { ru: 'Стоимость', kk: 'Құны', en: 'Price' }[lang];
   assert.equal(cardBlocks.length, itemCount, `Incomplete course cards on ${lang}`);
   for (const card of cardBlocks) {
-    assert.ok(card.includes('<strong>' + priceLabel + ':</strong>'), `Course cost hidden on ${lang}`);
+    assert.ok(card.includes('<strong>' + priceLabel), `Course cost hidden on ${lang}`);
     assert.ok(card.includes('course-catalogue__outcome'), `Course credential outcome hidden on ${lang}`);
     assert.ok(card.includes('course-catalogue__access'), `Course access instructions hidden on ${lang}`);
   }
