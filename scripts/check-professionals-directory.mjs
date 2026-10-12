@@ -178,5 +178,22 @@ for (const [locale, copy] of Object.entries(expected)) {
       }
     }
   }
+  if (locale === 'ru') {
+    const list = await readFile(path.resolve('dist/kz/ru/professionals/kazakhstan-documents/psychological-practice/index.html'), 'utf8');
+    const published = [
+      ['psychological-activity-law-332', 'zakon-o-psihologicheskoj-deyatelnosti-332-2026', '2028'],
+      ['teacher-qualifications-order-338', 'prikaz-338-kvalifikacionnye-trebovaniya-k-pedagogam', 'Педагог-психолог'],
+      ['teacher-status-law-293', 'zakon-o-statuse-pedagoga-prava-i-obyazannosti', 'Статья 6'],
+    ];
+    for (const [id, slug, phrase] of published) {
+      const url = '/central-asia-autism-hub/kz/ru/professionals/' + slug + '/';
+      assert.ok(list.includes('href="' + url + '"'), id + ': missing category article link');
+      const page = await readFile(path.resolve('dist/kz/ru/professionals', slug, 'index.html'), 'utf8');
+      assert.ok(page.includes('kz-psychology-' + id + '.svg'), id + ': missing image');
+      assert.ok(page.includes('Паспорт документа'), id + ': missing passport');
+      assert.ok(page.includes('adilet.zan.kz'), id + ': missing legal source');
+      assert.ok(page.includes(phrase), id + ': missing essential legal point');
+    }
+  }
   console.log('Professional directory ' + locale + ': 6 directions, 5 Kazakhstan categories, 25 planned documents and ' + kazakhDocumentPublicationCount + ' locally published reviews.');
 }
