@@ -53,6 +53,16 @@ const recordsFor = (group: KazakhstanDocumentGroup) => group.documents.map((docu
 const countPublished = (group: KazakhstanDocumentGroup) => recordsFor(group).filter((entry) => Boolean(entry.published)).length;
 const totalPublished = kazakhstanDocumentGroups.reduce((sum, group) => sum + countPublished(group), 0);
 const allPublishedForLocale = totalPublished === kazakhstanDocumentCount;
+const documentsCountLabel = (count: number): string => {
+  if (!allPublishedForLocale) return copy.planned;
+  if (locale !== 'ru') return copy.available;
+  const tens = count % 100;
+  const ones = count % 10;
+  if (tens >= 11 && tens <= 14) return 'материалов';
+  if (ones === 1) return 'материал';
+  if (ones >= 2 && ones <= 4) return 'материала';
+  return 'материалов';
+};
 const iconSvg = {
   education: '<svg viewBox="0 0 64 64" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"><path d="M7 15 32 5l25 10-25 10L7 15z" fill="#ffe5b0" stroke="#174b98" stroke-width="2.8"/><path d="M15 24v19c11 7 23 7 34 0V24" fill="#edf4fc" stroke="#174b98" stroke-width="2.8"/><path d="M57 17v22M49 52H15" fill="none" stroke="#2266dd" stroke-width="3" stroke-linecap="round"/></svg>',
   healthcare: '<svg viewBox="0 0 64 64" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"><rect x="7" y="12" width="50" height="45" rx="8" fill="#edf4fc" stroke="#174b98" stroke-width="2.8"/><path d="M25 19h14v11h11v12H39v11H25V42H14V30h11z" fill="#ffe5b0" stroke="#2266dd" stroke-width="2.8"/></svg>',
@@ -75,7 +85,7 @@ const iconSvg = {
     <h1>{activeGroup ? activeGroup.title[locale] : copy.title}</h1>
     <p class="kz-documents__intro">{activeGroup ? activeGroup.description[locale] : copy.intro}</p>
     <p class="kz-documents__count">
-      <strong>{activeGroup ? activeGroup.documents.length : kazakhstanDocumentCount}</strong> {allPublishedForLocale ? copy.available : copy.planned}
+      <strong>{activeGroup ? activeGroup.documents.length : kazakhstanDocumentCount}</strong> {documentsCountLabel(activeGroup ? activeGroup.documents.length : kazakhstanDocumentCount)}
       <span aria-hidden="true">·</span>
       {copy.published}: <strong>{activeGroup ? countPublished(activeGroup) : totalPublished}</strong>
     </p>
