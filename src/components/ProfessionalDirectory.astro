@@ -1,9 +1,8 @@
 ---
 import type { CollectionEntry } from 'astro:content';
 import { UI } from '../i18n/ui';
-import { articlePath, localePath } from '../lib/urls';
+import { articlePath, localePath, sectionPath } from '../lib/urls';
 import type { Locale } from '../site.config';
-import SectionBoundary from './SectionBoundary.astro';
 import '../styles/professionals-directory.css';
 
 interface Props {
@@ -15,6 +14,7 @@ const { locale, materials } = Astro.props;
 const text = {
   ru: {
     eyebrow: 'Профессиональная библиотека',
+    trainingLink: 'Обучение для специалистов',
     description: 'Практические рекомендации, профессиональные знания и инструменты для специалистов, работающих с аутичными людьми.',
     directions: 'направлений',
     items: 'материалов в редакционном плане',
@@ -23,12 +23,11 @@ const text = {
     articles: 'Материалы направления',
     back: 'Все направления',
     preparing: 'Готовится',
-    note: 'Числа на карточках показывают количество материалов в редакционном плане. Пока материал не прошёл проверку и публикацию, он отмечен как готовящийся и не имеет ссылки на несуществующую страницу.',
-    detailNote: 'Материалы публикуются постепенно после проверки содержания и источников. Опубликованные материалы открываются по ссылке.',
     additional: 'Дополнительные опубликованные материалы',
   },
   kk: {
     eyebrow: 'Кәсіби ақпараттық кітапхана',
+    trainingLink: 'Мамандарға арналған оқу',
     description: 'Аутист адамдармен жұмыс істейтін мамандарға арналған практикалық ұсынымдар, кәсіби ақпарат және жұмыс құралдары.',
     directions: 'бағыт',
     items: 'материал редакциялық жоспарда',
@@ -37,12 +36,11 @@ const text = {
     articles: 'Бағыт материалдары',
     back: 'Барлық бағыттар',
     preparing: 'Әзірленуде',
-    note: 'Карточкалардағы сандар редакциялық жоспардағы материалдар санын көрсетеді. Тексеріліп, жарияланбаған материалдар әзірлену үстінде деп белгіленеді және жоқ беттерге сілтеме берілмейді.',
-    detailNote: 'Материалдар мазмұны мен дереккөздері тексерілгеннен кейін кезең-кезеңімен жарияланады. Жарияланған материалдарға сілтемемен өтуге болады.',
     additional: 'Қосымша жарияланған материалдар',
   },
   en: {
     eyebrow: 'Professional resource library',
+    trainingLink: 'Training for professionals',
     description: 'Practical guidance, professional references and tools for professionals working with autistic people.',
     directions: 'areas',
     items: 'resources in the editorial roadmap',
@@ -51,12 +49,11 @@ const text = {
     articles: 'Resources in this area',
     back: 'All areas',
     preparing: 'In preparation',
-    note: 'Card counts reflect the editorial roadmap, not the number of published articles. Unreviewed resources are marked as in preparation and never link to a missing page.',
-    detailNote: 'Resources appear after content and source review. Published resources can be opened using their links.',
     additional: 'Additional published resources',
   },
 } as const;
 const copy = text[locale];
+const trainingHref = `${sectionPath(locale, 'learning')}#professionals-learning`;
 
 type Localized = Record<Locale, string>;
 type PlannedResource = { id: string; title: Localized };
@@ -181,7 +178,10 @@ const forGroup = (group: Group) => {
   <div id="professional-overview" class="professional-directory__overview">
     <header class="professional-directory__intro">
       <p class="professional-directory__eyebrow">{copy.eyebrow}</p>
-      <h1>{sectionTitle}</h1>
+      <div class="professional-directory__title-row">
+        <h1>{sectionTitle}</h1>
+        <a class="professional-directory__training-link" href={trainingHref}>{copy.trainingLink} <span aria-hidden="true">→</span></a>
+      </div>
       <p class="professional-directory__lead">{copy.description}</p>
       <p class="professional-directory__statistics">
         <strong>{groups.length}</strong> {copy.directions}
@@ -211,7 +211,6 @@ const forGroup = (group: Group) => {
         })}
       </div>
     </section>
-    <p class="professional-directory__note">{copy.note}</p>
   </div>
 
   {groups.map((group) => {
@@ -228,11 +227,14 @@ const forGroup = (group: Group) => {
         <div class="professional-directory__detail-header">
           <span class="professional-directory__icon" aria-hidden="true" set:html={icons[group.icon]}></span>
           <p class="professional-directory__eyebrow">{copy.eyebrow}</p>
-          <h1 id={'professional-title-' + group.id}>{group.title[locale]}</h1>
+          <div class="professional-directory__title-row">
+            <h2 class="professional-directory__detail-title" id={'professional-title-' + group.id}>{group.title[locale]}</h2>
+            <a class="professional-directory__training-link" href={trainingHref}>{copy.trainingLink} <span aria-hidden="true">→</span></a>
+          </div>
           <p class="professional-directory__lead">{group.description[locale]}</p>
         </div>
         <div class="professional-directory__list-heading">
-          <h2>{copy.articles}</h2>
+          <h3>{copy.articles}</h3>
           <span class="professional-directory__pill">{count} {countLabel(count)}</span>
         </div>
         <ol class="professional-directory__list">
@@ -260,9 +262,7 @@ const forGroup = (group: Group) => {
             </li>
           ))}
         </ol>
-        <p class="professional-directory__note">{copy.detailNote}</p>
       </section>
     );
   })}
-  <SectionBoundary locale={locale} section="professionals" />
 </div>
