@@ -35,7 +35,7 @@ for (const [locale, copy] of Object.entries(expected)) {
   assert.ok(html.includes(copy.pending), locale + ': missing draft markers');
   assert.equal((html.match(/class="professional-directory__title-row"/g) ?? []).length, 7, locale + ': header and six category headings must have title rows');
   assert.equal((html.match(/class="professional-directory__training-link"/g) ?? []).length, 7, locale + ': training link must sit beside each heading');
-  assert.equal((html.match(/<h1(?:\\s|>)/gi) ?? []).length, 1, locale + ': page should have exactly one H1');
+  assert.equal(html.split('<h1').length - 1, 1, locale + ': page should have exactly one H1');
   assert.ok(html.includes(copy.training), locale + ': localized training link label missing');
   const trainingHref = '/central-asia-autism-hub/kz/' + locale + '/learning/#professionals-learning';
   assert.equal(html.split('href="' + trainingHref + '"').length - 1, 7, locale + ': training links must point to the correct locale');
