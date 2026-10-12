@@ -1,0 +1,268 @@
+---
+import type { CollectionEntry } from 'astro:content';
+import { UI } from '../i18n/ui';
+import { articlePath, localePath } from '../lib/urls';
+import type { Locale } from '../site.config';
+import SectionBoundary from './SectionBoundary.astro';
+import '../styles/professionals-directory.css';
+
+interface Props {
+  locale: Locale;
+  materials: CollectionEntry<'pages'>[];
+}
+
+const { locale, materials } = Astro.props;
+const text = {
+  ru: {
+    eyebrow: 'Профессиональная библиотека',
+    description: 'Практические рекомендации, профессиональные знания и инструменты для специалистов, работающих с аутичными людьми.',
+    directions: 'направлений',
+    items: 'материалов в редакционном плане',
+    published: 'Опубликовано',
+    choose: 'Выберите направление',
+    articles: 'Материалы направления',
+    back: 'Все направления',
+    preparing: 'Готовится',
+    note: 'Числа на карточках показывают количество материалов в редакционном плане. Пока материал не прошёл проверку и публикацию, он отмечен как готовящийся и не имеет ссылки на несуществующую страницу.',
+    detailNote: 'Материалы публикуются постепенно после проверки содержания и источников. Опубликованные материалы открываются по ссылке.',
+    additional: 'Дополнительные опубликованные материалы',
+  },
+  kk: {
+    eyebrow: 'Кәсіби ақпараттық кітапхана',
+    description: 'Аутист адамдармен жұмыс істейтін мамандарға арналған практикалық ұсынымдар, кәсіби ақпарат және жұмыс құралдары.',
+    directions: 'бағыт',
+    items: 'материал редакциялық жоспарда',
+    published: 'Жарияланғаны',
+    choose: 'Бағытты таңдаңыз',
+    articles: 'Бағыт материалдары',
+    back: 'Барлық бағыттар',
+    preparing: 'Әзірленуде',
+    note: 'Карточкалардағы сандар редакциялық жоспардағы материалдар санын көрсетеді. Тексеріліп, жарияланбаған материалдар әзірлену үстінде деп белгіленеді және жоқ беттерге сілтеме берілмейді.',
+    detailNote: 'Материалдар мазмұны мен дереккөздері тексерілгеннен кейін кезең-кезеңімен жарияланады. Жарияланған материалдарға сілтемемен өтуге болады.',
+    additional: 'Қосымша жарияланған материалдар',
+  },
+  en: {
+    eyebrow: 'Professional resource library',
+    description: 'Practical guidance, professional references and tools for professionals working with autistic people.',
+    directions: 'areas',
+    items: 'resources in the editorial roadmap',
+    published: 'Published',
+    choose: 'Choose an area',
+    articles: 'Resources in this area',
+    back: 'All areas',
+    preparing: 'In preparation',
+    note: 'Card counts reflect the editorial roadmap, not the number of published articles. Unreviewed resources are marked as in preparation and never link to a missing page.',
+    detailNote: 'Resources appear after content and source review. Published resources can be opened using their links.',
+    additional: 'Additional published resources',
+  },
+} as const;
+const copy = text[locale];
+
+type Localized = Record<Locale, string>;
+type PlannedResource = { id: string; title: Localized };
+type Group = {
+  id: string;
+  icon: keyof typeof icons;
+  topic: string;
+  title: Localized;
+  description: Localized;
+  resources: PlannedResource[];
+};
+
+// Editorial roadmap is navigation, not clinical content. Resource IDs are internal;
+// visitors see only the sequence 1, 2, 3. New articles use a matching translationKey,
+// for example "professionals-g01", and an existing professional topic ID.
+const icons = {
+  guidelines: '<svg viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg"><g fill="none" stroke="#174b98" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"><path d="M15 5h29l9 9v42a3 3 0 0 1-3 3H15a4 4 0 0 1-4-4V9a4 4 0 0 1 4-4z" fill="#fff"/><path d="M44 5v9h9" fill="#e7a930"/><path d="m19 26 3 3 5-6m5 3h13m-26 13 3 3 5-6m5 3h13m-26 13 3 3 5-6m5 3h13" stroke="#2266dd"/></g></svg>',
+  families: '<svg viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg"><g stroke="#174b98" stroke-width="2.8" stroke-linejoin="round" stroke-linecap="round"><path d="M28 5h23a6 6 0 0 1 6 6v10a6 6 0 0 1-6 6H40l-7 6v-6h-5a6 6 0 0 1-6-6V11a6 6 0 0 1 6-6z" fill="#edf4fc"/><path d="M30 17h1m8 0h1m8 0h1" stroke="#2266dd" stroke-width="4"/><circle cx="18" cy="35" r="6" fill="#fff"/><circle cx="47" cy="36" r="6" fill="#fff"/><path d="M5 59v-3c0-7 6-12 13-12s13 5 13 12v3z" fill="#dceaff"/><path d="M34 59v-3c0-7 6-12 13-12s13 5 13 12v3z" fill="#ffe5b0"/><circle cx="32" cy="47" r="5" fill="#fff"/><path d="M23 60c0-5 4-8 9-8s9 3 9 8" fill="#fff"/></g></svg>',
+  assessment: '<svg viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg"><g fill="none" stroke="#174b98" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="10" width="39" height="48" rx="4" fill="#fff"/><path d="M21 10V6h15v4" fill="#e7a930"/><path d="m17 23 3 3 5-6m5 3h9m-22 12 3 3 5-6m5 3h7m-20 12 3 3 5-6m5 3h4" stroke="#2266dd"/><circle cx="45" cy="45" r="10" fill="#edf4fc"/><path d="m52 52 9 9" stroke-width="4"/></g></svg>',
+  evidence: '<svg viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg"><g fill="none" stroke="#174b98" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"><path d="m22 8 13 13-7 7-13-13z" fill="#edf4fc"/><path d="m17 7 5 5-7 7-5-5z" fill="#e7a930"/><path d="m30 28-8 8"/><circle cx="38" cy="35" r="4" fill="#2266dd"/><path d="M37 17c7 4 11 12 11 21 0 10-8 18-18 18-8 0-13-4-16-10M13 46h23M22 55h26M16 59h38"/></g></svg>',
+  ethics: '<svg viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg"><g fill="none" stroke="#174b98" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"><path d="M32 5 53 13v17c0 14-9 23-21 29C20 53 11 44 11 30V13z" fill="#edf4fc"/><path d="M32 10 48 17v13c0 10-6 18-16 23" fill="#dceaff" stroke="none"/><circle cx="32" cy="31" r="13" fill="#fff"/><path d="m25 31 5 5 10-11" stroke="#2266dd" stroke-width="4"/></g></svg>',
+  tools: '<svg viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg"><g fill="none" stroke="#174b98" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"><rect x="22" y="4" width="20" height="12" rx="3" fill="#dceaff"/><path d="M32 16v8m0-1 11 10-11 10-11-10z" fill="#ffe5b0"/><path d="M21 33H11v14m32-14h10v14"/><rect x="2" y="47" width="25" height="13" rx="3" fill="#edf4fc"/><rect x="37" y="47" width="25" height="13" rx="3" fill="#edf4fc"/><path d="M8 53h12m24 0h12" stroke="#2266dd"/></g></svg>',
+};
+
+const groups: Group[] = [
+  {
+    id: 'guidelines', icon: 'guidelines', topic: 'guidelines',
+    title: { ru: 'Рекомендации и стандарты', kk: 'Ұсынымдар мен стандарттар', en: 'Guidelines and standards' },
+    description: { ru: 'Клинические руководства, нормативная база и междисциплинарная работа', kk: 'Клиникалық нұсқаулықтар, нормативтік база және пәнаралық жұмыс', en: 'Clinical guidance, regulations and multidisciplinary practice' },
+    resources: [
+      { id: 'g01', title: { ru: 'Как пользоваться профессиональной библиотекой и определять границы компетенции', kk: 'Кәсіби кітапхананы пайдалану және құзырет шекараларын анықтау', en: 'Using the professional library and recognising the limits of competence' }},
+      { id: 'g02', title: { ru: 'Международные рекомендации и нормативная база Казахстана', kk: 'Халықаралық ұсынымдар және Қазақстанның нормативтік базасы', en: 'International guidelines and Kazakhstan regulations' }},
+      { id: 'g03', title: { ru: 'Междисциплинарное взаимодействие и маршрутизация семьи', kk: 'Пәнаралық өзара іс-қимыл және отбасын тиісті қызметтерге бағыттау', en: 'Multidisciplinary coordination and family referral pathways' }},
+    ],
+  },
+  {
+    id: 'family-communication', icon: 'families', topic: 'family-communication',
+    title: { ru: 'Работа с семьями', kk: 'Отбасылармен жұмыс', en: 'Working with families' },
+    description: { ru: 'Коммуникация, информированное согласие и совместные решения', kk: 'Қарым-қатынас, ақпараттандырылған келісім және бірлескен шешімдер', en: 'Communication, informed consent and shared decisions' },
+    resources: [
+      { id: 'c01', title: { ru: 'Как обсуждать результаты скрининга с семьёй', kk: 'Скрининг нәтижелерін отбасымен қалай талқылау керек', en: 'Discussing screening results with families' }},
+      { id: 'c02', title: { ru: 'Совместное принятие решений и информированное согласие', kk: 'Бірлесіп шешім қабылдау және ақпараттандырылған келісім', en: 'Shared decision-making and informed consent' }},
+      { id: 'c03', title: { ru: 'Передача информации между семьёй, медициной и школой', kk: 'Отбасы, медицина ұйымы және мектеп арасындағы ақпарат алмасу', en: 'Information sharing between families, health services and schools' }},
+    ],
+  },
+  {
+    id: 'assessment-context', icon: 'assessment', topic: 'assessment-context',
+    title: { ru: 'Оценка и диагностика', kk: 'Бағалау және диагностика', en: 'Assessment and diagnosis' },
+    description: { ru: 'Скрининг, диагностические инструменты и сопутствующие состояния', kk: 'Скрининг, диагностикалық құралдар және қатар жүретін жағдайлар', en: 'Screening, diagnostic instruments and co-occurring conditions' },
+    resources: [
+      { id: 'a01', title: { ru: 'От первых признаков к скринингу и диагностике', kk: 'Алғашқы белгілерден скрининг пен диагностикаға дейін', en: 'From early signs to screening and assessment' }},
+      { id: 'a02', title: { ru: 'M-CHAT-R/F: возможности, ограничения и последующие действия', kk: 'M-CHAT-R/F: мүмкіндіктері, шектеулері және келесі қадамдар', en: 'M-CHAT-R/F: uses, limitations and follow-up' }},
+      { id: 'a03', title: { ru: 'ADOS-2, ADI-R и клиническая оценка', kk: 'ADOS-2, ADI-R және клиникалық бағалау', en: 'ADOS-2, ADI-R and clinical assessment' }},
+      { id: 'a04', title: { ru: 'Дифференциальная оценка и сопутствующие состояния', kk: 'Дифференциалдық бағалау және қатар жүретін жағдайлар', en: 'Differential assessment and co-occurring conditions' }},
+    ],
+  },
+  {
+    id: 'evidence-support', icon: 'evidence', topic: 'evidence-support',
+    title: { ru: 'Доказательность методов', kk: 'Әдістердің дәлелділігі', en: 'Evidence for approaches' },
+    description: { ru: 'Исследования, эффективность и ограничения методов поддержки', kk: 'Қолдау тәсілдеріне қатысты зерттеулер, тиімділік және шектеулер', en: 'Research, effectiveness and limitations of support approaches' },
+    resources: [
+      { id: 'e01', title: { ru: 'Как оценивать научные исследования вмешательств', kk: 'Қолдау тәсілдері туралы ғылыми зерттеулерді қалай бағалау керек', en: 'How to appraise intervention research' }},
+      { id: 'e02', title: { ru: 'AAC, NDBI, FCT и FBA: как оценивать результаты', kk: 'AAC, NDBI, FCT және FBA: нәтижелерді қалай бағалау керек', en: 'AAC, NDBI, FCT and FBA: assessing outcomes' }},
+      { id: 'e03', title: { ru: 'Сенсорные и коммерческие методы: критическая оценка заявлений', kk: 'Сенсорлық және коммерциялық әдістер: мәлімдемелерді сын тұрғысынан бағалау', en: 'Sensory and commercial approaches: critically assessing claims' }},
+    ],
+  },
+  {
+    id: 'ethics', icon: 'ethics', topic: 'ethics',
+    title: { ru: 'Этика и безопасность', kk: 'Этика және қауіпсіздік', en: 'Ethics and safety' },
+    description: { ru: 'Права человека, профессиональные границы и защита данных', kk: 'Адам құқықтары, кәсіби шекаралар және деректерді қорғау', en: 'Human rights, professional boundaries and data protection' },
+    resources: [
+      { id: 'h01', title: { ru: 'Клинические риски и границы компетенции', kk: 'Клиникалық қауіптер және құзырет шекаралары', en: 'Clinical risks and professional scope' }},
+      { id: 'h02', title: { ru: 'Этика поддержки и права аутичного человека', kk: 'Қолдау этикасы және аутист адамдардың құқықтары', en: "Ethics of support and autistic people's rights" }},
+      { id: 'h03', title: { ru: 'Конфиденциальность, персональные данные и цифровые инструменты', kk: 'Құпиялылық, дербес деректер және цифрлық құралдар', en: 'Confidentiality, personal data and digital tools' }},
+    ],
+  },
+  {
+    id: 'practice-tools', icon: 'tools', topic: 'practice-tools',
+    title: { ru: 'Алгоритмы и инструменты', kk: 'Алгоритмдер мен құралдар', en: 'Workflows and tools' },
+    description: { ru: 'Практические чек-листы, индивидуальные планы и мониторинг', kk: 'Практикалық тексеру парақтары, жеке жоспарлар және мониторинг', en: 'Practical checklists, individual plans and monitoring' },
+    resources: [
+      { id: 't01', title: { ru: 'Индивидуальный план поддержки: цели и мониторинг', kk: 'Жеке қолдау жоспары: мақсаттар және мониторинг', en: 'Individual support plans: goals and monitoring' }},
+      { id: 't02', title: { ru: 'Оценка AAC: выбор средств коммуникации и мониторинг', kk: 'AAC бағалау: коммуникация құралдарын таңдау және мониторинг', en: 'AAC assessment: selecting communication supports and monitoring' }},
+      { id: 't03', title: { ru: 'Структурированное наблюдение и FBA', kk: 'Құрылымдалған бақылау және FBA', en: 'Structured observation and FBA' }},
+      { id: 't04', title: { ru: 'Адаптации среды в классе и на приёме', kk: 'Сыныптағы және қабылдаудағы ортаны бейімдеу', en: 'Environmental accommodations in classrooms and consultations' }},
+    ],
+  },
+];
+const plannedCount = groups.reduce((total, group) => total + group.resources.length, 0);
+const publishedCount = materials.length;
+const sectionTitle = UI[locale].sections.professionals.title;
+function countLabel(n: number) {
+  if (locale === 'en') return n === 1 ? 'resource' : 'resources';
+  if (locale === 'kk') return 'материал';
+  const lastTwo = n % 100;
+  if (lastTwo >= 11 && lastTwo <= 14) return 'материалов';
+  const last = n % 10;
+  if (last === 1) return 'материал';
+  if (last >= 2 && last <= 4) return 'материала';
+  return 'материалов';
+}
+const forGroup = (group: Group) => {
+  const records = materials.filter((material) => material.data.topic === group.topic);
+  const matched = group.resources.map((resource) => ({
+    resource,
+    record: records.find((material) => material.data.translationKey === 'professionals-' + resource.id),
+  }));
+  const extra = records.filter((material) =>
+    !matched.some((entry) => entry.record?.data.slug === material.data.slug)
+  );
+  return { matched, extra, count: group.resources.length + extra.length };
+};
+---
+
+<div class="professional-directory">
+  <p class="professional-directory__breadcrumb">
+    <a href={localePath(locale)}>{UI[locale].homeLabel}</a>
+    <span aria-hidden="true"> / </span>
+    <span>{sectionTitle}</span>
+  </p>
+
+  <div id="professional-overview" class="professional-directory__overview">
+    <header class="professional-directory__intro">
+      <p class="professional-directory__eyebrow">{copy.eyebrow}</p>
+      <h1>{sectionTitle}</h1>
+      <p class="professional-directory__lead">{copy.description}</p>
+      <p class="professional-directory__statistics">
+        <strong>{groups.length}</strong> {copy.directions}
+        <span aria-hidden="true">·</span>
+        <strong>{plannedCount}</strong> {copy.items}
+        <span aria-hidden="true">·</span>
+        {copy.published}: <strong>{publishedCount}</strong>
+      </p>
+    </header>
+
+    <section aria-labelledby="professional-areas-title">
+      <h2 id="professional-areas-title">{copy.choose}</h2>
+      <div class="professional-directory__grid">
+        {groups.map((group) => {
+          const { count } = forGroup(group);
+          return (
+            <a class="professional-directory__card" href={'#professional-' + group.id}>
+              <span class="professional-directory__icon" aria-hidden="true" set:html={icons[group.icon]}></span>
+              <strong class="professional-directory__card-title">{group.title[locale]}</strong>
+              <span class="professional-directory__card-description">{group.description[locale]}</span>
+              <span class="professional-directory__card-footer">
+                <span>{count} {countLabel(count)}</span>
+                <span class="professional-directory__arrow" aria-hidden="true">→</span>
+              </span>
+            </a>
+          );
+        })}
+      </div>
+    </section>
+    <p class="professional-directory__note">{copy.note}</p>
+  </div>
+
+  {groups.map((group) => {
+    const { matched, extra, count } = forGroup(group);
+    return (
+      <section
+        id={'professional-' + group.id}
+        class="professional-directory__detail"
+        aria-labelledby={'professional-title-' + group.id}
+      >
+        <a class="professional-directory__back" href="#professional-overview">
+          <span aria-hidden="true">←</span> {copy.back}
+        </a>
+        <div class="professional-directory__detail-header">
+          <span class="professional-directory__icon" aria-hidden="true" set:html={icons[group.icon]}></span>
+          <p class="professional-directory__eyebrow">{copy.eyebrow}</p>
+          <h1 id={'professional-title-' + group.id}>{group.title[locale]}</h1>
+          <p class="professional-directory__lead">{group.description[locale]}</p>
+        </div>
+        <div class="professional-directory__list-heading">
+          <h2>{copy.articles}</h2>
+          <span class="professional-directory__pill">{count} {countLabel(count)}</span>
+        </div>
+        <ol class="professional-directory__list">
+          {matched.map(({ resource, record }) => (
+            <li class="professional-directory__item">
+              {record ? (
+                <a class="professional-directory__item-link" href={articlePath(locale, 'professionals', record.data.slug)}>
+                  <span class="professional-directory__item-title">{record.data.title}</span>
+                  <span class="professional-directory__item-arrow" aria-hidden="true">→</span>
+                </a>
+              ) : (
+                <span class="professional-directory__item-pending">
+                  <span class="professional-directory__item-title">{resource.title[locale]}</span>
+                  <span class="professional-directory__status">{copy.preparing}</span>
+                </span>
+              )}
+            </li>
+          ))}
+          {extra.map((record) => (
+            <li class="professional-directory__item">
+              <a class="professional-directory__item-link" href={articlePath(locale, 'professionals', record.data.slug)}>
+                <span class="professional-directory__item-title">{record.data.title}</span>
+                <span class="professional-directory__item-arrow" aria-hidden="true">→</span>
+              </a>
+            </li>
+          ))}
+        </ol>
+        <p class="professional-directory__note">{copy.detailNote}</p>
+      </section>
+    );
+  })}
+  <SectionBoundary locale={locale} section="professionals" />
+</div>
