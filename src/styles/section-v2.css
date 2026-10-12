@@ -809,3 +809,13 @@
     place-items: center;
   }
 }
+
+/* Courses and training share the same readable heading scale as other sections. */
+.section-v2.learning-section-body .section-v2__hero h1 {
+  line-height: var(--leading-heading);
+  text-wrap: balance;
+  overflow-wrap: anywhere;
+}
+.section-v2.learning-section-body .section-v2__count {
+  place-items: center;
+}
