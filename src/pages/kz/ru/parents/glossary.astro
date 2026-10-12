@@ -1,6 +1,6 @@
 ---
 import BaseLayout from '../../../../layouts/BaseLayout.astro';
-import { localePath } from '../../../../lib/urls';
+import { localePath, sitePath } from '../../../../lib/urls';
 import cards from '../../../../data/autism-glossary-ru.json';
 ---
 
@@ -16,7 +16,23 @@ import cards from '../../../../data/autism-glossary-ru.json';
 
 <section id="catalog" aria-label="Список терминов">
 <nav class="breadcrumb" aria-label="Путь к справочнику"><a href={localePath("ru", "parents")}>Родителям</a><i aria-hidden="true">/</i><span aria-current="page">Словарь терминов</span></nav>
-<div class="hero"><p class="eyebrow">Понятно о важном</p><h1>Словарь терминов</h1><p class="lede">Объяснения слов, которые родители встречают в заключениях, на консультациях и в программах поддержки.</p></div>
+<header class="glossary-feature">
+  <div class="glossary-hero">
+    <p class="eyebrow">Понятно о важном</p>
+    <h1>Словарь терминов</h1>
+    <p class="lede">Объяснения слов, которые родители встречают в заключениях, на консультациях и в программах поддержки.</p>
+  </div>
+  <figure class="glossary-hero-image">
+    <img
+      src={`${sitePath()}images/glossary/terminology-desk.webp`}
+      alt="Деревянные буквы A, B, C и лупа на рабочем столе рядом с книгами"
+      width="800"
+      height="600"
+      loading="eager"
+      decoding="async"
+    />
+  </figure>
+</header>
 <div class="filters" aria-label="Поиск и фильтры">
 <div class="field"><label class="field-label" for="search">Поиск по терминам</label><div class="search-wrap"><svg class="search-icon" aria-hidden="true" width="21" height="21" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="10.5" cy="10.5" r="7"/><path d="m16 16 5 5"/></svg><input class="search-input" id="search" type="search" autocomplete="off" placeholder="Найти термин..."><button type="button" class="search-clear" id="clear" aria-label="Очистить поиск" hidden>×</button></div></div>
 <div class="field"><span class="field-label" id="topic-label">Тема</span><div class="topic-picker"><details id="topic-menu"><summary aria-labelledby="topic-label topic-current"><span class="color-dot" id="topic-dot" aria-hidden="true"></span><span class="summary-label" id="topic-current">Все темы</span><svg class="chevron" viewBox="0 0 24 24" stroke="currentColor" fill="none" stroke-width="2" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></summary><div id="topic-options" class="topic-popover" aria-label="Выбор темы"></div></details></div></div>
@@ -93,11 +109,16 @@ $('search').addEventListener('input',e=>{state.query=e.target.value;state.limit=
 .glossary-root{padding-bottom:80px}
 .breadcrumb{display:flex;gap:9px;flex-wrap:wrap;font-size:13px;margin-block:23px 24px;color:#738399}
 .breadcrumb i{font-style:normal;color:#a9b3c2}
-.hero{max-width:950px;margin-bottom:27px}
-.hero .eyebrow{margin:0 0 11px;color:#18717a;font-size:12px;font-weight:800;letter-spacing:.09em;text-transform:uppercase}
+.glossary-root .glossary-feature{display:grid;grid-template-columns:minmax(0,1.25fr) minmax(280px,0.9fr);gap:30px;align-items:center;min-height:265px;margin:0 0 27px;padding:28px;background:linear-gradient(120deg,#ffffff,#f1f7fc);border:1px solid #dbe5ee;border-radius:19px;overflow:hidden;box-shadow:0 5px 19px rgb(35 70 110 / 4%)}
+.glossary-root .glossary-hero{min-width:0;background:none!important;border:0!important;box-shadow:none!important;padding:0!important;max-width:unset!important;color:var(--ink)!important}
+.glossary-root .glossary-hero h1{color:#14345a!important;text-shadow:none}
+.glossary-root .glossary-hero .lede{color:#526981!important}
+.glossary-root .glossary-hero-image{margin:0;overflow:hidden;align-self:stretch;min-height:228px;border-radius:12px;background:#e8eef3}
+.glossary-root .glossary-hero-image img{width:100%;height:100%;display:block;object-fit:cover;object-position:center 53%}
+.glossary-hero .eyebrow{margin:0 0 11px;color:#18717a;font-size:12px;font-weight:800;letter-spacing:.09em;text-transform:uppercase}
 .glossary-root h1,.glossary-root h2,.glossary-root h3{line-height:1.22;letter-spacing:-.028em}
-.hero h1{margin:0;font-size:clamp(32px,3vw,46px);font-weight:820}
-.hero .lede{max-width:860px;font-size:clamp(16px,1.5vw,18px);color:#526981;line-height:1.6;margin:12px 0 0}
+.glossary-hero h1{margin:0;font-size:clamp(32px,3vw,46px);font-weight:820}
+.glossary-hero .lede{max-width:860px;font-size:clamp(16px,1.5vw,18px);color:#526981;line-height:1.6;margin:12px 0 0}
 .filters{display:grid;grid-template-columns:minmax(0,1.5fr) minmax(310px,.95fr) minmax(174px,.45fr);align-items:end;gap:17px;background:#fff;border:1px solid var(--line);border-radius:19px;padding:20px 23px;box-shadow:var(--shadow)}
 .field{min-width:0;display:grid;gap:7px}
 .field-label{font-size:13px;font-weight:760;color:#375371}
@@ -175,8 +196,8 @@ $('search').addEventListener('input',e=>{state.query=e.target.value;state.limit=
 .article-note,.related-end{font-size:13px!important;color:#6b7b8e!important;line-height:1.7}
 .related-end{padding-top:13px;margin-top:16px}
 @media(max-width:940px){.filters{grid-template-columns:minmax(0,1.4fr) minmax(260px,.9fr)}.field--sort{grid-column:2}.cards{grid-template-columns:repeat(2,minmax(0,1fr))}.term-card{min-height:270px}}
-@media(max-width:740px){.filters{grid-template-columns:1fr;gap:14px;padding:17px}.field--sort{grid-column:auto}.cards{grid-template-columns:1fr;gap:13px}.term-card{min-height:0;padding:20px}.term-preview{-webkit-line-clamp:2}.catalog-heading{margin-top:26px}.topic-popover{max-height:55vh}.glossary-internal-header-status{display:none}}
-@media(max-width:460px){.glossary-internal-brand-name{font-size:15px}.glossary-internal-brand-context{font-size:11px}.hero h1{font-size:34px}.term-card h3{font-size:21px}.term-preview{font-size:14.5px}.topic-option{font-size:12.8px}.detail-article{padding:24px 19px}.detail-article h1{font-size:30px}}
+@media(max-width:740px){.glossary-root .glossary-feature{grid-template-columns:1fr;gap:19px;padding:20px}.glossary-root .glossary-hero-image{min-height:0;aspect-ratio:4/3;max-height:300px}.filters{grid-template-columns:1fr;gap:14px;padding:17px}.field--sort{grid-column:auto}.cards{grid-template-columns:1fr;gap:13px}.term-card{min-height:0;padding:20px}.term-preview{-webkit-line-clamp:2}.catalog-heading{margin-top:26px}.topic-popover{max-height:55vh}.glossary-internal-header-status{display:none}}
+@media(max-width:460px){.glossary-internal-brand-name{font-size:15px}.glossary-internal-brand-context{font-size:11px}.glossary-hero h1{font-size:34px}.term-card h3{font-size:21px}.term-preview{font-size:14.5px}.topic-option{font-size:12.8px}.detail-article{padding:24px 19px}.detail-article h1{font-size:30px}}
 @media(prefers-reduced-motion:reduce){*,*::before,*::after{transition:none!important;scroll-behavior:auto!important}}
 
 </style>
