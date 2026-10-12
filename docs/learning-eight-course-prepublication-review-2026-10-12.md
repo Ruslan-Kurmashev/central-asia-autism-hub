@@ -11,14 +11,14 @@ Editorial status: **PREPARED IN PR, NOT DEPLOYED**
 - Catalogue descriptions are translated, not course content.
 
 ## Direct provider URLs
-1. stepik-teen-soft-skills-bilingual — https://stepik.org/course/102172/promo — teaching language(s): ru,kk; audience: parents,professionals.
-2. orleu-russian-aac-assistive-technologies — https://mooc.orleu.edu.kz/courses/course/8/ — teaching language(s): ru; audience: professionals.
-3. orleu-russian-assistive-needs-sett — https://mooc.orleu.edu.kz/courses/course/6/ — teaching language(s): ru; audience: professionals.
-4. stepik-family-inclusion-practice — https://stepik.org/course/125323/promo — teaching language(s): ru; audience: professionals.
-5. iris-family-engagement — https://iris.peabody.vanderbilt.edu/module/fam/ — teaching language(s): en; audience: professionals.
-6. iris-student-accommodations — https://iris.peabody.vanderbilt.edu/module/acc/ — teaching language(s): en; audience: professionals.
-7. iris-independent-learners — https://iris.peabody.vanderbilt.edu/module/sr/ — teaching language(s): en; audience: professionals.
-8. openlearn-child-young-wellbeing — https://www.open.edu/openlearn/health-sports-psychology/supporting-children-and-young-peoples-wellbeing/content-section-0 — teaching language(s): en; audience: parents,professionals.
+1. stepik-teen-soft-skills-bilingual : https://stepik.org/course/102172/promo : teaching language(s): ru,kk; audience: parents,professionals.
+2. orleu-russian-aac-assistive-technologies : https://mooc.orleu.edu.kz/courses/course/8/ : teaching language(s): ru; audience: professionals.
+3. orleu-russian-assistive-needs-sett : https://mooc.orleu.edu.kz/courses/course/6/ : teaching language(s): ru; audience: professionals.
+4. stepik-family-inclusion-practice : https://stepik.org/course/125323/promo : teaching language(s): ru; audience: professionals.
+5. iris-family-engagement : https://iris.peabody.vanderbilt.edu/module/fam/ : teaching language(s): en; audience: professionals.
+6. iris-student-accommodations : https://iris.peabody.vanderbilt.edu/module/acc/ : teaching language(s): en; audience: professionals.
+7. iris-independent-learners : https://iris.peabody.vanderbilt.edu/module/sr/ : teaching language(s): en; audience: professionals.
+8. openlearn-child-young-wellbeing : https://www.open.edu/openlearn/health-sports-psychology/supporting-children-and-young-peoples-wellbeing/content-section-0 : teaching language(s): en; audience: parents,professionals.
 
 ## Credential distinctions and QA
 - Stepik soft skills: official programme explicitly mentions certificate availability as a possibility; terms are not described publicly. Cite provider claim only, no guarantee.
