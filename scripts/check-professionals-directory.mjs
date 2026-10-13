@@ -21,7 +21,7 @@ const expected = {
     back: 'All areas', pending: 'In preparation', cardWord: 'resources', training: 'Training for professionals', published: 0,
   },
 };
-const counts = [42, 3, 4, 3, 3, 5];
+const counts = [42, 6, 4, 3, 3, 5];
 const ids = ['guidelines', 'family-communication', 'assessment-context', 'evidence-support', 'ethics', 'practice-tools'];
 // CSS emitted assets are content-hashed. The HTML must reference our directory stylesheet
 // indirectly via Astro's static asset pipeline.
@@ -47,8 +47,8 @@ for (const [locale, copy] of Object.entries(expected)) {
   assert.ok(!html.includes('PRO-G01') && !html.includes('PRO-E03'), locale + ': internal editorial IDs leaked');
   assert.equal((html.match(/class="professional-directory__card"/g) ?? []).length, 6, locale + ': expected six area cards');
   assert.equal((html.match(/class="professional-directory__detail"/g) ?? []).length, 6, locale + ': expected six detail panels');
-  assert.equal((html.match(/class="professional-directory__item"/g) ?? []).length, 19, locale + ': expected 19 direct resources; four country folders and the Kazakhstan folder are checked separately');
-  assert.equal((html.match(/class="professional-directory__status"/g) ?? []).length, locale === 'ru' ? 18 : 19, locale + ': only genuinely published direct entries should be linked');
+  assert.equal((html.match(/class="professional-directory__item"/g) ?? []).length, 22, locale + ': expected 22 direct planned resources; international country folders are counted separately');
+  assert.equal((html.match(/class="professional-directory__status"/g) ?? []).length, locale === 'ru' ? 20 : 22, locale + ': only genuinely published direct entries should be linked');
   if (locale === 'ru') {
     const articleHref = '/central-asia-autism-hub/kz/ru/professionals/kak-rabotat-s-professionalnymi-rekomendaciyami/';
     assert.ok(html.includes('href="' + articleHref + '"'), 'Russian first professional resource must have a working article link');
@@ -64,6 +64,24 @@ for (const [locale, copy] of Object.entries(expected)) {
     for (const documentToKeepSeparate of ['NICE CG128', 'CG170', 'CG142', '№ 332-VIII']) {
       assert.ok(!introductorySource.includes(documentToKeepSeparate), 'Introductory article contains an individual-document deep dive: ' + documentToKeepSeparate);
     }
+  }
+  const familyPanel = html.split('id="professional-family-communication"')[1]?.split('id="professional-assessment-context"')[0] ?? '';
+  assert.ok(familyPanel, locale + ': family communication panel missing');
+  const familyTopics = [
+    locale === 'ru' ? 'Как обсуждать результаты скрининга с семьёй' : locale === 'kk' ? 'Скрининг нәтижелерін отбасымен қалай талқылау керек' : 'Discussing screening results with families',
+    locale === 'ru' ? 'Как сообщать семье о диагнозе аутизма' : locale === 'kk' ? 'Отбасына аутизм диагнозын қалай түсіндіру керек' : 'Communicating an autism diagnosis to families',
+    locale === 'ru' ? 'Несогласие, тревога и конфликтные ситуации' : locale === 'kk' ? 'Келіспеушілік, алаңдаушылық және жанжалдар' : 'Managing disagreement, concerns and conflict with families',
+  ];
+  for (const label of familyTopics) assert.ok(familyPanel.includes(label), locale + ': family roadmap topic missing: ' + label);
+  const c01Href = '/central-asia-autism-hub/kz/ru/professionals/kak-obsuzhdat-rezultaty-skrininga-s-semiej/';
+  if (locale === 'ru') {
+    assert.ok(familyPanel.includes('href="' + c01Href + '"'), 'RU: published C01 article must link to canonical URL');
+    const c01 = await readFile(path.resolve('dist/kz/ru/professionals/kak-obsuzhdat-rezultaty-skrininga-s-semiej/index.html'), 'utf8');
+    for (const phrase of ['Алгоритм разговора из семи шагов', 'Шаблон: письменный итог встречи для семьи', 'professional-family-screening-conversation.svg', 'article-v2__sources']) {
+      assert.ok(c01.includes(phrase), 'C01 article lacks practical component: ' + phrase);
+    }
+  } else {
+    assert.ok(!familyPanel.includes('href="' + c01Href + '"'), locale + ': untranslated C01 cannot link to Russian article');
   }
   const internationalCountries = {
     uk: ['nice-cg128', 'nice-cg170', 'nice-cg142'],
