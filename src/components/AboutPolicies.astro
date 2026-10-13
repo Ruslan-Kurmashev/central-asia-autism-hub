@@ -12,6 +12,7 @@ interface PolicySection {
 interface PolicyCopy {
   heading: string;
   lead: string;
+  navigation: string;
   sections: PolicySection[];
   fullPolicy: string;
   reportIssue: string;
@@ -30,12 +31,14 @@ const copy: Record<Locale, PolicyCopy> = {
   ru: {
     heading: 'Как устроен проект и как мы отвечаем за информацию',
     lead: 'Ниже описаны редакционная работа, границы медицинских материалов, обращение с данными и способы сообщить об ошибке. Подробные рабочие политики опубликованы в открытом репозитории.',
+    navigation: 'Разделы страницы',
     fullPolicy: 'Полный документ политики (на английском)',
     reportIssue: 'Сообщить об ошибке через GitHub',
     accountNote: 'Для отправки обращения в GitHub потребуется учётная запись. Не публикуйте имена детей, диагнозы, контакты или медицинские документы.',
     sections: [
       { id: 'mission', heading: 'Миссия и статус проекта', paragraphs: [
-        'Autism Hub Kazakhstan  –  независимый информационно-образовательный ресурс для семей и специалистов, прежде всего в Казахстане. Central Asia Autism Hub  –  название более широкой концепции проекта.',
+        'Autism Hub Kazakhstan - независимый информационно-образовательный ресурс для семей и специалистов, прежде всего в Казахстане. Он развивается как первая национальная версия инициативы Central Asia Autism Hub.',
+        'Autism School Kazakhstan - образовательная программа Autism Hub Kazakhstan для родителей и семей. Она не заменяет профессиональную оценку и не обещает результатов лечения.',
         'Сайт не является государственным порталом, медицинской организацией или службой диагностики. Наличие материалов не означает официального одобрения описанных методик.'
       ], document: '01-brand-architecture.md' },
       { id: 'editorial', heading: 'Редакционная политика', paragraphs: [
@@ -48,7 +51,9 @@ const copy: Record<Locale, PolicyCopy> = {
       ], document: '04-editorial-evidence-medical-safety.md' },
       { id: 'privacy', heading: 'Приватность и данные', paragraphs: [
         'В текущей информационной версии нет регистрации, приёма медицинских документов, загрузки файлов, форм для описания случаев или онлайн-оплаты. Не отправляйте личную или медицинскую информацию через публичные обращения.',
-        'Если используются заметки или отметки в листах наблюдения, они обрабатываются в браузере пользователя, а не отправляются в базу данных сайта. Хостинг-провайдер и сторонние сайты могут обрабатывать технические данные в соответствии с собственными правилами.'
+        'Если используются заметки или отметки в листах наблюдения, они обрабатываются в браузере пользователя, а не отправляются в базу данных сайта.',
+        'GitHub Pages регистрирует IP-адреса посетителей для обеспечения безопасности согласно правилам GitHub. Это обработка на стороне хостинга, а не сбор медицинских данных проектом. Внешние сайты могут обрабатывать данные по собственным правилам.',
+        'В дальнейшем возможна ограниченная агрегированная статистика посещаемости после отдельной проверки приватности; отслеживание людей, рекламное профилирование и сбор медицинских данных для аналитики не предусмотрены.'
       ], document: '05-privacy-and-data.md' },
       { id: 'accessibility', heading: 'Доступность и языки', paragraphs: [
         'Проект ориентируется на WCAG 2.2 AA: читаемый текст, понятную навигацию, управление клавиатурой и адаптацию к небольшим экранам. Это цель разработки, а не заявление о завершённой независимой сертификации.',
@@ -63,12 +68,14 @@ const copy: Record<Locale, PolicyCopy> = {
   kk: {
     heading: 'Жоба қалай жұмыс істейді және ақпарат үшін қалай жауап береміз',
     lead: 'Мұнда редакциялық жұмыс, медициналық ақпараттың шектері, деректер құпиялығы және қате туралы хабарлау жолдары берілген. Толық жұмыс саясаттары ашық репозиторийде жарияланған.',
+    navigation: 'Бет бөлімдері',
     fullPolicy: 'Саясаттың толық мәтіні (ағылшын тілінде)',
     reportIssue: 'GitHub арқылы қате туралы хабарлау',
     accountNote: 'GitHub-та хабарлама жіберу үшін есептік жазба қажет. Балалардың аттарын, диагноздарын, байланыс деректерін немесе медициналық құжаттарын жарияламаңыз.',
     sections: [
       { id: 'mission', heading: 'Миссия және жоба мәртебесі', paragraphs: [
-        'Autism Hub Kazakhstan  –  ең алдымен Қазақстандағы отбасылар мен мамандарға арналған тәуелсіз ақпараттық-білім беру ресурс. Central Asia Autism Hub  –  жобаның кеңірек тұжырымдамасының атауы.',
+        'Autism Hub Kazakhstan - ең алдымен Қазақстандағы отбасылар мен мамандарға арналған тәуелсіз ақпараттық-білім беру ресурсы. Ол Central Asia Autism Hub бастамасының Қазақстанда әзірленіп жатқан алғашқы ұлттық нұсқасы.',
+        'Autism School Kazakhstan - ата-аналар мен отбасыларға арналған Autism Hub Kazakhstan білім беру бағдарламасы. Ол кәсіби бағалауды алмастырмайды және емдеу нәтижесіне кепілдік бермейді.',
         'Сайт мемлекеттік портал, медициналық ұйым немесе диагностика қызметі емес. Әдістер туралы ақпарат олардың ресми мақұлданғанын білдірмейді.'
       ], document: '01-brand-architecture.md' },
       { id: 'editorial', heading: 'Редакциялық саясат', paragraphs: [
@@ -81,10 +88,12 @@ const copy: Record<Locale, PolicyCopy> = {
       ], document: '04-editorial-evidence-medical-safety.md' },
       { id: 'privacy', heading: 'Құпиялық және деректер', paragraphs: [
         'Ақпараттық нұсқада тіркелу, медициналық құжаттарды қабылдау, файл жүктеу, жеке жағдайларды сипаттау нысандары немесе онлайн төлем жоқ. Ашық хабарламаларға жеке немесе медициналық ақпарат енгізбеңіз.',
-        'Даму парақтарындағы белгілер мен жазбалар сайттың дерекқорына жіберілмей, пайдаланушы браузерінде өңделеді. Хостинг провайдері мен сыртқы сайттар техникалық деректерді өз ережелеріне сай өңдеуі мүмкін.'
+        'Даму парақтарындағы белгілер мен жазбалар сайттың дерекқорына жіберілмей, пайдаланушы браузерінде өңделеді.',
+        'GitHub Pages қауіпсіздікті қамтамасыз ету үшін келушілердің IP-мекенжайларын GitHub ережелеріне сәйкес тіркейді. Бұл жоба медициналық деректерді жинайды дегенді білдірмейді. Сыртқы сайттар деректерді өз ережелеріне сай өңдеуі мүмкін.',
+        'Болашақта құпиялыққа жеке тексеру жүргізілген соң ғана жиынтық келушілер статистикасын пайдалану мүмкін. Жеке тұлғаларды қадағалау, жарнамалық профильдеу және медициналық деректерді аналитика үшін жинау көзделмейді.'
       ], document: '05-privacy-and-data.md' },
       { id: 'accessibility', heading: 'Қолжетімділік және тілдер', paragraphs: [
-        'Жобаның мақсаты  –  WCAG 2.2 AA қағидаларына сай оқылатын мәтін, түсінікті навигация, пернетақтамен басқару және мобильді экрандарға бейімделу. Бұл тәуелсіз сертификаттаудан өтті деген мәлімдеме емес.',
+        'Жобаның мақсаты - WCAG 2.2 AA қағидаларына сай оқылатын мәтін, түсінікті навигация, пернетақтамен басқару және мобильді экрандарға бейімделу. Бұл тәуелсіз сертификаттаудан өтті деген мәлімдеме емес.',
         'Орыс, қазақ және ағылшын тілдеріндегі материалдар тексерілген сайын жарияланады. Аударманың болмауы бастапқы тілдегі мақаланың жоқ екенін білдірмейді.'
       ], document: '06-design-and-accessibility.md' },
       { id: 'contact', heading: 'Байланыс, қателер және түзетулер', paragraphs: [
@@ -96,12 +105,14 @@ const copy: Record<Locale, PolicyCopy> = {
   en: {
     heading: 'How the project works and how information is reviewed',
     lead: 'This page explains our editorial process, medical boundaries, data practices and ways to report errors. The full working policies are available in the public repository.',
+    navigation: 'On this page',
     fullPolicy: 'Read the complete policy',
     reportIssue: 'Report an issue on GitHub',
     accountNote: 'A GitHub account is required to submit an issue. Do not disclose children’s names, diagnoses, contact details or medical documents.',
     sections: [
       { id: 'mission', heading: 'Mission and project status', paragraphs: [
-        'Autism Hub Kazakhstan is an independent information and education resource primarily for families and professionals in Kazakhstan. Central Asia Autism Hub names the broader project concept.',
+        'Autism Hub Kazakhstan is an independent information and education resource primarily for families and professionals in Kazakhstan. It is being developed as the first country implementation of the Central Asia Autism Hub initiative.',
+        'Autism School Kazakhstan is the parent and family education programme within Autism Hub Kazakhstan. It does not replace professional assessment or promise treatment outcomes.',
         'This is not a government portal, healthcare provider or diagnostic service. Inclusion of an approach does not constitute official endorsement.'
       ], document: '01-brand-architecture.md' },
       { id: 'editorial', heading: 'Editorial policy', paragraphs: [
@@ -114,7 +125,9 @@ const copy: Record<Locale, PolicyCopy> = {
       ], document: '04-editorial-evidence-medical-safety.md' },
       { id: 'privacy', heading: 'Privacy and data', paragraphs: [
         'The current information site does not offer accounts, intake of medical records, uploads, personal case forms or online payments. Do not submit personal or medical information in public issue reports.',
-        'Selections and notes in developmental observation sheets are handled within the visitor’s browser, not submitted to a site database. Hosting providers and linked external sites may process technical data under their own policies.'
+        'Selections and notes in developmental observation sheets are handled within the visitor’s browser, not submitted to a site database.',
+        'GitHub Pages logs visitors’ IP addresses for security under GitHub’s own policies. This hosting-level processing is not medical-data collection by the project. Linked external services may process data under their own policies.',
+        'Limited aggregate website analytics may be considered after a separate privacy review. Individual tracking, advertising profiles and collecting medical data for analytics are not part of the project’s approved approach.'
       ], document: '05-privacy-and-data.md' },
       { id: 'accessibility', heading: 'Accessibility and languages', paragraphs: [
         'The project targets WCAG 2.2 AA through readable content, predictable navigation, keyboard support and responsive layouts. This is a development objective, not a claim of independently certified conformance.',
@@ -135,6 +148,13 @@ const content = copy[locale];
     <h2 id="about-policies-heading">{content.heading}</h2>
     <p>{content.lead}</p>
   </header>
+  <nav class="about-policies__navigation" aria-label={content.navigation}>
+    <ul>
+      {content.sections.map(section => (
+        <li><a href={'#' + section.id}>{section.heading}</a></li>
+      ))}
+    </ul>
+  </nav>
   <div class="about-policies__grid">
     {content.sections.map((section) => (
       <section class="about-policies__item" id={section.id} aria-labelledby={section.id + '-title'}>
@@ -145,12 +165,12 @@ const content = copy[locale];
         )}
         {section.document && (
           <p class="about-policies__document">
-            <a href={docsBase + section.document} rel="external">{content.fullPolicy} ↗</a>
+            <a href={docsBase + section.document} rel="external" aria-label={section.heading + ': ' + content.fullPolicy}>{content.fullPolicy} <span aria-hidden="true">↗</span></a>
           </p>
         )}
         {section.id === 'contact' && (
           <>
-            <p class="about-policies__document"><a href={issueUrl} rel="external">{content.reportIssue} ↗</a></p>
+            <p class="about-policies__document"><a href={issueUrl} rel="external">{content.reportIssue} <span aria-hidden="true">↗</span></a></p>
             <p class="about-policies__note">{content.accountNote}</p>
           </>
         )}
