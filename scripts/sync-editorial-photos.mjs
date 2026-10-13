@@ -42,7 +42,7 @@ const photos = [
   ['parent-feeding-table-utensils.jpg', '6969720'],
   ['parent-nutrition-meal-planning.jpg', '8715631'],
   ['parent-feeding-food-textures.jpg', '31617910'],
-  ['parent-arfid-food-variety.jpg', '6589'],
+  ['parent-arfid-food-variety.jpg', '5852329'],
   ['parent-sensory-everyday-fidget.jpg', '13417045'],
   ['parent-play-pretend-kitchen.jpg', '5093646'],
   ['parent-reinforcement-goal-stickers.jpg', '6192124'],
