@@ -57,6 +57,18 @@ for (const locale of locales) {
     inspect(page.includes(docs + doc), 'source policy link absent: ' + doc);
   }
   inspect(!page.includes('href="/kz/'), 'base-path-unaware internal link');
+
+  const expertHtml = await readFile(path.join('dist', 'kz', locale, 'about', 'experts', 'index.html'), 'utf8');
+  inspect((expertHtml.match(/<h1\b/g) || []).length === 1, 'expert directory must have one H1');
+  inspect(expertHtml.includes('experts-directory__hero') &&
+    expertHtml.includes('experts-directory__section--join'), 'expert directory layout and collaboration call missing');
+  inspect((expertHtml.match(/data-expert-disclosure/g) || []).length >= 3, 'three interactive role disclosures missing');
+  inspect(expertHtml.includes('about/contact/'), 'expert collaboration must link to contact');
+  inspect(expertHtml.includes('about/policies/#editorial'), 'expert editorial policy link missing');
+  inspect(!expertHtml.includes('Руслан Курмашев') && !expertHtml.includes('Елена Савина') &&
+    !expertHtml.includes('Магрипа'), 'unconfirmed expert names shown in directory');
+  inspect((expertHtml.match(/<h2\b/g) || []).length >= 4, 'expert sections lack semantic headings');
+
 }
 
 const component = await readFile('src/components/AboutPolicies.astro', 'utf8');
@@ -66,5 +78,5 @@ if (errors.length) {
   console.error('About and policy QA failed:\n' + errors.map(line => ' - ' + line).join('\n'));
   process.exitCode = 1;
 } else {
-  console.log('About QA passed: 3 compact overviews and separate policies, 6 policy sections per language, source links and navigation.');
+  console.log('About QA passed: 3 compact overviews, separate policies and accessible experts directory in 3 languages.');
 }

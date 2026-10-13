@@ -1,5 +1,6 @@
 ---
 import BaseLayout from '../../../../layouts/BaseLayout.astro';
+import ExpertsDirectory from '../../../../components/ExpertsDirectory.astro';
 import { localePath, sectionPath } from '../../../../lib/urls';
 import { SITE, SUPPORTED_LOCALES, type Locale } from '../../../../site.config';
 import '../../../../styles/about-subpages.css';
@@ -132,8 +133,11 @@ const issueUrl = 'https://github.com/Ruslan-Kurmashev/central-asia-autism-hub/is
   locale={locale}
   currentSection="about"
   alternatePath={'about/' + page}
-  bodyClass="about-subpage"
+  bodyClass={page === 'experts' ? 'experts-directory-body' : 'about-subpage'}
 >
+  {page === 'experts' ? (
+    <ExpertsDirectory locale={locale} />
+  ) : (
   <article class="about-subpage__page">
     <header class="about-subpage__hero">
       <div class="container">
@@ -174,4 +178,5 @@ const issueUrl = 'https://github.com/Ruslan-Kurmashev/central-asia-autism-hub/is
       </div>
     </section>
   </article>
+  )}
 </BaseLayout>

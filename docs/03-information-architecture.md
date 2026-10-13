@@ -236,7 +236,9 @@ The `Guidelines and standards` subsection is a **document reference library**, n
 
 The main About page is a concise public overview with the mission, the need addressed, five content areas, editorial principles, a regional vision and ways to contribute. A results/impact report is not part of the main About page. Do not imply unverified results or confirmed partnerships.
 
-Dedicated localized pages provide team profiles, confirmed expert profiles, contact routes, and the full project policies. The policy page retains the existing anchored editorial, evidence-safety, privacy, accessibility and corrections sections.
+Dedicated localized pages provide team profiles, confirmed expert profiles, contact routes, and the full project policies.
+
+The experts page is a single catalog at `/kz/{language}/about/experts/` with accessible expandable cards, no standalone per-expert routes. Profiles can be listed only after participation is confirmed and the person consents to public display. Identify authorship, subject-matter consultation and independent review separately; reviewing one resource never implies a review of the whole site. An open participation invitation links to the existing contact channel without collecting personal data on the site. The policy page retains the existing anchored editorial, evidence-safety, privacy, accessibility and corrections sections.
 
 Editorial policy, privacy, disclaimer, and contact links must also be accessible from the site footer.
 

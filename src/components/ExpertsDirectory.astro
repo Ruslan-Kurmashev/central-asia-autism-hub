@@ -1,0 +1,365 @@
+---
+import type { Locale } from '../site.config';
+import { EXPERT_PUBLIC_PROFILES, type ExpertContribution } from '../data/expert-profiles';
+import { localePath, sectionPath } from '../lib/urls';
+import '../styles/experts-directory.css';
+
+const { locale } = Astro.props as { locale: Locale };
+
+type Role = ExpertContribution;
+type Copy = {
+  home: string; about: string; eyebrow: string; title: string; lead: string;
+  promiseTitle: string; promise: string; verification: string;
+  rosterTitle: string; rosterLead: string; emptyTitle: string; emptyBody: string;
+  viewLabel: string; qualificationsLabel: string; experienceLabel: string; activityLabel: string;
+  materialLabel: string; professionalLinkLabel: string;
+  rolesTitle: string; rolesLead: string; expandLabel: string;
+  roles: Record<Role, { title: string; short: string; details: string; limit: string }>;
+  joinEyebrow: string; joinTitle: string; joinLead: string;
+  joinSteps: string[]; joinAction: string; notice: string;
+  policyLink: string; back: string; transparency: string;
+};
+const c: Record<Locale, Copy> = {
+  ru: {
+    home: 'Главная', about: 'О проекте', eyebrow: 'О ПРОЕКТЕ / ЭКСПЕРТИЗА',
+    title: 'Наши эксперты',
+    lead: 'Открыто показываем, кто участвует в подготовке материалов Autism Hub Kazakhstan, в какой области работает специалист и какой конкретно вклад он внёс.',
+    promiseTitle: 'Экспертиза, которую можно проверить',
+    promise: 'Профессиональная квалификация, прозрачная роль и связь с конкретными публикациями важнее формального списка известных имён.',
+    verification: 'Профили размещаются после подтверждения участия и согласия человека на публикацию.',
+    rosterTitle: 'Каталог специалистов',
+    rosterLead: 'При наличии подтверждённых участников здесь будут отображаться их интерактивные карточки. На компьютере подробности раскрываются при наведении, на телефоне - по нажатию.',
+    emptyTitle: 'Формируем экспертный каталог',
+    emptyBody: 'Мы согласовываем участие специалистов и содержание их публичных профилей. До подтверждения не размещаем имена, должности и отметки о рецензировании. Ниже объясняем возможные формы участия.',
+    viewLabel: 'Подробнее об эксперте',
+    qualificationsLabel: 'Подтверждённая квалификация',
+    experienceLabel: 'Специализация',
+    activityLabel: 'Участие в AutismHub',
+    materialLabel: 'Материалы с участием специалиста',
+    professionalLinkLabel: 'Профессиональные профили',
+    rolesTitle: 'Что означают роли специалистов',
+    rolesLead: 'Участие в проекте не означает автоматическую проверку всех публикаций. У каждого специалиста будет указана конкретная роль. Наведите курсор или нажмите на карточку.',
+    expandLabel: 'Раскрыть описание',
+    roles: {
+      author: {
+        title: 'Автор материала', short: 'Готовит содержательную часть публикации.',
+        details: 'Создаёт текст или существенно участвует в его подготовке, отборе и интерпретации источников.',
+        limit: 'Авторство не означает независимого рецензирования.',
+      },
+      consultant: {
+        title: 'Эксперт-консультант', short: 'Даёт рекомендации по определённой теме.',
+        details: 'Помогает уточнить профессиональные термины, контекст, практическую применимость или отдельные утверждения в рамках своей компетенции.',
+        limit: 'Консультация не равна независимой проверке всей статьи.',
+      },
+      reviewer: {
+        title: 'Независимый рецензент', short: 'Проверяет конкретный материал в установленном объёме.',
+        details: 'Проводит отдельную документированную оценку утверждений, источников или профильных рекомендаций. Объём и дата проверки указываются при наличии такой оценки.',
+        limit: 'Статус присваивается только после фактической независимой проверки конкретного материала.',
+      },
+    },
+    joinEyebrow: 'ПРИГЛАШЕНИЕ К СОТРУДНИЧЕСТВУ',
+    joinTitle: 'Хотите стать экспертом AutismHub?',
+    joinLead: 'Мы приглашаем исследователей, медицинских и образовательных специалистов, специалистов по коммуникации и развитию, а также представителей смежных областей, готовых делиться проверяемыми знаниями.',
+    joinSteps: [
+      'Расскажите о вашей профессиональной области и том, чем хотели бы помочь: авторство, консультация или рецензирование.',
+      'Укажите ссылки на публичные профессиональные профили или публикации, которые можно проверить.',
+      'После обсуждения объёма участия и согласования текста профиля мы сможем добавить вас в каталог.',
+    ],
+    joinAction: 'Предложить сотрудничество',
+    notice: 'Сейчас связь доступна через публичный GitHub. Не публикуйте паспортные данные, документы, телефоны, сведения о пациентах или другую конфиденциальную информацию. Размещение в каталоге не происходит автоматически.',
+    policyLink: 'Как мы проверяем и публикуем информацию',
+    back: 'Вернуться к проекту',
+    transparency: 'Публичный список не означает одобрение сайта организациями, где работают специалисты, и не заменяет профессиональную консультацию.',
+  },
+  kk: {
+    home: 'Басты бет', about: 'Жоба туралы', eyebrow: 'ЖОБА ТУРАЛЫ / САРАПТАМА',
+    title: 'Біздің сарапшылар',
+    lead: 'Autism Hub Kazakhstan материалдарын әзірлеуге кім қатысатынын, маманның кәсіби саласын және нақты үлесін ашық көрсетеміз.',
+    promiseTitle: 'Тексеруге болатын сараптама',
+    promise: 'Белгілі есімдердің тізімінен гөрі кәсіби біліктілік, нақты рөл және жарияланымдарға қосқан үлестің айқын болуы маңызды.',
+    verification: 'Профильдер маманның қатысуы расталып, жариялауға келісім алынғаннан кейін орналастырылады.',
+    rosterTitle: 'Мамандар каталогы',
+    rosterLead: 'Қатысуы расталған мамандардың интерактивті карточкалары осы жерде пайда болады. Компьютерде мәліметтер курсорды апарғанда, телефонда басқанда ашылады.',
+    emptyTitle: 'Сарапшылар каталогын қалыптастырып жатырмыз',
+    emptyBody: 'Біз мамандардың қатысуын және олардың жария профильдерінің мазмұнын келісіп жатырмыз. Расталмаған есімдер, лауазымдар немесе рецензия туралы белгілер жарияланбайды. Төменде қатысу жолдары түсіндіріледі.',
+    viewLabel: 'Маман туралы толығырақ',
+    qualificationsLabel: 'Расталған біліктілік',
+    experienceLabel: 'Мамандану саласы',
+    activityLabel: 'AutismHub жобасына қосқан үлесі',
+    materialLabel: 'Маман қатысқан материалдар',
+    professionalLinkLabel: 'Кәсіби профильдер',
+    rolesTitle: 'Мамандардың рөлдері нені білдіреді',
+    rolesLead: 'Жобаға қатысу барлық материалдар тексерілді дегенді білдірмейді. Әр маманның нақты рөлі көрсетіледі. Карточканы басыңыз немесе курсорды апарыңыз.',
+    expandLabel: 'Толық сипаттаманы ашу',
+    roles: {
+      author: {
+        title: 'Материал авторы', short: 'Жарияланымның мазмұнын әзірлейді.',
+        details: 'Мәтінді дайындайды немесе дереккөздерді іріктеу мен түсіндіруге елеулі үлес қосады.',
+        limit: 'Авторлық тәуелсіз рецензия жүргізілгенін білдірмейді.',
+      },
+      consultant: {
+        title: 'Сарапшы-кеңесші', short: 'Белгілі бір тақырып бойынша кеңес береді.',
+        details: 'Өз құзыреті шеңберінде терминдерді, контексті, практикалық қолдануды немесе жекелеген тұжырымдарды нақтылауға көмектеседі.',
+        limit: 'Кеңес беру бүкіл мақаланы тәуелсіз тексерумен тең емес.',
+      },
+      reviewer: {
+        title: 'Тәуелсіз рецензент', short: 'Нақты материалға бөлек баға береді.',
+        details: 'Белгіленген көлемде тұжырымдарды, дереккөздерді немесе кәсіби ұсынымдарды құжатталған түрде бағалайды. Мұндай тексерудің көлемі мен күні көрсетіледі.',
+        limit: 'Бұл мәртебе нақты материал тәуелсіз тексерілген жағдайда ғана беріледі.',
+      },
+    },
+    joinEyebrow: 'ЫНТЫМАҚТАСТЫҚҚА ШАҚЫРУ',
+    joinTitle: 'AutismHub сарапшысы болғыңыз келе ме?',
+    joinLead: 'Біз зерттеушілерді, медицина және білім беру мамандарын, коммуникация мен даму саласының және басқа да тиісті бағыттардың мамандарын ынтымақтастыққа шақырамыз.',
+    joinSteps: [
+      'Кәсіби салаңызды және қалай көмектескіңіз келетінін айтыңыз: авторлық, кеңес беру немесе рецензия.',
+      'Тексеруге болатын ашық кәсіби профильдеріңізге немесе жарияланымдарыңызға сілтеме беріңіз.',
+      'Қатысу ауқымы мен профиль мәтіні келісілгеннен кейін сізді каталогқа қоса аламыз.',
+    ],
+    joinAction: 'Ынтымақтастық ұсыну',
+    notice: 'Қазір байланыс GitHub-тағы ашық арна арқылы жүзеге асады. Жеке құжаттарды, телефон нөмірлерін, пациенттердің деректерін немесе өзге құпия ақпаратты жарияламаңыз. Каталогқа енгізу автоматты түрде жүргізілмейді.',
+    policyLink: 'Ақпаратты қалай тексеріп, жариялаймыз',
+    back: 'Жоба туралы бетке оралу',
+    transparency: 'Мамандар тізімі олардың жұмыс беруші ұйымдары сайтты ресми түрде қолдайды дегенді білдірмейді және кәсіби кеңесті алмастырмайды.',
+  },
+  en: {
+    home: 'Home', about: 'About', eyebrow: 'ABOUT / EXPERTISE',
+    title: 'Our experts',
+    lead: 'We show who contributes to Autism Hub Kazakhstan resources, their professional expertise and exactly what role they have played.',
+    promiseTitle: 'Expertise you can verify',
+    promise: 'Verifiable qualifications, defined responsibilities and links to specific publications matter more than a list of prominent names.',
+    verification: 'Profiles are published only after participation is confirmed and the individual consents to a public profile.',
+    rosterTitle: 'Expert directory',
+    rosterLead: 'Interactive cards for confirmed contributors will appear here. On desktop, details open on hover; on touchscreens, tap to expand.',
+    emptyTitle: 'Building our expert directory',
+    emptyBody: 'We are agreeing participation and public profiles with specialists. We do not publish unconfirmed names, titles or review claims. Below you can learn about the different contribution roles.',
+    viewLabel: 'More about this expert',
+    qualificationsLabel: 'Verified qualifications',
+    experienceLabel: 'Specialisation',
+    activityLabel: 'Contribution to AutismHub',
+    materialLabel: 'Resources contributed to',
+    professionalLinkLabel: 'Professional profiles',
+    rolesTitle: 'Understanding expert roles',
+    rolesLead: 'Being involved with the project does not mean reviewing every article. Each specialist has a specific role. Hover or select a card to see details.',
+    expandLabel: 'Expand description',
+    roles: {
+      author: {
+        title: 'Content author', short: 'Develops the substance of a publication.',
+        details: 'Writes or makes a substantial contribution to a resource, including selecting and interpreting its sources.',
+        limit: 'Authorship does not imply independent peer review.',
+      },
+      consultant: {
+        title: 'Subject-matter consultant', short: 'Advises on a defined topic.',
+        details: 'Helps clarify terminology, context, practical relevance or specific claims within their professional expertise.',
+        limit: 'Consultation is not equivalent to independently reviewing the full article.',
+      },
+      reviewer: {
+        title: 'Independent reviewer', short: 'Reviews a specific resource within a defined scope.',
+        details: 'Provides a separately documented assessment of claims, sources or professional guidance. The scope and date are recorded when such a review occurs.',
+        limit: 'This role is shown only after an actual independent review of a particular resource.',
+      },
+    },
+    joinEyebrow: 'INVITATION TO COLLABORATE',
+    joinTitle: 'Would you like to contribute as an expert?',
+    joinLead: 'We welcome researchers, healthcare and education professionals, communication and developmental specialists, and others with relevant expertise who want to share verifiable knowledge.',
+    joinSteps: [
+      'Tell us your area of expertise and the type of contribution you would like to make: authoring, consultation or review.',
+      'Share links to public professional profiles or publications that can be verified.',
+      'After agreeing the scope of involvement and approving the profile text, you may be included in the directory.',
+    ],
+    joinAction: 'Explore collaboration',
+    notice: 'The current contact option uses public GitHub issues. Do not post identity documents, phone numbers, patient information or any other confidential data. Directory inclusion is not automatic.',
+    policyLink: 'How we review and publish information',
+    back: 'Back to About',
+    transparency: 'A listing does not imply endorsement by the organisations that employ contributors and does not replace professional consultation.',
+  },
+}[locale];
+
+const roleKeys: Role[] = ['author', 'consultant', 'reviewer'];
+const publishedExperts = EXPERT_PUBLIC_PROFILES.filter((profile) =>
+  profile.participationConfirmed && profile.consentToPublish,
+);
+---
+<article class="experts-directory">
+  <header class="experts-directory__hero">
+    <div class="container">
+      <nav class="experts-directory__crumbs" aria-label={c.about}>
+        <a href={localePath(locale)}>{c.home}</a>
+        <span aria-hidden="true">/</span>
+        <a href={sectionPath(locale, 'about')}>{c.about}</a>
+        <span aria-hidden="true">/</span>
+        <span aria-current="page">{c.title}</span>
+      </nav>
+      <div class="experts-directory__hero-layout">
+        <div>
+          <p class="experts-directory__eyebrow">{c.eyebrow}</p>
+          <h1>{c.title}</h1>
+          <p class="experts-directory__lead">{c.lead}</p>
+        </div>
+        <aside class="experts-directory__trust">
+          <span class="experts-directory__trust-mark" aria-hidden="true">✓</span>
+          <h2>{c.promiseTitle}</h2>
+          <p>{c.promise}</p>
+          <p class="experts-directory__trust-note">{c.verification}</p>
+        </aside>
+      </div>
+    </div>
+  </header>
+
+  <section class="experts-directory__section" aria-labelledby="experts-roster-title">
+    <div class="container">
+      <div class="experts-directory__intro">
+        <p class="experts-directory__eyebrow">01</p>
+        <h2 id="experts-roster-title">{c.rosterTitle}</h2>
+        <p>{c.rosterLead}</p>
+      </div>
+
+      {publishedExperts.length ? (
+        <div class="experts-directory__grid">
+          {publishedExperts.map((profile) => (
+            <details class="experts-directory__profile experts-directory__expandable" data-expert-disclosure>
+              <summary class="experts-directory__profile-summary">
+                {profile.photo ? (
+                  <img class="experts-directory__portrait" src={profile.photo} alt={profile.photoAlt?.[locale] ?? profile.name[locale]} loading="lazy" />
+                ) : (
+                  <span class="experts-directory__portrait-fallback" aria-hidden="true">{profile.name[locale].slice(0, 1)}</span>
+                )}
+                <span class="experts-directory__profile-head">
+                  <strong>{profile.name[locale]}</strong>
+                  <span>{profile.professionalTitle[locale]}</span>
+                  <span class="experts-directory__role-list">{profile.roles.map((role) => c.roles[role].title).join(' · ')}</span>
+                  <span class="experts-directory__more">{c.viewLabel}<span aria-hidden="true">⌄</span></span>
+                </span>
+              </summary>
+              <div class="experts-directory__details">
+                <p>{profile.biography[locale]}</p>
+                <h3>{c.qualificationsLabel}</h3>
+                <p>{profile.qualifications[locale]}</p>
+                <h3>{c.experienceLabel}</h3>
+                <p>{profile.specialisation[locale]}</p>
+                <h3>{c.activityLabel}</h3>
+                <p>{profile.contribution[locale]}</p>
+                {profile.materials && profile.materials.length > 0 && (
+                  <div class="experts-directory__material-list">
+                    <h3>{c.materialLabel}</h3>
+                    <ul>
+                      {profile.materials.map((material) => (
+                        <li><a href={localePath(locale, material.path[locale])}>{material.title[locale]}</a><span>{c.roles[material.role].title}</span></li>
+                      ))}
+                    </ul>
+                  </div>
+                )}
+                {profile.professionalLinks && profile.professionalLinks.length > 0 && (
+                  <div class="experts-directory__external-list">
+                    <h3>{c.professionalLinkLabel}</h3>
+                    <ul>{profile.professionalLinks.map(link => <li><a href={link.url} rel="external">{link.label} <span aria-hidden="true">↗</span></a></li>)}</ul>
+                  </div>
+                )}
+              </div>
+            </details>
+          ))}
+        </div>
+      ) : (
+        <div class="experts-directory__empty">
+          <span aria-hidden="true" class="experts-directory__empty-icon">✦</span>
+          <div>
+            <h3>{c.emptyTitle}</h3>
+            <p>{c.emptyBody}</p>
+          </div>
+        </div>
+      )}
+    </div>
+  </section>
+
+  <section class="experts-directory__section experts-directory__section--roles" aria-labelledby="experts-roles-title">
+    <div class="container">
+      <div class="experts-directory__intro">
+        <p class="experts-directory__eyebrow">02</p>
+        <h2 id="experts-roles-title">{c.rolesTitle}</h2>
+        <p>{c.rolesLead}</p>
+      </div>
+      <div class="experts-directory__grid experts-directory__role-grid">
+        {roleKeys.map((role, i) => (
+          <details class="experts-directory__role experts-directory__expandable" data-expert-disclosure>
+            <summary>
+              <span class="experts-directory__role-icon" aria-hidden="true">{String(i + 1).padStart(2, '0')}</span>
+              <span class="experts-directory__role-text">
+                <strong>{c.roles[role].title}</strong>
+                <span>{c.roles[role].short}</span>
+                <span class="experts-directory__more">{c.expandLabel}<span aria-hidden="true">⌄</span></span>
+              </span>
+            </summary>
+            <div class="experts-directory__details">
+              <p>{c.roles[role].details}</p>
+              <p class="experts-directory__limit">{c.roles[role].limit}</p>
+            </div>
+          </details>
+        ))}
+      </div>
+      <p class="experts-directory__transparency">{c.transparency}</p>
+      <a class="experts-directory__policy-link" href={localePath(locale, 'about/policies') + '#editorial'}>{c.policyLink} <span aria-hidden="true">↗</span></a>
+    </div>
+  </section>
+
+  <section class="experts-directory__section experts-directory__section--join" aria-labelledby="experts-join-title">
+    <div class="container experts-directory__join-layout">
+      <div>
+        <p class="experts-directory__eyebrow">{c.joinEyebrow}</p>
+        <h2 id="experts-join-title">{c.joinTitle}</h2>
+        <p class="experts-directory__join-lead">{c.joinLead}</p>
+      </div>
+      <div class="experts-directory__join-panel">
+        <ol>{c.joinSteps.map((step) => <li>{step}</li>)}</ol>
+        <a class="experts-directory__button" href={localePath(locale, 'about/contact')}>{c.joinAction} <span aria-hidden="true">↗</span></a>
+        <p class="experts-directory__notice">{c.notice}</p>
+      </div>
+    </div>
+  </section>
+  <div class="experts-directory__bottom"><div class="container"><a href={sectionPath(locale, 'about')}>← {c.back}</a></div></div>
+</article>
+
+<script>
+  document.querySelectorAll<HTMLDetailsElement>('[data-expert-disclosure]').forEach((card) => {
+    const summary = card.querySelector('summary');
+    if (!summary || card.dataset.enhanced === 'yes') return;
+    card.dataset.enhanced = 'yes';
+    let pinned = false;
+    let suppressHover = false;
+
+    card.addEventListener('pointerenter', (event) => {
+      if (event.pointerType !== 'mouse' || pinned || suppressHover) return;
+      card.open = true;
+    });
+    card.addEventListener('pointerleave', (event) => {
+      if (event.pointerType !== 'mouse') return;
+      suppressHover = false;
+      if (!pinned) card.open = false;
+    });
+    summary.addEventListener('click', (event) => {
+      event.preventDefault();
+      pinned = !pinned;
+      if (pinned) {
+        suppressHover = false;
+        card.open = true;
+      } else {
+        suppressHover = true;
+        card.open = false;
+      }
+    });
+    card.addEventListener('keydown', (event) => {
+      if (event.key !== 'Escape' || !card.open) return;
+      event.preventDefault();
+      pinned = false;
+      suppressHover = true;
+      card.open = false;
+      summary.focus();
+    });
+    card.addEventListener('focusout', () => {
+      requestAnimationFrame(() => {
+        if (!pinned && !card.matches(':hover') && !card.contains(document.activeElement)) {
+          card.open = false;
+        }
+      });
+    });
+  });
+</script>
