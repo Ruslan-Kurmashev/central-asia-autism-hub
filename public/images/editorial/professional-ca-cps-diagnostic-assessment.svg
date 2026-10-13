@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 680" role="img" aria-labelledby="title desc">
+<title id="title">CPS diagnostic assessment standards</title>
+<desc id="desc">An original editorial diagram with three assessment pathways joining a multidisciplinary report. Not an official Canadian Paediatric Society graphic.</desc>
+<rect width="1200" height="680" fill="#edf4fc"/>
+<circle cx="70" cy="105" r="135" fill="#dcecf7"/><circle cx="1110" cy="583" r="173" fill="#d7e8f9"/>
+<rect x="448" y="92" width="564" height="496" rx="30" fill="#aebfd0" opacity=".28"/>
+<rect x="430" y="72" width="564" height="496" rx="25" fill="#fff" stroke="#bdd1e4" stroke-width="6"/>
+<rect x="504" y="136" width="338" height="18" rx="9" fill="#174b98"/>
+<rect x="504" y="175" width="265" height="12" rx="6" fill="#94b7d4"/>
+<g fill="#c3d8e8"><rect x="504" y="275" width="385" height="12" rx="6"/><rect x="504" y="313" width="316" height="12" rx="6"/><rect x="504" y="390" width="360" height="12" rx="6"/><rect x="504" y="427" width="282" height="12" rx="6"/></g>
+<rect x="505" y="492" width="196" height="12" rx="6" fill="#e7a930"/>
+<g stroke="#315f94" stroke-width="6" fill="#fff">
+<circle cx="183" cy="171" r="68"/><circle cx="183" cy="341" r="68"/><circle cx="183" cy="513" r="68"/>
+</g>
+<g stroke="#2d8e89" stroke-width="8" stroke-linecap="round" fill="none">
+<path d="M148 170h70m-35-30v60"/><path d="M150 339l22 22 44-45"/><circle cx="183" cy="507" r="27"/><path d="M183 480v54m-27-27h54"/>
+</g>
+<g stroke="#315f94" stroke-width="7" stroke-linecap="round" fill="none">
+<path d="M251 171h65v170h102"/><path d="M251 341h167"/><path d="M251 513h65V341"/><path d="m397 324 21 17-21 17"/>
+</g>
+<circle cx="861" cy="256" r="59" fill="#e7f3ef" stroke="#315f94" stroke-width="6"/>
+<path d="m840 257 17 17 31-34" stroke="#2d8e89" stroke-width="9" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+</svg>
