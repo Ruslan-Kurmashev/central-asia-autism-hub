@@ -422,3 +422,9 @@ The catalogue and article hero must point to the same image. Each published Russ
 | Local file | Source and date | Subject and provenance |
 | --- | --- | --- |
 | `professional-family-information-sharing.svg` | Original AutismHub editorial SVG, 2026-10-13 | Protected data document linking family, medical care and school. Locally drawn geometric vectors, no real patient data, medical records, identifying persons, publisher marks or third-party assets. Represents data minimisation and coordination, not a legally certified workflow or institutional endorsement. |
+
+## Family autism diagnosis feedback: professional C04 cover (2026-10-13)
+
+| Local file | Source and creation date | Provenance and subject |
+| --- | --- | --- |
+| `professional-family-diagnosis-conversation.svg` | AutismHub editorial, original hand-authored SVG, 2026-10-13 | Professional diagnostic-feedback document with separate findings, strengths and support-needs blocks; dialogue and follow-up plan. Only locally created geometric vector shapes, no patient photos, identity data, third-party marks or publisher figures. Not an official NICE/CPS chart, clinical form or institutional endorsement. |
