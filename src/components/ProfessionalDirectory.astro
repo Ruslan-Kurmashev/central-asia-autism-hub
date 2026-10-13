@@ -63,13 +63,13 @@ const copy = text[locale];
 const trainingHref = `${sectionPath(locale, 'learning')}#professionals-learning`;
 
 type Localized = Record<Locale, string>;
-type GuidelineSubgroup = 'basics' | 'international' | 'kazakhstan' | 'coordination';
+type GuidelineSubgroup = 'basics' | 'international';
 type PlannedResource = { id: string; title: Localized; subgroup?: GuidelineSubgroup };
-const subgroupTitles: Record<GuidelineSubgroup, Localized> = {
+const subgroupTitles: Record<GuidelineSubgroup | 'clinicalKz' | 'kazakhstan', Localized> = {
   basics: { ru: 'Основы работы с рекомендациями', kk: 'Ұсынымдармен жұмыс негіздері', en: 'Working with guidelines' },
   international: { ru: 'Международные клинические руководства', kk: 'Халықаралық клиникалық нұсқаулықтар', en: 'International clinical guidelines' },
-  kazakhstan: { ru: 'Документы Казахстана', kk: 'Қазақстан құжаттары', en: 'Kazakhstan documents' },
-  coordination: { ru: 'Междисциплинарная работа', kk: 'Пәнаралық жұмыс', en: 'Multidisciplinary coordination' },
+  clinicalKz: { ru: 'Клинические протоколы Казахстана', kk: 'Қазақстанның клиникалық хаттамалары', en: 'Kazakhstan clinical protocols' },
+  kazakhstan: { ru: 'Документы Казахстана: законы, приказы и стандарты', kk: 'Қазақстан құжаттары: заңдар, бұйрықтар және стандарттар', en: 'Kazakhstan documents: laws, orders and standards' },
 };
 type Group = {
   id: string;
@@ -96,13 +96,12 @@ const groups: Group[] = [
   {
     id: 'guidelines', icon: 'guidelines', topic: 'guidelines',
     title: { ru: 'Рекомендации и стандарты', kk: 'Ұсынымдар мен стандарттар', en: 'Guidelines and standards' },
-    description: { ru: 'Клинические руководства, нормативная база и междисциплинарная работа', kk: 'Клиникалық нұсқаулықтар, нормативтік база және пәнаралық жұмыс', en: 'Clinical guidance, regulations and multidisciplinary practice' },
+    description: { ru: 'Профессиональные рекомендации, международные руководства, клинические протоколы и документы Казахстана', kk: 'Кәсіби ұсынымдар, халықаралық нұсқаулықтар, клиникалық хаттамалар және Қазақстан құжаттары', en: 'Professional guideline appraisal, international guidance, clinical protocols and Kazakhstan documents' },
     resources: [
       { id: 'g01', subgroup: 'basics', title: { ru: 'Как работать с профессиональными рекомендациями при аутизме', kk: 'Аутизм жөніндегі кәсіби ұсынымдармен қалай жұмыс істеуге болады', en: 'How to appraise professional autism guidelines' }},
       { id: 'g04', subgroup: 'international', title: { ru: 'NICE CG128: выявление и диагностика аутизма у детей и подростков', kk: 'NICE CG128: балалар мен жасөспірімдердегі аутизмді анықтау және диагностикалау', en: 'NICE CG128: recognising and diagnosing autism in under-19s' }},
       { id: 'g05', subgroup: 'international', title: { ru: 'NICE CG170: поддержка детей и подростков с аутизмом', kk: 'NICE CG170: аутист балалар мен жасөспірімдерді қолдау', en: 'NICE CG170: support for autistic children and young people' }},
       { id: 'g06', subgroup: 'international', title: { ru: 'NICE CG142: диагностика и поддержка аутичных взрослых', kk: 'NICE CG142: аутист ересектерді диагностикалау және қолдау', en: 'NICE CG142: diagnosis and support for autistic adults' }},
-      { id: 'g03', subgroup: 'coordination', title: { ru: 'Междисциплинарное взаимодействие и маршрутизация семьи', kk: 'Пәнаралық өзара іс-қимыл және отбасын тиісті қызметтерге бағыттау', en: 'Multidisciplinary coordination and family referral pathways' }},
     ],
   },
   {
@@ -149,8 +148,10 @@ const groups: Group[] = [
   {
     id: 'practice-tools', icon: 'tools', topic: 'practice-tools',
     title: { ru: 'Алгоритмы и инструменты', kk: 'Алгоритмдер мен құралдар', en: 'Workflows and tools' },
-    description: { ru: 'Практические чек-листы, индивидуальные планы и мониторинг', kk: 'Практикалық тексеру парақтары, жеке жоспарлар және мониторинг', en: 'Practical checklists, individual plans and monitoring' },
+    description: { ru: 'Междисциплинарная маршрутизация, практические чек-листы, индивидуальные планы и мониторинг', kk: 'Пәнаралық бағыттау, практикалық тексеру парақтары, жеке жоспарлар және мониторинг', en: 'Multidisciplinary referral pathways, practical checklists, support plans and monitoring' },
     resources: [
+      // Keep g03 so a future publication can retain its planned translationKey (professionals-g03).
+      { id: 'g03', title: { ru: 'Междисциплинарное взаимодействие и маршрутизация семьи', kk: 'Пәнаралық өзара іс-қимыл және отбасын тиісті қызметтерге бағыттау', en: 'Multidisciplinary coordination and family referral pathways' }},
       { id: 't01', title: { ru: 'Индивидуальный план поддержки: цели и мониторинг', kk: 'Жеке қолдау жоспары: мақсаттар және мониторинг', en: 'Individual support plans: goals and monitoring' }},
       { id: 't02', title: { ru: 'Оценка AAC: выбор средств коммуникации и мониторинг', kk: 'AAC бағалау: коммуникация құралдарын таңдау және мониторинг', en: 'AAC assessment: selecting communication supports and monitoring' }},
       { id: 't03', title: { ru: 'Структурированное наблюдение и FBA', kk: 'Құрылымдалған бақылау және FBA', en: 'Structured observation and FBA' }},
@@ -160,6 +161,13 @@ const groups: Group[] = [
 ];
 const plannedCount = groups.reduce((total, group) => total + group.resources.length, kazakhstanDocumentCount);
 const kazakhstanHubHref = localePath(locale, 'professionals/kazakhstan-documents');
+// Cross-link to the existing document in the Kazakhstan catalogue; never duplicate its article.
+const clinicalProtocolRecord = materials.find((material) => material.data.translationKey === 'professionals-kz-autism-clinical-protocol');
+const clinicalProtocolTitle: Localized = {
+  ru: 'Клинический протокол Казахстана по РАС (2021): содержание и проверка статуса',
+  kk: 'Қазақстандағы АСБ бойынша клиникалық хаттама (2021): мазмұны мен мәртебесін тексеру',
+  en: 'Kazakhstan ASD clinical protocol (2021): content and status verification',
+};
 const publishedCount = materials.length;
 const sectionTitle = UI[locale].sections.professionals.title;
 function countLabel(n: number) {
@@ -257,19 +265,6 @@ const forGroup = (group: Group) => {
         <ol class="professional-directory__list">
           {matched.map(({ resource, record }, index) => (
             <>
-              {group.id === 'guidelines' && resource.subgroup === 'coordination' && (
-                <>
-                  <li class="professional-directory__subgroup">
-                    <h4><a class="professional-directory__subgroup-link" href={kazakhstanHubHref}>{subgroupTitles.kazakhstan[locale]} <span aria-hidden="true">→</span></a></h4>
-                  </li>
-                  <li class="professional-directory__item professional-directory__item--folder">
-                    <a class="professional-directory__item-link" href={kazakhstanHubHref}>
-                      <span class="professional-directory__item-title">{kazakhstanDocumentGroups.length} {copy.kzCategories} <small>{kazakhstanDocumentCount} {copy.kzDocs}</small></span>
-                      <span class="professional-directory__item-arrow" aria-hidden="true">→</span>
-                    </a>
-                  </li>
-                </>
-              )}
               {group.id === 'guidelines' && resource.subgroup && (index === 0 || matched[index - 1].resource.subgroup !== resource.subgroup) && (
                 <li class="professional-directory__subgroup"><h4>{subgroupTitles[resource.subgroup][locale]}</h4></li>
               )}
@@ -288,6 +283,35 @@ const forGroup = (group: Group) => {
               </li>
             </>
           ))}
+          {group.id === 'guidelines' && (
+            <>
+              <li class="professional-directory__subgroup">
+                <h4>{subgroupTitles.clinicalKz[locale]}</h4>
+              </li>
+              <li class="professional-directory__item">
+                {clinicalProtocolRecord ? (
+                  <a class="professional-directory__item-link" href={articlePath(locale, 'professionals', clinicalProtocolRecord.data.slug)}>
+                    <span class="professional-directory__item-title">{clinicalProtocolRecord.data.title}</span>
+                    <span class="professional-directory__item-arrow" aria-hidden="true">→</span>
+                  </a>
+                ) : (
+                  <span class="professional-directory__item-pending">
+                    <span class="professional-directory__item-title">{clinicalProtocolTitle[locale]}</span>
+                    <span class="professional-directory__status">{copy.preparing}</span>
+                  </span>
+                )}
+              </li>
+              <li class="professional-directory__subgroup">
+                <h4><a class="professional-directory__subgroup-link" href={kazakhstanHubHref}>{subgroupTitles.kazakhstan[locale]} <span aria-hidden="true">→</span></a></h4>
+              </li>
+              <li class="professional-directory__item professional-directory__item--folder">
+                <a class="professional-directory__item-link" href={kazakhstanHubHref}>
+                  <span class="professional-directory__item-title">{kazakhstanDocumentGroups.length} {copy.kzCategories} <small>{kazakhstanDocumentCount} {copy.kzDocs}</small></span>
+                  <span class="professional-directory__item-arrow" aria-hidden="true">→</span>
+                </a>
+              </li>
+            </>
+          )}
           {extra.map((record) => (
             <li class="professional-directory__item">
               <a class="professional-directory__item-link" href={articlePath(locale, 'professionals', record.data.slug)}>
