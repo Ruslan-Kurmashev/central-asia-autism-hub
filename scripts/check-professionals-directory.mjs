@@ -10,7 +10,7 @@ import path from 'node:path';
 const expected = {
   ru: {
     names: ['Рекомендации и стандарты', 'Работа с семьями', 'Оценка и диагностика', 'Доказательность методов', 'Этика и безопасность', 'Алгоритмы и инструменты'],
-    back: 'Все направления', pending: 'Готовится', cardWord: 'материала', training: 'Обучение для специалистов', published: 7,
+    back: 'Все направления', pending: 'Готовится', cardWord: 'материала', training: 'Обучение для специалистов', published: 8,
   },
   kk: {
     names: ['Ұсынымдар мен стандарттар', 'Отбасылармен жұмыс', 'Бағалау және диагностика', 'Әдістердің дәлелділігі', 'Этика және қауіпсіздік', 'Алгоритмдер мен құралдар'],
@@ -48,7 +48,7 @@ for (const [locale, copy] of Object.entries(expected)) {
   assert.equal((html.match(/class="professional-directory__card"/g) ?? []).length, 6, locale + ': expected six area cards');
   assert.equal((html.match(/class="professional-directory__detail"/g) ?? []).length, 6, locale + ': expected six detail panels');
   assert.equal((html.match(/class="professional-directory__item"/g) ?? []).length, 22, locale + ': expected 22 direct planned resources; international country folders are counted separately');
-  assert.equal((html.match(/class="professional-directory__status"/g) ?? []).length, locale === 'ru' ? 17 : 22, locale + ': only genuinely published direct entries should be linked');
+  assert.equal((html.match(/class="professional-directory__status"/g) ?? []).length, locale === 'ru' ? 16 : 22, locale + ': only genuinely published direct entries should be linked');
   if (locale === 'ru') {
     const articleHref = '/central-asia-autism-hub/kz/ru/professionals/kak-rabotat-s-professionalnymi-rekomendaciyami/';
     assert.ok(html.includes('href="' + articleHref + '"'), 'Russian first professional resource must have a working article link');
@@ -73,6 +73,21 @@ for (const [locale, copy] of Object.entries(expected)) {
     locale === 'ru' ? 'Несогласие, тревога и конфликтные ситуации' : locale === 'kk' ? 'Келіспеушілік, алаңдаушылық және жанжалдар' : 'Managing disagreement, concerns and conflict with families',
   ];
   for (const label of familyTopics) assert.ok(familyPanel.includes(label), locale + ': family roadmap topic missing: ' + label);
+  const c05Href = '/central-asia-autism-hub/kz/ru/professionals/kulturnye-yazykovye-osobennosti-obshcheniya-s-semiej/';
+  if (locale === 'ru') {
+    assert.ok(familyPanel.includes('href="' + c05Href + '"'), 'RU: C05 must link to published language and culture guide');
+    const c05 = await readFile(path.resolve('dist/kz/ru/professionals/kulturnye-yazykovye-osobennosti-obshcheniya-s-semiej/index.html'), 'utf8');
+    for (const phrase of ['Алгоритм культурно и языково доступной консультации: десять шагов', 'Девять ситуаций и примеры профессионального ответа', 'Рабочая карточка языковой и социальной доступности консультации', 'professional-family-cultural-language-access.svg', 'article-v2__sources']) {
+      assert.ok(c05.includes(phrase), 'C05 missing practical source component: ' + phrase);
+    }
+    const source = await readFile(path.resolve('src/content/pages/kz/ru/professional-family-cultural-language-communication.md'), 'utf8');
+    for (const urlPart of ['Z970000151_', 'K2000000360', 'Z1300000094', 'nice.org.uk/guidance/cg128', 'asha.org/practice-portal/professional-issues/collaborating-with-interpreters', 'who.int/publications/i/item/9789240048850']) {
+      assert.ok(source.includes(urlPart), 'C05 must include verifiable original source: ' + urlPart);
+    }
+    assert.ok(source.includes('не являются') || source.includes('не является'), 'C05 must clarify foreign guidelines are not Kazakhstan law');
+  } else {
+    assert.ok(!familyPanel.includes('href="' + c05Href + '"'), locale + ': C05 translations must remain unlinked until published');
+  }
   const c04Href = '/central-asia-autism-hub/kz/ru/professionals/kak-soobshchat-seme-o-diagnoze-autizma/';
   if (locale === 'ru') {
     assert.ok(familyPanel.includes('href="' + c04Href + '"'), 'RU: C04 published article link missing');
