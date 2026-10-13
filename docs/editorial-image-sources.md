@@ -340,3 +340,14 @@ Three original AutismHub SVGs, each drawn for one of the three 2019 CPS position
 | `professional-ca-cps-early-detection.svg` | AutismHub editorial, 2026-10-13 | Development surveillance calendar, targeted early identification and clinical document. |
 | `professional-ca-cps-diagnostic-assessment.svg` | AutismHub editorial, 2026-10-13 | Three professional diagnostic evaluation models leading to one documented result. |
 | `professional-ca-cps-postdiagnostic-care.svg` | AutismHub editorial, 2026-10-13 | Ongoing coordination of health, family and everyday participation after diagnosis. |
+
+## New Zealand and France guideline covers (2026-10-13)
+
+These are original AutismHub editorial SVG diagrams. They do not reproduce HAS or Whaikaha logos, patient photographs, publisher figures, maps, or third-party stock assets. They are illustrative, not a mark of official institutional endorsement.
+
+| Local file | Creator/date | Relevant document |
+| --- | --- | --- |
+| `professional-fr-has-2026.svg` | AutismHub editorial, 2026-10-13 | HAS 2026 professional interventions and life pathways; connected communication and participation symbols. |
+| `professional-fr-has-2018.svg` | AutismHub editorial, 2026-10-13 | HAS 2018 diagnostic guidance; sequential referral and assessment steps. |
+| `professional-nz-guideline-2022.svg` | AutismHub editorial, 2026-10-13 | Aotearoa New Zealand Autism Guideline third edition; national reference handbook. |
+| `professional-nz-gender-2024.svg` | AutismHub editorial, 2026-10-13 | Whaikaha gender in assessment supplementary paper; individual assessment profiles. |
