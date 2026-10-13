@@ -16,6 +16,14 @@ for (const lang of locales) {
   check(html.includes('<html lang="' + lang + '"'), id + ': HTML document language incorrect');
   check(html.includes('home-v2__hero') && html.includes('home-v2__masonry'),
     id + ': homepage hero or featured grid missing');
+  check(html.includes('id="announcements"') &&
+    html.includes('id="materials"') &&
+    html.indexOf('id="announcements"') < html.indexOf('id="materials"'),
+    id + ': events must appear above the site update feed');
+  check(html.includes('home-v2__events-empty') &&
+    !html.includes('data-event-expires='),
+    id + ': an unverified event card was published');
+  check(html.includes('home-v2__materials-description'), id + ': update section intro missing');
   const brand = html.match(/<a\b[^>]*class="brand"[^>]*>[\s\S]*?<\/a>/)?.[0] ?? '';
   check(brand.includes('Autism Hub Kazakhstan'), id + ': site name missing from header');
   check(!brand.includes('brand__parent') && !brand.includes('Central Asia Autism Hub'),
@@ -44,21 +52,21 @@ for (const lang of locales) {
 
   const cards = [...html.matchAll(/<article\b[^>]*\bclass="[^"]*\bhome-v2__card--article\b[^"]*"[^>]*>[\s\S]*?<\/article>/g)]
     .map(match => match[0]);
-  check(cards.length === 9, id + ': expected nine actual published resources, got ' + cards.length);
+  check(cards.length === 6, id + ': expected six recent site articles, got ' + cards.length);
   check(!html.includes('home-v2__card--statement') &&
     !html.includes('home-v2__card--principles'),
     id + ': redundant informational cards must not reappear on homepage');
-  check(cards.every(card => !card.includes(base + lang + '/professionals/')),
-    id + ': professional articles should not crowd out family-first highlights');
-  check(cards[0]?.includes(base + lang + '/parents/'),
-    id + ': first featured resource must be from the parent information section');
+  check(cards.filter(card => card.includes(base + lang + '/professionals/')).length <= 1,
+    id + ': professional documents should not dominate the homepage');
+  check(cards.some(card => card.includes(base + lang + '/parents/')),
+    id + ': latest feed must contain a parent information article');
   check(cards.some(card => card.includes(base + lang + '/help-kazakhstan/')),
     id + ': Kazakhstan support must be represented on the homepage');
   if (lang === 'ru') {
     check(cards.some(card => card.includes(base + lang + '/research/')),
       id + ': published research explainers are omitted from the homepage');
     const researchCards = cards.filter(card => card.includes(base + lang + '/research/'));
-    check(researchCards.length === 2, id + ': expected two research highlights');
+    check(researchCards.length === 1, id + ': expected one scientific update');
     check(researchCards.every(card => card.includes('images/editorial/photos/research-')),
       id + ': research highlights must use locally hosted, topic-specific photographs');
     const images = researchCards.map(card => card.match(/src="([^"]*\/images\/editorial\/photos\/research-[^"]+\.jpg)"/)?.[1]);
@@ -126,5 +134,5 @@ if (errors.length) {
   console.error('Prelaunch navigation and homepage audit FAILED:\n' + errors.map(x => ' - ' + x).join('\n'));
   process.exitCode = 1;
 } else {
-  console.log('Prelaunch navigation QA passed: 3 language-specific homepages, 18 section routes, 27 family-first featured cards, footer anchors, missing-translation routing, image labels, focus and >=4.5:1 secondary-text contrast.');
+  console.log('Prelaunch navigation QA passed: 3 language-specific homepages, 18 section routes, 18 balanced recent article cards, footer anchors, missing-translation routing, image labels, focus and >=4.5:1 secondary-text contrast.');
 }

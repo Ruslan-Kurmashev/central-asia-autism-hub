@@ -68,7 +68,7 @@ const home = await readFile(path.join(root, 'dist/kz/ru/index.html'), 'utf8');
 const cards = [...home.matchAll(/<article\b[^>]*\bclass="[^"]*\bhome-v2__card--article\b[^"]*"[^>]*>[\s\S]*?<\/article>/g)]
   .map(match => match[0])
   .filter(card => card.includes(base + 'kz/ru/research/'));
-assert.equal(cards.length, 2, 'Homepage must feature two research explainers');
+assert.equal(cards.length, 1, 'Homepage must feature one research explainer in the balanced updates feed');
 const featuredPhotos = new Set();
 for (const card of cards) {
   const slug = card.match(/href="\/central-asia-autism-hub\/kz\/ru\/research\/([a-z0-9-]+)\/"/)?.[1];

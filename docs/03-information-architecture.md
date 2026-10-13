@@ -99,13 +99,16 @@ Home
 
 ## 4. Homepage structure
 
-The homepage presents the platform in the following order:
+The current homepage presents the platform in the following order:
 
-1. a compact beta-status strip;
-2. the platform purpose, a concise content boundary, and focused entry actions;
-3. six permanent primary sections presented with visual hierarchy: For Parents and Help in Kazakhstan are prominent, Research Explained and Learning are secondary, and For Professionals and About are compact;
-4. trust principles: plain language, verifiable sources, visible update dates, Kazakhstan context, and clear medical boundaries;
-5. footer access to editorial, privacy, accessibility, and contact information.
+1. A family-oriented hero and navigation to the core site sections.
+2. **Kazakhstan events and announcements**: a distinct noticeboard for up to four editorially verified upcoming webinars, events, courses and public opportunities. An honest empty state is shown until real events have been checked.
+3. **Latest on AutismHub**: six actual published articles from varied site sections, displaying category, appropriate cover, article summary and publication date.
+4. The existing information-source and editorial principles block, followed by footer policy links.
+
+The event board uses an independent structured registry with the actual organiser, primary URL, start and expiry dates, format, audience, cost and three checked language descriptions. It is NOT a register of project-authored publications. Past events are hidden on build, and browser code suppresses items which expire between site builds. A listing does not imply that AutismHub endorses the event, the provider or any services. Users can propose events via the single project contact page. No booking, personal-data collection or payment functionality is introduced.
+
+The updates area only includes actually published content, excludes pending translations and drafts, and balances categories so one large batch does not dominate. It is not a chronological site changelog.
 
 The primary homepage action is:
 

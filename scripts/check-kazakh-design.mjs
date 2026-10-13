@@ -22,7 +22,8 @@ async function inspectPage(relative, bodyClass, requiredText) {
 const home = await inspectPage('kz/kk', 'home-v2', [
   'home-v2__hero',
   'home-v2__masonry',
-  'Назарда',
+  'AutismHub-тағы жаңалықтар',
+  'Іс-шаралар мен хабарландырулар',
   'Барлық материалдар',
   'Біз сүйенетін дереккөздер',
 ]);

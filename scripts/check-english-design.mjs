@@ -20,7 +20,8 @@ async function inspectPage(relative, expectedBodyClass, requiredText) {
 const enHome = await inspectPage('kz/en', 'home-v2', [
   'home-v2__hero',
   'home-v2__masonry',
-  'Featured now',
+  'Latest on AutismHub',
+  'Events and announcements',
   'All resources',
   'Our information sources',
 ]);
