@@ -2,8 +2,8 @@
 title: "Баланың 2 айдан 5 жасқа дейінгі дамуы: ата-аналарға арналған даму кезеңдері"
 summary: "Баланың жасын таңдаңыз, даму кезеңдерін қарап шығыңыз және маманмен талқылағыңыз келетін бақылауларды жазып алыңыз."
 description: "2 айдан 5 жасқа дейінгі баланың даму кезеңдері, жасқа арналған бақылау парақтары және маманмен әңгімеге дайындалуға көмектесетін түсінікті материал."
-featuredImage: "/central-asia-autism-hub/images/editorial/rubi-wooden-blocks.jpg"
-featuredImageAlt: "Баланың ойыны мен дамуын бақылауға арналған үстелдегі ағаш ойыншық текшелер."
+featuredImage: "/central-asia-autism-hub/images/editorial/photos/parent-development-shape-sorter.jpg"
+featuredImageAlt: "Түрлі түсті бөлшектері бар ағаш пішін сұрыптағыш ойыншық: ойын арқылы дамуды бақылаудың мысалы, скрининг не диагностикалық тест емес."
 country: kz
 language: kk
 section: parents
