@@ -128,9 +128,11 @@ const aboutLinks: Record<Locale, { label: string; path: string }[]> = {
     const trigger = dropdown.querySelector('summary');
 
     dropdown.addEventListener('pointerenter', () => {
+      delete dropdown.dataset.dismissed;
       if (hoverNavigation.matches) dropdown.open = true;
     });
     dropdown.addEventListener('pointerleave', () => {
+      delete dropdown.dataset.dismissed;
       if (hoverNavigation.matches && !dropdown.contains(document.activeElement)) dropdown.open = false;
     });
     trigger?.addEventListener('click', (event) => {
@@ -149,6 +151,7 @@ const aboutLinks: Record<Locale, { label: string; path: string }[]> = {
     dropdown.addEventListener('keydown', (event) => {
       if (event.key === 'Escape' && dropdown.open) {
         event.preventDefault();
+        dropdown.dataset.dismissed = 'true';
         dropdown.open = false;
         trigger?.focus();
       }
