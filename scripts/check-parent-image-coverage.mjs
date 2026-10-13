@@ -34,6 +34,18 @@ const requiredDistinct = [
 ];
 const distinctSet = new Set(requiredDistinct);
 const firstWave = new Map();
+const sensoryDistinctFiles = new Set([
+  'sensornye-osobennosti-pri-autizme',
+  'sensory-based-strategies',
+  'sensory-environmental-support',
+  'ayres-sensory-integration',
+  'stimming-i-povtoryayushchiesya-deystviya-pri-autizme',
+  'sensory-diet',
+  'auditory-integration-listening-programs',
+  'sensory-overload-environmental-adaptations',
+]);
+const sensoryImageOwners = new Map();
+
 const totals = {};
 
 function value(frontmatter, key) {
@@ -86,6 +98,11 @@ for (const locale of ['ru', 'en', 'kk']) {
         `First-wave photographs must be distinct: ${article}, ${firstWave.get(src)}`);
       firstWave.set(src, article);
     }
+    if (locale === 'ru' && sensoryDistinctFiles.has(file.replace(/\.mdx?$/, ''))) {
+      assert.ok(!sensoryImageOwners.has(src),
+        `Sensory article photographs must be distinct: ${article}, ${sensoryImageOwners.get(src)}`);
+      sensoryImageOwners.set(src, article);
+    }
     withImages++;
   }
   totals[locale] = { published, withImages, parents };
@@ -93,6 +110,7 @@ for (const locale of ['ru', 'en', 'kk']) {
     `Published ${locale} articles lacking a featured image`);
 }
 
+assert.equal(sensoryImageOwners.size, sensoryDistinctFiles.size, 'Eight sensory-topic covers must be present and distinct');
 assert.equal(firstWave.size, requiredDistinct.length,
   'First-wave editorial images are not complete or distinct');
 for (const [locale, result] of Object.entries(totals)) {
