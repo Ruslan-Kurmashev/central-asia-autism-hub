@@ -2,8 +2,8 @@
 title: "Подражание и взаимное подражание"
 summary: "Что такое подражание и взаимное подражание (imitation и reciprocal imitation), как они используются в игре и чем полезный навык отличается от простого выполнения команды «повтори»."
 description: "Практическое руководство для родителей о подражании и тренинге взаимного подражания (Reciprocal Imitation Training): виды подражания, игровые примеры, доказательства, AAC, перенос навыка и оценка результата."
-featuredImage: "/central-asia-autism-hub/images/editorial/article-rubi-asian.jpg"
-featuredImageAlt: "Взрослый и ребёнок играют с игрушками за столом: пример взаимодействия, не изображение конкретного протокола."
+featuredImage: "/central-asia-autism-hub/images/editorial/photos/parent-imitation-stacking-together.jpg"
+featuredImageAlt: "Взрослый и ребёнок совместно складывают разноцветные детали игрушки: пример совместного действия, не демонстрация протокола взаимного подражания."
 country: kz
 language: ru
 section: parents
