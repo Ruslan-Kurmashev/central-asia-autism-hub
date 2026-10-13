@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 680" role="img" aria-labelledby="title desc">
+<title id="title">Сообщение диагноза: понятная беседа и план дальнейшей поддержки</title>
+<desc id="desc">Уникальная нейтральная векторная композиция без людей: заключение с выделенными блоками выводов и сильных сторон, два диалоговых облака и карточка следующих шагов.</desc>
+<rect width="1200" height="680" fill="#edf4fa"/>
+<circle cx="1018" cy="100" r="176" fill="#deebf7"/><circle cx="132" cy="610" r="162" fill="#dcebf6"/>
+<rect x="210" y="81" width="655" height="506" rx="29" fill="#b2c8d9" opacity=".28"/>
+<rect x="193" y="64" width="655" height="506" rx="29" fill="#ffffff" stroke="#bed1e2" stroke-width="6"/>
+<rect x="264" y="125" width="350" height="17" rx="8" fill="#2a5986"/>
+<rect x="264" y="160" width="271" height="12" rx="6" fill="#a3bfd7"/>
+<rect x="264" y="216" width="506" height="107" rx="16" fill="#e5f0f9"/>
+<rect x="289" y="243" width="286" height="13" rx="6" fill="#376b96"/>
+<rect x="289" y="272" width="414" height="11" rx="5" fill="#a6c6de"/>
+<rect x="264" y="348" width="240" height="135" rx="16" fill="#e4f0e7"/>
+<rect x="526" y="348" width="244" height="135" rx="16" fill="#fff1d4"/>
+<g stroke="#2f7d82" stroke-width="8" stroke-linecap="round" stroke-linejoin="round" fill="none"><path d="m290 395 18 18 33-36"/></g>
+<g fill="#9ebdd5"><rect x="352" y="376" width="113" height="10" rx="5"/><rect x="352" y="408" width="118" height="10" rx="5"/><rect x="290" y="446" width="154" height="9" rx="5"/></g>
+<g fill="#baab81"><rect x="552" y="377" width="181" height="10" rx="5"/><rect x="552" y="407" width="158" height="10" rx="5"/><rect x="552" y="447" width="131" height="10" rx="5"/></g>
+<path d="M788 225q0-28 28-28h253q27 0 27 28v138q0 28-27 28h-119l-48 37v-37h-86q-28 0-28-28z" fill="#ffffff" stroke="#2b5d8b" stroke-width="7"/>
+<g stroke="#87b0d0" stroke-width="12" stroke-linecap="round"><path d="M825 260h223M825 303h175"/></g>
+<path d="M877 455q0-22 22-22h207q22 0 22 22v123q0 23-22 23H971l-45 32v-32h-27q-22 0-22-23z" fill="#fff4dd" stroke="#2b5d8b" stroke-width="7"/>
+<g stroke="#2f8683" stroke-width="8" stroke-linecap="round" stroke-linejoin="round" fill="none"><path d="m911 479 12 13 26-27m-38 66 12 13 26-27"/></g>
+<g fill="#a3bed5"><rect x="964" y="472" width="128" height="11" rx="5"/><rect x="964" y="526" width="109" height="11" rx="5"/></g>
+</svg>
