@@ -416,3 +416,9 @@ This batch replaces thirteen remaining duplicated covers in the **published Russ
 | `autism-pmpk-vkk-mse-kazakhstan.md` | `parent-kz-referral-multidisciplinary-team.jpg` | Nadezhda Moryak | https://www.pexels.com/photo/medical-professionals-using-a-laptop-7800551/ | Medical staff collaborating at a laptop; not officials or an authentic meeting of Kazakhstan PMPK/VKK/MSE. |
 
 The catalogue and article hero must point to the same image. Each published Russian parent article must have a distinct image path (currently 79 articles), enforced by `scripts/check-parent-image-coverage.mjs` and reported in `scripts/audit-parent-visuals.mjs`. Distinct photo IDs do not by themselves certify visually distinct crops across nearby images; editorial responsive-layout/cropping review is separately required.
+
+## Family information sharing: professional C03 cover (2026-10-13)
+
+| Local file | Source and date | Subject and provenance |
+| --- | --- | --- |
+| `professional-family-information-sharing.svg` | Original AutismHub editorial SVG, 2026-10-13 | Protected data document linking family, medical care and school. Locally drawn geometric vectors, no real patient data, medical records, identifying persons, publisher marks or third-party assets. Represents data minimisation and coordination, not a legally certified workflow or institutional endorsement. |
