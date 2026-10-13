@@ -45,6 +45,9 @@ for (const lang of locales) {
   const cards = [...html.matchAll(/<article\b[^>]*\bclass="[^"]*\bhome-v2__card--article\b[^"]*"[^>]*>[\s\S]*?<\/article>/g)]
     .map(match => match[0]);
   check(cards.length === 9, id + ': expected nine actual published resources, got ' + cards.length);
+  check(!html.includes('home-v2__card--statement') &&
+    !html.includes('home-v2__card--principles'),
+    id + ': redundant informational cards must not reappear on homepage');
   check(cards.every(card => !card.includes(base + lang + '/professionals/')),
     id + ': professional articles should not crowd out family-first highlights');
   check(cards[0]?.includes(base + lang + '/parents/'),
