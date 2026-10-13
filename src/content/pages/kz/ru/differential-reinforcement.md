@@ -2,8 +2,8 @@
 title: "Дифференциальное подкрепление: как усиливать более полезные навыки"
 summary: "Что такое DRA, DRI, DRO и DRL, чем эти процедуры отличаются, зачем нужна функциональная оценка и почему снижение поведения не равно автоматически улучшению качества жизни."
 description: "Практическое руководство для родителей о дифференциальном подкреплении: DRA, DRI, DRO, DRL, альтернативные навыки, угасание, AAC, безопасность и оценка результата."
-featuredImage: "/central-asia-autism-hub/images/editorial/rubi-wooden-blocks.jpg"
-featuredImageAlt: "Деревянные игровые кубики: предметы для обучения новым действиям, а не иллюстрация доказанной эффективности метода."
+featuredImage: "/central-asia-autism-hub/images/editorial/photos/parent-reinforcement-goal-stickers.jpg"
+featuredImageAlt: "Разноцветные наклейки рядом с блокнотом: возможные наглядные отметки достижения цели, не схема подкрепления."
 country: kz
 language: ru
 section: parents

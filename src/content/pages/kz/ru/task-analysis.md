@@ -2,8 +2,8 @@
 title: "Разбиение сложного навыка на шаги: Task Analysis"
 summary: "Как разбиение задачи на шаги (Task Analysis) помогает обучать бытовым, учебным и функциональным навыкам и измерять самостоятельность."
 description: "Практическое руководство для родителей о разбиении сложного навыка на шаги: цепочки действий, подсказки, визуальная поддержка, видеомоделирование, адаптации, перенос навыка и мониторинг."
-featuredImage: "/central-asia-autism-hub/images/editorial/photos/parent-schedule-planner.jpg"
-featuredImageAlt: "Планировщик с записями: последовательное представление и отслеживание шагов задания."
+featuredImage: "/central-asia-autism-hub/images/editorial/photos/parent-task-analysis-notes.jpg"
+featuredImageAlt: "Лист с недельным планом и заметками на зелёной поверхности: наглядное представление последовательности задач."
 country: kz
 language: ru
 section: parents

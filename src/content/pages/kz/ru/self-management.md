@@ -2,8 +2,8 @@
 title: "Самоуправление: как постепенно уменьшать зависимость от контроля взрослых"
 summary: "Как самоуправление (Self-Management) помогает человеку самому отслеживать, планировать и регулировать действия с меньшим количеством внешних подсказок."
 description: "Практическое руководство для родителей о самоуправлении: самонаблюдение, постановка целей, самостоятельная фиксация результатов, самоподкрепление, технологии, автономия и сохранение навыков."
-featuredImage: "/central-asia-autism-hub/images/editorial/photos/parent-schedule-planner.jpg"
-featuredImageAlt: "Планировщик и ручки: визуальное планирование задач и контроль собственного распорядка."
+featuredImage: "/central-asia-autism-hub/images/editorial/photos/parent-self-management-weekly-goals.jpg"
+featuredImageAlt: "Раскрытый бумажный планировщик при дневном освещении: пример самостоятельного планирования и отслеживания дел."
 country: kz
 language: ru
 section: parents
