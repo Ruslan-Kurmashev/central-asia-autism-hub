@@ -6,11 +6,6 @@ const dist = path.resolve('dist');
 const base = '/central-asia-autism-hub/kz/';
 const locales = ['ru', 'kk', 'en'];
 const sections = ['parents','research','help-kazakhstan','learning','professionals','about'];
-const subtitles = {
-  ru: 'Часть инициативы Central Asia Autism Hub',
-  kk: 'Central Asia Autism Hub бастамасының бөлігі',
-  en: 'Part of the Central Asia Autism Hub',
-};
 const errors = [];
 const check = (condition, message) => { if (!condition) errors.push(message); };
 
@@ -21,7 +16,10 @@ for (const lang of locales) {
   check(html.includes('<html lang="' + lang + '"'), id + ': HTML document language incorrect');
   check(html.includes('home-v2__hero') && html.includes('home-v2__masonry'),
     id + ': homepage hero or featured grid missing');
-  check(html.includes(subtitles[lang]), id + ': brand affiliation is not localised');
+  const brand = html.match(/<a\b[^>]*class="brand"[^>]*>[\s\S]*?<\/a>/)?.[0] ?? '';
+  check(brand.includes('Autism Hub Kazakhstan'), id + ': site name missing from header');
+  check(!brand.includes('brand__parent') && !brand.includes('Central Asia Autism Hub'),
+    id + ': header must show only the Autism Hub Kazakhstan name');
   check(html.includes('href="' + base + lang + '/parents/#autism-basics"'),
     id + ': start-here action missing or not base-path safe');
   check(html.includes('alt=') && html.includes('hero-family.webp'), id + ': hero image missing');
