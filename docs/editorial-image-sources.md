@@ -296,3 +296,14 @@ Four original AutismHub editorial vector illustrations for separate professional
 | `kz-rights-disability-convention-ratification-288.svg` | AutismHub editorial, 2026-10-12 | CRPD ratification: equal participation and accessible communication. |
 | `kz-rights-inclusion-policy-2025-2030.svg` | AutismHub editorial, 2026-10-12 | Inclusion policy 2025-2030: milestones and planned government action. |
 
+## International professional guideline illustrations (2026-10-13)
+
+These are original SVG diagrams created for the AutismHub editorial library. They contain only geometric vector forms, no patient photographs, third-party logos, externally licensed assets or reproduction of publishers' figures.
+
+| Local file | Author/source | Type | Subject |
+| --- | --- | --- | --- |
+| `professional-us-aap-asd-2020.svg` | AutismHub editorial, created 2026-10-13 | Original SVG vector | American Academy of Pediatrics clinical report: medical-document checklist and monitoring/assessment iconography. |
+| `professional-au-autism-crc-assessment.svg` | AutismHub editorial, created 2026-10-13 | Original SVG vector | Autism CRC assessment and diagnosis guideline: sequential referral and evaluation process with magnifier. |
+| `professional-au-autism-crc-support.svg` | AutismHub editorial, created 2026-10-13 | Original SVG vector | Autism CRC children's support guideline: connected learning, participation and wellbeing symbols. |
+
+All three are project-created educational visuals, not official graphics, endorsements or trademarks of the named issuing organisations.
