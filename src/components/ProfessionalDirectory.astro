@@ -179,7 +179,7 @@ const forGroup = (group: Group) => {
   const extra = records.filter((material) =>
     !matched.some((entry) => entry.record?.data.slug === material.data.slug)
   );
-  return { matched, extra, count: group.resources.length + extra.length + (group.id === 'guidelines' ? kazakhstanDocumentCount + internationalGuidelineCountries[0].documents.length : 0) };
+  return { matched, extra, count: group.resources.length + extra.length + (group.id === 'guidelines' ? kazakhstanDocumentCount + internationalGuidelineCount : 0) };
 };
 ---
 
