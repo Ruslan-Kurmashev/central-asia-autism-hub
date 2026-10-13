@@ -1,0 +1,81 @@
+/* Contact hub, using site-wide type tokens and no third-party widgets. */
+.contact-hub {
+  --contact-ink: #103457;
+  --contact-muted: #405d73;
+  --contact-accent: #115c93;
+  --contact-line: #d5e6f0;
+  color: var(--contact-ink);
+  background: #fff;
+}
+.contact-hub .container { width: min(calc(100% - 2.5rem), 70rem); }
+.contact-hub__hero { padding: clamp(2.25rem, 6vw, 4.5rem) 0; background: linear-gradient(125deg, #e8f4fb 0%, #f9fcfe 73%, #fff 100%); border-bottom: 1px solid var(--contact-line); }
+.contact-hub__breadcrumbs { display: flex; flex-wrap: wrap; align-items: center; gap: .55rem; margin-bottom: 2.35rem; font-size: var(--type-meta); color: var(--contact-muted); }
+.contact-hub__breadcrumbs a { color: var(--contact-accent); }
+.contact-hub__eyebrow { margin-bottom: .75rem; font-size: var(--type-meta); font-weight: 750; letter-spacing: .08em; color: var(--contact-accent); }
+.contact-hub h1 { font-size: var(--type-display); line-height: var(--leading-heading); color: var(--contact-ink); overflow-wrap: anywhere; }
+.contact-hub h2 { font-size: var(--type-h2); line-height: var(--leading-heading); color: var(--contact-ink); }
+.contact-hub h3 { font-size: var(--type-subhead); line-height: 1.35; color: var(--contact-ink); }
+.contact-hub__lead { max-width: 48rem; margin-top: 1.2rem; color: var(--contact-muted); font-size: var(--type-lead); line-height: 1.65; }
+.contact-hub__section { padding: clamp(2.75rem, 6vw, 5rem) 0; border-top: 1px solid var(--contact-line); }
+.contact-hub__section--main { border-top: 0; }
+.contact-hub__section-intro { max-width: 50rem; }
+.contact-hub__section-intro > p:last-child { margin-top: 1rem; font-size: var(--type-reading); line-height: 1.7; color: var(--contact-muted); }
+.contact-hub__split { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); align-items: start; gap: clamp(1.5rem, 5vw, 5rem); }
+.contact-hub__inbox { padding: clamp(1.5rem, 3.5vw, 2.25rem); border: 1px solid var(--contact-line); border-radius: 1rem; box-shadow: 0 14px 34px rgb(17 58 99 / 7%); background: #fff; }
+.contact-hub__inbox-title { display: flex; align-items: center; gap: 1rem; }
+.contact-hub__inbox-symbol { display: grid; place-items: center; flex: none; width: 3.1rem; height: 3.1rem; border-radius: .8rem; background: #e6f2fa; color: var(--contact-accent); font-size: var(--type-symbol); }
+.contact-hub__inbox-state { margin-top: .3rem; color: var(--contact-accent); font-size: var(--type-small); font-weight: 680; }
+.contact-hub__inbox > p:not(.contact-hub__privacy-notice) { margin-top: 1.2rem; line-height: 1.7; color: var(--contact-muted); }
+.contact-hub__email { display: block; margin-top: 1.2rem; overflow-wrap: anywhere; font-weight: 720; font-size: var(--type-lead); color: var(--contact-accent); }
+.contact-hub__button, .contact-hub__secondary-button { display: inline-flex; align-items: center; justify-content: center; gap: .6rem; padding: .85rem 1.2rem; min-height: 3rem; border-radius: .6rem; text-decoration: none; font-size: var(--type-control); font-weight: 720; }
+.contact-hub__button { background: #115c93; color: #fff; margin-top: 1.25rem; }
+.contact-hub__button:hover { background: #0b4a78; color: #fff; }
+.contact-hub__secondary-button { background: #115c93; color: #fff; margin-top: 1.6rem; }
+.contact-hub__secondary-button:hover { background: #0b4a78; color: #fff; }
+.contact-hub__privacy-notice { margin-top: 1.2rem; padding-top: 1rem; border-top: 1px solid var(--contact-line); color: var(--contact-muted); font-size: var(--type-small); line-height: 1.65; }
+.contact-hub__section--channels { background: #f7fafc; }
+.contact-hub__channel-grid { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 1rem; margin-top: 2rem; }
+.contact-hub__channel { padding: 1.4rem; border: 1px solid var(--contact-line); background: #fff; border-radius: .85rem; display: flex; flex-direction: column; align-items: flex-start; min-height: 15.5rem; }
+.contact-hub__channel--active { border-color: #aacde4; }
+.contact-hub__channel-top { display: flex; align-items: center; justify-content: space-between; gap: .65rem; width: 100%; margin-bottom: 1.3rem; }
+.contact-hub__channel-mark { display: grid; place-items: center; flex: none; border-radius: .7rem; background: #e8f3fa; min-width: 2.7rem; height: 2.7rem; font-size: var(--type-small); font-weight: 850; color: var(--contact-accent); }
+.contact-hub__channel-status { padding: .3rem .5rem; border-radius: 3rem; background: #f0f5f9; color: var(--contact-muted); font-size: var(--type-caption); font-weight: 680; }
+.contact-hub__channel p { color: var(--contact-muted); font-size: var(--type-small); line-height: 1.6; margin-top: .55rem; }
+.contact-hub__channel-link { display: inline-flex; gap: .35rem; align-items: center; margin-top: auto; padding-top: 1.25rem; font-weight: 700; font-size: var(--type-small); color: var(--contact-accent); text-underline-offset: .2em; }
+.contact-hub__channel-pending { margin-top: auto; padding-top: 1.25rem; color: var(--contact-muted); font-size: var(--type-small); }
+.contact-hub__work-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 1rem; margin-top: 2rem; }
+.contact-hub__work-card { padding: 1.6rem; border: 1px solid var(--contact-line); border-radius: .9rem; background: #fff; }
+.contact-hub__index { display: inline-flex; font-size: var(--type-meta); font-weight: 780; color: var(--contact-accent); background: #eaf4fb; border-radius: .5rem; padding: .6rem; margin-bottom: 1.2rem; }
+.contact-hub__work-card p { margin-top: .6rem; line-height: 1.65; color: var(--contact-muted); }
+.contact-hub__section--support { background: #ebf5f9; }
+.contact-hub__support-layout { display: grid; grid-template-columns: minmax(0, 1.1fr) minmax(0, .9fr); align-items: start; gap: clamp(2rem, 5vw, 5rem); }
+.contact-hub__support-lead { margin-top: 1rem; color: var(--contact-muted); font-size: var(--type-reading); line-height: 1.7; }
+.contact-hub__support-status { border-left: 3px solid #3985aa; background: #fff; padding: 1.1rem 1.35rem; border-radius: 0 .7rem .7rem 0; margin-top: 1.4rem; }
+.contact-hub__support-status strong { font-size: var(--type-body); }
+.contact-hub__support-status p { margin-top: .35rem; color: var(--contact-muted); font-size: var(--type-small); line-height: 1.6; }
+.contact-hub__support-principle { font-size: var(--type-small); line-height: 1.6; color: var(--contact-muted); margin-top: 1.2rem; }
+.contact-hub__support-ways { display: grid; gap: 1rem; }
+.contact-hub__support-way { display: flex; gap: 1.2rem; align-items: flex-start; background: #fff; border: 1px solid var(--contact-line); border-radius: .85rem; padding: 1.4rem; }
+.contact-hub__support-way .contact-hub__index { margin: 0; flex: none; }
+.contact-hub__support-way p { margin-top: .4rem; color: var(--contact-muted); line-height: 1.6; }
+.contact-hub__trust-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 1.25rem; margin-top: 2rem; }
+.contact-hub__trust-card { border-top: 2px solid #a7cbdf; padding-top: 1.2rem; }
+.contact-hub__trust-card p { margin-top: .55rem; color: var(--contact-muted); line-height: 1.65; font-size: var(--type-small); }
+.contact-hub__policy-links { display: flex; flex-wrap: wrap; gap: 1.1rem 2rem; margin-top: 2rem; }
+.contact-hub__policy-links a { color: var(--contact-accent); font-size: var(--type-small); font-weight: 720; }
+.contact-hub__bottom { padding: 1.8rem 0; background: #f7fafc; }
+.contact-hub__bottom a { color: var(--contact-accent); font-size: var(--type-small); font-weight: 700; }
+.contact-hub a:focus-visible { outline: 3px solid #1c659b; outline-offset: 4px; border-radius: .2rem; }
+@media (max-width: 65rem) {
+  .contact-hub__channel-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .contact-hub__split, .contact-hub__support-layout { grid-template-columns: 1fr; }
+  .contact-hub__inbox { max-width: 42rem; }
+}
+@media (max-width: 44rem) {
+  .contact-hub .container { width: min(calc(100% - 1.25rem), 70rem); }
+  .contact-hub__channel-grid, .contact-hub__work-grid, .contact-hub__trust-grid { grid-template-columns: 1fr; }
+  .contact-hub__channel { min-height: 0; }
+  .contact-hub__channel-link, .contact-hub__channel-pending { margin-top: 1rem; padding-top: 0; }
+  .contact-hub__inbox { padding: 1.3rem; }
+  .contact-hub__support-way { padding: 1.1rem; }
+}

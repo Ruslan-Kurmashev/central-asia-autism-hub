@@ -1,0 +1,338 @@
+---
+import type { Locale } from '../site.config';
+import { localePath, sectionPath } from '../lib/urls';
+import { CONTACT_CHANNELS } from '../data/contact-channels';
+import '../styles/contact-hub.css';
+
+const { locale } = Astro.props as { locale: Locale };
+
+type ChannelKey = 'linkedin' | 'telegram' | 'instagram' | 'github';
+type Copy = {
+  home: string; about: string; eyebrow: string; title: string; lead: string;
+  mainLabel: string; mainTitle: string; mainDetail: string;
+  mailTitle: string; mailReady: string; mailPending: string; mailAction: string;
+  fallback: string; githubAction: string; githubNotice: string; currentChannel: string; plannedChannel: string;
+  channelsTitle: string; channelsLead: string; channelLabels: Record<ChannelKey, { title: string; description: string; action: string }>;
+  workTitle: string; workLead: string; workAction: string;
+  workItems: { title: string; detail: string; symbol: string }[];
+  supportEyebrow: string; supportTitle: string; supportLead: string;
+  supportStatus: string; supportNoPayments: string;
+  supportWays: { title: string; description: string; symbol: string }[];
+  supportPrinciple: string; supportAction: string;
+  trustTitle: string; trustLead: string; trustItems: { title: string; description: string }[];
+  editorial: string; privacy: string; safety: string; back: string;
+};
+const translations: Record<Locale, Copy> = {
+  ru: {
+    home: 'Главная', about: 'О проекте', eyebrow: 'СВЯЗЬ И СОТРУДНИЧЕСТВО',
+    title: 'Контакты для связи',
+    lead: 'Вопросы о проекте, экспертное участие, партнёрства и предложения по развитию Autism Hub Kazakhstan. Мы открыты к содержательной обратной связи.',
+    mainLabel: '01 / ОБЩИЙ КОНТАКТ',
+    mainTitle: 'Свяжитесь с AutismHub',
+    mainDetail: 'Для обращений к проекту будет использоваться один общий адрес. Личные контакты участников команды публиковать не планируется.',
+    mailTitle: 'Официальная почта проекта',
+    mailReady: 'Электронная почта', mailPending: 'Адрес готовится к запуску',
+    mailAction: 'Написать на почту',
+    fallback: 'Пока почтовый адрес не создан, сообщения об ошибках, идеях и сотрудничестве можно оставить в публичном репозитории проекта.',
+    githubAction: 'Связаться через GitHub',
+    githubNotice: 'Для обращения нужен аккаунт GitHub. Все обращения публичные: не размещайте номера телефонов, документы, сведения о детях или медицинскую информацию.',
+    currentChannel: 'Доступно', plannedChannel: 'Скоро',
+    channelsTitle: 'Наши площадки',
+    channelsLead: 'Следите за развитием проекта и новыми образовательными материалами. Ссылки появляются только после создания соответствующих страниц.',
+    channelLabels: {
+      linkedin: { title: 'LinkedIn', description: 'Профессиональные новости, сотрудничество с экспертами, организациями и исследователями.', action: 'Перейти в LinkedIn' },
+      telegram: { title: 'Telegram', description: 'Обновления сайта, полезные публикации и открытые образовательные ресурсы.', action: 'Открыть Telegram-канал' },
+      instagram: { title: 'Instagram', description: 'Рассказы о проекте через личную страницу основателя. Это не официальный аккаунт организации.', action: 'Открыть личный Instagram' },
+      github: { title: 'GitHub', description: 'Исходный код платформы, история разработки и публичные сообщения об ошибках.', action: 'Открыть репозиторий' },
+    },
+    workTitle: 'Сотрудничество с проектом',
+    workLead: 'Мы приветствуем предложения от специалистов, исследователей, общественных и образовательных организаций. Каждое участие и партнёрство согласовывается отдельно.',
+    workAction: 'Обсудить сотрудничество',
+    workItems: [
+      { title: 'Стать экспертом', detail: 'Авторство, профессиональные консультации и независимое рецензирование конкретных материалов.', symbol: '01' },
+      { title: 'Организации и партнёры', detail: 'Совместные образовательные инициативы, исследовательские проекты и поддержка доступных ресурсов.', symbol: '02' },
+      { title: 'Предложения от сообщества', detail: 'Идеи новых тем, улучшение доступности, сообщения о неточностях и полезные источники.', symbol: '03' },
+    ],
+    supportEyebrow: 'ПОДДЕРЖКА ПРОЕКТА',
+    supportTitle: 'Помогите AutismHub развиваться',
+    supportLead: 'Мы создаём бесплатные информационные ресурсы для семей и специалистов. Поддержать инициативу можно не только финансово: важны профессиональные знания, идеи и помощь в распространении проверенных материалов.',
+    supportStatus: 'Финансовая поддержка',
+    supportNoPayments: 'Пожертвования и платежи пока не принимаются. Возможность финансовой поддержки рассмотрим после регистрации организации в Казахстане и подключения официального платёжного канала.',
+    supportWays: [
+      { title: 'Расскажите о проекте', description: 'Поделитесь ссылкой на полезные материалы с теми, кому они могут пригодиться.', symbol: '01' },
+      { title: 'Поделитесь экспертизой', description: 'Предложите авторский материал, консультацию или предметную проверку источников.', symbol: '02' },
+      { title: 'Предложите партнёрство', description: 'Помогите сделать информацию доступнее и расширить профессиональное сотрудничество.', symbol: '03' },
+    ],
+    supportPrinciple: 'Любая поддержка добровольная и не даёт права влиять на научные выводы, содержание материалов или доступ пользователей к информации.',
+    supportAction: 'Предложить помощь проекту',
+    trustTitle: 'Прозрачность и безопасность',
+    trustLead: 'Мы открыто объясняем, кто отвечает за информацию, как сообщить об ошибке и какие сведения не следует передавать через публичные каналы.',
+    trustItems: [
+      { title: 'Редакционная ответственность', description: 'Источники, авторство и независимая экспертиза указываются только при фактическом наличии.' },
+      { title: 'Защита персональных данных', description: 'Не присылайте медицинские документы, фотографии детей, результаты обследований и идентифицирующие сведения.' },
+      { title: 'Границы поддержки', description: 'AutismHub не проводит диагностику, не назначает лечение и не заменяет консультацию специалиста.' },
+    ],
+    editorial: 'Редакционная политика', privacy: 'Политика конфиденциальности', safety: 'О медицинских ограничениях', back: 'Вернуться к проекту',
+  },
+  kk: {
+    home: 'Басты бет', about: 'Жоба туралы', eyebrow: 'БАЙЛАНЫС ЖӘНЕ ЫНТЫМАҚТАСТЫҚ',
+    title: 'Байланыс',
+    lead: 'Autism Hub Kazakhstan жобасы туралы сұрақтар, сарапшылық қатысу, серіктестік және дамытуға қатысты ұсыныстар. Маңызды пікірлер мен ұсыныстарға ашықпыз.',
+    mainLabel: '01 / БІРЫҢҒАЙ БАЙЛАНЫС',
+    mainTitle: 'AutismHub жобасымен байланысыңыз',
+    mainDetail: 'Жобаға арналған бір ортақ электрондық пошта мекенжайы пайдаланылады. Команда мүшелерінің жеке байланыс деректерін жариялау жоспарланбаған.',
+    mailTitle: 'Жобаның ресми электрондық поштасы',
+    mailReady: 'Электрондық пошта', mailPending: 'Мекенжай әзірленіп жатыр',
+    mailAction: 'Электрондық хат жазу',
+    fallback: 'Электрондық пошта ашылғанға дейін қателер, идеялар және ынтымақтастық туралы ұсыныстарды жобаның ашық репозиторийінде қалдыруға болады.',
+    githubAction: 'GitHub арқылы хабарласу',
+    githubNotice: 'Хабарласу үшін GitHub тіркелгісі қажет. Барлық өтініш ашық көрінеді: телефон нөмірлерін, құжаттарды, балалар туралы немесе медициналық мәліметтерді жарияламаңыз.',
+    currentChannel: 'Қолжетімді', plannedChannel: 'Жақында',
+    channelsTitle: 'Біздің платформалар',
+    channelsLead: 'Жоба жаңалықтары мен оқу материалдарын қадағалаңыз. Сілтемелер тиісті парақшалар ашылғаннан кейін ғана қосылады.',
+    channelLabels: {
+      linkedin: { title: 'LinkedIn', description: 'Кәсіби жаңалықтар, сарапшылармен, ұйымдармен және зерттеушілермен ынтымақтастық.', action: 'LinkedIn парақшасын ашу' },
+      telegram: { title: 'Telegram', description: 'Сайт жаңартулары, пайдалы мақалалар және ашық білім беру ресурстары.', action: 'Telegram арнасын ашу' },
+      instagram: { title: 'Instagram', description: 'Жоба туралы ақпаратты негізін қалаушының жеке парақшасы арқылы тарату. Бұл ұйымның ресми аккаунты емес.', action: 'Жеке Instagram парақшасын ашу' },
+      github: { title: 'GitHub', description: 'Платформаның бастапқы коды, әзірлеу тарихы және қателер туралы ашық хабарламалар.', action: 'Репозиторийді ашу' },
+    },
+    workTitle: 'Жобамен ынтымақтастық',
+    workLead: 'Мамандардың, зерттеушілердің, қоғамдық және білім беру ұйымдарының ұсыныстарын құптаймыз. Қатысу мен серіктестіктің әр түрі жеке келісіліп анықталады.',
+    workAction: 'Ынтымақтастықты талқылау',
+    workItems: [
+      { title: 'Сарапшы болу', detail: 'Авторлық, кәсіби кеңес беру және нақты материалдарға тәуелсіз рецензия жасау.', symbol: '01' },
+      { title: 'Ұйымдар мен серіктестер', detail: 'Бірлескен білім беру бастамалары, зерттеу жобалары және қолжетімді ресурстарды дамыту.', symbol: '02' },
+      { title: 'Қауымдастық ұсыныстары', detail: 'Жаңа тақырыптар, қолжетімділікті жақсарту, дәлсіздіктер және пайдалы дереккөздер.', symbol: '03' },
+    ],
+    supportEyebrow: 'ЖОБАНЫ ҚОЛДАУ',
+    supportTitle: 'AutismHub дамуына көмектесіңіз',
+    supportLead: 'Отбасылар мен мамандарға арналған тегін ақпараттық ресурстар дайындаймыз. Жобаға тек қаржылай емес, кәсіби білім, идея және тексерілген материалдарды тарату арқылы да қолдау көрсетуге болады.',
+    supportStatus: 'Қаржылай қолдау',
+    supportNoPayments: 'Қазір қайырымдылық жарналар мен төлемдер қабылданбайды. Қазақстанда ұйым тіркеліп, ресми төлем арнасы ашылғаннан кейін қаржылай қолдау мүмкіндігін қарастырамыз.',
+    supportWays: [
+      { title: 'Жоба туралы бөлісіңіз', description: 'Пайдалы материалдардың сілтемесін қажет болуы мүмкін адамдарға жіберіңіз.', symbol: '01' },
+      { title: 'Кәсіби біліміңізбен бөлісіңіз', description: 'Авторлық материал, кеңес немесе дереккөздерге мамандандырылған шолу ұсыныңыз.', symbol: '02' },
+      { title: 'Серіктестік ұсыныңыз', description: 'Ақпарат қолжетімділігін және кәсіби ынтымақтастықты дамытуға көмектесіңіз.', symbol: '03' },
+    ],
+    supportPrinciple: 'Кез келген қолдау ерікті түрде көрсетіледі және ғылыми қорытындыларға, материалдардың мазмұнына немесе ақпаратқа қолжетімділікке әсер ету құқығын бермейді.',
+    supportAction: 'Жобаға көмектесуді ұсыну',
+    trustTitle: 'Ашықтық және қауіпсіздік',
+    trustLead: 'Ақпарат үшін кім жауап беретінін, қате туралы қалай хабарлауға болатынын және ашық арналар арқылы қандай деректерді жібермеу керектігін түсіндіреміз.',
+    trustItems: [
+      { title: 'Редакциялық жауапкершілік', description: 'Дереккөздер, авторлық және тәуелсіз сараптама тек нақты болған жағдайда ғана көрсетіледі.' },
+      { title: 'Жеке деректерді қорғау', description: 'Медициналық құжаттарды, балалардың фотосуреттерін, тексеру нәтижелерін және жеке тұлғаны анықтайтын мәліметтерді жібермеңіз.' },
+      { title: 'Қолдау шектері', description: 'AutismHub диагноз қоймайды, ем тағайындамайды және маман кеңесін алмастырмайды.' },
+    ],
+    editorial: 'Редакциялық саясат', privacy: 'Құпиялылық саясаты', safety: 'Медициналық шектеулер', back: 'Жоба туралы бетке оралу',
+  },
+  en: {
+    home: 'Home', about: 'About', eyebrow: 'CONTACT AND COLLABORATION',
+    title: 'Contact us',
+    lead: 'Enquiries about Autism Hub Kazakhstan, expert contributions, partnerships and suggestions for improving the platform. We welcome constructive feedback.',
+    mainLabel: '01 / SHARED CONTACT',
+    mainTitle: 'Get in touch with AutismHub',
+    mainDetail: 'One shared project inbox will be used for enquiries. We do not plan to publish individual team members\' contact details.',
+    mailTitle: 'Official project email',
+    mailReady: 'Email address', mailPending: 'Project email is being set up',
+    mailAction: 'Send an email',
+    fallback: 'Until the shared inbox is available, you can use the public project repository to suggest improvements, report an error or discuss collaboration.',
+    githubAction: 'Contact via GitHub',
+    githubNotice: 'A GitHub account is required and all issues are public. Do not share phone numbers, documents, children\'s details or medical information.',
+    currentChannel: 'Available', plannedChannel: 'Coming soon',
+    channelsTitle: 'Find us online',
+    channelsLead: 'Follow the project and explore our educational resources. Links will appear only after the corresponding channels have been created.',
+    channelLabels: {
+      linkedin: { title: 'LinkedIn', description: 'Professional updates and collaboration with experts, researchers and organisations.', action: 'Visit LinkedIn' },
+      telegram: { title: 'Telegram', description: 'Website updates, useful articles and openly accessible learning resources.', action: 'Visit our Telegram channel' },
+      instagram: { title: 'Instagram', description: 'Project outreach through the founder\'s personal account, not an official organisation account.', action: 'Visit personal Instagram' },
+      github: { title: 'GitHub', description: 'Platform source code, development history and public issue reports.', action: 'View repository' },
+    },
+    workTitle: 'Work with us',
+    workLead: 'We welcome ideas from professionals, researchers, community and education organisations. Contributions and partnerships are discussed and agreed individually.',
+    workAction: 'Discuss collaboration',
+    workItems: [
+      { title: 'Become a contributor', detail: 'Authorship, subject-matter consultation and independent review of specific materials.', symbol: '01' },
+      { title: 'Organisations and partners', detail: 'Joint education initiatives, research activities and support for accessible resources.', symbol: '02' },
+      { title: 'Community feedback', detail: 'Topic suggestions, accessibility improvements, error reports and useful references.', symbol: '03' },
+    ],
+    supportEyebrow: 'SUPPORT THE PROJECT',
+    supportTitle: 'Help AutismHub grow',
+    supportLead: 'We create free information resources for families and professionals. Support is not only financial: expert knowledge, ideas and help sharing reliable materials also matter.',
+    supportStatus: 'Financial support',
+    supportNoPayments: 'We are not accepting donations or payments at present. A financial support option may be considered after an organisation is registered in Kazakhstan and an official payment channel is established.',
+    supportWays: [
+      { title: 'Spread the word', description: 'Share useful resources with people who may benefit from them.', symbol: '01' },
+      { title: 'Share your expertise', description: 'Suggest a contribution, consultation or independent review of a resource.', symbol: '02' },
+      { title: 'Explore a partnership', description: 'Help improve access to information and expand professional collaboration.', symbol: '03' },
+    ],
+    supportPrinciple: 'All support is voluntary and does not grant influence over scientific conclusions, editorial content or users\' access to information.',
+    supportAction: 'Offer your support',
+    trustTitle: 'Transparency and safety',
+    trustLead: 'We explain who is responsible for the content, how to report an error and what not to submit through public contact channels.',
+    trustItems: [
+      { title: 'Editorial responsibility', description: 'Sources, authorship and independent review are identified only when they actually exist.' },
+      { title: 'Personal-data protection', description: 'Please do not send medical records, children\'s photographs, assessment results or identifying personal details.' },
+      { title: 'Scope of support', description: 'AutismHub does not diagnose conditions, prescribe treatments or replace professional consultation.' },
+    ],
+    editorial: 'Editorial policy', privacy: 'Privacy policy', safety: 'Medical limitations', back: 'Back to About',
+  },
+};
+const c = translations[locale];
+const contactHref = CONTACT_CHANNELS.email ? 'mailto:' + CONTACT_CHANNELS.email : CONTACT_CHANNELS.githubIssues;
+const channelCards: Array<{ id: ChannelKey; glyph: string; href: string | null }> = [
+  { id: 'linkedin', glyph: 'in', href: CONTACT_CHANNELS.linkedin },
+  { id: 'telegram', glyph: '↗', href: CONTACT_CHANNELS.telegram },
+  { id: 'instagram', glyph: 'IG', href: CONTACT_CHANNELS.instagramPersonal },
+  { id: 'github', glyph: 'GH', href: CONTACT_CHANNELS.githubRepository },
+];
+---
+<article class="contact-hub">
+  <header class="contact-hub__hero">
+    <div class="container">
+      <nav class="contact-hub__breadcrumbs" aria-label={c.about}>
+        <a href={localePath(locale)}>{c.home}</a>
+        <span aria-hidden="true">/</span>
+        <a href={sectionPath(locale, 'about')}>{c.about}</a>
+        <span aria-hidden="true">/</span>
+        <span aria-current="page">{c.title}</span>
+      </nav>
+      <p class="contact-hub__eyebrow">{c.eyebrow}</p>
+      <h1>{c.title}</h1>
+      <p class="contact-hub__lead">{c.lead}</p>
+    </div>
+  </header>
+
+  <section id="contact-main" class="contact-hub__section contact-hub__section--main" aria-labelledby="contact-main-heading">
+    <div class="container contact-hub__split">
+      <div class="contact-hub__section-intro">
+        <p class="contact-hub__eyebrow">{c.mainLabel}</p>
+        <h2 id="contact-main-heading">{c.mainTitle}</h2>
+        <p>{c.mainDetail}</p>
+      </div>
+      <div class="contact-hub__inbox">
+        <div class="contact-hub__inbox-title">
+          <span class="contact-hub__inbox-symbol" aria-hidden="true">✉</span>
+          <div>
+            <h3>{c.mailTitle}</h3>
+            <p class="contact-hub__inbox-state">{CONTACT_CHANNELS.email ? c.mailReady : c.mailPending}</p>
+          </div>
+        </div>
+        {CONTACT_CHANNELS.email ? (
+          <>
+            <a class="contact-hub__email" href={'mailto:' + CONTACT_CHANNELS.email}>{CONTACT_CHANNELS.email}</a>
+            <a class="contact-hub__button" href={'mailto:' + CONTACT_CHANNELS.email}>{c.mailAction} <span aria-hidden="true">↗</span></a>
+          </>
+        ) : (
+          <>
+            <p>{c.fallback}</p>
+            <a class="contact-hub__button" href={CONTACT_CHANNELS.githubIssues} rel="external">{c.githubAction} <span aria-hidden="true">↗</span></a>
+          </>
+        )}
+        <p class="contact-hub__privacy-notice">{c.githubNotice}</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="contact-hub__section contact-hub__section--channels" aria-labelledby="contact-channels-heading">
+    <div class="container">
+      <div class="contact-hub__section-intro">
+        <p class="contact-hub__eyebrow">02</p>
+        <h2 id="contact-channels-heading">{c.channelsTitle}</h2>
+        <p>{c.channelsLead}</p>
+      </div>
+      <div class="contact-hub__channel-grid">
+        {channelCards.map((ch) => {
+          const label = c.channelLabels[ch.id];
+          return (
+            <div class={'contact-hub__channel' + (ch.href ? ' contact-hub__channel--active' : '')}>
+              <div class="contact-hub__channel-top">
+                <span class="contact-hub__channel-mark" aria-hidden="true">{ch.glyph}</span>
+                <span class="contact-hub__channel-status">{ch.href ? c.currentChannel : c.plannedChannel}</span>
+              </div>
+              <h3>{label.title}</h3>
+              <p>{label.description}</p>
+              {ch.href ? (
+                <a href={ch.href} class="contact-hub__channel-link" rel="external">{label.action} <span aria-hidden="true">↗</span></a>
+              ) : (
+                <span class="contact-hub__channel-pending">{c.plannedChannel}</span>
+              )}
+            </div>
+          );
+        })}
+      </div>
+    </div>
+  </section>
+
+  <section class="contact-hub__section contact-hub__section--work" aria-labelledby="contact-work-heading">
+    <div class="container">
+      <div class="contact-hub__section-intro">
+        <p class="contact-hub__eyebrow">03</p>
+        <h2 id="contact-work-heading">{c.workTitle}</h2>
+        <p>{c.workLead}</p>
+      </div>
+      <div class="contact-hub__work-grid">
+        {c.workItems.map((item) => (
+          <div class="contact-hub__work-card">
+            <span class="contact-hub__index" aria-hidden="true">{item.symbol}</span>
+            <h3>{item.title}</h3>
+            <p>{item.detail}</p>
+          </div>
+        ))}
+      </div>
+      <a href={contactHref} class="contact-hub__secondary-button" rel={CONTACT_CHANNELS.email ? undefined : 'external'}>{c.workAction} <span aria-hidden="true">↗</span></a>
+    </div>
+  </section>
+
+  <section class="contact-hub__section contact-hub__section--support" aria-labelledby="contact-support-heading">
+    <div class="container">
+      <div class="contact-hub__support-layout">
+        <div>
+          <p class="contact-hub__eyebrow">04 / {c.supportEyebrow}</p>
+          <h2 id="contact-support-heading">{c.supportTitle}</h2>
+          <p class="contact-hub__support-lead">{c.supportLead}</p>
+          <div class="contact-hub__support-status">
+            <strong>{c.supportStatus}</strong>
+            <p>{c.supportNoPayments}</p>
+          </div>
+          <p class="contact-hub__support-principle">{c.supportPrinciple}</p>
+          <a href={contactHref} class="contact-hub__secondary-button" rel={CONTACT_CHANNELS.email ? undefined : 'external'}>{c.supportAction} <span aria-hidden="true">↗</span></a>
+        </div>
+        <div class="contact-hub__support-ways">
+          {c.supportWays.map((way) => (
+            <div class="contact-hub__support-way">
+              <span class="contact-hub__index" aria-hidden="true">{way.symbol}</span>
+              <div>
+                <h3>{way.title}</h3>
+                <p>{way.description}</p>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="contact-hub__section contact-hub__section--trust" aria-labelledby="contact-trust-heading">
+    <div class="container">
+      <div class="contact-hub__section-intro">
+        <p class="contact-hub__eyebrow">05</p>
+        <h2 id="contact-trust-heading">{c.trustTitle}</h2>
+        <p>{c.trustLead}</p>
+      </div>
+      <div class="contact-hub__trust-grid">
+        {c.trustItems.map((item) => (
+          <div class="contact-hub__trust-card">
+            <h3>{item.title}</h3>
+            <p>{item.description}</p>
+          </div>
+        ))}
+      </div>
+      <nav class="contact-hub__policy-links" aria-label={c.trustTitle}>
+        <a href={localePath(locale, 'about/policies') + '#editorial'}>{c.editorial} <span aria-hidden="true">↗</span></a>
+        <a href={localePath(locale, 'about/policies') + '#privacy'}>{c.privacy} <span aria-hidden="true">↗</span></a>
+        <a href={localePath(locale, 'about/policies') + '#evidence-safety'}>{c.safety} <span aria-hidden="true">↗</span></a>
+      </nav>
+    </div>
+  </section>
+  <div class="contact-hub__bottom"><div class="container"><a href={sectionPath(locale, 'about')}>← {c.back}</a></div></div>
+</article>

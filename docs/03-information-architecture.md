@@ -253,6 +253,8 @@ Dedicated localized pages provide team profiles, confirmed expert profiles, cont
 
 The experts page is a single catalog at `/kz/{language}/about/experts/` with accessible expandable cards, no standalone per-expert routes. Profiles can be listed only after participation is confirmed and the person consents to public display. Identify authorship, subject-matter consultation and independent review separately; reviewing one resource never implies a review of the whole site. An open participation invitation links to the existing contact channel without collecting personal data on the site. The policy page retains the existing anchored editorial, evidence-safety, privacy, accessibility and corrections sections.
 
+The localized contact page is a single five-part public communication hub: one shared project inbox (shown only after its address exists), verified public social links (LinkedIn, Telegram, personal Instagram as outreach, and GitHub), expert and partnership collaboration, non-financial support with an explicit statement that donations/payments are not accepted yet, and links to transparency and safety policies. The existing public GitHub issues channel is the temporary fallback with a prominent privacy warning. No contact form, payment collection, individual team-member details, or fictional email/social links are added. Registration of a prospective Kazakhstan organisation and payment integration are future decisions.
+
 Editorial policy, privacy, disclaimer, and contact links must also be accessible from the site footer.
 
 Unconfirmed partnerships, unofficial roles, or unsupported status claims must not appear.

@@ -69,6 +69,26 @@ for (const locale of locales) {
     !expertHtml.includes('Магрипа'), 'unconfirmed expert names shown in directory');
   inspect((expertHtml.match(/<h2\b/g) || []).length >= 4, 'expert sections lack semantic headings');
 
+  const contactHtml = await readFile(path.join('dist', 'kz', locale, 'about', 'contact', 'index.html'), 'utf8');
+  inspect((contactHtml.match(/<h1\b/g) || []).length === 1, 'contact page must have one H1');
+  for (const sectionName of ['main', 'channels', 'work', 'support', 'trust']) {
+    inspect(contactHtml.includes('contact-hub__section--' + sectionName), 'missing contact area ' + sectionName);
+  }
+  inspect((contactHtml.match(/<h2\b/g) || []).length === 5, 'contact page must have five H2 sections');
+  inspect(contactHtml.includes('https://github.com/Ruslan-Kurmashev/central-asia-autism-hub/issues/new'), 'active GitHub issue contact missing');
+  inspect(contactHtml.includes('about/policies/#editorial') && contactHtml.includes('about/policies/#privacy'), 'policy and privacy links missing from contact');
+  inspect(!contactHtml.includes('mailto:') && !contactHtml.includes('href="https://www.linkedin.com/') &&
+    !contactHtml.includes('href="https://t.me/') && !contactHtml.includes('href="https://www.instagram.com/'),
+    'unverified email or social links must not be published');
+  inspect(!/<form\b/i.test(contactHtml), 'contact form is not approved');
+  inspect(!/<a\b[^>]*href="[^"]*(?:paypal|stripe|donate)[^"]*"/i.test(contactHtml), 'payments must not be enabled');
+  inspect({
+    ru: contactHtml.includes('Пожертвования и платежи пока не принимаются'),
+    kk: contactHtml.includes('қайырымдылық жарналар мен төлемдер қабылданбайды'),
+    en: contactHtml.includes('not accepting donations or payments'),
+  }[locale], 'clear payments-disabled statement missing');
+
+
 }
 
 const component = await readFile('src/components/AboutPolicies.astro', 'utf8');
@@ -78,5 +98,5 @@ if (errors.length) {
   console.error('About and policy QA failed:\n' + errors.map(line => ' - ' + line).join('\n'));
   process.exitCode = 1;
 } else {
-  console.log('About QA passed: 3 compact overviews, separate policies and accessible experts directory in 3 languages.');
+  console.log('About QA passed: 3 compact overviews, separate policies and accessible experts directory and contact hub in 3 languages.');
 }

@@ -1,6 +1,7 @@
 ---
 import BaseLayout from '../../../../layouts/BaseLayout.astro';
 import ExpertsDirectory from '../../../../components/ExpertsDirectory.astro';
+import ContactHub from '../../../../components/ContactHub.astro';
 import { localePath, sectionPath } from '../../../../lib/urls';
 import { SITE, SUPPORTED_LOCALES, type Locale } from '../../../../site.config';
 import '../../../../styles/about-subpages.css';
@@ -125,7 +126,6 @@ const labels = {
 
 const copy = labels[locale];
 const current = copy[page];
-const issueUrl = 'https://github.com/Ruslan-Kurmashev/central-asia-autism-hub/issues/new';
 ---
 <BaseLayout
   title={current.title + ' - ' + SITE.name}
@@ -133,10 +133,12 @@ const issueUrl = 'https://github.com/Ruslan-Kurmashev/central-asia-autism-hub/is
   locale={locale}
   currentSection="about"
   alternatePath={'about/' + page}
-  bodyClass={page === 'experts' ? 'experts-directory-body' : 'about-subpage'}
+  bodyClass={page === 'experts' ? 'experts-directory-body' : page === 'contact' ? 'contact-hub-body' : 'about-subpage'}
 >
   {page === 'experts' ? (
     <ExpertsDirectory locale={locale} />
+  ) : page === 'contact' ? (
+    <ContactHub locale={locale} />
   ) : (
   <article class="about-subpage__page">
     <header class="about-subpage__hero">
@@ -159,18 +161,9 @@ const issueUrl = 'https://github.com/Ruslan-Kurmashev/central-asia-autism-hub/is
         <div class="about-subpage__panel">
           <h2>{current.heading}</h2>
           <p>{current.text}</p>
-          {page === 'contact' ? (
-            <>
-              <a class="about-subpage__action" href={issueUrl} rel="external">
-                {copy.issue} <span aria-hidden="true">↗</span>
-              </a>
-              <p class="about-subpage__notice">{copy.publicNotice}</p>
-            </>
-          ) : (
-            <a class="about-subpage__action" href={localePath(locale, 'about/contact')}>
-              {copy.collaborate} <span aria-hidden="true">→</span>
-            </a>
-          )}
+          <a class="about-subpage__action" href={localePath(locale, 'about/contact')}>
+            {copy.collaborate} <span aria-hidden="true">→</span>
+          </a>
         </div>
         <a class="about-subpage__back" href={sectionPath(locale, 'about')}>
           <span aria-hidden="true">←</span> {copy.back}
