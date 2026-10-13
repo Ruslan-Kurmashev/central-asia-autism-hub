@@ -2,6 +2,7 @@
 import type { CollectionEntry } from 'astro:content';
 import { UI } from '../i18n/ui';
 import { kazakhstanDocumentCount, kazakhstanDocumentGroups } from '../data/kazakhstan-professional-documents';
+import { internationalGuidelineCountries, internationalGuidelineCount, publishedGuidelineKeys } from '../data/international-professional-guidelines';
 import { articlePath, localePath, sectionPath } from '../lib/urls';
 import type { Locale } from '../site.config';
 import '../styles/professionals-directory.css';
@@ -63,11 +64,11 @@ const copy = text[locale];
 const trainingHref = `${sectionPath(locale, 'learning')}#professionals-learning`;
 
 type Localized = Record<Locale, string>;
-type GuidelineSubgroup = 'basics' | 'international';
+type GuidelineSubgroup = 'basics';
 type PlannedResource = { id: string; title: Localized; subgroup?: GuidelineSubgroup };
-const subgroupTitles: Record<GuidelineSubgroup | 'kazakhstan', Localized> = {
+const subgroupTitles: Record<GuidelineSubgroup | 'international' | 'kazakhstan', Localized> = {
   basics: { ru: 'Основы работы с рекомендациями', kk: 'Ұсынымдармен жұмыс негіздері', en: 'Working with guidelines' },
-  international: { ru: 'Международные клинические руководства', kk: 'Халықаралық клиникалық нұсқаулықтар', en: 'International clinical guidelines' },
+  international: { ru: 'Международные клинические руководства: по странам', kk: 'Халықаралық клиникалық нұсқаулықтар: елдер бойынша', en: 'International clinical guidelines by country' },
   kazakhstan: { ru: 'Документы Казахстана: клинические протоколы, законы, приказы и стандарты', kk: 'Қазақстан құжаттары: клиникалық хаттамалар, заңдар, бұйрықтар және стандарттар', en: 'Kazakhstan documents: clinical protocols, laws, orders and standards' },
 };
 type Group = {
@@ -98,9 +99,6 @@ const groups: Group[] = [
     description: { ru: 'Профессиональные рекомендации, международные руководства, клинические протоколы и документы Казахстана', kk: 'Кәсіби ұсынымдар, халықаралық нұсқаулықтар, клиникалық хаттамалар және Қазақстан құжаттары', en: 'Professional guideline appraisal, international guidance, clinical protocols and Kazakhstan documents' },
     resources: [
       { id: 'g01', subgroup: 'basics', title: { ru: 'Как работать с профессиональными рекомендациями при аутизме', kk: 'Аутизм жөніндегі кәсіби ұсынымдармен қалай жұмыс істеуге болады', en: 'How to appraise professional autism guidelines' }},
-      { id: 'g04', subgroup: 'international', title: { ru: 'NICE CG128: выявление и диагностика аутизма у детей и подростков', kk: 'NICE CG128: балалар мен жасөспірімдердегі аутизмді анықтау және диагностикалау', en: 'NICE CG128: recognising and diagnosing autism in under-19s' }},
-      { id: 'g05', subgroup: 'international', title: { ru: 'NICE CG170: поддержка детей и подростков с аутизмом', kk: 'NICE CG170: аутист балалар мен жасөспірімдерді қолдау', en: 'NICE CG170: support for autistic children and young people' }},
-      { id: 'g06', subgroup: 'international', title: { ru: 'NICE CG142: диагностика и поддержка аутичных взрослых', kk: 'NICE CG142: аутист ересектерді диагностикалау және қолдау', en: 'NICE CG142: diagnosis and support for autistic adults' }},
     ],
   },
   {
@@ -158,7 +156,7 @@ const groups: Group[] = [
     ],
   },
 ];
-const plannedCount = groups.reduce((total, group) => total + group.resources.length, kazakhstanDocumentCount);
+const plannedCount = groups.reduce((total, group) => total + group.resources.length, kazakhstanDocumentCount + internationalGuidelineCount);
 const kazakhstanHubHref = localePath(locale, 'professionals/kazakhstan-documents');
 const publishedCount = materials.length;
 const sectionTitle = UI[locale].sections.professionals.title;
@@ -173,7 +171,7 @@ function countLabel(n: number) {
   return 'материалов';
 }
 const forGroup = (group: Group) => {
-  const records = materials.filter((material) => material.data.topic === group.topic && !(group.id === 'guidelines' && kazakhstanDocumentGroups.some((category) => category.documents.some((document) => document.translationKey === material.data.translationKey))));
+  const records = materials.filter((material) => material.data.topic === group.topic && !(group.id === 'guidelines' && (publishedGuidelineKeys.has(material.data.translationKey) || kazakhstanDocumentGroups.some((category) => category.documents.some((document) => document.translationKey === material.data.translationKey)))));
   const matched = group.resources.map((resource) => ({
     resource,
     record: records.find((material) => material.data.translationKey === 'professionals-' + resource.id),
@@ -181,7 +179,7 @@ const forGroup = (group: Group) => {
   const extra = records.filter((material) =>
     !matched.some((entry) => entry.record?.data.slug === material.data.slug)
   );
-  return { matched, extra, count: group.resources.length + extra.length + (group.id === 'guidelines' ? kazakhstanDocumentCount : 0) };
+  return { matched, extra, count: group.resources.length + extra.length + (group.id === 'guidelines' ? kazakhstanDocumentCount + internationalGuidelineCountries[0].documents.length : 0) };
 };
 ---
 
@@ -277,6 +275,25 @@ const forGroup = (group: Group) => {
           ))}
           {group.id === 'guidelines' && (
             <>
+              <li class="professional-directory__subgroup">
+                <h4>{subgroupTitles.international[locale]}</h4>
+              </li>
+              {internationalGuidelineCountries.map((country) => {
+                const published = country.documents.filter((doc) => materials.some((entry) => entry.data.translationKey === doc.translationKey)).length;
+                const countryCount = locale === 'ru'
+                  ? published > 0 ? `${published} опубликованных обзора` : `${country.documents.length} официальных документов · обзоры готовятся`
+                  : locale === 'kk'
+                    ? published > 0 ? `${published} жарияланған шолу` : `${country.documents.length} ресми құжат · шолулар әзірленуде`
+                    : published > 0 ? `${published} published reviews` : `${country.documents.length} official documents · reviews in preparation`;
+                return (
+                  <li class="professional-directory__item professional-directory__item--folder">
+                    <a class="professional-directory__item-link" href={localePath(locale, 'professionals/international-guidelines/' + country.id)}>
+                      <span class="professional-directory__item-title">{country.title[locale]} <small>{countryCount}</small></span>
+                      <span class="professional-directory__item-arrow" aria-hidden="true">→</span>
+                    </a>
+                  </li>
+                );
+              })}
               <li class="professional-directory__subgroup">
                 <h4><a class="professional-directory__subgroup-link" href={kazakhstanHubHref}>{subgroupTitles.kazakhstan[locale]} <span aria-hidden="true">→</span></a></h4>
               </li>
