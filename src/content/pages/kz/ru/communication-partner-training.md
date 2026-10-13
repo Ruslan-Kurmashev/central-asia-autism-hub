@@ -2,8 +2,8 @@
 title: "Обучение партнёров по коммуникации"
 summary: "Как родители, педагоги и другие партнёры могут поддерживать коммуникацию, AAC, инициативу и самостоятельность без превращения семьи в терапевтов."
 description: "Практическое руководство об обучении партнёров по коммуникации: доказательства, участие родителей, обучение использованию AAC, время ожидания ответа, отказ, нагрузка на семью и мониторинг."
-featuredImage: "/central-asia-autism-hub/images/editorial/who-cst-cards-books.jpg"
-featuredImageAlt: "Иллюстрированные карточки и книги: материалы для совместного общения взрослых с ребёнком."
+featuredImage: "/central-asia-autism-hub/images/editorial/photos/parent-communication-partner-conversation.jpg"
+featuredImageAlt: "Мать и дочь разговаривают, сидя рядом на диване: иллюстрация внимания и взаимного общения, а не тренинг партнёра по коммуникации."
 country: kz
 language: ru
 section: parents
