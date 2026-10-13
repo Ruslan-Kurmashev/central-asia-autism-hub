@@ -47,8 +47,8 @@ for (const [locale, copy] of Object.entries(expected)) {
   assert.ok(!html.includes('PRO-G01') && !html.includes('PRO-E03'), locale + ': internal editorial IDs leaked');
   assert.equal((html.match(/class="professional-directory__card"/g) ?? []).length, 6, locale + ': expected six area cards');
   assert.equal((html.match(/class="professional-directory__detail"/g) ?? []).length, 6, locale + ': expected six detail panels');
-  assert.equal((html.match(/class="professional-directory__item"/g) ?? []).length, 22, locale + ': expected 22 planned direct resources and one Kazakhstan document folder');
-  assert.equal((html.match(/class="professional-directory__status"/g) ?? []).length, 22 - copy.published, locale + ': only reviewed published entries should be linked');
+  assert.equal((html.match(/class="professional-directory__item"/g) ?? []).length, 23, locale + ': expected 19 other resources and four international country folders');
+  assert.equal((html.match(/class="professional-directory__status"/g) ?? []).length, locale === 'ru' ? 18 : 19, locale + ': only genuinely published direct entries should be linked');
   if (locale === 'ru') {
     const articleHref = '/central-asia-autism-hub/kz/ru/professionals/kak-rabotat-s-professionalnymi-rekomendaciyami/';
     assert.ok(html.includes('href="' + articleHref + '"'), 'Russian first professional resource must have a working article link');
@@ -65,6 +65,39 @@ for (const [locale, copy] of Object.entries(expected)) {
       assert.ok(!introductorySource.includes(documentToKeepSeparate), 'Introductory article contains an individual-document deep dive: ' + documentToKeepSeparate);
     }
   }
+  const internationalCountries = {
+    uk: ['nice-cg128', 'nice-cg170', 'nice-cg142'],
+    us: ['aap-2020'],
+    au: ['autism-crc-assessment-2023', 'autism-crc-supporting-children'],
+    ca: ['cps-early-detection', 'cps-diagnostic-standards', 'cps-followup'],
+  };
+  for (const [country, identifiers] of Object.entries(internationalCountries)) {
+    const countryHref = '/central-asia-autism-hub/kz/' + locale + '/professionals/international-guidelines/' + country + '/';
+    assert.ok(html.includes('href="' + countryHref + '"'), locale + ': missing country navigation: ' + country);
+    const detail = await readFile(path.resolve('dist/kz', locale, 'professionals/international-guidelines', country, 'index.html'), 'utf8');
+    assert.equal((detail.match(/class="international-guidelines__item"/g) ?? []).length, identifiers.length,
+      locale + ': country document count mismatch: ' + country);
+    assert.ok(detail.includes('international-guidelines__disclaimer'), locale + ': missing jurisdiction warning for ' + country);
+    if (country === 'uk') {
+      const slugs = [
+        'nice-cg128-diagnostika-autizma-u-detej',
+        'nice-cg170-podderzhka-detej-i-podrostkov',
+        'nice-cg142-diagnostika-i-podderzhka-vzroslyh',
+      ];
+      for (const slug of slugs) {
+        const href = '/central-asia-autism-hub/kz/ru/professionals/' + slug + '/';
+        assert.ok(!html.includes('href="' + href + '"'), 'NICE reviews must be listed only inside UK');
+        if (locale === 'ru') assert.ok(detail.includes('href="' + href + '"'), 'Published NICE review is missing from UK catalogue: ' + slug);
+      }
+      if (locale !== 'ru') assert.equal((detail.match(/class="international-guidelines__pending"/g) ?? []).length, 3,
+        locale + ': missing NICE translations must not be represented as published');
+    } else {
+      assert.equal((detail.match(/class="international-guidelines__pending"/g) ?? []).length, identifiers.length,
+        locale + ': external-only resources must not be represented as reviewed: ' + country);
+      assert.equal((detail.match(/target="_blank" rel="noopener noreferrer"/g) ?? []).length, identifiers.length,
+        locale + ': external documents must open official sources: ' + country);
+    }
+  }
   if (locale === 'ru') {
     const documents = [
       { code: 'CG128', slug: 'nice-cg128-diagnostika-autizma-u-detej', phrase: 'Скрининг не равен диагнозу', graphic: 'professional-nice-cg128.svg' },
@@ -72,8 +105,6 @@ for (const [locale, copy] of Object.entries(expected)) {
       { code: 'CG142', slug: 'nice-cg142-diagnostika-i-podderzhka-vzroslyh', phrase: 'AQ-10', graphic: 'professional-nice-cg142.svg' },
     ];
     for (const document of documents) {
-      const expectedHref = '/central-asia-autism-hub/kz/ru/professionals/' + document.slug + '/';
-      assert.ok(html.includes('href="' + expectedHref + '"'), document.code + ' is missing from the professional directory');
       const content = await readFile(path.resolve('dist/kz/ru/professionals', document.slug, 'index.html'), 'utf8');
       assert.ok(content.includes(document.code), document.code + ' number missing');
       assert.ok(content.includes(document.phrase), document.code + ' content missing: ' + document.phrase);
@@ -82,10 +113,10 @@ for (const [locale, copy] of Object.entries(expected)) {
     }
   }
   const subgroupLabels = locale === 'ru'
-    ? ['Основы работы с рекомендациями', 'Международные клинические руководства', 'Документы Казахстана: клинические протоколы, законы, приказы и стандарты']
+    ? ['Основы работы с рекомендациями', 'Международные клинические руководства: по странам', 'Документы Казахстана: клинические протоколы, законы, приказы и стандарты']
     : locale === 'kk'
-      ? ['Ұсынымдармен жұмыс негіздері', 'Халықаралық клиникалық нұсқаулықтар', 'Қазақстан құжаттары: клиникалық хаттамалар, заңдар, бұйрықтар және стандарттар']
-      : ['Working with guidelines', 'International clinical guidelines', 'Kazakhstan documents: clinical protocols, laws, orders and standards'];
+      ? ['Ұсынымдармен жұмыс негіздері', 'Халықаралық клиникалық нұсқаулықтар: елдер бойынша', 'Қазақстан құжаттары: клиникалық хаттамалар, заңдар, бұйрықтар және стандарттар']
+      : ['Working with guidelines', 'International clinical guidelines by country', 'Kazakhstan documents: clinical protocols, laws, orders and standards'];
   assert.equal((html.match(/class="professional-directory__subgroup"/g) ?? []).length, 3, locale + ': first category must have three subgroups (basics, international and unified Kazakhstan)');
   for (const label of subgroupLabels) assert.ok(html.includes(label), locale + ': missing professional subgroup: ' + label);
   const guidelinesPanel = html.split('id="professional-guidelines"')[1]?.split('id="professional-family-communication"')[0] ?? '';
@@ -105,8 +136,9 @@ for (const [locale, copy] of Object.entries(expected)) {
     : locale === 'kk'
       ? 'Аутизм жөніндегі кәсіби ұсынымдармен қалай жұмыс істеуге болады'
       : 'How to appraise professional autism guidelines';
-  assert.ok(guidelinesPanel.indexOf(introductoryLabel) < guidelinesPanel.indexOf('CG128') && guidelinesPanel.indexOf(introductoryLabel) !== -1,
-    locale + ': introductory appraisal must remain before all documents');
+  const ukLabel = locale === 'ru' ? 'Великобритания' : locale === 'kk' ? 'Ұлыбритания' : 'United Kingdom';
+  assert.ok(guidelinesPanel.indexOf(introductoryLabel) < guidelinesPanel.indexOf(ukLabel) && guidelinesPanel.indexOf(introductoryLabel) !== -1,
+    locale + ': introductory appraisal must remain before the country list');
   for (const name of copy.names) assert.ok(html.includes(name), locale + ': missing category ' + name);
   ids.forEach((id, i) => {
     assert.ok(html.includes('href="#professional-' + id + '"'), locale + ': missing category target ' + id);
@@ -122,7 +154,7 @@ for (const [locale, copy] of Object.entries(expected)) {
   const base = '/central-asia-autism-hub/kz/' + locale + '/professionals/kazakhstan-documents/';
   const hubHref = base;
   assert.ok(html.includes('href="' + hubHref + '"'), locale + ': Kazakhstan subgroup must open five-category hub');
-  assert.equal((html.match(/professional-directory__item--folder/g) ?? []).length, 1, locale + ': Kazakhstan must display one category link rather than a legal article placeholder');
+  assert.equal((html.match(/professional-directory__item--folder/g) ?? []).length, 5, locale + ': expected four international country folders and one Kazakhstan catalogue');
   assert.ok(!html.includes('Правовые требования к психологической деятельности в Казахстане'), locale + ': old Kazakhstan placeholder remains on professional landing');
 
   const hub = await readFile(path.resolve('dist/kz', locale, 'professionals/kazakhstan-documents/index.html'), 'utf8');
