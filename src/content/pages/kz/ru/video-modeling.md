@@ -2,8 +2,8 @@
 title: "Обучение через показ и видеомоделирование"
 summary: "Как показ вживую, видеомоделирование, самомоделирование, видео от первого лица и видеоподсказки могут помогать обучать конкретным навыкам."
 description: "Практическое руководство для родителей о моделировании и видеомоделировании: доказательства, бытовые, рабочие и разговорные навыки, перенос навыка, подсказки и безопасность."
-featuredImage: "/central-asia-autism-hub/images/editorial/technology-tablet.jpg"
-featuredImageAlt: "Планшет на столе с пустым экраном: устройство, на котором могут показывать обучающие видео."
+featuredImage: "/central-asia-autism-hub/images/editorial/photos/parent-video-modeling-filming-kitchen.jpg"
+featuredImageAlt: "Смартфон на штативе снимает показ действия на кухне: пример записи обучающего видео, не сеанс видеомоделирования."
 country: kz
 language: ru
 section: parents
