@@ -2,8 +2,8 @@
 title: "Сенсорная перегрузка: как адаптировать окружающую среду"
 summary: "Практические способы уменьшить сенсорную нагрузку дома, в школе, медицинских учреждениях и общественных местах."
 description: "Руководство для родителей по адаптации среды при сенсорной перегрузке у аутичных детей: шум, свет, прикосновения, личное пространство, перерывы, школа, дом и общественные места."
-featuredImage: "/central-asia-autism-hub/images/editorial/psychological-support-room.jpg"
-featuredImageAlt: "Тихая комната с креслами, в которой можно организовать спокойную обстановку."
+featuredImage: "/central-asia-autism-hub/images/editorial/photos/parent-sensory-light-blinds.jpg"
+featuredImageAlt: "Мягкий солнечный свет и тени от оконных жалюзи в помещении: пример изменения световой среды без утверждений о лечении сенсорной перегрузки."
 country: kz
 language: ru
 section: parents
