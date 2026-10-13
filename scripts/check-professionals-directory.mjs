@@ -21,7 +21,7 @@ const expected = {
     back: 'All areas', pending: 'In preparation', cardWord: 'resources', training: 'Training for professionals', published: 0,
   },
 };
-const counts = [29, 3, 4, 3, 3, 5];
+const counts = [42, 3, 4, 3, 3, 5];
 const ids = ['guidelines', 'family-communication', 'assessment-context', 'evidence-support', 'ethics', 'practice-tools'];
 // CSS emitted assets are content-hashed. The HTML must reference our directory stylesheet
 // indirectly via Astro's static asset pipeline.
@@ -70,6 +70,8 @@ for (const [locale, copy] of Object.entries(expected)) {
     us: ['aap-2020', 'aap-developmental-screening-2020', 'aan-sleep-2020'],
     au: ['autism-crc-assessment-2023', 'autism-crc-supporting-children', 'au-functional-strengths-framework-2024'],
     ca: ['cps-early-detection', 'cps-diagnostic-standards', 'cps-followup'],
+    fr: ['fr-has-interventions-2026', 'fr-has-diagnosis-2018'],
+    nz: ['nz-autism-guideline-2022', 'nz-gender-assessment-2024'],
   };
   for (const [country, identifiers] of Object.entries(internationalCountries)) {
     const countryHref = '/central-asia-autism-hub/kz/' + locale + '/professionals/international-guidelines/' + country + '/';
@@ -96,6 +98,8 @@ for (const [locale, copy] of Object.entries(expected)) {
         us: ['aap-2020-vyyavlenie-ocenka-i-soprovozhdenie-ras', 'aap-nablyudenie-za-razvitiem-i-skrining-2020', 'aan-rekomendacii-narusheniya-sna-autizm-2020'],
         au: ['autism-crc-avstraliya-ocenka-i-diagnostika-ras', 'autism-crc-avstraliya-podderzhka-autichnyh-detej', 'autism-crc-framework-ocenki-potrebnostej-detej-2024'],
         ca: ['cps-kanada-rannee-vyyavlenie-autizma-2019', 'cps-kanada-standarty-diagnostiki-autizma-2019', 'cps-kanada-soprovozhdenie-posle-diagnostiki-2019'],
+        fr: ['has-franciya-podderzhka-autichnyh-detej-2026', 'has-franciya-vyyavlenie-diagnostika-autizma-2018'],
+        nz: ['novaya-zelandiya-nacionalnoe-rukovodstvo-autizm-2022', 'novaya-zelandiya-gender-i-diagnostika-autizma-2024'],
       }[country];
       const publishedCount = locale === 'ru' ? newlyPublished.length : 0;
       assert.equal((detail.match(/class="international-guidelines__pending"/g) ?? []).length, identifiers.length - publishedCount,
@@ -174,7 +178,7 @@ for (const [locale, copy] of Object.entries(expected)) {
   const base = '/central-asia-autism-hub/kz/' + locale + '/professionals/kazakhstan-documents/';
   const hubHref = base;
   assert.ok(html.includes('href="' + hubHref + '"'), locale + ': Kazakhstan subgroup must open five-category hub');
-  assert.equal((html.match(/professional-directory__item--folder/g) ?? []).length, 5, locale + ': expected four international country folders and one Kazakhstan catalogue');
+  assert.equal((html.match(/professional-directory__item--folder/g) ?? []).length, 7, locale + ': expected six international country folders and one Kazakhstan catalogue');
   assert.ok(!html.includes('Правовые требования к психологической деятельности в Казахстане'), locale + ': old Kazakhstan placeholder remains on professional landing');
 
   const hub = await readFile(path.resolve('dist/kz', locale, 'professionals/kazakhstan-documents/index.html'), 'utf8');
