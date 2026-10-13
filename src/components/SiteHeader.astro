@@ -18,6 +18,26 @@ const brandRelationship: Record<Locale, string> = {
   kk: 'Central Asia Autism Hub бастамасының бөлігі',
   en: 'Part of the Central Asia Autism Hub',
 };
+const aboutLinks: Record<Locale, { label: string; path: string }[]> = {
+  ru: [
+    { label: 'О проекте', path: 'about' },
+    { label: 'Наша команда', path: 'about/team' },
+    { label: 'Наши эксперты', path: 'about/experts' },
+    { label: 'Контакты для связи', path: 'about/contact' },
+  ],
+  kk: [
+    { label: 'Жоба туралы', path: 'about' },
+    { label: 'Біздің команда', path: 'about/team' },
+    { label: 'Біздің сарапшылар', path: 'about/experts' },
+    { label: 'Байланыс', path: 'about/contact' },
+  ],
+  en: [
+    { label: 'About the project', path: 'about' },
+    { label: 'Our team', path: 'about/team' },
+    { label: 'Our experts', path: 'about/experts' },
+    { label: 'Contact us', path: 'about/contact' },
+  ],
+};
 ---
 
 <header class="site-header">
@@ -54,12 +74,28 @@ const brandRelationship: Record<Locale, string> = {
               <ul>
                 {SECTIONS.map((section) => (
                   <li>
-                    <a
-                      href={sectionPath(locale, section)}
-                      aria-current={currentSection === section ? 'page' : undefined}
-                    >
-                      {UI[locale].sections[section].title}
-                    </a>
+                    {section === 'about' ? (
+                      <details class="primary-nav__dropdown">
+                        <summary aria-current={currentSection === 'about' ? 'page' : undefined}>
+                          <span>{UI[locale].sections.about.title}</span>
+                          <span class="primary-nav__caret" aria-hidden="true"></span>
+                        </summary>
+                        <ul class="primary-nav__submenu">
+                          {aboutLinks[locale].map((link) => (
+                            <li>
+                              <a href={localePath(locale, link.path)}>{link.label}</a>
+                            </li>
+                          ))}
+                        </ul>
+                      </details>
+                    ) : (
+                      <a
+                        href={sectionPath(locale, section)}
+                        aria-current={currentSection === section ? 'page' : undefined}
+                      >
+                        {UI[locale].sections[section].title}
+                      </a>
+                    )}
                   </li>
                 ))}
               </ul>
@@ -83,5 +119,45 @@ const brandRelationship: Record<Locale, string> = {
   syncNavigationDisclosure(mobileNavigation.matches);
   mobileNavigation.addEventListener('change', (event) => {
     syncNavigationDisclosure(event.matches);
+  });
+
+  const hoverNavigation = window.matchMedia('(min-width: 56.001rem) and (hover: hover) and (pointer: fine)');
+  const dropdowns = document.querySelectorAll<HTMLDetailsElement>('.primary-nav__dropdown');
+
+  dropdowns.forEach((dropdown) => {
+    const trigger = dropdown.querySelector('summary');
+
+    dropdown.addEventListener('pointerenter', () => {
+      if (hoverNavigation.matches) dropdown.open = true;
+    });
+    dropdown.addEventListener('pointerleave', () => {
+      if (hoverNavigation.matches && !dropdown.contains(document.activeElement)) dropdown.open = false;
+    });
+    trigger?.addEventListener('click', (event) => {
+      if (hoverNavigation.matches && event.detail > 0) {
+        event.preventDefault();
+        dropdown.open = true;
+      }
+    });
+    dropdown.addEventListener('focusout', () => {
+      queueMicrotask(() => {
+        if (!dropdown.contains(document.activeElement) && !dropdown.matches(':hover')) {
+          dropdown.open = false;
+        }
+      });
+    });
+    dropdown.addEventListener('keydown', (event) => {
+      if (event.key === 'Escape' && dropdown.open) {
+        event.preventDefault();
+        dropdown.open = false;
+        trigger?.focus();
+      }
+    });
+  });
+
+  document.addEventListener('pointerdown', (event) => {
+    dropdowns.forEach((dropdown) => {
+      if (!dropdown.contains(event.target as Node)) dropdown.open = false;
+    });
   });
 </script>
