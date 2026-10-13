@@ -383,3 +383,8 @@ Six verified free-to-use Pexels photographs have been selected to distinguish th
 
 The existing `aac.md` (adult and child with a tablet) and `speech-language-therapy.md` (adult and child reading) covers remain relevant and unchanged. The eight published Russian communication/AAC cover paths are explicitly checked to be distinct by `scripts/check-parent-image-coverage.mjs`. Photographed people are never labelled as autistic or as participating in a specific medical/therapy procedure. The photograph alone does not imply a particular intervention's evidence base.
 
+## Family communication: screening results cover (2026-10-13)
+
+| Local file | Source and date | Subject | Licensing and scope |
+| --- | --- | --- | --- |
+| `professional-family-screening-conversation.svg` | Original AutismHub editorial SVG, 2026-10-13 | Screening results sheet, respectful two-way dialogue and agreed next steps | Locally drawn vector, no third-party photos, patient likenesses, screening questionnaire reproductions or copyrighted publisher figures. Does not imply official clinical endorsement. |
