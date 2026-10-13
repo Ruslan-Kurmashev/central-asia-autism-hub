@@ -351,3 +351,19 @@ These are original AutismHub editorial SVG diagrams. They do not reproduce HAS o
 | `professional-fr-has-2018.svg` | AutismHub editorial, 2026-10-13 | HAS 2018 diagnostic guidance; sequential referral and assessment steps. |
 | `professional-nz-guideline-2022.svg` | AutismHub editorial, 2026-10-13 | Aotearoa New Zealand Autism Guideline third edition; national reference handbook. |
 | `professional-nz-gender-2024.svg` | AutismHub editorial, 2026-10-13 | Whaikaha gender in assessment supplementary paper; individual assessment profiles. |
+
+## Behavior and learning image differentiation (2026-10-13)
+
+Six distinct, licensed Pexels photographs replace generic or repeated cubes, family-play scenes, and notebooks in the Russian parent section. Exact photo IDs are pinned in `scripts/sync-editorial-photos.mjs`; downloads are self-hosted during prebuild rather than hotlinked. Sources were checked on Pexels and marked free to use under https://www.pexels.com/license/ .
+
+| Published article source | Local cover in `photos/` | Photographer / account | Original Pexels photo | Editorial subject and limits |
+| --- | --- | --- | --- | --- |
+| `behavior-learning.md` | `parent-behavior-play-boardgame.jpg` | kaboompics.com | https://www.pexels.com/photo/mother-and-daughter-playing-on-the-floor-7296501/ | Parent and child playing a board game; general learning through interaction, not applied behavior analysis demonstrated. |
+| `reinforcement.md` | `parent-reinforcement-sticker-planner.jpg` | Florencia Ceruti | https://www.pexels.com/photo/colorful-stationery-with-weekly-planner-and-notebook-30101194/ | Planner and stickers; a visual metaphor for tracking progress, not an intervention protocol. |
+| `functional-behavior-assessment.md` | `parent-fba-clipboard-notes.jpg` | Kampus Production | https://www.pexels.com/photo/woman-writing-on-a-document-8036881/ | Hand taking notes on a clipboard; documentation concept, not an actual FBA assessment. |
+| `rubi-parent-training.md` | `parent-rubi-parent-reading.jpg` | PNW Production | https://www.pexels.com/photo/father-sitting-on-sofa-with-a-book-beside-his-child-7677771/ | Parent and child reading together; family participation, not a RUBI curriculum or trained participant. |
+| `ndbi.md` | `parent-ndbi-floor-play.jpg` | Mikhail Nilov | https://www.pexels.com/photo/woman-playing-with-her-son-on-the-floor-7780883/ | Shared floor play with toys; naturalistic interaction, not a validated NDBI demonstration. |
+| `imitation-reciprocal-imitation.md` | `parent-imitation-stacking-together.jpg` | kaboompics.com | https://www.pexels.com/photo/girl-playing-with-a-stacking-toy-7296470/ | Child and adult assembling a stacking toy together; possible interaction, not verified imitative behaviour. |
+
+All five existing `feeding-nutrition` article covers are already distinct and retained: `arfid-assessment-support.md`, `behavioral-feeding-interventions.md`, `dietitian-nutrition-support.md`, `sensory-based-feeding-approaches.md`, and `feeding-therapy.md`. Their visual diversity is covered by the parent image QA. No image portrays a known autistic person, proves an intervention effective, or represents a clinical test.
+
