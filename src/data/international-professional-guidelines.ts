@@ -53,7 +53,7 @@ export const internationalGuidelineCountries: GuidelineCountry[] = [
   {
     id: 'us',
     title: { ru: 'США', kk: 'АҚШ', en: 'United States' },
-    description: { ru: 'Клинические публикации American Academy of Pediatrics (AAP).', kk: 'American Academy of Pediatrics (AAP) клиникалық жарияланымдары.', en: 'Clinical publications by the American Academy of Pediatrics (AAP).' },
+    description: { ru: 'Клинические руководства AAP и AAN по выявлению, сопровождению и сопутствующим состояниям.', kk: 'AAP және AAN: ерте анықтау, қолдау және қатар жүретін жағдайларға арналған клиникалық ұсынымдар.', en: 'AAP and AAN clinical guidance on early identification, support and co-occurring conditions.' },
     documents: [
       {
         id: 'aap-2020',
@@ -66,12 +66,26 @@ export const internationalGuidelineCountries: GuidelineCountry[] = [
         sourceUrl: 'https://doi.org/10.1542/peds.2019-3447',
         translationKey: 'professionals-intl-us-aap-2020',
       },
+      {
+        id: 'aap-developmental-screening-2020',
+        title: { ru: 'AAP (2020): наблюдение за развитием и скрининг детей раннего возраста', kk: 'AAP (2020): балалардың дамуын бақылау және скрининг', en: 'AAP (2020): Developmental Surveillance and Screening in Young Children' },
+        organisation: 'American Academy of Pediatrics', year: 2020,
+        sourceUrl: 'https://doi.org/10.1542/peds.2019-3449',
+        translationKey: 'professionals-intl-us-aap-developmental-2020',
+      },
+      {
+        id: 'aan-sleep-2020',
+        title: { ru: 'AAN (2020): нарушения сна у аутичных детей и подростков', kk: 'AAN (2020): аутист балалар мен жасөспірімдердегі ұйқы бұзылыстары', en: 'AAN (2020): Sleep Disturbance in Children and Adolescents With Autism' },
+        organisation: 'American Academy of Neurology', year: 2020,
+        sourceUrl: 'https://www.neurology.org/doi/10.1212/WNL.0000000000009033',
+        translationKey: 'professionals-intl-us-aan-sleep-2020',
+      },
     ],
   },
   {
     id: 'au',
     title: { ru: 'Австралия', kk: 'Аустралия', en: 'Australia' },
-    description: { ru: 'Национальные руководства Autism CRC по оценке и поддержке аутичных людей.', kk: 'Autism CRC әзірлеген аутизмді бағалау және қолдау жөніндегі ұлттық нұсқаулықтар.', en: 'National assessment and support guidelines developed by Autism CRC.' },
+    description: { ru: 'Руководства и профессиональные рамочные модели Autism CRC по диагностике, поддержке и функциональным потребностям.', kk: 'Autism CRC диагностика, қолдау және функционалдық қажеттіліктер бойынша нұсқаулықтары мен кәсіби негіздері.', en: 'Autism CRC clinical guidelines and professional frameworks for diagnosis, support and functional needs.' },
     documents: [
       {
         id: 'autism-crc-assessment-2023',
@@ -86,6 +100,13 @@ export const internationalGuidelineCountries: GuidelineCountry[] = [
         organisation: 'Autism CRC', year: 2023,
         sourceUrl: 'https://www.autismcrc.com.au/best-practice/supporting-children',
         translationKey: 'professionals-intl-au-autism-crc-supporting-children',
+      },
+      {
+        id: 'au-functional-strengths-framework-2024',
+        title: { ru: 'Autism CRC (2024): национальная модель оценки сильных сторон и потребностей детей', kk: 'Autism CRC (2024): балалардың күшті жақтары мен қолдау қажеттіліктерін бағалау жүйесі', en: 'Autism CRC (2024): National Framework for Assessing Children’s Functional Strengths and Support Needs' },
+        organisation: 'Autism CRC', year: 2024,
+        sourceUrl: 'https://www.autismcrc.com.au/best-practice/strengths-and-supports',
+        translationKey: 'professionals-intl-au-framework-2024',
       },
     ],
   },
