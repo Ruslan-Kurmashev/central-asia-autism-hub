@@ -45,6 +45,7 @@ const sensoryDistinctFiles = new Set([
   'sensory-overload-environmental-adaptations',
 ]);
 const sensoryImageOwners = new Map();
+const allParentImageOwners = new Map();
 const editorialDistinctGroups = {
   communicationAAC: new Set([
     'aac',
@@ -129,6 +130,13 @@ for (const locale of ['ru', 'en', 'kk']) {
     assert.ok(documentation.includes(path.basename(localFile)),
       `Image provenance not documented: ${article}: ${src}`);
 
+    if (locale === 'ru' && value(frontmatter, 'section') === 'parents') {
+      // Every published Russian parent article needs an independent catalog/hero cover.
+      const previousOwner = allParentImageOwners.get(src);
+      assert.ok(!previousOwner,
+        `Parent article cover reused between ${previousOwner} and ${article}: ${src}`);
+      allParentImageOwners.set(src, article);
+    }
     if (locale === 'ru' && distinctSet.has(file.replace(/\.mdx?$/, ''))) {
       assert.ok(!firstWave.has(src),
         `First-wave photographs must be distinct: ${article}, ${firstWave.get(src)}`);
@@ -160,6 +168,8 @@ for (const [group, files] of Object.entries(editorialDistinctGroups)) {
   assert.equal(editorialImageOwners[group].size, files.size,
     `All ${files.size} ${group} parent covers must be present and distinct`);
 }
+assert.equal(allParentImageOwners.size, totals.ru.parents,
+  'Every published Russian parent article must have a distinct, documented cover');
 assert.equal(sensoryImageOwners.size, sensoryDistinctFiles.size, 'Eight sensory-topic covers must be present and distinct');
 assert.equal(firstWave.size, requiredDistinct.length,
   'First-wave editorial images are not complete or distinct');
