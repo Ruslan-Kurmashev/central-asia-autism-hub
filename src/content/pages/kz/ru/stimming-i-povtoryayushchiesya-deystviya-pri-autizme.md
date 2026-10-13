@@ -2,8 +2,8 @@
 title: "Стимминг и повторяющиеся действия при аутизме: зачем они нужны?"
 summary: "Почему ребёнок раскачивается, машет руками или повторяет звуки? Объясняем стимминг, его возможные функции и ситуации, когда нужна помощь."
 description: "Стимминг при аутизме: примеры движений и звуков, саморегуляция, безопасность, опасные формы и вопросы для родителей."
-featuredImage: "/central-asia-autism-hub/images/editorial/sensory-hands.jpg"
-featuredImageAlt: "Руки ребёнка исследуют материалы с разной фактурой."
+featuredImage: "/central-asia-autism-hub/images/editorial/photos/parent-stimming-hand-stress-ball.jpg"
+featuredImageAlt: "Рука взрослого сжимает голубой мягкий мяч на светлом фоне: пример манипулирования предметом, а не подтверждённый пример стимминга или признак аутизма."
 country: kz
 language: ru
 section: parents
