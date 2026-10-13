@@ -21,13 +21,22 @@ const docs = 'https://github.com/Ruslan-Kurmashev/central-asia-autism-hub/blob/m
 const errors = [];
 for (const locale of locales) {
   const id = locale + '/about';
-  const page = await readFile(path.join('dist', 'kz', locale, 'about', 'index.html'), 'utf8');
+  const page = await readFile(path.join('dist', 'kz', locale, 'about', 'policies', 'index.html'), 'utf8');
   const inspect = (predicate, description) => {
     if (!predicate) errors.push(id + ': ' + description);
   };
-  inspect(page.includes(expected[locale].heading), 'missing localized page title');
+  const overview = await readFile(path.join('dist', 'kz', locale, 'about', 'index.html'), 'utf8');
+  inspect(overview.includes(expected[locale].heading), 'missing localized About label');
+  inspect((overview.match(/<h1\b/g) || []).length === 1, 'expected one About H1');
+  inspect(overview.includes('about-overview__hero') && overview.includes('about-overview__offer-grid'), 'compact public overview missing');
+  inspect(!overview.includes('about-policies__grid'), 'full policies must not crowd the About overview');
+  inspect(!overview.includes('Что уже сделано и куда мы движемся'), 'removed results section resurfaced');
+  for (const segment of ['team', 'experts', 'contact']) {
+    inspect(overview.includes('/about/' + segment + '/'), 'missing about navigation to ' + segment);
+  }
+  inspect(overview.includes('/about/policies/#editorial'), 'editorial policy link missing from overview');
   inspect((page.match(/<h1\b/g) || []).length === 1, 'expected one semantic H1');
-  inspect(page.includes('about-section-body'), 'section-scoped shared typography missing');
+  inspect(page.includes('about-section-body'), 'policy page section-scoped typography missing');
   inspect(page.includes('class="about-policies__navigation"'), 'in-page policy navigation missing');
   inspect(page.includes(expected[locale].navigation), 'navigation name is not localized');
   inspect((page.match(/class="about-policies__item"/g) || []).length === ids.length, 'six policies must appear');
@@ -57,5 +66,5 @@ if (errors.length) {
   console.error('About and policy QA failed:\n' + errors.map(line => ' - ' + line).join('\n'));
   process.exitCode = 1;
 } else {
-  console.log('About policy QA passed: 3 localized About pages, 6 policy sections and links each, source document links, brand architecture, privacy and accessibility claims.');
+  console.log('About QA passed: 3 compact overviews and separate policies, 6 policy sections per language, source links and navigation.');
 }

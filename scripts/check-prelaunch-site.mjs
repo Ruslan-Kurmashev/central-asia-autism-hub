@@ -57,10 +57,11 @@ for (const lang of locales) {
       id + ': missing locally hosted research editorial image');
   }
 
-  for (const anchor of ['editorial', 'privacy', 'accessibility', 'contact']) {
-    check(html.includes('href="' + base + lang + '/about/#' + anchor + '"'),
-      id + ': footer policy anchor missing: ' + anchor);
+  for (const anchor of ['editorial', 'privacy', 'accessibility']) {
+    check(html.includes('href="' + base + lang + '/about/policies/#' + anchor + '"'),
+      id + ': footer policy link missing: ' + anchor);
   }
+  check(html.includes('href="' + base + lang + '/about/contact/"'), id + ': contact link missing');
 }
 
 const rusResearch = path.join(dist, 'kz', 'ru', 'research');

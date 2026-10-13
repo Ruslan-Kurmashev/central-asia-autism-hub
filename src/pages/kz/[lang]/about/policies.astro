@@ -1,0 +1,47 @@
+---
+import BaseLayout from '../../../../layouts/BaseLayout.astro';
+import AboutPolicies from '../../../../components/AboutPolicies.astro';
+import { localePath, sectionPath } from '../../../../lib/urls';
+import { SITE, SUPPORTED_LOCALES, type Locale } from '../../../../site.config';
+import '../../../../styles/section-v2.css';
+
+export function getStaticPaths() {
+  return SUPPORTED_LOCALES.map((locale) => ({ params: { lang: locale }, props: { locale } }));
+}
+interface Props { locale: Locale; }
+const { locale } = Astro.props;
+const labels: Record<Locale, { home: string; about: string; title: string; lead: string }> = {
+  ru: { home: 'Главная', about: 'О проекте', title: 'Документы и политики проекта', lead: 'Редакционная ответственность, медицинские ограничения, конфиденциальность, доступность и способы сообщения об ошибках.' },
+  kk: { home: 'Басты бет', about: 'Жоба туралы', title: 'Жоба құжаттары мен саясаттары', lead: 'Редакциялық жауапкершілік, медициналық шектеулер, құпиялық, қолжетімділік және қателер туралы хабарлау.' },
+  en: { home: 'Home', about: 'About', title: 'Project policies and information', lead: 'Editorial accountability, medical boundaries, privacy, accessibility and reporting corrections.' },
+};
+const c = labels[locale];
+---
+<BaseLayout title={c.title + ' - ' + SITE.name} description={c.lead} locale={locale} currentSection="about" alternatePath="about/policies" bodyClass="section-v2 about-section-body">
+  <article class="section-v2__page">
+    <header class="section-v2__hero">
+      <div class="container">
+        <nav class="section-v2__breadcrumb" aria-label={c.about}>
+          <a href={localePath(locale)}>{c.home}</a>
+          <span aria-hidden="true"> / </span>
+          <a href={sectionPath(locale, 'about')}>{c.about}</a>
+          <span aria-hidden="true"> / </span>
+          <span aria-current="page">{c.title}</span>
+        </nav>
+        <div class="section-v2__hero-grid">
+          <div>
+            <p class="section-v2__eyebrow">Autism Hub Kazakhstan</p>
+            <h1>{c.title}</h1>
+            <p class="section-v2__description">{c.lead}</p>
+          </div>
+        </div>
+      </div>
+    </header>
+    <div class="section-v2__collections">
+      <div class="container">
+        <AboutPolicies locale={locale} />
+        <a class="section-v2__back" href={sectionPath(locale, 'about')}>← {c.about}</a>
+      </div>
+    </div>
+  </article>
+</BaseLayout>

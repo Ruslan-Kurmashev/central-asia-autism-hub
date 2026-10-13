@@ -1,7 +1,7 @@
 ---
 import { getCollection } from 'astro:content';
 import ArticleCard from '../../../../components/ArticleCard.astro';
-import AboutPolicies from '../../../../components/AboutPolicies.astro';
+import AboutOverview from '../../../../components/AboutOverview.astro';
 import LearningCatalog from '../../../../components/LearningCatalog.astro';
 import ProfessionalDirectory from '../../../../components/ProfessionalDirectory.astro';
 import { CONTENT_UI, DATE_LOCALES } from '../../../../i18n/content';
@@ -337,10 +337,12 @@ function russianMaterialWord(count: number) {
   locale={locale}
   currentSection={section}
   alternatePath={section}
-  bodyClass={section === 'professionals' ? 'professional-library-body' : section === 'parents' ? 'section-v2 parents-section-body' : section === 'research' ? 'section-v2 research-section-body' : section === 'help-kazakhstan' ? 'section-v2 kz-help-section-body' : section === 'learning' ? 'section-v2 learning-section-body' : section === 'about' ? 'section-v2 about-section-body' : useSectionV2 ? 'section-v2' : undefined}
+  bodyClass={section === 'professionals' ? 'professional-library-body' : section === 'parents' ? 'section-v2 parents-section-body' : section === 'research' ? 'section-v2 research-section-body' : section === 'help-kazakhstan' ? 'section-v2 kz-help-section-body' : section === 'learning' ? 'section-v2 learning-section-body' : section === 'about' ? 'about-overview-body' : useSectionV2 ? 'section-v2' : undefined}
 >
   {
-    section === 'professionals' ? (
+    section === 'about' ? (
+      <AboutOverview locale={locale} />
+    ) : section === 'professionals' ? (
       <ProfessionalDirectory locale={locale} materials={pageMaterials} />
     ) : useSectionV2 ? (
       <article class="section-v2__page">
@@ -395,7 +397,7 @@ function russianMaterialWord(count: number) {
               <LearningCatalog locale={locale} entries={learningMaterials} />
             )}
 
-            {section === 'about' && <AboutPolicies locale={locale} />}
+            
 
             {(section === 'parents' || materials.length > 0) && (
               <div class="section-v2__accordion">

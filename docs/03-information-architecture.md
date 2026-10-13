@@ -90,12 +90,11 @@ Home
 │   └── Practice tools and workflows
 │
 └── About
-    ├── Mission and brand structure
-    ├── Editorial policy
-    ├── Evidence and medical safety
-    ├── Privacy and data
-    ├── Design and accessibility
-    └── Contact and corrections
+    ├── Project overview: mission, need, offers, principles, vision and collaboration
+    ├── Our team
+    ├── Our experts
+    ├── Contact
+    └── Project policies (editorial, medical boundaries, privacy, accessibility, corrections)
 ```
 
 ## 4. Homepage structure
@@ -235,17 +234,9 @@ The `Guidelines and standards` subsection is a **document reference library**, n
 
 ## 10. About and trust pages
 
-The About area contains:
+The main About page is a concise public overview with the mission, the need addressed, five content areas, editorial principles, a regional vision and ways to contribute. A results/impact report is not part of the main About page. Do not imply unverified results or confirmed partnerships.
 
-- mission and principles;
-- relationship between Central Asia Autism Hub, Autism Hub Kazakhstan, and Autism School Kazakhstan;
-- team members and clearly defined roles;
-- confirmed partnerships;
-- editorial process;
-- evidence and medical safety policy;
-- privacy information;
-- informational and medical disclaimer;
-- contact information.
+Dedicated localized pages provide team profiles, confirmed expert profiles, contact routes, and the full project policies. The policy page retains the existing anchored editorial, evidence-safety, privacy, accessibility and corrections sections.
 
 Editorial policy, privacy, disclaimer, and contact links must also be accessible from the site footer.
 
@@ -273,6 +264,10 @@ Primary section routes use stable structural segments:
 /kz/{language}/learning/professionals/
 /kz/{language}/professionals/
 /kz/{language}/about/
+/kz/{language}/about/team/
+/kz/{language}/about/experts/
+/kz/{language}/about/contact/
+/kz/{language}/about/policies/
 ```
 
 Individual article and research-explainer slugs may be localised for each language. Translations must be connected through a stable internal translation key.
@@ -295,7 +290,7 @@ The website root provides an explicit choice between Russian, Kazakh, and Englis
 - Internal pages use breadcrumbs.
 - Articles and explainers provide related-content links.
 - External links are visually identified and do not appear to be internal project content.
-- Footer navigation includes trust, privacy, disclaimer, and contact pages.
+- Footer navigation includes links to the dedicated policies page (editorial, privacy and accessibility) and to the contact page. The About dropdown contains the project overview, team, experts and contact.
 - Search is not required for the MVP.
 - A country selector is not required until another country version is prepared.
 - Navigation must be usable with a keyboard and must not depend on hover alone.

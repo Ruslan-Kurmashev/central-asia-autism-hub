@@ -1,0 +1,269 @@
+---
+import { localePath, sectionPath } from '../lib/urls';
+import type { Locale } from '../site.config';
+import '../styles/about-overview.css';
+
+interface AboutCopy {
+  breadcrumb: string; eyebrow: string; tagline: string; intro: string; missionTitle: string; mission: string;
+  parentsLink: string; professionalsLink: string;
+  whyTitle: string; whyIntro: string; whyDetail: string; whyConclusion: string; whoNote: string;
+  sourceLabel: string; whoLabel: string; unicefLabel: string;
+  offerTitle: string; offerLead: string;
+  offers: { title: string; description: string; section: string }[];
+  difference: string; principlesTitle: string;
+  principles: { title: string; description: string }[];
+  visionTitle: string; visionLead: string; visionDetail: string;
+  togetherTitle: string; togetherLead: string; togetherDetail: string;
+  teamLabel: string; expertsLabel: string; contactLabel: string;
+  policiesTitle: string; editorial: string; privacy: string; accessibility: string; medical: string;
+  boundary: string;
+}
+
+const { locale } = Astro.props as { locale: Locale };
+const translations: Record<Locale, AboutCopy> = {
+  ru: {
+    breadcrumb: 'Главная', eyebrow: 'О проекте',
+    tagline: 'Достоверная информация об аутизме. Понятные шаги для семей в Казахстане.',
+    intro: 'Autism Hub Kazakhstan - независимая информационно-образовательная платформа для родителей, семей и специалистов. Мы объединяем научные знания, практические материалы, профессиональные рекомендации и информацию о доступной поддержке в Казахстане.',
+    missionTitle: 'Наша миссия',
+    mission: 'Помогать семьям ориентироваться в вопросах аутизма, находить надёжную информацию и понимать доступные пути получения поддержки. Мы стремимся сделать качественные знания понятнее и доступнее независимо от места проживания и языка.',
+    parentsLink: 'Материалы для родителей', professionalsLink: 'Специалистам',
+    whyTitle: 'Почему это важно',
+    whyIntro: 'Когда у родителей возникают вопросы о развитии ребёнка или аутизме, бывает непросто понять, с чего начать. Медицинская, образовательная и социальная информация находится в разных источниках, а научные публикации не всегда легко понять.',
+    whyDetail: 'Всемирная организация здравоохранения подчёркивает необходимость доступности, инклюзии и поддержки аутичных людей и их семей. В Казахстане UNICEF также изучал системные барьеры доступа к вспомогательным технологиям в инклюзивном образовании.',
+    whyConclusion: 'Мы хотим помочь сократить расстояние между достоверными знаниями и людьми, которым они необходимы. Платформа не заменяет существующие службы: она помогает находить сведения, понимать возможности и обдумывать дальнейшие шаги.',
+    whoNote: 'Исследование UNICEF посвящено вспомогательным технологиям и инклюзивному образованию в целом, а не исключительно аутизму.',
+    sourceLabel: 'Источники', whoLabel: 'ВОЗ: Аутизм, 2025', unicefLabel: 'UNICEF Kazakhstan: исследование инклюзивного образования, 2025',
+    offerTitle: 'Что мы предлагаем', offerLead: 'Пять направлений, объединённых на одной платформе.',
+    offers: [
+      { title: 'Родителям', section: 'parents', description: 'Понятные материалы об аутизме, развитии, коммуникации и повседневной поддержке.' },
+      { title: 'Помощь в Казахстане', section: 'help-kazakhstan', description: 'Сведения об оценке и диагностике, образовании, правах и возможных маршрутах получения помощи.' },
+      { title: 'Наука простыми словами', section: 'research', description: 'Разборы исследований с объяснением результатов, неопределённости и ограничений доказательств.' },
+      { title: 'Обучение', section: 'learning', description: 'Курсы и образовательные ресурсы. Здесь же развивается программа Autism School Kazakhstan.' },
+      { title: 'Специалистам', section: 'professionals', description: 'Международные рекомендации, документы Казахстана и профессиональные инструменты.' },
+    ],
+    difference: 'Мы соединяем научную информацию, практическую навигацию, местный контекст и многоязычный доступ в одном ресурсе.',
+    principlesTitle: 'Наши принципы',
+    principles: [
+      { title: 'Научная обоснованность', description: 'Приоритет надёжных исследований, профессиональных рекомендаций и официальных документов с учётом ограничений доказательств.' },
+      { title: 'Доступность', description: 'Понятный язык и развитие русской, казахской и английской версий. Материалы переводятся и проверяются постепенно.' },
+      { title: 'Практическая польза', description: 'Информация, которая помогает понять доступные ресурсы и подготовиться к разговору со специалистами.' },
+      { title: 'Прозрачность и ответственность', description: 'Источники, даты и обозначение неопределённости. Независимая проверка указывается только тогда, когда она действительно проводилась.' },
+    ],
+    visionTitle: 'Наше видение',
+    visionLead: 'От информационной платформы для Казахстана к более широкому региональному сотрудничеству.',
+    visionDetail: 'Autism Hub Kazakhstan развивается как первая национальная версия инициативы Central Asia Autism Hub. В дальнейшем мы хотим создать модель, которую можно адаптировать для других стран Центральной Азии с учётом местных языков, законодательства и систем поддержки. Мы стремимся учитывать опыт родителей, аутичных людей и специалистов, чтобы улучшать содержание и доступность ресурсов.',
+    togetherTitle: 'Развиваем проект вместе',
+    togetherLead: 'Качественная информация становится полезнее, когда над её созданием работают люди с разными знаниями и опытом.',
+    togetherDetail: 'Мы открыты к сотрудничеству с исследователями, специалистами, образовательными и общественными организациями, а также фондами, разделяющими цели доступности достоверных знаний и поддержки семей.',
+    teamLabel: 'Наша команда', expertsLabel: 'Наши эксперты', contactLabel: 'Контакты для связи',
+    policiesTitle: 'Документы и прозрачность', editorial: 'Редакционная политика', privacy: 'Приватность и данные', accessibility: 'Доступность', medical: 'Медицинские ограничения',
+    boundary: 'Autism Hub Kazakhstan - независимый информационно-образовательный ресурс, а не государственный портал или медицинская организация. Мы не проводим диагностику, не назначаем лечение и не заменяем консультацию квалифицированного специалиста.',
+  },
+  kk: {
+    breadcrumb: 'Басты бет', eyebrow: 'Жоба туралы',
+    tagline: 'Аутизм туралы сенімді ақпарат. Қазақстандағы отбасылар үшін түсінікті келесі қадамдар.',
+    intro: 'Autism Hub Kazakhstan - ата-аналарға, отбасыларға және мамандарға арналған тәуелсіз ақпараттық-білім беру платформасы. Біз ғылыми білімді, практикалық материалдарды, кәсіби ұсынымдарды және Қазақстандағы қолдау мүмкіндіктері туралы ақпаратты бір жерге жинаймыз.',
+    missionTitle: 'Біздің миссиямыз',
+    mission: 'Отбасыларға аутизм мәселелерін түсінуге, сенімді ақпарат табуға және қолдау алудың қолжетімді жолдарын білуге көмектесу. Біз сапалы білімді тұрғылықты жері мен тіліне қарамастан түсініктірек әрі қолжетімді етуді көздейміз.',
+    parentsLink: 'Ата-аналарға', professionalsLink: 'Мамандарға',
+    whyTitle: 'Бұл неге маңызды',
+    whyIntro: 'Баланың дамуы немесе аутизм туралы сұрақтар туындағанда, неден бастау керегін түсіну оңай емес. Медициналық, білім беру және әлеуметтік ақпарат әртүрлі дереккөздерде орналасқан, ал ғылыми жарияланымдарды түсіну кейде қиын.',
+    whyDetail: 'Дүниежүзілік денсаулық сақтау ұйымы аутист адамдар мен олардың отбасылары үшін қолжетімді орта, инклюзия және қолдаудың маңызын атап көрсетеді. Қазақстанда UNICEF инклюзивті білім беруде көмекші технологияларға қол жеткізудегі жүйелік кедергілерді де зерттеді.',
+    whyConclusion: 'Біз сенімді білім мен оған мұқтаж адамдар арасындағы алшақтықты азайтқымыз келеді. Платформа қолданыстағы қызметтерді алмастырмайды: ол ақпарат табуға, мүмкіндіктерді түсінуге және келесі қадамдарды ойластыруға көмектеседі.',
+    whoNote: 'UNICEF зерттеуі тек аутизмге емес, жалпы көмекші технологиялар мен инклюзивті білім беруге арналған.',
+    sourceLabel: 'Дереккөздер', whoLabel: 'ДДҰ: Аутизм, 2025', unicefLabel: 'UNICEF Kazakhstan: инклюзивті білім беру зерттеуі, 2025',
+    offerTitle: 'Біз не ұсынамыз', offerLead: 'Бір платформада біріктірілген бес бағыт.',
+    offers: [
+      { title: 'Ата-аналарға', section: 'parents', description: 'Аутизм, даму, қарым-қатынас және күнделікті қолдау туралы түсінікті материалдар.' },
+      { title: 'Қазақстандағы көмек', section: 'help-kazakhstan', description: 'Бағалау мен диагностика, білім беру, құқықтар және көмекке жүгінудің ықтимал жолдары туралы мәлімет.' },
+      { title: 'Ғылым қарапайым тілмен', section: 'research', description: 'Зерттеу нәтижелерін, белгісіздік пен ғылыми дәлелдердің шектеулерін түсіндіру.' },
+      { title: 'Оқу', section: 'learning', description: 'Курстар мен білім беру ресурстары. Мұнда Autism School Kazakhstan бағдарламасы да дамып жатыр.' },
+      { title: 'Мамандарға', section: 'professionals', description: 'Халықаралық ұсынымдар, Қазақстан құжаттары және кәсіби жұмыс құралдары.' },
+    ],
+    difference: 'Біз ғылыми ақпаратты, практикалық бағыт-бағдарды, жергілікті жағдайды және бірнеше тілдегі қолжетімділікті бір ресурста біріктіреміз.',
+    principlesTitle: 'Біздің қағидаттарымыз',
+    principles: [
+      { title: 'Ғылыми негізділік', description: 'Сенімді зерттеулерге, кәсіби ұсынымдарға және ресми құжаттарға басымдық береміз, дәлелдердің шектеулерін ескереміз.' },
+      { title: 'Қолжетімділік', description: 'Түсінікті тіл және қазақ, орыс, ағылшын тілдеріндегі нұсқаларды дамыту. Материалдар кезең-кезеңімен аударылып, тексеріледі.' },
+      { title: 'Практикалық пайда', description: 'Қолжетімді ресурстарды түсінуге және мамандармен сөйлесуге дайындалуға көмектесетін ақпарат.' },
+      { title: 'Ашықтық пен жауапкершілік', description: 'Дереккөздерді, күндерді және белгісіздіктерді көрсетеміз. Тәуелсіз сараптама шынымен жүргізілген жағдайда ғана белгіленеді.' },
+    ],
+    visionTitle: 'Біздің көзқарасымыз',
+    visionLead: 'Қазақстанға арналған ақпараттық платформадан кеңірек өңірлік ынтымақтастыққа.',
+    visionDetail: 'Autism Hub Kazakhstan - Central Asia Autism Hub бастамасының алғашқы ұлттық нұсқасы. Болашақта жергілікті тілдерді, заңнаманы және қолдау жүйелерін ескере отырып, Орталық Азияның басқа елдеріне бейімдеуге болатын модель жасауды көздейміз. Ресурстарды жақсарту үшін ата-аналардың, аутист адамдардың және мамандардың тәжірибесін ескеруге ұмтыламыз.',
+    togetherTitle: 'Жобаны бірге дамытайық',
+    togetherLead: 'Ақпаратты әртүрлі білімі мен тәжірибесі бар адамдар бірге әзірлегенде, оның пайдасы арта түседі.',
+    togetherDetail: 'Біз зерттеушілермен, мамандармен, білім беру және қоғамдық ұйымдармен, сондай-ақ сенімді білімнің қолжетімділігін және отбасыларды қолдауды маңызды санайтын қорлармен ынтымақтастыққа ашықпыз.',
+    teamLabel: 'Біздің команда', expertsLabel: 'Біздің сарапшылар', contactLabel: 'Байланыс',
+    policiesTitle: 'Құжаттар және ашықтық', editorial: 'Редакциялық саясат', privacy: 'Құпиялық және деректер', accessibility: 'Қолжетімділік', medical: 'Медициналық шектеулер',
+    boundary: 'Autism Hub Kazakhstan - мемлекеттік портал немесе медициналық ұйым емес, тәуелсіз ақпараттық-білім беру ресурсы. Біз диагноз қоймаймыз, ем тағайындамаймыз және білікті маман кеңесін алмастырмаймыз.',
+  },
+  en: {
+    breadcrumb: 'Home', eyebrow: 'About the project',
+    tagline: 'Reliable autism information. Clear next steps for families in Kazakhstan.',
+    intro: 'Autism Hub Kazakhstan is an independent information and education platform for parents, families and professionals. We bring together scientific knowledge, practical resources, professional guidance and information about support options in Kazakhstan.',
+    missionTitle: 'Our mission',
+    mission: 'To help families navigate questions about autism, find trustworthy information and understand available pathways to support. We aim to make reliable knowledge clearer and more accessible, regardless of where families live or which language they use.',
+    parentsLink: 'For parents', professionalsLink: 'For professionals',
+    whyTitle: 'Why this matters',
+    whyIntro: 'When parents have questions about a child’s development or autism, knowing where to start can be difficult. Medical, educational and social information is spread across different sources, and research findings are not always easy to interpret.',
+    whyDetail: 'The World Health Organization highlights the importance of accessibility, inclusion and support for autistic people and their families. In Kazakhstan, UNICEF has also examined systemic barriers to access to assistive technology in inclusive education.',
+    whyConclusion: 'We want to narrow the gap between reliable knowledge and those who need it. The platform does not replace existing services: it helps people locate information, understand options and consider possible next steps.',
+    whoNote: 'The UNICEF report addresses assistive technology and inclusive education broadly, not autism alone.',
+    sourceLabel: 'Sources', whoLabel: 'WHO: Autism, 2025', unicefLabel: 'UNICEF Kazakhstan: inclusive education assessment, 2025',
+    offerTitle: 'What we offer', offerLead: 'Five connected areas in one platform.',
+    offers: [
+      { title: 'For parents', section: 'parents', description: 'Clear resources on autism, development, communication and everyday support.' },
+      { title: 'Help in Kazakhstan', section: 'help-kazakhstan', description: 'Information on assessment and diagnosis, education, rights and possible support pathways.' },
+      { title: 'Research explained', section: 'research', description: 'Research summaries that explain findings, uncertainty and the limits of the evidence.' },
+      { title: 'Learning', section: 'learning', description: 'Courses and educational resources, including the developing Autism School Kazakhstan programme.' },
+      { title: 'For professionals', section: 'professionals', description: 'International guidance, Kazakhstan documents and professional reference tools.' },
+    ],
+    difference: 'We combine scientific information, practical navigation, Kazakhstan-specific context and multilingual access in one resource.',
+    principlesTitle: 'Our principles',
+    principles: [
+      { title: 'Evidence-informed', description: 'We prioritise reliable research, professional guidelines and official documents while acknowledging evidence limitations.' },
+      { title: 'Accessible', description: 'Plain language and Russian, Kazakh and English versions. Materials are translated and checked progressively.' },
+      { title: 'Useful in practice', description: 'Information that helps visitors understand available resources and prepare for conversations with professionals.' },
+      { title: 'Transparent and accountable', description: 'Sources, dates and uncertainty are visible. Independent review is only claimed when it has actually taken place.' },
+    ],
+    visionTitle: 'Our vision',
+    visionLead: 'From a Kazakhstan-focused information platform towards broader regional collaboration.',
+    visionDetail: 'Autism Hub Kazakhstan is being developed as the first country implementation of the Central Asia Autism Hub initiative. In the longer term, we hope to create a model adaptable to other Central Asian countries, reflecting their languages, laws and support systems. We aim to learn from parents, autistic people and professionals to improve the relevance and accessibility of resources.',
+    togetherTitle: 'Build with us',
+    togetherLead: 'Information becomes more useful when people with different knowledge and experiences help shape it.',
+    togetherDetail: 'We welcome collaboration with researchers, professionals, educational and community organisations, and funders who share the goal of improving access to reliable knowledge and support for families.',
+    teamLabel: 'Our team', expertsLabel: 'Our experts', contactLabel: 'Contact us',
+    policiesTitle: 'Policies and transparency', editorial: 'Editorial policy', privacy: 'Privacy and data', accessibility: 'Accessibility', medical: 'Medical boundaries',
+    boundary: 'Autism Hub Kazakhstan is an independent information and education resource, not a government portal or healthcare provider. It does not diagnose autism, prescribe treatment or replace consultation with a qualified professional.',
+  },
+};
+const c = translations[locale];
+const who = locale === 'ru' ? 'https://www.who.int/ru/news-room/fact-sheets/detail/autism-spectrum-disorders' : 'https://www.who.int/news-room/fact-sheets/detail/autism-spectrum-disorders';
+const unicef = locale === 'ru' ? 'https://www.unicef.org/kazakhstan/Отчеты/оценка-потребностей-ребенка-в-ассистивных-технологиях-и-экосистемы-в-казахстане' : 'https://www.unicef.org/kazakhstan/en/reports/assistive-technologies-childs-needs-assessment-and-ecosystem-kazakhstan';
+const policies = localePath(locale, 'about/policies');
+---
+<article class="about-overview">
+  <header class="about-overview__hero">
+    <div class="container">
+      <nav class="about-overview__breadcrumb" aria-label={c.eyebrow}>
+        <a href={localePath(locale)}>{c.breadcrumb}</a>
+        <span aria-hidden="true"> / </span>
+        <span aria-current="page">{c.eyebrow}</span>
+      </nav>
+      <div class="about-overview__hero-grid">
+        <div>
+          <p class="about-overview__eyebrow">{c.eyebrow}</p>
+          <h1>Autism Hub Kazakhstan</h1>
+          <p class="about-overview__tagline">{c.tagline}</p>
+          <p class="about-overview__intro">{c.intro}</p>
+          <div class="about-overview__actions">
+            <a class="about-overview__button about-overview__button--primary" href={sectionPath(locale, 'parents')}>{c.parentsLink} <span aria-hidden="true">↗</span></a>
+            <a class="about-overview__button about-overview__button--outline" href={sectionPath(locale, 'professionals')}>{c.professionalsLink} <span aria-hidden="true">↗</span></a>
+          </div>
+        </div>
+        <aside class="about-overview__mission" aria-label={c.missionTitle}>
+          <div class="about-overview__mission-mark" aria-hidden="true"><span></span><span></span><span></span></div>
+          <h2>{c.missionTitle}</h2>
+          <p>{c.mission}</p>
+        </aside>
+      </div>
+    </div>
+  </header>
+
+  <section class="about-overview__section about-overview__section--why" aria-labelledby="about-why">
+    <div class="container about-overview__split">
+      <div class="about-overview__section-label">
+        <p class="about-overview__eyebrow">01</p>
+        <h2 id="about-why">{c.whyTitle}</h2>
+      </div>
+      <div class="about-overview__prose">
+        <p>{c.whyIntro}</p>
+        <p>{c.whyDetail}</p>
+        <p class="about-overview__emphasis">{c.whyConclusion}</p>
+        <div class="about-overview__sources">
+          <strong>{c.sourceLabel}</strong>
+          <a href={who} rel="external">{c.whoLabel} <span aria-hidden="true">↗</span></a>
+          <a href={unicef} rel="external">{c.unicefLabel} <span aria-hidden="true">↗</span></a>
+          <p>{c.whoNote}</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="about-overview__section about-overview__section--offers" aria-labelledby="about-offers">
+    <div class="container">
+      <p class="about-overview__eyebrow">02</p>
+      <h2 id="about-offers">{c.offerTitle}</h2>
+      <p class="about-overview__section-lead">{c.offerLead}</p>
+      <div class="about-overview__offer-grid">
+        {c.offers.map((offer, index) => (
+          <a class="about-overview__offer" href={localePath(locale, offer.section)}>
+            <span class="about-overview__offer-index" aria-hidden="true">{String(index + 1).padStart(2, '0')}</span>
+            <h3>{offer.title}</h3>
+            <p>{offer.description}</p>
+            <span class="about-overview__arrow" aria-hidden="true">↗</span>
+          </a>
+        ))}
+      </div>
+      <p class="about-overview__statement">{c.difference}</p>
+    </div>
+  </section>
+
+  <section class="about-overview__section about-overview__section--principles" aria-labelledby="about-principles">
+    <div class="container">
+      <p class="about-overview__eyebrow">03</p>
+      <h2 id="about-principles">{c.principlesTitle}</h2>
+      <div class="about-overview__principles-grid">
+        {c.principles.map((principle, index) => (
+          <div class="about-overview__principle">
+            <span class="about-overview__principle-index" aria-hidden="true">{String(index + 1).padStart(2, '0')}</span>
+            <h3>{principle.title}</h3>
+            <p>{principle.description}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <section class="about-overview__section about-overview__section--vision" aria-labelledby="about-vision">
+    <div class="container about-overview__split">
+      <div class="about-overview__section-label">
+        <p class="about-overview__eyebrow">04</p>
+        <h2 id="about-vision">{c.visionTitle}</h2>
+      </div>
+      <div class="about-overview__prose">
+        <p class="about-overview__vision-lead">{c.visionLead}</p>
+        <p>{c.visionDetail}</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="about-overview__section about-overview__section--join" aria-labelledby="about-join">
+    <div class="container">
+      <p class="about-overview__eyebrow">05</p>
+      <h2 id="about-join">{c.togetherTitle}</h2>
+      <p class="about-overview__section-lead">{c.togetherLead}</p>
+      <p class="about-overview__join-detail">{c.togetherDetail}</p>
+      <div class="about-overview__join-links">
+        <a href={localePath(locale, 'about/team')}>{c.teamLabel} <span aria-hidden="true">↗</span></a>
+        <a href={localePath(locale, 'about/experts')}>{c.expertsLabel} <span aria-hidden="true">↗</span></a>
+        <a href={localePath(locale, 'about/contact')} id="contact">{c.contactLabel} <span aria-hidden="true">↗</span></a>
+      </div>
+    </div>
+  </section>
+
+  <aside class="about-overview__trust">
+    <div class="container">
+      <nav aria-label={c.policiesTitle}>
+        <strong>{c.policiesTitle}</strong>
+        <a href={policies + '#editorial'} id="editorial">{c.editorial}</a>
+        <a href={policies + '#privacy'} id="privacy">{c.privacy}</a>
+        <a href={policies + '#accessibility'} id="accessibility">{c.accessibility}</a>
+        <a href={policies + '#evidence-safety'} id="evidence-safety">{c.medical}</a>
+      </nav>
+      <p>{c.boundary}</p>
+    </div>
+  </aside>
+</article>

@@ -1,6 +1,6 @@
 ---
 import { UI } from '../i18n/ui';
-import { sectionPath } from '../lib/urls';
+import { localePath } from '../lib/urls';
 import { SITE, type Locale } from '../site.config';
 
 interface Props {
@@ -10,7 +10,7 @@ interface Props {
 const { locale = 'en' } = Astro.props;
 const copy = UI[locale];
 const year = new Date().getUTCFullYear();
-const aboutPath = sectionPath(locale, 'about');
+const policiesPath = localePath(locale, 'about/policies');
 ---
 
 <footer class="site-footer">
@@ -23,10 +23,10 @@ const aboutPath = sectionPath(locale, 'about');
       <p class="site-footer__status">{copy.footerStatus}</p>
       <nav class="site-footer__nav" aria-label={copy.footerNavigation}>
         <ul>
-          <li><a href={`${aboutPath}#editorial`}>{copy.footerLinks.editorial}</a></li>
-          <li><a href={`${aboutPath}#privacy`}>{copy.footerLinks.privacy}</a></li>
-          <li><a href={`${aboutPath}#accessibility`}>{copy.footerLinks.accessibility}</a></li>
-          <li><a href={`${aboutPath}#contact`}>{copy.footerLinks.contact}</a></li>
+          <li><a href={`${policiesPath}#editorial`}>{copy.footerLinks.editorial}</a></li>
+          <li><a href={`${policiesPath}#privacy`}>{copy.footerLinks.privacy}</a></li>
+          <li><a href={`${policiesPath}#accessibility`}>{copy.footerLinks.accessibility}</a></li>
+          <li><a href={`${localePath(locale, 'about/contact')}`}>{copy.footerLinks.contact}</a></li>
         </ul>
       </nav>
       <a class="site-footer__repository" href={SITE.repositoryUrl} rel="external">
