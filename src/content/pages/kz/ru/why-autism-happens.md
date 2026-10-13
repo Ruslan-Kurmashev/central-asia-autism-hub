@@ -8,8 +8,8 @@ country: kz
 language: ru
 section: parents
 topic: autism-basics
-slug: pochemu-voznikaet-autizm
-translationKey: parents-why-autism-happens
+slug: pochemu-voznikaet-autizm-archived-draft
+translationKey: parents-why-autism-happens-archived-draft
 translationStatus: source
 audience:
   - parents
@@ -22,7 +22,7 @@ conflictOfInterest: "Конфликт интересов не заявлен."
 publishedAt: 2026-10-12
 updatedAt: 2026-10-12
 reviewDueAt: 2027-04-12
-draft: false
+draft: true
 keyPoints:
   - "У аутизма нет одной универсальной причины: значительную роль играют генетические факторы и особенности раннего развития мозга."
   - "Обнаруженная в исследовании связь между фактором и аутизмом не доказывает, что именно этот фактор стал причиной в конкретной семье."

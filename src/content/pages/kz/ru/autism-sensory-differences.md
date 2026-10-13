@@ -8,8 +8,8 @@ country: kz
 language: ru
 section: parents
 topic: autism-basics
-slug: sensornye-osobennosti-pri-autizme
-translationKey: parents-autism-sensory-differences
+slug: sensornye-osobennosti-pri-autizme-archived-draft
+translationKey: parents-autism-sensory-differences-archived-draft
 translationStatus: source
 audience:
   - parents
@@ -22,7 +22,7 @@ conflictOfInterest: "Конфликт интересов не заявлен."
 publishedAt: 2026-10-12
 updatedAt: 2026-10-12
 reviewDueAt: 2027-04-12
-draft: false
+draft: true
 keyPoints:
   - "Сенсорное восприятие может отличаться в отношении звуков, света, запахов, вкусов, прикосновений и положения тела."
   - "Чувствительность может быть повышенной, сниженной или разной в зависимости от вида ощущения и ситуации."

@@ -181,6 +181,37 @@ All additional original photos and their names/IDs are recorded in `scripts/sync
 
 Existing Pexels photographs in this document may be reused on an article only where the subject actually relates to that article. Alternative text should describe the photograph, not imply that an individual has autism, that a pictured activity is a validated therapy or that a blank card is an actual AAC communication system.
 
+
+## Parents visual differentiation, batch 1 (2026-10-13)
+
+After the first repeated-cover audit (PR #112), 19 **new distinct Pexels photos** were selected for meaningful article-specific use in the Russian parent library. The exact Pexels photo identifier is captured in `scripts/sync-editorial-photos.mjs`; the file downloads at build time and is served locally on GitHub Pages. The photo must match the described object/activity, not claim to document clinical practice or establish that a person pictured is autistic. Source licence: https://www.pexels.com/license/ (Pexels photo pages checked 2026-10-13).
+
+| Article source | New local cover | Creator on Pexels | Original photo | Subject and limits |
+| --- | --- | --- | --- | --- |
+| `development-milestones.md` | `photos/parent-development-shape-sorter.jpg` | Tara Winstead | https://www.pexels.com/photo/colorful-educational-toy-on-a-wooden-surface-6692956/ | Деревянная сортировка фигур: ориентация в игровых навыках |
+| `when-to-discuss-development.md` | `photos/parent-development-observation-notes.jpg` | cottonbro studio | https://www.pexels.com/photo/person-writing-on-a-paper-7428213/ | Планировщик и наблюдения перед консультацией |
+| `daily-living-skills-training.md` | `photos/parent-daily-skills-folding-clothes.jpg` | Polina Tankilevitch | https://www.pexels.com/photo/a-person-arranging-folded-clothes-over-the-bed-4440571/ | Складывание одежды как бытовой навык |
+| `daily-living-participation.md` | `photos/parent-daily-participation-setting-table.jpg` | cottonbro studio | https://www.pexels.com/photo/young-girls-passing-plates-at-a-dining-table-5990733/ | Участие детей в уборке семейного стола |
+| `occupational-therapy.md` | `photos/parent-occupational-fine-motor-beads.jpg` | Monstera Production | https://www.pexels.com/photo/girl-holding-colorful-thread-in-hands-5200772/ | Работа с бусиной и нитью, мелкая моторика |
+| `therapeutic-exercise-lfk.md` | `photos/parent-lfk-exercise-mats.jpg` | Pavel Danilyuk | https://www.pexels.com/photo/rolled-yoga-mats-beside-a-pair-of-red-dumbbells-6339731/ | Свёрнутые коврики и спортивный инвентарь; не медицинская процедура |
+| `physical-therapy-physiotherapy.md` | `photos/parent-physical-therapy-balance-board.jpg` | Cansu Hangül | https://www.pexels.com/photo/physiotherapy-balance-training-session-30483062/ | Тренировка равновесия; не иллюстрация лечения аутизма |
+| `ayres-sensory-integration.md` | `photos/parent-sensory-swing.jpg` | Helena Jankovičová Kováčová | https://www.pexels.com/photo/a-child-sitting-in-a-hanging-swing-by-a-doorway-6035613/ | Подвесные качели в игровой комнате; не стандартизированный протокол |
+| `sensory-environmental-support.md` | `photos/parent-sensory-calm-space.jpg` | Betül Aydın | https://www.pexels.com/photo/cozy-sunlit-reading-nook-with-armchair-34652531/ | Спокойный уголок дома как пример организации среды |
+| `task-analysis.md` | `photos/parent-task-analysis-notes.jpg` | MART PRODUCTION | https://www.pexels.com/photo/stationery-on-green-surface-7718886/ | Заметки и планирование последовательности действий |
+| `self-management.md` | `photos/parent-self-management-weekly-goals.jpg` | Nicolás Rueda | https://www.pexels.com/photo/close-up-of-a-planner-15713277/ | Личный недельный план для организации дел |
+| `behavioral-feeding-interventions.md` | `photos/parent-feeding-table-utensils.jpg` | cottonbro studio | https://www.pexels.com/photo/a-kid-holding-a-silver-fork-and-spoon-6969720/ | Рука ребёнка с ложкой и вилкой; не протокол питания |
+| `dietitian-nutrition-support.md` | `photos/parent-nutrition-meal-planning.jpg` | Katya Wolf | https://www.pexels.com/photo/close-up-of-reading-a-cookbook-8715631/ | Планирование рациона в домашней кухне |
+| `sensory-based-feeding-approaches.md` | `photos/parent-feeding-food-textures.jpg` | Sylwester Ficek | https://www.pexels.com/photo/assorted-crackers-on-flat-surface-in-top-view-31617910/ | Крекеры разных форм и текстур; не лечебный приём |
+| `arfid-assessment-support.md` | `photos/parent-arfid-food-variety.jpg` | Antoni Shkraba | https://www.pexels.com/photo/healthy-lunchbox-with-fruits-and-vege-5852329/ | Разнообразие продуктов в отдельных отделениях ланчбокса, без утверждений о лечении ARFID |
+| `sensory-diet.md` | `photos/parent-sensory-everyday-fidget.jpg` | Markus Winkler | https://www.pexels.com/photo/stress-relief-toy-13417045/ | Игрушка pop-it как бытовой сенсорный предмет; не терапия |
+| `play-based-interventions.md` | `photos/parent-play-pretend-kitchen.jpg` | Kamaji Ogino | https://www.pexels.com/photo/anonymous-child-playing-with-toy-kitchen-5093646/ | Сюжетная игра ребёнка с игрушечной посудой |
+| `differential-reinforcement.md` | `photos/parent-reinforcement-goal-stickers.jpg` | KATRIN BOLOVTSOVA | https://www.pexels.com/photo/assorted-stickers-and-a-planner-6192124/ | Наклейки и планировщик; не схема дифференциального подкрепления |
+| `naturalistic-intervention.md` | `photos/parent-naturalistic-children-toys.jpg` | Tara Winstead | https://www.pexels.com/photo/children-playing-with-wooden-toys-6693311/ | Свободная игра детей, а не протокол NDBI |
+
+The same new featured image is used for the listing thumbnail and article hero (the visual identity of one article). No other article should be assigned that image. Previously existing distinct photos remain attributed in earlier tables.
+
+**Three duplicate public slug pairs resolved without deleting manuscripts:** `autism-myths-facts.md`, `autism-sensory-differences.md`, and `why-autism-happens.md` are retained in the source repository as `draft: true` with distinct internal archive-only slugs and translation keys to avoid accidental content-loader collisions. Their originally published URLs continue to serve the longer existing canonical sources `mify-i-fakty-ob-autizme.md`, `sensornye-osobennosti-pri-autizme.md`, and `pochemu-voznikaet-autizm.md`. Do not delete or rewrite these unpublished alternatives without content reconciliation and a review of references. No redirect is required: the public URLs stay unchanged.
+
 ## Professionals: original guideline appraisal illustration (2026-10-12)
 
 | Local file | Author/source | Type | Usage and provenance |

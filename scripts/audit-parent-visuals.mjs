@@ -102,13 +102,15 @@ for (const [img, docs] of repeated.slice(0, 22)) {
 }
 for (const x of adjacent) console.log('[ADJACENT] ' + JSON.stringify(x));
 for (const x of near) console.log('[NEAR] ' + JSON.stringify(x));
+if (adjacent.length > 0)
+  issues.push('consecutive article cards must not reuse the same cover: ' +
+    adjacent.map(x => x.first + ' / ' + x.second).join(', '));
 if (issues.length) {
   console.warn('[PARENT-IMAGE-ISSUES] ' + issues.length + ' issues requiring editorial decision:\n' +
     issues.map(x => ' - ' + x).join('\n'));
-  // Leave all existing article files unchanged in this audit-only PR.
-  // Use --strict after the existing duplicate routes and image mismatch are fixed.
-  if (process.argv.includes('--strict')) process.exitCode = 1;
+  // Duplicated slugs, mismatched heroes and adjacent repeated covers are release-blocking.
+  process.exitCode = 1;
 } else {
   console.log('Parent image structural QA passed: catalog and hero agree.');
 }
-console.log('Parent visual audit completed; repeat usage is advisory and no photos were replaced.');
+console.log('Parent visual audit completed; distant repeat usage remains advisory while image replacements continue.');

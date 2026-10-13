@@ -8,8 +8,8 @@ country: kz
 language: ru
 section: parents
 topic: autism-basics
-slug: mify-i-fakty-ob-autizme
-translationKey: parents-autism-myths-facts
+slug: mify-i-fakty-ob-autizme-archived-draft
+translationKey: parents-autism-myths-facts-archived-draft
 translationStatus: source
 audience:
   - parents
@@ -22,7 +22,7 @@ conflictOfInterest: "Конфликт интересов не заявлен."
 publishedAt: 2026-10-12
 updatedAt: 2026-10-12
 reviewDueAt: 2027-04-12
-draft: false
+draft: true
 keyPoints:
   - "Аутизм не вызван воспитанием или вакцинацией."
   - "Аутичные люди отличаются по способам общения, интеллектуальным возможностям и потребностям в поддержке."
