@@ -61,14 +61,14 @@ export const kazakhstanDocumentGroups: KazakhstanDocumentGroup[] = [
     id: 'healthcare-diagnosis',
     icon: 'healthcare',
     title: {
-      ru: 'Здравоохранение, раннее выявление и диагностика',
-      kk: 'Денсаулық сақтау, ерте анықтау және диагностика',
-      en: 'Healthcare, early identification and diagnosis',
+      ru: 'Здравоохранение, диагностика и клинические протоколы',
+      kk: 'Денсаулық сақтау, диагностика және клиникалық хаттамалар',
+      en: 'Healthcare, diagnosis and clinical protocols',
     },
     description: {
-      ru: 'Педиатрическая помощь, профилактические осмотры, психическое здоровье и клинические маршруты.',
-      kk: 'Педиатриялық көмек, профилактикалық қарап-тексеру, психикалық денсаулық және клиникалық бағыттау.',
-      en: 'Paediatric care, preventive assessments, mental health and clinical care pathways.',
+      ru: 'Клинические протоколы, педиатрическая помощь, профилактические осмотры, психическое здоровье и маршруты диагностики.',
+      kk: 'Клиникалық хаттамалар, педиатриялық көмек, профилактикалық қарап-тексеру, психикалық денсаулық және диагностика бағыттары.',
+      en: 'Clinical protocols, paediatric care, preventive assessments, mental health and diagnostic pathways.',
     },
     documents: [
       document('health-code-360','P0','Кодекс РК «О здоровье народа и системе здравоохранения» № 360-VI','ҚР «Халық денсаулығы және денсаулық сақтау жүйесі туралы» кодексі № 360-VI','Health Code No. 360-VI'),
