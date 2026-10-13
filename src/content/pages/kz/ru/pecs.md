@@ -2,8 +2,8 @@
 title: "PECS: система обмена изображениями для коммуникации"
 summary: "Что такое PECS, чем он отличается от AAC в целом, что показывают исследования, как оценивать результат и когда рассматривать другие варианты."
 description: "Практическое руководство для родителей о PECS при аутизме: протокол, доказательства, отличие от AAC, влияние на речь, перенос навыка, ограничения и выбор специалиста."
-featuredImage: "/central-asia-autism-hub/images/editorial/photos/parent-communication-cards.jpg"
-featuredImageAlt: "Набор пустых карточек на кольце: нейтральная иллюстрация карточек, это не карточки системы PECS."
+featuredImage: "/central-asia-autism-hub/images/editorial/photos/parent-pecs-picture-choice-cards.jpg"
+featuredImageAlt: "Рука ребёнка указывает на иллюстрированную карточку рядом с игрушками: пример использования изображений, не оригинальные карточки и не протокол PECS."
 country: kz
 language: ru
 section: parents
