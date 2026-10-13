@@ -2,8 +2,8 @@
 title: "Child development from 2 months to 5 years: milestones for parents"
 summary: "Choose your child's age, review developmental milestones, and write down observations you may want to discuss with a professional."
 description: "Clear developmental milestones from 2 months to 5 years, age-specific observation sheets, and practical preparation for a conversation with a professional."
-featuredImage: "/central-asia-autism-hub/images/editorial/rubi-wooden-blocks.jpg"
-featuredImageAlt: "Wooden toy blocks on a table, representing everyday observation of children's play and development."
+featuredImage: "/central-asia-autism-hub/images/editorial/photos/parent-development-shape-sorter.jpg"
+featuredImageAlt: "A wooden shape-sorting toy with colorful pieces: an example of learning through play, not a developmental screening or diagnostic test."
 country: kz
 language: en
 section: parents
