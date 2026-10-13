@@ -2,8 +2,8 @@
 title: "Какие обследования нужны при подозрении на аутизм в Казахстане"
 summary: "Что действительно может понадобиться при диагностике РАС: ADOS-2, ADI-R, психологическая оценка, слух, невролог, ЭЭГ, МРТ, анализы и генетические исследования."
 description: "Какие обследования нужны при подозрении на аутизм в Казахстане: роль ADOS-2, ADI-R, ЭЭГ, МРТ, проверки слуха, анализов и генетики."
-featuredImage: "/central-asia-autism-hub/images/editorial/psychological-support-room.jpg"
-featuredImageAlt: "Спокойный кабинет с креслами для беседы и консультации."
+featuredImage: "/central-asia-autism-hub/images/editorial/photos/parent-assessment-family-clinic.jpg"
+featuredImageAlt: "Мать с ребёнком беседуют с медицинским специалистом в кабинете: иллюстрация консультации, не процедура диагностики аутизма в Казахстане."
 country: kz
 language: ru
 section: parents
