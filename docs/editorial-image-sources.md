@@ -453,3 +453,9 @@ The research-card image-coverage validation enforces one mapped and locally avai
 | Local file | Source and date | Subject and provenance |
 | --- | --- | --- |
 | `professional-family-cultural-language-access.svg` | Original AutismHub editorial SVG created 2026-10-13 | Abstract professional consultation document, two distinct dialogue areas and language-access route. Hand-authored geometric vector elements; no third-party photo, logo, official government symbols, individual identity, patient information or licensed illustration. It is not a certified interpreter-service chart or institutional endorsement. |
+
+## Family disagreement and de-escalation: professional C06 cover (2026-10-13)
+
+| Local file | Author/source and date | Subject and provenance |
+| --- | --- | --- |
+| `professional-family-conflict-deescalation.svg` | Original AutismHub editorial hand-authored SVG, 2026-10-13 | Two calm dialogue cards, pause symbol and mutually agreed follow-up plan; geometric vector artwork without recognizable patients, conflict photography, medical records, third-party symbols or logos. Not an official NICE illustration or a verified clinical intervention. |
