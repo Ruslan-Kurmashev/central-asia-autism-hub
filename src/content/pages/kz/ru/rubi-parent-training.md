@@ -12,8 +12,8 @@ translationStatus: source
 audience:
   - parents
   - families
-featuredImage: "/central-asia-autism-hub/images/editorial/rubi-wooden-blocks.jpg"
-featuredImageAlt: "Цветные деревянные развивающие блоки на светлой поверхности."
+featuredImage: "/central-asia-autism-hub/images/editorial/photos/parent-rubi-parent-reading.jpg"
+featuredImageAlt: "Отец с ребёнком вместе читают книгу на диване: пример участия взрослого в повседневном обучении, не демонстрация программы RUBI."
 author: Ruslan Kurmashev
 editor: Ruslan Kurmashev
 riskLevel: moderate
