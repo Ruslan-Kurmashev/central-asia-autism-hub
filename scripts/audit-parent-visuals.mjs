@@ -33,7 +33,7 @@ for (const filename of (await readdir(root)).filter(v => v.endsWith('.md'))) {
     issues.push(filename + ': incomplete image, slug or alt metadata');
     continue;
   }
-  if (lookup.has(data.slug)) issues.push('duplicate published slug ' + data.slug);
+  if (lookup.has(data.slug)) issues.push('duplicate published slug ' + data.slug + ': ' + lookup.get(data.slug).source + ' and ' + filename);
   lookup.set(data.slug, data);
   const content = text.slice(fm[0].length);
   const inlineMatches = [
