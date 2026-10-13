@@ -25,6 +25,9 @@ for (const lang of locales) {
   check(html.includes('href="' + base + lang + '/parents/#autism-basics"'),
     id + ': start-here action missing or not base-path safe');
   check(html.includes('alt=') && html.includes('hero-family.webp'), id + ': hero image missing');
+  for (const page of ['about/team', 'about/experts', 'about/contact']) {
+    check(html.includes('href="' + base + lang + '/' + page + '/"'), id + ': About submenu link missing: ' + page);
+  }
 
   for (const locale of locales) {
     check(html.includes('href="' + base + locale + '/"'),
@@ -77,11 +80,22 @@ for (const target of ['kk','en']) {
 
 const css = await readFile('src/styles/home-v2.css', 'utf8');
 const main = await readFile('src/styles/global.css', 'utf8');
+const header = await readFile('src/components/SiteHeader.astro', 'utf8');
 check(css.includes('@media (max-width: 42rem)') && css.includes('@media (max-width: 56rem)'),
   'Homepage responsive mobile breakpoints missing');
 check(main.includes('@media (max-width: 56rem)') && main.includes('.nav-disclosure__summary'),
   'Mobile primary navigation is not implemented');
 check(css.includes('.home-v2__card:focus-within'), 'Keyboard focus not visible on full featured card');
+check(main.includes('width: min(calc(100% - 2.5rem), 94rem)') &&
+  main.includes('flex-wrap: nowrap'), 'Desktop navigation must have a wide, non-wrapping header');
+check(main.includes('@media (min-width: 56.001rem) and (max-width: 80rem)') &&
+  main.includes('@media (max-width: 80rem)'), 'Compact navigation breakpoint missing');
+check(header.includes("window.matchMedia('(max-width: 80rem)')") &&
+  header.includes("window.matchMedia('(min-width: 80.001rem)"), 'Header CSS and JS navigation breakpoints differ');
+check(css.includes('.home-v2 .primary-nav .primary-nav__submenu a') &&
+  css.includes('color: var(--home-blue-deep);'), 'Homepage About menu must use dark text on white');
+check(css.includes('.home-v2 .primary-nav__dropdown > summary') &&
+  css.includes('color: rgb(255 255 255 / 90%);'), 'About trigger must be readable in the dark header');
 check(!css.includes('-webkit-line-clamp: 3;'), 'Homepage editorial summaries are truncated');
 
 function lum(hex) {

@@ -108,7 +108,7 @@ const aboutLinks: Record<Locale, { label: string; path: string }[]> = {
 </header>
 
 <script>
-  const mobileNavigation = window.matchMedia('(max-width: 56rem)');
+  const mobileNavigation = window.matchMedia('(max-width: 80rem)');
 
   const syncNavigationDisclosure = (isMobile: boolean) => {
     document.querySelectorAll<HTMLDetailsElement>('.nav-disclosure').forEach((disclosure) => {
@@ -121,7 +121,7 @@ const aboutLinks: Record<Locale, { label: string; path: string }[]> = {
     syncNavigationDisclosure(event.matches);
   });
 
-  const hoverNavigation = window.matchMedia('(min-width: 56.001rem) and (hover: hover) and (pointer: fine)');
+  const hoverNavigation = window.matchMedia('(min-width: 80.001rem) and (hover: hover) and (pointer: fine)');
   const dropdowns = document.querySelectorAll<HTMLDetailsElement>('.primary-nav__dropdown');
 
   dropdowns.forEach((dropdown) => {

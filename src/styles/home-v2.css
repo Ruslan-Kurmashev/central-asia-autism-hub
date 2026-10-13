@@ -105,6 +105,33 @@
   color: white;
 }
 
+/* The About trigger stays legible on the dark homepage header. */
+.home-v2 .primary-nav__dropdown > summary {
+  padding: 0.6rem 0.5rem;
+  color: rgb(255 255 255 / 90%);
+  white-space: nowrap;
+}
+.home-v2 .primary-nav__dropdown > summary:hover,
+.home-v2 .primary-nav__dropdown > summary[aria-current='page'],
+.home-v2 .primary-nav__dropdown[open] > summary {
+  background: rgb(255 255 255 / 12%);
+  color: #fff;
+}
+
+/* White flyout must have dark, high-contrast text rather than inherited white. */
+.home-v2 .primary-nav .primary-nav__submenu a {
+  padding: 0.75rem 0.85rem;
+  border-radius: 0.35rem;
+  background: transparent;
+  color: var(--home-blue-deep);
+  font-weight: 650;
+}
+.home-v2 .primary-nav .primary-nav__submenu a:hover,
+.home-v2 .primary-nav .primary-nav__submenu a:focus-visible {
+  background: #e7f2fa;
+  color: var(--home-blue-deep);
+}
+
 .home-v2 .language-switcher__label {
   color: rgb(255 255 255 / 65%);
 }
@@ -560,6 +587,26 @@
 .home-v2 .site-footer__legal {
   border-top-color: rgb(255 255 255 / 13%);
   color: rgb(255 255 255 / 50%);
+}
+
+/* Use a consistent dark flyout when the navigation becomes collapsible. */
+@media (max-width: 80rem) {
+  .home-v2 .site-header { background: rgb(5 45 78 / 96%); }
+  .home-v2 .nav-disclosure__summary {
+    border-color: rgb(255 255 255 / 30%);
+    background: rgb(255 255 255 / 9%);
+    color: #fff;
+  }
+  .home-v2 .nav-disclosure[open] .primary-nav {
+    border-color: rgb(255 255 255 / 15%);
+    background: #08375f;
+  }
+  .home-v2 .primary-nav .primary-nav__submenu a { color: #fff; }
+  .home-v2 .primary-nav .primary-nav__submenu a:hover,
+  .home-v2 .primary-nav .primary-nav__submenu a:focus-visible {
+    background: rgb(255 255 255 / 13%);
+    color: #fff;
+  }
 }
 
 /* Tablet */
