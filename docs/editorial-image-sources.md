@@ -212,6 +212,19 @@ The same new featured image is used for the listing thumbnail and article hero (
 
 **Three duplicate public slug pairs resolved without deleting manuscripts:** `autism-myths-facts.md`, `autism-sensory-differences.md`, and `why-autism-happens.md` are retained in the source repository as `draft: true` with distinct internal archive-only slugs and translation keys to avoid accidental content-loader collisions. Their originally published URLs continue to serve the longer existing canonical sources `mify-i-fakty-ob-autizme.md`, `sensornye-osobennosti-pri-autizme.md`, and `pochemu-voznikaet-autizm.md`. Do not delete or rewrite these unpublished alternatives without content reconciliation and a review of references. No redirect is required: the public URLs stay unchanged.
 
+## Sensory library image differentiation, second batch (2026-10-13)
+
+Four **distinct, article-specific photographic covers** were selected to separate sensory strategies, stimming, auditory programmes and light adaptations. Original Pexels photo pages were inspected for the described subject and availability under the [Pexels License](https://www.pexels.com/license/). The Pexels IDs are pinned in `scripts/sync-editorial-photos.mjs`, and the site serves downloaded local JPG files after prebuild validation.
+
+| Article | Generated local photo | Photographer / provider | Pexels original | Editorial purpose and limits |
+| --- | --- | --- | --- | --- |
+| `sensory-based-strategies.md` | `photos/parent-sensory-tactile-slime.jpg` | cottonbro studio | https://www.pexels.com/photo/close-up-shot-of-a-person-holding-a-pink-slime-6144288/ | Hands stretching textured slime; a tactile material, not a clinical protocol or recommendation for every child |
+| `stimming-i-povtoryayushchiesya-deystviya-pri-autizme.md` | `photos/parent-stimming-hand-stress-ball.jpg` | Kaboompics.com | https://www.pexels.com/photo/faceless-young-woman-with-stress-ball-on-white-background-4498315/ | Hand squeezing a blue stress ball; ordinary object manipulation, not a claim that the person is autistic or that the activity is necessarily stimming |
+| `auditory-integration-listening-programs.md` | `photos/parent-listening-headphones-tablet.jpg` | Mateusz Dach | https://www.pexels.com/photo/close-up-of-headphone-325057/ | Headphones resting on tablet; listening equipment only, without efficacy claims |
+| `sensory-overload-environmental-adaptations.md` | `photos/parent-sensory-light-blinds.jpg` | Alec Adriano | https://www.pexels.com/photo/sunlight-filtering-through-window-blinds-indoors-36197104/ | Diffused daylight through window blinds; environmental lighting, not a treatment image |
+
+The eight published sensory-topic covers are expected to be mutually unique in the Russian parent library, including the existing distinctive images for the Ayres swing, calm environment, everyday fidget item and general sensory differences. This requirement is enforced in the parent image coverage script. Images must not imply a diagnosis, intervention fidelity, guaranteed outcomes or that children pictured have autism.
+
 ## Professionals: original guideline appraisal illustration (2026-10-12)
 
 | Local file | Author/source | Type | Usage and provenance |
