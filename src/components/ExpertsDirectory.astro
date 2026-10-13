@@ -19,7 +19,7 @@ type Copy = {
   joinSteps: string[]; joinAction: string; notice: string;
   policyLink: string; back: string; transparency: string;
 };
-const c: Record<Locale, Copy> = {
+const translations: Record<Locale, Copy> = {
   ru: {
     home: 'Главная', about: 'О проекте', eyebrow: 'О ПРОЕКТЕ / ЭКСПЕРТИЗА',
     title: 'Наши эксперты',
@@ -173,7 +173,8 @@ const c: Record<Locale, Copy> = {
     back: 'Back to About',
     transparency: 'A listing does not imply endorsement by the organisations that employ contributors and does not replace professional consultation.',
   },
-}[locale];
+};
+const c = translations[locale];
 
 const roleKeys: Role[] = ['author', 'consultant', 'reviewer'];
 const publishedExperts = EXPERT_PUBLIC_PROFILES.filter((profile) =>
