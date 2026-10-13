@@ -99,9 +99,7 @@ const homeV2Labels = locale === 'en'
       featuredAction: homeMaterials[0]
         ? copy.sections[homeMaterials[0].data.section].title
         : copy.sections.parents.title,
-      statement: 'Clear information, transparent sources and practical guidance for families in Kazakhstan.',
-      about: 'About this project',
-      more: 'Learn more',
+
       approach: 'Our approach',
       sourcesHeading: 'Our information sources',
       sourceTypes: [
@@ -118,9 +116,7 @@ const homeV2Labels = locale === 'en'
         featuredAction: homeMaterials[0]
           ? copy.sections[homeMaterials[0].data.section].title
           : copy.sections.parents.title,
-        statement: 'Қазақстандағы отбасыларға арналған түсінікті ақпарат, тексерілетін дереккөздер және пайдалы бағыт-бағдар.',
-        about: 'Жоба туралы',
-        more: 'Толығырақ',
+
         approach: 'Біздің ұстанымымыз',
         sourcesHeading: 'Біз сүйенетін дереккөздер',
         sourceTypes: [
@@ -136,9 +132,7 @@ const homeV2Labels = locale === 'en'
       featuredAction: homeMaterials[0]
         ? copy.sections[homeMaterials[0].data.section].title
         : copy.sections.parents.title,
-      statement: 'Проверенная информация, понятная навигация и контекст Казахстана в одном месте.',
-      about: 'О проекте',
-      more: 'Подробнее',
+
       approach: 'Наш подход',
       sourcesHeading: 'На что мы опираемся',
       sourceTypes: [
@@ -340,25 +334,6 @@ const dateFormatter = new Intl.DateTimeFormat(DATE_LOCALES[locale], {
                   );
                 })}
 
-                <article class="home-v2__card home-v2__card--statement">
-                  <div class="home-v2__card-body">
-                    <span class="home-v2__card-tag">Autism Hub Kazakhstan</span>
-                    <p class="home-v2__statement">{homeV2Labels.statement}</p>
-                    <a href={sectionPath(locale, 'about')}>{homeV2Labels.about} →</a>
-                  </div>
-                </article>
-
-                <article class="home-v2__card home-v2__card--principles">
-                  <div class="home-v2__card-body">
-                    <span class="home-v2__card-tag">{copy.principlesTitle}</span>
-                    <ul>
-                      {copy.principles.map((principle) => (
-                        <li>{principle.title}</li>
-                      ))}
-                    </ul>
-                    <a href={sectionPath(locale, 'about')}>{homeV2Labels.more} →</a>
-                  </div>
-                </article>
               </div>
             </div>
           </section>
