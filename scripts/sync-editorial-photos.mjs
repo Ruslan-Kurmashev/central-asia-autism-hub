@@ -51,6 +51,12 @@ const photos = [
   ['parent-stimming-hand-stress-ball.jpg', '4498315'],
   ['parent-listening-headphones-tablet.jpg', '325057'],
   ['parent-sensory-light-blinds.jpg', '36197104'],
+  ['parent-behavior-play-boardgame.jpg', '7296501'],
+  ['parent-reinforcement-sticker-planner.jpg', '30101194'],
+  ['parent-fba-clipboard-notes.jpg', '8036881'],
+  ['parent-rubi-parent-reading.jpg', '7677771'],
+  ['parent-ndbi-floor-play.jpg', '7780883'],
+  ['parent-imitation-stacking-together.jpg', '7296470'],
 ];
 
 function isJpeg(bytes) {
