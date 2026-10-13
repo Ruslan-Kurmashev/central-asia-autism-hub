@@ -215,7 +215,7 @@ const BASE_UI: Record<Locale, LocaleCopy> = {
       about: {
         title: 'О проекте',
         description:
-          'Цели, редакционная ответственность, медицинские границы, приватность и развитие проекта.',
+          'Наша миссия, зачем создан Autism Hub Kazakhstan, материалы для семей и специалистов, принципы работы и возможности сотрудничества.',
         topics: [
           { id: 'mission', title: 'Миссия и структура брендов', description: 'Central Asia Autism Hub, Autism Hub Kazakhstan и Autism School Kazakhstan.' },
           { id: 'editorial', title: 'Редакционная политика', description: 'Как один автор фиксирует источники, проверку, обновления, исправления и личную ответственность.' },
@@ -340,7 +340,7 @@ const BASE_UI: Record<Locale, LocaleCopy> = {
       },
       about: {
         title: 'Жоба туралы',
-        description: 'Жобаның мақсаттары, редакциялық жауапкершілік, медициналық шекаралар, құпиялық және даму жоспары.',
+        description: 'Autism Hub Kazakhstan миссиясы, отбасылар мен мамандарға арналған ресурстар, жұмыс қағидаттары және ынтымақтастық мүмкіндіктері.',
         topics: [
           { id: 'mission', title: 'Миссия және бренд құрылымы', description: 'Central Asia Autism Hub, Autism Hub Kazakhstan және Autism School Kazakhstan.' },
           { id: 'editorial', title: 'Редакциялық саясат', description: 'Бір автор дереккөздерді, тексеруді, жаңартуларды, түзетулерді және жеке жауапкершілікті қалай тіркейді.' },
@@ -461,7 +461,7 @@ const BASE_UI: Record<Locale, LocaleCopy> = {
       },
       about: {
         title: 'About',
-        description: 'Project purpose, editorial responsibility, medical boundaries, privacy, and future development.',
+        description: 'Discover the mission of Autism Hub Kazakhstan, its resources for families and professionals, guiding principles and ways to collaborate.',
         topics: [
           { id: 'mission', title: 'Mission and brand structure', description: 'Central Asia Autism Hub, Autism Hub Kazakhstan, and Autism School Kazakhstan.' },
           { id: 'editorial', title: 'Editorial policy', description: 'How one author records sources, checks, updates, corrections, and personal responsibility.' },
