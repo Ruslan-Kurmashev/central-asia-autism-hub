@@ -2,8 +2,8 @@
 title: "Как понять доказательность метода"
 summary: "Практическое руководство для родителей: как оценивать исследования, уверенность в доказательствах (certainty), значимые результаты (meaningful outcomes), независимое воспроизведение, возможный вред (harms) и маркетинговые заявления."
 description: "Как понять доказательность метода при аутизме: что изучали, для кого, какие результаты (outcomes) оценивали, насколько надёжны исследования, чем недостаток данных отличается от отсутствия пользы."
-featuredImage: "/central-asia-autism-hub/images/editorial/research-lab.jpg"
-featuredImageAlt: "Рабочее место исследователя с компьютером в лаборатории: иллюстрация научного анализа."
+featuredImage: "/central-asia-autism-hub/images/editorial/photos/parent-evidence-article-highlighter.jpg"
+featuredImageAlt: "Человек выделяет маркером текст печатной публикации за столом: иллюстрация критического чтения источников, не подтверждение научной доказательности метода."
 country: kz
 language: ru
 section: parents
