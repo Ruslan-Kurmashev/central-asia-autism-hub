@@ -10,7 +10,7 @@ import path from 'node:path';
 const expected = {
   ru: {
     names: ['Рекомендации и стандарты', 'Работа с семьями', 'Оценка и диагностика', 'Доказательность методов', 'Этика и безопасность', 'Алгоритмы и инструменты'],
-    back: 'Все направления', pending: 'Готовится', cardWord: 'материала', training: 'Обучение для специалистов', published: 4,
+    back: 'Все направления', pending: 'Готовится', cardWord: 'материала', training: 'Обучение для специалистов', published: 5,
   },
   kk: {
     names: ['Ұсынымдар мен стандарттар', 'Отбасылармен жұмыс', 'Бағалау және диагностика', 'Әдістердің дәлелділігі', 'Этика және қауіпсіздік', 'Алгоритмдер мен құралдар'],
@@ -48,7 +48,7 @@ for (const [locale, copy] of Object.entries(expected)) {
   assert.equal((html.match(/class="professional-directory__card"/g) ?? []).length, 6, locale + ': expected six area cards');
   assert.equal((html.match(/class="professional-directory__detail"/g) ?? []).length, 6, locale + ': expected six detail panels');
   assert.equal((html.match(/class="professional-directory__item"/g) ?? []).length, 22, locale + ': expected 22 direct planned resources; international country folders are counted separately');
-  assert.equal((html.match(/class="professional-directory__status"/g) ?? []).length, locale === 'ru' ? 20 : 22, locale + ': only genuinely published direct entries should be linked');
+  assert.equal((html.match(/class="professional-directory__status"/g) ?? []).length, locale === 'ru' ? 19 : 22, locale + ': only genuinely published direct entries should be linked');
   if (locale === 'ru') {
     const articleHref = '/central-asia-autism-hub/kz/ru/professionals/kak-rabotat-s-professionalnymi-rekomendaciyami/';
     assert.ok(html.includes('href="' + articleHref + '"'), 'Russian first professional resource must have a working article link');
@@ -73,6 +73,20 @@ for (const [locale, copy] of Object.entries(expected)) {
     locale === 'ru' ? 'Несогласие, тревога и конфликтные ситуации' : locale === 'kk' ? 'Келіспеушілік, алаңдаушылық және жанжалдар' : 'Managing disagreement, concerns and conflict with families',
   ];
   for (const label of familyTopics) assert.ok(familyPanel.includes(label), locale + ': family roadmap topic missing: ' + label);
+  const c02Href = '/central-asia-autism-hub/kz/ru/professionals/sovmestnye-resheniya-informirovannoe-soglasie-autizm/';
+  if (locale === 'ru') {
+    assert.ok(familyPanel.includes('href="' + c02Href + '"'), 'RU: C02 must link to published canonical article');
+    const c02 = await readFile(path.resolve('dist/kz/ru/professionals/sovmestnye-resheniya-informirovannoe-soglasie-autizm/index.html'), 'utf8');
+    for (const phrase of ['Алгоритм из шести шагов', 'Шесть практических ситуаций', 'Карточка совместного решения', 'professional-family-shared-decisions.svg', 'article-v2__sources']) {
+      assert.ok(c02.includes(phrase), 'C02 article lacks practical component: ' + phrase);
+    }
+    const c02Source = await readFile(path.resolve('src/content/pages/kz/ru/professional-family-shared-decisions-consent.md'), 'utf8');
+    for (const officialRef of ['Z2600000332', 'V2600039918', 'K2000000360', 'Z1300000094']) {
+      assert.ok(c02Source.includes(officialRef), 'C02 missing relevant Kazakhstan primary law: ' + officialRef);
+    }
+  } else {
+    assert.ok(!familyPanel.includes('href="' + c02Href + '"'), locale + ': C02 translation must not silently reuse Russian article');
+  }
   const c01Href = '/central-asia-autism-hub/kz/ru/professionals/kak-obsuzhdat-rezultaty-skrininga-s-semiej/';
   if (locale === 'ru') {
     assert.ok(familyPanel.includes('href="' + c01Href + '"'), 'RU: published C01 article must link to canonical URL');
