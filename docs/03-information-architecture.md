@@ -232,6 +232,19 @@ The `Guidelines and standards` subsection is a **document reference library**, n
 - Other general workflows, checklists and family communication guidance belong in their respective professional categories, with links to source documents rather than repeated document reviews.
 - Preserve equivalent Russian, Kazakh and English navigation entries; publication is shown only where that language's content actually exists. No empty professional-standards navigation group should be created.
 
+### 9.3. Professional family communication content programme (approved 13 October 2026)
+
+`Working with families` is a six-article **practice-focused professional section**, separate from the official document library. The planned sequence and canonical translation keys are:
+
+1. `professionals-c01` - Discussing screening results with families (RU published 2026-10-13).
+2. `professionals-c02` - Shared decision-making and informed consent.
+3. `professionals-c03` - Information sharing among families, healthcare and schools.
+4. `professionals-c04` - Communicating an autism diagnosis to families.
+5. `professionals-c05` - Culturally, linguistically and socially responsive communication.
+6. `professionals-c06` - Addressing disagreement, distress and conflict with families.
+
+**Required editorial contract for each article:** a precise role and scope statement, evidence and official-source links, practical step-by-step process, usable example language, common mistakes, at least one worked situation, an actionable checklist/template, explicit boundaries for Kazakhstan, privacy and consent safeguards where applicable, a distinct editorial cover, and a review date. Clearly label examples and original AutismHub workflow templates rather than attributing them verbatim to clinical guideline bodies. Cross-link legal and international source documents without reproducing their article bodies. Keep KK/EN links in preparation until checked translations are published. Develop and approve articles sequentially.
+
 ## 10. About and trust pages
 
 The main About page is a concise public overview with the mission, the need addressed, five content areas, editorial principles, a regional vision and ways to contribute. A results/impact report is not part of the main About page. Do not imply unverified results or confirmed partnerships.
