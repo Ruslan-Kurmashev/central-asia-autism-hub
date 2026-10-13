@@ -1,6 +1,7 @@
 ---
 import { getCollection } from 'astro:content';
 import SectionCard from '../../../components/SectionCard.astro';
+import HomepageAnnouncements from '../../../components/HomepageAnnouncements.astro';
 import { getEditorialVisual } from '../../../data/editorial-visuals';
 import { getResearchCardVisual } from '../../../data/research-card-visuals';
 import { CONTENT_UI, DATE_LOCALES } from '../../../i18n/content';
@@ -78,27 +79,37 @@ const publishedResearch = (await getCollection(
     (right.data.publishedAt?.getTime() ?? 0) -
     (left.data.publishedAt?.getTime() ?? 0),
 );
-const parentHighlights = publishedPages.filter(entry => entry.data.section === 'parents');
-const helpHighlights = publishedPages.filter(entry => entry.data.section === 'help-kazakhstan');
-const primaryHighlights = [
-  ...parentHighlights.slice(0, 4),
-  ...helpHighlights.slice(0, 3),
-  ...publishedResearch.slice(0, 2),
+// Select recent published articles from different sections to avoid dominance
+// by large batches of professional documents or parent materials.
+const recentCandidates = [
+  ...publishedPages.filter((entry) => entry.data.section !== 'about'),
+  ...publishedResearch,
+].sort((a, b) =>
+  (b.data.publishedAt?.getTime() ?? 0) - (a.data.publishedAt?.getTime() ?? 0),
+);
+const prioritySections: Section[] = [
+  'parents', 'help-kazakhstan', 'research', 'learning', 'professionals',
 ];
-const chosenHighlights = new Set(primaryHighlights.map(entry => entry.data.translationKey));
-const homeMaterials = [
-  ...primaryHighlights,
-  ...[...parentHighlights, ...helpHighlights, ...publishedResearch]
-    .filter(entry => !chosenHighlights.has(entry.data.translationKey)),
-].slice(0, 9);
-const featuredDestination = sectionPath(locale, homeMaterials[0]?.data.section ?? 'parents');
+const featuredUpdates = prioritySections
+  .map((section) => recentCandidates.find((entry) => entry.data.section === section))
+  .filter((entry): entry is (typeof recentCandidates)[number] => Boolean(entry));
+const includedUpdates = new Set(featuredUpdates.map((entry) => entry.collection + ':' + entry.id));
+const extraUpdates = recentCandidates.filter((entry) =>
+  !includedUpdates.has(entry.collection + ':' + entry.id) &&
+  entry.data.section !== 'research' && entry.data.section !== 'professionals',
+).slice(0, Math.max(0, 6 - featuredUpdates.length));
+const homeMaterials = [...featuredUpdates, ...extraUpdates]
+  .sort((a, b) =>
+    (b.data.publishedAt?.getTime() ?? 0) - (a.data.publishedAt?.getTime() ?? 0),
+  )
+  .slice(0, 6);
 const homeV2Labels = locale === 'en'
   ? {
       sectionNavigation: 'Explore website sections',
+      latestKicker: 'PLATFORM UPDATES',
+      latestTitle: 'Latest on AutismHub',
+      latestLead: 'Newly published articles across our main information sections.',
       allMaterials: 'All resources',
-      featuredAction: homeMaterials[0]
-        ? copy.sections[homeMaterials[0].data.section].title
-        : copy.sections.parents.title,
 
       approach: 'Our approach',
       sourcesHeading: 'Our information sources',
@@ -112,10 +123,10 @@ const homeV2Labels = locale === 'en'
   : locale === 'kk'
     ? {
         sectionNavigation: 'Сайт бөлімдері',
+        latestKicker: 'ПЛАТФОРМА ЖАҢАЛЫҚТАРЫ',
+        latestTitle: 'AutismHub-тағы жаңалықтар',
+        latestLead: 'Сайттың әртүрлі бөлімдерінде жақында жарияланған мақалалар мен материалдар.',
         allMaterials: 'Барлық материалдар',
-        featuredAction: homeMaterials[0]
-          ? copy.sections[homeMaterials[0].data.section].title
-          : copy.sections.parents.title,
 
         approach: 'Біздің ұстанымымыз',
         sourcesHeading: 'Біз сүйенетін дереккөздер',
@@ -128,10 +139,10 @@ const homeV2Labels = locale === 'en'
       }
     : {
       sectionNavigation: 'Основные разделы',
+      latestKicker: 'ОБНОВЛЕНИЯ ПЛАТФОРМЫ',
+      latestTitle: 'Новое на AutismHub',
+      latestLead: 'Недавно опубликованные статьи и материалы из разных разделов платформы.',
       allMaterials: 'Все материалы',
-      featuredAction: homeMaterials[0]
-        ? copy.sections[homeMaterials[0].data.section].title
-        : copy.sections.parents.title,
 
       approach: 'Наш подход',
       sourcesHeading: 'На что мы опираемся',
@@ -270,6 +281,7 @@ const dateFormatter = new Intl.DateTimeFormat(DATE_LOCALES[locale], {
         </nav>
 
         <div class="home-v2__content">
+          <HomepageAnnouncements locale={locale} />
           <section
             id="materials"
             class="home-v2__materials"
@@ -278,12 +290,10 @@ const dateFormatter = new Intl.DateTimeFormat(DATE_LOCALES[locale], {
             <div class="container">
               <div class="home-v2__materials-heading">
                 <div>
-                  <p class="home-v2__kicker">{copy.featuredEyebrow}</p>
-                  <h2 id="home-v2-materials-title">{copy.featuredTitle}</h2>
+                  <p class="home-v2__kicker">{homeV2Labels.latestKicker}</p>
+                  <h2 id="home-v2-materials-title">{homeV2Labels.latestTitle}</h2>
+                  <p class="home-v2__materials-description">{homeV2Labels.latestLead}</p>
                 </div>
-                <a href={featuredDestination}>
-                  {homeV2Labels.featuredAction} <span aria-hidden="true">→</span>
-                </a>
               </div>
 
               <div class="home-v2__masonry">
