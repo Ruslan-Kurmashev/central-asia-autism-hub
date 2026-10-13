@@ -130,7 +130,7 @@ for (const locale of ['ru', 'en', 'kk']) {
       sensoryImageOwners.set(src, article);
     }
     if (locale === 'ru' && value(frontmatter, 'section') === 'parents') {
-      const fileKey = file.replace(/\\.mdx?$/, '');
+      const fileKey = file.replace(/\.mdx?$/, '');
       for (const [group, names] of Object.entries(editorialDistinctGroups)) {
         if (!names.has(fileKey)) continue;
         const usedImages = editorialImageOwners[group];
