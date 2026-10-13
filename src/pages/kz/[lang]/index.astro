@@ -62,7 +62,34 @@ const publishedPages = (
     (left.data.publishedAt?.getTime() ?? 0),
 );
 
-const homeMaterials = publishedPages.slice(0, 9);
+// The family-first landing page must not be taken over by a batch of newly
+// published professional legal documents. Keep useful, reviewed resources from
+// families, Kazakhstan services and research visible together.
+const publishedResearch = (await getCollection(
+  'research',
+  ({ data }) =>
+    !data.draft &&
+    data.language === locale &&
+    data.translationStatus !== 'pending' &&
+    Boolean(data.publishedAt),
+)).sort(
+  (left, right) =>
+    (right.data.publishedAt?.getTime() ?? 0) -
+    (left.data.publishedAt?.getTime() ?? 0),
+);
+const parentHighlights = publishedPages.filter(entry => entry.data.section === 'parents');
+const helpHighlights = publishedPages.filter(entry => entry.data.section === 'help-kazakhstan');
+const primaryHighlights = [
+  ...parentHighlights.slice(0, 4),
+  ...helpHighlights.slice(0, 3),
+  ...publishedResearch.slice(0, 2),
+];
+const chosenHighlights = new Set(primaryHighlights.map(entry => entry.data.translationKey));
+const homeMaterials = [
+  ...primaryHighlights,
+  ...[...parentHighlights, ...helpHighlights, ...publishedResearch]
+    .filter(entry => !chosenHighlights.has(entry.data.translationKey)),
+].slice(0, 9);
 const featuredDestination = sectionPath(locale, homeMaterials[0]?.data.section ?? 'parents');
 const homeV2Labels = locale === 'en'
   ? {
@@ -122,6 +149,21 @@ const homeV2Labels = locale === 'en'
     };
 const usedEditorialImages = new Set<string>();
 const homeCards = homeMaterials.map((material, index) => {
+  // Research articles often cite externally hosted, attribution-sensitive figures.
+  // Use the local editorial research visual on landing cards instead of copying
+  // third-party figure artwork without the in-article credit and context.
+  if (material.collection === 'research') {
+    const researchVisual = getEditorialVisual('research', material.data.topic, material.data.title)!;
+    return {
+      material,
+      cardImage: `${import.meta.env.BASE_URL}${researchVisual.src}`,
+      cardImageAlt: locale === 'kk'
+        ? 'Зертханада компьютермен жұмыс істеп отырған зерттеуші.'
+        : locale === 'en'
+          ? 'Researcher working at a computer in a laboratory.'
+          : researchVisual.alt,
+    };
+  }
   if (material.data.featuredImage) {
     return {
       material,

@@ -5,7 +5,7 @@
   --home-surface: #ffffff;
   --home-ink: #0b315f;
   --home-text: #294a68;
-  --home-muted: #6a8196;
+  --home-muted: #50677a;
   --home-blue: #1973b8;
   --home-blue-dark: #0b4f86;
   --home-blue-deep: #08375f;
@@ -200,7 +200,7 @@
   border: 1px solid rgb(255 255 255 / 70%);
   background: rgb(11 79 134 / 64%);
   color: white;
-  font-size: var(--type-meta);
+  font-size: var(--type-control);
   font-weight: 720;
   letter-spacing: 0.035em;
   text-decoration: none;
@@ -293,7 +293,7 @@
 
 .home-v2__materials-heading > a {
   color: var(--home-blue-dark);
-  font-size: var(--type-meta);
+  font-size: var(--type-control);
   font-weight: 700;
   text-decoration: none;
 }
@@ -389,14 +389,12 @@
 }
 
 .home-v2__card p {
-  display: -webkit-box;
-  overflow: hidden;
+  display: block;
+  overflow: visible;
   margin: 0.65rem 0 0;
   color: var(--home-muted);
-  font-size: var(--type-small);
-  line-height: 1.5;
-  -webkit-box-orient: vertical;
-  -webkit-line-clamp: 3;
+  font-size: var(--type-body);
+  line-height: 1.6;
 }
 
 .home-v2__card-meta {
@@ -408,7 +406,7 @@
   padding-top: 1rem;
   border-top: 1px solid var(--home-line);
   color: var(--home-muted);
-  font-size: var(--type-caption);
+  font-size: var(--type-small);
 }
 
 .home-v2__card-meta span {
@@ -472,7 +470,7 @@
   z-index: 2;
   margin-top: auto;
   color: var(--home-blue-dark);
-  font-size: var(--type-meta);
+  font-size: var(--type-control);
   font-weight: 700;
   text-decoration: none;
 }
@@ -489,7 +487,7 @@
 
 .home-v2__card--principles li {
   padding-block: 0.3rem;
-  font-size: var(--type-meta);
+  font-size: var(--type-body);
 }
 
 /* Reference-like bottom block, adapted to evidence rather than sponsors */
@@ -525,7 +523,7 @@
   max-width: 42rem;
   margin: 1.4rem auto 0;
   color: var(--home-muted);
-  font-size: var(--type-meta);
+  font-size: var(--type-body);
 }
 
 /* Footer */
@@ -684,4 +682,13 @@
     height: 11rem;
     max-height: 11rem;
   }
+}
+
+/* Make whole-card links keyboard-visible without changing the approved type scale. */
+.home-v2__card:focus-within {
+  outline: 3px solid var(--home-blue-dark);
+  outline-offset: 3px;
+}
+.home-v2__card h3 a:focus-visible {
+  outline: none;
 }
