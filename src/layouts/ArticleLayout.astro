@@ -2,6 +2,7 @@
 import type { CollectionEntry } from 'astro:content';
 import DevelopmentMilestoneAgeSelector from '../components/DevelopmentMilestoneAgeSelector.astro';
 import { kazakhstanDocumentGroups } from '../data/kazakhstan-professional-documents';
+import { internationalGuidelineCountries } from '../data/international-professional-guidelines';
 import { CONTENT_UI, DATE_LOCALES } from '../i18n/content';
 import { UI } from '../i18n/ui';
 import { articlePath, localePath, sectionPath } from '../lib/urls';
@@ -41,6 +42,18 @@ const kazakhstanGroupPath = kazakhstanGroup
   ? localePath(locale, 'professionals/kazakhstan-documents/' + kazakhstanGroup.id)
   : undefined;
 const kazakhstanHubTitle = locale === 'ru' ? 'Документы Казахстана' : locale === 'kk' ? 'Қазақстан құжаттары' : 'Kazakhstan documents';
+const internationalGuidelineCountry = data.section === 'professionals'
+  ? internationalGuidelineCountries.find(country =>
+      country.documents.some(document => document.translationKey === data.translationKey))
+  : undefined;
+const internationalCountryPath = internationalGuidelineCountry
+  ? localePath(locale, 'professionals/international-guidelines/' + internationalGuidelineCountry.id)
+  : undefined;
+const internationalGuidelineLabel = locale === 'ru'
+  ? 'Международные клинические руководства'
+  : locale === 'kk'
+    ? 'Халықаралық клиникалық нұсқаулықтар'
+    : 'International clinical guidelines';
 const dateFormatter = new Intl.DateTimeFormat(DATE_LOCALES[locale], {
   day: 'numeric',
   month: 'long',
@@ -119,6 +132,14 @@ const researchLabel: Record<Locale, string> = {
                     <a href={kazakhstanHubPath}>{kazakhstanHubTitle}</a>
                     <span aria-hidden="true"> / </span>
                     <a href={kazakhstanGroupPath}>{kazakhstanGroup.title[locale]}</a>
+                  </>
+                )}
+                {internationalGuidelineCountry && (
+                  <>
+                    <span aria-hidden="true"> / </span>
+                    <a href={sectionPath(locale, 'professionals') + '#professional-guidelines'}>{internationalGuidelineLabel}</a>
+                    <span aria-hidden="true"> / </span>
+                    <a href={internationalCountryPath}>{internationalGuidelineCountry.title[locale]}</a>
                   </>
                 )}
                 <span class="article-v2__breadcrumb-current-separator" aria-hidden="true"> / </span>
@@ -323,8 +344,12 @@ const researchLabel: Record<Locale, string> = {
             )}
 
             <footer class="article-v2__footer">
-              <a class="article-v2__back" href={kazakhstanGroup ? kazakhstanGroupPath : sectionPath(locale, data.section)}>
-                {kazakhstanGroup ? <>← {kazakhstanGroup.title[locale]}</> : <>← {copy.backToSection}: {sectionCopy.title}</>}
+              <a class="article-v2__back" href={kazakhstanGroup ? kazakhstanGroupPath : internationalGuidelineCountry ? internationalCountryPath : sectionPath(locale, data.section)}>
+                {kazakhstanGroup
+                  ? <>← {kazakhstanGroup.title[locale]}</>
+                  : internationalGuidelineCountry
+                    ? <>← {internationalGuidelineCountry.title[locale]}</>
+                    : <>← {copy.backToSection}: {sectionCopy.title}</>}
               </a>
 
               {nextEntry && (
