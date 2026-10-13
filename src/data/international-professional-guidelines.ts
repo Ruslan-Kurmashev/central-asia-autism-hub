@@ -63,7 +63,8 @@ export const internationalGuidelineCountries: GuidelineCountry[] = [
           en: 'AAP (2020): Identification, Evaluation, and Management of Children With Autism Spectrum Disorder',
         },
         organisation: 'American Academy of Pediatrics', year: 2020,
-        sourceUrl: 'https://publications.aap.org/pediatrics/article/145/1/e20193447/36917/Identification-Evaluation-and-Management-of',
+        sourceUrl: 'https://doi.org/10.1542/peds.2019-3447',
+        translationKey: 'professionals-intl-us-aap-2020',
       },
     ],
   },
@@ -74,15 +75,17 @@ export const internationalGuidelineCountries: GuidelineCountry[] = [
     documents: [
       {
         id: 'autism-crc-assessment-2023',
-        title: { ru: 'Национальное руководство Австралии по оценке и диагностике аутизма (2-е изд., 2023)', kk: 'Аустралиядағы аутизмді бағалау және диагностикалау жөніндегі ұлттық нұсқаулық (2-бас., 2023)', en: 'National Guideline for the Assessment and Diagnosis of Autism in Australia (2nd ed., 2023)' },
+        title: { ru: 'Национальное руководство Австралии по оценке и диагностике аутизма (2-е издание, обновление 2023)', kk: 'Аустралиядағы аутизмді бағалау және диагностикалау жөніндегі ұлттық нұсқаулық (2-бас., 2023)', en: 'National Guideline for the Assessment and Diagnosis of Autism in Australia (2nd ed., 2023)' },
         organisation: 'Autism CRC', year: 2023,
         sourceUrl: 'https://www.autismcrc.com.au/best-practice/assessment-and-diagnosis',
+        translationKey: 'professionals-intl-au-autism-crc-assessment-2023',
       },
       {
         id: 'autism-crc-supporting-children',
         title: { ru: 'Национальное руководство Австралии по поддержке обучения, участия и благополучия аутичных детей и их семей', kk: 'Аутист балалар мен олардың отбасыларының оқуын, қатысуын және әл-ауқатын қолдау жөніндегі ұлттық нұсқаулық', en: 'National Guideline for Supporting the Learning, Participation, and Wellbeing of Autistic Children and their Families' },
         organisation: 'Autism CRC', year: 2023,
         sourceUrl: 'https://www.autismcrc.com.au/best-practice/supporting-children',
+        translationKey: 'professionals-intl-au-autism-crc-supporting-children',
       },
     ],
   },
