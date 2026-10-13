@@ -2,8 +2,8 @@
 title: "Коммуникация и AAC"
 summary: "Навигатор по коммуникационной поддержке: AAC, понимание речи, разговор, эхолалия, функциональная коммуникация и выбор следующего шага."
 description: "Раздел для родителей о коммуникации при аутизме: когда рассматривать AAC, как различать коммуникационные задачи и куда переходить дальше."
-featuredImage: "/central-asia-autism-hub/images/editorial/technology-tablet.jpg"
-featuredImageAlt: "Планшет с пустым экраном рядом с блокнотом и письменными принадлежностями; иллюстрация цифровых средств коммуникации."
+featuredImage: "/central-asia-autism-hub/images/editorial/photos/parent-communication-gestures-classroom.jpg"
+featuredImageAlt: "Дети и педагог используют жесты во время занятия: один из примеров невербального общения, а не демонстрация конкретной системы AAC."
 country: kz
 language: ru
 section: parents

@@ -367,3 +367,19 @@ Six distinct, licensed Pexels photographs replace generic or repeated cubes, fam
 
 All five existing `feeding-nutrition` article covers are already distinct and retained: `arfid-assessment-support.md`, `behavioral-feeding-interventions.md`, `dietitian-nutrition-support.md`, `sensory-based-feeding-approaches.md`, and `feeding-therapy.md`. Their visual diversity is covered by the parent image QA. No image portrays a known autistic person, proves an intervention effective, or represents a clinical test.
 
+
+## Communication and AAC parent article photography (2026-10-13)
+
+Six verified free-to-use Pexels photographs have been selected to distinguish the published communication and AAC topic cluster. As with the other article photographs, `scripts/sync-editorial-photos.mjs` downloads JPEG files during prebuild and the published website uses self-hosted images, not external photo hotlinks. Photo pages have been checked for their subjects and "Free to use" status. Licence: https://www.pexels.com/license/ .
+
+| Source article | Local cover file in `photos/` | Original Pexels source / photographer | Image meaning and limitations |
+| --- | --- | --- | --- |
+| `communication-aac.md` | `parent-communication-gestures-classroom.jpg` | ChurchArt Online, https://www.pexels.com/photo/kindergarten-kids-performing-in-front-of-a-teacher-inside-classroom-13181131/ | Children and teacher use gestures at a learning activity; one nonverbal communication modality, **not** an identifiable AAC implementation or endorsement of one modality. |
+| `aided-language-modelling.md` | `parent-aac-aided-pointing-pictures.jpg` | kaboompics.com, https://www.pexels.com/photo/close-up-of-two-people-pointing-fingers-at-an-image-in-a-book-7269497/ | Adult and child point to pictures together; shared visual attention, **not** a verified AAC modelling protocol or AAC device. |
+| `communication-partner-training.md` | `parent-communication-partner-conversation.jpg` | Kampus Production, https://www.pexels.com/photo/a-mother-talking-to-her-daughter-6297601/ | Parent and child talking face to face; everyday partner responsiveness, **not** a training session. |
+| `functional-communication-training.md` | `parent-functional-communication-toy-choice.jpg` | George Pak, https://www.pexels.com/photo/parents-handing-toys-to-smiling-little-boy-7985454/ | Parent handing a toy during play; an everyday opportunity for choice or interaction, **not** a functional behavior assessment or FCT procedure. |
+| `pecs.md` | `parent-pecs-picture-choice-cards.jpg` | purrfect meowtastic, https://www.pexels.com/photo/close-up-of-a-child-pointing-at-a-card-lying-on-a-table-with-toys-17925153/ | Child points to an illustrated flashcard; a general picture-use example, **not official PECS material, not a PECS exchange**, and not a substitute for an adapted communication assessment. |
+| `video-modeling.md` | `parent-video-modeling-filming-kitchen.jpg` | Anna Shvets, https://www.pexels.com/photo/phone-on-a-tripod-recording-a-woman-cooking-12674086/ | Smartphone recording a cooking demonstration; explains the idea of filming an everyday task, **not** a researched video-modelling intervention. |
+
+The existing `aac.md` (adult and child with a tablet) and `speech-language-therapy.md` (adult and child reading) covers remain relevant and unchanged. The eight published Russian communication/AAC cover paths are explicitly checked to be distinct by `scripts/check-parent-image-coverage.mjs`. Photographed people are never labelled as autistic or as participating in a specific medical/therapy procedure. The photograph alone does not imply a particular intervention's evidence base.
+

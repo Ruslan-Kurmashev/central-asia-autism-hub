@@ -46,6 +46,16 @@ const sensoryDistinctFiles = new Set([
 ]);
 const sensoryImageOwners = new Map();
 const editorialDistinctGroups = {
+  communicationAAC: new Set([
+    'aac',
+    'aided-language-modelling',
+    'communication-aac',
+    'communication-partner-training',
+    'functional-communication-training',
+    'pecs',
+    'speech-language-therapy',
+    'video-modeling',
+  ]),
   feeding: new Set([
     'arfid-assessment-support',
     'behavioral-feeding-interventions',
