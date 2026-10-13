@@ -474,45 +474,6 @@
   color: white;
 }
 
-.home-v2__card--statement {
-  background: var(--home-blue-soft);
-}
-
-.home-v2__statement {
-  margin: auto 0 1.4rem !important;
-  color: var(--home-blue-deep) !important;
-  font-family: var(--font-editorial);
-  font-size: var(--type-h3) !important;
-  font-style: italic;
-  line-height: 1.38 !important;
-}
-
-.home-v2__card--statement a,
-.home-v2__card--principles a {
-  position: relative;
-  z-index: 2;
-  margin-top: auto;
-  color: var(--home-blue-dark);
-  font-size: var(--type-control);
-  font-weight: 700;
-  text-decoration: none;
-}
-
-.home-v2__card--principles {
-  background: #edf7fb;
-}
-
-.home-v2__card--principles ul {
-  margin: 0.5rem 0 1.2rem;
-  padding-left: 1.15rem;
-  color: var(--home-ink);
-}
-
-.home-v2__card--principles li {
-  padding-block: 0.3rem;
-  font-size: var(--type-body);
-}
-
 /* Reference-like bottom block, adapted to evidence rather than sponsors */
 .home-v2__sources {
   padding: 3.6rem 0 4rem;
