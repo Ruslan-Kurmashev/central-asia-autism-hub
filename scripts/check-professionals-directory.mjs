@@ -10,7 +10,7 @@ import path from 'node:path';
 const expected = {
   ru: {
     names: ['Рекомендации и стандарты', 'Работа с семьями', 'Оценка и диагностика', 'Доказательность методов', 'Этика и безопасность', 'Алгоритмы и инструменты'],
-    back: 'Все направления', pending: 'Готовится', cardWord: 'материала', training: 'Обучение для специалистов', published: 5,
+    back: 'Все направления', pending: 'Готовится', cardWord: 'материала', training: 'Обучение для специалистов', published: 4,
   },
   kk: {
     names: ['Ұсынымдар мен стандарттар', 'Отбасылармен жұмыс', 'Бағалау және диагностика', 'Әдістердің дәлелділігі', 'Этика және қауіпсіздік', 'Алгоритмдер мен құралдар'],
@@ -47,8 +47,8 @@ for (const [locale, copy] of Object.entries(expected)) {
   assert.ok(!html.includes('PRO-G01') && !html.includes('PRO-E03'), locale + ': internal editorial IDs leaked');
   assert.equal((html.match(/class="professional-directory__card"/g) ?? []).length, 6, locale + ': expected six area cards');
   assert.equal((html.match(/class="professional-directory__detail"/g) ?? []).length, 6, locale + ': expected six detail panels');
-  assert.equal((html.match(/class="professional-directory__item"/g) ?? []).length, 23, locale + ': expected 22 planned resources and one cross-link to the existing Kazakhstan protocol');
-  assert.equal((html.match(/class="professional-directory__status"/g) ?? []).length, 23 - copy.published, locale + ': only reviewed published entries should be linked');
+  assert.equal((html.match(/class="professional-directory__item"/g) ?? []).length, 22, locale + ': expected 22 planned direct resources and one Kazakhstan document folder');
+  assert.equal((html.match(/class="professional-directory__status"/g) ?? []).length, 22 - copy.published, locale + ': only reviewed published entries should be linked');
   if (locale === 'ru') {
     const articleHref = '/central-asia-autism-hub/kz/ru/professionals/kak-rabotat-s-professionalnymi-rekomendaciyami/';
     assert.ok(html.includes('href="' + articleHref + '"'), 'Russian first professional resource must have a working article link');
@@ -82,11 +82,11 @@ for (const [locale, copy] of Object.entries(expected)) {
     }
   }
   const subgroupLabels = locale === 'ru'
-    ? ['Основы работы с рекомендациями', 'Международные клинические руководства', 'Клинические протоколы Казахстана', 'Документы Казахстана']
+    ? ['Основы работы с рекомендациями', 'Международные клинические руководства', 'Документы Казахстана: клинические протоколы, законы, приказы и стандарты']
     : locale === 'kk'
-      ? ['Ұсынымдармен жұмыс негіздері', 'Халықаралық клиникалық нұсқаулықтар', 'Қазақстанның клиникалық хаттамалары', 'Қазақстан құжаттары']
-      : ['Working with guidelines', 'International clinical guidelines', 'Kazakhstan clinical protocols', 'Kazakhstan documents'];
-  assert.equal((html.match(/class="professional-directory__subgroup"/g) ?? []).length, 4, locale + ': first category must have four subgroups');
+      ? ['Ұсынымдармен жұмыс негіздері', 'Халықаралық клиникалық нұсқаулықтар', 'Қазақстан құжаттары: клиникалық хаттамалар, заңдар, бұйрықтар және стандарттар']
+      : ['Working with guidelines', 'International clinical guidelines', 'Kazakhstan documents: clinical protocols, laws, orders and standards'];
+  assert.equal((html.match(/class="professional-directory__subgroup"/g) ?? []).length, 3, locale + ': first category must have three subgroups (basics, international and unified Kazakhstan)');
   for (const label of subgroupLabels) assert.ok(html.includes(label), locale + ': missing professional subgroup: ' + label);
   const guidelinesPanel = html.split('id="professional-guidelines"')[1]?.split('id="professional-family-communication"')[0] ?? '';
   const toolsPanel = html.split('id="professional-practice-tools"')[1] ?? '';
@@ -97,6 +97,8 @@ for (const [locale, copy] of Object.entries(expected)) {
       : 'Multidisciplinary coordination and family referral pathways';
   assert.ok(guidelinesPanel && toolsPanel, locale + ': resource panels missing');
   assert.ok(!guidelinesPanel.includes(multidisciplinaryLabel), locale + ': coordination roadmap must not appear under standards');
+  assert.ok(!guidelinesPanel.includes('professional-nice-cg128.svg'), locale + ': unrelated article assets should not appear in directory');
+  assert.ok(!guidelinesPanel.includes('Клинические протоколы Казахстана</h4>'), locale + ': separate Kazakhstan clinical-protocol subgroup must not appear');
   assert.ok(toolsPanel.includes(multidisciplinaryLabel), locale + ': coordination roadmap must appear under tools');
   const introductoryLabel = locale === 'ru'
     ? 'Как работать с профессиональными рекомендациями при аутизме'
@@ -183,12 +185,7 @@ for (const [locale, copy] of Object.entries(expected)) {
     for (const [id, slug, phrase, sourceDomain] of healthcareDocs) {
       const href = '/central-asia-autism-hub/kz/ru/professionals/' + slug + '/';
       assert.ok(healthcare.includes('href="' + href + '"'), id + ': healthcare category must link published article');
-      if (id === 'autism-clinical-protocol') {
-        // A navigational cross-link shares the canonical article, rather than publishing a second review.
-        assert.equal(html.split('href="' + href + '"').length - 1, 1, 'Kazakhstan protocol needs one top-level cross-link');
-      } else {
-        assert.ok(!html.includes('href="' + href + '"'), id + ': no duplicate entry in top-level professionals list');
-      }
+      assert.ok(!html.includes('href="' + href + '"'), id + ': Kazakhstan documents, including clinical protocols, must be linked only inside the unified catalogue');
       const page = await readFile(path.resolve('dist/kz/ru/professionals', slug, 'index.html'), 'utf8');
       assert.ok(page.includes('kz-healthcare-' + id + '.svg'), id + ': hero illustration absent');
       assert.ok(page.includes('Паспорт документа'), id + ': document passport absent');
