@@ -1,0 +1,145 @@
+/* Country-specific professional guideline lists: uses the global design and typography tokens. */
+.international-guidelines {
+  width: min(calc(100% - 2rem), 70rem);
+  margin: 0 auto;
+  padding: clamp(1.5rem, 4vw, 3rem) 0 4rem;
+  color: var(--color-ink);
+  font-family: var(--font-body);
+}
+.international-guidelines__breadcrumb {
+  margin: 0 0 1.4rem;
+  color: var(--color-muted);
+  font-size: var(--type-meta);
+  line-height: 1.6;
+  overflow-wrap: anywhere;
+}
+.international-guidelines__breadcrumb a { color: var(--color-primary-dark); }
+.international-guidelines__breadcrumb span { margin-inline: .3rem; }
+.international-guidelines__back {
+  display: inline-flex;
+  align-items: center;
+  gap: .6rem;
+  padding: .55rem .95rem;
+  margin-bottom: 2rem;
+  border: 1px solid var(--color-border);
+  border-radius: 100px;
+  background: var(--color-surface);
+  color: var(--color-primary-dark);
+  font-size: var(--type-small);
+  font-weight: 700;
+  line-height: 1.5;
+  text-decoration: none;
+}
+.international-guidelines__header { margin-bottom: 2.5rem; }
+.international-guidelines__eyebrow {
+  margin: 0 0 .6rem;
+  color: var(--color-primary-dark);
+  font-size: var(--type-meta);
+  font-weight: 750;
+  line-height: 1.5;
+}
+.international-guidelines h1 {
+  margin: 0 0 1rem;
+  font-size: var(--type-h1);
+  font-weight: 740;
+  line-height: var(--leading-heading);
+  overflow-wrap: anywhere;
+}
+.international-guidelines__header > p:not(.international-guidelines__eyebrow):not(.international-guidelines__stats) {
+  max-width: 60rem;
+  margin: .7rem 0;
+  color: var(--color-muted);
+  font-size: var(--type-body);
+  line-height: 1.65;
+}
+.international-guidelines__stats {
+  margin: 1.25rem 0 0;
+  color: var(--color-muted);
+  font-size: var(--type-small);
+  line-height: 1.5;
+}
+.international-guidelines__stats strong { color: var(--color-primary-dark); }
+.international-guidelines h2 {
+  margin: 0 0 1rem;
+  font-size: var(--type-h2);
+  line-height: var(--leading-heading);
+  font-weight: 750;
+}
+.international-guidelines__list {
+  display: grid;
+  gap: .9rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.international-guidelines__item {
+  display: flex;
+  align-items: flex-start;
+  gap: clamp(.8rem, 2vw, 1.2rem);
+  border: 1px solid var(--color-border);
+  border-radius: 1rem;
+  background: var(--color-surface);
+  padding: clamp(1rem, 2vw, 1.4rem);
+}
+.international-guidelines__number {
+  display: grid;
+  place-items: center;
+  flex: none;
+  width: 2.6rem;
+  height: 2.6rem;
+  border-radius: .7rem;
+  background: var(--color-surface-soft);
+  color: var(--color-primary-dark);
+  font-size: var(--type-small);
+  font-weight: 800;
+  font-variant-numeric: tabular-nums;
+}
+.international-guidelines__content { min-width: 0; }
+.international-guidelines h3 {
+  margin: 0;
+  color: var(--color-ink);
+  font-size: var(--type-card);
+  font-weight: 750;
+  line-height: 1.45;
+  overflow-wrap: anywhere;
+}
+.international-guidelines__meta {
+  margin: .35rem 0 .65rem;
+  color: var(--color-muted);
+  font-size: var(--type-small);
+  line-height: 1.6;
+}
+.international-guidelines__link {
+  display: inline-flex;
+  align-items: baseline;
+  gap: .4rem;
+  margin-top: .25rem;
+  color: var(--color-primary-dark);
+  font-size: var(--type-body);
+  font-weight: 700;
+  line-height: 1.5;
+  text-decoration: underline;
+  text-underline-offset: .2em;
+  overflow-wrap: anywhere;
+}
+.international-guidelines__pending {
+  margin: .3rem 0 .25rem;
+  font-size: var(--type-small);
+  color: var(--color-muted);
+  line-height: 1.6;
+}
+.international-guidelines__disclaimer {
+  margin-top: 2rem;
+  padding: 1.2rem 1.4rem;
+  border-left: 3px solid var(--color-primary);
+  background: var(--color-surface-soft);
+  border-radius: .3rem;
+  color: var(--color-muted);
+  font-size: var(--type-small);
+  line-height: 1.75;
+}
+.international-guidelines a:focus-visible { outline: 3px solid var(--color-primary); outline-offset: 3px; }
+@media (max-width: 38rem) {
+  .international-guidelines { width: min(calc(100% - 1.25rem), 70rem); }
+  .international-guidelines__item { padding: .9rem; gap: .7rem; }
+}
