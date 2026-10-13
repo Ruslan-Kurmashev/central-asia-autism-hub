@@ -317,3 +317,13 @@ The following SVG images are original AutismHub editorial vectors, not illustrat
 | `professional-us-aap-developmental-screening.svg` | AutismHub editorial, 2026-10-13 | Early developmental surveillance, screening calendar and clinical checklist. |
 | `professional-us-aan-autism-sleep.svg` | AutismHub editorial, 2026-10-13 | Autism and sleep clinical practice guideline, moon and clock. |
 | `professional-au-functional-strengths.svg` | AutismHub editorial, 2026-10-13 | Functional strengths, child needs and coordinated reporting framework. |
+
+## Canadian Paediatric Society document artwork (2026-10-13)
+
+Three original AutismHub SVGs, each drawn for one of the three 2019 CPS position statements. They are editorial illustrations, not official CPS graphics or endorsements. No external photography, trademarks, portraits or third-party design assets were included.
+
+| Image file | Author and creation date | Editorial subject |
+| --- | --- | --- |
+| `professional-ca-cps-early-detection.svg` | AutismHub editorial, 2026-10-13 | Development surveillance calendar, targeted early identification and clinical document. |
+| `professional-ca-cps-diagnostic-assessment.svg` | AutismHub editorial, 2026-10-13 | Three professional diagnostic evaluation models leading to one documented result. |
+| `professional-ca-cps-postdiagnostic-care.svg` | AutismHub editorial, 2026-10-13 | Ongoing coordination of health, family and everyday participation after diagnosis. |
