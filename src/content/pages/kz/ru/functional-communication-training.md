@@ -2,8 +2,8 @@
 title: "Обучение функциональной коммуникации: когда поведение заменяет сообщение"
 summary: "Как FCT помогает обучать более доступной коммуникации после функциональной оценки и проверки медицинских, сенсорных и средовых причин."
 description: "Практическое руководство для родителей об обучении функциональной коммуникации: функциональная оценка, доказательства, AAC, безопасность, перенос навыка и мониторинг."
-featuredImage: "/central-asia-autism-hub/images/editorial/technology-tablet.jpg"
-featuredImageAlt: "Планшет с пустым экраном и блокнот: возможные средства для функциональной коммуникации."
+featuredImage: "/central-asia-autism-hub/images/editorial/photos/parent-functional-communication-toy-choice.jpg"
+featuredImageAlt: "Взрослый протягивает ребёнку игрушку во время совместной игры: бытовая ситуация для общения и выбора, не процедура FCT."
 country: kz
 language: ru
 section: parents
