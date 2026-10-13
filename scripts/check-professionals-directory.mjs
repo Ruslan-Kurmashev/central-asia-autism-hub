@@ -10,7 +10,7 @@ import path from 'node:path';
 const expected = {
   ru: {
     names: ['Рекомендации и стандарты', 'Работа с семьями', 'Оценка и диагностика', 'Доказательность методов', 'Этика и безопасность', 'Алгоритмы и инструменты'],
-    back: 'Все направления', pending: 'Готовится', cardWord: 'материала', training: 'Обучение для специалистов', published: 6,
+    back: 'Все направления', pending: 'Готовится', cardWord: 'материала', training: 'Обучение для специалистов', published: 7,
   },
   kk: {
     names: ['Ұсынымдар мен стандарттар', 'Отбасылармен жұмыс', 'Бағалау және диагностика', 'Әдістердің дәлелділігі', 'Этика және қауіпсіздік', 'Алгоритмдер мен құралдар'],
@@ -48,7 +48,7 @@ for (const [locale, copy] of Object.entries(expected)) {
   assert.equal((html.match(/class="professional-directory__card"/g) ?? []).length, 6, locale + ': expected six area cards');
   assert.equal((html.match(/class="professional-directory__detail"/g) ?? []).length, 6, locale + ': expected six detail panels');
   assert.equal((html.match(/class="professional-directory__item"/g) ?? []).length, 22, locale + ': expected 22 direct planned resources; international country folders are counted separately');
-  assert.equal((html.match(/class="professional-directory__status"/g) ?? []).length, locale === 'ru' ? 18 : 22, locale + ': only genuinely published direct entries should be linked');
+  assert.equal((html.match(/class="professional-directory__status"/g) ?? []).length, locale === 'ru' ? 17 : 22, locale + ': only genuinely published direct entries should be linked');
   if (locale === 'ru') {
     const articleHref = '/central-asia-autism-hub/kz/ru/professionals/kak-rabotat-s-professionalnymi-rekomendaciyami/';
     assert.ok(html.includes('href="' + articleHref + '"'), 'Russian first professional resource must have a working article link');
@@ -73,6 +73,21 @@ for (const [locale, copy] of Object.entries(expected)) {
     locale === 'ru' ? 'Несогласие, тревога и конфликтные ситуации' : locale === 'kk' ? 'Келіспеушілік, алаңдаушылық және жанжалдар' : 'Managing disagreement, concerns and conflict with families',
   ];
   for (const label of familyTopics) assert.ok(familyPanel.includes(label), locale + ': family roadmap topic missing: ' + label);
+  const c04Href = '/central-asia-autism-hub/kz/ru/professionals/kak-soobshchat-seme-o-diagnoze-autizma/';
+  if (locale === 'ru') {
+    assert.ok(familyPanel.includes('href="' + c04Href + '"'), 'RU: C04 published article link missing');
+    const c04 = await readFile(path.resolve('dist/kz/ru/professionals/kak-soobshchat-seme-o-diagnoze-autizma/index.html'), 'utf8');
+    for (const phrase of ['Алгоритм сообщения диагноза: восемь шагов', 'Шесть профессиональных сценариев', 'Письменный отчёт: что проверить', 'Карточка итоговой беседы', 'professional-family-diagnosis-conversation.svg', 'article-v2__sources']) {
+      assert.ok(c04.includes(phrase), 'C04 missing professional guide component: ' + phrase);
+    }
+    const source = await readFile(path.resolve('src/content/pages/kz/ru/professional-family-communicating-autism-diagnosis.md'), 'utf8');
+    for (const primary of ['nice.org.uk/guidance/cg128', 'cps.ca/en/documents/position/asd-diagnostic-assessment', 'K2000000360', 'Z1300000094']) {
+      assert.ok(source.includes(primary), 'C04 primary source missing: ' + primary);
+    }
+    assert.ok(source.includes('шести недель'), 'C04 must clarify NICE follow-up is not mandated in Kazakhstan');
+  } else {
+    assert.ok(!familyPanel.includes('href="' + c04Href + '"'), locale + ': C04 unpublished translation must not link to RU article');
+  }
   const c03Href = '/central-asia-autism-hub/kz/ru/professionals/peredacha-informacii-semya-medicina-shkola/';
   if (locale === 'ru') {
     assert.ok(familyPanel.includes('href="' + c03Href + '"'), 'RU: C03 must link to its published canonical URL');
