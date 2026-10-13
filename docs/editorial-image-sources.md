@@ -307,3 +307,13 @@ These are original SVG diagrams created for the AutismHub editorial library. The
 | `professional-au-autism-crc-support.svg` | AutismHub editorial, created 2026-10-13 | Original SVG vector | Autism CRC children's support guideline: connected learning, participation and wellbeing symbols. |
 
 All three are project-created educational visuals, not official graphics, endorsements or trademarks of the named issuing organisations.
+
+## International professional guidance, second series (2026-10-13)
+
+The following SVG images are original AutismHub editorial vectors, not illustrations supplied or endorsed by AAP, AAN or Autism CRC. They contain no patient likenesses, third-party logos or external photographic assets.
+
+| File in public/images/editorial | Author / creation date | Document-specific subject |
+| --- | --- | --- |
+| `professional-us-aap-developmental-screening.svg` | AutismHub editorial, 2026-10-13 | Early developmental surveillance, screening calendar and clinical checklist. |
+| `professional-us-aan-autism-sleep.svg` | AutismHub editorial, 2026-10-13 | Autism and sleep clinical practice guideline, moon and clock. |
+| `professional-au-functional-strengths.svg` | AutismHub editorial, 2026-10-13 | Functional strengths, child needs and coordinated reporting framework. |
