@@ -2,6 +2,7 @@
 import { getCollection } from 'astro:content';
 import SectionCard from '../../../components/SectionCard.astro';
 import { getEditorialVisual } from '../../../data/editorial-visuals';
+import { getResearchCardVisual } from '../../../data/research-card-visuals';
 import { CONTENT_UI, DATE_LOCALES } from '../../../i18n/content';
 import { UI } from '../../../i18n/ui';
 import BaseLayout from '../../../layouts/BaseLayout.astro';
@@ -149,19 +150,18 @@ const homeV2Labels = locale === 'en'
     };
 const usedEditorialImages = new Set<string>();
 const homeCards = homeMaterials.map((material, index) => {
-  // Research articles often cite externally hosted, attribution-sensitive figures.
-  // Use the local editorial research visual on landing cards instead of copying
-  // third-party figure artwork without the in-article credit and context.
+  // Research figures retain their primary-study credit inside each article.
+  // The homepage uses an article-specific self-hosted, licensed editorial image
+  // to prevent duplicate generic laboratory thumbnails.
   if (material.collection === 'research') {
-    const researchVisual = getEditorialVisual('research', material.data.topic, material.data.title)!;
+    const researchVisual = getResearchCardVisual(material.data.slug);
+    if (!researchVisual) {
+      throw new Error('Missing distinct research-card image for: ' + material.data.slug);
+    }
     return {
       material,
       cardImage: `${import.meta.env.BASE_URL}${researchVisual.src}`,
-      cardImageAlt: locale === 'kk'
-        ? 'Зертханада компьютермен жұмыс істеп отырған зерттеуші.'
-        : locale === 'en'
-          ? 'Researcher working at a computer in a laboratory.'
-          : researchVisual.alt,
+      cardImageAlt: researchVisual.alt,
     };
   }
   if (material.data.featuredImage) {
