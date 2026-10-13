@@ -45,6 +45,32 @@ const sensoryDistinctFiles = new Set([
   'sensory-overload-environmental-adaptations',
 ]);
 const sensoryImageOwners = new Map();
+const editorialDistinctGroups = {
+  feeding: new Set([
+    'arfid-assessment-support',
+    'behavioral-feeding-interventions',
+    'dietitian-nutrition-support',
+    'feeding-therapy',
+    'sensory-based-feeding-approaches',
+  ]),
+  behaviorLearning: new Set([
+    'behavior-learning',
+    'differential-reinforcement',
+    'reinforcement',
+    'functional-behavior-assessment',
+    'task-analysis',
+    'self-management',
+    'naturalistic-intervention',
+    'play-based-interventions',
+    'rubi-parent-training',
+    'ndbi',
+    'imitation-reciprocal-imitation',
+  ]),
+};
+const editorialImageOwners = Object.fromEntries(
+  Object.keys(editorialDistinctGroups).map((group) => [group, new Map()]),
+);
+
 
 const totals = {};
 
@@ -103,6 +129,16 @@ for (const locale of ['ru', 'en', 'kk']) {
         `Sensory article photographs must be distinct: ${article}, ${sensoryImageOwners.get(src)}`);
       sensoryImageOwners.set(src, article);
     }
+    if (locale === 'ru' && value(frontmatter, 'section') === 'parents') {
+      const fileKey = file.replace(/\.mdx?$/, '');
+      for (const [group, names] of Object.entries(editorialDistinctGroups)) {
+        if (!names.has(fileKey)) continue;
+        const usedImages = editorialImageOwners[group];
+        assert.ok(!usedImages.has(src),
+          `Article covers within ${group} must be distinct: ${article}, ${usedImages.get(src)}`);
+        usedImages.set(src, article);
+      }
+    }
     withImages++;
   }
   totals[locale] = { published, withImages, parents };
@@ -110,6 +146,10 @@ for (const locale of ['ru', 'en', 'kk']) {
     `Published ${locale} articles lacking a featured image`);
 }
 
+for (const [group, files] of Object.entries(editorialDistinctGroups)) {
+  assert.equal(editorialImageOwners[group].size, files.size,
+    `All ${files.size} ${group} parent covers must be present and distinct`);
+}
 assert.equal(sensoryImageOwners.size, sensoryDistinctFiles.size, 'Eight sensory-topic covers must be present and distinct');
 assert.equal(firstWave.size, requiredDistinct.length,
   'First-wave editorial images are not complete or distinct');
