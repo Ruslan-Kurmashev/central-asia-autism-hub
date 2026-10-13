@@ -2,8 +2,8 @@
 title: "Моделирование AAC: как взрослый показывает использование системы"
 summary: "Как работает моделирование AAC (Aided Language Modelling), что показывают исследования, как давать языковой пример без давления и как оценивать результат."
 description: "Практическое руководство для родителей о моделировании AAC и дополненном языковом вводе: доказательства, отличие моделирования от подсказок, многоязычная AAC, перенос навыка и мониторинг."
-featuredImage: "/central-asia-autism-hub/images/editorial/photos/parent-communication-cards.jpg"
-featuredImageAlt: "Пустые бумажные карточки на кольце: иллюстрация карточных материалов, но не готовая система AAC."
+featuredImage: "/central-asia-autism-hub/images/editorial/photos/parent-aac-aided-pointing-pictures.jpg"
+featuredImageAlt: "Руки взрослого и ребёнка указывают на изображения в книге: пример совместного использования визуальной информации, не демонстрация протокола моделирования AAC."
 country: kz
 language: ru
 section: parents
