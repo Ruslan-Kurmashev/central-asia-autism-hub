@@ -1,0 +1,177 @@
+---
+import BaseLayout from '../../../../layouts/BaseLayout.astro';
+import { localePath, sectionPath } from '../../../../lib/urls';
+import { SITE, SUPPORTED_LOCALES, type Locale } from '../../../../site.config';
+import '../../../../styles/about-subpages.css';
+
+type AboutSubpage = 'team' | 'experts' | 'contact';
+
+export function getStaticPaths() {
+  const pages: AboutSubpage[] = ['team', 'experts', 'contact'];
+  return SUPPORTED_LOCALES.flatMap((locale) =>
+    pages.map((page) => ({
+      params: { lang: locale, page },
+      props: { locale, page },
+    })),
+  );
+}
+
+interface Props {
+  locale: Locale;
+  page: AboutSubpage;
+}
+
+const { locale, page } = Astro.props;
+const labels = {
+  ru: {
+    home: 'Главная',
+    about: 'О проекте',
+    back: 'Вернуться к проекту',
+    collaborate: 'Связаться с проектом',
+    issue: 'Написать через GitHub',
+    publicNotice: 'Обращения GitHub публичны и требуют учётную запись. Не указывайте личные данные детей, диагнозы или медицинские документы.',
+    team: {
+      title: 'Наша команда',
+      lead: 'Люди, которые создают, поддерживают и развивают Autism Hub Kazakhstan.',
+      eyebrow: 'Развитие платформы',
+      heading: 'Основатель проекта',
+      text: 'Руслан Курмашев - основатель инициативы Autism Hub Kazakhstan. Информация о других участниках будет добавляться по мере подтверждения их участия и согласования публичных профилей.',
+    },
+    experts: {
+      title: 'Наши эксперты',
+      lead: 'Авторы, научные консультанты и профильные специалисты, которые участвуют в подготовке и оценке материалов.',
+      eyebrow: 'Экспертное участие',
+      heading: 'Профили экспертов готовятся',
+      text: 'Здесь будут представлены только специалисты, чьё участие подтверждено. Для каждого мы укажем профессиональную область и конкретный вклад: авторство, консультацию или независимое рецензирование, если оно действительно проводилось.',
+    },
+    contact: {
+      title: 'Контакты для связи',
+      lead: 'Вопросы о проекте, предложения по содержанию материалов, сообщения об ошибках и сотрудничество.',
+      eyebrow: 'Обратная связь',
+      heading: 'Как связаться с Autism Hub Kazakhstan',
+      text: 'Сейчас доступен публичный канал обращений в репозитории проекта на GitHub. Через него можно сообщить об ошибке, предложить улучшение или задать вопрос о сотрудничестве.',
+    },
+  },
+  kk: {
+    home: 'Басты бет',
+    about: 'Жоба туралы',
+    back: 'Жоба туралы бетке оралу',
+    collaborate: 'Жобаға хабарласу',
+    issue: 'GitHub арқылы хабарласу',
+    publicNotice: 'GitHub-тағы өтініштер ашық жарияланады және тіркелгі қажет. Балалардың жеке деректерін, диагноздарын немесе медициналық құжаттарын жібермеңіз.',
+    team: {
+      title: 'Біздің команда',
+      lead: 'Autism Hub Kazakhstan платформасын құратын, қолдайтын және дамытатын адамдар.',
+      eyebrow: 'Платформаны дамыту',
+      heading: 'Жобаның негізін қалаушы',
+      text: 'Руслан Курмашев - Autism Hub Kazakhstan бастамасының негізін қалаушы. Басқа қатысушылар туралы ақпарат олардың қатысуы расталғаннан және профильдерін жариялауға келісімі алынғаннан кейін қосылады.',
+    },
+    experts: {
+      title: 'Біздің сарапшылар',
+      lead: 'Материалдарды дайындауға және бағалауға қатысатын авторлар, ғылыми кеңесшілер және бейінді мамандар.',
+      eyebrow: 'Сарапшылардың қатысуы',
+      heading: 'Сарапшылардың профильдері дайындалуда',
+      text: 'Мұнда тек қатысуы расталған мамандар көрсетіледі. Әр маманның кәсіби саласы мен нақты үлесі: авторлық, кеңес беру немесе шын мәнінде жүргізілген тәуелсіз сараптама көрсетіледі.',
+    },
+    contact: {
+      title: 'Байланыс',
+      lead: 'Жобаға қатысты сұрақтар, мазмұн бойынша ұсыныстар, қателер туралы хабарламалар және ынтымақтастық.',
+      eyebrow: 'Кері байланыс',
+      heading: 'Autism Hub Kazakhstan жобасымен қалай байланысуға болады',
+      text: 'Қазір жобаның GitHub репозиторийінде ашық өтініштер арнасы қолжетімді. Ол арқылы қате туралы хабарлап, жақсарту ұсынуға немесе ынтымақтастық жайлы сұрақ қоюға болады.',
+    },
+  },
+  en: {
+    home: 'Home',
+    about: 'About',
+    back: 'Back to About',
+    collaborate: 'Contact the project',
+    issue: 'Contact via GitHub',
+    publicNotice: 'GitHub issues are public and require an account. Do not share children’s personal details, diagnoses or medical documents.',
+    team: {
+      title: 'Our team',
+      lead: 'People building, maintaining and developing Autism Hub Kazakhstan.',
+      eyebrow: 'Developing the platform',
+      heading: 'Project founder',
+      text: 'Ruslan Kurmashev founded the Autism Hub Kazakhstan initiative. Other contributors will be added when their involvement is confirmed and they consent to a public profile.',
+    },
+    experts: {
+      title: 'Our experts',
+      lead: 'Authors, scientific advisers and subject specialists involved in preparing and evaluating materials.',
+      eyebrow: 'Expert contributions',
+      heading: 'Expert profiles are being prepared',
+      text: 'Only confirmed contributors will be listed. Each profile will describe their professional field and exact contribution: authorship, consultation or independent review, where such review actually took place.',
+    },
+    contact: {
+      title: 'Contact us',
+      lead: 'Project enquiries, suggestions about content, error reports and collaboration.',
+      eyebrow: 'Get in touch',
+      heading: 'How to contact Autism Hub Kazakhstan',
+      text: 'A public issue channel is currently available in the project’s GitHub repository. Use it to report an error, suggest an improvement or ask about collaboration.',
+    },
+  },
+} satisfies Record<Locale, {
+  home: string;
+  about: string;
+  back: string;
+  collaborate: string;
+  issue: string;
+  publicNotice: string;
+  team: { title: string; lead: string; eyebrow: string; heading: string; text: string };
+  experts: { title: string; lead: string; eyebrow: string; heading: string; text: string };
+  contact: { title: string; lead: string; eyebrow: string; heading: string; text: string };
+}>;
+
+const copy = labels[locale];
+const current = copy[page];
+const issueUrl = 'https://github.com/Ruslan-Kurmashev/central-asia-autism-hub/issues/new';
+---
+<BaseLayout
+  title={current.title + ' - ' + SITE.name}
+  description={current.lead}
+  locale={locale}
+  currentSection="about"
+  alternatePath={'about/' + page}
+  bodyClass="about-subpage"
+>
+  <article class="about-subpage__page">
+    <header class="about-subpage__hero">
+      <div class="container">
+        <nav class="about-subpage__breadcrumbs" aria-label={copy.about}>
+          <a href={localePath(locale)}>{copy.home}</a>
+          <span aria-hidden="true">/</span>
+          <a href={sectionPath(locale, 'about')}>{copy.about}</a>
+          <span aria-hidden="true">/</span>
+          <span aria-current="page">{current.title}</span>
+        </nav>
+        <p class="about-subpage__eyebrow">{current.eyebrow}</p>
+        <h1>{current.title}</h1>
+        <p class="about-subpage__lead">{current.lead}</p>
+      </div>
+    </header>
+
+    <section class="about-subpage__content">
+      <div class="container">
+        <div class="about-subpage__panel">
+          <h2>{current.heading}</h2>
+          <p>{current.text}</p>
+          {page === 'contact' ? (
+            <>
+              <a class="about-subpage__action" href={issueUrl} rel="external">
+                {copy.issue} <span aria-hidden="true">↗</span>
+              </a>
+              <p class="about-subpage__notice">{copy.publicNotice}</p>
+            </>
+          ) : (
+            <a class="about-subpage__action" href={localePath(locale, 'about/contact')}>
+              {copy.collaborate} <span aria-hidden="true">→</span>
+            </a>
+          )}
+        </div>
+        <a class="about-subpage__back" href={sectionPath(locale, 'about')}>
+          <span aria-hidden="true">←</span> {copy.back}
+        </a>
+      </div>
+    </section>
+  </article>
+</BaseLayout>
