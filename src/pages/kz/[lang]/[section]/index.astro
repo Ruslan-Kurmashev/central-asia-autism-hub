@@ -383,11 +383,11 @@ function russianMaterialWord(count: number) {
                 <h2 id="section-v2-collections-title">
                   {section === 'parents'
                     ? locale === 'ru' ? 'Материалы для родителей' : locale === 'kk' ? 'Ата-аналарға арналған материалдар' : 'Resources for parents'
-                    : section === 'about' ? sectionCopy.title : displayCount > 0 ? sectionV2Text.resourcesAndTopics : sectionV2Text.topics}
+                    : displayCount > 0 ? sectionV2Text.resourcesAndTopics : sectionV2Text.topics}
                 </h2>
-                {(section === 'about' || displayCount === 0) && (
+                {displayCount === 0 && (
                   <p>
-                    {section === 'about' ? sectionCopy.description : sectionV2Text.noMaterials}
+                    {sectionV2Text.noMaterials}
                   </p>
                 )}
               </div>
@@ -591,7 +591,7 @@ function russianMaterialWord(count: number) {
               </div>
             )}
 
-            {section !== 'parents' && section !== 'about' && section !== 'learning' && (
+            {section !== 'parents' && section !== 'learning' && (
               <section
                 class:list={[
                   'section-v2__topic-map-section',
@@ -618,7 +618,7 @@ function russianMaterialWord(count: number) {
               </section>
             )}
 
-            {displayCount === 0 && section !== 'about' && (
+            {displayCount === 0 && (
               <aside
                 class="section-v2__status"
                 aria-labelledby="section-v2-status-title"
