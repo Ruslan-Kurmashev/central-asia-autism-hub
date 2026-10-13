@@ -8,6 +8,7 @@ import { CONTENT_UI, DATE_LOCALES } from '../../../../i18n/content';
 import { UI } from '../../../../i18n/ui';
 import BaseLayout from '../../../../layouts/BaseLayout.astro';
 import { articlePath, localePath, sitePath } from '../../../../lib/urls';
+import { getResearchCardVisual } from '../../../../data/research-card-visuals';
 import {
   SECTIONS,
   SITE,
@@ -446,7 +447,9 @@ function russianMaterialWord(count: number) {
                             {material.data.featuredImage && (
                               <img
                                 class="section-v2__article-thumb"
-                                src={material.data.featuredImage}
+                                src={material.collection === 'research'
+                                  ? `${sitePath()}${getResearchCardVisual(material.data.slug)?.src ?? (() => { throw new Error('Missing research card image for ' + material.data.slug); })()}`
+                                  : material.data.featuredImage}
                                 alt=""
                                 loading="lazy"
                                 decoding="async"
@@ -558,7 +561,9 @@ function russianMaterialWord(count: number) {
                           {material.data.featuredImage && (
                             <img
                               class="section-v2__article-thumb"
-                              src={material.data.featuredImage}
+                              src={material.collection === 'research'
+                                  ? `${sitePath()}${getResearchCardVisual(material.data.slug)?.src ?? (() => { throw new Error('Missing research card image for ' + material.data.slug); })()}`
+                                  : material.data.featuredImage}
                               alt=""
                               loading="lazy"
                               decoding="async"
