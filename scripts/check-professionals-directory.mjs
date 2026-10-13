@@ -95,7 +95,7 @@ for (const [locale, copy] of Object.entries(expected)) {
       const newlyPublished = {
         us: ['aap-2020-vyyavlenie-ocenka-i-soprovozhdenie-ras', 'aap-nablyudenie-za-razvitiem-i-skrining-2020', 'aan-rekomendacii-narusheniya-sna-autizm-2020'],
         au: ['autism-crc-avstraliya-ocenka-i-diagnostika-ras', 'autism-crc-avstraliya-podderzhka-autichnyh-detej', 'autism-crc-framework-ocenki-potrebnostej-detej-2024'],
-        ca: [],
+        ca: ['cps-kanada-rannee-vyyavlenie-autizma-2019', 'cps-kanada-standarty-diagnostiki-autizma-2019', 'cps-kanada-soprovozhdenie-posle-diagnostiki-2019'],
       }[country];
       const publishedCount = locale === 'ru' ? newlyPublished.length : 0;
       assert.equal((detail.match(/class="international-guidelines__pending"/g) ?? []).length, identifiers.length - publishedCount,
@@ -110,6 +110,11 @@ for (const [locale, copy] of Object.entries(expected)) {
         const article = await readFile(path.resolve('dist/kz/ru/professionals', slug, 'index.html'), 'utf8');
         assert.ok(article.includes('article-v2__sources'), 'International guideline must show its sources: ' + slug);
         assert.ok(article.includes('href="' + countryHref + '"'), 'Review must link back to issuing country: ' + slug);
+        if (country === 'ca') {
+          assert.ok(article.includes('cps.ca/en/documents/position/'), 'CPS original source missing: ' + slug);
+          assert.ok(article.includes('Паспорт документа'), 'Document passport missing: ' + slug);
+          assert.ok(article.includes('Казахстан'), 'National applicability warning missing: ' + slug);
+        }
       }
     }
   }
