@@ -169,7 +169,7 @@ for (const [locale, copy] of Object.entries(expected)) {
     assert.ok(html.includes('id="professional-' + id + '"'), locale + ': missing category destination ' + id);
     assert.ok(html.includes('href="#professional-overview"'), locale + ': missing return link');
     assert.ok(
-      html.includes('>' + counts[i] + ' ' + (locale === 'en' ? 'resources' : locale === 'kk' ? 'материал' : (counts[i] === 3 || counts[i] === 4 ? 'материала' : 'материалов')) + '<'),
+      html.includes('>' + counts[i] + ' ' + (locale === 'en' ? 'resources' : locale === 'kk' ? 'материал' : ([11, 12, 13, 14].includes(counts[i] % 100) ? 'материалов' : counts[i] % 10 === 1 ? 'материал' : [2, 3, 4].includes(counts[i] % 10) ? 'материала' : 'материалов')) + '<'),
       locale + ': category count not visible for ' + id,
     );
   });
