@@ -13,6 +13,11 @@ interface Props {
 
 const { locale, currentSection, alternatePath = '', alternatePaths } = Astro.props;
 const homeHref = locale ? localePath(locale) : sitePath();
+const brandRelationship: Record<Locale, string> = {
+  ru: 'Часть инициативы Central Asia Autism Hub',
+  kk: 'Central Asia Autism Hub бастамасының бөлігі',
+  en: 'Part of the Central Asia Autism Hub',
+};
 ---
 
 <header class="site-header">
@@ -28,7 +33,7 @@ const homeHref = locale ? localePath(locale) : sitePath();
       />
       <span class="brand__text">
         <span class="brand__name">{SITE.name}</span>
-        <span class="brand__parent">Part of the Central Asia Autism Hub</span>
+        <span class="brand__parent">{brandRelationship[locale ?? 'en']}</span>
       </span>
     </a>
 
