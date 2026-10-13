@@ -65,11 +65,10 @@ const trainingHref = `${sectionPath(locale, 'learning')}#professionals-learning`
 type Localized = Record<Locale, string>;
 type GuidelineSubgroup = 'basics' | 'international';
 type PlannedResource = { id: string; title: Localized; subgroup?: GuidelineSubgroup };
-const subgroupTitles: Record<GuidelineSubgroup | 'clinicalKz' | 'kazakhstan', Localized> = {
+const subgroupTitles: Record<GuidelineSubgroup | 'kazakhstan', Localized> = {
   basics: { ru: 'Основы работы с рекомендациями', kk: 'Ұсынымдармен жұмыс негіздері', en: 'Working with guidelines' },
   international: { ru: 'Международные клинические руководства', kk: 'Халықаралық клиникалық нұсқаулықтар', en: 'International clinical guidelines' },
-  clinicalKz: { ru: 'Клинические протоколы Казахстана', kk: 'Қазақстанның клиникалық хаттамалары', en: 'Kazakhstan clinical protocols' },
-  kazakhstan: { ru: 'Документы Казахстана: законы, приказы и стандарты', kk: 'Қазақстан құжаттары: заңдар, бұйрықтар және стандарттар', en: 'Kazakhstan documents: laws, orders and standards' },
+  kazakhstan: { ru: 'Документы Казахстана: клинические протоколы, законы, приказы и стандарты', kk: 'Қазақстан құжаттары: клиникалық хаттамалар, заңдар, бұйрықтар және стандарттар', en: 'Kazakhstan documents: clinical protocols, laws, orders and standards' },
 };
 type Group = {
   id: string;
@@ -161,13 +160,6 @@ const groups: Group[] = [
 ];
 const plannedCount = groups.reduce((total, group) => total + group.resources.length, kazakhstanDocumentCount);
 const kazakhstanHubHref = localePath(locale, 'professionals/kazakhstan-documents');
-// Cross-link to the existing document in the Kazakhstan catalogue; never duplicate its article.
-const clinicalProtocolRecord = materials.find((material) => material.data.translationKey === 'professionals-kz-autism-clinical-protocol');
-const clinicalProtocolTitle: Localized = {
-  ru: 'Клинический протокол Казахстана по РАС (2021): содержание и проверка статуса',
-  kk: 'Қазақстандағы АСБ бойынша клиникалық хаттама (2021): мазмұны мен мәртебесін тексеру',
-  en: 'Kazakhstan ASD clinical protocol (2021): content and status verification',
-};
 const publishedCount = materials.length;
 const sectionTitle = UI[locale].sections.professionals.title;
 function countLabel(n: number) {
@@ -285,22 +277,6 @@ const forGroup = (group: Group) => {
           ))}
           {group.id === 'guidelines' && (
             <>
-              <li class="professional-directory__subgroup">
-                <h4>{subgroupTitles.clinicalKz[locale]}</h4>
-              </li>
-              <li class="professional-directory__item">
-                {clinicalProtocolRecord ? (
-                  <a class="professional-directory__item-link" href={articlePath(locale, 'professionals', clinicalProtocolRecord.data.slug)}>
-                    <span class="professional-directory__item-title">{clinicalProtocolRecord.data.title}</span>
-                    <span class="professional-directory__item-arrow" aria-hidden="true">→</span>
-                  </a>
-                ) : (
-                  <span class="professional-directory__item-pending">
-                    <span class="professional-directory__item-title">{clinicalProtocolTitle[locale]}</span>
-                    <span class="professional-directory__status">{copy.preparing}</span>
-                  </span>
-                )}
-              </li>
               <li class="professional-directory__subgroup">
                 <h4><a class="professional-directory__subgroup-link" href={kazakhstanHubHref}>{subgroupTitles.kazakhstan[locale]} <span aria-hidden="true">→</span></a></h4>
               </li>
