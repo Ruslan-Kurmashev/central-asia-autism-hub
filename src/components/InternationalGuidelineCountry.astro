@@ -1,0 +1,102 @@
+---
+import type { CollectionEntry } from 'astro:content';
+import { internationalGuidelineCountries, type GuidelineCountryId } from '../data/international-professional-guidelines';
+import { UI } from '../i18n/ui';
+import { articlePath, localePath, sectionPath } from '../lib/urls';
+import type { Locale } from '../site.config';
+import '../styles/international-professional-guidelines.css';
+
+interface Props {
+  locale: Locale;
+  countryId: GuidelineCountryId;
+  materials: CollectionEntry<'pages'>[];
+}
+
+const { locale, countryId, materials } = Astro.props;
+const country = internationalGuidelineCountries.find((item) => item.id === countryId);
+if (!country) throw new Error('Unknown international guideline country: ' + countryId);
+const copy = {
+  ru: {
+    home: 'Международные клинические руководства', back: 'Вернуться к разделу «Рекомендации и стандарты»',
+    eyebrow: 'Профессиональная библиотека · международные документы',
+    source: 'Открыть официальный первоисточник', review: 'Читать подробный обзор AutismHub',
+    pending: 'Подробный обзор AutismHub готовится',
+    documents: 'Документы страны', count: 'документов', published: 'Опубликовано обзоров',
+    disclaimer: 'Руководства относятся к системе здравоохранения страны выпуска. Они не становятся обязательными для Казахстана автоматически. Прямая ссылка на разработчика не означает, что AutismHub уже выполнил независимую проверку содержания и актуальности всего документа.',
+    intro: 'Выберите документ, чтобы открыть опубликованный обзор AutismHub либо официальный текст организации-разработчика. Для документов без внутреннего обзора указан их первоисточник.',
+  },
+  kk: {
+    home: 'Халықаралық клиникалық нұсқаулықтар', back: '«Ұсынымдар мен стандарттар» бөліміне оралу',
+    eyebrow: 'Кәсіби кітапхана · халықаралық құжаттар',
+    source: 'Ресми түпнұсқаны ашу', review: 'AutismHub толық шолуын оқу',
+    pending: 'AutismHub толық шолуы әзірленуде',
+    documents: 'Елдің құжаттары', count: 'құжат', published: 'Жарияланған шолулар',
+    disclaimer: 'Бұл нұсқаулықтар шыққан елдің денсаулық сақтау жүйесіне арналған және Қазақстан үшін автоматты түрде міндетті емес. Ресми дереккөзге сілтеме AutismHub құжатты толық тексергенін білдірмейді.',
+    intro: 'Жарияланған AutismHub шолуын немесе әзірлеуші ұйымның ресми құжатын ашу үшін материалды таңдаңыз. Шолуы жоқ құжаттар үшін түпнұсқаға сілтеме берілген.',
+  },
+  en: {
+    home: 'International clinical guidelines', back: 'Back to Guidelines and standards',
+    eyebrow: 'Professional reference library · international documents',
+    source: 'Open official primary source', review: 'Read detailed AutismHub review',
+    pending: 'Detailed AutismHub review in preparation',
+    documents: 'Country documents', count: 'documents', published: 'Reviews published',
+    disclaimer: 'These guidelines apply to their issuing jurisdictions and are not automatically binding in Kazakhstan. A direct link to an issuing organisation is not a claim that AutismHub has independently reviewed the document in full or verified its current status.',
+    intro: 'Select a document to read an available AutismHub review or open the original issuing-organisation source. Where no internal review exists, the primary source is provided.',
+  },
+}[locale];
+const publishedById = country.documents.map((document) => ({
+  document,
+  record: document.translationKey
+    ? materials.find((entry) => entry.data.translationKey === document.translationKey)
+    : undefined,
+}));
+const publishedCount = publishedById.filter((entry) => Boolean(entry.record)).length;
+---
+<article class="international-guidelines">
+  <nav class="international-guidelines__breadcrumb" aria-label={locale === 'ru' ? 'Навигация' : locale === 'kk' ? 'Навигация' : 'Breadcrumb'}>
+    <a href={localePath(locale)}>{UI[locale].homeLabel}</a>
+    <span aria-hidden="true"> / </span>
+    <a href={sectionPath(locale, 'professionals') + '#professional-guidelines'}>{copy.home}</a>
+    <span aria-hidden="true"> / </span>
+    <span aria-current="page">{country.title[locale]}</span>
+  </nav>
+  <a class="international-guidelines__back" href={sectionPath(locale, 'professionals') + '#professional-guidelines'}><span aria-hidden="true">←</span> {copy.back}</a>
+  <header class="international-guidelines__header">
+    <p class="international-guidelines__eyebrow">{copy.eyebrow}</p>
+    <h1>{country.title[locale]}</h1>
+    <p>{country.description[locale]}</p>
+    <p>{copy.intro}</p>
+    <p class="international-guidelines__stats">
+      <strong>{country.documents.length}</strong> {copy.count}
+      <span aria-hidden="true"> · </span>
+      {copy.published}: <strong>{publishedCount}</strong>
+    </p>
+  </header>
+  <section aria-labelledby="international-documents-title">
+    <h2 id="international-documents-title">{copy.documents}</h2>
+    <ol class="international-guidelines__list">
+      {publishedById.map(({ document, record }, index) => (
+        <li class="international-guidelines__item">
+          <span class="international-guidelines__number" aria-hidden="true">{index + 1}</span>
+          <div class="international-guidelines__content">
+            <h3>{record ? record.data.title : document.title[locale]}</h3>
+            <p class="international-guidelines__meta">{document.organisation} · {document.year}</p>
+            {record ? (
+              <a class="international-guidelines__link" href={articlePath(locale, 'professionals', record.data.slug)}>
+                {copy.review} <span aria-hidden="true">→</span>
+              </a>
+            ) : (
+              <>
+                <p class="international-guidelines__pending">{copy.pending}</p>
+                <a class="international-guidelines__link" href={document.sourceUrl} target="_blank" rel="noopener noreferrer">
+                  {copy.source} <span aria-hidden="true">↗</span>
+                </a>
+              </>
+            )}
+          </div>
+        </li>
+      ))}
+    </ol>
+  </section>
+  <p class="international-guidelines__disclaimer">{copy.disclaimer}</p>
+</article>
