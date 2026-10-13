@@ -447,3 +447,9 @@ Scientific explainers retain their original openly licensed, explicitly credited
 | `pochemu-zvuki-svet-i-prikosnoveniya-oshchushchayutsya-inache` | `research-sensory-colorful-fidget.jpg` | Zoltán Pethő | https://www.pexels.com/photo/close-up-photo-of-a-fidget-toy-10412871/ | Coloured sensory toy; illustrative only, not a research method or sensory assessment. |
 
 The research-card image-coverage validation enforces one mapped and locally available cover per published research article, uniqueness of cover files, and consistency between the homepage and research section catalogue. Do not automatically assign `research-lab.jpg` to new research entries.
+
+## Cultural and linguistic family communication: professional C05 cover (2026-10-13)
+
+| Local file | Source and date | Subject and provenance |
+| --- | --- | --- |
+| `professional-family-cultural-language-access.svg` | Original AutismHub editorial SVG created 2026-10-13 | Abstract professional consultation document, two distinct dialogue areas and language-access route. Hand-authored geometric vector elements; no third-party photo, logo, official government symbols, individual identity, patient information or licensed illustration. It is not a certified interpreter-service chart or institutional endorsement. |
