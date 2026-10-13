@@ -388,3 +388,9 @@ The existing `aac.md` (adult and child with a tablet) and `speech-language-thera
 | Local file | Source and date | Subject | Licensing and scope |
 | --- | --- | --- | --- |
 | `professional-family-screening-conversation.svg` | Original AutismHub editorial SVG, 2026-10-13 | Screening results sheet, respectful two-way dialogue and agreed next steps | Locally drawn vector, no third-party photos, patient likenesses, screening questionnaire reproductions or copyrighted publisher figures. Does not imply official clinical endorsement. |
+
+## Family communication: shared decisions and informed consent cover (2026-10-13)
+
+| Local file | Source and date | Subject | Licensing and scope |
+| --- | --- | --- | --- |
+| `professional-family-shared-decisions.svg` | Original AutismHub editorial SVG, 2026-10-13 | Three separate decision options converging to an agreed plan, with accessible dialogue and consent symbols | Locally created vector illustration, no external image or patient likeness, no official consent forms or publisher logos; not an endorsement by NICE or Kazakhstani authorities. |
