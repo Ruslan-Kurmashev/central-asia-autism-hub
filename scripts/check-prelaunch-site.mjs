@@ -56,8 +56,13 @@ for (const lang of locales) {
   if (lang === 'ru') {
     check(cards.some(card => card.includes(base + lang + '/research/')),
       id + ': published research explainers are omitted from the homepage');
-    check(cards.some(card => card.includes('images/editorial/research-lab.jpg')),
-      id + ': missing locally hosted research editorial image');
+    const researchCards = cards.filter(card => card.includes(base + lang + '/research/'));
+    check(researchCards.length === 2, id + ': expected two research highlights');
+    check(researchCards.every(card => card.includes('images/editorial/photos/research-')),
+      id + ': research highlights must use locally hosted, topic-specific photographs');
+    const images = researchCards.map(card => card.match(/src="([^"]*\/images\/editorial\/photos\/research-[^"]+\.jpg)"/)?.[1]);
+    check(images.every(Boolean) && new Set(images).size === researchCards.length,
+      id + ': research highlights must not share the same image');
   }
 
   for (const anchor of ['editorial', 'privacy', 'accessibility']) {
