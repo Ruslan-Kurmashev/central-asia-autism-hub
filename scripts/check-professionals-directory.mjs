@@ -67,8 +67,8 @@ for (const [locale, copy] of Object.entries(expected)) {
   }
   const internationalCountries = {
     uk: ['nice-cg128', 'nice-cg170', 'nice-cg142'],
-    us: ['aap-2020'],
-    au: ['autism-crc-assessment-2023', 'autism-crc-supporting-children'],
+    us: ['aap-2020', 'aap-developmental-screening-2020', 'aan-sleep-2020'],
+    au: ['autism-crc-assessment-2023', 'autism-crc-supporting-children', 'au-functional-strengths-framework-2024'],
     ca: ['cps-early-detection', 'cps-diagnostic-standards', 'cps-followup'],
   };
   for (const [country, identifiers] of Object.entries(internationalCountries)) {
@@ -93,8 +93,8 @@ for (const [locale, copy] of Object.entries(expected)) {
         locale + ': missing NICE translations must not be represented as published');
     } else {
       const newlyPublished = {
-        us: ['aap-2020-vyyavlenie-ocenka-i-soprovozhdenie-ras'],
-        au: ['autism-crc-avstraliya-ocenka-i-diagnostika-ras', 'autism-crc-avstraliya-podderzhka-autichnyh-detej'],
+        us: ['aap-2020-vyyavlenie-ocenka-i-soprovozhdenie-ras', 'aap-nablyudenie-za-razvitiem-i-skrining-2020', 'aan-rekomendacii-narusheniya-sna-autizm-2020'],
+        au: ['autism-crc-avstraliya-ocenka-i-diagnostika-ras', 'autism-crc-avstraliya-podderzhka-autichnyh-detej', 'autism-crc-framework-ocenki-potrebnostej-detej-2024'],
         ca: [],
       }[country];
       const publishedCount = locale === 'ru' ? newlyPublished.length : 0;
