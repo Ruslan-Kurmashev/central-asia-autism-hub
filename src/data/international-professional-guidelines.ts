@@ -1,7 +1,7 @@
 import type { Locale } from '../site.config';
 
 export type Localized = Record<Locale, string>;
-export type GuidelineCountryId = 'uk' | 'us' | 'au' | 'ca';
+export type GuidelineCountryId = 'uk' | 'us' | 'au' | 'ca' | 'fr' | 'nz';
 export type InternationalGuideline = {
   id: string;
   title: Localized;
@@ -135,6 +135,72 @@ export const internationalGuidelineCountries: GuidelineCountry[] = [
         organisation: 'Canadian Paediatric Society', year: 2019,
         sourceUrl: 'https://cps.ca/en/documents/position/asd-post-diagnostic-management',
         translationKey: 'professionals-intl-ca-postdiagnostic-followup',
+      },
+    ],
+  },
+  {
+    id: 'fr',
+    title: { ru: 'Франция', kk: 'Франция', en: 'France' },
+    description: {
+      ru: 'Рекомендации Haute Autorité de santé (HAS) по диагностической оценке и поддержке аутичных детей.',
+      kk: 'Haute Autorité de santé (HAS) аутизмді анықтау және балаларды қолдау жөніндегі ұсынымдары.',
+      en: 'Haute Autorité de santé (HAS) recommendations on assessment and support for autistic children.',
+    },
+    documents: [
+      {
+        id: 'fr-has-interventions-2026',
+        title: {
+          ru: 'HAS (2026): вмешательства и жизненный маршрут аутичных детей и подростков',
+          kk: 'HAS (2026): аутист балалар мен жасөспірімдерді қолдау және өмірлік жолы',
+          en: 'HAS (2026): Interventions and life pathways for autistic infants, children and adolescents',
+        },
+        organisation: 'Haute Autorité de santé', year: 2026,
+        sourceUrl: 'https://www.has-sante.fr/jcms/p_3448980/fr/trouble-du-spectre-de-l-autisme-interventions-et-parcours-de-vie-du-nourrisson-de-l-enfant-et-de-l-adolescent',
+        translationKey: 'professionals-intl-fr-has-interventions-2026',
+      },
+      {
+        id: 'fr-has-diagnosis-2018',
+        title: {
+          ru: 'HAS (2018): настораживающие признаки, выявление и диагностическая оценка аутизма',
+          kk: 'HAS (2018): аутизм белгілері, ерте анықтау және диагностика',
+          en: 'HAS (2018): Early signs, detection and diagnostic assessment of autism',
+        },
+        organisation: 'Haute Autorité de santé', year: 2018,
+        sourceUrl: 'https://www.has-sante.fr/upload/docs/application/pdf/2018-02/tsa_-_diagnostic_et_evaluation_chez_lenfant_et_ladolescent_2e_ligne_-_synthese.pdf',
+        translationKey: 'professionals-intl-fr-has-diagnosis-2018',
+      },
+    ],
+  },
+  {
+    id: 'nz',
+    title: { ru: 'Новая Зеландия', kk: 'Жаңа Зеландия', en: 'New Zealand' },
+    description: {
+      ru: 'Aotearoa New Zealand Autism Guideline и официальные тематические дополнения Whaikaha.',
+      kk: 'Aotearoa New Zealand Autism Guideline және Whaikaha тақырыптық толықтырулары.',
+      en: 'Aotearoa New Zealand Autism Guideline and official Whaikaha supplementary papers.',
+    },
+    documents: [
+      {
+        id: 'nz-autism-guideline-2022',
+        title: {
+          ru: 'Aotearoa New Zealand Autism Guideline: третье издание (2022)',
+          kk: 'Aotearoa New Zealand Autism Guideline: үшінші басылым (2022)',
+          en: 'Aotearoa New Zealand Autism Guideline: Third Edition (2022)',
+        },
+        organisation: 'Whaikaha - Ministry of Disabled People', year: 2022,
+        sourceUrl: 'https://www.whaikaha.govt.nz/resources/strategies-and-studies/guidelines/nz-autism-guideline',
+        translationKey: 'professionals-intl-nz-guideline-2022',
+      },
+      {
+        id: 'nz-gender-assessment-2024',
+        title: {
+          ru: 'Whaikaha (2024): гендер и диагностическая оценка аутизма',
+          kk: 'Whaikaha (2024): гендер және аутизмді диагностикалық бағалау',
+          en: 'Whaikaha (2024): Gender in assessment of autism',
+        },
+        organisation: 'Whaikaha - Ministry of Disabled People', year: 2024,
+        sourceUrl: 'https://www.whaikaha.govt.nz/news/news/new-supplementary-paper-updates-aotearoa-new-zealand-autism-guideline',
+        translationKey: 'professionals-intl-nz-gender-2024',
       },
     ],
   },
