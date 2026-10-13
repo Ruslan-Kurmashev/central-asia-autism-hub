@@ -63,6 +63,19 @@ const photos = [
   ['parent-functional-communication-toy-choice.jpg', '7985454'],
   ['parent-pecs-picture-choice-cards.jpg', '17925153'],
   ['parent-video-modeling-filming-kitchen.jpg', '12674086'],
+  ['parent-neuropsych-educational-puzzle.jpg', '34594764'],
+  ['parent-screening-doctor-child.jpg', '5998450'],
+  ['parent-assessment-family-clinic.jpg', '8460030'],
+  ['parent-cooccurring-medical-desk.jpg', '5407251'],
+  ['parent-prompting-guided-puzzle.jpg', '7269455'],
+  ['parent-autism-basics-family-outdoors.jpg', '4871817'],
+  ['parent-joint-attention-play-floor.jpg', '7491262'],
+  ['parent-kz-diagnosis-medical-documents.jpg', '7089620'],
+  ['parent-first-month-written-plan.jpg', '5239918'],
+  ['parent-special-educator-classroom.jpg', '8923153'],
+  ['parent-outcomes-visual-chart.jpg', '7947671'],
+  ['parent-evidence-article-highlighter.jpg', '5537544'],
+  ['parent-kz-referral-multidisciplinary-team.jpg', '7800551'],
 ];
 
 function isJpeg(bytes) {

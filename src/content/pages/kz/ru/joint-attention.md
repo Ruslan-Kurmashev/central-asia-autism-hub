@@ -2,8 +2,8 @@
 title: "Совместное внимание"
 summary: "Что такое совместное внимание (joint attention), как оно выглядит в повседневной жизни, почему оно не равно обязательному зрительному контакту и как понять, помогает ли поддержка."
 description: "Практическое руководство для родителей о совместном внимании при аутизме: инициирование и реакция на совместное внимание, примеры, AAC, игровые стратегии, доказательства и оценка результата."
-featuredImage: "/central-asia-autism-hub/images/editorial/article-who-cst-asian.jpg"
-featuredImageAlt: "Взрослый и ребёнок вместе рассматривают книгу: повседневный пример общего объекта внимания."
+featuredImage: "/central-asia-autism-hub/images/editorial/photos/parent-joint-attention-play-floor.jpg"
+featuredImageAlt: "Взрослый и маленький ребёнок играют с игрушками на полу: возможность разделить внимание на общий предмет, не подтверждённая оценка совместного внимания."
 country: kz
 language: ru
 section: parents
