@@ -92,10 +92,25 @@ for (const [locale, copy] of Object.entries(expected)) {
       if (locale !== 'ru') assert.equal((detail.match(/class="international-guidelines__pending"/g) ?? []).length, 3,
         locale + ': missing NICE translations must not be represented as published');
     } else {
-      assert.equal((detail.match(/class="international-guidelines__pending"/g) ?? []).length, identifiers.length,
-        locale + ': external-only resources must not be represented as reviewed: ' + country);
-      assert.equal((detail.match(/target="_blank" rel="noopener noreferrer"/g) ?? []).length, identifiers.length,
-        locale + ': external documents must open official sources: ' + country);
+      const newlyPublished = {
+        us: ['aap-2020-vyyavlenie-ocenka-i-soprovozhdenie-ras'],
+        au: ['autism-crc-avstraliya-ocenka-i-diagnostika-ras', 'autism-crc-avstraliya-podderzhka-autichnyh-detej'],
+        ca: [],
+      }[country];
+      const publishedCount = locale === 'ru' ? newlyPublished.length : 0;
+      assert.equal((detail.match(/class="international-guidelines__pending"/g) ?? []).length, identifiers.length - publishedCount,
+        locale + ': published/unpublished status mismatch: ' + country);
+      assert.equal((detail.match(/target="_blank" rel="noopener noreferrer"/g) ?? []).length, identifiers.length - publishedCount,
+        locale + ': unreviewed documents must open official sources: ' + country);
+      for (const slug of newlyPublished) {
+        const href = '/central-asia-autism-hub/kz/ru/professionals/' + slug + '/';
+        assert.ok(!html.includes('href="' + href + '"'), 'Published country guideline must only be listed in country directory: ' + slug);
+        if (locale !== 'ru') continue;
+        assert.ok(detail.includes('href="' + href + '"'), 'Published review missing from its country directory: ' + slug);
+        const article = await readFile(path.resolve('dist/kz/ru/professionals', slug, 'index.html'), 'utf8');
+        assert.ok(article.includes('article-v2__sources'), 'International guideline must show its sources: ' + slug);
+        assert.ok(article.includes('href="' + countryHref + '"'), 'Review must link back to issuing country: ' + slug);
+      }
     }
   }
   if (locale === 'ru') {
