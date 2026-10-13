@@ -364,7 +364,7 @@ details.nav-disclosure:not([open]) > .primary-nav {
 }
 
 @media (min-width: 56.001rem) and (hover: hover) {
-  .primary-nav__dropdown:hover > .primary-nav__submenu {
+  .primary-nav__dropdown:hover:not([data-dismissed]) > .primary-nav__submenu {
     display: grid;
   }
 }
