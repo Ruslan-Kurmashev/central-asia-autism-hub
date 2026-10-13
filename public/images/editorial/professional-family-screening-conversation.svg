@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 680" role="img" aria-labelledby="title desc">
+<title id="title">Обсуждение результатов скрининга с семьёй</title>
+<desc id="desc">На светлом фоне профессиональная карта скрининга, два пересекающихся речевых облака и понятный маршрут следующих шагов, без изображения пациентов и диагнозов.</desc>
+<rect width="1200" height="680" fill="#edf4fc"/>
+<circle cx="1090" cy="116" r="165" fill="#dbe9f6"/>
+<circle cx="120" cy="585" r="158" fill="#e5f0f9"/>
+<rect x="156" y="73" width="645" height="533" rx="32" fill="#b2cadd" opacity=".38"/>
+<rect x="137" y="56" width="645" height="533" rx="30" fill="#fff" stroke="#bfd2e4" stroke-width="6"/>
+<path d="M657 56v124h125" fill="#e0ebf7" stroke="#bfd2e4" stroke-width="5"/>
+<rect x="214" y="132" width="337" height="19" rx="9" fill="#265786"/>
+<rect x="214" y="168" width="262" height="12" rx="6" fill="#a1bfd9"/>
+<g fill="none" stroke="#3e6d9b" stroke-width="6"><rect x="214" y="237" width="56" height="56" rx="11"/><rect x="214" y="343" width="56" height="56" rx="11"/><rect x="214" y="449" width="56" height="56" rx="11"/></g>
+<g fill="none" stroke="#2a8185" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"><path d="m225 264 14 15 23-28"/><path d="m225 370 14 15 23-28"/><path d="m225 476 14 15 23-28"/></g>
+<g fill="#a7c5df"><rect x="305" y="251" width="348" height="13" rx="6"/><rect x="305" y="280" width="216" height="10" rx="5"/><rect x="305" y="357" width="329" height="13" rx="6"/><rect x="305" y="388" width="260" height="10" rx="5"/><rect x="305" y="464" width="333" height="13" rx="6"/><rect x="305" y="494" width="213" height="10" rx="5"/></g>
+<path d="M795 215h237c29 0 53 24 53 53v103c0 29-24 53-53 53h-71l-52 46v-46H795c-29 0-53-24-53-53V268c0-29 24-53 53-53Z" fill="#fbe7bb" stroke="#2c5683" stroke-width="7" stroke-linejoin="round"/>
+<g stroke="#2c5683" stroke-width="13" stroke-linecap="round"><path d="M813 297h181"/><path d="M813 336h122"/></g>
+<path d="M837 451h206c25 0 46 21 46 46v46c0 25-21 46-46 46H934l-37 31v-31h-60c-25 0-46-21-46-46v-46c0-25 21-46 46-46Z" fill="#d7efe7" stroke="#2c5683" stroke-width="7" stroke-linejoin="round"/>
+<g fill="none" stroke="#2c8585" stroke-width="10" stroke-linecap="round" stroke-linejoin="round"><path d="m841 519 21 20 32-38"/><path d="M924 514h108"/></g>
+</svg>
