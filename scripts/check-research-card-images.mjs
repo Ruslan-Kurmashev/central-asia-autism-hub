@@ -65,9 +65,18 @@ for (const item of published) {
     'Published research listing does not use its unique local card image: ' + item.slug);
 }
 const home = await readFile(path.join(root, 'dist/kz/ru/index.html'), 'utf8');
-const latest = published.sort((a,b) => b.at-a.at).slice(0, 2);
-for (const item of latest) {
-  assert.ok(home.includes('src="' + base + item.src + '"'),
-    'Homepage research highlight missing its specific photo: ' + item.slug);
+const cards = [...home.matchAll(/<article\\b[^>]*\\bclass="[^"]*\\bhome-v2__card--article\\b[^"]*"[^>]*>[\\s\\S]*?<\\/article>/g)]
+  .map(match => match[0])
+  .filter(card => card.includes(base + 'kz/ru/research/'));
+assert.equal(cards.length, 2, 'Homepage must feature two research explainers');
+const featuredPhotos = new Set();
+for (const card of cards) {
+  const slug = card.match(/href="\\/central-asia-autism-hub\\/kz\\/ru\\/research\\/([a-z0-9-]+)\\/"/)?.[1];
+  assert.ok(slug && visuals.has(slug), 'Homepage research card has an unmapped article slug');
+  const src = base + visuals.get(slug);
+  assert.ok(card.includes('src="' + src + '"'),
+    'Homepage research highlight does not use its own specific photo: ' + slug);
+  featuredPhotos.add(src);
 }
+assert.equal(featuredPhotos.size, cards.length, 'Homepage research card photos must be distinct');
 console.log(`Research visual QA passed: ${published.length} unique documented locally hosted covers; ${latest.length} distinct homepage research highlights.`);
