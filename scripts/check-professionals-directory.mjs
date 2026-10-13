@@ -10,7 +10,7 @@ import path from 'node:path';
 const expected = {
   ru: {
     names: ['Рекомендации и стандарты', 'Работа с семьями', 'Оценка и диагностика', 'Доказательность методов', 'Этика и безопасность', 'Алгоритмы и инструменты'],
-    back: 'Все направления', pending: 'Готовится', cardWord: 'материала', training: 'Обучение для специалистов', published: 8,
+    back: 'Все направления', pending: 'Готовится', cardWord: 'материала', training: 'Обучение для специалистов', published: 9,
   },
   kk: {
     names: ['Ұсынымдар мен стандарттар', 'Отбасылармен жұмыс', 'Бағалау және диагностика', 'Әдістердің дәлелділігі', 'Этика және қауіпсіздік', 'Алгоритмдер мен құралдар'],
@@ -48,7 +48,7 @@ for (const [locale, copy] of Object.entries(expected)) {
   assert.equal((html.match(/class="professional-directory__card"/g) ?? []).length, 6, locale + ': expected six area cards');
   assert.equal((html.match(/class="professional-directory__detail"/g) ?? []).length, 6, locale + ': expected six detail panels');
   assert.equal((html.match(/class="professional-directory__item"/g) ?? []).length, 22, locale + ': expected 22 direct planned resources; international country folders are counted separately');
-  assert.equal((html.match(/class="professional-directory__status"/g) ?? []).length, locale === 'ru' ? 16 : 22, locale + ': only genuinely published direct entries should be linked');
+  assert.equal((html.match(/class="professional-directory__status"/g) ?? []).length, locale === 'ru' ? 15 : 22, locale + ': only genuinely published direct entries should be linked');
   if (locale === 'ru') {
     const articleHref = '/central-asia-autism-hub/kz/ru/professionals/kak-rabotat-s-professionalnymi-rekomendaciyami/';
     assert.ok(html.includes('href="' + articleHref + '"'), 'Russian first professional resource must have a working article link');
@@ -73,6 +73,22 @@ for (const [locale, copy] of Object.entries(expected)) {
     locale === 'ru' ? 'Несогласие, тревога и конфликтные ситуации' : locale === 'kk' ? 'Келіспеушілік, алаңдаушылық және жанжалдар' : 'Managing disagreement, concerns and conflict with families',
   ];
   for (const label of familyTopics) assert.ok(familyPanel.includes(label), locale + ': family roadmap topic missing: ' + label);
+  const c06Href = '/central-asia-autism-hub/kz/ru/professionals/nesoglasie-trevoga-konflikty-rabota-s-semjami/';
+  if (locale === 'ru') {
+    assert.ok(familyPanel.includes('href="' + c06Href + '"'), 'RU: final published C06 article missing from family directory');
+    const c06 = await readFile(path.resolve('dist/kz/ru/professionals/nesoglasie-trevoga-konflikty-rabota-s-semjami/index.html'), 'utf8');
+    for (const phrase of ['Алгоритм деэскалации из восьми шагов', 'Десять ситуаций из практики', 'Шаблон: карточка сложной беседы', 'Внутренний аудит команды: чек-лист', 'professional-family-conflict-deescalation.svg', 'article-v2__sources']) {
+      assert.ok(c06.includes(phrase), 'C06 lacks professional content or sources: ' + phrase);
+    }
+    const c06Source = await readFile(path.resolve('src/content/pages/kz/ru/professional-family-conflict-communication.md'), 'utf8');
+    for (const primary of ['nice.org.uk/guidance/ng197', 'nice.org.uk/guidance/cg128', 'nice.org.uk/guidance/ng10', 'Z2600000332', 'V2600039918', 'K2000000360', 'Z1300000094', 'V2500036047']) {
+      assert.ok(c06Source.includes(primary), 'C06 must cite clinical and Kazakhstan primary sources: ' + primary);
+    }
+    assert.ok(c06Source.includes('не являются автоматическим подтверждением') || c06Source.includes('не являются автоматическим') || c06Source.includes('не являются'), 'C06 requires limits on conflict-related restrictions');
+    assert.ok(c06Source.includes('не могут переноситься на встречу с родителями'), 'C06 must delimit coercive NG10 measures from family disagreements');
+  } else {
+    assert.ok(!familyPanel.includes('href="' + c06Href + '"'), locale + ': C06 translations should remain pending, no Russian-only link');
+  }
   const c05Href = '/central-asia-autism-hub/kz/ru/professionals/kulturnye-yazykovye-osobennosti-obshcheniya-s-semiej/';
   if (locale === 'ru') {
     assert.ok(familyPanel.includes('href="' + c05Href + '"'), 'RU: C05 must link to published language and culture guide');
