@@ -219,6 +219,18 @@ One resource has one canonical URL and one publishing section. Link to it from o
 
 Keep stable `/kz/{language}/learning/` and `/kz/{language}/professionals/` routes for all three languages. Do not replace missing translations silently.
 
+### 9.2. Document-only rule for Guidelines and Standards (13 October 2026)
+
+The `Guidelines and standards` subsection is a **document reference library**, not an index of general advice articles.
+
+- Keep `How to appraise professional autism guidelines` (`professionals-g01`) as the **first, explicit introductory exception**; its established article and URL remain unchanged.
+- All following resources in this subsection must review an **identifiable document**: a named/numbered clinical guideline, Kazakhstan clinical protocol, law, order, regulation or professional standard. Show the issuing authority, identifier where one exists, scope, version/status and primary source; disclose when official currency cannot be independently verified.
+- Organise navigation into international clinical guidelines, Kazakhstan clinical protocols and the existing five-category Kazakhstan document catalogue. The Kazakhstan protocol may be linked from both the clinical-protocol heading and the document catalogue, but has **one canonical article URL**.
+- Do not duplicate the 25 existing Kazakhstan document reviews or change their five-category classification.
+- `Multidisciplinary coordination and family referral pathways` (`professionals-g03`) is a planned **practice-tools** resource, not a standards reference. It should appear under `Workflows and tools`, with no suggestion that it is already published.
+- Other general workflows, checklists and family communication guidance belong in their respective professional categories, with links to source documents rather than repeated document reviews.
+- Preserve equivalent Russian, Kazakh and English navigation entries; publication is shown only where that language's content actually exists. No empty professional-standards navigation group should be created.
+
 ## 10. About and trust pages
 
 The About area contains:
