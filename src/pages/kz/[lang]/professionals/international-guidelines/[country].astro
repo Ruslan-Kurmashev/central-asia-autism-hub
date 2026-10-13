@@ -1,0 +1,35 @@
+---
+import { getCollection } from 'astro:content';
+import InternationalGuidelineCountry from '../../../../../components/InternationalGuidelineCountry.astro';
+import { internationalGuidelineCountries, type GuidelineCountryId } from '../../../../../data/international-professional-guidelines';
+import BaseLayout from '../../../../../layouts/BaseLayout.astro';
+import { SITE, SUPPORTED_LOCALES, type Locale } from '../../../../../site.config';
+
+export function getStaticPaths() {
+  return SUPPORTED_LOCALES.flatMap((locale) =>
+    internationalGuidelineCountries.map((country) => ({
+      params: { lang: locale, country: country.id },
+      props: { locale, countryId: country.id },
+    })),
+  );
+}
+interface Props { locale: Locale; countryId: GuidelineCountryId; }
+const { locale, countryId } = Astro.props;
+const country = internationalGuidelineCountries.find((item) => item.id === countryId);
+if (!country) throw new Error('Unknown international guideline country: ' + countryId);
+const materials = await getCollection('pages', ({ data }) =>
+  data.language === locale && data.section === 'professionals' &&
+  !data.draft && data.translationStatus !== 'pending' &&
+  Boolean(data.publishedAt) && Boolean(data.updatedAt),
+);
+---
+<BaseLayout
+  title={country.title[locale] + ': ' + (locale === 'ru' ? 'клинические руководства' : locale === 'kk' ? 'клиникалық нұсқаулықтар' : 'clinical guidelines') + ' - ' + SITE.name}
+  description={country.description[locale]}
+  locale={locale}
+  currentSection="professionals"
+  alternatePath={'professionals/international-guidelines/' + countryId}
+  bodyClass="professional-library-body"
+>
+  <InternationalGuidelineCountry locale={locale} countryId={countryId} materials={materials} />
+</BaseLayout>
