@@ -210,7 +210,7 @@ After the first repeated-cover audit (PR #112), 19 **new distinct Pexels photos*
 
 The same new featured image is used for the listing thumbnail and article hero (the visual identity of one article). No other article should be assigned that image. Previously existing distinct photos remain attributed in earlier tables.
 
-**Three duplicate public slug pairs resolved without deleting manuscripts:** `autism-myths-facts.md`, `autism-sensory-differences.md`, and `why-autism-happens.md` are retained in the source repository as `draft: true`. Their previously overlapping public slugs continue to serve the longer existing canonical sources `mify-i-fakty-ob-autizme.md`, `sensornye-osobennosti-pri-autizme.md`, and `pochemu-voznikaet-autizm.md`. Do not delete or rewrite these unpublished alternatives without content reconciliation and a review of references. No redirect is required: the public URLs stay unchanged.
+**Three duplicate public slug pairs resolved without deleting manuscripts:** `autism-myths-facts.md`, `autism-sensory-differences.md`, and `why-autism-happens.md` are retained in the source repository as `draft: true` with distinct internal archive-only slugs and translation keys to avoid accidental content-loader collisions. Their originally published URLs continue to serve the longer existing canonical sources `mify-i-fakty-ob-autizme.md`, `sensornye-osobennosti-pri-autizme.md`, and `pochemu-voznikaet-autizm.md`. Do not delete or rewrite these unpublished alternatives without content reconciliation and a review of references. No redirect is required: the public URLs stay unchanged.
 
 ## Professionals: original guideline appraisal illustration (2026-10-12)
 

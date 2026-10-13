@@ -8,8 +8,8 @@ country: kz
 language: ru
 section: parents
 topic: autism-basics
-slug: pochemu-voznikaet-autizm
-translationKey: parents-why-autism-happens
+slug: pochemu-voznikaet-autizm-archived-draft
+translationKey: parents-why-autism-happens-archived-draft
 translationStatus: source
 audience:
   - parents

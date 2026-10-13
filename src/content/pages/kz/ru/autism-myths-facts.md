@@ -8,8 +8,8 @@ country: kz
 language: ru
 section: parents
 topic: autism-basics
-slug: mify-i-fakty-ob-autizme
-translationKey: parents-autism-myths-facts
+slug: mify-i-fakty-ob-autizme-archived-draft
+translationKey: parents-autism-myths-facts-archived-draft
 translationStatus: source
 audience:
   - parents

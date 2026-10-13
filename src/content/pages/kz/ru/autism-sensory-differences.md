@@ -8,8 +8,8 @@ country: kz
 language: ru
 section: parents
 topic: autism-basics
-slug: sensornye-osobennosti-pri-autizme
-translationKey: parents-autism-sensory-differences
+slug: sensornye-osobennosti-pri-autizme-archived-draft
+translationKey: parents-autism-sensory-differences-archived-draft
 translationStatus: source
 audience:
   - parents
