@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 680" role="img" aria-labelledby="title desc">
+<title id="title">CPS early autism detection</title>
+<desc id="desc">An editorial illustration of a developmental observation checklist, a timeline and a referral arrow. Not an official Canadian Paediatric Society graphic.</desc>
+<rect width="1200" height="680" fill="#edf4fc"/>
+<circle cx="88" cy="103" r="132" fill="#dbeaf8"/><circle cx="1100" cy="585" r="160" fill="#d9eaf8"/>
+<rect x="165" y="92" width="615" height="508" rx="30" fill="#b0c9df" opacity=".27"/>
+<rect x="144" y="72" width="615" height="508" rx="26" fill="#fff" stroke="#bfd4e8" stroke-width="6"/>
+<rect x="210" y="138" width="315" height="19" rx="9" fill="#174b98"/>
+<rect x="210" y="181" width="420" height="13" rx="6" fill="#9cb9d2"/>
+<g stroke="#2a6f95" stroke-width="6" stroke-linecap="round" fill="none">
+<rect x="210" y="246" width="35" height="35" rx="7"/><path d="m220 263 9 9 18-19"/>
+<rect x="210" y="320" width="35" height="35" rx="7"/><path d="m220 338 9 9 18-19"/>
+<rect x="210" y="394" width="35" height="35" rx="7"/><path d="m220 411 9 9 18-19"/>
+</g>
+<g fill="#bed2e3"><rect x="274" y="255" width="340" height="15" rx="7"/><rect x="274" y="329" width="288" height="15" rx="7"/><rect x="274" y="404" width="332" height="15" rx="7"/></g>
+<rect x="806" y="185" width="290" height="260" rx="24" fill="#fefefe" stroke="#315f94" stroke-width="7"/>
+<path d="M806 245h290" stroke="#315f94" stroke-width="7"/>
+<path d="M866 164v56M1033 164v56" stroke="#315f94" stroke-width="10" stroke-linecap="round"/>
+<g fill="#f2ca7b"><rect x="836" y="290" width="63" height="52" rx="10"/><rect x="920" y="290" width="63" height="52" rx="10"/><rect x="1004" y="290" width="63" height="52" rx="10"/></g>
+<g stroke="#2d8e89" stroke-width="9" stroke-linecap="round" stroke-linejoin="round" fill="none">
+<path d="m847 314 17 17 25-32M934 314l17 17 24-32M1016 314l17 17 24-32"/>
+<path d="M720 504h140m-23-21 23 21-23 21"/>
+</g>
+</svg>
