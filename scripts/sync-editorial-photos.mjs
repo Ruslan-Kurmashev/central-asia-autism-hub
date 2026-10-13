@@ -76,6 +76,16 @@ const photos = [
   ['parent-outcomes-visual-chart.jpg', '7947671'],
   ['parent-evidence-article-highlighter.jpg', '5537544'],
   ['parent-kz-referral-multidisciplinary-team.jpg', '7800551'],
+  ['research-development-life-paths.jpg', '18999124'],
+  ['research-profiles-diverse-samples.jpg', '5428256'],
+  ['research-communication-people-conversing.jpg', '7972533'],
+  ['research-brain-cells-microscope.jpg', '9574392'],
+  ['research-girls-diagnosis-conversation.jpg', '5998448'],
+  ['research-early-parent-child-play.jpg', '8504273'],
+  ['research-eye-tracking-closeup-eye.jpg', '322070'],
+  ['research-genetics-lab-pipette.jpg', '8442560'],
+  ['research-vaccination-medical-syringe.jpg', '4492048'],
+  ['research-sensory-colorful-fidget.jpg', '10412871'],
 ];
 
 function isJpeg(bytes) {
