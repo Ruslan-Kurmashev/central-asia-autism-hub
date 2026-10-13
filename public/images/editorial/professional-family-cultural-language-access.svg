@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 680" role="img" aria-labelledby="t d">
+<title id="t">Культурная и языковая доступность профессиональной помощи</title>
+<desc id="d">Оригинальная схематическая профессиональная композиция: два разных диалоговых облака для многоязычной беседы, условный документ и маршрут доступной помощи, без людей и персональных данных.</desc>
+<rect width="1200" height="680" fill="#edf4fa"/>
+<circle cx="1029" cy="90" r="173" fill="#dcebf7"/><circle cx="159" cy="580" r="164" fill="#deedf7"/>
+<rect x="170" y="80" width="618" height="503" rx="28" fill="#a9c7dd" opacity=".3"/>
+<rect x="150" y="60" width="618" height="503" rx="28" fill="#ffffff" stroke="#b8d2e7" stroke-width="6"/>
+<rect x="218" y="120" width="347" height="16" rx="8" fill="#295982"/>
+<rect x="218" y="155" width="250" height="12" rx="6" fill="#a0bed8"/>
+<rect x="217" y="218" width="493" height="132" rx="19" fill="#e8f2f9"/>
+<path d="M250 257h250M250 292h402" stroke="#8cb4d2" stroke-width="15" stroke-linecap="round"/>
+<rect x="217" y="376" width="493" height="131" rx="19" fill="#edf5e9"/>
+<path d="M252 408h309M252 443h392" stroke="#aec5b4" stroke-width="15" stroke-linecap="round"/>
+<path d="m613 423 22 22 39-49" fill="none" stroke="#2c8280" stroke-width="9" stroke-linecap="round" stroke-linejoin="round"/>
+<g>
+<path d="M789 158q0-25 25-25h277q25 0 25 25v136q0 25-25 25H941l-55 44v-44h-72q-25 0-25-25z" fill="#ffffff" stroke="#2c5d88" stroke-width="7"/>
+<path d="M818 183h205M818 228h155M818 272h176" fill="none" stroke="#abc9de" stroke-width="13" stroke-linecap="round"/>
+<path d="M854 372q0-24 24-24h203q24 0 24 24v108q0 24-24 24h-73l-43 37v-37h-87q-24 0-24-24z" fill="#fff0d1" stroke="#2c5d88" stroke-width="7"/>
+<path d="M894 394h165M894 435h125" fill="none" stroke="#d1b782" stroke-width="13" stroke-linecap="round"/>
+</g>
+<circle cx="819" cy="553" r="61" fill="#e1f0e5" stroke="#2c5d88" stroke-width="6"/>
+<circle cx="819" cy="553" r="35" fill="none" stroke="#2d8280" stroke-width="7"/>
+<path d="M786 553h66M819 520c-17 21-17 44 0 66M819 520c17 21 17 44 0 66M819 519v68" stroke="#2d8280" stroke-width="5" fill="none"/>
+<path d="M877 559h154" fill="none" stroke="#2c5d88" stroke-width="9" stroke-linecap="round" stroke-dasharray="12 18"/>
+<path d="m1013 544 20 15-20 15" fill="none" stroke="#2c5d88" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
