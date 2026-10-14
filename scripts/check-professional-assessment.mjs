@@ -25,7 +25,7 @@ for (const [locale,[title,count,ready]] of Object.entries(copy)) {
   assert.equal((html.match(/class="assessment-hub__group"/g)||[]).length,5,locale+': five stages are required');
   assert.equal((html.match(/class="assessment-hub__article"/g)||[]).length,count,locale+': twelve article cards are required');
   assert.equal((html.match(/assessment-hub__download--ready/g)||[]).length,ready,locale+': downloaded resources must match genuine translations');
-  assert.equal((html.match(/class="assessment-hub__download"/g)||[]).length,10,locale+': ten unique planned/downloadable records required');
+  assert.equal((html.match(/class="assessment-hub__download(?: |")/g)||[]).length,10,locale+': ten unique planned/downloadable records required');
   for(const stage of stages) {
     const href=base+'/kz/'+locale+'/professionals/assessment/'+stage+'/';
     assert.ok(html.includes('href="'+href+'"'),locale+': stage link missing '+stage);
@@ -56,5 +56,5 @@ const source=await readFile(path.resolve('src/data/professional-assessment.ts'),
 assert.ok(source.includes('www.mchatscreen.com/mchat-rf/'),'Do not reproduce copyrighted tests; point to official source');
 assert.ok(!source.includes('scoreItems') && !source.includes('testQuestions'),'Do not bundle copyrighted test questions/scoring');
 const generator=await readFile(path.resolve('scripts/generate-assessment-downloads.py'),'utf8');
-assert.ok(generator.includes('NICE CG128')&&generator.includes('not a diagnostic questionnaire')===false ? true : generator.includes('NOT a diagnostic questionnaire') || generator.includes('NOT a diagnostic'),'Source attribution / limitations missing');
+assert.ok(generator.includes('NICE CG128') && generator.includes('NOT a diagnostic questionnaire'), 'Source attribution or clinical limitations missing');
 console.log('Assessment toolkit PASS: 5 localized stage routes each, 12 planned articles, 10 catalogue items, 3 downloadable Russian sets, 5 verified files.');
