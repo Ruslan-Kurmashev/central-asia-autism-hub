@@ -106,11 +106,9 @@ const homeMaterials = [...featuredUpdates, ...extraUpdates]
   .slice(0, 6);
 const homeV2Labels = locale === 'en'
   ? {
-      sectionNavigation: 'Explore website sections',
       latestKicker: 'PLATFORM UPDATES',
       latestTitle: 'Latest on AutismHub',
       latestLead: 'Newly published articles across our main information sections.',
-      allMaterials: 'All resources',
 
       approach: 'Our approach',
       sourcesHeading: 'Our information sources',
@@ -123,11 +121,9 @@ const homeV2Labels = locale === 'en'
     }
   : locale === 'kk'
     ? {
-        sectionNavigation: 'Сайт бөлімдері',
         latestKicker: 'ПЛАТФОРМА ЖАҢАЛЫҚТАРЫ',
         latestTitle: 'AutismHub-тағы жаңалықтар',
         latestLead: 'Сайттың әртүрлі бөлімдерінде жақында жарияланған мақалалар мен материалдар.',
-        allMaterials: 'Барлық материалдар',
 
         approach: 'Біздің ұстанымымыз',
         sourcesHeading: 'Біз сүйенетін дереккөздер',
@@ -139,11 +135,9 @@ const homeV2Labels = locale === 'en'
         ],
       }
     : {
-      sectionNavigation: 'Основные разделы',
       latestKicker: 'ОБНОВЛЕНИЯ ПЛАТФОРМЫ',
       latestTitle: 'Новое на AutismHub',
       latestLead: 'Недавно опубликованные статьи и материалы из разных разделов платформы.',
-      allMaterials: 'Все материалы',
 
       approach: 'Наш подход',
       sourcesHeading: 'На что мы опираемся',
@@ -215,14 +209,6 @@ const featuredMaterials = publishedPages
   .filter((entry) => entry.data.section === 'parents')
   .slice(0, 3);
 
-const topicBarSections: Section[] = [
-  'parents',
-  'help-kazakhstan',
-  'research',
-  'learning',
-  'professionals',
-];
-
 const dateFormatter = new Intl.DateTimeFormat(DATE_LOCALES[locale], {
   day: 'numeric',
   month: 'long',
@@ -266,23 +252,6 @@ const dateFormatter = new Intl.DateTimeFormat(DATE_LOCALES[locale], {
             </a>
           </div>
         </section>
-
-        <nav class="home-v2__topicbar" aria-label={homeV2Labels.sectionNavigation}>
-          <div class="container">
-            <ul>
-              <li>
-                <a href="#materials">{homeV2Labels.allMaterials}</a>
-              </li>
-              {topicBarSections.map((section) => (
-                <li>
-                  <a href={sectionPath(locale, section)}>
-                    {copy.sections[section].title}
-                  </a>
-                </li>
-              ))}
-            </ul>
-          </div>
-        </nav>
 
         <div class="home-v2__content">
           <HomepageAnnouncements locale={locale} />
