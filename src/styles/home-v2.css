@@ -654,7 +654,7 @@
   }
 
   .home-v2__hero-title-line--supporting {
-    font-size: var(--type-lead);
+    font-size: var(--type-body);
   }
 
   .home-v2__lead {
@@ -955,4 +955,10 @@
   .home-v2__event-date { grid-row: 2; grid-column: 1; justify-self: start; max-width: 12rem; }
   .home-v2__event-content { grid-row: 3; grid-column: 1; }
   .home-v2__events-empty { padding: 1.1rem; }
+}
+
+@media (max-width: 20rem) {
+  .home-v2__hero-title-line--supporting {
+    font-size: var(--type-small);
+  }
 }
