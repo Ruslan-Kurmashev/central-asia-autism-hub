@@ -3,6 +3,7 @@ import { getCollection, render, type CollectionEntry } from 'astro:content';
 import LearningCourseView from '../../../../components/LearningCourseView.astro';
 import BaseLayout from '../../../../layouts/BaseLayout.astro';
 import { SITE, type Locale } from '../../../../site.config';
+import { hasOnSiteLearning } from '../../../../lib/learning';
 
 export async function getStaticPaths() {
   const all = await getCollection('learning', ({ data }) =>
@@ -11,7 +12,7 @@ export async function getStaticPaths() {
     // Only publish a separate AutismHub learning page when visitors can
     // actually study here. A plain copy of an external catalogue listing
     // must never generate an additional internal route.
-    (data.lessons ?? []).some((lesson) => Boolean(lesson.youtubeVideoId)),
+    hasOnSiteLearning(data),
   );
   const used = new Set<string>();
   return all.map((entry) => {
