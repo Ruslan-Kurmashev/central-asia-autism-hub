@@ -79,7 +79,7 @@ sources:
     accessedAt: 2026-10-15
   - title: "Human pluripotent stem cell and organoid models of autism: opportunities and limitations"
     url: "https://pubmed.ncbi.nlm.nih.gov/37344450/"
-    organisation: "Frontiers in Cell and Developmental Biology / PubMed"
+    organisation: "Translational Psychiatry"
     publicationYear: 2023
     note: "Возможности и ограничения изучения раннего развития нервной ткани в клеточных моделях и органоидах."
     accessedAt: 2026-10-15
