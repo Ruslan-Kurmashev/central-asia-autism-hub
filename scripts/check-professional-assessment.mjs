@@ -7,7 +7,7 @@ const base='/central-asia-autism-hub';
 const stages=['early-identification','instruments','comprehensive-assessment','differential-assessment','reporting-followup'];
 const ruNames=['Раннее выявление и маршрут ребёнка','Диагностические инструменты','Комплексная диагностическая оценка','Дифференциальная диагностика и сопутствующие состояния','Заключение и дальнейшее наблюдение'];
 const counts=[2,3,3,2,2];
-const files=['early-detection-pathway-ru.pdf','diagnostic-instrument-comparison-ru.pdf','diagnostic-instrument-comparison-ru.csv','diagnostic-instrument-comparison-ru.xlsx','developmental-history-template-ru.docx','developmental-history-template-ru.pdf','preassessment-checklist-ru.pdf','preassessment-checklist-ru.docx'];
+const files=['early-detection-pathway-ru.pdf','diagnostic-instrument-comparison-ru.pdf','diagnostic-instrument-comparison-ru.csv','diagnostic-instrument-comparison-ru.xlsx','developmental-history-template-ru.docx','developmental-history-template-ru.pdf','preassessment-checklist-ru.pdf','preassessment-checklist-ru.docx','structured-observation-ru.pdf','structured-observation-ru.docx','differential-assessment-map-ru.pdf','differential-assessment-map-ru.docx','cooccurring-conditions-checklist-ru.pdf','cooccurring-conditions-checklist-ru.docx','cooccurring-conditions-sleep-log-ru.csv','multidisciplinary-team-meeting-ru.pdf','multidisciplinary-team-meeting-ru.docx','diagnostic-report-outline-ru.pdf','diagnostic-report-outline-ru.docx','reassessment-action-plan-ru.pdf','reassessment-action-plan-ru.docx'];
 const a01Href=base+'/kz/ru/professionals/rannee-vyyavlenie-autizma-marshrut-specialista/';
 
 for(const locale of ['ru','kk','en']) {
@@ -27,7 +27,7 @@ for(const locale of ['ru','kk','en']) {
     const stage=await readFile(path.resolve('dist/kz',locale,'professionals/assessment',stages[i],'index.html'),'utf8');
     assert.ok(stage.includes('assessment-hub__stage-articles'),locale+': no article list at '+stages[i]);
     assert.equal((stage.match(/class="assessment-hub__stage-article"/g)||[]).length,counts[i],locale+': wrong scoped article count '+stages[i]);
-    assert.ok(stage.includes('assessment-hub__stage-section')&&stage.includes('assessment-hub__stage-files')===([0,1,2].includes(i) && locale==='ru'),locale+': incorrect ready-file visibility '+stages[i]);
+    assert.ok(stage.includes('assessment-hub__stage-section')&&stage.includes('assessment-hub__stage-files')===(locale==='ru'),locale+': incorrect ready-file visibility '+stages[i]);
     assert.ok(stage.includes('href="'+baseRoute+'tools/"'),locale+': must offer library navigation within each stage');
     assert.ok(!stage.includes('assessment-flow__card'),locale+': group pages must not repeat entire main flow');
     if(i<4)assert.ok(stage.includes('href="'+baseRoute+stages[i+1]+'/'),locale+': next stage navigation missing');
@@ -37,9 +37,9 @@ for(const locale of ['ru','kk','en']) {
     }
   }
   if(locale==='ru') assert.ok(tools.includes('data-assessment-category')&&tools.includes('data-assessment-search'), 'RU: tools filters missing');
-  const expectedReady=locale==='ru'?4:0;
+  const expectedReady=locale==='ru'?10:0;
   assert.equal((tools.match(/class="assessment-hub__tool"/g)||[]).length,expectedReady,locale+': only actually released locale-specific resource sets should display');
-  assert.ok(tools.includes('assessment-hub__planned-tools'),locale+': remaining planned resources need a small disclosure');
+  assert.ok(tools.includes('assessment-hub__planned-tools')===(locale!=='ru'),locale+': upcoming list should appear only for missing language resources');
   if(locale==='ru') {
     for(const file of files) {
       const url=base+'/downloads/assessment/'+file;
@@ -77,6 +77,24 @@ for(const guide of publishedGuides) {
     assert.ok(!listing.includes('href="'+url+'"'),locale+': cannot substitute RU guide for untranslated '+guide.key);
   }
 }
+const officialSources=[
+ 'https://www.who.int/publications/m/item/icf-checklist',
+ 'https://www.autismcrc.com.au/best-practice/sites/default/files/resources/Assessment_and_diagnosis_pathway_A3_Assessment_and_Diagnosis_Guideline.pdf',
+ 'https://www.cdc.gov/act-early/resources/',
+ 'https://www.mchatscreen.com/mchat-rf/'
+];
+for(const locale of ['ru','kk','en']){
+ const html=await readFile(path.resolve('dist/kz',locale,'professionals/assessment/tools/index.html'),'utf8');
+ assert.ok(html.includes('assessment-hub__external-resources'),locale+': official originals must be distinguished from AutismHub files');
+ for(const uri of officialSources) assert.ok(html.includes('href="'+uri+'"'),locale+': original source missing '+uri);
+}
+const specs=JSON.parse(await readFile(path.resolve('scripts/assessment-practical-tool-specs.json'),'utf8'));
+assert.equal(specs.length,6,'Six new original sets defined in canonical content file');
+for(const spec of specs){
+ assert.ok(spec.sections.length>=4,spec.id+': practical sections missing');
+ assert.ok(spec.notes.length>=2,spec.id+': licence, clinical or local limits missing');
+ assert.ok(spec.references.length>=2,spec.id+': original source links missing');
+}
 for(const filename of files) {
   const buf=await readFile(path.resolve('dist/downloads/assessment',filename));
   assert.ok(buf.length>1500,'Empty or invalid file '+filename);
@@ -84,7 +102,9 @@ for(const filename of files) {
   if(filename.endsWith('.docx')||filename.endsWith('.xlsx'))assert.equal(buf.subarray(0,2).toString('ascii'),'PK','OOXML package '+filename);
   if(filename.endsWith('.csv')) {
     const s=buf.toString('utf8');
-    assert.ok(s.includes('M-CHAT-R/F')&&s.includes('ADOS-2')&&s.includes('ADI-R'),'CSV comparison missing entries');
+    if(filename.includes('sleep-log')) {
+      assert.ok(s.includes('Ночные пробуждения') && s.includes('14;'), '14-day sleep CSV should include 14 rows and useful columns');
+    } else assert.ok(s.includes('M-CHAT-R/F')&&s.includes('ADOS-2')&&s.includes('ADI-R'),'CSV comparison missing entries');
   }
 }
 const components=await Promise.all(['ProfessionalAssessmentHome.astro','ProfessionalAssessmentGroup.astro','ProfessionalAssessmentTools.astro'].map(p=>readFile(path.resolve('src/components',p),'utf8')));
@@ -97,4 +117,4 @@ const registry=await readFile(path.resolve('src/data/professional-assessment.ts'
 assert.ok(!registry.includes('scoreItems')&&!registry.includes('testQuestions'),'Do not distribute protected diagnostic prompts');
 const generator=await readFile(path.resolve('scripts/build-professional-assessment-downloads.py'),'utf8');
 assert.ok(generator.includes('NICE CG128')&&generator.includes('Не валидированная шкала'),'Downloads need clinical scope and source statement');
-console.log('Assessment structure PASS: five linked white-card stages; 12 scoped articles; standalone tools page; eight valid downloads in four released RU sets; locale-safe URLs and focus states.');
+console.log('Assessment structure PASS: five linked white-card stages; 12 scoped articles; standalone tools page; 21 valid downloads in ten released RU sets; locale-safe URLs and focus states.');
