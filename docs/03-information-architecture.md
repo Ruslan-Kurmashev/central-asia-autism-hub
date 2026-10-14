@@ -270,6 +270,24 @@ Remaining templates (pre-assessment checklist, structured observation, different
 
 **Clinical and copyright boundaries:** Files are editorial workflow aids, not validated screening or diagnostic scales and not replacements for mandatory Kazakhstan forms. Only link to official M-CHAT-R/F, ADOS-2, ADI-R or CARS-2 materials; never re-host copyrighted items or scoring manuals without authorisation. Assessment requires professional competence and applicable local clinical/legislative requirements. Cite primary sources, indicate revision/version and explicitly delimit what has and has not been translated, reviewed and released. Avoid overlap with the separate support/intervention `Workflows and tools` section.
 
+### 9.5. Simplified white-card assessment flow and separate resource library (approved 14 October 2026)
+
+The assessment landing page (`/kz/{locale}/professionals/assessment/`) is a **navigation aid**, not a clinical decision tree:
+
+- exactly five full-card links in registry order, rendered in a vertical connected flow with four downward arrows;
+- white cards, one brand-blue icon family, blue border/glow for hover and keyboard focus, not five distinct section colours;
+- cards display one brief localized description plus counts of **actually published articles** and **released download sets** for that locale;
+- one white call-to-action underneath links to the standalone resource library, followed by one concise scope warning;
+- do **not** repeat all twelve article entries, all ten planned downloads, copyright explanations and source lists on the landing page.
+
+Five group pages preserve the stable existing routes (`/kz/{locale}/professionals/assessment/{group}/`). They display only that group's two or three article entries, its genuinely released files and short previous/next navigation. Unreleased translations remain unlinked. Only released files appear in a group's downloadable list.
+
+The **standalone tools library** is `/kz/{locale}/professionals/assessment/tools/`, with compact released-file rows, category + title search filters and a collapsed list of forthcoming files. Current Russian release: 3 tool sets with 6 downloadable formats/files. Kazakh and English do not silently link to Russian-language downloads. Version, professional scope, official instrument permissions and links to primary sources belong here rather than on the flow homepage.
+
+Keep the canonical data registry `src/data/professional-assessment.ts` and localized UI copy `src/data/professional-assessment-ui.ts`; components are `ProfessionalAssessmentHome.astro`, `ProfessionalAssessmentGroup.astro`, `ProfessionalAssessmentTools.astro`, with shared `ProfessionalAssessmentShell.astro`. QA `scripts/check-professional-assessment.mjs` verifies all locales, route links, separated interfaces, focus behaviour and real download files.
+
+The visible 01–05 sequence is an educational navigation order. Differential and co-occurrence assessment can occur simultaneously with other clinical steps.
+
 ## 10. About and trust pages
 
 The main About page is a concise public overview with the mission, the need addressed, five content areas, editorial principles, a regional vision and ways to contribute. A results/impact report is not part of the main About page. Do not imply unverified results or confirmed partnerships.
