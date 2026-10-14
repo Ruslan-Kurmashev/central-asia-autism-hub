@@ -1,0 +1,184 @@
+---
+import type { CollectionEntry } from 'astro:content';
+import type { Locale } from '../site.config';
+import { SITE } from '../site.config';
+import { localePath, articlePath } from '../lib/urls';
+import {
+  assessmentArticles, assessmentDownloads, assessmentGroups,
+  type AssessmentGroupId,
+} from '../data/professional-assessment';
+import '../styles/professional-assessment.css';
+
+interface Props {
+  locale: Locale;
+  materials: CollectionEntry<'pages'>[];
+  groupId?: AssessmentGroupId;
+}
+const { locale, materials, groupId } = Astro.props;
+const area = groupId ? assessmentGroups.find(item => item.id === groupId) : undefined;
+const activeGroups = area ? [area] : assessmentGroups;
+const homeHref = localePath(locale, 'professionals/assessment');
+const professionalsHref = localePath(locale, 'professionals') + '#professional-overview';
+const translate = {
+  ru: {
+    trail: 'Оценка и диагностика', label: 'Профессиональная практическая библиотека',
+    description: 'Клинический контекст, понятные алгоритмы, рабочие формы и проверенные первоисточники. Материалы для специалистов, а не инструмент самостоятельной диагностики.',
+    sections: 'Пять этапов работы', articles: 'Профессиональные материалы', downloads: 'Скачать рабочие инструменты',
+    count: 'материалов в плане', pending: 'В подготовке', published: 'Читать материал', group: 'Открыть подраздел',
+    ready: 'Скачать', fileReady: 'Готово к скачиванию', filePending: 'Разработка запланирована',
+    noticeTitle: 'Профессиональные ограничения',
+    notice: 'Ни один шаблон AutismHub не устанавливает диагноз, не заменяет утверждённые формы Казахстана и не является валидированной диагностической шкалой. Не загружайте заполненные документы с данными детей на сайт или в публичные сервисы.',
+    licensing: 'M-CHAT-R/F, ADOS-2, ADI-R и CARS-2 принадлежат правообладателям. Здесь не размещаются их бланки, задания или ключи. Следуйте официальным правилам лицензирования, подготовки и языковой адаптации.',
+    onlyRussian: 'Готовые файлы первой серии пока доступны только по-русски; перевод готовится.',
+    sourceTitle: 'Первичные профессиональные источники',
+    back: 'Все пять подразделов', labelStats: 'Готовых файловых наборов', status: 'Подготовка статьи',
+  },
+  kk: {
+    trail: 'Бағалау және диагностика', label: 'Кәсіби практикалық кітапхана',
+    description: 'Бағалау кезеңдері, алгоритмдер, жұмыс үлгілері және бастапқы дереккөздер. Бұл материалдар жеке диагноз қоймайды.',
+    sections: 'Жұмыстың бес кезеңі', articles: 'Кәсіби материалдар', downloads: 'Жұмыс құралдарын жүктеу',
+    count: 'жоспарланған материал', pending: 'Әзірленуде', published: 'Материалды оқу', group: 'Бөлімді ашу',
+    ready: 'Жүктеу', fileReady: 'Жүктеуге дайын', filePending: 'Дайындалуда',
+    noticeTitle: 'Кәсіби шектеулер',
+    notice: 'AutismHub үлгілері диагноз қоймайды және Қазақстанның міндетті нысандарын немесе тексерілген диагностикалық тесттерді алмастырмайды. Балалардың жеке деректерін сайтқа жүктемеңіз.',
+    licensing: 'M-CHAT-R/F, ADOS-2, ADI-R және CARS-2 материалдары авторлық құқықпен қорғалған. Тек құқық иелерінің ресми нұсқаулықтарын пайдаланыңыз.',
+    onlyRussian: 'Алғашқы жүктелетін файлдар тек орыс тілінде дайын; қазақша нұсқасы әзірленуде.',
+    sourceTitle: 'Ресми кәсіби дереккөздер', back: 'Барлық бес бөлім', labelStats: 'Дайын файл жинақтары', status: 'Мақала әзірленуде',
+  },
+  en: {
+    trail: 'Assessment and diagnosis', label: 'Professional practice library',
+    description: 'Assessment stages, practical workflows, working templates and primary sources. These are professional aids, not diagnostic instruments.',
+    sections: 'Five assessment stages', articles: 'Professional articles', downloads: 'Download practical resources',
+    count: 'planned articles', pending: 'In preparation', published: 'Read article', group: 'Open subgroup',
+    ready: 'Download', fileReady: 'Available to download', filePending: 'Planned resource',
+    noticeTitle: 'Professional limitations',
+    notice: 'AutismHub templates do not establish diagnoses, replace Kazakhstan mandatory documents or constitute validated diagnostic scales. Do not upload completed child records to this site.',
+    licensing: 'M-CHAT-R/F, ADOS-2, ADI-R and CARS-2 are copyrighted. Their questions, score sheets and manuals are not reproduced here. Follow official licensing, training and language validation requirements.',
+    onlyRussian: 'The initial downloadable resources are available in Russian only; translations remain in preparation.',
+    sourceTitle: 'Official professional sources', back: 'All five subgroups', labelStats: 'Ready resource sets', status: 'Article in preparation',
+  },
+}[locale];
+const base = '/central-asia-autism-hub';
+const readySets = assessmentDownloads.filter(d => d.files[locale]?.length).length;
+const totalItems = assessmentArticles.length;
+const detailLink = (id: string) => localePath(locale, 'professionals/assessment/'+id);
+function liveArticle(key: string) {
+  return materials.find(m => m.data.translationKey === key && m.data.topic === 'assessment-context');
+}
+---
+<div class="assessment-hub">
+  <nav aria-label="Breadcrumb" class="assessment-hub__breadcrumb">
+    <a href={professionalsHref}>{locale === 'ru' ? 'Специалистам' : locale === 'kk' ? 'Мамандарға' : 'For professionals'}</a>
+    <span aria-hidden="true"> / </span>
+    {area ? <a href={homeHref}>{translate.trail}</a> : <span aria-current="page">{translate.trail}</span>}
+    {area && <><span aria-hidden="true"> / </span><span aria-current="page">{area.title[locale]}</span></>}
+  </nav>
+
+  <header class="assessment-hub__hero">
+    <div>
+      <p class="assessment-hub__eyebrow">{translate.label}</p>
+      <h1>{area ? area.title[locale] : translate.trail}</h1>
+      <p class="assessment-hub__lead">{area ? area.description[locale] : translate.description}</p>
+      <div class="assessment-hub__stats">
+        <span><strong>{area ? assessmentArticles.filter(a => a.group === area.id).length : totalItems}</strong> {translate.count}</span>
+        <span><strong>{area ? assessmentDownloads.filter(d=>d.group===area.id && d.files[locale]?.length).length : readySets}</strong> {translate.labelStats}</span>
+      </div>
+    </div>
+  </header>
+
+  {area && <a class="assessment-hub__back" href={homeHref}>← {translate.back}</a>}
+
+  {!area && (
+    <section aria-labelledby="assessment-stages" class="assessment-hub__section">
+      <div class="assessment-hub__section-heading">
+        <h2 id="assessment-stages">{translate.sections}</h2>
+      </div>
+      <div class="assessment-hub__grid">
+        {assessmentGroups.map((g, i) => (
+          <a href={detailLink(g.id)} class="assessment-hub__group">
+            <span class="assessment-hub__group-no" aria-hidden="true">{String(i+1).padStart(2,'0')}</span>
+            <h3>{g.title[locale]}</h3>
+            <p>{g.description[locale]}</p>
+            <span class="assessment-hub__group-foot"><span>{assessmentArticles.filter(a=>a.group===g.id).length} {translate.count}</span><span aria-hidden="true">↗</span></span>
+          </a>
+        ))}
+      </div>
+    </section>
+  )}
+
+  {activeGroups.map(group => (
+    <section aria-labelledby={'assessment-materials-'+group.id} class="assessment-hub__section" id={'materials-'+group.id}>
+      <div class="assessment-hub__section-heading">
+        <div>
+          <p class="assessment-hub__eyebrow">{group.focus[locale]}</p>
+          <h2 id={'assessment-materials-'+group.id}>{area ? translate.articles : group.title[locale]}</h2>
+        </div>
+        {!area && <a class="assessment-hub__group-link" href={detailLink(group.id)}>{translate.group} <span aria-hidden="true">→</span></a>}
+      </div>
+      <div class="assessment-hub__articles">
+        {assessmentArticles.filter(a=>a.group===group.id).map((a,i) => {
+          const record=liveArticle(a.translationKey);
+          return (
+            <article class="assessment-hub__article">
+              <span class="assessment-hub__index" aria-hidden="true">{String(assessmentArticles.indexOf(a)+1).padStart(2,'0')}</span>
+              <div class="assessment-hub__article-copy">
+                <h3>{record ? <a href={articlePath(locale,'professionals',record.data.slug)}>{record.data.title}</a> : a.title[locale]}</h3>
+                {(locale==='ru' || a.description[locale]) && <p>{a.description[locale]}</p>}
+              </div>
+              {record
+                ? <a class="assessment-hub__article-link" href={articlePath(locale,'professionals',record.data.slug)}>{translate.published} →</a>
+                : <span class="assessment-hub__pending">{translate.pending}</span>}
+            </article>
+          );
+        })}
+      </div>
+    </section>
+  ))}
+
+  <section class="assessment-hub__section" id="assessment-downloads" aria-labelledby="assessment-download-title">
+    <div class="assessment-hub__section-heading">
+      <h2 id="assessment-download-title">{translate.downloads}</h2>
+      {!area && <span class="assessment-hub__library-count">{assessmentDownloads.length} {translate.count}</span>}
+    </div>
+    {locale !== 'ru' && <p class="assessment-hub__localisation">{translate.onlyRussian}</p>}
+    <div class="assessment-hub__download-grid">
+      {assessmentDownloads.filter(d=>!area || d.group===area.id).map(d => {
+        const available = d.files[locale] ?? [];
+        return (
+          <article class:list={['assessment-hub__download', {'assessment-hub__download--ready':available.length>0}]}>
+            <div class="assessment-hub__download-top">
+              <span aria-hidden="true" class="assessment-hub__file-icon">↓</span>
+              <span class="assessment-hub__file-status">{available.length ? translate.fileReady : translate.filePending}</span>
+            </div>
+            <h3>{d.title[locale]}</h3>
+            {locale === 'ru' && <p>{d.description.ru}</p>}
+            {available.length>0
+              ? <div class="assessment-hub__file-actions">
+                {available.map(file => (
+                  <a href={file.href} download class="assessment-hub__download-link" type={file.format==='PDF'?'application/pdf':file.format==='DOCX'?'application/vnd.openxmlformats-officedocument.wordprocessingml.document':'text/csv'}>
+                    <span aria-hidden="true">↓</span> {file.format}
+                  </a>
+                ))}
+              </div>
+              : <span class="assessment-hub__pending">{translate.pending}</span>}
+            <p class="assessment-hub__version">{d.version}{locale === 'ru' && ' · '+d.audience.ru}</p>
+          </article>
+        );
+      })}
+    </div>
+  </section>
+
+  <section class="assessment-hub__safety" aria-labelledby="assessment-safety-title">
+    <h2 id="assessment-safety-title">{translate.noticeTitle}</h2>
+    <p>{translate.notice}</p><p>{translate.licensing}</p>
+    <div class="assessment-hub__sources">
+      <h3>{translate.sourceTitle}</h3>
+      <ul>
+        <li><a href="https://www.nice.org.uk/guidance/cg128/chapter/recommendations" target="_blank" rel="noopener noreferrer">NICE CG128: recognition, referral and diagnosis ↗</a></li>
+        <li><a href="https://cps.ca/en/documents/position/asd-diagnostic-assessment" target="_blank" rel="noopener noreferrer">Canadian Paediatric Society: diagnostic assessment ↗</a></li>
+        <li><a href="https://www.mchatscreen.com/mchat-rf/" target="_blank" rel="noopener noreferrer">M-CHAT-R/F: official rights and instructions ↗</a></li>
+        <li><a href="https://adilet.zan.kz/rus/docs/K2000000360" target="_blank" rel="noopener noreferrer">{locale==='ru'?'Кодекс РК о здоровье народа':'Kazakhstan healthcare code'} ↗</a></li>
+      </ul>
+    </div>
+  </section>
+</div>
