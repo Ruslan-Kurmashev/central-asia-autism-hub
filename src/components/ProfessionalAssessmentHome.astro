@@ -1,0 +1,62 @@
+---
+import type { CollectionEntry } from 'astro:content';
+import type { Locale } from '../site.config';
+import { localePath } from '../lib/urls';
+import { assessmentArticles, assessmentDownloads, assessmentGroups } from '../data/professional-assessment';
+import { assessmentUI, countForLocale } from '../data/professional-assessment-ui';
+import ProfessionalAssessmentShell from './ProfessionalAssessmentShell.astro';
+
+interface Props { locale: Locale; materials: CollectionEntry<'pages'>[]; }
+const { locale, materials } = Astro.props;
+const t = assessmentUI[locale];
+const description = [
+  {ru:'Первые признаки и направление',kk:'Алғашқы белгілер және жолдау',en:'Early signs and referrals'},
+  {ru:'Скрининг и методы оценки',kk:'Скрининг және бағалау әдістері',en:'Screening and assessment tools'},
+  {ru:'История развития и наблюдение',kk:'Даму тарихы мен бақылау',en:'Developmental history and observation'},
+  {ru:'Что ещё учитывать и исключать',kk:'Басқа мүмкін себептер мен жағдайлар',en:'Other possible causes and conditions'},
+  {ru:'Итог, рекомендации, повторная оценка',kk:'Қорытынды, ұсынымдар, қайта бағалау',en:'Report, support plan and reassessment'},
+];
+const publishedCount = (group: string) => assessmentArticles.filter(a => a.group === group && materials.some(m => m.data.translationKey === a.translationKey && m.data.topic === 'assessment-context')).length;
+const readyCount = (group: string) => assessmentDownloads.filter(d => d.group === group && (d.files[locale]?.length ?? 0)>0).length;
+---
+<ProfessionalAssessmentShell locale={locale}>
+  <header class="assessment-hub__intro">
+    <h1>{t.section}</h1>
+    <p>{t.homeLead}</p>
+  </header>
+
+  <section class="assessment-hub__route" aria-label={t.sequence}>
+    <ol class="assessment-flow">
+      {assessmentGroups.map((group,i) => (
+        <li class="assessment-flow__item">
+          <a class="assessment-flow__card" href={localePath(locale,'professionals/assessment/'+group.id)}>
+            <span class="assessment-flow__number" aria-hidden="true">{String(i+1).padStart(2,'0')}</span>
+            <span class="assessment-flow__symbol" aria-hidden="true">
+              {i===0 ? <svg viewBox="0 0 48 48" fill="none"><path d="M24 39V23M24 27C12 27 9 17 9 10c12 0 19 7 19 17M24 31c13 0 17-9 17-17-12 0-17 6-17 17" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg> : null}
+              {i===1 ? <svg viewBox="0 0 48 48" fill="none"><rect x="10" y="9" width="28" height="33" rx="3" stroke="currentColor" stroke-width="3"/><path d="M18 9V6h12v3M16 21l3 3 4-5m4 3h6m-17 9 3 3 4-5m4 3h6" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg> : null}
+              {i===2 ? <svg viewBox="0 0 48 48" fill="none"><circle cx="21" cy="20" r="11" stroke="currentColor" stroke-width="3"/><path d="m29 29 11 11" stroke="currentColor" stroke-width="4" stroke-linecap="round"/></svg> : null}
+              {i===3 ? <svg viewBox="0 0 48 48" fill="none"><circle cx="24" cy="24" r="7" stroke="currentColor" stroke-width="3"/><path d="M20 7h8l1.5 6 5 2 5-3 5 8-4.5 4 0 4 4.5 4-5 8-5-3-5 2-1.5 6h-8l-1.5-6-5-2-5 3-5-8 4.5-4v-4L3.5 20l5-8 5 3 5-2z" transform="translate(0 -2) scale(.94)" stroke="currentColor" stroke-width="2.2" stroke-linejoin="round"/></svg> : null}
+              {i===4 ? <svg viewBox="0 0 48 48" fill="none"><path d="M15 5h14l8 9v28H15a4 4 0 0 1-4-4V9a4 4 0 0 1 4-4Z" stroke="currentColor" stroke-width="3" stroke-linejoin="round"/><path d="M29 5v10h8M18 24h13M18 31h13" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/></svg> : null}
+            </span>
+            <span class="assessment-flow__copy">
+              <strong>{group.title[locale]}</strong>
+              <span class="assessment-flow__desc">{description[i][locale]}</span>
+              <span class="assessment-flow__meta">{countForLocale(locale,publishedCount(group.id),'article')} <span aria-hidden="true">·</span> {countForLocale(locale,readyCount(group.id),'file')}</span>
+            </span>
+            <span class="assessment-flow__arrow" aria-hidden="true">→</span>
+          </a>
+          {i<assessmentGroups.length-1 && <span class="assessment-flow__connector" aria-hidden="true">↓</span>}
+        </li>
+      ))}
+    </ol>
+  </section>
+
+  <a class="assessment-hub__library-cta" href={localePath(locale,'professionals/assessment/tools')}>
+    <span class="assessment-hub__library-icon" aria-hidden="true">
+      <svg viewBox="0 0 48 48" fill="none"><path d="M5 13a4 4 0 0 1 4-4h12l5 5h14a4 4 0 0 1 4 4v20a4 4 0 0 1-4 4H9a4 4 0 0 1-4-4Z" stroke="currentColor" stroke-width="3" stroke-linejoin="round"/></svg>
+    </span>
+    <span class="assessment-hub__library-copy"><strong>{t.library}</strong><span>{t.libraryLead}</span></span>
+    <span class="assessment-flow__arrow" aria-hidden="true">→</span>
+  </a>
+  <p class="assessment-hub__route-note">{t.sequenceNote}</p>
+</ProfessionalAssessmentShell>
