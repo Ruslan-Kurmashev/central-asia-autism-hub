@@ -2,7 +2,7 @@ import type { Locale } from '../site.config';
 
 type Localized = Record<Locale, string>;
 export type AssessmentGroupId = 'early-identification' | 'instruments' | 'comprehensive-assessment' | 'differential-assessment' | 'reporting-followup';
-export type DownloadFormat = 'PDF' | 'DOCX' | 'CSV';
+export type DownloadFormat = 'PDF' | 'DOCX' | 'XLSX' | 'CSV';
 
 export interface AssessmentArticle {
   id: string;
@@ -87,7 +87,7 @@ const dl = (id: string, group: AssessmentGroupId, ru: string, kk: string, en: st
 const prefix='/central-asia-autism-hub/downloads/assessment/';
 export const assessmentDownloads: AssessmentDownload[] = [
   dl('pathway','early-identification','Схема раннего выявления и направления','Ерте анықтау және жолдау схемасы','Early detection and referral pathway','Одна схема для печати: от опасений до профессиональной оценки и помощи по потребностям.','Специалисты первичного звена', {ru:[{format:'PDF',href:prefix+'early-detection-pathway-ru.pdf'}]}),
-  dl('tool-comparison','instruments','Сравнительная таблица инструментов','Құралдарды салыстыру кестесі','Instrument comparison table','Назначение, возрастные ограничения, лицензии, требования к подготовке, первоисточники.','Врачи и специалисты оценки', {ru:[{format:'PDF',href:prefix+'diagnostic-instrument-comparison-ru.pdf'},{format:'CSV',href:prefix+'diagnostic-instrument-comparison-ru.csv'}]}),
+  dl('tool-comparison','instruments','Сравнительная таблица инструментов','Құралдарды салыстыру кестесі','Instrument comparison table','Назначение, возрастные ограничения, лицензии, требования к подготовке, первоисточники.','Врачи и специалисты оценки', {ru:[{format:'PDF',href:prefix+'diagnostic-instrument-comparison-ru.pdf'},{format:'XLSX',href:prefix+'diagnostic-instrument-comparison-ru.xlsx'},{format:'CSV',href:prefix+'diagnostic-instrument-comparison-ru.csv'}]}),
   dl('history','comprehensive-assessment','Редактируемый бланк истории развития','Даму тарихының өңделетін бланкі','Editable developmental history template','Поля для свободного клинического интервью без диагностического балла и чужих тестовых заданий.','Уполномоченные специалисты', {ru:[{format:'DOCX',href:prefix+'developmental-history-template-ru.docx'},{format:'PDF',href:prefix+'developmental-history-template-ru.pdf'}]}),
   dl('preassessment','comprehensive-assessment','Чек-лист подготовки к диагностической оценке','Диагностикалық бағалауға дайындық тізімі','Pre-assessment preparation checklist','Данные, документы, участники и условия обследования.','Команда оценки'),
   dl('observation','comprehensive-assessment','Лист структурированного наблюдения','Құрылымдалған бақылау парағы','Structured observation sheet','Факты, контекст, поддержка коммуникации, условия наблюдения.','Квалифицированные специалисты'),
