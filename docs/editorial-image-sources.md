@@ -536,3 +536,13 @@ All three files are original AutismHub vector diagrams, created specifically for
 | `professional-evidence-study-appraisal.svg` | AutismHub original geometric SVG illustration, 14 October 2026 | Neutral study papers, effect graph and magnifying lens; illustrates evaluation of evidence, not a published experiment result. |
 | `professional-evidence-aac-ndbi-fct-fba.svg` | AutismHub original geometric SVG illustration, 14 October 2026 | Four separate abstract icons for communication, naturalistic play, functional request and context assessment; not reproductions of proprietary protocols or protected AAC symbol libraries. |
 | `professional-evidence-claims-review.svg` | AutismHub original geometric SVG illustration, 14 October 2026 | Conceptual advertising claim, lens and evidence checklist; no commercial product, diagnostic device, endorsement or safety certificate is portrayed. |
+
+## Ethics and safety professional SVG covers (14 October 2026)
+
+These three original AutismHub self-hosted geometric SVG illustrations were prepared for the Russian-language theoretical articles of the "Ethics and safety" professional section. They contain no patient identities, proprietary tests, institutional logos or third-party photographs. The diagrams are explanatory, not certified regulatory frameworks or actual representations of clinical action.
+
+| Local SVG file | Provenance | Editorial scope and limitations |
+| --- | --- | --- |
+| `professional-ethics-clinical-scope.svg` | Original AutismHub geometric SVG illustration, 14 October 2026 | Separate professional scopes, an abstract health symbol and a safe coordination route; does not grant diagnostic or restraint authority. |
+| `professional-ethics-rights-participation.svg` | Original AutismHub geometric SVG illustration, 14 October 2026 | Four neutral symbols for rights, accessible communication, supported choice and participation; not a reproduction of UN insignia or a legal rights chart. |
+| `professional-ethics-data-ai-privacy.svg` | Original AutismHub geometric SVG illustration, 14 October 2026 | Abstract document, data flow, security shield and controlled access; not a claim of legal compliance, encryption certification or AI accuracy. |

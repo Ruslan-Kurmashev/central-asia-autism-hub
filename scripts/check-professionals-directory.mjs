@@ -48,9 +48,9 @@ for (const [locale, copy] of Object.entries(expected)) {
   assert.equal((html.match(/class="professional-directory__card"/g) ?? []).length, 6, locale + ': expected six area cards');
   assert.equal((html.match(/class="professional-directory__detail"/g) ?? []).length, 6, locale + ': expected six detail panels');
   assert.equal((html.match(/class="professional-directory__item"/g) ?? []).length, 30, locale + ': expected 30 direct planned resources; international country folders are counted separately');
-  // The RU directory now has 17 published direct links and 13 pending items.
+  // The RU directory has three additional ethics guides and five remaining pending direct entries.
   // Internal-link QA separately verifies that linked destination pages exist.
-  assert.equal((html.match(/class="professional-directory__status"/g) ?? []).length, locale === 'ru' ? 8 : 30, locale + ': only genuinely published direct entries should be linked');
+  assert.equal((html.match(/class="professional-directory__status"/g) ?? []).length, locale === 'ru' ? 5 : 30, locale + ': only genuinely published direct entries should be linked');
   if (locale === 'ru') {
     const articleHref = '/central-asia-autism-hub/kz/ru/professionals/kak-rabotat-s-professionalnymi-rekomendaciyami/';
     assert.ok(html.includes('href="' + articleHref + '"'), 'Russian first professional resource must have a working article link');
