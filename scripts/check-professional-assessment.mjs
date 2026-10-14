@@ -7,7 +7,7 @@ const base='/central-asia-autism-hub';
 const stages=['early-identification','instruments','comprehensive-assessment','differential-assessment','reporting-followup'];
 const ruNames=['Раннее выявление и маршрут ребёнка','Диагностические инструменты','Комплексная диагностическая оценка','Дифференциальная диагностика и сопутствующие состояния','Заключение и дальнейшее наблюдение'];
 const counts=[2,3,3,2,2];
-const files=['early-detection-pathway-ru.pdf','diagnostic-instrument-comparison-ru.pdf','diagnostic-instrument-comparison-ru.csv','diagnostic-instrument-comparison-ru.xlsx','developmental-history-template-ru.docx','developmental-history-template-ru.pdf'];
+const files=['early-detection-pathway-ru.pdf','diagnostic-instrument-comparison-ru.pdf','diagnostic-instrument-comparison-ru.csv','diagnostic-instrument-comparison-ru.xlsx','developmental-history-template-ru.docx','developmental-history-template-ru.pdf','preassessment-checklist-ru.pdf','preassessment-checklist-ru.docx'];
 const a01Href=base+'/kz/ru/professionals/rannee-vyyavlenie-autizma-marshrut-specialista/';
 
 for(const locale of ['ru','kk','en']) {
@@ -37,7 +37,7 @@ for(const locale of ['ru','kk','en']) {
     }
   }
   if(locale==='ru') assert.ok(tools.includes('data-assessment-category')&&tools.includes('data-assessment-search'), 'RU: tools filters missing');
-  const expectedReady=locale==='ru'?3:0;
+  const expectedReady=locale==='ru'?4:0;
   assert.equal((tools.match(/class="assessment-hub__tool"/g)||[]).length,expectedReady,locale+': only actually released locale-specific resource sets should display');
   assert.ok(tools.includes('assessment-hub__planned-tools'),locale+': remaining planned resources need a small disclosure');
   if(locale==='ru') {
@@ -90,4 +90,4 @@ const registry=await readFile(path.resolve('src/data/professional-assessment.ts'
 assert.ok(!registry.includes('scoreItems')&&!registry.includes('testQuestions'),'Do not distribute protected diagnostic prompts');
 const generator=await readFile(path.resolve('scripts/build-professional-assessment-downloads.py'),'utf8');
 assert.ok(generator.includes('NICE CG128')&&generator.includes('Не валидированная шкала'),'Downloads need clinical scope and source statement');
-console.log('Assessment structure PASS: five linked white-card stages; 12 scoped articles; standalone tools page; six valid downloads in three released RU sets; locale-safe URLs and focus states.');
+console.log('Assessment structure PASS: five linked white-card stages; 12 scoped articles; standalone tools page; eight valid downloads in four released RU sets; locale-safe URLs and focus states.');
