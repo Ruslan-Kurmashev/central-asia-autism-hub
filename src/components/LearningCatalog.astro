@@ -1,6 +1,7 @@
 ---
 import type { CollectionEntry } from 'astro:content';
 import type { Locale } from '../site.config';
+import { articlePath } from '../lib/urls';
 
 interface Props {
   locale: Locale;
@@ -20,6 +21,7 @@ const copy = {
     price: 'Стоимость', provider: 'Разработчик', duration: 'Продолжительность',
     openByKind: { course: 'Перейти к курсу', module: 'Открыть учебный модуль', lecture: 'Перейти к лекции', materials: 'Открыть материалы', webinar: 'Перейти к вебинару' }, verified: 'Проверено', details: 'Как начать обучение', outcome: 'Что выдаётся после прохождения',
     count: 'Найдено', resultWord: 'учебных материалов', noResults: 'По выбранным условиям учебные материалы не найдены.',
+    onSite: 'Открыть на AutismHub', watch: 'Смотреть на сайте', providerWebsite: 'Сайт организатора',
     empty: 'Курсы пока готовятся к публикации.',
     notice: 'Обучение проходит на ресурсах указанных разработчиков. Autism Hub Kazakhstan не является организатором курсов. Доступ, документы и учебные единицы определяются организатором и могут изменяться.',
   },
@@ -35,6 +37,7 @@ const copy = {
     price: 'Құны', provider: 'Дайындаған ұйым', duration: 'Ұзақтығы',
     openByKind: { course: 'Курсқа өту', module: 'Оқу модуліне өту', lecture: 'Дәріске өту', materials: 'Оқу материалдарын ашу', webinar: 'Вебинарға өту' }, verified: 'Тексерілді', details: 'Оқуды қалай бастауға болады', outcome: 'Оқуды аяқтаған соң не беріледі',
     count: 'Табылды', resultWord: 'оқу материалы', noResults: 'Таңдалған шарттарға сәйкес оқу материалы табылмады.',
+    onSite: 'AutismHub сайтында ашу', watch: 'Осы сайтта көру', providerWebsite: 'Ұйымдастырушы сайты',
     empty: 'Курстар жариялауға дайындалып жатыр.',
     notice: 'Оқу көрсетілген ұйымдардың ресурстарында өтеді. Autism Hub Kazakhstan бұл курстарды өткізбейді. Оқуға қолжетімділік, құжаттар мен оқу бірліктерінің шарттарын ұйымдастырушы белгілейді және өзгерте алады.',
   },
@@ -50,6 +53,7 @@ const copy = {
     price: 'Price', provider: 'Developed by', duration: 'Duration',
     openByKind: { course: 'Go to course', module: 'Open learning module', lecture: 'Go to lecture', materials: 'Open learning materials', webinar: 'Go to webinar' }, verified: 'Checked', details: 'How to start', outcome: 'What you receive upon completion',
     count: 'Found', resultWord: 'learning resources', noResults: 'No learning resources match the selected filters.',
+    onSite: 'Open on AutismHub', watch: 'Watch on this site', providerWebsite: 'Provider website',
     empty: 'Courses are being prepared for publication.',
     notice: 'Training takes place on the listed providers’ resources; Autism Hub Kazakhstan does not deliver these courses. Providers determine and may change access, completion documents and continuing education credits.',
   },
@@ -153,8 +157,14 @@ const availableTopics = [...new Set(items.map((entry) => entry.data.topicArea).f
                 )}
               </div>
               <div class="course-catalogue__action">
+                <a href={articlePath(locale, 'learning', entry.data.slug)}>
+                  {(entry.data.lessons ?? []).some((lesson) => Boolean(lesson.youtubeVideoId)) ? t.watch : t.onSite}
+                  <span aria-hidden="true">→</span>
+                </a>
                 {entry.data.externalUrl && (
-                  <a href={entry.data.externalUrl} target="_blank" rel="noopener noreferrer external">{t.openByKind[entry.data.learningKind ?? 'course']} <span aria-hidden="true">↗</span></a>
+                  <a class="course-catalogue__external-link" href={entry.data.externalUrl} target="_blank" rel="noopener noreferrer external">
+                    {t.providerWebsite} <span aria-hidden="true">↗</span>
+                  </a>
                 )}
               </div>
             </article>
@@ -270,6 +280,9 @@ const availableTopics = [...new Set(items.map((entry) => entry.data.topicArea).f
 .course-catalogue__action{align-self:center;max-width:12rem}
 .course-catalogue__action a{display:inline-block;padding:.75rem .95rem;text-align:center;background:#205f90;border-radius:.52rem;color:#fff;text-decoration:none;font-size:var(--type-control);font-weight:700;line-height:1.35}
 .course-catalogue__action a:hover{background:#164d78;text-decoration:none;color:#fff}
+.course-catalogue__action .course-catalogue__external-link{display:block;margin-top:.7rem;padding:.3rem;text-align:center;color:#205f90;background:transparent;font-size:var(--type-small);font-weight:600;text-decoration:underline}
+.course-catalogue__action .course-catalogue__external-link:hover{background:transparent;color:#164d78;text-decoration:underline}
+
 .course-catalogue__no-results{padding:1.3rem;border:1px dashed #c2d3e0;border-radius:.7rem;color:#496277}
 .course-catalogue__notice{max-width:66rem;border-top:1px solid #d8e3eb;margin:1.7rem 0 0;padding-top:1rem;color:#4e6375;font-size:var(--type-small);line-height:1.7}
 @media(max-width:69rem){.course-catalogue__filters{grid-template-columns:repeat(2,minmax(0,1fr))}.course-catalogue__action{align-self:start}}
