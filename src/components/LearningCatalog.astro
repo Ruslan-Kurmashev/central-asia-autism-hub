@@ -2,6 +2,7 @@
 import type { CollectionEntry } from 'astro:content';
 import type { Locale } from '../site.config';
 import { articlePath } from '../lib/urls';
+import { hasOnSiteLearning } from '../lib/learning';
 
 interface Props {
   locale: Locale;
@@ -157,15 +158,23 @@ const availableTopics = [...new Set(items.map((entry) => entry.data.topicArea).f
                 )}
               </div>
               <div class="course-catalogue__action">
-                <a href={articlePath(locale, 'learning', entry.data.slug)}>
-                  {(entry.data.lessons ?? []).some((lesson) => Boolean(lesson.youtubeVideoId)) ? t.watch : t.onSite}
-                  <span aria-hidden="true">→</span>
-                </a>
-                {entry.data.externalUrl && (
-                  <a class="course-catalogue__external-link" href={entry.data.externalUrl} target="_blank" rel="noopener noreferrer external">
-                    {t.providerWebsite} <span aria-hidden="true">↗</span>
+                {hasOnSiteLearning(entry.data) ? (
+                  <>
+                    <a href={articlePath(locale, 'learning', entry.data.slug)}>
+                      {t.watch} <span aria-hidden="true">→</span>
+                    </a>
+                    {entry.data.externalUrl && (
+                      <a class="course-catalogue__external-link" href={entry.data.externalUrl} target="_blank" rel="noopener noreferrer external">
+                        {t.providerWebsite} <span aria-hidden="true">↗</span>
+                      </a>
+                    )}
+                  </>
+                ) : entry.data.externalUrl ? (
+                  <a href={entry.data.externalUrl} target="_blank" rel="noopener noreferrer external">
+                    {t.openByKind[entry.data.learningKind ?? 'course']}
+                    <span aria-hidden="true">↗</span>
                   </a>
-                )}
+                ) : null}
               </div>
             </article>
           ))}

@@ -2,9 +2,11 @@
 
 ## What changed (14 October 2026)
 
-The existing single Learning catalogue is retained. The 29 source resources in each language (RU, KK and EN) now have their own internal pages at `/kz/{language}/learning/{slug}/`. The catalogue's primary action opens the corresponding AutismHub page. A smaller secondary link still points to the organizer's official programme. There is **no owner-based or platform-based categorisation**.
+The existing single Learning catalogue is retained, with the same 29 resources in each of RU, KK and EN. **A course does not receive a separate AutismHub page merely to repeat the provider's description.** Course cards without real on-site content go directly to the original provider's platform as the primary action. There is no provider/owner-based segregation and no second catalogue.
 
-Each internal page offers a localized description, provider attribution, exact original teaching languages, registration requirements, award/certificate conditions, source links and original editorial body. Where a verified lesson sequence is available, it adds learning resources, videos and onward navigation. An entry without licensed/verified public videos displays a clear notice that formal training takes place on the provider site; it does **not** imply that the full course can be completed locally.
+The shared eligibility function `src/lib/learning.ts` permits a local page at `/kz/{language}/learning/{slug}/` only when the entry has at least one properly sourced, supported on-site YouTube video lesson. Future substantial first-party interactive content can be added deliberately to this eligibility rule, but simply filling in the original course metadata is insufficient. On-site pages include playable lessons, ordered navigation, explanatory context, provider attribution, training and credential limitations, official source links and fallback access.
+
+At the time of this correction, the CDC course has an actual on-site video sequence, so it has three localized viewing pages. The other 28 external-only resources per language link directly to the provider and no empty intermediate pages are generated.
 
 ## Source-verified video pilot
 
@@ -41,4 +43,4 @@ The same route and data model can host AutismHub-authored videos later without c
 
 The static HTML contains only the user's requested video ID and a plain consent button. A user-triggered event dynamically inserts a sandbox-free standard YouTube iframe with `youtube-nocookie.com`. This **reduces third-party requests before interaction**, but is not a blanket legal/compliance guarantee; review EU cookie/consent requirements before launch.
 
-All 87 localized pages, catalogue links, official source URLs, and consent-gated videos are included in `npm run check:learning-course-pages` within full site validation. Existing faceted filters, language switching, typography, and content safeguards remain in use. Pixel-level QA and live embedding availability require a separate manual check.
+All 87 localized **catalogue entries**, the three genuinely usable on-site CDC pages, direct official external links for the other 84 locale-specific course cards, and consent-gated videos are included in `npm run check:learning-course-pages` within full site validation. The regression also fails when a catalogue-only external resource unexpectedly gets a duplicate local page. Existing faceted filters, language switching, typography, and content safeguards remain in use. Pixel-level QA and live embedding availability require a separate manual check.
