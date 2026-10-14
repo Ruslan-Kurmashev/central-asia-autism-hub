@@ -20,9 +20,24 @@ for (const lang of locales) {
     html.includes('id="materials"') &&
     html.indexOf('id="announcements"') < html.indexOf('id="materials"'),
     id + ': events must appear above the site update feed');
-  check(html.includes('home-v2__events-empty') &&
-    !html.includes('data-event-expires='),
-    id + ': an unverified event card was published');
+  const eventCards = [...html.matchAll(/<article\b[^>]*class="home-v2__event"[^>]*data-event-kind=/g)];
+  const todayInKazakhstan = new Intl.DateTimeFormat('sv-SE', {
+    timeZone: 'Asia/Almaty', year: 'numeric', month: '2-digit', day: '2-digit',
+  }).format(new Date());
+  const expectedEvents = [
+    ['2026-10-19', 'beyim.edu.kz', 'article-parent-training.jpg'],
+    ['2026-10-27', 'tamyrplatform.com', 'group-18739.png'],
+    ['2026-10-30', 'conference-satr.kz', 'article-family-session.jpg'],
+  ].filter(([expires]) => expires >= todayInKazakhstan);
+  check(eventCards.length === expectedEvents.length,
+    id + ': expected ' + expectedEvents.length + ' valid unexpired events, found ' + eventCards.length);
+  for (const [, organiserDomain, imageFilename] of expectedEvents) {
+    check(html.includes(organiserDomain) && html.includes(imageFilename),
+      id + ': missing correct event source or relevant visual ' + imageFilename);
+  }
+  check((html.match(/class="home-v2__event-media(?: home-v2__event-media--brand)?"/g) || []).length === expectedEvents.length,
+    id + ': each live event must have a distinct image with an alt description');
+  check(html.includes('home-v2__events-empty'), id + ': empty state must remain available after expiry');
   check(html.includes('home-v2__materials-description'), id + ': update section intro missing');
   const brand = html.match(/<a\b[^>]*class="brand"[^>]*>[\s\S]*?<\/a>/)?.[0] ?? '';
   check(brand.includes('Autism Hub Kazakhstan'), id + ': site name missing from header');
