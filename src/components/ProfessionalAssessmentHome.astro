@@ -45,7 +45,7 @@ const readyCount = (group: string) => assessmentDownloads.filter(d => d.group ==
             </span>
             <span class="assessment-flow__arrow" aria-hidden="true">→</span>
           </a>
-          {i<assessmentGroups.length-1 && <span class="assessment-flow__connector" aria-hidden="true">↓</span>}
+          {i + 1 < assessmentGroups.length ? <span class="assessment-flow__connector" aria-hidden="true">↓</span> : null}
         </li>
       ))}
     </ol>
