@@ -526,3 +526,13 @@ The research-card image-coverage validation enforces one mapped and locally avai
 | Local file | Source and date | Editorial scope and limitations |
 | --- | --- | --- |
 | `photos/professional-ados-adi-cars-central-asia.webp` | Original AI-generated illustration created for AutismHub in ChatGPT, 14 October 2026; optimized locally to WebP (1200 × 900 px) | Fictional, regionally contextualized child-and-specialist interaction with picture cards and note-taking. No actual patient or clinician is portrayed. This is not a demonstration or validated administration of ADOS-2, ADI-R or CARS-2 and does not reproduce their proprietary test materials. |
+
+## Evidence-support professional article SVG covers (14 October 2026)
+
+All three files are original AutismHub vector diagrams, created specifically for the corresponding Russian-language educational articles. They use no third-party photographs, patient information, test items, protected logos or institutional approvals. They illustrate concepts and are not validated clinical tools.
+
+| Local file | Original source | Editorial description and limitations |
+| --- | --- | --- |
+| `professional-evidence-study-appraisal.svg` | AutismHub original geometric SVG illustration, 14 October 2026 | Neutral study papers, effect graph and magnifying lens; illustrates evaluation of evidence, not a published experiment result. |
+| `professional-evidence-aac-ndbi-fct-fba.svg` | AutismHub original geometric SVG illustration, 14 October 2026 | Four separate abstract icons for communication, naturalistic play, functional request and context assessment; not reproductions of proprietary protocols or protected AAC symbol libraries. |
+| `professional-evidence-claims-review.svg` | AutismHub original geometric SVG illustration, 14 October 2026 | Conceptual advertising claim, lens and evidence checklist; no commercial product, diagnostic device, endorsement or safety certificate is portrayed. |
