@@ -1,0 +1,22 @@
+---
+import { getCollection } from 'astro:content';
+import ProfessionalAssessmentHub from '../../../../../components/ProfessionalAssessmentHub.astro';
+import { assessmentGroups, type AssessmentGroupId } from '../../../../../data/professional-assessment';
+import BaseLayout from '../../../../../layouts/BaseLayout.astro';
+import { SITE, SUPPORTED_LOCALES, type Locale } from '../../../../../site.config';
+
+export function getStaticPaths() {
+  return SUPPORTED_LOCALES.flatMap(locale=>assessmentGroups.map(group=>({
+    params:{lang:locale,group:group.id},
+    props:{locale,groupId:group.id},
+  })));
+}
+interface Props {locale:Locale;groupId:AssessmentGroupId;}
+const {locale,groupId}=Astro.props;
+const group=assessmentGroups.find(x=>x.id===groupId);
+if(!group)throw new Error('Unknown assessment stage '+groupId);
+const materials=await getCollection('pages',({data})=>data.language===locale && data.section==='professionals' && !data.draft && data.translationStatus!=='pending' && Boolean(data.publishedAt) && Boolean(data.updatedAt));
+---
+<BaseLayout title={group.title[locale]+' - '+SITE.name} description={group.description[locale]} locale={locale} currentSection="professionals" alternatePath={'professionals/assessment/'+groupId} bodyClass="professional-library-body">
+  <ProfessionalAssessmentHub locale={locale} materials={materials} groupId={groupId}/>
+</BaseLayout>
