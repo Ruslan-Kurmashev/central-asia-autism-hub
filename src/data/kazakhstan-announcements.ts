@@ -25,7 +25,7 @@ export interface KazakhstanAnnouncement {
   sourceUrl: string;
   imageSrc: string;
   imageAlt: Record<Locale, string>;
-  imageKind: 'official-brand' | 'organiser-logo' | 'organiser-image' | 'editorial-illustration';
+  imageKind: 'official-brand' | 'organiser-logo' | 'organiser-image' | 'editorial-illustration' | 'owner-supplied-photo';
   isPublished: boolean;
   sourceVerified: boolean;
 }
@@ -52,13 +52,13 @@ export const KZ_ANNOUNCEMENTS: KazakhstanAnnouncement[] = [
     },
     organiser: { ru: 'Beyim Learn', kk: 'Beyim Learn', en: 'Beyim Learn' },
     sourceUrl: 'https://beyim.edu.kz/learn/inclusive-support-preschool-children-special-needs',
-    imageSrc: 'images/editorial/photos/event-beyim-preschool-learning.jpg',
+    imageSrc: 'images/events/beyim-preschool-user-photo.webp',
     imageAlt: {
-      ru: 'Стоковая фотография: педагог помогает ребёнку дошкольного возраста осваивать счёт с учебными материалами. Не фотография курса Beyim Learn.',
-      kk: 'Сток фотосурет: педагог мектепке дейінгі балаға оқу материалдарымен санауды үйретуде. Beyim Learn курсының фотосуреті емес.',
-      en: 'Stock photograph of a teacher guiding a preschool child through counting with learning materials, not a photograph of the Beyim Learn course.',
+      ru: 'Фотография, предоставленная пользователем: педагог помогает детям дошкольного возраста во время творческого занятия. Не фотография самого курса Beyim Learn.',
+      kk: 'Пайдаланушы ұсынған сурет: педагог мектепке дейінгі балаларға шығармашылық сабақта көмектесуде. Beyim Learn курсының нақты фотосуреті емес.',
+      en: 'User-provided photograph of a teacher helping preschool children during an art activity, not a photograph of the Beyim Learn course itself.',
     },
-    imageKind: 'editorial-illustration',
+    imageKind: 'owner-supplied-photo',
     isPublished: true,
     sourceVerified: true,
   },
