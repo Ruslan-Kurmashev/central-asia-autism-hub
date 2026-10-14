@@ -5,10 +5,10 @@ import path from 'node:path';
 const dist = path.resolve('dist');
 const base = '/central-asia-autism-hub/kz/';
 const locales = ['ru', 'kk', 'en'];
-const expectedHomeHeadlines = {
-  ru: 'Все об аутизме - понимание открывает возможности',
-  kk: 'Аутизм туралы бәрі - түсіну мүмкіндіктерге жол ашады',
-  en: 'All about autism - understanding opens up possibilities',
+const expectedHomeHeadlineLines = {
+  ru: ['Все об аутизме', 'понимание открывает возможности'],
+  kk: ['Аутизм туралы бәрі', 'түсіну мүмкіндіктерге жол ашады'],
+  en: ['All about autism', 'understanding opens up possibilities'],
 };
 const sections = ['parents','research','help-kazakhstan','learning','professionals','about'];
 const errors = [];
@@ -21,8 +21,11 @@ for (const lang of locales) {
   check(html.includes('<html lang="' + lang + '"'), id + ': HTML document language incorrect');
   check(html.includes('home-v2__hero') && html.includes('home-v2__masonry'),
     id + ': homepage hero or featured grid missing');
-  check(html.includes('<h1 id="home-v2-title">' + expectedHomeHeadlines[lang] + '</h1>'),
-    id + ': approved homepage slogan is missing');
+  const heroHeading = html.match(/<h1 id="home-v2-title">([\\s\\S]*?)<\\/h1>/)?.[1] ?? '';
+  const actualHeadlineLines = [...heroHeading.matchAll(/<span class="home-v2__hero-title-line(?: home-v2__hero-title-line--supporting)?">([^<]*)<\\/span>/g)]
+    .map((match) => match[1]);
+  check(JSON.stringify(actualHeadlineLines) === JSON.stringify(expectedHomeHeadlineLines[lang]),
+    id + ': approved slogan must render as two separate lines without a dash');
   check(html.includes('id="announcements"') &&
     html.includes('id="materials"') &&
     html.indexOf('id="announcements"') < html.indexOf('id="materials"'),
