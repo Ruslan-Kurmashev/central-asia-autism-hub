@@ -272,7 +272,7 @@ Remaining templates (pre-assessment checklist, structured observation, different
 
 ### 9.4.1. Assessment library content release (14 October 2026)
 
-Russian-language professional source articles published in sequence: **A01-A05** (early signs/referral; screening; choosing instruments; M-CHAT-R/F; ADOS-2/ADI-R/CARS-2). Next planned source article A06 is a clinical developmental-history guide. Kazakh and English entries remain unpublished, not linked to Russian articles.
+Russian-language professional source articles published in sequence: **A01-A06** (early signs/referral; screening; choosing instruments; M-CHAT-R/F; ADOS-2/ADI-R/CARS-2; developmental-history interview). Next planned source article A07 covers structured clinical observation. Kazakh and English entries remain unpublished, not linked to Russian articles.
 
 The downloadable library contains **four released Russian sets / eight actual files**: referral flow (PDF), instrument comparisons (PDF, XLSX, CSV), developmental history template (DOCX, PDF), and pre-assessment checklist (DOCX, PDF). Remaining six download sets are planned and must not receive active links until built and reviewed. The checklist is generated in the canonical `scripts/build-professional-assessment-downloads.py` workflow and checked as a real binary file.
 
