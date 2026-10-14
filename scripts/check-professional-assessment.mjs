@@ -40,7 +40,7 @@ for (const [locale,[title,count,ready]] of Object.entries(copy)) {
   if(locale==='ru') {
     assert.ok(earlyHub.includes('href="'+a01Href+'"'), 'RU first assessment article must be published and linked');
     const articleHtml=await readFile(path.resolve('dist/kz/ru/professionals/rannee-vyyavlenie-autizma-marshrut-specialista/index.html'),'utf8');
-    for(const part of ['professional-assessment-early-pathway.svg','article-v2__sources','download', 'Скрининг не равен', 'Казахстан']) {
+    for(const part of ['professional-assessment-early-pathway.svg','article-v2__sources','download', 'Действия в пяти типовых ситуациях', 'Казахстан']) {
       assert.ok(articleHtml.includes(part), 'A01 must include source-backed practical content: '+part);
     }
   } else {
