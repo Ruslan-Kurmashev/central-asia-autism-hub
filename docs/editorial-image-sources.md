@@ -536,3 +536,14 @@ All three files are original AutismHub vector diagrams, created specifically for
 | `professional-evidence-study-appraisal.svg` | AutismHub original geometric SVG illustration, 14 October 2026 | Neutral study papers, effect graph and magnifying lens; illustrates evaluation of evidence, not a published experiment result. |
 | `professional-evidence-aac-ndbi-fct-fba.svg` | AutismHub original geometric SVG illustration, 14 October 2026 | Four separate abstract icons for communication, naturalistic play, functional request and context assessment; not reproductions of proprietary protocols or protected AAC symbol libraries. |
 | `professional-evidence-claims-review.svg` | AutismHub original geometric SVG illustration, 14 October 2026 | Conceptual advertising claim, lens and evidence checklist; no commercial product, diagnostic device, endorsement or safety certificate is portrayed. |
+
+## Biology of autism introductory explainer: original SVG graphics (15 October 2026)
+
+These two self-hosted assets were authored as original vector SVG markup for AutismHub. No stock photos, external research figures, branded diagrams, patient images, proprietary datasets, or generative image model outputs were used. The illustrations provide educational metaphors, not actual microscopy, neuroimaging, participants or patient-specific biological findings. SVG source remains editable in the repository.
+
+| Asset | Location | Purpose and limitations |
+| --- | --- | --- |
+| `autism-biology-overview-cover.svg` | `public/images/research/` | Abstract neuron-like network cover with no identifiable individuals. The drawing does not represent a measured brain network, diagnostic test or proven universal neurobiological autism signature. |
+| `autism-biology-levels-diagram.svg` | `public/images/research/` | Four-level conceptual map of genetic variation, cellular development, neural networks and individual characteristics; separately notes still-investigated environmental and other contributions. The arrows are illustrative and do not assert a causal chain in every autistic person. |
+
+Review requirement: check legibility on mobile screen sizes and ensure captions remain adjacent to figures when the Markdown draft is published.
