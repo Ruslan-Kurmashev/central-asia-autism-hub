@@ -140,12 +140,33 @@ def history():
       "Шаблон AutismHub не воспроизводит ADI-R, ADOS-2, CARS-2 и другие защищённые инструменты."]:
         d.add_paragraph(item)
     file=OUT/"developmental-history-template-ru.docx";d.save(file)
-    # PDF printable version from DOCX via LibreOffice, which is installed on the build runner.
-    import subprocess
-    subprocess.run(["libreoffice","-env:UserInstallation=file:///tmp/autismhub-lo-profile",
-      "--headless","--convert-to","pdf","--outdir",str(OUT),str(file)],check=True,
-      stdout=subprocess.DEVNULL,stderr=subprocess.DEVNULL,timeout=90)
-    assert (OUT/"developmental-history-template-ru.pdf").exists()
+    # Print-friendly version produced with ReportLab, without LibreOffice dependency.
+    printable=SimpleDocTemplate(str(OUT/"developmental-history-template-ru.pdf"),pagesize=A4,
+        leftMargin=20*mm,rightMargin=20*mm,topMargin=16*mm,bottomMargin=16*mm)
+    blocks=[
+        ("A. Обращение", "Дата, возраст, роль специалиста; причина обращения",3),
+        ("Языки и коммуникация", "Языки ребёнка и семьи, жесты, AAC, необходимость перевода",3),
+        ("Сильные стороны", "Интересы, способы участия и выражения предпочтений",3),
+        ("B. История развития", "История и изменения навыков; источник информации",4),
+        ("Социальная коммуникация", "Примеры дома и в детском саду, контекст наблюдения",4),
+        ("Речь и языки", "Понимание, жесты, языки и средства коммуникации",4),
+        ("Поведение и сенсорные особенности", "Наблюдаемые факты без диагностических баллов",4),
+        ("C. Здоровье", "Сон, питание, слух, зрение, регресс навыков, вопросы для врача",4),
+        ("Сведения из разных условий", "Наблюдения семьи и специалистов с указанным источником",3),
+        ("Неопределённость", "Какая клиническая информация ещё необходима",3),
+        ("Согласованный план", "Ответственный, согласия, сроки, следующий контакт",4),
+    ]
+    story=[paragraph("AUTISMHUB / ПЕЧАТНАЯ ФОРМА",8,True,NAVY),
+      paragraph("История развития ребёнка",15,True,NAVY),
+      paragraph("Версия 1.0 · 14.10.2026. Не валидированная шкала; не замена обязательных медицинских бланков.",8)]
+    for head,sub,n in blocks:
+        story.append(paragraph(head,10,True,NAVY))
+        story.append(paragraph(sub,7))
+        for _ in range(n):
+            story.append(Spacer(1,12))
+            story.append(paragraph("________________________________________________________________________________",7))
+    story.append(paragraph("Источники: NICE CG128; CPS Standards of diagnostic assessment; Кодекс РК № 360-VI.",7))
+    printable.build(story)
 
 def spreadsheet():
     # XLSX via the ISO OpenXML Spreadsheet package. No macro, code or external links.
