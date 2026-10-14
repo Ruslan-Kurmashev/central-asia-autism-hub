@@ -22,13 +22,13 @@ const enHome = await inspectPage('kz/en', 'home-v2', [
   'home-v2__masonry',
   'Latest on AutismHub',
   'Events and announcements',
-  'All resources',
   'Our information sources',
 ]);
 const ruHome = await inspectPage('kz/ru', 'home-v2', [
   'home-v2__hero',
   'home-v2__masonry',
 ]);
+assert.ok(!enHome.includes('home-v2__topicbar') && !ruHome.includes('home-v2__topicbar'), 'Secondary navigation removed on RU and EN homepages');
 const enParents = await inspectPage('kz/en/parents', 'section-v2', [
   'Child development',
   'section-v2__accordion',
