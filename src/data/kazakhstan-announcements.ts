@@ -54,9 +54,9 @@ export const KZ_ANNOUNCEMENTS: KazakhstanAnnouncement[] = [
     sourceUrl: 'https://beyim.edu.kz/learn/inclusive-support-preschool-children-special-needs',
     imageSrc: 'images/editorial/kz-kindergarten-visual-schedule.svg',
     imageAlt: {
-      ru: 'Тематическая иллюстрация дошкольной поддержки: развивающие материалы и визуальное расписание. Не официальная афиша курса.'
-      kk: 'Мектепке дейінгі қолдау туралы тақырыптық иллюстрация: оқу материалдары мен көрнекі кесте. Курстың ресми афишасы емес.'
-      en: 'Illustration of preschool learning materials and visual schedules, not an official course poster.'
+      ru: 'Тематическая иллюстрация дошкольной поддержки: развивающие материалы и визуальное расписание. Не официальная афиша курса.',
+      kk: 'Мектепке дейінгі қолдау туралы тақырыптық иллюстрация: оқу материалдары мен көрнекі кесте. Курстың ресми афишасы емес.',
+      en: 'Illustration of preschool learning materials and visual schedules, not an official course poster.',
     },
     imageKind: 'editorial-illustration',
     isPublished: true,
@@ -116,9 +116,9 @@ export const KZ_ANNOUNCEMENTS: KazakhstanAnnouncement[] = [
     sourceUrl: 'https://conference-satr.kz/',
     imageSrc: 'images/editorial/professional-family-information-sharing.svg',
     imageAlt: {
-      ru: 'Тематическая иллюстрация междисциплинарного взаимодействия семьи, медицинских и образовательных специалистов. Не официальная афиша конференции.'
-      kk: 'Отбасы, медицина және білім беру мамандарының пәнаралық ынтымақтастығы туралы тақырыптық иллюстрация. Конференцияның ресми афишасы емес.'
-      en: 'Illustration of cross-disciplinary collaboration between families, healthcare and education, not the official conference poster.'
+      ru: 'Тематическая иллюстрация междисциплинарного взаимодействия семьи, медицинских и образовательных специалистов. Не официальная афиша конференции.',
+      kk: 'Отбасы, медицина және білім беру мамандарының пәнаралық ынтымақтастығы туралы тақырыптық иллюстрация. Конференцияның ресми афишасы емес.',
+      en: 'Illustration of cross-disciplinary collaboration between families, healthcare and education, not the official conference poster.',
     },
     imageKind: 'editorial-illustration',
     isPublished: true,
