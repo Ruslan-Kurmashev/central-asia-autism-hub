@@ -106,6 +106,50 @@ for (const file of await collect(researchFolder)) {
   checked += 1;
 }
 
+// Research landing: each language must expose four main topics and two
+// supplementary destinations; all six must have a working list page.
+const researchTopicIds = [
+  'research-reviews',
+  'causes-and-biology',
+  'support-evidence',
+  'reading-research',
+  'kazakhstan-research',
+  'research-participation',
+];
+for (const language of ['ru', 'kk', 'en']) {
+  const landing = await firstExisting([
+    path.join(buildFolder, 'kz', language, 'research', 'index.html'),
+    path.join(buildFolder, 'central-asia-autism-hub', 'kz', language, 'research', 'index.html'),
+  ]);
+  if (!landing) {
+    errors.push('Missing research landing for ' + language);
+    continue;
+  }
+  const html = await readFile(landing, 'utf8');
+  if (!html.includes('research-directory__grid') ||
+      !html.includes('research-directory__extras') ||
+      html.includes('section-v2__topic-map')) {
+    errors.push('Research topic landing has old or incomplete navigation: ' + language);
+  }
+  for (const topicId of researchTopicIds) {
+    if (!html.includes('/research/topics/' + topicId + '/')) {
+      errors.push('Research landing link missing: ' + language + '/' + topicId);
+    }
+    const topicPage = await firstExisting([
+      path.join(buildFolder, 'kz', language, 'research', 'topics', topicId, 'index.html'),
+      path.join(buildFolder, 'central-asia-autism-hub', 'kz', language, 'research', 'topics', topicId, 'index.html'),
+    ]);
+    if (!topicPage) {
+      errors.push('Research topic page missing: ' + language + '/' + topicId);
+      continue;
+    }
+    const detailHtml = await readFile(topicPage, 'utf8');
+    if (!detailHtml.includes('section-v2__back') || !detailHtml.includes('section-v2__count')) {
+      errors.push('Research topic page is incomplete: ' + language + '/' + topicId);
+    }
+  }
+}
+
 if (errors.length) {
   for (const error of errors) console.error(error);
   process.exitCode = 1;
