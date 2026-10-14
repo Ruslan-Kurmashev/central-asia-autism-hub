@@ -9,7 +9,7 @@ const visualSource = await readFile(path.join(root, 'src/data/research-card-visu
 const manifest = await readFile(path.join(root, 'scripts/sync-editorial-photos.mjs'), 'utf8');
 const attribution = await readFile(path.join(root, 'docs/editorial-image-sources.md'), 'utf8');
 const homepageSource = await readFile(path.join(root, 'src/pages/kz/[lang]/index.astro'), 'utf8');
-const catalogueSource = await readFile(path.join(root, 'src/pages/kz/[lang]/[section]/index.astro'), 'utf8');
+const catalogueSource = await readFile(path.join(root, 'src/pages/kz/[lang]/research/topics/[topic].astro'), 'utf8');
 assert.ok(homepageSource.includes('getResearchCardVisual(material.data.slug)'), 'Homepage must render per-article research cover');
 assert.ok(catalogueSource.includes('getResearchCardVisual(material.data.slug)'), 'Research catalogue must render per-article research cover');
 assert.ok(!homepageSource.includes("getEditorialVisual('research'"), 'Generic lab image may not override research covers');
@@ -59,7 +59,7 @@ assert.ok(published.length >= 10, 'Expected ten published Russian scientific exp
 assert.equal(visuals.size, published.length,
   'Research card photo registry must cover all and only the published Russian research articles');
 
-const listing = await readFile(path.join(root, 'dist/kz/ru/research/index.html'), 'utf8');
+const listing = await readFile(path.join(root, 'dist/kz/ru/research/topics/research-reviews/index.html'), 'utf8');
 for (const item of published) {
   assert.ok(listing.includes('src="' + base + item.src + '"'),
     'Published research listing does not use its unique local card image: ' + item.slug);
