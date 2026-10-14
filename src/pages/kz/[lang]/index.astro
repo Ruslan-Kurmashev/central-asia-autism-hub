@@ -29,6 +29,7 @@ interface Props {
 
 const { locale } = Astro.props;
 const copy = UI[locale];
+const [sloganFirstLine, sloganSecondLine] = copy.title.split(' - ');
 const contentCopy = CONTENT_UI[locale];
 const useHomeV2 = ['ru', 'en', 'kk'].includes(locale);
 
@@ -252,7 +253,10 @@ const dateFormatter = new Intl.DateTimeFormat(DATE_LOCALES[locale], {
 
           <div class="container home-v2__hero-content">
             <p class="home-v2__eyebrow">{copy.eyebrow}</p>
-            <h1 id="home-v2-title">{copy.title}</h1>
+            <h1 id="home-v2-title">
+              <span class="home-v2__hero-title-line">{sloganFirstLine}</span>
+              <span class="home-v2__hero-title-line home-v2__hero-title-line--supporting">{sloganSecondLine}</span>
+            </h1>
             <p class="home-v2__lead">{copy.lead}</p>
             <a
               class="home-v2__hero-button"
