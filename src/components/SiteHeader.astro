@@ -13,6 +13,7 @@ interface Props {
 
 const { locale, currentSection, alternatePath = '', alternatePaths } = Astro.props;
 const homeHref = locale ? localePath(locale) : sitePath();
+const isHomePage = Astro.url.pathname.replace(/\/+$/, '') === homeHref.replace(/\/+$/, '');
 const aboutLinks: Record<Locale, { label: string; path: string }[]> = {
   ru: [
     { label: 'О проекте', path: 'about' },
@@ -66,6 +67,11 @@ const aboutLinks: Record<Locale, { label: string; path: string }[]> = {
             </summary>
             <nav class="primary-nav" aria-label={UI[locale].primaryNavigation}>
               <ul>
+                <li>
+                  <a href={homeHref} aria-current={isHomePage ? 'page' : undefined}>
+                    {UI[locale].homeLabel}
+                  </a>
+                </li>
                 {SECTIONS.map((section) => (
                   <li>
                     {section === 'about' ? (
