@@ -92,7 +92,9 @@ for (const lang of locales) {
     id + ': header must show only the Autism Hub Kazakhstan name');
   check(html.includes('href="' + base + lang + '/parents/#autism-basics"'),
     id + ': start-here action missing or not base-path safe');
-  check(html.includes('alt=') && html.includes('hero-family.webp'), id + ': hero image missing');
+  const heroImage = html.match(/<img\\b[^>]*class="home-v2__hero-image"[^>]*>/)?.[0] ?? '';
+  check(heroImage.includes('src="' + base.slice(0, 0) + '/central-asia-autism-hub/images/home-hero-family-2026.webp"') &&
+    heroImage.includes('alt='), id + ': approved homepage hero image missing');
   for (const page of ['about/team', 'about/experts', 'about/contact']) {
     check(html.includes('href="' + base + lang + '/' + page + '/"'), id + ': About submenu link missing: ' + page);
   }
