@@ -48,7 +48,7 @@ for (const [locale, copy] of Object.entries(expected)) {
   assert.equal((html.match(/class="professional-directory__card"/g) ?? []).length, 6, locale + ': expected six area cards');
   assert.equal((html.match(/class="professional-directory__detail"/g) ?? []).length, 6, locale + ': expected six detail panels');
   assert.equal((html.match(/class="professional-directory__item"/g) ?? []).length, 30, locale + ': expected 30 direct planned resources; international country folders are counted separately');
-  assert.equal((html.match(/class="professional-directory__status"/g) ?? []).length, locale === 'ru' ? 15 : 22, locale + ': only genuinely published direct entries should be linked');
+  assert.equal((html.match(/class="professional-directory__status"/g) ?? []).length, locale === 'ru' ? 23 : 30, locale + ': only genuinely published direct entries should be linked');
   if (locale === 'ru') {
     const articleHref = '/central-asia-autism-hub/kz/ru/professionals/kak-rabotat-s-professionalnymi-rekomendaciyami/';
     assert.ok(html.includes('href="' + articleHref + '"'), 'Russian first professional resource must have a working article link');
