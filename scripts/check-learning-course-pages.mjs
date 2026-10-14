@@ -17,12 +17,12 @@ const field = (frontmatter, name) =>
 for (const locale of locales) {
   const contentDir = path.join(root, 'src/content/learning/kz', locale);
   const catalog = await readFile(path.join(root, 'dist/kz',locale,'learning/index.html'),'utf8');
-  const files = (await readdir(contentDir)).filter(file=>/\\.mdx?$/.test(file));
+  const files = (await readdir(contentDir)).filter(file=>/\.mdx?$/.test(file));
   let perLocale = 0;
   const routeSlugs = new Set();
   for (const file of files) {
     const markdown = await readFile(path.join(contentDir,file),'utf8');
-    const front = markdown.match(/^---\\r?\\n([\\s\\S]*?)\\r?\\n---/)?.[1];
+    const front = markdown.match(/^---\r?\n([\s\S]*?)\r?\n---/)?.[1];
     assert.ok(front, file + ': invalid frontmatter');
     if (field(front,'draft') !== 'false') continue;
     const slug = field(front,'slug'), key = field(front,'translationKey');
@@ -45,7 +45,7 @@ for (const locale of locales) {
       'learning-view__disclaimer','learning-view__sources',
       externalUrl,'learning-view__back'
     ]) assert.ok(html.includes(text), file + ': missing page structure/content: ' + text);
-    assert.ok(!/<iframe\\b/i.test(html), file + ': YouTube loads before user consent');
+    assert.ok(!/<iframe\b/i.test(html), file + ': YouTube loads before user consent');
     const videoIdFields = [...front.matchAll(/^    youtubeVideoId:\s*"([A-Za-z0-9_-]{11})"/gm)].map(m=>m[1]);
     if (videoIdFields.length) {
       videoCourses++;
