@@ -64,6 +64,8 @@ sources:
     accessedAt: 2026-10-14
 ---
 
+**Скачать практический инструмент AutismHub:** Чек-лист сопутствующих состояний - [PDF для печати](/central-asia-autism-hub/downloads/assessment/cooccurring-conditions-checklist-ru.pdf) и [редактируемый DOCX](/central-asia-autism-hub/downloads/assessment/cooccurring-conditions-checklist-ru.docx). Это авторская рабочая форма, не клиническая шкала и не обязательный медицинский бланк Казахстана. Дополнительно: [14-дневный дневник сна (CSV)](/central-asia-autism-hub/downloads/assessment/cooccurring-conditions-sleep-log-ru.csv), подготовленный для обсуждения сна по принципам NICE CG170.
+
 ## 1. Зачем нужна оценка сопутствующих состояний
 
 Аутизм является нейроразвитийным состоянием, однако у ребёнка могут существовать **отдельные медицинские и психические потребности**, которые нельзя автоматически объяснять РАС.
