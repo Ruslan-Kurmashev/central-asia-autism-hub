@@ -157,15 +157,23 @@ const availableTopics = [...new Set(items.map((entry) => entry.data.topicArea).f
                 )}
               </div>
               <div class="course-catalogue__action">
-                <a href={articlePath(locale, 'learning', entry.data.slug)}>
-                  {(entry.data.lessons ?? []).some((lesson) => Boolean(lesson.youtubeVideoId)) ? t.watch : t.onSite}
-                  <span aria-hidden="true">→</span>
-                </a>
-                {entry.data.externalUrl && (
-                  <a class="course-catalogue__external-link" href={entry.data.externalUrl} target="_blank" rel="noopener noreferrer external">
-                    {t.providerWebsite} <span aria-hidden="true">↗</span>
+                {(entry.data.lessons ?? []).some((lesson) => Boolean(lesson.youtubeVideoId)) ? (
+                  <>
+                    <a href={articlePath(locale, 'learning', entry.data.slug)}>
+                      {t.watch} <span aria-hidden="true">→</span>
+                    </a>
+                    {entry.data.externalUrl && (
+                      <a class="course-catalogue__external-link" href={entry.data.externalUrl} target="_blank" rel="noopener noreferrer external">
+                        {t.providerWebsite} <span aria-hidden="true">↗</span>
+                      </a>
+                    )}
+                  </>
+                ) : entry.data.externalUrl ? (
+                  <a href={entry.data.externalUrl} target="_blank" rel="noopener noreferrer external">
+                    {t.openByKind[entry.data.learningKind ?? 'course']}
+                    <span aria-hidden="true">↗</span>
                   </a>
-                )}
+                ) : null}
               </div>
             </article>
           ))}
