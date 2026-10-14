@@ -1,4 +1,4 @@
-# Professional library — visual cover audit (14 October 2026)
+# Professional library - visual cover audit (14 October 2026)
 
 ## Scope
 
