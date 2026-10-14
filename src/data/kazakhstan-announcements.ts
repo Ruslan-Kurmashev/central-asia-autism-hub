@@ -25,7 +25,7 @@ export interface KazakhstanAnnouncement {
   sourceUrl: string;
   imageSrc: string;
   imageAlt: Record<Locale, string>;
-  imageKind: 'official-brand' | 'organiser-image' | 'editorial-illustration';
+  imageKind: 'official-brand' | 'organiser-logo' | 'organiser-image' | 'editorial-illustration';
   isPublished: boolean;
   sourceVerified: boolean;
 }
@@ -114,13 +114,13 @@ export const KZ_ANNOUNCEMENTS: KazakhstanAnnouncement[] = [
     organiser: { ru: 'Центр САТР', kk: 'САТР орталығы', en: 'SATR Centre' },
     city: { ru: 'Алматы, LuxHall', kk: 'Алматы, LuxHall', en: 'Almaty, LuxHall' },
     sourceUrl: 'https://conference-satr.kz/',
-    imageSrc: 'images/editorial/photos/event-satr-conference-audience.jpg',
+    imageSrc: 'images/events/satr-logo.svg',
     imageAlt: {
-      ru: 'Стоковая фотография слушателей профессионального семинара. Не фотография конференции Центра САТР.',
-      kk: 'Кәсіби семинар тыңдаушыларының сток фотосуреті. САТР орталығы конференциясының нақты фотосуреті емес.',
-      en: 'Stock photograph of an audience at a professional seminar, not a photograph of the SATR Centre conference.',
+      ru: 'Логотип Центра САТР: голубой орнамент с зелёным растением и надписью «САТР».',
+      kk: 'САТР орталығының логотипі: жасыл өсімдік бейнеленген көгілдір өрнек және «САТР» жазуы.',
+      en: 'SATR Centre logo with a blue ornamental design, green plant motif and SATR lettering.',
     },
-    imageKind: 'editorial-illustration',
+    imageKind: 'organiser-logo',
     isPublished: true,
     sourceVerified: true,
   },
