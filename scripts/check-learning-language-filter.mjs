@@ -46,7 +46,8 @@ for (const [lang, languageLabel] of Object.entries(labels)) {
     assert.ok(!/<(?:img|svg)\b/i.test(card), `Unverified logo or thumbnail in a course card on ${lang}`);
     const itemTag = card.match(/^<article\b[^>]*>/)?.[0] ?? '';
     const expectedLanguages = itemTag.match(/\bdata-language="([^"]+)"/)?.[1]?.split(' ') ?? [];
-    const pills = [...card.matchAll(/<span\bclass="course-catalogue__language-pill"\s+data-course-language-pill="([^"]+)"[^>]*>([\s\S]*?)<\/span>/g)];
+    const pills = [...card.matchAll(/<span\b[^>]*\bdata-course-language-pill="([^"]+)"[^>]*>([\s\S]*?)<\/span>/g)]
+      .filter(pill => pill[0].includes('course-catalogue__language-pill'));
     assert.equal(pills.length, expectedLanguages.length, `Visible teaching-language badges missing on ${lang}`);
     const labels = {
       ru: { ru: 'Русский', kk: 'Казахский', en: 'Английский' },
