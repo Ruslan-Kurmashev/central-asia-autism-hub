@@ -10,6 +10,9 @@ const locales = ['ru', 'kk', 'en'];
 const errors = [];
 const counts = {};
 const translations = new Map();
+const translationCovers = new Map();
+let checkedCoverCards = 0;
+let checkedHeroImages = 0;
 let checkedHeadings = 0;
 let tableRows = 0;
 
@@ -27,6 +30,9 @@ for (const locale of locales) {
   }
 
   let published = 0;
+  const imageOwners = new Map();
+  const listingCards = [...index.matchAll(/<a\b[^>]*\bclass="[^"]*\bsection-v2__article-row[^"]*"[^>]*>[\s\S]*?<\/a>/g)]
+    .map(match => match[0]);
   for (const filename of (await readdir(dir)).filter(x => /\.mdx?$/.test(x))) {
     const source = await readFile(path.join(dir, filename), 'utf8');
     const m = source.match(/^---\r?\n([\s\S]*?)\r?\n---(?:\r?\n|$)/);
@@ -45,6 +51,30 @@ for (const locale of locales) {
     if (field(fm, 'language') !== locale || !slug || !key) errors.push(id + ': invalid route or translation metadata');
     if (locale !== 'ru' && status !== 'checked') errors.push(id + ': unchecked published translation');
     if (!picture || alt.length < 25) errors.push(id + ': image or descriptive alternative missing');
+    if (picture) {
+      if (imageOwners.has(picture)) {
+        errors.push(id + ': reused cover with ' + imageOwners.get(picture) + ': ' + picture);
+      }
+      imageOwners.set(picture, id);
+      if (!picture.startsWith('/central-asia-autism-hub/images/editorial/photos/')) {
+        errors.push(id + ': nonlocal or noneditorial help cover: ' + picture);
+      }
+      const other = translationCovers.get(key);
+      if (other && other !== picture) {
+        errors.push(id + ': inconsistent cover between translations for ' + key);
+      } else {
+        translationCovers.set(key, picture);
+      }
+      const href = '/central-asia-autism-hub/kz/' + locale + '/help-kazakhstan/' + slug + '/';
+      const matchingCards = listingCards.filter(card => card.includes('href="' + href + '"'));
+      if (matchingCards.length !== 1) {
+        errors.push(id + ': expected exactly one directory card, found ' + matchingCards.length);
+      } else if (!matchingCards[0].includes('src="' + picture + '"')) {
+        errors.push(id + ': directory cover differs from article cover: ' + picture);
+      } else {
+        checkedCoverCards++;
+      }
+    }
     if (!translations.has(key)) translations.set(key, new Set());
     translations.get(key).add(locale);
 
@@ -73,11 +103,19 @@ for (const locale of locales) {
     let html;
     try { html = await readFile(articlePath, 'utf8'); }
     catch { errors.push(id + ': no generated article page'); continue; }
+    const heroImages = [...html.matchAll(/<img\b[^>]*>/g)]
+      .filter(match => match[0].includes('src="' + picture + '"'));
+    if (heroImages.length !== 1) {
+      errors.push(id + ': expected one matching article hero, found ' + heroImages.length);
+    } else {
+      checkedHeroImages++;
+    }
     for (const expected of ['kz-help-article-body', 'article-v2__layout', 'article-v2__sources', picture]) {
       if (!html.includes(expected)) errors.push(id + ': missing rendered ' + expected);
     }
   }
   counts[locale] = published;
+  if (imageOwners.size !== published) errors.push(locale + ': missing or reused images across published help articles');
   if (published < 8) errors.push(locale + ': expected at least eight published help guides');
 }
 
@@ -96,5 +134,5 @@ if (errors.length) {
   console.log('Kazakhstan help editorial QA passed: ' +
     Object.values(counts).reduce((a, b) => a + b, 0) + ' published guides ' +
     JSON.stringify(counts) + ', ' + checkedHeadings + ' semantic headings, ' +
-    tableRows + ' Markdown table rows, localized listing and article templates.');
+    tableRows + ' Markdown table rows, ' + checkedCoverCards + ' distinct matching directory images, ' + checkedHeroImages + ' verified article heroes and localized templates.');
 }
