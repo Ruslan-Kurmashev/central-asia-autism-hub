@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 680" role="img" aria-labelledby="t d"><title id="t">Клинический анамнез развития и семейное интервью</title><desc id="d">Оригинальная иллюстрация временной линии с четырьмя этапами и карточкой беседы, без персональных данных, фотографий пациентов или стандартизированных интервью.</desc>
+<rect width="1200" height="680" fill="#eff5fa"/><circle cx="1096" cy="104" r="185" fill="#deedf9"/><circle cx="103" cy="602" r="160" fill="#e3f1f9"/>
+<rect x="132" y="81" width="578" height="519" rx="31" fill="#c2d8e8" opacity=".53"/><rect x="115" y="64" width="578" height="519" rx="31" fill="#fff" stroke="#9ebdd8" stroke-width="6"/>
+<rect x="186" y="112" width="376" height="20" rx="10" fill="#2c628e"/><rect x="186" y="152" width="265" height="14" rx="7" fill="#acc7db"/>
+<path d="M226 230v264" stroke="#a4c3d9" stroke-width="9" stroke-linecap="round"/>
+<g fill="#e8f4ed" stroke="#2a7d83" stroke-width="6"><circle cx="226" cy="230" r="21"/><circle cx="226" cy="318" r="21"/><circle cx="226" cy="406" r="21"/><circle cx="226" cy="494" r="21"/></g>
+<g stroke="#aac5d8" stroke-width="13" stroke-linecap="round"><path d="M273 213h323M273 241h255M273 301h304M273 329h232M273 389h315M273 417h266M273 477h302M273 505h237"/></g>
+<path d="M769 185q0-29 29-29h287q29 0 29 29v194q0 29-29 29H944l-70 52v-52h-76q-29 0-29-29Z" fill="#fff" stroke="#2f6b96" stroke-width="8"/>
+<path d="M827 228h229M827 280h180M827 333h214" stroke="#b0cadf" stroke-width="16" stroke-linecap="round"/>
+<rect x="861" y="472" width="243" height="137" rx="23" fill="#e6f3ee" stroke="#2a7c86" stroke-width="7"/>
+<path d="m901 524 18 18 32-42" fill="none" stroke="#298388" stroke-width="9" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M975 510h87M975 542h103M900 577h171" stroke="#a7c8d5" stroke-width="13" stroke-linecap="round"/>
+</svg>
