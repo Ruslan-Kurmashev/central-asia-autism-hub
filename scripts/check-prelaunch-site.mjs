@@ -13,11 +13,34 @@ const expectedHomeHeadlineLines = {
 const sections = ['parents','research','help-kazakhstan','learning','professionals','about'];
 const errors = [];
 const check = (condition, message) => { if (!condition) errors.push(message); };
+const expectedMainNavigation = {
+  ru: ['Родителям', 'Наука простыми словами', 'Помощь в Казахстане', 'Обучение', 'Специалистам', 'О проекте'],
+  kk: ['Ата-аналарға', 'Ғылым қарапайым тілмен', 'Қазақстандағы көмек', 'Оқу', 'Мамандарға', 'Жоба туралы'],
+  en: ['For Parents', 'Research Explained', 'Help in Kazakhstan', 'Learning', 'For Professionals', 'About'],
+};
+
+function checkLocalizedHeader(html, lang, id) {
+  const header = html.match(/<header class="site-header">([\s\S]*?)<\/header>/)?.[0] ?? '';
+  const navigation = header.match(/<nav class="primary-nav"[\s\S]*?<\/nav>/)?.[0] ?? '';
+  const languages = header.match(/<nav class="language-switcher"[\s\S]*?<\/nav>/)?.[0] ?? '';
+  check(Boolean(header) && header.includes('Autism Hub Kazakhstan'),
+    id + ': shared site header or brand is missing');
+  for (const label of expectedMainNavigation[lang]) {
+    check(navigation.includes(label), id + ': main navigation translation missing: ' + label);
+  }
+  for (const target of locales) {
+    check(languages.includes('href="' + base + target + '/"'),
+      id + ': language switcher missing ' + target);
+  }
+  check(new RegExp('<a[^>]*lang="' + lang + '"[^>]*aria-current="page"').test(languages),
+    id + ': language switcher does not mark the active locale');
+}
 
 for (const lang of locales) {
   const filename = path.join(dist, 'kz', lang, 'index.html');
   const html = await readFile(filename, 'utf8');
   const id = 'homepage ' + lang;
+  checkLocalizedHeader(html, lang, id);
   check(html.includes('<html lang="' + lang + '"'), id + ': HTML document language incorrect');
   check(html.includes('home-v2__hero') && html.includes('home-v2__masonry'),
     id + ': homepage hero or featured grid missing');
@@ -74,6 +97,7 @@ for (const lang of locales) {
       id + ': primary section link missing: ' + section);
     const sectionPage = path.join(dist, 'kz', lang, section, 'index.html');
     const sectionHtml = await readFile(sectionPage, 'utf8');
+    checkLocalizedHeader(sectionHtml, lang, lang + '/' + section);
     check(sectionHtml.includes('href="' + base + lang + '/"'),
       lang + '/' + section + ': missing local home link');
     check(sectionHtml.includes('<html lang="' + lang + '"'),
@@ -129,6 +153,9 @@ for (const target of ['kk','en']) {
 
 const css = await readFile('src/styles/home-v2.css', 'utf8');
 const main = await readFile('src/styles/global.css', 'utf8');
+check(main.includes('body:not(.home-v2) .site-header {') &&
+  main.includes('background: linear-gradient(90deg, #294960'),
+  'Localized content pages must use the shared dark blue header');
 const header = await readFile('src/components/SiteHeader.astro', 'utf8');
 check(css.includes('@media (max-width: 42rem)') && css.includes('@media (max-width: 56rem)'),
   'Homepage responsive mobile breakpoints missing');
