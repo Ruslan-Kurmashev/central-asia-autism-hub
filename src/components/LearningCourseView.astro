@@ -167,7 +167,7 @@ const readDate = course.lastVerifiedAt?.toLocaleDateString(locale === 'ru' ? 'ru
         <section class="learning-view__section" aria-labelledby="learning-sources-title">
           <h2 id="learning-sources-title">{ui.source}</h2>
           <ul class="learning-view__sources">
-            {course.sources.map((source) => <li><a href={source.url} target="_blank" rel="noopener noreferrer external">{source.title} ↗</a>{source.organisation && <span> — {source.organisation}</span>}</li>)}
+            {course.sources.map((source) => <li><a href={source.url} target="_blank" rel="noopener noreferrer external">{source.title} ↗</a>{source.organisation && <span> - {source.organisation}</span>}</li>)}
           </ul>
         </section>
       )}
