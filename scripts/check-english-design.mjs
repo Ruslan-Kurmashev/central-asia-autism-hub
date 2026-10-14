@@ -22,7 +22,7 @@ const enHome = await inspectPage('kz/en', 'home-v2', [
   'home-v2__masonry',
   'Latest on AutismHub',
   'Events and announcements',
-  'Our information sources',
+  'What our materials are based on',
 ]);
 const ruHome = await inspectPage('kz/ru', 'home-v2', [
   'home-v2__hero',
