@@ -57,28 +57,33 @@ for (const locale of ['ru', 'kk', 'en']) {
       } else {
         coverByTranslationKey.set(key, image);
       }
-      // Only two explicitly approved professional publications use photos
-      // instead of original SVG covers; do not generalize to test procedures.
-      const approvedPhotos = {
+      // The two approved professional raster covers have distinct formats.
+      // Keep validation strict: a01 uses JPEG; a05 uses a locally hosted WebP.
+      const approvedRasterCovers = {
         'professionals-a01': 'professional-early-referral-family-consultation.jpg',
-        'professionals-a05': 'professional-ados-adi-cars-clinical-observation.jpg',
+        'professionals-a05': 'professional-ados-adi-cars-central-asia.webp',
       };
-      const approvedPhotoFilename = approvedPhotos[key];
-      const approvedPhoto = Boolean(approvedPhotoFilename) &&
-        image === '/central-asia-autism-hub/images/editorial/photos/' + approvedPhotoFilename;
+      const approvedFilename = approvedRasterCovers[key];
+      const approvedRaster = Boolean(approvedFilename) &&
+        image === '/central-asia-autism-hub/images/editorial/photos/' + approvedFilename;
       const match = image.match(/^\/central-asia-autism-hub\/images\/editorial\/([a-z0-9-]+\.svg)$/);
-      if (approvedPhoto) {
-        const jpgPath = path.resolve('public/images/editorial/photos', approvedPhotoFilename);
+      if (approvedRaster) {
+        const assetPath = path.resolve('public/images/editorial/photos', approvedFilename);
         try {
-          const bytes = await readFile(jpgPath);
-          if (bytes.length < 15000 || bytes[0] !== 0xff || bytes[1] !== 0xd8 ||
-              bytes[bytes.length - 2] !== 0xff || bytes[bytes.length - 1] !== 0xd9) {
-            errors.push(id + ': approved professional consultation cover is not a valid local JPEG');
+          const bytes = await readFile(assetPath);
+          const validJpeg = approvedFilename.endsWith('.jpg') &&
+            bytes[0] === 0xff && bytes[1] === 0xd8 &&
+            bytes[bytes.length - 2] === 0xff && bytes[bytes.length - 1] === 0xd9;
+          const validWebp = approvedFilename.endsWith('.webp') &&
+            bytes.subarray(0, 4).toString('ascii') === 'RIFF' &&
+            bytes.subarray(8, 12).toString('ascii') === 'WEBP';
+          if (bytes.length < 15000 || (!validJpeg && !validWebp)) {
+            errors.push(id + ': approved professional raster cover is not a valid local image');
           } else {
             photoCoversChecked++;
           }
         } catch {
-          errors.push(id + ': approved professional consultation cover missing from build assets');
+          errors.push(id + ': approved professional raster cover missing from build assets');
         }
       } else if (!match) {
         errors.push(id + ': professional cover must be a locally hosted editorial SVG: ' + image);
