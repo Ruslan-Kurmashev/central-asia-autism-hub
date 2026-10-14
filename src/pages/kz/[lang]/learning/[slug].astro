@@ -1,0 +1,50 @@
+---
+import { getCollection, render, type CollectionEntry } from 'astro:content';
+import LearningCourseView from '../../../../components/LearningCourseView.astro';
+import BaseLayout from '../../../../layouts/BaseLayout.astro';
+import { SITE, type Locale } from '../../../../site.config';
+
+export async function getStaticPaths() {
+  const all = await getCollection('learning', ({ data }) =>
+    !data.draft && data.translationStatus !== 'pending' &&
+    Boolean(data.publishedAt) && Boolean(data.updatedAt),
+  );
+  const used = new Set<string>();
+  return all.map((entry) => {
+    const route = entry.data.language + '/' + entry.data.slug;
+    if (used.has(route)) throw new Error('Duplicated learning route: ' + route);
+    used.add(route);
+    const translations = all.filter((candidate) =>
+      candidate.data.translationKey === entry.data.translationKey,
+    );
+    const alternatePaths = Object.fromEntries(
+      translations.map((candidate) =>
+        [candidate.data.language, 'learning/' + candidate.data.slug]),
+    ) as Partial<Record<Locale, string>>;
+    return {
+      params: { lang: entry.data.language, slug: entry.data.slug },
+      props: { entry, alternatePaths },
+    };
+  });
+}
+
+interface Props {
+  entry: CollectionEntry<'learning'>;
+  alternatePaths: Partial<Record<Locale, string>>;
+}
+
+const { entry, alternatePaths } = Astro.props;
+const { Content } = await render(entry);
+---
+<BaseLayout
+  title={entry.data.title + ' | Обучение | ' + SITE.name}
+  description={entry.data.summary}
+  locale={entry.data.language}
+  currentSection="learning"
+  alternatePaths={alternatePaths}
+  bodyClass="learning-section-body"
+>
+  <LearningCourseView locale={entry.data.language} entry={entry}>
+    <Content />
+  </LearningCourseView>
+</BaseLayout>
