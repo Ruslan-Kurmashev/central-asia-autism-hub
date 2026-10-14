@@ -33,7 +33,7 @@ for spec in specs:
     assert len(doc.tables)==len(spec["sections"]),(stem,"missing editable sections")
     for table,section in zip(doc.tables,spec["sections"]):
         assert len(table.rows)==len(section["rows"]),(stem,"missing editable fields")
-    assert all(any(link in combined for _,link in spec["references"][:1]) for _ in [0]),(stem,"source URLs missing in printable PDF")
+    assert spec["references"][0][0] in combined,(stem,"attribution absent from printable PDF")
     print("PRACTICE_TOOL_VALID",stem,"pdf_pages",len(reader.pages),"docx_tables",len(doc.tables))
 
 with (OUT/"cooccurring-conditions-sleep-log-ru.csv").open(encoding="utf-8-sig",newline="") as f:
