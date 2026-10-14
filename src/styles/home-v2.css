@@ -157,11 +157,24 @@
 
 .home-v2__hero-image {
   position: absolute;
-  inset: 0;
-  width: 100%;
+  top: 0;
+  left: -35%;
+  width: 135%;
+  max-width: none;
   height: 100%;
   object-fit: cover;
-  object-position: center 45%;
+  object-position: center 30%;
+}
+
+/* The photo's subjects sit to the right in the original composition.
+   Crop from the right at desktop widths so the family, not the empty
+   left-hand sofa, becomes the visual center of the hero. */
+@media (max-width: 56rem) {
+  .home-v2__hero-image {
+    left: 0;
+    width: 100%;
+    object-position: 68% 45%;
+  }
 }
 
 .home-v2__hero-overlay {
