@@ -1,6 +1,6 @@
 ---
 import { getCollection } from 'astro:content';
-import ProfessionalAssessmentHub from '../../../../../components/ProfessionalAssessmentHub.astro';
+import ProfessionalAssessmentHome from '../../../../../components/ProfessionalAssessmentHome.astro';
 import BaseLayout from '../../../../../layouts/BaseLayout.astro';
 import { SITE, SUPPORTED_LOCALES, type Locale } from '../../../../../site.config';
 
@@ -14,5 +14,5 @@ const title=locale==='ru'?'Оценка и диагностика':locale==='kk'
 const description=locale==='ru'?'Пять этапов оценки аутизма, двенадцать профессиональных материалов и бесплатные скачиваемые рабочие инструменты.':locale==='kk'?'Аутизмді бағалаудың бес кезеңі, он екі кәсіби материал және жүктелетін жұмыс құралдары.':'Five stages of autism assessment, twelve planned professional guides and practical downloadable resources.';
 ---
 <BaseLayout title={title+' - '+SITE.name} description={description} locale={locale} currentSection="professionals" alternatePath="professionals/assessment" bodyClass="professional-library-body">
-  <ProfessionalAssessmentHub locale={locale} materials={materials}/>
+  <ProfessionalAssessmentHome locale={locale} materials={materials}/>
 </BaseLayout>
