@@ -7,7 +7,11 @@ import { SITE, type Locale } from '../../../../site.config';
 export async function getStaticPaths() {
   const all = await getCollection('learning', ({ data }) =>
     !data.draft && data.translationStatus !== 'pending' &&
-    Boolean(data.publishedAt) && Boolean(data.updatedAt),
+    Boolean(data.publishedAt) && Boolean(data.updatedAt) &&
+    // Only publish a separate AutismHub learning page when visitors can
+    // actually study here. A plain copy of an external catalogue listing
+    // must never generate an additional internal route.
+    (data.lessons ?? []).some((lesson) => Boolean(lesson.youtubeVideoId)),
   );
   const used = new Set<string>();
   return all.map((entry) => {
