@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 680" role="img" aria-labelledby="t d">
+<title id="t">Раннее выявление и направление: профессиональный маршрут</title>
+<desc id="d">Нейтральная схема из шести клинических этапов. Лупа означает анализ наблюдений, документ - фиксацию следующего шага. Оригинальные векторные формы, без изображений людей.</desc>
+<rect width="1200" height="680" fill="#eef5fb"/><circle cx="1026" cy="103" r="172" fill="#dceaf7"/><circle cx="143" cy="595" r="167" fill="#dcebf5"/>
+<rect x="171" y="59" width="612" height="540" rx="34" fill="#c5d9e7" opacity=".5"/><rect x="155" y="46" width="612" height="540" rx="32" fill="#fff" stroke="#bfd4e8" stroke-width="6"/>
+<path d="M620 46v113h147" fill="#e5f0fa" stroke="#bfd4e8" stroke-width="5"/>
+<rect x="226" y="111" width="296" height="19" rx="9" fill="#275b89"/><rect x="226" y="151" width="217" height="12" rx="6" fill="#9cbdd8"/>
+<g fill="#e6f1fa" stroke="#467ba5" stroke-width="5">
+<rect x="220" y="212" width="151" height="89" rx="18"/><rect x="390" y="212" width="151" height="89" rx="18"/><rect x="559" y="212" width="151" height="89" rx="18"/>
+<rect x="220" y="344" width="151" height="89" rx="18"/><rect x="390" y="344" width="151" height="89" rx="18"/><rect x="559" y="344" width="151" height="89" rx="18"/></g>
+<g fill="none" stroke="#2d8583" stroke-width="9" stroke-linecap="round" stroke-linejoin="round">
+<path d="m247 255 17 18 29-33"/><path d="m416 255 17 18 29-33"/><path d="m586 255 17 18 29-33"/>
+<path d="m247 386 17 18 29-33"/><path d="m416 386 17 18 29-33"/><path d="m586 386 17 18 29-33"/></g>
+<g fill="#9fbed5"><rect x="309" y="250" width="44" height="10" rx="5"/><rect x="478" y="250" width="44" height="10" rx="5"/><rect x="648" y="250" width="43" height="10" rx="5"/><rect x="309" y="382" width="44" height="10" rx="5"/><rect x="478" y="382" width="44" height="10" rx="5"/><rect x="648" y="382" width="43" height="10" rx="5"/></g>
+<path d="M379 258h8m166 0h-8M379 388h8m166 0h-8" stroke="#315f91" stroke-width="7" stroke-linecap="round"/>
+<rect x="244" y="477" width="448" height="48" rx="14" fill="#fdf2d8" stroke="#d8ba71" stroke-width="4"/>
+<path d="m275 497 11 12 25-27" fill="none" stroke="#2a8584" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
+<rect x="335" y="494" width="288" height="12" rx="6" fill="#bbaf93"/>
+<g fill="none" stroke="#2e608e" stroke-width="9" stroke-linecap="round">
+<circle cx="957" cy="311" r="118" fill="#fff"/><circle cx="957" cy="311" r="67" stroke="#9abedc" stroke-width="8"/><path d="m1037 396 76 77" stroke-width="18"/></g>
+<g fill="#e0f0e9" stroke="#2e608e" stroke-width="7"><rect x="873" y="492" width="211" height="115" rx="22"/></g>
+<path d="m898 531 18 17 35-41" fill="none" stroke="#2a8584" stroke-width="9" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M969 530h85m-85 27h66" stroke="#98bdd0" stroke-width="11" stroke-linecap="round"/>
+</svg>
