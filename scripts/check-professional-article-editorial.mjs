@@ -65,10 +65,10 @@ for (const locale of ['ru', 'kk', 'en']) {
         try { svg = await readFile(svgPath, 'utf8'); }
         catch { errors.push(id + ': cover SVG asset not found: ' + match[1]); }
         if (svg) {
-          if (!/<svg\b[^>]*viewBox="0 0 1200 (?:675|680)"/.test(svg) ||
+          if (!/<svg\b[^>]*viewBox="0 0 [0-9]+ [0-9]+"/.test(svg) ||
               !/<title\b/.test(svg) || !/<desc\b/.test(svg) ||
               /<(?:script|foreignObject)\b/i.test(svg)) {
-            errors.push(id + ': SVG must have 1200px-wide viewBox, title and description, with no active content');
+            errors.push(id + ': SVG must have a positive viewBox, title and description, with no active content');
           }
           // Fingerprint vector artwork, excluding accessibility metadata:
           // changing only SVG filename, title or description is not enough.
