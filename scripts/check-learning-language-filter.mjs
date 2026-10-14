@@ -40,6 +40,26 @@ for (const [lang, languageLabel] of Object.entries(labels)) {
     assert.ok(card.includes(priceLabel) && card.includes('course-catalogue__meta'), `Course cost hidden on ${lang}`);
     assert.ok(card.includes('course-catalogue__outcome'), `Course credential outcome hidden on ${lang}`);
     assert.ok(card.includes('course-catalogue__access'), `Course access instructions hidden on ${lang}`);
+    // This is a text-first catalogue: never imply endorsement with copied
+    // provider logos or unrelated photos. Course language must be visible
+    // before the title, not buried in a long course description.
+    assert.ok(!/<(?:img|svg)\\b/i.test(card), `Unverified logo or thumbnail in a course card on ${lang}`);
+    const itemTag = card.match(/^<article\\b[^>]*>/)?.[0] ?? '';
+    const expectedLanguages = itemTag.match(/\\bdata-language="([^"]+)"/)?.[1]?.split(' ') ?? [];
+    const pills = [...card.matchAll(/<span\\bclass="course-catalogue__language-pill"\\s+data-course-language-pill="([^"]+)"[^>]*>([\\s\\S]*?)<\\/span>/g)];
+    assert.equal(pills.length, expectedLanguages.length, `Visible teaching-language badges missing on ${lang}`);
+    const labels = {
+      ru: { ru: 'Русский', kk: 'Казахский', en: 'Английский' },
+      kk: { ru: 'Орысша', kk: 'Қазақша', en: 'Ағылшынша' },
+      en: { ru: 'Russian', kk: 'Kazakh', en: 'English' },
+    }[lang];
+    const prefix = { ru: 'Язык курса', kk: 'Курс тілі', en: 'Course language' }[lang];
+    assert.deepEqual(pills.map(pill => pill[1]), expectedLanguages,
+      `Wrong or reordered course language pills on ${lang}`);
+    for (const pill of pills) assert.ok(pill[2].includes(prefix + ': ' + labels[pill[1]]),
+      `Teaching language badge is incorrectly translated on ${lang}: ${pill[1]}`);
+    assert.ok(card.indexOf('course-catalogue__language-pill') < card.indexOf('<h3>'),
+      `Teaching language must be visible before course title on ${lang}`);
   }
   assert.ok(itemCount >= 21, `Expected complete catalogue, got ${itemCount} entries for ${lang}`);
   localeCardCounts.push(itemCount);
@@ -70,6 +90,7 @@ assert.ok(perLanguageCounts[0].ru >= 5 && perLanguageCounts[0].kk >= 5 && perLan
   'Expected baseline language distribution has regressed');
 const component = await readFile('src/components/LearningCatalog.astro', 'utf8');
 assert.ok(!component.includes('data-course-kazakh-shortcut'), 'Redundant Kazakh quick selector must be removed');
+assert.ok(component.includes('data-course-language-pill={courseLanguage}'), 'Every card must label its original teaching language visibly');
 assert.ok(component.includes('data-search-text='));
 assert.ok(component.includes('entry.data.languages.map((l) => languages[locale][l])'));
 for (const field of ['search','audience','language','topic']) {
