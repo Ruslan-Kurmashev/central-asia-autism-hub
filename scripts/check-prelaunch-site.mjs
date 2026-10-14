@@ -25,9 +25,9 @@ for (const lang of locales) {
     timeZone: 'Asia/Almaty', year: 'numeric', month: '2-digit', day: '2-digit',
   }).format(new Date());
   const expectedEvents = [
-    ['2026-10-19', 'beyim.edu.kz', 'kz-kindergarten-visual-schedule.svg'],
+    ['2026-10-19', 'beyim.edu.kz', 'event-beyim-preschool-learning.jpg'],
     ['2026-10-27', 'tamyrplatform.com', 'group-18739.png'],
-    ['2026-10-30', 'conference-satr.kz', 'professional-family-information-sharing.svg'],
+    ['2026-10-30', 'conference-satr.kz', 'event-satr-conference-audience.jpg'],
   ].filter(([expires]) => expires >= todayInKazakhstan);
   check(eventCards.length === expectedEvents.length,
     id + ': expected ' + expectedEvents.length + ' valid unexpired events, found ' + eventCards.length);
