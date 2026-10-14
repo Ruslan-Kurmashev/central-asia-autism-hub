@@ -25,7 +25,7 @@ export interface KazakhstanAnnouncement {
   sourceUrl: string;
   imageSrc: string;
   imageAlt: Record<Locale, string>;
-  imageKind: 'official-brand' | 'editorial-illustration';
+  imageKind: 'official-brand' | 'organiser-image' | 'editorial-illustration';
   isPublished: boolean;
   sourceVerified: boolean;
 }
@@ -51,14 +51,14 @@ export const KZ_ANNOUNCEMENTS: KazakhstanAnnouncement[] = [
       en: 'An 80-academic-hour Beyim Learn online course on inclusive preschool education. The next advertised group starts on 19 October. Check price and availability before registering.',
     },
     organiser: { ru: 'Beyim Learn', kk: 'Beyim Learn', en: 'Beyim Learn' },
-    sourceUrl: 'https://www.beyim.edu.kz/learn/inclusive-support-preschool-children-special-needs',
-    imageSrc: 'images/editorial/article-parent-training.jpg',
+    sourceUrl: 'https://beyim.edu.kz/learn/inclusive-support-preschool-children-special-needs',
+    imageSrc: 'https://beyim.edu.kz/storage/2026/09/09/viOn0VfXLksxw5xE1zQ0WPWcX8Pvf2j1Cbz96l1k.png',
     imageAlt: {
-      ru: 'Иллюстративная фотография обучения и поддержки ребёнка; не официальная афиша курса.',
-      kk: 'Баланы оқыту мен қолдаудың тақырыптық фотосуреті; курстың ресми афишасы емес.',
-      en: 'Illustrative photo of learning and child support, not the course organiser’s official poster.',
+      ru: 'Изображение онлайн-курса по инклюзивному дошкольному образованию на сайте Beyim Learn.',
+      kk: 'Beyim Learn сайтындағы инклюзивті мектепке дейінгі білім беру онлайн курсының суреті.',
+      en: 'Course illustration from the Beyim Learn website, illustrating inclusive preschool education.',
     },
-    imageKind: 'editorial-illustration',
+    imageKind: 'organiser-image',
     isPublished: true,
     sourceVerified: true,
   },
