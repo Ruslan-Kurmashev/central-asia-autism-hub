@@ -196,13 +196,23 @@
 }
 
 .home-v2__hero h1 {
-  max-width: 15ch;
+  max-width: 100%;
   margin: 0;
   color: white;
   font-size: var(--type-display);
   font-weight: 500;
   line-height: 1.02;
-  text-wrap: balance;
+}
+
+.home-v2__hero-title-line {
+  display: block;
+  white-space: nowrap;
+}
+
+.home-v2__hero-title-line--supporting {
+  margin-top: 0.35em;
+  font-size: var(--type-h2);
+  line-height: 1.15;
 }
 
 .home-v2__lead {
@@ -640,7 +650,11 @@
   }
 
   .home-v2__hero h1 {
-    font-size: var(--type-display);
+    font-size: var(--type-h2);
+  }
+
+  .home-v2__hero-title-line--supporting {
+    font-size: var(--type-lead);
   }
 
   .home-v2__lead {
