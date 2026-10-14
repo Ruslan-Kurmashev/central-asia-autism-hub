@@ -177,7 +177,7 @@
   z-index: 2;
   display: flex;
   min-height: 34rem;
-  max-width: 48rem;
+  max-width: 70rem;
   flex-direction: column;
   align-items: center;
   justify-content: center;
@@ -211,7 +211,7 @@
 
 .home-v2__hero-title-line--supporting {
   margin-top: 0.35em;
-  font-size: var(--type-h2);
+  font-size: var(--type-home-slogan);
   line-height: 1.15;
 }
 
@@ -651,10 +651,6 @@
 
   .home-v2__hero h1 {
     font-size: var(--type-h2);
-  }
-
-  .home-v2__hero-title-line--supporting {
-    font-size: var(--type-body);
   }
 
   .home-v2__lead {
