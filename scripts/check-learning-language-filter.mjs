@@ -59,7 +59,7 @@ for (const [lang, languageLabel] of Object.entries(labels)) {
       `Wrong or reordered course language pills on ${lang}`);
     for (const pill of pills) assert.ok(pill[2].includes(prefix + ': ' + labels[pill[1]]),
       `Teaching language badge is incorrectly translated on ${lang}: ${pill[1]}`);
-    assert.ok(card.indexOf('course-catalogue__language-pill') < card.indexOf('<h3>'),
+    assert.ok(card.search(/<h3\b/) >= 0 && card.indexOf('course-catalogue__language-pill') < card.search(/<h3\b/),
       `Teaching language must be visible before course title on ${lang}`);
   }
   assert.ok(itemCount >= 21, `Expected complete catalogue, got ${itemCount} entries for ${lang}`);
