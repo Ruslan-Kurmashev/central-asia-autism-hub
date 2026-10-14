@@ -56,6 +56,7 @@ const publishedGuides=[
   {key:'a02', group:'early-identification', slug:'skrining-autizma-vybor-rezultat-deystviya', cover:'professional-assessment-screening-decisions.svg', heading:'Девять шагов организации качественного скрининга'},
   {key:'a03', group:'instruments', slug:'vybor-instrumenta-ocenki-autizma-vozrast-yazyk-validnost', cover:'professional-assessment-tool-selection.svg', heading:'Матрица восьми критериев выбора'},
   {key:'a04', group:'instruments', slug:'m-chat-r-f-primenenie-follow-up-ogranicheniya', cover:'professional-assessment-mchat-workflow.svg', heading:'Второй этап Follow-Up'},
+  {key:'a05', group:'instruments', slug:'ados-2-adi-r-cars-2-vozmozhnosti-ogranicheniya', cover:'professional-assessment-ados-adi-cars.svg', heading:'Матрица пригодности метода'},
 ];
 for(const guide of publishedGuides) {
   const url=base+'/kz/ru/professionals/'+guide.slug+'/';
