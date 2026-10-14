@@ -491,3 +491,9 @@ The research-card image-coverage validation enforces one mapped and locally avai
 | File | Author and date | Subject and provenance |
 | --- | --- | --- |
 | `professional-assessment-ados-adi-cars.svg` | AutismHub original hand-authored SVG, 14 October 2026 | Three abstract evidence types converging into a professional clinical plan; original vectors only, no diagnostic test forms, item keys, proprietary coding or patient information. |
+
+## Professional assessment A06 editorial cover (2026-10-14)
+
+| File | Author and date | Subject and provenance |
+| --- | --- | --- |
+| `professional-assessment-developmental-history.svg` | Original AutismHub hand-authored vector, 14 October 2026 | Timeline of developmental-history observations and conversational note cards; no copyrighted interview questions or genuine patient data. |
