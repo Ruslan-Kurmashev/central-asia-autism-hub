@@ -103,8 +103,8 @@ const readDate = course.lastVerifiedAt?.toLocaleDateString(locale === 'ru' ? 'ru
         {readDate && <p><strong>{ui.updated}:</strong> <time datetime={course.lastVerifiedAt!.toISOString()}>{readDate}</time></p>}
       </div>
       <div class="learning-view__hero-links">
-        {course.externalUrl && <a class="learning-view__primary" href={course.externalUrl} target="_blank" rel="noopener noreferrer external">{ui.start} <span aria-hidden="true">↗</span></a>}
-        {lessons.length > 0 && <a class="learning-view__secondary" href="#learning-lessons">{ui.lessonHeading} <span aria-hidden="true">↓</span></a>}
+        {lessons.length > 0 && <a class="learning-view__primary" href="#learning-lessons">{ui.lessonHeading} <span aria-hidden="true">↓</span></a>}
+        {course.externalUrl && <a class={lessons.length > 0 ? 'learning-view__secondary' : 'learning-view__primary'} href={course.externalUrl} target="_blank" rel="noopener noreferrer external">{ui.start} <span aria-hidden="true">↗</span></a>}
       </div>
     </header>
     <div class="learning-view__content">
