@@ -485,3 +485,9 @@ The research-card image-coverage validation enforces one mapped and locally avai
 | File | Author and date | Subject and provenance |
 | --- | --- | --- |
 | `professional-assessment-mchat-workflow.svg` | AutismHub original hand-authored SVG, 14 October 2026 | Original two-step professional process diagram; no reproduction of M-CHAT-R/F items, keys, copyrighted forms or screenshots. |
+
+## Professional assessment A05 editorial cover (2026-10-14)
+
+| File | Author and date | Subject and provenance |
+| --- | --- | --- |
+| `professional-assessment-ados-adi-cars.svg` | AutismHub original hand-authored SVG, 14 October 2026 | Three abstract evidence types converging into a professional clinical plan; original vectors only, no diagnostic test forms, item keys, proprietary coding or patient information. |
