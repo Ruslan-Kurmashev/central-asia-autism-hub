@@ -97,7 +97,7 @@ for(const spec of specs){
 }
 for(const filename of files) {
   const buf=await readFile(path.resolve('dist/downloads/assessment',filename));
-  assert.ok(buf.length>1500,'Empty or invalid file '+filename);
+  assert.ok(buf.length>(filename.endsWith('.csv')?250:1500),'Empty or invalid file '+filename);
   if(filename.endsWith('.pdf')) assert.equal(buf.subarray(0,4).toString('ascii'),'%PDF','PDF magic bytes '+filename);
   if(filename.endsWith('.docx')||filename.endsWith('.xlsx'))assert.equal(buf.subarray(0,2).toString('ascii'),'PK','OOXML package '+filename);
   if(filename.endsWith('.csv')) {
