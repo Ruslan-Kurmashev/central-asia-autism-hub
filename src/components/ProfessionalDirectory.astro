@@ -4,6 +4,7 @@ import { UI } from '../i18n/ui';
 import { kazakhstanDocumentCount, kazakhstanDocumentGroups } from '../data/kazakhstan-professional-documents';
 import { internationalGuidelineCountries, internationalGuidelineCount, publishedGuidelineKeys } from '../data/international-professional-guidelines';
 import { articlePath, localePath, sectionPath } from '../lib/urls';
+import { assessmentArticles } from '../data/professional-assessment';
 import type { Locale } from '../site.config';
 import '../styles/professionals-directory.css';
 
@@ -117,13 +118,12 @@ const groups: Group[] = [
   {
     id: 'assessment-context', icon: 'assessment', topic: 'assessment-context',
     title: { ru: 'Оценка и диагностика', kk: 'Бағалау және диагностика', en: 'Assessment and diagnosis' },
-    description: { ru: 'Скрининг, диагностические инструменты и сопутствующие состояния', kk: 'Скрининг, диагностикалық құралдар және қатар жүретін жағдайлар', en: 'Screening, diagnostic instruments and co-occurring conditions' },
-    resources: [
-      { id: 'a01', title: { ru: 'От первых признаков к скринингу и диагностике', kk: 'Алғашқы белгілерден скрининг пен диагностикаға дейін', en: 'From early signs to screening and assessment' }},
-      { id: 'a02', title: { ru: 'M-CHAT-R/F: возможности, ограничения и последующие действия', kk: 'M-CHAT-R/F: мүмкіндіктері, шектеулері және келесі қадамдар', en: 'M-CHAT-R/F: uses, limitations and follow-up' }},
-      { id: 'a03', title: { ru: 'ADOS-2, ADI-R и клиническая оценка', kk: 'ADOS-2, ADI-R және клиникалық бағалау', en: 'ADOS-2, ADI-R and clinical assessment' }},
-      { id: 'a04', title: { ru: 'Дифференциальная оценка и сопутствующие состояния', kk: 'Дифференциалдық бағалау және қатар жүретін жағдайлар', en: 'Differential assessment and co-occurring conditions' }},
-    ],
+    description: {
+      ru: 'Пять профессиональных подразделов, 12 материалов и скачиваемые схемы, таблицы и рабочие формы.',
+      kk: 'Бес кәсіби бөлім, 12 материал және жүктелетін жұмыс құралдары.',
+      en: 'Five practical subgroups, 12 articles and downloadable clinical workflow resources.',
+    },
+    resources: assessmentArticles.map(a => ({ id: a.id, title: a.title })),
   },
   {
     id: 'evidence-support', icon: 'evidence', topic: 'evidence-support',
@@ -216,7 +216,7 @@ const forGroup = (group: Group) => {
         {groups.map((group) => {
           const { count } = forGroup(group);
           return (
-            <a class="professional-directory__card" href={'#professional-' + group.id}>
+            <a class="professional-directory__card" href={group.id === 'assessment-context' ? localePath(locale, 'professionals/assessment') : '#professional-' + group.id}>
               <span class="professional-directory__icon" aria-hidden="true" set:html={icons[group.icon]}></span>
               <strong class="professional-directory__card-title">{group.title[locale]}</strong>
               <span class="professional-directory__card-description">{group.description[locale]}</span>
@@ -250,6 +250,11 @@ const forGroup = (group: Group) => {
             <a class="professional-directory__training-link" href={trainingHref}>{copy.trainingLink} <span aria-hidden="true">→</span></a>
           </div>
           <p class="professional-directory__lead">{group.description[locale]}</p>
+          {group.id === 'assessment-context' && (
+            <a class="professional-directory__training-link" style="margin-top:1.2rem; display:inline-flex;" href={localePath(locale,'professionals/assessment')}>
+              {locale === 'ru' ? 'Открыть практическую библиотеку и файлы' : locale === 'kk' ? 'Практикалық кітапхана мен файлдарды ашу' : 'Open practice hub and downloads'} <span aria-hidden="true">→</span>
+            </a>
+          )}
         </div>
         <div class="professional-directory__list-heading">
           <h3>{copy.articles}</h3>
