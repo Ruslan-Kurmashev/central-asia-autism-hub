@@ -891,25 +891,6 @@
 .home-v2__events-empty h3 { font-size: var(--type-subhead); }
 .home-v2__events-empty p { margin-top: .5rem; color: var(--home-muted); line-height: 1.65; }
 .home-v2__events-no-matches { margin-top: 1rem; color: var(--home-muted); }
-.home-v2__events-footer {
-  display: flex;
-  align-items: start;
-  justify-content: space-between;
-  flex-wrap: wrap;
-  gap: 1rem 2rem;
-  margin-top: 1.3rem;
-}
-.home-v2__events-footer p {
-  max-width: 46rem;
-  color: var(--home-muted);
-  font-size: var(--type-small);
-  line-height: 1.6;
-}
-.home-v2__events-footer a {
-  color: var(--home-blue-dark);
-  font-size: var(--type-control);
-  font-weight: 730;
-}
 .home-v2__events [hidden] { display: none !important; }
 
 /* Site publications follow on white, as a separate editorial section. */
