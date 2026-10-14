@@ -20,6 +20,10 @@ jobs:
     steps:
       - name: Check out repository
         uses: actions/checkout@v7
+      - name: Generate assessment PDF, DOCX and CSV resources
+        run: |
+          python3 -m pip install --disable-pip-version-check "reportlab>=4.3,<5" "python-docx>=1.1,<2"
+          python3 scripts/generate-assessment-downloads.py
       - name: Validate, build, and upload site
         uses: withastro/action@v6
         with:
