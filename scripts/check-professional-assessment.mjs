@@ -35,6 +35,17 @@ for (const [locale,[title,count,ready]] of Object.entries(copy)) {
     assert.ok(inner.includes('assessment-hub__article'),locale+': stage article list missing '+stage);
     assert.equal((inner.match(/class="assessment-hub__group"/g)||[]).length,0,locale+': stage pages should not repeat entire landing grid');
   }
+  const a01Href=base+'/kz/ru/professionals/rannee-vyyavlenie-autizma-marshrut-specialista/';
+  const earlyHub=await readFile(path.resolve('dist/kz',locale,'professionals/assessment/early-identification/index.html'),'utf8');
+  if(locale==='ru') {
+    assert.ok(earlyHub.includes('href="'+a01Href+'"'), 'RU first assessment article must be published and linked');
+    const articleHtml=await readFile(path.resolve('dist/kz/ru/professionals/rannee-vyyavlenie-autizma-marshrut-specialista/index.html'),'utf8');
+    for(const part of ['professional-assessment-early-pathway.svg','article-v2__sources','download', 'Скрининг не равен', 'Казахстан']) {
+      assert.ok(articleHtml.includes(part), 'A01 must include source-backed practical content: '+part);
+    }
+  } else {
+    assert.ok(!earlyHub.includes('href="'+a01Href+'"'), locale+': Russian A01 cannot stand in for unpublished translation');
+  }
   if(locale==='ru'){
     for(const file of downloads) assert.ok(html.includes(base+'/downloads/assessment/'+file),'RU: download link absent '+file);
     for(const group of stagesRu) assert.ok(html.includes(group),'RU: localized stage name missing '+group);
