@@ -52,13 +52,13 @@ export const KZ_ANNOUNCEMENTS: KazakhstanAnnouncement[] = [
     },
     organiser: { ru: 'Beyim Learn', kk: 'Beyim Learn', en: 'Beyim Learn' },
     sourceUrl: 'https://beyim.edu.kz/learn/inclusive-support-preschool-children-special-needs',
-    imageSrc: 'https://beyim.edu.kz/storage/2026/09/09/viOn0VfXLksxw5xE1zQ0WPWcX8Pvf2j1Cbz96l1k.png',
+    imageSrc: 'images/editorial/kz-kindergarten-visual-schedule.svg',
     imageAlt: {
-      ru: 'Изображение онлайн-курса по инклюзивному дошкольному образованию на сайте Beyim Learn.',
-      kk: 'Beyim Learn сайтындағы инклюзивті мектепке дейінгі білім беру онлайн курсының суреті.',
-      en: 'Course illustration from the Beyim Learn website, illustrating inclusive preschool education.',
+      ru: 'Тематическая иллюстрация дошкольной поддержки: развивающие материалы и визуальное расписание. Не официальная афиша курса.'
+      kk: 'Мектепке дейінгі қолдау туралы тақырыптық иллюстрация: оқу материалдары мен көрнекі кесте. Курстың ресми афишасы емес.'
+      en: 'Illustration of preschool learning materials and visual schedules, not an official course poster.'
     },
-    imageKind: 'organiser-image',
+    imageKind: 'editorial-illustration',
     isPublished: true,
     sourceVerified: true,
   },
@@ -114,11 +114,11 @@ export const KZ_ANNOUNCEMENTS: KazakhstanAnnouncement[] = [
     organiser: { ru: 'Центр САТР', kk: 'САТР орталығы', en: 'SATR Centre' },
     city: { ru: 'Алматы, LuxHall', kk: 'Алматы, LuxHall', en: 'Almaty, LuxHall' },
     sourceUrl: 'https://conference-satr.kz/',
-    imageSrc: 'images/editorial/article-family-session.jpg',
+    imageSrc: 'images/editorial/professional-family-information-sharing.svg',
     imageAlt: {
-      ru: 'Иллюстративная фотография совместной работы специалистов и семьи; не официальная афиша конференции.',
-      kk: 'Мамандар мен отбасының бірлескен жұмысы туралы тақырыптық фотосурет; конференцияның ресми афишасы емес.',
-      en: 'Illustrative photo of professionals and family collaboration, not an official conference poster.',
+      ru: 'Тематическая иллюстрация междисциплинарного взаимодействия семьи, медицинских и образовательных специалистов. Не официальная афиша конференции.'
+      kk: 'Отбасы, медицина және білім беру мамандарының пәнаралық ынтымақтастығы туралы тақырыптық иллюстрация. Конференцияның ресми афишасы емес.'
+      en: 'Illustration of cross-disciplinary collaboration between families, healthcare and education, not the official conference poster.'
     },
     imageKind: 'editorial-illustration',
     isPublished: true,
