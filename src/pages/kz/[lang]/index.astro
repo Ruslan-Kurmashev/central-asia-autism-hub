@@ -29,7 +29,7 @@ interface Props {
 
 const { locale } = Astro.props;
 const copy = UI[locale];
-const [sloganFirstLine, sloganSecondLine] = copy.title.split(/(?<=,), /);
+const [sloganFirstLine, sloganSecondLine] = copy.title.split(/(?<=,)\s+/);
 const contentCopy = CONTENT_UI[locale];
 const useHomeV2 = ['ru', 'en', 'kk'].includes(locale);
 
