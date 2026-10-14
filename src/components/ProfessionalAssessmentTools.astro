@@ -63,7 +63,7 @@ const unreleased = assessmentDownloads.filter(d => !d.files[locale]?.length);
       </div>}
 
   {unreleased.length>0 &&
-    <details class="assessment-hub__planned-tools">
+    <details class="assessment-hub__planned-tools" data-assessment-upcoming>
       <summary>{t.upcomingTools} ({unreleased.length})</summary>
       <ul>{unreleased.map(d=><li>{d.title[locale]}</li>)}</ul>
     </details>}
