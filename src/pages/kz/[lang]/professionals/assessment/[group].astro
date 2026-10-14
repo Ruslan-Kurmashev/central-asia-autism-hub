@@ -1,6 +1,6 @@
 ---
 import { getCollection } from 'astro:content';
-import ProfessionalAssessmentHub from '../../../../../components/ProfessionalAssessmentHub.astro';
+import ProfessionalAssessmentGroup from '../../../../../components/ProfessionalAssessmentGroup.astro';
 import { assessmentGroups, type AssessmentGroupId } from '../../../../../data/professional-assessment';
 import BaseLayout from '../../../../../layouts/BaseLayout.astro';
 import { SITE, SUPPORTED_LOCALES, type Locale } from '../../../../../site.config';
@@ -18,5 +18,5 @@ if(!group)throw new Error('Unknown assessment stage '+groupId);
 const materials=await getCollection('pages',({data})=>data.language===locale && data.section==='professionals' && !data.draft && data.translationStatus!=='pending' && Boolean(data.publishedAt) && Boolean(data.updatedAt));
 ---
 <BaseLayout title={group.title[locale]+' - '+SITE.name} description={group.description[locale]} locale={locale} currentSection="professionals" alternatePath={'professionals/assessment/'+groupId} bodyClass="professional-library-body">
-  <ProfessionalAssessmentHub locale={locale} materials={materials} groupId={groupId}/>
+  <ProfessionalAssessmentGroup locale={locale} materials={materials} groupId={groupId}/>
 </BaseLayout>
