@@ -14,9 +14,9 @@ const sections = ['parents','research','help-kazakhstan','learning','professiona
 const errors = [];
 const check = (condition, message) => { if (!condition) errors.push(message); };
 const expectedMainNavigation = {
-  ru: ['Родителям', 'Наука простыми словами', 'Помощь в Казахстане', 'Обучение', 'Специалистам', 'О проекте'],
-  kk: ['Ата-аналарға', 'Ғылым қарапайым тілмен', 'Қазақстандағы көмек', 'Оқу', 'Мамандарға', 'Жоба туралы'],
-  en: ['For Parents', 'Research Explained', 'Help in Kazakhstan', 'Learning', 'For Professionals', 'About'],
+  ru: ['Главная', 'Родителям', 'Наука простыми словами', 'Помощь в Казахстане', 'Обучение', 'Специалистам', 'О проекте'],
+  kk: ['Басты бет', 'Ата-аналарға', 'Ғылым қарапайым тілмен', 'Қазақстандағы көмек', 'Оқу', 'Мамандарға', 'Жоба туралы'],
+  en: ['Home', 'For Parents', 'Research Explained', 'Help in Kazakhstan', 'Learning', 'For Professionals', 'About'],
 };
 
 function checkLocalizedHeader(html, lang, id) {
@@ -28,6 +28,15 @@ function checkLocalizedHeader(html, lang, id) {
   for (const label of expectedMainNavigation[lang]) {
     check(navigation.includes(label), id + ': main navigation translation missing: ' + label);
   }
+  const firstNavigationLink = navigation.match(/<ul>\s*<li>\s*<a\s+([^>]+)>\s*([^<]+?)\s*<\/a>/)?.slice(1) ?? [];
+  const firstAttributes = firstNavigationLink[0] ?? '';
+  const firstLabel = (firstNavigationLink[1] ?? '').trim();
+  check(firstAttributes.includes('href="' + base + lang + '/"') &&
+    firstLabel === expectedMainNavigation[lang][0],
+    id + ': the first header tab must link to its language-specific homepage');
+  const homeIsActive = id === 'homepage ' + lang;
+  check(firstAttributes.includes('aria-current="page"') === homeIsActive,
+    id + ': Home tab must be active only on the homepage');
   for (const target of locales) {
     check(new RegExp('href="' + base + target + '/[^"]*"').test(languages),
       id + ': language switcher missing locale-specific destination for ' + target);
