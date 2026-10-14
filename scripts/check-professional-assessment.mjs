@@ -52,6 +52,23 @@ for(const locale of ['ru','kk','en']) {
     assert.ok(tools.includes('assessment-hub__no-translation'),locale+': clearly mark translated resources pending');
   }
 }
+const publishedGuides=[
+  {key:'a02', group:'early-identification', slug:'skrining-autizma-vybor-rezultat-deystviya', cover:'professional-assessment-screening-decisions.svg', heading:'Девять шагов организации качественного скрининга'},
+  {key:'a03', group:'instruments', slug:'vybor-instrumenta-ocenki-autizma-vozrast-yazyk-validnost', cover:'professional-assessment-tool-selection.svg', heading:'Матрица восьми критериев выбора'},
+  {key:'a04', group:'instruments', slug:'m-chat-r-f-primenenie-follow-up-ogranicheniya', cover:'professional-assessment-mchat-workflow.svg', heading:'Второй этап Follow-Up'},
+];
+for(const guide of publishedGuides) {
+  const url=base+'/kz/ru/professionals/'+guide.slug+'/';
+  const list=await readFile(path.resolve('dist/kz/ru/professionals/assessment',guide.group,'index.html'),'utf8');
+  assert.ok(list.includes('href="'+url+'"'),'RU: published guide not in group '+guide.key);
+  const page=await readFile(path.resolve('dist/kz/ru/professionals',guide.slug,'index.html'),'utf8');
+  for(const marker of [guide.cover,guide.heading,'article-v2__sources']) assert.ok(page.includes(marker),guide.key+': missing editorial component '+marker);
+  const pendingLocales=['kk','en'];
+  for(const locale of pendingLocales){
+    const listing=await readFile(path.resolve('dist/kz',locale,'professionals/assessment',guide.group,'index.html'),'utf8');
+    assert.ok(!listing.includes('href="'+url+'"'),locale+': cannot substitute RU guide for untranslated '+guide.key);
+  }
+}
 for(const filename of files) {
   const buf=await readFile(path.resolve('dist/downloads/assessment',filename));
   assert.ok(buf.length>1500,'Empty or invalid file '+filename);
