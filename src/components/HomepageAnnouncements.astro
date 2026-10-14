@@ -109,7 +109,11 @@ const filters: Array<'all' | AnnouncementKind> = ['all', 'webinar', 'event', 'co
           <div class="home-v2__event-date">
             <time datetime={event.beginsOn}>{dateFormat.format(new Date(event.beginsOn + 'T12:00:00Z'))}</time>
           </div>
-          <figure class:list={['home-v2__event-media', event.imageKind === 'official-brand' && 'home-v2__event-media--brand']}>
+          <figure class:list={[
+            'home-v2__event-media',
+            event.imageKind === 'official-brand' && 'home-v2__event-media--brand',
+            event.imageKind === 'organiser-logo' && 'home-v2__event-media--logo',
+          ]}>
             <img
               src={event.imageSrc.startsWith('https://') ? event.imageSrc : import.meta.env.BASE_URL + event.imageSrc}
               alt={event.imageAlt[locale]}
