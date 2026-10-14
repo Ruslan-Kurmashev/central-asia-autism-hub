@@ -264,7 +264,8 @@ for (const [locale, copy] of Object.entries(expected)) {
     locale + ': introductory appraisal must remain before the country list');
   for (const name of copy.names) assert.ok(html.includes(name), locale + ': missing category ' + name);
   ids.forEach((id, i) => {
-    assert.ok(html.includes('href="#professional-' + id + '"'), locale + ': missing category target ' + id);
+    const overviewTarget = id === 'assessment-context' ? '/central-asia-autism-hub/kz/' + locale + '/professionals/assessment/' : '#professional-' + id;
+    assert.ok(html.includes('href="' + overviewTarget + '"'), locale + ': missing category target ' + id);
     assert.ok(html.includes('id="professional-' + id + '"'), locale + ': missing category destination ' + id);
     assert.ok(html.includes('href="#professional-overview"'), locale + ': missing return link');
     assert.ok(
