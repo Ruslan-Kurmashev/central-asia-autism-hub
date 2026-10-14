@@ -53,7 +53,8 @@ for(const file of downloads){
   }
 }
 const source=await readFile(path.resolve('src/data/professional-assessment.ts'),'utf8');
-assert.ok(source.includes('www.mchatscreen.com/mchat-rf/'),'Do not reproduce copyrighted tests; point to official source');
+const hubComponent=await readFile(path.resolve('src/components/ProfessionalAssessmentHub.astro'),'utf8');
+assert.ok(hubComponent.includes('https://www.mchatscreen.com/mchat-rf/'), 'Do not reproduce copyrighted tests; link to M-CHAT official source');
 assert.ok(!source.includes('scoreItems') && !source.includes('testQuestions'),'Do not bundle copyrighted test questions/scoring');
 const generator=await readFile(path.resolve('scripts/generate-assessment-downloads.py'),'utf8');
 assert.ok(generator.includes('NICE CG128') && generator.includes('NOT a diagnostic questionnaire'), 'Source attribution or clinical limitations missing');
