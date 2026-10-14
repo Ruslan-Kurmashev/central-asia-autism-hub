@@ -72,6 +72,8 @@ for (const lang of locales) {
     ['2026-10-19', 'beyim.edu.kz', 'beyim-preschool-user-photo.webp'],
     ['2026-10-27', 'tamyrplatform.com', 'group-18739.png'],
     ['2026-10-30', 'conference-satr.kz', 'satr-logo.svg'],
+    ['2026-11-18', 'autism.org/webinar/using-multimodal-communication', 'ari-hand-gestures-2026.svg'],
+    ['2026-12-02', 'autism.org/webinar/2026-research-updates-gi-symptoms-behavior', 'ari-gi-research-2026.svg'],
   ].filter(([expires]) => expires >= todayInKazakhstan);
   check(eventCards.length === expectedEvents.length,
     id + ': expected ' + expectedEvents.length + ' valid unexpired events, found ' + eventCards.length);
@@ -83,6 +85,11 @@ for (const lang of locales) {
     id + ': each live event must have a distinct image with an alt description');
   if (expectedEvents.some(([, domain]) => domain === 'conference-satr.kz')) {
     check(html.includes('home-v2__event-media--logo'), id + ': SATR logo must be fully visible, not cropped as a stock photo');
+  }
+  check(html.includes('data-event-pagination') && html.includes('data-event-page="1"'),
+    id + ': events must have accessible numbered pagination');
+  if (expectedEvents.length > 3) {
+    check(html.includes('data-event-page="2"'), id + ': second page must be available for five events');
   }
   check(html.includes('home-v2__events-empty'), id + ': empty state must remain available after expiry');
   check(html.includes('home-v2__materials-description'), id + ': update section intro missing');

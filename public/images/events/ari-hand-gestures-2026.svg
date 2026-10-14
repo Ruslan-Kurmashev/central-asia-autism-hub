@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 600" role="img" aria-labelledby="title desc">
+<title id="title">Speech and gestures research webinar</title>
+<desc id="desc">Abstract editorial illustration of overlapping speech bubbles, hand gesture lines and communication connections in calming blue shades.</desc>
+<defs><linearGradient id="bg" x1="0" x2="1" y1="0" y2="1"><stop stop-color="#eff7fc"/><stop offset="1" stop-color="#d7edf7"/></linearGradient><linearGradient id="gl" x1="0" x2="1"><stop stop-color="#0874b6"/><stop offset="1" stop-color="#24b2b0"/></linearGradient></defs>
+<rect width="960" height="600" rx="26" fill="url(#bg)"/>
+<circle cx="782" cy="104" r="185" fill="#c4e7f5" opacity=".65"/>
+<circle cx="155" cy="498" r="190" fill="#c8e7f9" opacity=".72"/>
+<path d="M125 161 Q125 123 163 123 H497 Q536 123 536 161 V303 Q536 344 496 344 H300 L227 397 V344 H163 Q125 344 125 303Z" fill="#fff" stroke="#aecddd" stroke-width="7"/>
+<path d="M413 261 Q413 218 457 218 H760 Q806 218 806 262 V377 Q806 421 762 421 H656 L710 483 L590 421 H457 Q413 421 413 377Z" fill="#07527e" opacity=".92"/>
+<g fill="none" stroke="#147aa8" stroke-linecap="round" stroke-width="13"><path d="M206 202v44c0 27 19 37 39 32 10-3 16-11 16-24v-78"/><path d="M261 212v46c0 22 22 28 31 11v-75"/><path d="M292 222v42c0 18 22 20 31 5v-53"/><path d="M323 244c14-17 36-3 36 13v18c0 23-33 49-58 54-48 11-88-11-99-56"/></g>
+<g fill="none" stroke="#b9eeec" stroke-width="11" stroke-linecap="round"><path d="M493 303h139"/><path d="M493 337h207"/><path d="M493 371h165"/></g>
+<circle cx="725" cy="156" r="17" fill="#28a7b4"/><circle cx="765" cy="155" r="10" fill="#98d2e6"/><circle cx="801" cy="169" r="8" fill="#28a7b4"/>
+<path d="M103 504c125 55 260 51 400-21" fill="none" stroke="#79bcda" stroke-width="11" opacity=".6"/>
+</svg>

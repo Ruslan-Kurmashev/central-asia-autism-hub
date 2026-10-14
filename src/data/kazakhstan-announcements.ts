@@ -1,6 +1,6 @@
 import type { Locale } from '../site.config';
 
-/** Verified external Kazakhstan announcements only. Never publish unverified
+/** Verified Kazakhstan and international online announcements only. Never publish unverified
  * dates, organisers, registration links or translations.
  * ISO dates follow the Asia/Almaty calendar; expiresOn is the final useful day.
  * The homepage suppresses expired records at build and on the visitor's device.
@@ -30,7 +30,7 @@ export interface KazakhstanAnnouncement {
   sourceVerified: boolean;
 }
 
-/** Intentionally empty until primary-source confirmation and editorial approval. */
+/** Only published after verification against each organiser's primary source. */
 export const KZ_ANNOUNCEMENTS: KazakhstanAnnouncement[] = [
   {
     id: 'beyim-preschool-inclusive-support-2026-10-19',
@@ -121,6 +121,74 @@ export const KZ_ANNOUNCEMENTS: KazakhstanAnnouncement[] = [
       en: 'SATR Centre logo with a blue ornamental design, green plant motif and SATR lettering.',
     },
     imageKind: 'organiser-logo',
+    isPublished: true,
+    sourceVerified: true,
+  },
+  {
+    id: 'ari-multimodal-hand-gestures-2026-11-18',
+    kind: 'webinar',
+    audience: 'everyone',
+    format: 'online',
+    cost: 'free',
+    beginsOn: '2026-11-18',
+    expiresOn: '2026-11-18',
+    title: {
+      ru: 'Жесты и речь: поддержка коммуникации у нейроотличных людей',
+      kk: 'Ым-ишара мен сөйлеу: нейроәртүрлі адамдардың қарым-қатынасын қолдау',
+      en: 'Hand gestures and speech: supporting language development in neurodiverse people',
+    },
+    summary: {
+      ru: 'Бесплатный вебинар Autism Research Institute на английском языке. Исследования восприятия речи и жестов с использованием отслеживания взгляда и ЭЭГ. Регистрация на сайте организатора.',
+      kk: 'Autism Research Institute ұйымдастыратын ағылшын тіліндегі тегін вебинар. Көз қозғалысын бақылау және ЭЭГ арқылы сөйлеу мен ым-ишараны қабылдау зерттеулері. Тіркелу ұйымдастырушы сайтында.',
+      en: 'A free English-language Autism Research Institute webinar on speech and gesture comprehension, including eye-tracking and EEG research. Register with the organiser.',
+    },
+    organiser: {
+      ru: 'Autism Research Institute',
+      kk: 'Autism Research Institute',
+      en: 'Autism Research Institute',
+    },
+    sourceUrl: 'https://autism.org/webinar/using-multimodal-communication-with-hand-gestures-to-support-language-development-in-neurodiverse-individuals/',
+    imageSrc: 'images/events/ari-hand-gestures-2026.svg',
+    imageAlt: {
+      ru: 'Авторская абстрактная иллюстрация: речевые облака и символические жесты. Не официальный баннер организатора.',
+      kk: 'Авторлық абстрактілі иллюстрация: сөйлеу белгілері мен шартты ым-ишаралар. Ұйымдастырушының ресми баннері емес.',
+      en: 'Original abstract illustration of speech bubbles and symbolic gestures. Not an official organiser banner.',
+    },
+    imageKind: 'editorial-illustration',
+    isPublished: true,
+    sourceVerified: true,
+  },
+  {
+    id: 'ari-gi-symptoms-behavior-2026-12-02',
+    kind: 'webinar',
+    audience: 'everyone',
+    format: 'online',
+    cost: 'free',
+    beginsOn: '2026-12-02',
+    expiresOn: '2026-12-02',
+    title: {
+      ru: 'Аутизм и желудочно-кишечные симптомы: обзор исследований 2026 года',
+      kk: 'Аутизм және асқазан-ішек белгілері: 2026 жылғы зерттеулерге шолу',
+      en: '2026 research updates: gastrointestinal symptoms and behavior in autism',
+    },
+    summary: {
+      ru: 'Бесплатный вебинар Autism Research Institute на английском языке. Исследователь Bradley Ferguson представит новые данные о связи желудочно-кишечных симптомов и поведения при аутизме.',
+      kk: 'Autism Research Institute ұйымдастыратын ағылшын тіліндегі тегін вебинар. Зерттеуші Bradley Ferguson аутизмдегі асқазан-ішек белгілері мен мінез-құлықтың байланысы туралы деректерді талқылайды.',
+      en: 'A free English-language Autism Research Institute webinar. Researcher Bradley Ferguson discusses emerging findings on gastrointestinal symptoms and behavior in autism.',
+    },
+    organiser: {
+      ru: 'Autism Research Institute',
+      kk: 'Autism Research Institute',
+      en: 'Autism Research Institute',
+    },
+    sourceUrl: 'https://autism.org/webinar/2026-research-updates-gi-symptoms-behavior/',
+    imageSrc: 'images/events/ari-gi-research-2026.svg',
+    imageAlt: {
+      ru: 'Авторская абстрактная иллюстрация: научный график и символическая схема пищеварения. Не официальный баннер организатора.',
+      kk: 'Авторлық абстрактілі иллюстрация: ғылыми график пен ас қорыту сызбасы. Ұйымдастырушының ресми баннері емес.',
+      en: 'Original abstract illustration of a research chart and digestive-system concept. Not an official organiser banner.',
+    },
+    imageKind: 'editorial-illustration',
     isPublished: true,
     sourceVerified: true,
   },

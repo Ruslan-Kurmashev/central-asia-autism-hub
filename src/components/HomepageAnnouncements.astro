@@ -7,6 +7,8 @@ type Copy = {
   kicker: string; title: string; lead: string; noTitle: string; noText: string;
   illustration: string; organiserLabel: string; audienceLabel: string; costLabel: string;
   formatLabel: string; source: string; filterLabel: string; noResults: string;
+  paginationLabel: string; previousPage: string; nextPage: string; pageLabel: string;
+  pageStatus: string;
   filters: Record<'all' | AnnouncementKind, string>;
   kinds: Record<AnnouncementKind, string>;
   audience: Record<AnnouncementAudience, string>;
@@ -15,14 +17,16 @@ type Copy = {
 };
 const translations: Record<Locale, Copy> = {
   ru: {
-    kicker: 'АКТУАЛЬНО В КАЗАХСТАНЕ', title: 'Афиша и объявления',
-    lead: 'Ближайшие вебинары, мероприятия, обучение и другие возможности для семей и специалистов.',
+    kicker: 'БЛИЖАЙШИЕ СОБЫТИЯ', title: 'Афиша и объявления',
+    lead: 'Мероприятия в Казахстане и международные онлайн-вебинары для семей и специалистов.',
     noTitle: 'Пока нет подтверждённых объявлений',
     noText: 'Мы формируем афишу. Здесь появятся только события с проверенными датами, организатором и официальной ссылкой.',
-    illustration: 'Тематическое фото',
+    illustration: 'Тематическая иллюстрация',
     organiserLabel: 'Организатор', audienceLabel: 'Для кого', costLabel: 'Участие',
     formatLabel: 'Формат', source: 'Страница организатора',
     filterLabel: 'Тип мероприятия', noResults: 'По этому фильтру пока нет актуальных объявлений.',
+    paginationLabel: 'Страницы афиши', previousPage: 'Предыдущая страница', nextPage: 'Следующая страница',
+    pageLabel: 'Страница', pageStatus: 'Показаны {from}–{to} из {total} мероприятий',
     filters: { all: 'Все', webinar: 'Вебинары', event: 'Мероприятия', course: 'Обучение', announcement: 'Объявления' },
     kinds: { webinar: 'Вебинар', event: 'Мероприятие', course: 'Обучение', announcement: 'Объявление' },
     audience: { parents: 'Родители', professionals: 'Специалисты', everyone: 'Все желающие' },
@@ -30,14 +34,16 @@ const translations: Record<Locale, Copy> = {
     cost: { free: 'Бесплатно', paid: 'Платно', unknown: 'Уточняйте у организатора' },
   },
   kk: {
-    kicker: 'ҚАЗАҚСТАНДАҒЫ ӨЗЕКТІ АҚПАРАТ', title: 'Іс-шаралар мен хабарландырулар',
-    lead: 'Отбасылар мен мамандарға арналған алдағы вебинарлар, іс-шаралар, оқу және басқа мүмкіндіктер.',
+    kicker: 'АЛДАҒЫ ІС-ШАРАЛАР', title: 'Іс-шаралар мен хабарландырулар',
+    lead: 'Отбасылар мен мамандарға арналған Қазақстандағы іс-шаралар және халықаралық онлайн вебинарлар.',
     noTitle: 'Әзірге расталған хабарландыру жоқ',
     noText: 'Афишаны дайындап жатырмыз. Күні, ұйымдастырушысы және ресми сілтемесі тексерілген іс-шаралар ғана жарияланады.',
-    illustration: 'Тақырыптық фото',
+    illustration: 'Тақырыптық иллюстрация',
     organiserLabel: 'Ұйымдастырушы', audienceLabel: 'Кімге арналған', costLabel: 'Қатысу',
     formatLabel: 'Формат', source: 'Ұйымдастырушы парақшасы',
     filterLabel: 'Іс-шара түрі', noResults: 'Бұл санатта әзірге өзекті хабарландыру жоқ.',
+    paginationLabel: 'Іс-шаралар беттері', previousPage: 'Алдыңғы бет', nextPage: 'Келесі бет',
+    pageLabel: 'Бет', pageStatus: '{total} іс-шараның {from}–{to} көрсетілген',
     filters: { all: 'Барлығы', webinar: 'Вебинарлар', event: 'Іс-шаралар', course: 'Оқу', announcement: 'Хабарландырулар' },
     kinds: { webinar: 'Вебинар', event: 'Іс-шара', course: 'Оқу', announcement: 'Хабарландыру' },
     audience: { parents: 'Ата-аналар', professionals: 'Мамандар', everyone: 'Барлығы' },
@@ -45,14 +51,16 @@ const translations: Record<Locale, Copy> = {
     cost: { free: 'Тегін', paid: 'Ақылы', unknown: 'Ұйымдастырушыдан нақтылаңыз' },
   },
   en: {
-    kicker: 'HAPPENING IN KAZAKHSTAN', title: 'Events and announcements',
-    lead: 'Upcoming webinars, events, learning opportunities and other notices for families and professionals.',
+    kicker: 'UPCOMING EVENTS', title: 'Events and announcements',
+    lead: 'Events in Kazakhstan and international online webinars for families and professionals.',
     noTitle: 'No confirmed announcements yet',
     noText: 'We are building the noticeboard. Only events with verified dates, organisers and official links will appear.',
-    illustration: 'Illustrative photo',
+    illustration: 'Editorial illustration',
     organiserLabel: 'Organiser', audienceLabel: 'Audience', costLabel: 'Cost',
     formatLabel: 'Format', source: 'Organiser website',
     filterLabel: 'Event category', noResults: 'No current announcements in this category.',
+    paginationLabel: 'Event pages', previousPage: 'Previous page', nextPage: 'Next page',
+    pageLabel: 'Page', pageStatus: 'Showing {from}–{to} of {total} events',
     filters: { all: 'All', webinar: 'Webinars', event: 'Events', course: 'Learning', announcement: 'Notices' },
     kinds: { webinar: 'Webinar', event: 'Event', course: 'Learning', announcement: 'Notice' },
     audience: { parents: 'Parents', professionals: 'Professionals', everyone: 'Everyone' },
@@ -70,8 +78,7 @@ const announcements = KZ_ANNOUNCEMENTS
     && /^\d{4}-\d{2}-\d{2}$/.test(a.expiresOn)
     && a.expiresOn >= today && ['ru', 'kk', 'en'].every((l) =>
       Boolean(a.title[l as Locale]?.trim() && a.summary[l as Locale]?.trim() && a.organiser[l as Locale]?.trim())))
-  .sort((a, b) => a.beginsOn.localeCompare(b.beginsOn))
-  .slice(0, 4);
+  .sort((a, b) => a.beginsOn.localeCompare(b.beginsOn));
 const dateFormat = new Intl.DateTimeFormat(locale === 'ru' ? 'ru-KZ' : locale === 'kk' ? 'kk-KZ' : 'en-GB', {
   day: 'numeric', month: 'short', year: 'numeric', timeZone: 'Asia/Almaty',
 });
@@ -85,7 +92,6 @@ const filters: Array<'all' | AnnouncementKind> = ['all', 'webinar', 'event', 'co
         <h2 id="home-v2-events-title">{t.title}</h2>
         <p class="home-v2__events-lead">{t.lead}</p>
       </div>
-      <span class="home-v2__events-icon" aria-hidden="true">▦</span>
     </div>
 
     {announcements.length > 0 && (
@@ -99,9 +105,6 @@ const filters: Array<'all' | AnnouncementKind> = ['all', 'webinar', 'event', 'co
     <div class="home-v2__event-list" data-event-list hidden={announcements.length === 0}>
       {announcements.map((event) => (
         <article class="home-v2__event" data-event-kind={event.kind} data-event-expires={event.expiresOn}>
-          <div class="home-v2__event-date">
-            <time datetime={event.beginsOn}>{dateFormat.format(new Date(event.beginsOn + 'T12:00:00Z'))}</time>
-          </div>
           <figure class:list={[
             'home-v2__event-media',
             event.imageKind === 'official-brand' && 'home-v2__event-media--brand',
@@ -118,20 +121,37 @@ const filters: Array<'all' | AnnouncementKind> = ['all', 'webinar', 'event', 'co
             {event.imageKind === 'editorial-illustration' && <figcaption>{t.illustration}</figcaption>}
           </figure>
           <div class="home-v2__event-content">
-            <p class="home-v2__event-kind">{t.kinds[event.kind]}</p>
-            <h3><a href={event.sourceUrl} rel="external">{event.title[locale]}</a></h3>
-            <p>{event.summary[locale]}</p>
-            <dl class="home-v2__event-details">
-              <div><dt>{t.organiserLabel}</dt><dd>{event.organiser[locale]}</dd></div>
-              <div><dt>{t.formatLabel}</dt><dd>{t.format[event.format]}{event.city ? ' · ' + event.city[locale] : ''}</dd></div>
-              <div><dt>{t.audienceLabel}</dt><dd>{t.audience[event.audience]}</dd></div>
-              <div><dt>{t.costLabel}</dt><dd>{t.cost[event.cost]}</dd></div>
-            </dl>
-            <a href={event.sourceUrl} class="home-v2__event-source" rel="external">{t.source} <span aria-hidden="true">↗</span></a>
+            <div class="home-v2__event-tags">
+              <span class="home-v2__event-audience">{t.audience[event.audience]}</span>
+              <span class="home-v2__event-pill">{t.format[event.format]}</span>
+              <span class:list={['home-v2__event-pill', event.cost === 'free' && 'home-v2__event-pill--free']}>{t.cost[event.cost]}</span>
+            </div>
+            <h3><a href={event.sourceUrl} rel="external noopener noreferrer" target="_blank">{event.title[locale]}</a></h3>
+            <p class="home-v2__event-summary">{event.summary[locale]}</p>
+            <div class="home-v2__event-bottom">
+              <span><strong>{t.organiserLabel}:</strong> {event.organiser[locale]}</span>
+              <time datetime={event.beginsOn}>{dateFormat.format(new Date(event.beginsOn + 'T12:00:00Z'))}</time>
+              <a href={event.sourceUrl} class="home-v2__event-source" target="_blank" rel="external noopener noreferrer" aria-label={t.source + ': ' + event.title[locale]}><span aria-hidden="true">↗</span></a>
+            </div>
           </div>
         </article>
       ))}
     </div>
+
+    <nav class="home-v2__event-pagination" data-event-pagination aria-label={t.paginationLabel} hidden>
+      <button class="home-v2__event-page-button" type="button" data-event-prev aria-label={t.previousPage} disabled>‹</button>
+      {Array.from({length: Math.ceil(announcements.length / 3)}, (_, index) => (
+        <button
+          class="home-v2__event-page-button"
+          type="button"
+          data-event-page={index + 1}
+          aria-label={t.pageLabel + ' ' + (index + 1)}
+          aria-current={index === 0 ? 'page' : undefined}
+        >{index + 1}</button>
+      ))}
+      <button class="home-v2__event-page-button" type="button" data-event-next aria-label={t.nextPage}>›</button>
+    </nav>
+    <p class="home-v2__event-page-status" data-event-page-status data-event-status-template={t.pageStatus} aria-live="polite" hidden></p>
 
     <div class="home-v2__events-empty" data-events-empty hidden={announcements.length > 0}>
       <span class="home-v2__events-empty-icon" aria-hidden="true">✧</span>
@@ -144,35 +164,77 @@ const filters: Array<'all' | AnnouncementKind> = ['all', 'webinar', 'event', 'co
   const board = document.querySelector<HTMLElement>('[data-events-board]');
   if (board) {
     const cards = [...board.querySelectorAll<HTMLElement>('[data-event-kind]')];
-    const buttons = [...board.querySelectorAll<HTMLButtonElement>('[data-event-filter]')];
+    const filters = [...board.querySelectorAll<HTMLButtonElement>('[data-event-filter]')];
+    const pageButtons = [...board.querySelectorAll<HTMLButtonElement>('[data-event-page]')];
+    const previous = board.querySelector<HTMLButtonElement>('[data-event-prev]');
+    const next = board.querySelector<HTMLButtonElement>('[data-event-next]');
+    const pagination = board.querySelector<HTMLElement>('[data-event-pagination]');
+    const pageStatus = board.querySelector<HTMLElement>('[data-event-page-status]');
     const list = board.querySelector<HTMLElement>('[data-event-list]');
     const empty = board.querySelector<HTMLElement>('[data-events-empty]');
     const noMatches = board.querySelector<HTMLElement>('[data-events-no-matches]');
+    const pageSize = 3;
     let active = 'all';
+    let currentPage = 1;
+
     const refresh = () => {
       const today = new Intl.DateTimeFormat('sv-SE', {
         timeZone: 'Asia/Almaty', year: 'numeric', month: '2-digit', day: '2-digit',
       }).format(new Date());
-      let current = 0, shown = 0;
-      for (const card of cards) {
-        const fresh = (card.dataset.eventExpires ?? '') >= today;
-        if (fresh) current++;
-        const visible = fresh && (active === 'all' || card.dataset.eventKind === active);
-        card.hidden = !visible;
-        if (visible) shown++;
+      const fresh = cards.filter(card => (card.dataset.eventExpires ?? '') >= today);
+      const matched = fresh.filter(card => active === 'all' || card.dataset.eventKind === active);
+      const totalPages = Math.ceil(matched.length / pageSize);
+      currentPage = Math.max(1, Math.min(currentPage, totalPages || 1));
+      const firstIndex = (currentPage - 1) * pageSize;
+      for (const card of cards) card.hidden = true;
+      matched.forEach((card, index) => {
+        card.hidden = index < firstIndex || index >= firstIndex + pageSize;
+      });
+
+      if (list) list.hidden = matched.length === 0;
+      if (empty) empty.hidden = fresh.length !== 0;
+      if (noMatches) noMatches.hidden = fresh.length === 0 || matched.length !== 0;
+      for (const filter of filters) {
+        filter.hidden = fresh.length === 0;
+        filter.setAttribute('aria-pressed', String(filter.dataset.eventFilter === active));
       }
-      if (list) list.hidden = shown === 0;
-      if (empty) empty.hidden = current > 0;
-      if (noMatches) noMatches.hidden = current === 0 || shown > 0;
-      for (const button of buttons) {
-        button.hidden = current === 0;
-        button.setAttribute('aria-pressed', String(button.dataset.eventFilter === active));
+      if (pagination) pagination.hidden = totalPages <= 1;
+      if (previous) previous.disabled = currentPage <= 1;
+      if (next) next.disabled = currentPage >= totalPages;
+      for (const button of pageButtons) {
+        const page = Number(button.dataset.eventPage);
+        button.hidden = page > totalPages;
+        if (page === currentPage) button.setAttribute('aria-current', 'page');
+        else button.removeAttribute('aria-current');
+      }
+      if (pageStatus) {
+        pageStatus.hidden = totalPages <= 1;
+        const template = pageStatus.dataset.eventStatusTemplate ?? '';
+        pageStatus.textContent = template
+          .replace('{from}', String(firstIndex + 1))
+          .replace('{to}', String(Math.min(firstIndex + pageSize, matched.length)))
+          .replace('{total}', String(matched.length));
       }
     };
-    for (const button of buttons) {
-      button.addEventListener('click', () => { active = button.dataset.eventFilter ?? 'all'; refresh(); });
+
+    for (const filter of filters) {
+      filter.addEventListener('click', () => {
+        active = filter.dataset.eventFilter ?? 'all';
+        currentPage = 1;
+        refresh();
+      });
     }
+    for (const button of pageButtons) {
+      button.addEventListener('click', () => {
+        currentPage = Number(button.dataset.eventPage) || 1;
+        refresh();
+      });
+    }
+    previous?.addEventListener('click', () => { currentPage -= 1; refresh(); });
+    next?.addEventListener('click', () => { currentPage += 1; refresh(); });
     refresh();
-    document.addEventListener('visibilitychange', () => { if (!document.hidden) refresh(); });
+    document.addEventListener('visibilitychange', () => {
+      if (!document.hidden) refresh();
+    });
   }
 </script>
