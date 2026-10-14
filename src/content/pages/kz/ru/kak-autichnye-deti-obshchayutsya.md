@@ -2,8 +2,8 @@
 title: "Как аутичные дети общаются: речь, жесты, эхолалия и другие способы"
 summary: "Устная речь и коммуникация - не одно и то же. Объясняем, как дети выражают желания и понимают других через слова, жесты, изображения, письмо и AAC."
 description: "Общение аутичных детей для родителей: речь и понимание, жесты, эхолалия, задержка ответа, AAC и доступность коммуникации."
-featuredImage: "/central-asia-autism-hub/images/editorial/parent-child-conversation.jpg"
-featuredImageAlt: "Взрослый и ребёнок общаются за столом."
+featuredImage: "/central-asia-autism-hub/images/editorial/photos/parent-communication-drawings-family.jpg"
+featuredImageAlt: "Иллюстративная фотография: дети показывают рисунки матери за столом. Сцена демонстрирует общение через изображения и не свидетельствует о диагнозе участников."
 country: kz
 language: ru
 section: parents

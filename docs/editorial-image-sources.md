@@ -15,6 +15,7 @@ Pexels states that its photos can be downloaded and used for free, attribution i
 | `sensory-hands.jpg` | Yan Krukau | https://www.pexels.com/photo/top-view-of-childrens-hands-8435776/ |
 | `children-stretching.jpg` | Pavel Danilyuk | https://www.pexels.com/photo/a-boy-and-girl-doing-stretching-8422103/ |
 | `parent-child-conversation.jpg` | Barbara Olsen | https://www.pexels.com/photo/a-child-talking-to-her-parent-7880777/ |
+| `photos/parent-communication-drawings-family.jpg` | Ketut Subiyanto | https://www.pexels.com/photo/cute-ethnic-kids-showing-pictures-to-cheerful-mom-4474037/ |
 | `family-reading.jpg` | Antoni Shkraba | https://www.pexels.com/photo/photo-of-a-child-reading-a-book-with-her-parents-4874928/ |
 | `family-meal.jpg` | Mizuno K | https://www.pexels.com/photo/family-eating-food-at-table-12788474/ |
 | `research-lab.jpg` | Tima Miroshnichenko | https://www.pexels.com/photo/man-technology-computer-white-9574355/ |

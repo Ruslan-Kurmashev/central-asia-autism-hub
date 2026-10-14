@@ -128,6 +128,15 @@ for (const lang of locales) {
   }
   check(cards.some(card => card.includes(base + lang + '/parents/')),
     id + ': latest feed must contain a parent information article');
+  if (lang === 'ru') {
+    const communicationCard = cards.find(card => card.includes('/kak-autichnye-deti-obshchayutsya/'));
+    if (communicationCard) check(communicationCard.includes('parent-communication-drawings-family.jpg'),
+      id + ': communication article should have its specific family drawing cover');
+    const communicationArticleHtml = await readFile(
+      path.join(dist, 'kz', lang, 'parents', 'kak-autichnye-deti-obshchayutsya', 'index.html'), 'utf8');
+    check(communicationArticleHtml.includes('parent-communication-drawings-family.jpg'),
+      id + ': published communication article cover is not updated');
+  }
   check(cards.some(card => card.includes(base + lang + '/help-kazakhstan/')),
     id + ': Kazakhstan support must be represented on the homepage');
   if (lang === 'ru') {

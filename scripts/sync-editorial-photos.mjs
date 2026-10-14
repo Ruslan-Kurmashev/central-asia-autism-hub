@@ -9,6 +9,7 @@ import process from 'node:process';
 
 const folder = path.join(process.cwd(), 'public/images/editorial/photos');
 const photos = [
+  ['parent-communication-drawings-family.jpg', '4474037'],
   ['professional-early-referral-family-consultation.jpg', '7653091'],
   ['kz-help-001.jpg', '10341112'],
   ['kz-help-002.jpg', '6692939'],
