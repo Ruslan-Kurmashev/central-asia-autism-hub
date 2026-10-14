@@ -1,12 +1,11 @@
 ---
-import { localePath } from '../lib/urls';
 import type { Locale } from '../site.config';
 import { KZ_ANNOUNCEMENTS, type AnnouncementKind, type AnnouncementAudience, type AnnouncementFormat, type AnnouncementCost } from '../data/kazakhstan-announcements';
 const { locale } = Astro.props as { locale: Locale };
 
 type Copy = {
-  kicker: string; title: string; lead: string; noTitle: string; noText: string; suggest: string;
-  disclaimer: string; illustration: string; organiserLabel: string; audienceLabel: string; costLabel: string;
+  kicker: string; title: string; lead: string; noTitle: string; noText: string;
+  illustration: string; organiserLabel: string; audienceLabel: string; costLabel: string;
   formatLabel: string; source: string; filterLabel: string; noResults: string;
   filters: Record<'all' | AnnouncementKind, string>;
   kinds: Record<AnnouncementKind, string>;
@@ -20,8 +19,6 @@ const translations: Record<Locale, Copy> = {
     lead: 'Ближайшие вебинары, мероприятия, обучение и другие возможности для семей и специалистов.',
     noTitle: 'Пока нет подтверждённых объявлений',
     noText: 'Мы формируем афишу. Здесь появятся только события с проверенными датами, организатором и официальной ссылкой.',
-    suggest: 'Предложить мероприятие',
-    disclaimer: 'Сведения приводятся по информации организаторов. Размещение не означает, что AutismHub одобряет мероприятие или услуги организатора.',
     illustration: 'Тематическое фото',
     organiserLabel: 'Организатор', audienceLabel: 'Для кого', costLabel: 'Участие',
     formatLabel: 'Формат', source: 'Страница организатора',
@@ -37,8 +34,6 @@ const translations: Record<Locale, Copy> = {
     lead: 'Отбасылар мен мамандарға арналған алдағы вебинарлар, іс-шаралар, оқу және басқа мүмкіндіктер.',
     noTitle: 'Әзірге расталған хабарландыру жоқ',
     noText: 'Афишаны дайындап жатырмыз. Күні, ұйымдастырушысы және ресми сілтемесі тексерілген іс-шаралар ғана жарияланады.',
-    suggest: 'Іс-шара ұсыну',
-    disclaimer: 'Ақпарат ұйымдастырушылардың деректеріне негізделеді. Жариялау AutismHub іс-шараны немесе ұйымдастырушы қызметтерін мақұлдайды дегенді білдірмейді.',
     illustration: 'Тақырыптық фото',
     organiserLabel: 'Ұйымдастырушы', audienceLabel: 'Кімге арналған', costLabel: 'Қатысу',
     formatLabel: 'Формат', source: 'Ұйымдастырушы парақшасы',
@@ -54,8 +49,6 @@ const translations: Record<Locale, Copy> = {
     lead: 'Upcoming webinars, events, learning opportunities and other notices for families and professionals.',
     noTitle: 'No confirmed announcements yet',
     noText: 'We are building the noticeboard. Only events with verified dates, organisers and official links will appear.',
-    suggest: 'Suggest an event',
-    disclaimer: 'Details are provided by event organisers. Listing does not imply AutismHub endorsement of an event or the organiser’s services.',
     illustration: 'Illustrative photo',
     organiserLabel: 'Organiser', audienceLabel: 'Audience', costLabel: 'Cost',
     formatLabel: 'Format', source: 'Organiser website',
@@ -145,10 +138,6 @@ const filters: Array<'all' | AnnouncementKind> = ['all', 'webinar', 'event', 'co
       <div><h3>{t.noTitle}</h3><p>{t.noText}</p></div>
     </div>
     <p class="home-v2__events-no-matches" data-events-no-matches hidden>{t.noResults}</p>
-    <div class="home-v2__events-footer">
-      <p>{t.disclaimer}</p>
-      <a href={localePath(locale, 'about/contact')}>{t.suggest} <span aria-hidden="true">↗</span></a>
-    </div>
   </div>
 </section>
 <script>
