@@ -1,0 +1,25 @@
+---
+import type { Locale } from '../site.config';
+import { localePath } from '../lib/urls';
+import { assessmentUI } from '../data/professional-assessment-ui';
+import '../styles/professional-assessment.css';
+
+interface Props { locale: Locale; current?: string; }
+const { locale, current } = Astro.props;
+const labels = assessmentUI[locale];
+const home = localePath(locale, 'professionals/assessment');
+---
+<div class="assessment-hub">
+  <nav class="assessment-hub__breadcrumb" aria-label="Breadcrumb">
+    <a href={localePath(locale, 'professionals')}>{labels.professional}</a>
+    <span aria-hidden="true">/</span>
+    {current
+      ? <><a href={home}>{labels.section}</a><span aria-hidden="true">/</span><span aria-current="page">{current}</span></>
+      : <span aria-current="page">{labels.section}</span>}
+  </nav>
+  <slot />
+  <p class="assessment-hub__disclaimer">
+    <svg viewBox="0 0 24 24" width="19" height="19" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="9"/><path d="M12 11v6m0-10v1"/></svg>
+    <span>{labels.legalNote}</span>
+  </p>
+</div>
