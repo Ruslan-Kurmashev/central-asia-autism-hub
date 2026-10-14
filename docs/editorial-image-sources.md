@@ -497,3 +497,9 @@ The research-card image-coverage validation enforces one mapped and locally avai
 | File | Author and date | Subject and provenance |
 | --- | --- | --- |
 | `professional-assessment-developmental-history.svg` | Original AutismHub hand-authored vector, 14 October 2026 | Timeline of developmental-history observations and conversational note cards; no copyrighted interview questions or genuine patient data. |
+
+## Professional assessment A10 editorial cover (2026-10-14)
+
+| File | Author and date | Subject and provenance |
+| --- | --- | --- |
+| `professional-assessment-cooccurring.svg` | AutismHub original self-hosted SVG, 14 October 2026 | Four abstract healthcare assessment domains around a central wellbeing indicator; original geometric vector artwork with no patient information, proprietary instruments, third-party image assets or institutional marks. It illustrates clinical questions and does not constitute a validated assessment tool. |
