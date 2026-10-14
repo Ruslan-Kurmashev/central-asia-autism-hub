@@ -24,9 +24,9 @@ const home = await inspectPage('kz/kk', 'home-v2', [
   'home-v2__masonry',
   'AutismHub-тағы жаңалықтар',
   'Іс-шаралар мен хабарландырулар',
-  'Барлық материалдар',
   'Біз сүйенетін дереккөздер',
 ]);
+assert.ok(!home.includes('home-v2__topicbar'), 'Secondary navigation removed on KK homepage');
 const parents = await inspectPage('kz/kk/parents', 'section-v2', [
   'Баланың дамуы',
   'section-v2__accordion',
