@@ -1,0 +1,102 @@
+---
+import type { CollectionEntry } from 'astro:content';
+import { UI } from '../i18n/ui';
+import { localePath } from '../lib/urls';
+import type { Locale } from '../site.config';
+
+interface Props {
+  locale: Locale;
+  materials: Array<CollectionEntry<'pages'> | CollectionEntry<'research'>>;
+}
+
+const { locale, materials } = Astro.props;
+const topics = UI[locale].sections.research.topics;
+const mainTopics = topics.slice(0, 4);
+const additionalTopics = topics.slice(4);
+const translations = {
+  ru: {
+    heading: 'Темы исследований',
+    intro: 'Выберите направление, чтобы открыть список материалов.',
+    more: 'Другие возможности',
+    moreIntro: 'Региональные исследования и информация об участии в научных проектах.',
+  },
+  kk: {
+    heading: 'Зерттеу тақырыптары',
+    intro: 'Материалдар тізімін ашу үшін бағытты таңдаңыз.',
+    more: 'Қосымша мүмкіндіктер',
+    moreIntro: 'Өңірлік зерттеулер және ғылыми жобаларға қатысу туралы ақпарат.',
+  },
+  en: {
+    heading: 'Research topics',
+    intro: 'Choose a subject to see its published resources.',
+    more: 'More ways to explore',
+    moreIntro: 'Regional research and information on participating in research projects.',
+  },
+};
+const labels = translations[locale];
+
+function materialCount(topicId: string) {
+  return materials.filter((material) =>
+    material.data.topic === topicId ||
+    (topicId === 'research-reviews' && material.collection === 'research'),
+  ).length;
+}
+
+function countLabel(count: number) {
+  if (locale === 'en') return count === 1 ? 'resource' : 'resources';
+  if (locale === 'kk') return 'материал';
+  const lastTwo = count % 100;
+  const last = count % 10;
+  if (lastTwo >= 11 && lastTwo <= 14) return 'материалов';
+  if (last === 1) return 'материал';
+  if (last >= 2 && last <= 4) return 'материала';
+  return 'материалов';
+}
+---
+
+<section class="research-directory" aria-labelledby="research-directory-title">
+  <div class="research-directory__heading">
+    <h2 id="research-directory-title">{labels.heading}</h2>
+    <p>{labels.intro}</p>
+  </div>
+  <div class="research-directory__grid">
+    {mainTopics.map((topic) => {
+      const count = materialCount(topic.id);
+      return (
+        <a class="research-directory__card" href={localePath(locale, 'research/topics/' + topic.id)}>
+          <div class="research-directory__card-body">
+            <h3>{topic.title}</h3>
+            <p>{topic.description}</p>
+          </div>
+          <div class="research-directory__card-footer">
+            <span>{count} {countLabel(count)}</span>
+            <span class="research-directory__arrow" aria-hidden="true">→</span>
+          </div>
+        </a>
+      );
+    })}
+  </div>
+  <div class="research-directory__extras" aria-labelledby="research-directory-extras-title">
+    <div class="research-directory__extras-heading">
+      <h2 id="research-directory-extras-title">{labels.more}</h2>
+      <p>{labels.moreIntro}</p>
+    </div>
+    <div class="research-directory__extra-links">
+      {additionalTopics.map((topic) => {
+        const count = materialCount(topic.id);
+        return (
+          <a class="research-directory__extra" href={localePath(locale, 'research/topics/' + topic.id)}>
+            <span class="research-directory__extra-copy">
+              <strong>{topic.title}</strong>
+              <span>{topic.description}</span>
+            </span>
+            <span class="research-directory__extra-tail">
+              <span>{count} {countLabel(count)}</span>
+              <span aria-hidden="true">→</span>
+            </span>
+          </a>
+        );
+      })}
+    </div>
+  </div>
+</section>
