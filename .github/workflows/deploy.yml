@@ -25,6 +25,14 @@ jobs:
           python3 -m venv .assessment-venv
           .assessment-venv/bin/python -m pip install --disable-pip-version-check "reportlab>=4.3,<5" "python-docx>=1.1,<2"
           .assessment-venv/bin/python scripts/generate-assessment-downloads.py
+      - name: Install Python for printable practice resources
+        uses: actions/setup-python@v6
+        with:
+          python-version: '3.12'
+      - name: Generate PDF, DOCX and XLSX assessment downloads
+        run: |
+          python -m pip install --disable-pip-version-check "reportlab>=4.2,<5" "python-docx>=1.1,<2"
+          python scripts/build-professional-assessment-downloads.py
       - name: Validate, build, and upload site
         uses: withastro/action@v6
         with:
