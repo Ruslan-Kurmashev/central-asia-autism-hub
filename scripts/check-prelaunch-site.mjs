@@ -88,6 +88,11 @@ for (const lang of locales) {
     id + ': redundant informational cards must not reappear on homepage');
   check(cards.filter(card => card.includes(base + lang + '/professionals/')).length <= 1,
     id + ': professional documents should not dominate the homepage');
+  if (lang === 'ru') {
+    const referralCard = cards.find(card => card.includes('rannee-vyyavlenie-autizma-marshrut-specialista'));
+    if (referralCard) check(referralCard.includes('professional-early-referral-family-consultation.jpg'),
+      id + ': early referral article needs its consultation photograph, not the diagram cover');
+  }
   check(cards.some(card => card.includes(base + lang + '/parents/')),
     id + ': latest feed must contain a parent information article');
   check(cards.some(card => card.includes(base + lang + '/help-kazakhstan/')),

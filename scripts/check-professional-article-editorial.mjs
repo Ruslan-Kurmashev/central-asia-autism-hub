@@ -11,6 +11,7 @@ const counts = { ru: 0, kk: 0, en: 0 };
 let headingsChecked = 0;
 let tableRowsChecked = 0;
 let svgCoversChecked = 0;
+let photoCoversChecked = 0;
 let articleHeroesChecked = 0;
 const keys = new Set();
 const imageOwnersByLocale = new Map();
@@ -56,8 +57,26 @@ for (const locale of ['ru', 'kk', 'en']) {
       } else {
         coverByTranslationKey.set(key, image);
       }
+      // This explicitly approved early-referral article uses a licensed
+      // consultation photograph instead of the normal professional SVG.
+      // Do not generalize this exception to other medical documents.
+      const approvedPhoto = key === 'professionals-a01' &&
+        image === '/central-asia-autism-hub/images/editorial/photos/professional-early-referral-family-consultation.jpg';
       const match = image.match(/^\/central-asia-autism-hub\/images\/editorial\/([a-z0-9-]+\.svg)$/);
-      if (!match) {
+      if (approvedPhoto) {
+        const jpgPath = path.resolve('public/images/editorial/photos', 'professional-early-referral-family-consultation.jpg');
+        try {
+          const bytes = await readFile(jpgPath);
+          if (bytes.length < 15000 || bytes[0] !== 0xff || bytes[1] !== 0xd8 ||
+              bytes[bytes.length - 2] !== 0xff || bytes[bytes.length - 1] !== 0xd9) {
+            errors.push(id + ': approved referral consultation cover is not a valid local JPEG');
+          } else {
+            photoCoversChecked++;
+          }
+        } catch {
+          errors.push(id + ': approved referral consultation cover missing from build assets');
+        }
+      } else if (!match) {
         errors.push(id + ': professional cover must be a locally hosted editorial SVG: ' + image);
       } else {
         const svgPath = path.resolve('public/images/editorial', match[1]);
@@ -118,7 +137,7 @@ for (const locale of ['ru', 'kk', 'en']) {
         const heroImages = [...html.matchAll(/<img\b[^>]*>/g)]
           .filter(match => match[0].includes('src="' + image + '"'));
         if (heroImages.length !== 1) {
-          errors.push(id + ': expected exactly one professional hero matching the source SVG, found ' + heroImages.length);
+          errors.push(id + ': expected exactly one professional hero matching its cover image, found ' + heroImages.length);
         } else {
           articleHeroesChecked++;
         }
@@ -142,5 +161,6 @@ if (errors.length) {
     headingsChecked + ' semantic headings, ' +
     tableRowsChecked + ' Markdown table rows, ' +
     svgCoversChecked + ' verified accessible SVG covers, ' +
+    photoCoversChecked + ' verified editorial photo covers, ' +
     articleHeroesChecked + ' correctly rendered article heroes and no reused cover artwork.');
 }

@@ -26,3 +26,9 @@ The automated professional article editorial validation now checks:
 5. Existing image alt descriptions, documentary references, and consistent professional typography.
 
 Automated checks cannot reliably judge icon legibility at 360px mobile widths, thematic creativity, or visual similarity from a compositional template. Responsive visual QA still requires device screenshots and human review.
+
+## Subsequent editorial cover revision (14 October 2026)
+
+Following user review of the homepage update feed, the professional early-referral pathway article (translation key `professionals-a01`) changed from its diagram-style SVG cover to a distinct, licensed Pexels photograph of a clinician consulting a mother and child. The stock image illustrates a consultation, not an actual autism assessment. The source is credited in `docs/editorial-image-sources.md`. The change affects the homepage card and the article hero through shared `featuredImage` metadata. The former pathway diagram remains an internal educational illustration in the repository.
+
+The professional article QA retains the unique-cover check, all SVG validation for other professional publications, and an exact-path exception validating the new local JPEG for this one article.
