@@ -77,7 +77,7 @@ for (const file of await collect(researchFolder)) {
     errors.push(`Missing original research link in ${entryPath}`);
   }
 
-  const indexRelative = path.join('kz', info.language, 'research', 'index.html');
+  const indexRelative = path.join('kz', info.language, 'research', 'topics', 'research-reviews', 'index.html');
   const indexPath = await firstExisting([
     path.join(buildFolder, indexRelative),
     path.join(buildFolder, 'central-asia-autism-hub', indexRelative),
@@ -90,7 +90,8 @@ for (const file of await collect(researchFolder)) {
     if (!listing.includes(`${info.slug}/`)) {
       errors.push(`Research article not linked from its section: ${relative}`);
     }
-    if (!listing.includes('research-section-body') ||
+    if (!listing.includes('research-topic-page__articles') ||
+        !listing.includes('research-section-body') ||
         !listing.includes('section-v2__research-source') ||
         !listing.includes(info.journal) ||
         !listing.includes(info.publicationYear)) {
