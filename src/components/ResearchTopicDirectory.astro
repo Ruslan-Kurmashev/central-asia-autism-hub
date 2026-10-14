@@ -37,8 +37,9 @@ const labels = translations[locale];
 
 function materialCount(topicId: string) {
   return materials.filter((material) =>
-    material.data.topic === topicId ||
-    (topicId === 'research-reviews' && material.collection === 'research'),
+    (material.collection === 'research'
+      ? topicId === 'research-reviews'
+      : material.data.topic === topicId),
   ).length;
 }
 
