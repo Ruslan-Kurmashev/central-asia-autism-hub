@@ -110,14 +110,14 @@ const homeV2Labels = locale === 'en'
       latestKicker: 'PLATFORM UPDATES',
       latestTitle: 'Latest on AutismHub',
       latestLead: 'Newly published articles across our main information sections.',
-
       approach: 'Our approach',
-      sourcesHeading: 'Our information sources',
-      sourceTypes: [
-        'Scientific research',
-        'Clinical guidance',
-        'Official sources',
-        'Resources for families',
+      sourcesHeading: 'What our materials are based on',
+      sourceIntro: 'We use research, clinical guidance and official information to make complex topics understandable for families.',
+      sourceCards: [
+        { title: 'Scientific publications', description: 'Research studies, systematic reviews and evidence-based findings.' },
+        { title: 'Clinical guidance', description: 'International guidelines, standards of care and professional approaches.' },
+        { title: 'Official sources', description: 'Documents from government bodies and international organisations.' },
+        { title: 'Resources for families', description: 'Clear explanations, practical materials and guidance on finding support.' },
       ],
     }
   : locale === 'kk'
@@ -125,30 +125,30 @@ const homeV2Labels = locale === 'en'
         latestKicker: 'ПЛАТФОРМА ЖАҢАЛЫҚТАРЫ',
         latestTitle: 'AutismHub-тағы жаңалықтар',
         latestLead: 'Сайттың әртүрлі бөлімдерінде жақында жарияланған мақалалар мен материалдар.',
-
         approach: 'Біздің ұстанымымыз',
-        sourcesHeading: 'Біз сүйенетін дереккөздер',
-        sourceTypes: [
-          'Ғылыми жарияланымдар',
-          'Клиникалық ұсынымдар',
-          'Ресми дереккөздер',
-          'Отбасыларға арналған материалдар',
+        sourcesHeading: 'Материалдарымыз неге негізделеді',
+        sourceIntro: 'Ғылыми зерттеулерге, клиникалық ұсынымдарға және ресми құжаттарға сүйеніп, күрделі ақпаратты отбасыларға түсінікті етіп ұсынамыз.',
+        sourceCards: [
+          { title: 'Ғылыми жарияланымдар', description: 'Зерттеулер, жүйелі шолулар және дәлелді медицина деректері.' },
+          { title: 'Клиникалық ұсынымдар', description: 'Халықаралық нұсқаулықтар, көмек көрсету стандарттары және кәсіби тәсілдер.' },
+          { title: 'Ресми дереккөздер', description: 'Мемлекеттік органдар мен халықаралық ұйымдардың құжаттары.' },
+          { title: 'Отбасыларға арналған материалдар', description: 'Түсінікті түсіндірмелер, практикалық материалдар және қолдау табуға арналған ақпарат.' },
         ],
       }
     : {
-      latestKicker: 'ОБНОВЛЕНИЯ ПЛАТФОРМЫ',
-      latestTitle: 'Новое на AutismHub',
-      latestLead: 'Недавно опубликованные статьи и материалы из разных разделов платформы.',
-
-      approach: 'Наш подход',
-      sourcesHeading: 'На что мы опираемся',
-      sourceTypes: [
-        'Научные публикации',
-        'Клинические рекомендации',
-        'Официальные источники',
-        'Материалы для семей',
-      ],
-    };
+        latestKicker: 'ОБНОВЛЕНИЯ ПЛАТФОРМЫ',
+        latestTitle: 'Новое на AutismHub',
+        latestLead: 'Недавно опубликованные статьи и материалы из разных разделов платформы.',
+        approach: 'Наш подход',
+        sourcesHeading: 'На чём основаны наши материалы',
+        sourceIntro: 'Мы опираемся на научные исследования, клинические рекомендации и официальные документы, чтобы делать сложную информацию понятной для семей.',
+        sourceCards: [
+          { title: 'Научные публикации', description: 'Исследования, систематические обзоры и данные доказательной медицины.' },
+          { title: 'Клинические рекомендации', description: 'Международные руководства, стандарты помощи и профессиональные подходы.' },
+          { title: 'Официальные источники', description: 'Документы государственных и международных организаций.' },
+          { title: 'Материалы для семей', description: 'Понятные объяснения, практические материалы и навигация по теме.' },
+        ],
+      };
 const usedEditorialImages = new Set<string>();
 const homeCards = homeMaterials.map((material, index) => {
   // Research figures retain their primary-study credit inside each article.
@@ -326,9 +326,42 @@ const dateFormatter = new Intl.DateTimeFormat(DATE_LOCALES[locale], {
             <div class="container">
               <p class="home-v2__kicker">{homeV2Labels.approach}</p>
               <h2 id="home-v2-sources-title">{homeV2Labels.sourcesHeading}</h2>
-              <div class="home-v2__source-grid" aria-label={homeV2Labels.sourcesHeading}>
-                {homeV2Labels.sourceTypes.map((sourceType) => <span>{sourceType}</span>)}
-              </div>
+              <p class="home-v2__source-lead">{homeV2Labels.sourceIntro}</p>
+              <ul class="home-v2__source-grid" aria-label={homeV2Labels.sourcesHeading}>
+                {homeV2Labels.sourceCards.map((card, index) => (
+                  <li class="home-v2__source-card">
+                    <span class="home-v2__source-icon" aria-hidden="true">
+                      {index === 0 ? (
+                        <svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="2.7" stroke-linecap="round" stroke-linejoin="round">
+                          <path d="M17 8h23l11 11v33a4 4 0 0 1-4 4H17a4 4 0 0 1-4-4V12a4 4 0 0 1 4-4Z"/>
+                          <path d="M40 8v12h11M22 29h20M22 37h20M22 45h14"/>
+                        </svg>
+                      ) : index === 1 ? (
+                        <svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="2.7" stroke-linecap="round" stroke-linejoin="round">
+                          <rect x="14" y="8" width="37" height="48" rx="5"/>
+                          <path d="m21 22 3 3 5-6m5 4h10M21 36l3 3 5-6m5 4h10M21 49l3 3 5-6m5 4h10"/>
+                        </svg>
+                      ) : index === 2 ? (
+                        <svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="2.7" stroke-linecap="round" stroke-linejoin="round">
+                          <path d="M32 6 52 14v17c0 12-8 21-20 27C20 52 12 43 12 31V14L32 6Z"/>
+                          <circle cx="32" cy="31" r="13"/>
+                          <path d="m25 31 5 5 10-11"/>
+                        </svg>
+                      ) : (
+                        <svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="2.7" stroke-linecap="round" stroke-linejoin="round">
+                          <circle cx="32" cy="28" r="7"/>
+                          <circle cx="14" cy="35" r="6"/>
+                          <circle cx="50" cy="35" r="6"/>
+                          <path d="M20 54v-3c0-7 5-12 12-12s12 5 12 12v3M3 55v-4c0-6 4-10 11-10 3 0 6 1 8 4M61 55v-4c0-6-4-10-11-10-3 0-6 1-8 4"/>
+                          <path class="home-v2__icon-accent" d="M26 11c0-3 2-5 5-5 2 0 3 1 4 3 1-2 3-3 5-3 3 0 5 2 5 5 0 4-5 8-10 12-5-4-9-8-9-12Z"/>
+                        </svg>
+                      )}
+                    </span>
+                    <h3>{card.title}</h3>
+                    <p>{card.description}</p>
+                  </li>
+                ))}
+              </ul>
               <p class="home-v2__source-note">{copy.principlesBoundary}</p>
             </div>
           </section>
