@@ -2,6 +2,7 @@
 import type { Locale } from '../site.config';
 import { localePath } from '../lib/urls';
 import { assessmentDownloads, assessmentGroups } from '../data/professional-assessment';
+import { officialAssessmentResources } from '../data/professional-assessment-external';
 import { assessmentUI } from '../data/professional-assessment-ui';
 import ProfessionalAssessmentShell from './ProfessionalAssessmentShell.astro';
 
@@ -66,6 +67,23 @@ const unreleased = assessmentDownloads.filter(d => !d.files[locale]?.length);
       <summary>{t.upcomingTools} ({unreleased.length})</summary>
       <ul>{unreleased.map(d=><li>{d.title[locale]}</li>)}</ul>
     </details>}
+
+  <details class="assessment-hub__planned-tools assessment-hub__external-resources">
+    <summary>{locale==='ru'?'Официальные инструменты от других организаций':locale==='kk'?'Басқа ұйымдардың ресми құралдары':'Official tools from other organisations'} ({officialAssessmentResources.length})</summary>
+    <p class="assessment-hub__external-intro">
+      {locale==='ru'?'Оригиналы размещены у правообладателей. Язык, условия копирования и применимость к Казахстану проверяются отдельно; материалы не включены в число файлов AutismHub.':locale==='kk'?'Бастапқы құжаттар құқық иелерінің сайтында орналасқан. Тілін, тарату құқықтарын және Қазақстанға қолданылуын бөлек тексеріңіз.':'Original documents remain on publisher sites. Check language, reproduction rights and local applicability. These are not AutismHub-hosted downloads.'}
+    </p>
+    <div class="assessment-hub__external-list">
+      {officialAssessmentResources.map(resource=>(
+        <article class="assessment-hub__external-item">
+          <a href={resource.url} target="_blank" rel="noopener noreferrer">{resource.title[locale]} <span aria-hidden="true">↗</span></a>
+          <p>{resource.description[locale]}</p>
+          <p class="assessment-hub__external-meta">{resource.provider} · {resource.language}</p>
+          <p class="assessment-hub__external-copyright">{resource.licenseNote[locale]}</p>
+        </article>
+      ))}
+    </div>
+  </details>
 
   <details class="assessment-hub__tool-notes">
     <summary>{t.sources}</summary>
