@@ -1,0 +1,241 @@
+---
+import type { CollectionEntry } from 'astro:content';
+import type { Locale } from '../site.config';
+import { localePath } from '../lib/urls';
+
+interface Props {
+  locale: Locale;
+  entry: CollectionEntry<'learning'>;
+}
+
+const { locale, entry } = Astro.props;
+const course = entry.data;
+const lessons = course.lessons ?? [];
+const hasVideos = lessons.some((lesson) => Boolean(lesson.youtubeVideoId));
+const ui = {
+  ru: {
+    back: 'Все учебные материалы', intro: 'Об учебном материале',
+    lessonHeading: 'Содержание и видео', author: 'Разработчик',
+    languages: 'Язык обучения', audience: 'Для кого', parents: 'Родителям',
+    professionals: 'Специалистам', price: 'Стоимость', duration: 'Продолжительность',
+    access: 'Как начать обучение', outcome: 'Что выдаётся после прохождения',
+    start: 'Перейти на официальную платформу', original: 'Открыть материал у автора',
+    source: 'Первоисточники и дополнительные материалы', updated: 'Данные проверены',
+    lesson: 'Материал', supplementary: 'Дополнительное видео, не часть исходной программы',
+    videoBefore: 'Видео доступно для просмотра на этой странице через YouTube.',
+    videoConsent: 'Показать видео YouTube', videoPrivacy: 'Плеер загружается только после нажатия кнопки. YouTube может обрабатывать данные и устанавливать cookies.',
+    videoOriginal: 'Посмотреть оригинал на YouTube',
+    courseNote: 'Условия доступа, тестирование и выдача документов определяются организатором. Просмотр встроенного видео на AutismHub сам по себе не означает прохождение курса и не даёт сертификат.',
+    externalNotice: 'В этом материале пока нет подтверждённых общедоступных видео для встраивания. Информация и ссылки доступны здесь, а само обучение проходит на платформе организатора.',
+    curatedNotice: 'Материалы разных авторов представлены с сохранением авторства. Дополнительные видео не заменяют официальную программу.',
+    details: 'Описание и пояснения',
+    official: 'Официальная программа',
+    noVideo: 'Другие материалы по этой программе',
+  },
+  kk: {
+    back: 'Барлық оқу материалдары', intro: 'Оқу материалы туралы',
+    lessonHeading: 'Мазмұны және бейнелер', author: 'Дайындаған ұйым',
+    languages: 'Оқыту тілі', audience: 'Кімге арналған', parents: 'Ата-аналарға',
+    professionals: 'Мамандарға', price: 'Құны', duration: 'Ұзақтығы',
+    access: 'Оқуды қалай бастауға болады', outcome: 'Аяқтаған соң не беріледі',
+    start: 'Ресми платформаға өту', original: 'Автордың материалын ашу',
+    source: 'Бастапқы дереккөздер және қосымша материалдар', updated: 'Деректер тексерілді',
+    lesson: 'Материал', supplementary: 'Қосымша бейне, негізгі бағдарламаның бөлігі емес',
+    videoBefore: 'Бұл бейнені YouTube арқылы осы бетте көруге болады.',
+    videoConsent: 'YouTube бейнесін көрсету', videoPrivacy: 'Плеер батырманы басқаннан кейін ғана жүктеледі. YouTube деректерді өңдеп, cookie орнатуы мүмкін.',
+    videoOriginal: 'YouTube-тағы түпнұсқаны қарау',
+    courseNote: 'Қолжетімділік, тестілеу және құжат беру шарттарын ұйымдастырушы белгілейді. AutismHub сайтында бейне қарау курсты аяқтағаныңызды немесе сертификат алғаныңызды білдірмейді.',
+    externalNotice: 'Қазір бұл материал үшін кірістіруге рұқсат етілген ашық бейнелер расталмаған. Мәліметтер осында, ал толық оқу ұйымдастырушының платформасында өтеді.',
+    curatedNotice: 'Әртүрлі авторлардың материалдары авторлықты сақтай отырып беріледі. Қосымша бейнелер ресми бағдарламаны алмастырмайды.',
+    details: 'Сипаттама және түсіндірмелер',
+    official: 'Ресми бағдарлама',
+    noVideo: 'Бағдарлама туралы қосымша материалдар',
+  },
+  en: {
+    back: 'All learning resources', intro: 'About this resource',
+    lessonHeading: 'Lessons and videos', author: 'Provider',
+    languages: 'Teaching language', audience: 'Audience', parents: 'Parents',
+    professionals: 'Professionals', price: 'Cost', duration: 'Duration',
+    access: 'How to start learning', outcome: 'What you receive on completion',
+    start: 'Go to the official learning platform', original: 'Open the original resource',
+    source: 'Primary sources and further reading', updated: 'Information checked',
+    lesson: 'Resource', supplementary: 'Additional video, not a module of the original course',
+    videoBefore: 'You can watch this video here via YouTube.',
+    videoConsent: 'Load YouTube video', videoPrivacy: 'The player loads only after you click. YouTube may process your data and set cookies.',
+    videoOriginal: 'View original on YouTube',
+    courseNote: 'The provider determines registration, assessments and awards. Watching embedded videos on AutismHub does not count as formal completion or provide a certificate.',
+    externalNotice: 'No verified publicly embeddable videos are available for this resource yet. Course information is available here; full learning takes place on the provider platform.',
+    curatedNotice: 'We credit each creator. Additional videos do not replace the official programme.',
+    details: 'Description and notes',
+    official: 'Official programme',
+    noVideo: 'Other course materials',
+  },
+}[locale];
+const languageLabels = {
+  ru: { ru: 'Русский', kk: 'Казахский', en: 'Английский' },
+  kk: { ru: 'Орысша', kk: 'Қазақша', en: 'Ағылшынша' },
+  en: { ru: 'Russian', kk: 'Kazakh', en: 'English' },
+}[locale];
+const home = localePath(locale, 'learning');
+const readDate = course.lastVerifiedAt?.toLocaleDateString(locale === 'ru' ? 'ru-KZ' : locale === 'kk' ? 'kk-KZ' : 'en-GB');
+---
+<article class="learning-view">
+  <div class="container">
+    <nav class="learning-view__breadcrumb" aria-label={locale === 'en' ? 'Breadcrumb' : 'Навигация'}>
+      <a href={localePath(locale)}>{locale === 'ru' ? 'Главная' : locale === 'kk' ? 'Басты бет' : 'Home'}</a>
+      <span aria-hidden="true">/</span>
+      <a href={home}>{ui.back}</a>
+      <span aria-hidden="true">/</span>
+      <span aria-current="page">{course.title}</span>
+    </nav>
+    <header class="learning-view__hero">
+      <p class="learning-view__eyebrow">{locale === 'ru' ? 'Обучение' : locale === 'kk' ? 'Оқу' : 'Learning'}</p>
+      <h1>{course.title}</h1>
+      <p class="learning-view__summary">{course.summary}</p>
+      <div class="learning-view__badges">
+        {course.languages.map((language) => <span>{ui.languages}: {languageLabels[language]}</span>)}
+        {course.audience.map((audience) => <span>{audience === 'parents' ? ui.parents : ui.professionals}</span>)}
+      </div>
+      <div class="learning-view__fact-grid">
+        <p><strong>{ui.author}:</strong> {course.provider}</p>
+        <p><strong>{ui.price}:</strong> {course.costLabel}</p>
+        {course.durationLabel && <p><strong>{ui.duration}:</strong> {course.durationLabel}</p>}
+        {readDate && <p><strong>{ui.updated}:</strong> <time datetime={course.lastVerifiedAt!.toISOString()}>{readDate}</time></p>}
+      </div>
+      <div class="learning-view__hero-links">
+        {lessons.length > 0 && <a class="learning-view__primary" href="#learning-lessons">{ui.lessonHeading} <span aria-hidden="true">↓</span></a>}
+        {course.externalUrl && <a class={lessons.length > 0 ? 'learning-view__secondary' : 'learning-view__primary'} href={course.externalUrl} target="_blank" rel="noopener noreferrer external">{ui.start} <span aria-hidden="true">↗</span></a>}
+      </div>
+    </header>
+    <div class="learning-view__content">
+      <section class="learning-view__section" aria-labelledby="learning-overview">
+        <h2 id="learning-overview">{ui.intro}</h2>
+        <p>{course.description}</p>
+        {course.registrationStatus && <div class="learning-view__info"><h3>{ui.access}</h3><p>{course.registrationStatus}</p></div>}
+        {course.completionOutcome && <div class="learning-view__info"><h3>{ui.outcome}</h3><p>{course.completionOutcome}</p></div>}
+      </section>
+      {lessons.length > 0 ? (
+        <section class="learning-view__section" id="learning-lessons" aria-labelledby="learning-lessons-title">
+          <h2 id="learning-lessons-title">{ui.lessonHeading}</h2>
+          <p class="learning-view__fineprint">{ui.curatedNotice}</p>
+          <ol class="learning-view__lessons">
+            {lessons.map((lesson, i) => (
+              <li class="learning-view__lesson">
+                <details open={i === 0}>
+                  <summary>
+                    <span class="learning-view__lesson-index" aria-hidden="true">{String(i + 1).padStart(2,'0')}</span>
+                    <span>{lesson.title}</span>
+                    <span aria-hidden="true">⌄</span>
+                  </summary>
+                  <div class="learning-view__lesson-content">
+                    {lesson.description && <p>{lesson.description}</p>}
+                    {lesson.supplementary && <p class="learning-view__supplementary">{ui.supplementary}</p>}
+                    {lesson.youtubeVideoId && (
+                      <div class="learning-view__video-area">
+                        <div class="learning-view__video-shell" data-video-host>
+                          <div class="learning-view__video-placeholder">
+                            <p>{ui.videoBefore}</p>
+                            <button type="button" data-video-activate data-youtube-id={lesson.youtubeVideoId} data-youtube-title={lesson.title}>
+                              <span aria-hidden="true">▶</span> {ui.videoConsent}
+                            </button>
+                            <p class="learning-view__fineprint">{ui.videoPrivacy}</p>
+                          </div>
+                        </div>
+                        <a href={lesson.sourceUrl} target="_blank" rel="noopener noreferrer external">{ui.videoOriginal} ↗</a>
+                      </div>
+                    )}
+                    {!lesson.youtubeVideoId && lesson.sourceUrl && <a class="learning-view__lesson-link" href={lesson.sourceUrl} target="_blank" rel="noopener noreferrer external">{ui.original} ↗</a>}
+                    {lesson.sourceName && <p class="learning-view__attribution">{ui.author}: {lesson.sourceName}</p>}
+                  </div>
+                </details>
+              </li>
+            ))}
+          </ol>
+        </section>
+      ) : (
+        <section class="learning-view__section" aria-labelledby="learning-lessons-title">
+          <h2 id="learning-lessons-title">{ui.noVideo}</h2>
+          <p>{ui.externalNotice}</p>
+          {course.externalUrl && <a class="learning-view__lesson-link" href={course.externalUrl} target="_blank" rel="noopener noreferrer external">{ui.official} ↗</a>}
+        </section>
+      )}
+      <section class="learning-view__section" aria-labelledby="learning-notes-title">
+        <h2 id="learning-notes-title">{ui.details}</h2>
+        <div class="learning-view__editorial"><slot /></div>
+      </section>
+      {course.sources.length > 0 && (
+        <section class="learning-view__section" aria-labelledby="learning-sources-title">
+          <h2 id="learning-sources-title">{ui.source}</h2>
+          <ul class="learning-view__sources">
+            {course.sources.map((source) => <li><a href={source.url} target="_blank" rel="noopener noreferrer external">{source.title} ↗</a>{source.organisation && <span> - {source.organisation}</span>}</li>)}
+          </ul>
+        </section>
+      )}
+      <p class="learning-view__disclaimer">{ui.courseNote}</p>
+      <a class="learning-view__back" href={home}>← {ui.back}</a>
+    </div>
+  </div>
+</article>
+
+<script>
+  document.querySelectorAll<HTMLButtonElement>('[data-video-activate]').forEach((button) => {
+    button.addEventListener('click', () => {
+      const id = button.dataset.youtubeId ?? '';
+      if (!/^[A-Za-z0-9_-]{11}$/.test(id)) return;
+      const host = button.closest<HTMLElement>('[data-video-host]');
+      if (!host || host.querySelector('iframe')) return;
+      const frame = document.createElement('iframe');
+      frame.title = button.dataset.youtubeTitle || 'YouTube video';
+      frame.src = 'https://www.youtube-nocookie.com/embed/' + id + '?rel=0';
+      frame.loading = 'lazy';
+      frame.referrerPolicy = 'strict-origin-when-cross-origin';
+      frame.allow = 'accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share';
+      frame.allowFullscreen = true;
+      host.replaceChildren(frame);
+    });
+  });
+</script>
+<style>
+.learning-view{background:#f5f9fc;color:var(--color-ink);min-height:80vh;padding:2rem 0 4rem}
+.learning-view .container{width:min(calc(100% - 2rem),70rem);margin-inline:auto}
+.learning-view__breadcrumb{display:flex;align-items:center;flex-wrap:wrap;gap:.55rem;margin:0 0 2rem;color:var(--color-muted);font-size:var(--type-small)}
+.learning-view__breadcrumb a,.learning-view__back{color:#195789;text-decoration:none}
+.learning-view__hero{padding:clamp(1.3rem,3vw,2.8rem);border:1px solid #d6e3ec;border-radius:1rem;background:#fff}
+.learning-view__eyebrow{color:#27689d;font-size:var(--type-meta);font-weight:700;letter-spacing:.07em;text-transform:uppercase}
+.learning-view__hero h1{margin:.4rem 0 1rem;font-family:var(--font-editorial);font-size:var(--type-h1);font-weight:500;line-height:1.2;max-width:60rem}
+.learning-view__summary{font-size:var(--type-lead);line-height:1.65;max-width:55rem;color:#425d76}
+.learning-view__badges{display:flex;gap:.5rem;flex-wrap:wrap;margin-top:1.2rem}
+.learning-view__badges span{font-size:var(--type-small);border-radius:2rem;padding:.35rem .75rem;color:#19517b;border:1px solid #c4d9e8;background:#e9f3fa}
+.learning-view__fact-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:.15rem 2rem;margin-top:1.2rem;color:#405a70}
+.learning-view__fact-grid p{line-height:1.55;font-size:var(--type-small);margin:.35rem 0}
+.learning-view__hero-links{display:flex;gap:.75rem;flex-wrap:wrap;margin-top:1.6rem}
+.learning-view__primary,.learning-view__secondary,.learning-view__lesson-link{display:inline-flex;align-items:center;justify-content:center;gap:.4rem;border-radius:.55rem;padding:.8rem 1rem;font-size:var(--type-control);font-weight:700;text-decoration:none}
+.learning-view__primary{background:#205f90;color:white}.learning-view__primary:hover{background:#174a72;color:#fff}
+.learning-view__secondary,.learning-view__lesson-link{color:#205f90;border:1px solid #c1d4e5;background:#f6faff}
+.learning-view__content{max-width:60rem;margin:2.2rem auto 0}
+.learning-view__section{margin:0 0 2.5rem;padding:1.4rem;border:1px solid #dbe7ef;border-radius:.9rem;background:white}
+.learning-view__section h2{font-family:var(--font-editorial);font-size:var(--type-h2);font-weight:500;color:#173d68;margin:0 0 1rem}
+.learning-view__section h3{font-family:var(--font-editorial);font-size:var(--type-card);font-weight:600;color:#21486d;margin:0 0 .35rem}
+.learning-view__section p{line-height:1.65}
+.learning-view__info{margin-top:1.3rem}
+.learning-view__lessons{list-style:none;padding:0;margin:1rem 0;display:grid;gap:.7rem}
+.learning-view__lesson{border:1px solid #d3e2ed;border-radius:.7rem;overflow:hidden;background:#fff}
+.learning-view__lesson summary{display:grid;grid-template-columns:auto minmax(0,1fr) auto;gap:.9rem;align-items:center;cursor:pointer;padding:1rem;font-weight:700}
+.learning-view__lesson summary:hover,.learning-view__lesson details[open]>summary{background:#eff6fb}
+.learning-view__lesson-index{color:#306a99;font-size:var(--type-small)}
+.learning-view__lesson-content{padding:1.2rem;border-top:1px solid #e2ebf2}
+.learning-view__lesson-content p:first-child{margin-top:0}
+.learning-view__supplementary,.learning-view__fineprint,.learning-view__attribution{font-size:var(--type-small);color:#576d80}
+.learning-view__video-area{margin-top:1rem}
+.learning-view__video-shell{aspect-ratio:16/9;background:#183a54;color:white;border-radius:.65rem;overflow:hidden;display:grid;place-items:center}
+.learning-view__video-shell :global(iframe){width:100%;height:100%;border:0;display:block}
+.learning-view__video-placeholder{text-align:center;padding:1rem;max-width:35rem}
+.learning-view__video-placeholder button{border:0;border-radius:.6rem;padding:.75rem 1.2rem;background:white;color:#163f61;font-weight:750;cursor:pointer;font-size:var(--type-control)}
+.learning-view__video-placeholder .learning-view__fineprint{color:#d6e3ee}
+.learning-view__video-area>a{display:inline-block;margin-top:.7rem;color:#195789}
+.learning-view__sources{padding-left:1.3rem}.learning-view__sources li{margin:.7rem 0;overflow-wrap:anywhere}
+.learning-view__sources a{color:#205f90}.learning-view__disclaimer{background:#eaf2f8;border-left:3px solid #205f90;padding:1rem;line-height:1.6;font-size:var(--type-small)}
+.learning-view__back{display:inline-block;padding:1rem 0;font-weight:700}
+.learning-view a:focus-visible,.learning-view button:focus-visible,.learning-view summary:focus-visible{outline:3px solid #286899;outline-offset:3px}
+@media(max-width:44rem){.learning-view__fact-grid{grid-template-columns:1fr}.learning-view__hero-links>*{width:100%}.learning-view__section{padding:1rem}}
+</style>
