@@ -1,0 +1,162 @@
+---
+import { getCollection, type CollectionEntry } from 'astro:content';
+import BaseLayout from '../../../../../layouts/BaseLayout.astro';
+import { getResearchCardVisual } from '../../../../../data/research-card-visuals';
+import { DATE_LOCALES } from '../../../../../i18n/content';
+import { UI } from '../../../../../i18n/ui';
+import { articlePath, localePath, sitePath } from '../../../../../lib/urls';
+import { SITE, SUPPORTED_LOCALES, type Locale } from '../../../../../site.config';
+import '../../../../../styles/section-v2.css';
+
+export function getStaticPaths() {
+  return SUPPORTED_LOCALES.flatMap((locale) =>
+    UI[locale].sections.research.topics.map((topic) => ({
+      params: { lang: locale, topic: topic.id },
+      props: { locale, topicId: topic.id },
+    })),
+  );
+}
+
+interface Props {
+  locale: Locale;
+  topicId: string;
+}
+const { locale, topicId } = Astro.props;
+const section = UI[locale].sections.research;
+const topic = section.topics.find((candidate) => candidate.id === topicId);
+if (!topic) throw new Error('Unknown research topic: ' + topicId);
+
+const pages = await getCollection('pages', ({ data }) =>
+  !data.draft && data.language === locale && data.section === 'research' &&
+  data.translationStatus !== 'pending' && Boolean(data.publishedAt) && Boolean(data.updatedAt),
+);
+const research = await getCollection('research', ({ data }) =>
+  !data.draft && data.language === locale &&
+  data.translationStatus !== 'pending' && Boolean(data.publishedAt) && Boolean(data.updatedAt),
+);
+const materials: Array<CollectionEntry<'pages'> | CollectionEntry<'research'>> =
+  [...pages, ...research]
+    .filter((material) =>
+      material.data.topic === topicId ||
+      (topicId === 'research-reviews' && material.collection === 'research'),
+    )
+    .sort((a, b) =>
+      (b.data.publishedAt?.getTime() ?? 0) - (a.data.publishedAt?.getTime() ?? 0) ||
+      a.data.title.localeCompare(b.data.title, locale),
+    );
+
+const languageText = {
+  ru: {
+    back: 'Все темы исследований',
+    count: 'Опубликованные материалы',
+    empty: 'Проверенные материалы для этого направления пока не опубликованы. Подраздел будет пополняться после редакционной проверки.',
+    regionalEmpty: 'Проверенные региональные материалы пока не опубликованы. Позже здесь появятся исследования и научные проекты, относящиеся к Казахстану и Центральной Азии.',
+    participationEmpty: 'В настоящее время на сайте нет проверенных объявлений о наборе участников. Мы будем размещать только проекты с понятными организаторами, условиями и информацией об этике исследования.',
+  },
+  kk: {
+    back: 'Барлық зерттеу тақырыптары',
+    count: 'Жарияланған материалдар',
+    empty: 'Бұл бағыт бойынша тексерілген материалдар әзірге жарияланған жоқ. Материалдар редакциялық тексеруден кейін қосылады.',
+    regionalEmpty: 'Қазақстан мен Орталық Азияға қатысты тексерілген өңірлік материалдар әзірге жарияланған жоқ.',
+    participationEmpty: 'Қазір сайтта қатысушыларды қабылдау туралы тексерілген хабарландырулар жоқ. Тек ұйымдастырушылары, шарттары және зерттеу этикасы көрсетілген жобалар жарияланады.',
+  },
+  en: {
+    back: 'All research topics',
+    count: 'Published resources',
+    empty: 'No reviewed resources have been published in this topic yet. New materials will be added following editorial review.',
+    regionalEmpty: 'No verified regional resources have been published yet. Research concerning Kazakhstan and Central Asia will appear here.',
+    participationEmpty: 'There are currently no verified research recruitment notices on the site. Only projects with clear organisers, eligibility conditions and ethics information will be listed.',
+  },
+};
+const labels = languageText[locale];
+const emptyMessage = topicId === 'kazakhstan-research' ? labels.regionalEmpty :
+  topicId === 'research-participation' ? labels.participationEmpty : labels.empty;
+const dateFormatter = new Intl.DateTimeFormat(DATE_LOCALES[locale], {
+  day: 'numeric', month: 'short', year: 'numeric',
+});
+---
+
+<BaseLayout
+  title={topic.title + ' - ' + SITE.name}
+  description={topic.description}
+  locale={locale}
+  currentSection="research"
+  alternatePath={'research/topics/' + topicId}
+  bodyClass="section-v2 research-section-body"
+>
+  <article class="section-v2__page">
+    <header class="section-v2__hero">
+      <div class="container">
+        <p class="section-v2__breadcrumb">
+          <a href={localePath(locale)}>{UI[locale].homeLabel}</a>
+          <span aria-hidden="true"> / </span>
+          <a href={localePath(locale, 'research')}>{section.title}</a>
+          <span aria-hidden="true"> / </span>
+          <span aria-current="page">{topic.title}</span>
+        </p>
+        <div class="section-v2__hero-grid">
+          <div>
+            <p class="section-v2__eyebrow">{section.title}</p>
+            <h1>{topic.title}</h1>
+            <p class="section-v2__description">{topic.description}</p>
+          </div>
+          <div class="section-v2__count" aria-label={labels.count + ': ' + materials.length}>
+            <strong>{materials.length}</strong>
+            <span>{labels.count}</span>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <section class="section-v2__collections" aria-label={labels.count}>
+      <div class="container">
+        {materials.length > 0 ? (
+          <div class="section-v2__article-list research-topic-page__articles">
+            {materials.map((material, index) => (
+              <a
+                class:list={['section-v2__article-row', material.data.featuredImage && 'section-v2__article-row--image']}
+                href={articlePath(locale, 'research', material.data.slug)}
+              >
+                <span class="section-v2__article-index" aria-hidden="true">
+                  {String(index + 1).padStart(2, '0')}
+                </span>
+                {material.data.featuredImage && (
+                  <img
+                    class="section-v2__article-thumb"
+                    src={material.collection === 'research'
+                      ? sitePath().slice(0, -1) + '/' + (getResearchCardVisual(material.data.slug)?.src ??
+                        (() => { throw new Error('Missing research card image for ' + material.data.slug); })())
+                      : material.data.featuredImage}
+                    alt=""
+                    loading="lazy"
+                    decoding="async"
+                    width="96"
+                    height="72"
+                  />
+                )}
+                <span class="section-v2__article-copy">
+                  <strong>{material.data.title}</strong>
+                  <span>{material.data.summary}</span>
+                  {material.collection === 'research' && (
+                    <span class="section-v2__research-source">
+                      {material.data.journalOrOrganisation} · {material.data.publicationYear}
+                    </span>
+                  )}
+                </span>
+                <span class="section-v2__article-meta">
+                  <time datetime={material.data.updatedAt!.toISOString()}>
+                    {dateFormatter.format(material.data.updatedAt!)}
+                  </time>
+                  <span aria-hidden="true">→</span>
+                </span>
+              </a>
+            ))}
+          </div>
+        ) : (
+          <p class="research-topic-page__empty">{emptyMessage}</p>
+        )}
+        <a class="section-v2__back" href={localePath(locale, 'research')}>← {labels.back}</a>
+      </div>
+    </section>
+  </article>
+</BaseLayout>
