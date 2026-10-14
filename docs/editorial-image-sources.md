@@ -459,3 +459,9 @@ The research-card image-coverage validation enforces one mapped and locally avai
 | Local file | Author/source and date | Subject and provenance |
 | --- | --- | --- |
 | `professional-family-conflict-deescalation.svg` | Original AutismHub editorial hand-authored SVG, 2026-10-13 | Two calm dialogue cards, pause symbol and mutually agreed follow-up plan; geometric vector artwork without recognizable patients, conflict photography, medical records, third-party symbols or logos. Not an official NICE illustration or a verified clinical intervention. |
+
+## Professional assessment A01: early referral pathway editorial cover (2026-10-14)
+
+| File | Creator/date | Purpose and provenance |
+| --- | --- | --- |
+| `professional-assessment-early-pathway.svg` | Original AutismHub editorial SVG, 2026-10-14 | Original six-stage professional assessment and referral concept illustration. Local geometric vector drawings only; no real patient, proprietary screening form, licensed diagnostic figure or third-party institutional logo. The cover does not claim official clinical validation. |
