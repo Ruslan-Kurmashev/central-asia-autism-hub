@@ -4,6 +4,7 @@ import ArticleCard from '../../../../components/ArticleCard.astro';
 import AboutOverview from '../../../../components/AboutOverview.astro';
 import LearningCatalog from '../../../../components/LearningCatalog.astro';
 import ProfessionalDirectory from '../../../../components/ProfessionalDirectory.astro';
+import ResearchTopicDirectory from '../../../../components/ResearchTopicDirectory.astro';
 import { CONTENT_UI, DATE_LOCALES } from '../../../../i18n/content';
 import { UI } from '../../../../i18n/ui';
 import BaseLayout from '../../../../layouts/BaseLayout.astro';
@@ -378,7 +379,7 @@ function russianMaterialWord(count: number) {
           aria-labelledby={section === 'learning' ? 'learning-directory-title' : 'section-v2-collections-title'}
         >
           <div class="container">
-            {section !== 'learning' && (
+            {section !== 'learning' && section !== 'research' && (
               <div class="section-v2__intro">
                 <p class="section-v2__eyebrow">{sectionV2Text.navigation}</p>
                 <h2 id="section-v2-collections-title">
@@ -398,9 +399,13 @@ function russianMaterialWord(count: number) {
               <LearningCatalog locale={locale} entries={learningMaterials} />
             )}
 
+            {section === 'research' && (
+              <ResearchTopicDirectory locale={locale} materials={materials} />
+            )}
+
             
 
-            {(section === 'parents' || materials.length > 0) && (
+            {section !== 'research' && (section === 'parents' || materials.length > 0) && (
               <div class="section-v2__accordion">
                 {visibleGroups.map((group) => (
                   <details
@@ -596,7 +601,7 @@ function russianMaterialWord(count: number) {
               </div>
             )}
 
-            {section !== 'parents' && section !== 'learning' && (
+            {section !== 'parents' && section !== 'learning' && section !== 'research' && (
               <section
                 class:list={[
                   'section-v2__topic-map-section',
