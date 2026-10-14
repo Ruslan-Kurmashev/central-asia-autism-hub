@@ -503,3 +503,13 @@ The research-card image-coverage validation enforces one mapped and locally avai
 | File | Author and date | Subject and provenance |
 | --- | --- | --- |
 | `professional-assessment-cooccurring.svg` | AutismHub original self-hosted SVG, 14 October 2026 | Four abstract healthcare assessment domains around a central wellbeing indicator; original geometric vector artwork with no patient information, proprietary instruments, third-party image assets or institutional marks. It illustrates clinical questions and does not constitute a validated assessment tool. |
+
+## Professional assessment A07–A12 editorial covers (2026-10-14)
+
+| Local SVG file | Provenance | Subject and limitations |
+| --- | --- | --- |
+| `professional-assessment-observation.svg` | AutismHub original self-hosted geometric vector illustration, 14 October 2026 | Три нейтральные ситуации наблюдения и линия сопоставления; без изображений детей или воспроизведения защищённых диагностических протоколов. No third-party photographs, proprietary test content, identifiable patient data or institutional logos. |
+| `professional-assessment-differential.svg` | AutismHub original self-hosted geometric vector illustration, 14 October 2026 | Раздельные диагностические направления, соединяющиеся в обоснованное клиническое решение; не представляет официальную диагностическую схему. No third-party photographs, proprietary test content, identifiable patient data or institutional logos. |
+| `professional-assessment-clinical-integration.svg` | AutismHub original self-hosted geometric vector illustration, 14 October 2026 | Три самостоятельных источника клинических сведений, объединяемые в итоговое профессиональное заключение. No third-party photographs, proprietary test content, identifiable patient data or institutional logos. |
+| `professional-assessment-report.svg` | AutismHub original self-hosted geometric vector illustration, 14 October 2026 | Абстрактный итоговый профессиональный отчёт из шести тематических блоков и символа проверки; не является официальной клинической формой. No third-party photographs, proprietary test content, identifiable patient data or institutional logos. |
+| `professional-assessment-reassessment.svg` | AutismHub original self-hosted geometric vector illustration, 14 October 2026 | Возврат к оценке при диагностической неопределённости, символизированный круговой стрелкой и несколькими источниками данных. No third-party photographs, proprietary test content, identifiable patient data or institutional logos. |
