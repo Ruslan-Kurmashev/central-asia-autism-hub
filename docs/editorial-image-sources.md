@@ -467,3 +467,21 @@ The research-card image-coverage validation enforces one mapped and locally avai
 | File | Creator/date | Purpose and provenance |
 | --- | --- | --- |
 | `professional-assessment-early-pathway.svg` | Original AutismHub editorial SVG, 2026-10-14 | Original six-stage professional assessment and referral concept illustration. Local geometric vector drawings only; no real patient, proprietary screening form, licensed diagnostic figure or third-party institutional logo. The cover does not claim official clinical validation. |
+
+## Professional assessment A02 editorial cover (2026-10-14)
+
+| File | Author and date | Subject and provenance |
+| --- | --- | --- |
+| `professional-assessment-screening-decisions.svg` | AutismHub original hand-authored SVG, 14 October 2026 | Original authored vector diagram for screening outcomes and follow-up routes; abstract checklists, no test items, scores or patient records. |
+
+## Professional assessment A03 editorial cover (2026-10-14)
+
+| File | Author and date | Subject and provenance |
+| --- | --- | --- |
+| `professional-assessment-tool-selection.svg` | AutismHub original hand-authored SVG, 14 October 2026 | Original authored selection workflow with three distinct assessment modalities and an abstract validation icon; no third-party copyrighted charts. |
+
+## Professional assessment A04 editorial cover (2026-10-14)
+
+| File | Author and date | Subject and provenance |
+| --- | --- | --- |
+| `professional-assessment-mchat-workflow.svg` | AutismHub original hand-authored SVG, 14 October 2026 | Original two-step professional process diagram; no reproduction of M-CHAT-R/F items, keys, copyrighted forms or screenshots. |
