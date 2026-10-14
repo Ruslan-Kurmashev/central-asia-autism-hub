@@ -110,9 +110,7 @@ const homeV2Labels = locale === 'en'
       latestKicker: 'PLATFORM UPDATES',
       latestTitle: 'Latest on AutismHub',
       latestLead: 'Newly published articles across our main information sections.',
-      approach: 'Our approach',
       sourcesHeading: 'What our materials are based on',
-      sourceIntro: 'We use research, clinical guidance and official information to make complex topics understandable for families.',
       sourceCards: [
         { title: 'Scientific publications', description: 'Research studies, systematic reviews and evidence-based findings.' },
         { title: 'Clinical guidance', description: 'International guidelines, standards of care and professional approaches.' },
@@ -125,9 +123,7 @@ const homeV2Labels = locale === 'en'
         latestKicker: 'ПЛАТФОРМА ЖАҢАЛЫҚТАРЫ',
         latestTitle: 'AutismHub-тағы жаңалықтар',
         latestLead: 'Сайттың әртүрлі бөлімдерінде жақында жарияланған мақалалар мен материалдар.',
-        approach: 'Біздің ұстанымымыз',
         sourcesHeading: 'Материалдарымыз неге негізделеді',
-        sourceIntro: 'Ғылыми зерттеулерге, клиникалық ұсынымдарға және ресми құжаттарға сүйеніп, күрделі ақпаратты отбасыларға түсінікті етіп ұсынамыз.',
         sourceCards: [
           { title: 'Ғылыми жарияланымдар', description: 'Зерттеулер, жүйелі шолулар және дәлелді медицина деректері.' },
           { title: 'Клиникалық ұсынымдар', description: 'Халықаралық нұсқаулықтар, көмек көрсету стандарттары және кәсіби тәсілдер.' },
@@ -139,9 +135,7 @@ const homeV2Labels = locale === 'en'
         latestKicker: 'ОБНОВЛЕНИЯ ПЛАТФОРМЫ',
         latestTitle: 'Новое на AutismHub',
         latestLead: 'Недавно опубликованные статьи и материалы из разных разделов платформы.',
-        approach: 'Наш подход',
         sourcesHeading: 'На чём основаны наши материалы',
-        sourceIntro: 'Мы опираемся на научные исследования, клинические рекомендации и официальные документы, чтобы делать сложную информацию понятной для семей.',
         sourceCards: [
           { title: 'Научные публикации', description: 'Исследования, систематические обзоры и данные доказательной медицины.' },
           { title: 'Клинические рекомендации', description: 'Международные руководства, стандарты помощи и профессиональные подходы.' },
@@ -324,9 +318,7 @@ const dateFormatter = new Intl.DateTimeFormat(DATE_LOCALES[locale], {
 
           <section class="home-v2__sources" aria-labelledby="home-v2-sources-title">
             <div class="container">
-              <p class="home-v2__kicker">{homeV2Labels.approach}</p>
               <h2 id="home-v2-sources-title">{homeV2Labels.sourcesHeading}</h2>
-              <p class="home-v2__source-lead">{homeV2Labels.sourceIntro}</p>
               <ul class="home-v2__source-grid" aria-label={homeV2Labels.sourcesHeading}>
                 {homeV2Labels.sourceCards.map((card, index) => (
                   <li class="home-v2__source-card">
