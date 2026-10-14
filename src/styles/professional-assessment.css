@@ -108,3 +108,11 @@
 }
 @media(max-width:24rem){.assessment-flow__symbol{display:none}.assessment-flow__card{gap:.55rem}.assessment-flow__number{flex-basis:2.3rem}}
 @media(prefers-reduced-motion:reduce){.assessment-flow__card,.assessment-hub__library-cta,.assessment-flow__arrow,.assessment-hub__download-link{transition:none}.assessment-flow__card:hover,.assessment-hub__library-cta:hover{transform:none}}
+
+/* Publisher-hosted official tools are deliberately separate from original AutismHub downloads. */
+.assessment-hub__external-intro {color:var(--color-muted);font-size:var(--type-small);line-height:1.65;margin:.8rem 0 1rem;}
+.assessment-hub__external-list {display:grid;gap:.75rem;margin-top:.9rem;}
+.assessment-hub__external-item {padding:.95rem 1.1rem;border:1px solid var(--color-border);border-radius:.75rem;background:#fff;}
+.assessment-hub__external-item>a {font-size:var(--type-body);color:var(--color-primary-dark);font-weight:700;line-height:1.45;}
+.assessment-hub__external-item>p {margin:.35rem 0 0;color:var(--color-muted);font-size:var(--type-small);line-height:1.55;}
+.assessment-hub__external-item .assessment-hub__external-meta,.assessment-hub__external-item .assessment-hub__external-copyright {font-size:var(--type-meta);}
