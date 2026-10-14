@@ -15,6 +15,7 @@ const downloads=[
   'early-detection-pathway-ru.pdf',
   'diagnostic-instrument-comparison-ru.pdf',
   'diagnostic-instrument-comparison-ru.csv',
+  'diagnostic-instrument-comparison-ru.xlsx',
   'developmental-history-template-ru.docx',
   'developmental-history-template-ru.pdf',
 ];
@@ -47,6 +48,7 @@ for(const file of downloads){
   assert.ok(buf.length>1500,'Invalid small binary/CSV '+file);
   if(file.endsWith('.pdf'))assert.equal(buf.subarray(0,4).toString('ascii'),'%PDF','Invalid PDF '+file);
   if(file.endsWith('.docx'))assert.equal(buf.subarray(0,2).toString('ascii'),'PK','Invalid DOCX package '+file);
+  if(file.endsWith('.xlsx'))assert.equal(buf.subarray(0,2).toString('ascii'),'PK','Invalid XLSX package '+file);
   if(file.endsWith('.csv')) {
     const txt=buf.toString('utf8');
     assert.ok(txt.includes('M-CHAT-R/F')&&txt.includes('ADOS-2')&&txt.includes('ADI-R'),'CSV: professional instrument comparison incomplete');
@@ -56,6 +58,6 @@ const source=await readFile(path.resolve('src/data/professional-assessment.ts'),
 const hubComponent=await readFile(path.resolve('src/components/ProfessionalAssessmentHub.astro'),'utf8');
 assert.ok(hubComponent.includes('https://www.mchatscreen.com/mchat-rf/'), 'Do not reproduce copyrighted tests; link to M-CHAT official source');
 assert.ok(!source.includes('scoreItems') && !source.includes('testQuestions'),'Do not bundle copyrighted test questions/scoring');
-const generator=await readFile(path.resolve('scripts/generate-assessment-downloads.py'),'utf8');
-assert.ok(generator.includes('NICE CG128') && generator.includes('NOT a diagnostic questionnaire'), 'Source attribution or clinical limitations missing');
-console.log('Assessment toolkit PASS: 5 localized stage routes each, 12 planned articles, 10 catalogue items, 3 downloadable Russian sets, 5 verified files.');
+const generator=await readFile(path.resolve('scripts/build-professional-assessment-downloads.py'),'utf8');
+assert.ok(generator.includes('NICE CG128') && generator.includes('Не валидированная шкала'), 'Source attribution or clinical limitations missing');
+console.log('Assessment toolkit PASS: 5 localized stage routes each, 12 planned articles, 10 catalogue items, 3 downloadable Russian sets, 6 verified files.');
