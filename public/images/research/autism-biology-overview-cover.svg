@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" role="img" aria-labelledby="t d">
+<title id="t">Биология аутизма: научная иллюстрация нервной сети</title>
+<desc id="d">Оригинальная схематичная иллюстрация из нейроноподобных узлов и связей. Не отображает реальные результаты МРТ, клетки конкретного человека или биомаркер аутизма.</desc>
+<defs>
+ <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#eff7fc"/><stop offset="1" stop-color="#dcecf7"/></linearGradient>
+ <linearGradient id="node" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#5393c3"/><stop offset="1" stop-color="#1c4c79"/></linearGradient>
+ <pattern id="dots" width="34" height="34" patternUnits="userSpaceOnUse"><circle cx="3" cy="3" r="1.2" fill="#8fb3d2" opacity=".24"/></pattern>
+</defs>
+<rect width="1200" height="630" fill="url(#bg)"/><rect width="1200" height="630" fill="url(#dots)"/>
+<path d="M-20 500 Q260 335 500 510 T1250 295" fill="none" stroke="#ffffff" stroke-width="92" opacity=".35"/>
+<g stroke="#39749f" stroke-width="4" stroke-linecap="round" fill="none" opacity=".58">
+ <path d="M202 316 Q265 252 366 248 T585 196 T798 236 T1016 150"/>
+ <path d="M202 316 Q314 389 434 388 T664 390 T888 355 T1069 407"/>
+ <path d="M366 248 Q354 155 482 101"/><path d="M366 248 Q460 286 533 315"/>
+ <path d="M585 196 Q671 132 738 100"/><path d="M798 236 Q888 253 942 205"/>
+ <path d="M664 390 Q708 467 813 491"/><path d="M888 355 Q936 426 1069 407"/>
+ <path d="M434 388 Q346 475 278 517"/><path d="M533 315 Q601 290 664 390"/>
+ <path d="M585 196 Q538 247 533 315"/><path d="M798 236 Q739 317 664 390"/>
+</g>
+<g stroke="#4c8cb6" stroke-width="2" opacity=".5">
+ <path d="M202 316 l-80 -28 M202 316 l-63 53 M202 316 l-25 -86"/>
+ <path d="M366 248 l-41 -79 M366 248 l39 -91"/>
+ <path d="M533 315 l-35 83 M533 315 l38 65"/>
+ <path d="M664 390 l-55 99 M664 390 l19 -97"/>
+ <path d="M798 236 l23 -97 M798 236 l83 26"/>
+ <path d="M888 355 l80 -35 M888 355 l-28 87"/>
+ <path d="M1069 407 l75 -42 M1069 407 l55 80"/>
+</g>
+<g fill="url(#node)" stroke="#f7fbff" stroke-width="7">
+ <circle cx="202" cy="316" r="39"/><circle cx="366" cy="248" r="28"/><circle cx="585" cy="196" r="38"/>
+ <circle cx="798" cy="236" r="31"/><circle cx="1016" cy="150" r="25"/>
+ <circle cx="434" cy="388" r="23"/><circle cx="533" cy="315" r="32"/><circle cx="664" cy="390" r="37"/>
+ <circle cx="888" cy="355" r="28"/><circle cx="1069" cy="407" r="33"/>
+</g>
+<g fill="#bad9ef"><circle cx="202" cy="316" r="12"/><circle cx="585" cy="196" r="11"/><circle cx="533" cy="315" r="10"/><circle cx="664" cy="390" r="12"/><circle cx="1069" cy="407" r="10"/></g>
+<g fill="#73afcf" opacity=".75"><circle cx="482" cy="101" r="9"/><circle cx="738" cy="100" r="10"/><circle cx="813" cy="491" r="10"/><circle cx="278" cy="517" r="8"/><circle cx="942" cy="205" r="8"/></g>
+<rect x="50" y="45" width="402" height="77" rx="10" fill="#ffffff" opacity=".86"/>
+<text x="74" y="80" font-family="Arial,sans-serif" font-size="26" font-weight="700" fill="#113e68">Аутизм и развитие мозга</text>
+<text x="74" y="105" font-family="Arial,sans-serif" font-size="16" fill="#52738d">Схематичная научная иллюстрация</text>
+</svg>
