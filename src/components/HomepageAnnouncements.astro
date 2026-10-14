@@ -6,7 +6,7 @@ const { locale } = Astro.props as { locale: Locale };
 
 type Copy = {
   kicker: string; title: string; lead: string; noTitle: string; noText: string; suggest: string;
-  disclaimer: string; organiserLabel: string; audienceLabel: string; costLabel: string;
+  disclaimer: string; illustration: string; organiserLabel: string; audienceLabel: string; costLabel: string;
   formatLabel: string; source: string; filterLabel: string; noResults: string;
   filters: Record<'all' | AnnouncementKind, string>;
   kinds: Record<AnnouncementKind, string>;
@@ -22,6 +22,7 @@ const translations: Record<Locale, Copy> = {
     noText: 'Мы формируем афишу. Здесь появятся только события с проверенными датами, организатором и официальной ссылкой.',
     suggest: 'Предложить мероприятие',
     disclaimer: 'Сведения приводятся по информации организаторов. Размещение не означает, что AutismHub одобряет мероприятие или услуги организатора.',
+    illustration: 'Тематическое фото',
     organiserLabel: 'Организатор', audienceLabel: 'Для кого', costLabel: 'Участие',
     formatLabel: 'Формат', source: 'Страница организатора',
     filterLabel: 'Тип мероприятия', noResults: 'По этому фильтру пока нет актуальных объявлений.',
@@ -38,6 +39,7 @@ const translations: Record<Locale, Copy> = {
     noText: 'Афишаны дайындап жатырмыз. Күні, ұйымдастырушысы және ресми сілтемесі тексерілген іс-шаралар ғана жарияланады.',
     suggest: 'Іс-шара ұсыну',
     disclaimer: 'Ақпарат ұйымдастырушылардың деректеріне негізделеді. Жариялау AutismHub іс-шараны немесе ұйымдастырушы қызметтерін мақұлдайды дегенді білдірмейді.',
+    illustration: 'Тақырыптық фото',
     organiserLabel: 'Ұйымдастырушы', audienceLabel: 'Кімге арналған', costLabel: 'Қатысу',
     formatLabel: 'Формат', source: 'Ұйымдастырушы парақшасы',
     filterLabel: 'Іс-шара түрі', noResults: 'Бұл санатта әзірге өзекті хабарландыру жоқ.',
@@ -54,6 +56,7 @@ const translations: Record<Locale, Copy> = {
     noText: 'We are building the noticeboard. Only events with verified dates, organisers and official links will appear.',
     suggest: 'Suggest an event',
     disclaimer: 'Details are provided by event organisers. Listing does not imply AutismHub endorsement of an event or the organiser’s services.',
+    illustration: 'Illustrative photo',
     organiserLabel: 'Organiser', audienceLabel: 'Audience', costLabel: 'Cost',
     formatLabel: 'Format', source: 'Organiser website',
     filterLabel: 'Event category', noResults: 'No current announcements in this category.',
@@ -106,6 +109,17 @@ const filters: Array<'all' | AnnouncementKind> = ['all', 'webinar', 'event', 'co
           <div class="home-v2__event-date">
             <time datetime={event.beginsOn}>{dateFormat.format(new Date(event.beginsOn + 'T12:00:00Z'))}</time>
           </div>
+          <figure class:list={['home-v2__event-media', event.imageKind === 'official-brand' && 'home-v2__event-media--brand']}>
+            <img
+              src={event.imageSrc.startsWith('https://') ? event.imageSrc : import.meta.env.BASE_URL + event.imageSrc}
+              alt={event.imageAlt[locale]}
+              width="960"
+              height="600"
+              loading="lazy"
+              decoding="async"
+            />
+            {event.imageKind === 'editorial-illustration' && <figcaption>{t.illustration}</figcaption>}
+          </figure>
           <div class="home-v2__event-content">
             <p class="home-v2__event-kind">{t.kinds[event.kind]}</p>
             <h3><a href={event.sourceUrl} rel="external">{event.title[locale]}</a></h3>
