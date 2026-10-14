@@ -57,24 +57,28 @@ for (const locale of ['ru', 'kk', 'en']) {
       } else {
         coverByTranslationKey.set(key, image);
       }
-      // This explicitly approved early-referral article uses a licensed
-      // consultation photograph instead of the normal professional SVG.
-      // Do not generalize this exception to other medical documents.
-      const approvedPhoto = key === 'professionals-a01' &&
-        image === '/central-asia-autism-hub/images/editorial/photos/professional-early-referral-family-consultation.jpg';
+      // Only two explicitly approved professional publications use photos
+      // instead of original SVG covers; do not generalize to test procedures.
+      const approvedPhotos = {
+        'professionals-a01': 'professional-early-referral-family-consultation.jpg',
+        'professionals-a05': 'professional-ados-adi-cars-clinical-observation.jpg',
+      };
+      const approvedPhotoFilename = approvedPhotos[key];
+      const approvedPhoto = Boolean(approvedPhotoFilename) &&
+        image === '/central-asia-autism-hub/images/editorial/photos/' + approvedPhotoFilename;
       const match = image.match(/^\/central-asia-autism-hub\/images\/editorial\/([a-z0-9-]+\.svg)$/);
       if (approvedPhoto) {
-        const jpgPath = path.resolve('public/images/editorial/photos', 'professional-early-referral-family-consultation.jpg');
+        const jpgPath = path.resolve('public/images/editorial/photos', approvedPhotoFilename);
         try {
           const bytes = await readFile(jpgPath);
           if (bytes.length < 15000 || bytes[0] !== 0xff || bytes[1] !== 0xd8 ||
               bytes[bytes.length - 2] !== 0xff || bytes[bytes.length - 1] !== 0xd9) {
-            errors.push(id + ': approved referral consultation cover is not a valid local JPEG');
+            errors.push(id + ': approved professional consultation cover is not a valid local JPEG');
           } else {
             photoCoversChecked++;
           }
         } catch {
-          errors.push(id + ': approved referral consultation cover missing from build assets');
+          errors.push(id + ': approved professional consultation cover missing from build assets');
         }
       } else if (!match) {
         errors.push(id + ': professional cover must be a locally hosted editorial SVG: ' + image);

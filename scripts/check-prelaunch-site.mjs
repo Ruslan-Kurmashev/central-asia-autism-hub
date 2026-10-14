@@ -122,6 +122,15 @@ for (const lang of locales) {
   check(cards.filter(card => card.includes(base + lang + '/professionals/')).length <= 1,
     id + ': professional documents should not dominate the homepage');
   if (lang === 'ru') {
+    const toolComparisonCard = cards.find(card => card.includes('/ados-2-adi-r-cars-2-vozmozhnosti-ogranicheniya/'));
+    if (toolComparisonCard) check(toolComparisonCard.includes('professional-ados-adi-cars-clinical-observation.jpg'),
+      id + ': ADOS-2/ADI-R/CARS-2 latest card must display its consultation photo');
+    const toolComparisonPage = await readFile(
+      path.join(dist, 'kz', lang, 'professionals', 'ados-2-adi-r-cars-2-vozmozhnosti-ogranicheniya', 'index.html'), 'utf8');
+    check(toolComparisonPage.includes('professional-ados-adi-cars-clinical-observation.jpg'),
+      id + ': ADOS-2/ADI-R/CARS-2 article hero must display its consultation photo');
+  }
+  if (lang === 'ru') {
     const referralCard = cards.find(card => card.includes('rannee-vyyavlenie-autizma-marshrut-specialista'));
     if (referralCard) check(referralCard.includes('professional-early-referral-family-consultation.jpg'),
       id + ': early referral article needs its consultation photograph, not the diagram cover');

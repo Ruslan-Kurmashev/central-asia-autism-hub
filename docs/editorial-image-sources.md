@@ -514,3 +514,9 @@ The research-card image-coverage validation enforces one mapped and locally avai
 | `professional-assessment-clinical-integration.svg` | AutismHub original self-hosted geometric vector illustration, 14 October 2026 | Три самостоятельных источника клинических сведений, объединяемые в итоговое профессиональное заключение. No third-party photographs, proprietary test content, identifiable patient data or institutional logos. |
 | `professional-assessment-report.svg` | AutismHub original self-hosted geometric vector illustration, 14 October 2026 | Абстрактный итоговый профессиональный отчёт из шести тематических блоков и символа проверки; не является официальной клинической формой. No third-party photographs, proprietary test content, identifiable patient data or institutional logos. |
 | `professional-assessment-reassessment.svg` | AutismHub original self-hosted geometric vector illustration, 14 October 2026 | Возврат к оценке при диагностической неопределённости, символизированный круговой стрелкой и несколькими источниками данных. No third-party photographs, proprietary test content, identifiable patient data or institutional logos. |
+
+## Professional assessment article photo (14 October 2026)
+
+| Local file | Photographer | Licensed source | Editorial limitation |
+| --- | --- | --- | --- |
+| `photos/professional-ados-adi-cars-clinical-observation.jpg` | Mikhail Nilov | https://www.pexels.com/photo/therapist-helping-boy-with-a-document-8653951/ | Professional and child examine a document. Not a validated administration of ADOS-2, ADI-R or CARS-2; the child must not be described as having autism. |

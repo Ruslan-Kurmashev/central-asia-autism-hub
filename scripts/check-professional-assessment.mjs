@@ -56,7 +56,7 @@ const publishedGuides=[
   {key:'a02', group:'early-identification', slug:'skrining-autizma-vybor-rezultat-deystviya', cover:'professional-assessment-screening-decisions.svg', heading:'Девять шагов организации качественного скрининга'},
   {key:'a03', group:'instruments', slug:'vybor-instrumenta-ocenki-autizma-vozrast-yazyk-validnost', cover:'professional-assessment-tool-selection.svg', heading:'Матрица восьми критериев выбора'},
   {key:'a04', group:'instruments', slug:'m-chat-r-f-primenenie-follow-up-ogranicheniya', cover:'professional-assessment-mchat-workflow.svg', heading:'Второй этап Follow-Up'},
-  {key:'a05', group:'instruments', slug:'ados-2-adi-r-cars-2-vozmozhnosti-ogranicheniya', cover:'professional-assessment-ados-adi-cars.svg', heading:'Матрица пригодности метода'},
+  {key:'a05', group:'instruments', slug:'ados-2-adi-r-cars-2-vozmozhnosti-ogranicheniya', cover:'professional-ados-adi-cars-clinical-observation.jpg', heading:'Матрица пригодности метода'},
   {key:'a06', group:'comprehensive-assessment', slug:'sbor-anamneza-razvitiya-intervyu-s-semjej', cover:'professional-assessment-developmental-history.svg', heading:'Алгоритм интервью из одиннадцати шагов'},
   {key:'a07', group:'comprehensive-assessment', slug:'strukturirovannoe-nablyudenie-autizm-raznye-situacii', cover:'professional-assessment-observation.svg', heading:'Шесть этапов наблюдения'},
   {key:'a08', group:'comprehensive-assessment', slug:'kompleksnaya-klinicheskaya-ocenka-autizma-etapy', cover:'professional-assessment-clinical-integration.svg', heading:'Семь основных компонентов'},
