@@ -2,8 +2,8 @@
 title: "ADOS-2, ADI-R и CARS-2: что измеряют инструменты и как интерпретировать результаты"
 summary: "Практическое сравнение стандартизированного наблюдения, интервью о развитии и рейтинговой оценки при аутизме: возраст, модули, обучение, языковые ограничения, клиническая интеграция и требования правообладателей."
 description: "Профессиональный разбор ADOS-2, ADI-R и CARS-2 без воспроизведения защищённых тестовых заданий: критерии применимости, клинические примеры и рабочие чек-листы."
-featuredImage: "/central-asia-autism-hub/images/editorial/photos/professional-ados-adi-cars-clinical-observation.jpg"
-featuredImageAlt: "Стоковая фотография: специалист беседует с ребёнком, рассматривая документ во время консультации. Это не изображение реального применения ADOS-2, ADI-R или CARS-2."
+featuredImage: "/central-asia-autism-hub/images/editorial/photos/professional-ados-adi-cars-central-asia.webp"
+featuredImageAlt: "Иллюстративное изображение, созданное ИИ: ребёнок выполняет задание с картинками рядом со специалистом, который делает записи. Это не изображение реального применения ADOS-2, ADI-R или CARS-2."
 country: kz
 language: ru
 section: professionals
