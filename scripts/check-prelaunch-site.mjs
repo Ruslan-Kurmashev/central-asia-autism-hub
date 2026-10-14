@@ -29,8 +29,8 @@ function checkLocalizedHeader(html, lang, id) {
     check(navigation.includes(label), id + ': main navigation translation missing: ' + label);
   }
   for (const target of locales) {
-    check(languages.includes('href="' + base + target + '/"'),
-      id + ': language switcher missing ' + target);
+    check(new RegExp('href="' + base + target + '/[^"]*"').test(languages),
+      id + ': language switcher missing locale-specific destination for ' + target);
   }
   check(new RegExp('<a[^>]*lang="' + lang + '"[^>]*aria-current="page"').test(languages),
     id + ': language switcher does not mark the active locale');
