@@ -37,7 +37,7 @@ const { entry, alternatePaths } = Astro.props;
 const { Content } = await render(entry);
 ---
 <BaseLayout
-  title={entry.data.title + ' | Обучение | ' + SITE.name}
+  title={entry.data.title + ' | ' + ({ ru: 'Обучение', kk: 'Оқу', en: 'Learning' }[entry.data.language]) + ' | ' + SITE.name}
   description={entry.data.summary}
   locale={entry.data.language}
   currentSection="learning"
