@@ -125,6 +125,11 @@ const availableTopics = [...new Set(items.map((entry) => entry.data.topicArea).f
             >
               <div class="course-catalogue__body">
                 <div class="course-catalogue__tags">
+                  {entry.data.languages.map((courseLanguage) => (
+                    <span class="course-catalogue__language-pill" data-course-language-pill={courseLanguage}>
+                      {t.language}: {languages[locale][courseLanguage]}
+                    </span>
+                  ))}
                   <span>{t.types[entry.data.learningKind ?? 'course']}</span>
                   {entry.data.audience.map((audience) => <span>{audience === 'parents' ? t.parents : t.professionals}</span>)}
                 </div>
@@ -132,7 +137,6 @@ const availableTopics = [...new Set(items.map((entry) => entry.data.topicArea).f
                 <p class="course-catalogue__summary">{entry.data.summary}</p>
                 <div class="course-catalogue__meta">
                   {entry.data.durationLabel && <span><strong>{t.duration}:</strong> {entry.data.durationLabel}</span>}
-                  <span><strong>{t.language}:</strong> {entry.data.languages.map((l) => languages[locale][l]).join(', ')}</span>
                   <span><strong>{t.provider}:</strong> {entry.data.provider}</span>
                   <span><strong>{t.price}:</strong> {entry.data.costLabel}</span>
                 </div>
@@ -254,6 +258,7 @@ const availableTopics = [...new Set(items.map((entry) => entry.data.topicArea).f
 .course-catalogue__item[hidden],.course-catalogue__no-results[hidden]{display:none!important}
 .course-catalogue__tags{display:flex;flex-wrap:wrap;gap:.35rem;margin-bottom:.8rem}
 .course-catalogue__tags span{border-radius:1rem;padding:.25rem .65rem;background:#eef4f8;color:#315d7b;font-size:var(--type-small);line-height:1.3;font-weight:600}
+.course-catalogue__tags .course-catalogue__language-pill{background:#e2f0fa;color:#164a70;border:1px solid #b9d2e4;font-weight:750}
 
 .course-catalogue__body{min-width:0}
 .course-catalogue__body h3{font-family:var(--font-editorial);font-size:var(--type-card);font-weight:600;line-height:1.35;text-wrap:pretty;overflow-wrap:anywhere;color:#12395e;margin:0 0 .65rem}
