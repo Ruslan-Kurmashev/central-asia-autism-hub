@@ -21,6 +21,8 @@ for (const lang of locales) {
   check(html.includes('<html lang="' + lang + '"'), id + ': HTML document language incorrect');
   check(html.includes('home-v2__hero') && html.includes('home-v2__masonry'),
     id + ': homepage hero or featured grid missing');
+  check(!html.includes('home-v2__topicbar'), id + ': duplicate homepage navigation must not be rendered');
+  check(html.includes('class="primary-nav"'), id + ': primary header navigation must remain');
   const heroHeading = html.match(/<h1 id="home-v2-title">([\s\S]*?)<\/h1>/)?.[1] ?? '';
   const actualHeadlineLines = [...heroHeading.matchAll(/<span class="home-v2__hero-title-line(?: home-v2__hero-title-line--supporting)?">([^<]*)<\/span>/g)]
     .map((match) => match[1]);
