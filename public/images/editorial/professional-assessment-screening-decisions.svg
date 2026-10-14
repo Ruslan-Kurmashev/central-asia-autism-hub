@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 680" role="img" aria-labelledby="t d">
+<title id="t">Скрининг: результат и дальнейшие действия</title><desc id="d">Оригинальная профессиональная векторная иллюстрация с контрольным списком и тремя альтернативными маршрутами после скрининга. Отсутствуют диагностические вопросы и данные пациентов.</desc>
+<rect width="1200" height="680" fill="#f0f6fc"/><circle cx="1120" cy="88" r="180" fill="#e0edf8"/><circle cx="68" cy="608" r="158" fill="#deebf7"/>
+<rect x="161" y="81" width="490" height="517" rx="26" fill="#bbd2e5" opacity=".5"/><rect x="144" y="65" width="490" height="517" rx="26" fill="#fff" stroke="#9dbbd5" stroke-width="6"/>
+<rect x="255" y="40" width="266" height="60" rx="19" fill="#265c8e"/><rect x="287" y="55" width="199" height="11" rx="5" fill="#d9eafa"/><rect x="320" y="77" width="133" height="7" rx="4" fill="#b2d5f2"/>
+<path d="M224 179h331M224 239h331M224 299h331M224 359h331" stroke="#d7e6f3" stroke-width="15" stroke-linecap="round"/>
+<g fill="none" stroke="#287f86" stroke-width="11" stroke-linecap="round" stroke-linejoin="round">
+<path d="m209 168 16 18 34-40"/><path d="m209 228 16 18 34-40"/><path d="m209 288 16 18 34-40"/><path d="m209 348 16 18 34-40"/></g>
+<rect x="197" y="423" width="386" height="102" rx="18" fill="#e8f2fa"/><path d="M238 458h280M238 491h207" stroke="#98bad7" stroke-width="15" stroke-linecap="round"/>
+<path d="M677 321h84M761 321v-170M761 321v172M761 151h70M761 321h70M761 493h70" fill="none" stroke="#46749d" stroke-width="9" stroke-linecap="round"/>
+<g stroke="#46749d" stroke-width="6"><rect x="828" y="103" width="301" height="100" rx="20" fill="#e8f5ef"/><rect x="828" y="272" width="301" height="100" rx="20" fill="#eaf2ff"/><rect x="828" y="441" width="301" height="100" rx="20" fill="#fff2df"/></g>
+<g fill="none" stroke="#2a648d" stroke-width="10" stroke-linecap="round"><path d="m872 153 17 20 33-45"/><path d="M867 319h41M887 299v42"/><circle cx="890" cy="491" r="22"/><path d="m905 507 22 21"/></g>
+<g stroke="#afc9da" stroke-width="12" stroke-linecap="round"><path d="M947 139h140M947 168h106M947 307h142M947 336h99M947 477h141M947 505h96"/></g>
+</svg>
