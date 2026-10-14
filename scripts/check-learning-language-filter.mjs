@@ -43,10 +43,10 @@ for (const [lang, languageLabel] of Object.entries(labels)) {
     // This is a text-first catalogue: never imply endorsement with copied
     // provider logos or unrelated photos. Course language must be visible
     // before the title, not buried in a long course description.
-    assert.ok(!/<(?:img|svg)\\b/i.test(card), `Unverified logo or thumbnail in a course card on ${lang}`);
-    const itemTag = card.match(/^<article\\b[^>]*>/)?.[0] ?? '';
-    const expectedLanguages = itemTag.match(/\\bdata-language="([^"]+)"/)?.[1]?.split(' ') ?? [];
-    const pills = [...card.matchAll(/<span\\bclass="course-catalogue__language-pill"\\s+data-course-language-pill="([^"]+)"[^>]*>([\\s\\S]*?)<\\/span>/g)];
+    assert.ok(!/<(?:img|svg)\b/i.test(card), `Unverified logo or thumbnail in a course card on ${lang}`);
+    const itemTag = card.match(/^<article\b[^>]*>/)?.[0] ?? '';
+    const expectedLanguages = itemTag.match(/\bdata-language="([^"]+)"/)?.[1]?.split(' ') ?? [];
+    const pills = [...card.matchAll(/<span\bclass="course-catalogue__language-pill"\s+data-course-language-pill="([^"]+)"[^>]*>([\s\S]*?)<\/span>/g)];
     assert.equal(pills.length, expectedLanguages.length, `Visible teaching-language badges missing on ${lang}`);
     const labels = {
       ru: { ru: 'Русский', kk: 'Казахский', en: 'Английский' },
