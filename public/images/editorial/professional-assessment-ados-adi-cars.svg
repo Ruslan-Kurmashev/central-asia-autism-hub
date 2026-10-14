@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 680" role="img" aria-labelledby="t d">
+<title id="t">Сопоставление трёх типов диагностической информации</title>
+<desc id="d">Оригинальные три карточки наблюдения, интервью и рейтинговой оценки, сходящиеся в клинический документ; без изображений официальных диагностических материалов и детей.</desc>
+<rect width="1200" height="680" fill="#eff6fc"/><circle cx="1066" cy="80" r="167" fill="#e0eef9"/><circle cx="130" cy="592" r="158" fill="#dfeef8"/>
+<g fill="#fff" stroke="#99bad8" stroke-width="6">
+<rect x="93" y="111" width="286" height="299" rx="23"/><rect x="451" y="111" width="286" height="299" rx="23"/><rect x="810" y="111" width="286" height="299" rx="23"/></g>
+<g fill="#e7f2fb"><rect x="120" y="141" width="232" height="77" rx="15"/><rect x="478" y="141" width="232" height="77" rx="15"/><rect x="837" y="141" width="232" height="77" rx="15"/></g>
+<circle cx="237" cy="181" r="27" fill="none" stroke="#2d6f9e" stroke-width="8"/><path d="m256 201 30 30" stroke="#2d6f9e" stroke-width="10" stroke-linecap="round"/>
+<path d="M521 161h145M521 185h120" stroke="#2d6f9e" stroke-width="12" stroke-linecap="round"/><path d="m522 212 13 15 22-25" stroke="#267d87" stroke-width="7" fill="none"/>
+<rect x="894" y="155" width="119" height="50" rx="13" fill="#fff" stroke="#2d6f9e" stroke-width="7"/><path d="M916 181h75" stroke="#2d6f9e" stroke-width="12" stroke-linecap="round"/>
+<g stroke="#b8cedf" stroke-width="14" stroke-linecap="round">
+<path d="M132 274h206M132 311h175M132 347h191M490 274h206M490 311h176M490 347h191M849 274h206M849 311h177M849 347h194"/></g>
+<path d="M238 417v61h358M594 417v61M950 417v61H592M594 478v46" stroke="#427ba9" stroke-width="8" fill="none" stroke-linecap="round"/>
+<rect x="418" y="531" width="355" height="112" rx="22" fill="#e5f4ef" stroke="#358e90" stroke-width="7"/>
+<path d="m463 579 22 21 37-48" stroke="#2e8182" stroke-width="11" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M548 572h168M548 601h135" stroke="#8dbac0" stroke-width="12" stroke-linecap="round"/>
+</svg>
