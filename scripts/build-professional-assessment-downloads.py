@@ -168,6 +168,85 @@ def history():
     story.append(paragraph("Источники: NICE CG128; CPS Standards of diagnostic assessment; Кодекс РК № 360-VI.",7))
     printable.build(story)
 
+
+def preassessment():
+    """Independent planning checklist. No actual patient records or protected test items."""
+    items=[
+      ("Подготовка обращения", [
+        "Клинический вопрос и запрос семьи записаны конкретными словами.",
+        "Уточнены актуальные наблюдения и история развития.",
+        "Получены существующие заключения только в необходимом объёме.",
+        "Проверены полномочия специалистов и способ консультации."]),
+      ("Язык и доступность",[
+        "Уточнён удобный язык семьи и языки ребёнка.",
+        "Проверена потребность в переводчике и допустимые способы коммуникации.",
+        "Учтены сенсорные предпочтения и возможность перерыва.",
+        "Определён доступный формат итоговой информации."]),
+      ("Клинический контекст",[
+        "Уточнены возможные изменения или потеря ранее приобретённых навыков.",
+        "Рассмотрены медицинские вопросы, требующие оценки врача.",
+        "Определены сведения о слухе, зрении, сне и других факторах по показаниям.",
+        "Известно, откуда получены сведения о разных условиях жизни ребёнка."]),
+      ("Инструменты и условия",[
+        "Цель каждого инструмента отделена от цели медицинской диагностики.",
+        "Проверены возраст, язык, нормативная выборка и актуальная инструкция.",
+        "Проверены компетенции исполнителя и необходимые лицензии.",
+        "В отчёте предусмотрено описание ограничений методики."]),
+      ("Согласие и данные",[
+        "Проверены законный представитель и применимый порядок согласия.",
+        "Указаны разрешённый канал хранения и доступа к данным.",
+        "Отдельно проверяются правовые основания передачи сведений третьим лицам.",
+        "Планирован короткий и понятный письменный итог."]),
+      ("После консультации",[
+        "Назначен ответственный за объединение результатов.",
+        "Определены вопросы для дополнительной оценки и профильных специалистов.",
+        "Согласовано доступное действие по актуальным потребностям ребёнка.",
+        "Указан проверенный контакт и способ последующей связи."]),
+    ]
+    notice="Редакционный чек-лист AutismHub v1.0, 14.10.2026. Не диагностическая шкала и не официальный обязательный бланк Республики Казахстан. Не вводите персональные данные детей в публичные системы."
+    d=Document()
+    section=d.sections[0]
+    section.top_margin=Cm(1.7);section.bottom_margin=Cm(1.7)
+    section.left_margin=Cm(2);section.right_margin=Cm(2)
+    style=d.styles["Normal"];style.font.name="DejaVu Sans";style.font.size=Pt(9)
+    style.font.color.rgb=RGBColor(37,55,77)
+    for kind,sz in [("Title",16),("Heading 1",11)]:
+        z=d.styles[kind];z.font.name="DejaVu Sans";z.font.size=Pt(sz)
+        z.font.bold=True;z.font.color.rgb=RGBColor(25,80,125)
+    d.sections[0].header.paragraphs[0].text="AUTISMHUB / ПРАКТИЧЕСКАЯ ОЦЕНКА"
+    d.sections[0].footer.paragraphs[0].text="Редакционная версия 1.0 · 14.10.2026 | Для профессионального применения"
+    d.add_heading("Подготовка к оценке развития ребёнка",0)
+    d.add_paragraph(notice)
+    for heading,rows in items:
+        d.add_heading(heading,1)
+        for line in rows:
+            p=d.add_paragraph("□  "+line)
+            p.paragraph_format.space_after=Pt(4)
+    d.add_heading("Следующий шаг",1)
+    d.add_paragraph("Ответственный специалист / служба: _______________________________________________")
+    d.add_paragraph("Что уточнить до следующей консультации: __________________________________________")
+    d.add_paragraph("Допустимый способ обратной связи: _______________________________________________")
+    d.add_heading("Источники и ограничения",1)
+    d.add_paragraph("NICE CG128: https://www.nice.org.uk/guidance/cg128/chapter/Recommendations")
+    d.add_paragraph("CPS: https://cps.ca/en/documents/position/asd-diagnostic-assessment")
+    d.add_paragraph("Кодекс РК: https://adilet.zan.kz/rus/docs/K2000000360")
+    d.save(OUT/"preassessment-checklist-ru.docx")
+
+    pdf=SimpleDocTemplate(str(OUT/"preassessment-checklist-ru.pdf"),pagesize=A4,
+      leftMargin=17*mm,rightMargin=17*mm,topMargin=17*mm,bottomMargin=17*mm)
+    story=[paragraph("AUTISMHUB / ЧЕК-ЛИСТ СПЕЦИАЛИСТА",8,True,NAVY),
+      paragraph("Подготовка к оценке развития ребёнка",14,True,NAVY),
+      paragraph(notice,7)]
+    for heading,rows in items:
+        story.append(Spacer(1,7))
+        story.append(paragraph(heading,10,True,NAVY))
+        for line in rows:
+            story.append(paragraph("□  "+line,8))
+    story += [Spacer(1,10),paragraph("Следующий шаг: ответственный, недостающие данные, допустимый способ связи.",8,True),
+      paragraph("Источники: NICE CG128; CPS Standards of Diagnostic Assessment; Кодекс РК № 360-VI.",7)]
+    pdf.build(story)
+
+
 def spreadsheet():
     # XLSX via the ISO OpenXML Spreadsheet package. No macro, code or external links.
     cols="ABCDEFG"
@@ -189,7 +268,7 @@ def spreadsheet():
         z.writestr(name,contents.encode())
 
 if __name__=="__main__":
-    pathway();comparisons();history();spreadsheet()
+    pathway();comparisons();history();preassessment();spreadsheet()
     for file in sorted(OUT.iterdir()):
         if file.is_file():
             assert file.stat().st_size>1000
