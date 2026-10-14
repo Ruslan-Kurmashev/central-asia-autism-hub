@@ -1,0 +1,80 @@
+---
+import type { CollectionEntry } from 'astro:content';
+import type { Locale } from '../site.config';
+import { articlePath, localePath } from '../lib/urls';
+import { assessmentArticles, assessmentDownloads, assessmentGroups, type AssessmentGroupId } from '../data/professional-assessment';
+import { assessmentUI } from '../data/professional-assessment-ui';
+import ProfessionalAssessmentShell from './ProfessionalAssessmentShell.astro';
+
+interface Props {locale: Locale; materials: CollectionEntry<'pages'>[]; groupId: AssessmentGroupId;}
+const { locale, materials, groupId } = Astro.props;
+const groupIndex = assessmentGroups.findIndex(g => g.id === groupId);
+if (groupIndex<0) throw new Error('Invalid assessment group: '+groupId);
+const group = assessmentGroups[groupIndex];
+const t = assessmentUI[locale];
+const articleList = assessmentArticles.filter(a => a.group === groupId);
+const readyFiles = assessmentDownloads.filter(d => d.group === groupId && (d.files[locale]?.length ?? 0)>0);
+const next = assessmentGroups[groupIndex+1];
+const previous = assessmentGroups[groupIndex-1];
+const publishedArticle = (key: string) => materials.find(m => m.data.translationKey === key && m.data.topic === 'assessment-context');
+---
+<ProfessionalAssessmentShell locale={locale} current={group.title[locale]}>
+  <a class="assessment-hub__back" href={localePath(locale,'professionals/assessment')}>← {t.back}</a>
+  <header class="assessment-hub__stage-heading">
+    <p class="assessment-hub__stage-index">{String(groupIndex+1).padStart(2,'0')} / 05</p>
+    <h1>{group.title[locale]}</h1>
+    <p>{group.description[locale]}</p>
+  </header>
+
+  <section class="assessment-hub__stage-section" aria-labelledby="assessment-stage-articles">
+    <h2 id="assessment-stage-articles">{t.articles}</h2>
+    <div class="assessment-hub__stage-articles">
+      {articleList.map((article,i) => {
+        const published=publishedArticle(article.translationKey);
+        return (
+          <article class="assessment-hub__stage-article">
+            <span class="assessment-hub__stage-article-index" aria-hidden="true">{String(i+1).padStart(2,'0')}</span>
+            <div class="assessment-hub__stage-article-copy">
+              <h3>{published
+                  ? <a href={articlePath(locale,'professionals',published.data.slug)}>{published.data.title}</a>
+                  : article.title[locale]}</h3>
+              {article.description[locale] && <p>{article.description[locale]}</p>}
+              <span class:list={['assessment-hub__stage-status',{'assessment-hub__stage-status--ready':published}]}>{published?t.available:t.upcoming}</span>
+            </div>
+            {published && <a class="assessment-hub__article-link" href={articlePath(locale,'professionals',published.data.slug)}>{t.read} <span aria-hidden="true">→</span></a>}
+          </article>
+        );
+      })}
+    </div>
+  </section>
+
+  <section class="assessment-hub__stage-section" aria-labelledby="assessment-stage-files">
+    <div class="assessment-hub__section-heading">
+      <h2 id="assessment-stage-files">{t.resources}</h2>
+      <a class="assessment-hub__text-link" href={localePath(locale,'professionals/assessment/tools')}>{t.library} <span aria-hidden="true">→</span></a>
+    </div>
+    {readyFiles.length>0
+      ? <div class="assessment-hub__stage-files">
+          {readyFiles.map(d => <article class="assessment-hub__stage-file">
+            <span class="assessment-hub__mini-file" aria-hidden="true">↓</span>
+            <div class="assessment-hub__stage-file-body">
+              <h3>{d.title[locale]}</h3>
+              {locale==='ru' && <p>{d.description.ru}</p>}
+              <div class="assessment-hub__file-actions">
+                {(d.files[locale]??[]).map(f=><a class="assessment-hub__download-link" href={f.href} download>{t.downloads} {f.format}</a>)}
+              </div>
+            </div>
+          </article>)}
+        </div>
+      : <p class="assessment-hub__stage-empty">{t.stageToolsPending}</p>}
+  </section>
+
+  <nav class="assessment-hub__step-nav" aria-label={locale==='ru'?'Навигация между этапами':locale==='kk'?'Кезеңдер бойынша навигация':'Assessment stage navigation'}>
+    {previous
+      ? <a href={localePath(locale,'professionals/assessment/'+previous.id)}><span>← {t.previous}</span><strong>{previous.title[locale]}</strong></a>
+      : <span aria-hidden="true"/>}
+    {next
+      ? <a href={localePath(locale,'professionals/assessment/'+next.id)}><span>{t.next} →</span><strong>{next.title[locale]}</strong></a>
+      : <a href={localePath(locale,'professionals/assessment/tools')}><span>{t.library} →</span><strong>{t.libraryLead}</strong></a>}
+  </nav>
+</ProfessionalAssessmentShell>
