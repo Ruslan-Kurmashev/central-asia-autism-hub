@@ -1,0 +1,16 @@
+---
+import ProfessionalAssessmentTools from '../../../../../../components/ProfessionalAssessmentTools.astro';
+import BaseLayout from '../../../../../../layouts/BaseLayout.astro';
+import { assessmentUI } from '../../../../../../data/professional-assessment-ui';
+import { SITE, SUPPORTED_LOCALES, type Locale } from '../../../../../../site.config';
+
+export function getStaticPaths() {
+  return SUPPORTED_LOCALES.map(locale => ({params:{lang:locale},props:{locale}}));
+}
+interface Props {locale: Locale;}
+const {locale} = Astro.props;
+const t=assessmentUI[locale];
+---
+<BaseLayout title={t.library+' - '+SITE.name} description={t.toolsLead} locale={locale} currentSection="professionals" alternatePath="professionals/assessment/tools" bodyClass="professional-library-body">
+  <ProfessionalAssessmentTools locale={locale}/>
+</BaseLayout>
