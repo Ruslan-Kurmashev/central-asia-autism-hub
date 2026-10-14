@@ -1,0 +1,107 @@
+---
+import type { Locale } from '../site.config';
+import { localePath } from '../lib/urls';
+import { assessmentDownloads, assessmentGroups } from '../data/professional-assessment';
+import { assessmentUI } from '../data/professional-assessment-ui';
+import ProfessionalAssessmentShell from './ProfessionalAssessmentShell.astro';
+
+interface Props { locale: Locale; }
+const { locale } = Astro.props;
+const t = assessmentUI[locale];
+const ready = assessmentDownloads.filter(d => (d.files[locale]?.length ?? 0)>0);
+const unreleased = assessmentDownloads.filter(d => !d.files[locale]?.length);
+---
+<ProfessionalAssessmentShell locale={locale} current={t.library}>
+  <a class="assessment-hub__back" href={localePath(locale,'professionals/assessment')}>← {t.back}</a>
+  <header class="assessment-hub__tools-heading">
+    <h1>{t.library}</h1>
+    <p>{t.toolsLead}</p>
+  </header>
+  <div class="assessment-hub__tools-status">{t.onlyPublished}</div>
+
+  {ready.length>0
+    ? <section class="assessment-hub__tools-section" aria-label={t.library} data-assessment-tools>
+        <div class="assessment-hub__filters">
+          <div>
+            <label for="assessment-tool-category">{t.toolGroup}</label>
+            <select id="assessment-tool-category" data-assessment-category>
+              <option value="all">{t.allGroups}</option>
+              {assessmentGroups.map(g=><option value={g.id}>{g.title[locale]}</option>)}
+            </select>
+          </div>
+          <div>
+            <label for="assessment-tool-search">{t.searchLabel}</label>
+            <input id="assessment-tool-search" data-assessment-search type="search" autocomplete="off" placeholder={t.searchPlaceholder}/>
+          </div>
+        </div>
+        <div class="assessment-hub__tools-list">
+          {ready.map(item => (
+            <article class="assessment-hub__tool" data-assessment-item data-group={item.group} data-terms={(item.title[locale]+' '+item.description[locale]+' '+item.files[locale]?.map(x=>x.format).join(' ')).toLocaleLowerCase()}>
+              <span class="assessment-hub__mini-file" aria-hidden="true">↓</span>
+              <div class="assessment-hub__tool-content">
+                <h2>{item.title[locale]}</h2>
+                {locale==='ru' && <p>{item.description.ru}</p>}
+                <p class="assessment-hub__tool-category">{assessmentGroups.find(g=>g.id===item.group)?.title[locale]}</p>
+                <div class="assessment-hub__file-actions">
+                  {(item.files[locale]??[]).map(f=>(
+                    <a href={f.href} download class="assessment-hub__download-link" type={f.format==='PDF'?'application/pdf':f.format==='DOCX'?'application/vnd.openxmlformats-officedocument.wordprocessingml.document':f.format==='XLSX'?'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet':'text/csv'}>
+                      <span aria-hidden="true">↓</span> {f.format}
+                    </a>
+                  ))}
+                </div>
+                <span class="assessment-hub__tool-version">{t.fileVersion} {item.version}</span>
+              </div>
+            </article>
+          ))}
+        </div>
+        <p class="assessment-hub__no-matches" data-assessment-empty hidden>{t.noMatches}</p>
+      </section>
+    : <div class="assessment-hub__no-translation">
+        <p>{t.noTools}</p>
+        <p>{t.translatePending}</p>
+      </div>}
+
+  {unreleased.length>0 &&
+    <details class="assessment-hub__planned-tools">
+      <summary>{t.upcomingTools} ({unreleased.length})</summary>
+      <ul>{unreleased.map(d=><li>{d.title[locale]}</li>)}</ul>
+    </details>}
+
+  <details class="assessment-hub__tool-notes">
+    <summary>{t.sources}</summary>
+    <p>{t.permissions}</p>
+    <ul>
+      <li><a href="https://www.nice.org.uk/guidance/cg128/chapter/Recommendations" target="_blank" rel="noopener noreferrer">NICE CG128: recognition, referral and diagnosis</a></li>
+      <li><a href="https://cps.ca/en/documents/position/asd-diagnostic-assessment" target="_blank" rel="noopener noreferrer">Canadian Paediatric Society: diagnostic assessment</a></li>
+      <li><a href="https://www.mchatscreen.com/mchat-rf/" target="_blank" rel="noopener noreferrer">M-CHAT-R/F: official instructions and permissions</a></li>
+      <li><a href="https://adilet.zan.kz/rus/docs/K2000000360" target="_blank" rel="noopener noreferrer">Kazakhstan healthcare code</a></li>
+    </ul>
+  </details>
+</ProfessionalAssessmentShell>
+<script>
+  function setupAssessmentTools() {
+    const root=document.querySelector<HTMLElement>('[data-assessment-tools]');
+    if (!root || root.dataset.ready==='yes') return;
+    root.dataset.ready='yes';
+    const category=root.querySelector<HTMLSelectElement>('[data-assessment-category]');
+    const search=root.querySelector<HTMLInputElement>('[data-assessment-search]');
+    const empty=root.querySelector<HTMLElement>('[data-assessment-empty]');
+    const items=Array.from(root.querySelectorAll<HTMLElement>('[data-assessment-item]'));
+    const filter=()=>{
+      const selected=category?.value??'all';
+      const term=(search?.value??'').trim().toLocaleLowerCase();
+      let shown=0;
+      for (const item of items) {
+        const match=(selected==='all'||item.dataset.group===selected)&&(!term||(item.dataset.terms??'').includes(term));
+        item.hidden=!match;
+        if (match) shown++;
+      }
+      if(empty) empty.hidden=shown!==0;
+    };
+    category?.addEventListener('change',filter);
+    search?.addEventListener('input',filter);
+    filter();
+  }
+  document.addEventListener('astro:page-load',setupAssessmentTools);
+  setupAssessmentTools();
+</script>
