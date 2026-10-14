@@ -1,74 +1,75 @@
-/** Regression contract for the Assessment & Diagnosis practice library. */
+/** Static regression contract for the slim assessment flow, group pages and downloads. */
 import assert from 'node:assert/strict';
-import {readFile,stat} from 'node:fs/promises';
+import {readFile} from 'node:fs/promises';
 import path from 'node:path';
+
 const base='/central-asia-autism-hub';
 const stages=['early-identification','instruments','comprehensive-assessment','differential-assessment','reporting-followup'];
-const stagesRu=[
-  'Раннее выявление и маршрут ребёнка',
-  'Диагностические инструменты',
-  'Комплексная диагностическая оценка',
-  'Дифференциальная диагностика и сопутствующие состояния',
-  'Заключение и дальнейшее наблюдение',
-];
-const downloads=[
-  'early-detection-pathway-ru.pdf',
-  'diagnostic-instrument-comparison-ru.pdf',
-  'diagnostic-instrument-comparison-ru.csv',
-  'diagnostic-instrument-comparison-ru.xlsx',
-  'developmental-history-template-ru.docx',
-  'developmental-history-template-ru.pdf',
-];
-const copy = {ru:['Оценка и диагностика',12,3],kk:['Бағалау және диагностика',12,0],en:['Assessment and diagnosis',12,0]};
-for (const [locale,[title,count,ready]] of Object.entries(copy)) {
-  const html=await readFile(path.resolve('dist/kz',locale,'professionals/assessment/index.html'),'utf8');
-  assert.ok(html.includes(title),locale+': landing title missing');
-  assert.equal((html.match(/class="assessment-hub__group"/g)||[]).length,5,locale+': five stages are required');
-  assert.equal((html.match(/class="assessment-hub__article"/g)||[]).length,count,locale+': twelve article cards are required');
-  assert.equal((html.match(/assessment-hub__download--ready/g)||[]).length,ready,locale+': downloaded resources must match genuine translations');
-  assert.equal((html.match(/class="assessment-hub__download(?: |")/g)||[]).length,10,locale+': ten unique planned/downloadable records required');
-  for(const stage of stages) {
-    const href=base+'/kz/'+locale+'/professionals/assessment/'+stage+'/';
-    assert.ok(html.includes('href="'+href+'"'),locale+': stage link missing '+stage);
-    const inner=await readFile(path.resolve('dist/kz',locale,'professionals/assessment',stage,'index.html'),'utf8');
-    assert.ok(inner.includes('assessment-hub__download'),locale+': stage download area missing '+stage);
-    assert.ok(inner.includes('assessment-hub__article'),locale+': stage article list missing '+stage);
-    assert.equal((inner.match(/class="assessment-hub__group"/g)||[]).length,0,locale+': stage pages should not repeat entire landing grid');
-  }
-  const a01Href=base+'/kz/ru/professionals/rannee-vyyavlenie-autizma-marshrut-specialista/';
-  const earlyHub=await readFile(path.resolve('dist/kz',locale,'professionals/assessment/early-identification/index.html'),'utf8');
-  if(locale==='ru') {
-    assert.ok(earlyHub.includes('href="'+a01Href+'"'), 'RU first assessment article must be published and linked');
-    const articleHtml=await readFile(path.resolve('dist/kz/ru/professionals/rannee-vyyavlenie-autizma-marshrut-specialista/index.html'),'utf8');
-    for(const part of ['professional-early-referral-family-consultation.jpg','article-v2__sources','download', 'Действия в пяти типовых ситуациях', 'Казахстан']) {
-      assert.ok(articleHtml.includes(part), 'A01 must include source-backed practical content: '+part);
+const ruNames=['Раннее выявление и маршрут ребёнка','Диагностические инструменты','Комплексная диагностическая оценка','Дифференциальная диагностика и сопутствующие состояния','Заключение и дальнейшее наблюдение'];
+const counts=[2,3,3,2,2];
+const files=['early-detection-pathway-ru.pdf','diagnostic-instrument-comparison-ru.pdf','diagnostic-instrument-comparison-ru.csv','diagnostic-instrument-comparison-ru.xlsx','developmental-history-template-ru.docx','developmental-history-template-ru.pdf'];
+const a01Href=base+'/kz/ru/professionals/rannee-vyyavlenie-autizma-marshrut-specialista/';
+
+for(const locale of ['ru','kk','en']) {
+  const baseRoute=base+'/kz/'+locale+'/professionals/assessment/';
+  const h=await readFile(path.resolve('dist/kz',locale,'professionals/assessment/index.html'),'utf8');
+  const tools=await readFile(path.resolve('dist/kz',locale,'professionals/assessment/tools/index.html'),'utf8');
+  const expectedTitle={ru:'Оценка и диагностика',kk:'Бағалау және диагностика',en:'Assessment and diagnosis'}[locale];
+  assert.ok(h.includes(expectedTitle),locale+': localized main section title');
+  assert.equal((h.match(/class="assessment-flow__card"/g)||[]).length,5,locale+': exactly five full-card stage links');
+  assert.equal((h.match(/class="assessment-flow__connector"/g)||[]).length,4,locale+': four arrows between five steps');
+  assert.ok(h.includes('assessment-hub__intro')&&h.includes('assessment-hub__library-cta'),locale+': flow and dedicated library CTA missing');
+  assert.ok(h.includes('href="'+baseRoute+'tools/"'),locale+': standalone tools page link missing');
+  assert.ok(!h.includes('assessment-hub__stage-article')&&!h.includes('assessment-hub__tool '),locale+': main route must not duplicate article or downloads catalogue');
+  for(let i=0;i<stages.length;i++) {
+    const href=baseRoute+stages[i]+'/';
+    assert.ok(h.includes('href="'+href+'"'),locale+': missing clickable stage '+stages[i]);
+    const stage=await readFile(path.resolve('dist/kz',locale,'professionals/assessment',stages[i],'index.html'),'utf8');
+    assert.ok(stage.includes('assessment-hub__stage-articles'),locale+': no article list at '+stages[i]);
+    assert.equal((stage.match(/class="assessment-hub__stage-article"/g)||[]).length,counts[i],locale+': wrong scoped article count '+stages[i]);
+    assert.ok(stage.includes('assessment-hub__stage-section')&&stage.includes('assessment-hub__stage-files')===([0,1,2].includes(i) && locale==='ru'),locale+': incorrect ready-file visibility '+stages[i]);
+    assert.ok(stage.includes('href="'+baseRoute+'tools/"'),locale+': must offer library navigation within each stage');
+    assert.ok(!stage.includes('assessment-flow__card'),locale+': group pages must not repeat entire main flow');
+    if(i<4)assert.ok(stage.includes('href="'+baseRoute+stages[i+1]+'/'),locale+': next stage navigation missing');
+    if(i===0) {
+      if(locale==='ru')assert.ok(stage.includes('href="'+a01Href+'"'), 'RU A01 article not linked');
+      else assert.ok(!stage.includes('href="'+a01Href+'"'),locale+': Russian article should not masquerade as translation');
     }
-  } else {
-    assert.ok(!earlyHub.includes('href="'+a01Href+'"'), locale+': Russian A01 cannot stand in for unpublished translation');
   }
-  if(locale==='ru'){
-    for(const file of downloads) assert.ok(html.includes(base+'/downloads/assessment/'+file),'RU: download link absent '+file);
-    for(const group of stagesRu) assert.ok(html.includes(group),'RU: localized stage name missing '+group);
+  if(locale==='ru') assert.ok(tools.includes('data-assessment-category')&&tools.includes('data-assessment-search'), 'RU: tools filters missing');
+  const expectedReady=locale==='ru'?3:0;
+  assert.equal((tools.match(/class="assessment-hub__tool"/g)||[]).length,expectedReady,locale+': only actually released locale-specific resource sets should display');
+  assert.ok(tools.includes('assessment-hub__planned-tools'),locale+': remaining planned resources need a small disclosure');
+  if(locale==='ru') {
+    for(const file of files) {
+      const url=base+'/downloads/assessment/'+file;
+      assert.ok(tools.includes('href="'+url+'"'),'RU: available file must be linked in library '+file);
+      assert.ok(!h.includes('href="'+url+'"'),'RU: download links must not clutter landing page');
+    }
+    for(const name of ruNames)assert.ok(h.includes(name),'RU: stage title missing '+name);
   } else {
-    for(const file of downloads)assert.ok(!html.includes('href="'+base+'/downloads/assessment/'+file+'"'),locale+': untranslated RU file should not silently publish');
+    for(const file of files) assert.ok(!tools.includes('href="'+base+'/downloads/assessment/'+file+'"'),locale+': missing translation must not link to RU document');
+    assert.ok(tools.includes('assessment-hub__no-translation'),locale+': clearly mark translated resources pending');
   }
 }
-for(const file of downloads){
-  const asset=path.resolve('dist/downloads/assessment',file);
-  const buf=await readFile(asset);
-  assert.ok(buf.length>1500,'Invalid small binary/CSV '+file);
-  if(file.endsWith('.pdf'))assert.equal(buf.subarray(0,4).toString('ascii'),'%PDF','Invalid PDF '+file);
-  if(file.endsWith('.docx'))assert.equal(buf.subarray(0,2).toString('ascii'),'PK','Invalid DOCX package '+file);
-  if(file.endsWith('.xlsx'))assert.equal(buf.subarray(0,2).toString('ascii'),'PK','Invalid XLSX package '+file);
-  if(file.endsWith('.csv')) {
-    const txt=buf.toString('utf8');
-    assert.ok(txt.includes('M-CHAT-R/F')&&txt.includes('ADOS-2')&&txt.includes('ADI-R'),'CSV: professional instrument comparison incomplete');
+for(const filename of files) {
+  const buf=await readFile(path.resolve('dist/downloads/assessment',filename));
+  assert.ok(buf.length>1500,'Empty or invalid file '+filename);
+  if(filename.endsWith('.pdf')) assert.equal(buf.subarray(0,4).toString('ascii'),'%PDF','PDF magic bytes '+filename);
+  if(filename.endsWith('.docx')||filename.endsWith('.xlsx'))assert.equal(buf.subarray(0,2).toString('ascii'),'PK','OOXML package '+filename);
+  if(filename.endsWith('.csv')) {
+    const s=buf.toString('utf8');
+    assert.ok(s.includes('M-CHAT-R/F')&&s.includes('ADOS-2')&&s.includes('ADI-R'),'CSV comparison missing entries');
   }
 }
-const source=await readFile(path.resolve('src/data/professional-assessment.ts'),'utf8');
-const hubComponent=await readFile(path.resolve('src/components/ProfessionalAssessmentHub.astro'),'utf8');
-assert.ok(hubComponent.includes('https://www.mchatscreen.com/mchat-rf/'), 'Do not reproduce copyrighted tests; link to M-CHAT official source');
-assert.ok(!source.includes('scoreItems') && !source.includes('testQuestions'),'Do not bundle copyrighted test questions/scoring');
+const components=await Promise.all(['ProfessionalAssessmentHome.astro','ProfessionalAssessmentGroup.astro','ProfessionalAssessmentTools.astro'].map(p=>readFile(path.resolve('src/components',p),'utf8')));
+const css=await readFile(path.resolve('src/styles/professional-assessment.css'),'utf8');
+assert.ok(css.includes('.assessment-flow__card:hover')&&css.includes('.assessment-flow__card:focus-visible'), 'Missing hover glow and keyboard focus state');
+assert.ok(css.includes('background:#fff'), 'Assessment cards must default to white');
+assert.ok(components[0].includes('assessment-flow__card')&&components[1].includes('assessment-hub__stage-articles')&&components[2].includes('data-assessment-category'),'Three-level UI separation missing');
+assert.ok(components[2].includes('https://www.mchatscreen.com/mchat-rf/'),'Link only to official copyrighted diagnostic instruments');
+const registry=await readFile(path.resolve('src/data/professional-assessment.ts'),'utf8');
+assert.ok(!registry.includes('scoreItems')&&!registry.includes('testQuestions'),'Do not distribute protected diagnostic prompts');
 const generator=await readFile(path.resolve('scripts/build-professional-assessment-downloads.py'),'utf8');
-assert.ok(generator.includes('NICE CG128') && generator.includes('Не валидированная шкала'), 'Source attribution or clinical limitations missing');
-console.log('Assessment toolkit PASS: 5 localized stage routes each, 12 planned articles, 10 catalogue items, 3 downloadable Russian sets, 6 verified files.');
+assert.ok(generator.includes('NICE CG128')&&generator.includes('Не валидированная шкала'),'Downloads need clinical scope and source statement');
+console.log('Assessment structure PASS: five linked white-card stages; 12 scoped articles; standalone tools page; six valid downloads in three released RU sets; locale-safe URLs and focus states.');
