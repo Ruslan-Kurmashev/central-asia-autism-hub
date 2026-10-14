@@ -753,12 +753,48 @@
 .home-v2__event-list { display: grid; gap: .85rem; margin-top: 1.7rem; }
 .home-v2__event {
   display: grid;
-  grid-template-columns: 7rem minmax(0, 1fr);
-  gap: 1.5rem;
-  padding: 1.4rem 1.65rem;
+  grid-template-columns: 7rem minmax(13rem, .7fr) minmax(0, 1.3fr);
+  gap: 1.3rem;
+  align-items: start;
+  padding: 1.2rem;
   border: 1px solid var(--home-line);
   background: white;
   box-shadow: 0 6px 18px rgb(16 61 96 / 5%);
+}
+.home-v2__event-media {
+  position: relative;
+  margin: 0;
+  overflow: hidden;
+  border-radius: .6rem;
+  background: #e8f2f9;
+}
+.home-v2__event-media img {
+  display: block;
+  width: 100%;
+  height: 12.8rem;
+  object-fit: cover;
+  object-position: center;
+}
+.home-v2__event-media--brand {
+  display: grid;
+  place-items: center;
+  padding: 1.2rem;
+  background: #073d65;
+}
+.home-v2__event-media--brand img {
+  height: 10.4rem;
+  object-fit: contain;
+}
+.home-v2__event-media figcaption {
+  position: absolute;
+  right: .5rem;
+  bottom: .5rem;
+  max-width: calc(100% - 1rem);
+  padding: .25rem .5rem;
+  border-radius: .3rem;
+  background: rgb(9 44 76 / 92%);
+  color: white;
+  font-size: var(--type-caption);
 }
 .home-v2__event-date {
   display: flex;
@@ -867,10 +903,28 @@
   font-size: var(--type-reading);
   line-height: 1.65;
 }
+@media (max-width: 69rem) {
+  .home-v2__event {
+    grid-template-columns: 6rem minmax(0, 1fr);
+  }
+  .home-v2__event-media {
+    grid-column: 2;
+  }
+  .home-v2__event-content {
+    grid-column: 2;
+  }
+  .home-v2__event-date {
+    grid-row: 1 / span 2;
+  }
+}
 @media (max-width: 42rem) {
   .home-v2__events-heading { gap: 1rem; }
   .home-v2__events-icon { display: none; }
-  .home-v2__event { grid-template-columns: 1fr; padding: 1.1rem; gap: .8rem; }
-  .home-v2__event-date { justify-self: start; max-width: 11rem; }
+  .home-v2__event { grid-template-columns: 1fr; padding: 1rem; gap: .85rem; }
+  .home-v2__event-media { grid-row: 1; grid-column: 1; }
+  .home-v2__event-media img { height: 12.2rem; }
+  .home-v2__event-media--brand img { height: 10.4rem; }
+  .home-v2__event-date { grid-row: 2; grid-column: 1; justify-self: start; max-width: 12rem; }
+  .home-v2__event-content { grid-row: 3; grid-column: 1; }
   .home-v2__events-empty { padding: 1.1rem; }
 }
