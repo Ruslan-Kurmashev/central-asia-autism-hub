@@ -58,6 +58,12 @@ const publishedGuides=[
   {key:'a04', group:'instruments', slug:'m-chat-r-f-primenenie-follow-up-ogranicheniya', cover:'professional-assessment-mchat-workflow.svg', heading:'Второй этап Follow-Up'},
   {key:'a05', group:'instruments', slug:'ados-2-adi-r-cars-2-vozmozhnosti-ogranicheniya', cover:'professional-assessment-ados-adi-cars.svg', heading:'Матрица пригодности метода'},
   {key:'a06', group:'comprehensive-assessment', slug:'sbor-anamneza-razvitiya-intervyu-s-semjej', cover:'professional-assessment-developmental-history.svg', heading:'Алгоритм интервью из одиннадцати шагов'},
+  {key:'a07', group:'comprehensive-assessment', slug:'strukturirovannoe-nablyudenie-autizm-raznye-situacii', cover:'professional-assessment-observation.svg', heading:'Шесть этапов наблюдения'},
+  {key:'a08', group:'comprehensive-assessment', slug:'kompleksnaya-klinicheskaya-ocenka-autizma-etapy', cover:'professional-assessment-clinical-integration.svg', heading:'Семь основных компонентов'},
+  {key:'a09', group:'differential-assessment', slug:'differencialnaya-diagnostika-autizma-drugie-sostoyaniya', cover:'professional-assessment-differential.svg', heading:'Шесть шагов клинического рассмотрения'},
+  {key:'a10', group:'differential-assessment', slug:'soputstvuyushchie-sostoyaniya-pri-autizme-ocenka', cover:'professional-assessment-cooccurring.svg', heading:'Карта основных направлений оценки'},
+  {key:'a11', group:'reporting-followup', slug:'diagnosticheskoe-zaklyuchenie-autizm-struktura-otcheta', cover:'professional-assessment-report.svg', heading:'Двенадцать разделов полноценного отчёта'},
+  {key:'a12', group:'reporting-followup', slug:'diagnosticheskaya-neopredelennost-vtoroe-mnenie-povtornaya-ocenka', cover:'professional-assessment-reassessment.svg', heading:'Алгоритм решения: девять шагов'},
 ];
 for(const guide of publishedGuides) {
   const url=base+'/kz/ru/professionals/'+guide.slug+'/';
