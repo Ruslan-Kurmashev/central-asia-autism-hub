@@ -270,6 +270,12 @@ Remaining templates (pre-assessment checklist, structured observation, different
 
 **Clinical and copyright boundaries:** Files are editorial workflow aids, not validated screening or diagnostic scales and not replacements for mandatory Kazakhstan forms. Only link to official M-CHAT-R/F, ADOS-2, ADI-R or CARS-2 materials; never re-host copyrighted items or scoring manuals without authorisation. Assessment requires professional competence and applicable local clinical/legislative requirements. Cite primary sources, indicate revision/version and explicitly delimit what has and has not been translated, reviewed and released. Avoid overlap with the separate support/intervention `Workflows and tools` section.
 
+### 9.4.1. Assessment library content release (14 October 2026)
+
+Russian-language professional source articles published in sequence: **A01-A05** (early signs/referral; screening; choosing instruments; M-CHAT-R/F; ADOS-2/ADI-R/CARS-2). Next planned source article A06 is a clinical developmental-history guide. Kazakh and English entries remain unpublished, not linked to Russian articles.
+
+The downloadable library contains **four released Russian sets / eight actual files**: referral flow (PDF), instrument comparisons (PDF, XLSX, CSV), developmental history template (DOCX, PDF), and pre-assessment checklist (DOCX, PDF). Remaining six download sets are planned and must not receive active links until built and reviewed. The checklist is generated in the canonical `scripts/build-professional-assessment-downloads.py` workflow and checked as a real binary file.
+
 ### 9.5. Simplified white-card assessment flow and separate resource library (approved 14 October 2026)
 
 The assessment landing page (`/kz/{locale}/professionals/assessment/`) is a **navigation aid**, not a clinical decision tree:
