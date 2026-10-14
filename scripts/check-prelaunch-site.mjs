@@ -129,6 +129,15 @@ for (const lang of locales) {
   check(cards.some(card => card.includes(base + lang + '/parents/')),
     id + ': latest feed must contain a parent information article');
   if (lang === 'ru') {
+    const meltdownCard = cards.find(card => card.includes('/meltdaun-i-shatdaun-pri-autizme/'));
+    if (meltdownCard) check(meltdownCard.includes('parent-meltdown-overload-covering-ear.jpg'),
+      id + ': meltdown article latest card must use the sound-discomfort cover');
+    const meltdownPage = await readFile(
+      path.join(dist, 'kz', lang, 'parents', 'meltdaun-i-shatdaun-pri-autizme', 'index.html'), 'utf8');
+    check(meltdownPage.includes('parent-meltdown-overload-covering-ear.jpg'),
+      id + ': meltdown article must use its new sound-discomfort cover');
+  }
+  if (lang === 'ru') {
     const communicationCard = cards.find(card => card.includes('/kak-autichnye-deti-obshchayutsya/'));
     if (communicationCard) check(communicationCard.includes('parent-communication-drawings-family.jpg'),
       id + ': communication article should have its specific family drawing cover');

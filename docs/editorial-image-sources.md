@@ -23,6 +23,7 @@ Pexels states that its photos can be downloaded and used for free, attribution i
 | `article-creative-art.jpg` | Pavel Danilyuk | https://www.pexels.com/photo/full-shot-of-kids-painting-during-an-art-class-8382363/ |
 | `article-family-therapy.jpg` | Gustavo Fring | https://www.pexels.com/photo/photo-of-a-family-doing-a-therapy-session-7447261/ |
 | `article-family-rest.jpg` | Kampus Production | https://www.pexels.com/photo/a-family-resting-in-bed-7078782/ |
+| `photos/parent-meltdown-overload-covering-ear.jpg` | Towfiqu barbhuiya | https://www.pexels.com/photo/back-view-of-a-boy-covering-his-ear-12449967/ | Ребёнок со спины прикрывает ухо, как иллюстрация реакции на возможный дискомфорт от звука. Не доказательство аутизма, мелтдауна или конкретной причины реакции. |
 | `article-family-session.jpg` | Tima Miroshnichenko | https://www.pexels.com/photo/a-couple-sitting-on-a-couch-with-their-daughter-at-a-therapy-session-5336939/ |
 | `article-forest-walk.jpg` | Jonathan Trbic | https://www.pexels.com/photo/father-and-child-stroll-through-forest-pathway-39999216/ |
 | `article-parent-training.jpg` | Gustavo Fring | https://www.pexels.com/photo/photo-of-a-girl-looking-at-a-card-with-her-parents-7447259/ |

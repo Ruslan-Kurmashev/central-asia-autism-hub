@@ -2,8 +2,8 @@
 title: "Мелтдаун и шатдаун при аутизме: как понимать реакции на перегрузку"
 summary: "Почему при перегрузке один ребёнок плачет или кричит, а другой замолкает? Разбираем мелтдауны, шатдауны, возможные причины и вопросы безопасности."
 description: "Мелтдаун и шатдаун при аутизме: различия, перегрузка, факторы среды, ошибочные интерпретации и ситуации, требующие медицинской помощи."
-featuredImage: "/central-asia-autism-hub/images/editorial/article-family-rest.jpg"
-featuredImageAlt: "Спокойная домашняя обстановка во время семейного отдыха."
+featuredImage: "/central-asia-autism-hub/images/editorial/photos/parent-meltdown-overload-covering-ear.jpg"
+featuredImageAlt: "Иллюстративная фотография: ребёнок, снятый со спины, прикрывает ухо. Изображение не свидетельствует об аутизме, мелтдауне или шатдауне у ребёнка."
 country: kz
 language: ru
 section: parents
