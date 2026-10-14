@@ -10,7 +10,7 @@ import path from 'node:path';
 const expected = {
   ru: {
     names: ['Рекомендации и стандарты', 'Работа с семьями', 'Оценка и диагностика', 'Доказательность методов', 'Этика и безопасность', 'Алгоритмы и инструменты'],
-    back: 'Все направления', pending: 'Готовится', cardWord: 'материала', training: 'Обучение для специалистов', published: 13,
+    back: 'Все направления', pending: 'Готовится', cardWord: 'материала', training: 'Обучение для специалистов', published: 14,
   },
   kk: {
     names: ['Ұсынымдар мен стандарттар', 'Отбасылармен жұмыс', 'Бағалау және диагностика', 'Әдістердің дәлелділігі', 'Этика және қауіпсіздік', 'Алгоритмдер мен құралдар'],
@@ -48,7 +48,7 @@ for (const [locale, copy] of Object.entries(expected)) {
   assert.equal((html.match(/class="professional-directory__card"/g) ?? []).length, 6, locale + ': expected six area cards');
   assert.equal((html.match(/class="professional-directory__detail"/g) ?? []).length, 6, locale + ': expected six detail panels');
   assert.equal((html.match(/class="professional-directory__item"/g) ?? []).length, 30, locale + ': expected 30 direct planned resources; international country folders are counted separately');
-  assert.equal((html.match(/class="professional-directory__status"/g) ?? []).length, locale === 'ru' ? 19 : 30, locale + ': only genuinely published direct entries should be linked);
+  assert.equal((html.match(/class="professional-directory__status"/g) ?? []).length, locale === 'ru' ? 18 : 30, locale + ': only genuinely published direct entries should be linked');
   if (locale === 'ru') {
     const articleHref = '/central-asia-autism-hub/kz/ru/professionals/kak-rabotat-s-professionalnymi-rekomendaciyami/';
     assert.ok(html.includes('href="' + articleHref + '"'), 'Russian first professional resource must have a working article link');
