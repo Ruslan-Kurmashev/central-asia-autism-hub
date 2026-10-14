@@ -20,11 +20,6 @@ jobs:
     steps:
       - name: Check out repository
         uses: actions/checkout@v7
-      - name: Generate assessment PDF, DOCX and CSV resources
-        run: |
-          python3 -m venv .assessment-venv
-          .assessment-venv/bin/python -m pip install --disable-pip-version-check "reportlab>=4.3,<5" "python-docx>=1.1,<2"
-          .assessment-venv/bin/python scripts/generate-assessment-downloads.py
       - name: Install Python for printable practice resources
         uses: actions/setup-python@v6
         with:
