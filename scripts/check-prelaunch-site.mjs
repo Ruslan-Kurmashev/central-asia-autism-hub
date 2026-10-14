@@ -6,9 +6,9 @@ const dist = path.resolve('dist');
 const base = '/central-asia-autism-hub/kz/';
 const locales = ['ru', 'kk', 'en'];
 const expectedHomeHeadlineLines = {
-  ru: ['Все об аутизме', 'понимание открывает возможности'],
-  kk: ['Аутизм туралы бәрі', 'түсіну мүмкіндіктерге жол ашады'],
-  en: ['All about autism', 'understanding opens up possibilities'],
+  ru: ['Все об аутизме', 'когда понимание открывает возможности'],
+  kk: ['Аутизм туралы бәрі', 'түсіну мүмкіндіктерге жол ашқанда'],
+  en: ['All about autism', 'when understanding opens up possibilities'],
 };
 const sections = ['parents','research','help-kazakhstan','learning','professionals','about'];
 const errors = [];
