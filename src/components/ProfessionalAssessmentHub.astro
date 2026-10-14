@@ -155,7 +155,7 @@ function liveArticle(key: string) {
             {available.length>0
               ? <div class="assessment-hub__file-actions">
                 {available.map(file => (
-                  <a href={file.href} download class="assessment-hub__download-link" type={file.format==='PDF'?'application/pdf':file.format==='DOCX'?'application/vnd.openxmlformats-officedocument.wordprocessingml.document':'text/csv'}>
+                  <a href={file.href} download class="assessment-hub__download-link" type={file.format==='PDF'?'application/pdf':file.format==='DOCX'?'application/vnd.openxmlformats-officedocument.wordprocessingml.document':file.format==='XLSX'?'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet':'text/csv'}>
                     <span aria-hidden="true">↓</span> {file.format}
                   </a>
                 ))}
