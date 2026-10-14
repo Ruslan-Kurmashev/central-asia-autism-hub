@@ -459,14 +459,6 @@
   max-width: 78rem;
 }
 
-.home-v2__source-lead {
-  max-width: 48rem;
-  margin: 1rem auto 0;
-  color: var(--home-muted);
-  font-size: var(--type-body);
-  line-height: 1.65;
-}
-
 .home-v2__source-grid {
   display: grid;
   grid-template-columns: repeat(4, minmax(0, 1fr));
