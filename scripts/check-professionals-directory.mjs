@@ -21,7 +21,7 @@ const expected = {
     back: 'All areas', pending: 'In preparation', cardWord: 'resources', training: 'Training for professionals', published: 0,
   },
 };
-const counts = [42, 6, 4, 3, 3, 5];
+const counts = [42, 6, 12, 3, 3, 5];
 const ids = ['guidelines', 'family-communication', 'assessment-context', 'evidence-support', 'ethics', 'practice-tools'];
 // CSS emitted assets are content-hashed. The HTML must reference our directory stylesheet
 // indirectly via Astro's static asset pipeline.
@@ -47,7 +47,7 @@ for (const [locale, copy] of Object.entries(expected)) {
   assert.ok(!html.includes('PRO-G01') && !html.includes('PRO-E03'), locale + ': internal editorial IDs leaked');
   assert.equal((html.match(/class="professional-directory__card"/g) ?? []).length, 6, locale + ': expected six area cards');
   assert.equal((html.match(/class="professional-directory__detail"/g) ?? []).length, 6, locale + ': expected six detail panels');
-  assert.equal((html.match(/class="professional-directory__item"/g) ?? []).length, 22, locale + ': expected 22 direct planned resources; international country folders are counted separately');
+  assert.equal((html.match(/class="professional-directory__item"/g) ?? []).length, 30, locale + ': expected 30 direct planned resources; international country folders are counted separately');
   assert.equal((html.match(/class="professional-directory__status"/g) ?? []).length, locale === 'ru' ? 15 : 22, locale + ': only genuinely published direct entries should be linked');
   if (locale === 'ru') {
     const articleHref = '/central-asia-autism-hub/kz/ru/professionals/kak-rabotat-s-professionalnymi-rekomendaciyami/';
@@ -64,6 +64,12 @@ for (const [locale, copy] of Object.entries(expected)) {
     for (const documentToKeepSeparate of ['NICE CG128', 'CG170', 'CG142', '№ 332-VIII']) {
       assert.ok(!introductorySource.includes(documentToKeepSeparate), 'Introductory article contains an individual-document deep dive: ' + documentToKeepSeparate);
     }
+  }
+  const assessmentHubHref = '/central-asia-autism-hub/kz/' + locale + '/professionals/assessment/';
+  assert.ok(html.includes('href="' + assessmentHubHref + '"'), locale + ': assessment card must open the five-stage hub');
+  for (const id of ['a01', 'a02', 'a03', 'a04', 'a05', 'a06', 'a07', 'a08', 'a09', 'a10', 'a11', 'a12']) {
+    // Entries remain distinct until their articles are genuinely published.
+    assert.ok(html.includes('professional-directory__item-title'), locale + ': assessment topic rows missing');
   }
   const familyPanel = html.split('id="professional-family-communication"')[1]?.split('id="professional-assessment-context"')[0] ?? '';
   assert.ok(familyPanel, locale + ': family communication panel missing');
