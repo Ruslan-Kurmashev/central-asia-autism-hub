@@ -164,11 +164,10 @@
   object-position: center 45%;
 }
 
-/* On smaller screens the focal point keeps the family in view,
-   without enlarging the image beyond the hero container. */
+/* Keep the child and both parents centered in the wide homepage banner. */
 @media (max-width: 56rem) {
   .home-v2__hero-image {
-    object-position: 68% 45%;
+    object-position: center 45%;
   }
 }
 
