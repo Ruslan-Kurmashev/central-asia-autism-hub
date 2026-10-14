@@ -1,0 +1,18 @@
+---
+import { getCollection } from 'astro:content';
+import ProfessionalAssessmentHub from '../../../../../components/ProfessionalAssessmentHub.astro';
+import BaseLayout from '../../../../../layouts/BaseLayout.astro';
+import { SITE, SUPPORTED_LOCALES, type Locale } from '../../../../../site.config';
+
+export function getStaticPaths() {
+  return SUPPORTED_LOCALES.map(locale => ({ params:{lang:locale},props:{locale} }));
+}
+interface Props {locale:Locale;}
+const {locale}=Astro.props;
+const materials=await getCollection('pages',({data})=>data.language===locale && data.section==='professionals' && !data.draft && data.translationStatus!=='pending' && Boolean(data.publishedAt) && Boolean(data.updatedAt));
+const title=locale==='ru'?'Оценка и диагностика':locale==='kk'?'Бағалау және диагностика':'Assessment and diagnosis';
+const description=locale==='ru'?'Пять этапов оценки аутизма, двенадцать профессиональных материалов и бесплатные скачиваемые рабочие инструменты.':locale==='kk'?'Аутизмді бағалаудың бес кезеңі, он екі кәсіби материал және жүктелетін жұмыс құралдары.':'Five stages of autism assessment, twelve planned professional guides and practical downloadable resources.';
+---
+<BaseLayout title={title+' - '+SITE.name} description={description} locale={locale} currentSection="professionals" alternatePath="professionals/assessment" bodyClass="professional-library-body">
+  <ProfessionalAssessmentHub locale={locale} materials={materials}/>
+</BaseLayout>
