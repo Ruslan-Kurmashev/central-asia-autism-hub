@@ -39,7 +39,7 @@ for(const locale of ['ru','kk','en']) {
   if(locale==='ru') assert.ok(tools.includes('data-assessment-category')&&tools.includes('data-assessment-search'), 'RU: tools filters missing');
   const expectedReady=locale==='ru'?10:0;
   assert.equal((tools.match(/class="assessment-hub__tool"/g)||[]).length,expectedReady,locale+': only actually released locale-specific resource sets should display');
-  assert.ok(tools.includes('assessment-hub__planned-tools')===(locale!=='ru'),locale+': upcoming list should appear only for missing language resources');
+  assert.ok(tools.includes('data-assessment-upcoming')===(locale!=='ru'),locale+': upcoming list should appear only for missing language resources');
   if(locale==='ru') {
     for(const file of files) {
       const url=base+'/downloads/assessment/'+file;
