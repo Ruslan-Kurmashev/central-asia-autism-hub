@@ -52,7 +52,7 @@
   font-weight: 720;
   line-height: 1.15;
 }
-.professional-directory__training-link {
+.professional-directory__training-link, .professional-directory__practice-link {
   display: inline-flex;
   flex: none;
   align-items: center;
@@ -64,10 +64,10 @@
   text-decoration: underline;
   text-underline-offset: 0.2em;
 }
-.professional-directory__training-link:hover {
+.professional-directory__training-link:hover, .professional-directory__practice-link:hover {
   color: var(--color-primary);
 }
-.professional-directory__training-link:focus-visible {
+.professional-directory__training-link:focus-visible, .professional-directory__practice-link:focus-visible {
   outline: 3px solid var(--color-primary);
   outline-offset: 3px;
 }
@@ -357,7 +357,7 @@
     align-items: flex-start;
     flex-direction: column;
   }
-  .professional-directory__training-link {
+  .professional-directory__training-link, .professional-directory__practice-link {
     flex: initial;
   }
   .professional-directory__item {

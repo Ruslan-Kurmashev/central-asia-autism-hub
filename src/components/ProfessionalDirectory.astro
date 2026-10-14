@@ -251,7 +251,7 @@ const forGroup = (group: Group) => {
           </div>
           <p class="professional-directory__lead">{group.description[locale]}</p>
           {group.id === 'assessment-context' && (
-            <a class="professional-directory__training-link" style="margin-top:1.2rem; display:inline-flex;" href={localePath(locale,'professionals/assessment')}>
+            <a class="professional-directory__practice-link" style="margin-top:1.2rem; display:inline-flex;" href={localePath(locale,'professionals/assessment')}>
               {locale === 'ru' ? 'Открыть практическую библиотеку и файлы' : locale === 'kk' ? 'Практикалық кітапхана мен файлдарды ашу' : 'Open practice hub and downloads'} <span aria-hidden="true">→</span>
             </a>
           )}
