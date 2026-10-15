@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" role="img" aria-labelledby="t d">
+<title id="t">Как работают гены в развивающемся мозге</title><desc id="d">Оригинальная учебная векторная иллюстрация. Слева схематичная молекула ДНК и её связи, справа условная нервная клетка с ветвящимися отростками. Это художественная научная схема, а не изображение клетки конкретного человека или генетического теста.</desc>
+<defs><linearGradient id="g" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#edf6fc"/><stop offset="1" stop-color="#dbeefa"/></linearGradient><pattern id="dots" width="28" height="28" patternUnits="userSpaceOnUse"><circle cx="3" cy="3" r="1" fill="#86aacb" opacity=".3"/></pattern></defs>
+<rect width="1200" height="630" fill="url(#g)"/><rect width="1200" height="630" fill="url(#dots)"/>
+<g fill="none" stroke-linecap="round"><path d="M178 155 C344 15 412 535 566 472" stroke="#215c8d" stroke-width="10"/><path d="M178 472 C342 604 412 92 566 155" stroke="#58a2ca" stroke-width="10"/></g>
+<g stroke="#79aac8" stroke-width="5" stroke-linecap="round"><path d="M193 148 V482"/><path d="M244 181 V442"/><path d="M296 272 V343"/><path d="M348 384 V240"/><path d="M400 458 V173"/><path d="M452 484 V144"/><path d="M504 438 V182"/><path d="M552 359 V262"/></g>
+<path d="M573 321 C627 321 645 321 697 321" fill="none" stroke="#416e92" stroke-width="5" stroke-dasharray="9 11"/><path d="M683 308 L698 321 L683 334" fill="none" stroke="#416e92" stroke-width="5"/>
+<g stroke="#2f719d" stroke-width="7" fill="none" stroke-linecap="round"><path d="M860 323 L945 272 L1006 195 M946 272 L1059 278 M860 323 L946 383 L1015 456 M946 383 L1048 378 M860 323 L794 233 L750 163 M794 233 L735 246 M860 323 L772 400 L714 475 M772 400 L751 531"/><path d="M860 323 L885 220 L898 152 M885 220 L946 178 M860 323 L885 434 L898 514"/></g>
+<g fill="#4089bb" stroke="#f8fcff" stroke-width="9"><circle cx="860" cy="323" r="65"/></g><circle cx="860" cy="323" r="21" fill="#b9ddf1"/>
+<g fill="#93bed8"><circle cx="1007" cy="195" r="8"/><circle cx="1059" cy="278" r="8"/><circle cx="1015" cy="456" r="8"/><circle cx="751" cy="531" r="7"/></g>
+<rect x="56" y="38" width="528" height="88" rx="13" fill="#fff" opacity=".91"/><text x="80" y="82" font-family="Arial,sans-serif" font-size="29" font-weight="700" fill="#163f66">Гены и развитие мозга</text><text x="80" y="108" font-family="Arial,sans-serif" font-size="17" fill="#537791">От молекулярных инструкций к работе клеток</text>
+</svg>
