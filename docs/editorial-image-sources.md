@@ -601,3 +601,14 @@ These three original AutismHub scientific vector illustrations are hand-authored
 | `chromatin-accessibility-explained.svg` | AutismHub original science diagram, 15 October 2026 | Simplified concept of accessible and compact chromatin; not evidence of any one epigenetic mechanism for all autistic people. |
 
 Review captions and mobile legibility with the article when publishing.
+
+## Prenatal brain development: original scientific SVG diagrams (15 October 2026)
+
+These three images are original, editable AutismHub SVG graphics. No generative image outputs, stock photography, patient images, publishers' figure reproductions, microscopic images, fetal medical scans or identifiable personal data are involved.
+
+| Local file | Provenance | Intended scope and limits |
+| --- | --- | --- |
+| `prenatal-brain-development-cover.svg` | AutismHub original vector science illustration, 15 October 2026 | Stylized cortex and neuron-like figures, not an actual fetus, specimen or universal autism pathology. |
+| `prenatal-brain-development-stages.svg` | AutismHub original educational vector diagram, 15 October 2026 | Overlapping stages of neural development without calibrated week lengths or a claim about an individual age of autism onset. |
+| `prenatal-neuronal-migration.svg` | AutismHub original educational vector diagram, 15 October 2026 | Illustrates one type of radial migration; not all neurons use this route and no autism signature is portrayed. |
+

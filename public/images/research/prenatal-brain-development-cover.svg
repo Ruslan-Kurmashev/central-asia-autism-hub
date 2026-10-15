@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" role="img" aria-labelledby="t d">
+<title id="t">Раннее развитие мозга: клетки и связи</title>
+<desc id="d">Авторская научно-популярная векторная иллюстрация: условные слои развивающейся коры мозга, нейроны и радиально ориентированные отростки. Не фотография плода, не микрофотография и не схема патологических изменений при аутизме.</desc>
+<defs><linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#eef7fc"/><stop offset="1" stop-color="#d7eaf7"/></linearGradient><pattern id="pt" width="38" height="38" patternUnits="userSpaceOnUse"><circle cx="3" cy="3" r="1" fill="#7ea3c1" opacity=".24"/></pattern></defs>
+<rect width="1200" height="630" fill="url(#bg)"/><rect width="1200" height="630" fill="url(#pt)"/>
+<path d="M75 196 Q350 96 660 214 T1160 202" fill="none" stroke="#a7c9df" stroke-width="62" opacity=".55"/>
+<path d="M75 295 Q350 195 660 313 T1160 301" fill="none" stroke="#86b9d8" stroke-width="72" opacity=".27"/>
+<path d="M75 413 Q350 310 660 435 T1160 422" fill="none" stroke="#649fca" stroke-width="84" opacity=".22"/>
+<path d="M75 530 Q350 420 660 552 T1160 542" fill="none" stroke="#2f78ab" stroke-width="85" opacity=".18"/>
+<g stroke="#2e749d" stroke-width="4" stroke-linecap="round" fill="none" opacity=".84">
+<path d="M247 518 Q233 396 270 206 M319 539 Q309 377 357 176 M409 535 Q412 363 450 188 M492 544 Q490 365 537 225 M589 540 Q597 351 608 205 M689 538 Q689 378 732 204 M776 518 Q800 358 825 207 M896 527 Q914 386 942 229"/>
+<path d="M269 272 L228 244 M270 281 L314 250 M356 328 L323 295 M355 326 L395 302 M449 264 L405 240 M536 287 L573 249 M609 320 L569 293 M732 313 L687 278 M825 276 L867 241 M941 335 L982 297"/>
+</g>
+<g fill="#2876a7" stroke="#edf7fc" stroke-width="6"><circle cx="269" cy="272" r="18"/><circle cx="355" cy="328" r="17"/><circle cx="449" cy="264" r="19"/><circle cx="536" cy="287" r="16"/><circle cx="609" cy="320" r="19"/><circle cx="732" cy="313" r="20"/><circle cx="825" cy="276" r="17"/><circle cx="941" cy="335" r="17"/></g>
+<g fill="#9ac2dc" stroke="#edf7fc" stroke-width="3"><circle cx="241" cy="509" r="13"/><circle cx="320" cy="528" r="13"/><circle cx="409" cy="518" r="13"/><circle cx="492" cy="522" r="13"/><circle cx="589" cy="517" r="13"/><circle cx="689" cy="514" r="13"/><circle cx="776" cy="499" r="13"/><circle cx="896" cy="506" r="13"/></g>
+<rect x="54" y="36" width="672" height="92" rx="14" fill="#fff" opacity=".94"/>
+<text x="82" y="81" font-family="Arial,sans-serif" font-size="29" font-weight="700" fill="#17476e">Как развивается мозг до рождения</text>
+<text x="82" y="108" font-family="Arial,sans-serif" font-size="17" fill="#577994">Научная схема клеточного развития, не клинический снимок</text>
+</svg>
