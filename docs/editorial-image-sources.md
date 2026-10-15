@@ -580,3 +580,12 @@ These five original AutismHub diagrams belong to the Russian-language "Workflows
 | `professional-tools-aac-selection.svg` | Original self-authored AutismHub SVG, 15 October 2026 | AAC options and comparison; no reproduction of proprietary AAC pictures or communication boards. |
 | `professional-tools-fba-observation.svg` | Original self-authored AutismHub SVG, 15 October 2026 | ABC observation and alternative hypotheses; not a test of causal function or formal FBA. |
 | `professional-tools-environment-access.svg` | Original self-authored AutismHub SVG, 15 October 2026 | Accessibility of class/clinic environment; not an approved facility safety inspection. |
+
+## Autism genetics and inheritance: original SVG diagrams (15 October 2026)
+
+The two original self-hosted SVGs were drawn as editable markup for AutismHub. No AI-generated image, external publisher diagram or real genetic test data were used.
+
+| Local file | Source | Scope and limitations |
+| --- | --- | --- |
+| `autism-genetics-overview-cover.svg` | AutismHub original science illustration, 15 October 2026 | Schematic DNA helix, not a real genomic variant or patient's sequence. |
+| `autism-genetics-variant-types.svg` | AutismHub original educational diagram, 15 October 2026 | Common versus rare variants and separately inherited versus de novo origin; symbolic circle sizes do not represent clinical risk or diagnostic effects. |
