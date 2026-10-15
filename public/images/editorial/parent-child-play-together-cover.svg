@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 540" role="img" aria-labelledby="title desc">
+<title id="title">Совместная игра ребёнка и взрослого</title>
+<desc id="desc">Оригинальная векторная обложка с дорожкой для машинки, разноцветными кубиками и символами предложения, выбора и совместного интереса. Не медицинская шкала и не изображение реального ребёнка.</desc>
+<rect width="960" height="540" fill="#e9f3f8"/>
+<rect x="48" y="50" width="864" height="440" rx="26" fill="#fbfdfe" stroke="#bed6e6" stroke-width="3"/>
+<rect x="115" y="334" width="726" height="94" rx="26" fill="#d4e7f0"/>
+<path d="M148 391c102-68 220-15 336-62s222 11 311-30" fill="none" stroke="#749fba" stroke-width="20" stroke-linecap="round"/>
+<path d="M149 391c104-68 219-16 337-62s221 11 310-30" fill="none" stroke="#fff" stroke-dasharray="29 25" stroke-width="4" stroke-linecap="round"/>
+<rect x="178" y="222" width="118" height="112" rx="12" fill="#f3d78f" stroke="#d2a64f" stroke-width="4"/>
+<rect x="306" y="158" width="112" height="176" rx="11" fill="#b6d6e2" stroke="#6f9cb6" stroke-width="4"/>
+<rect x="430" y="254" width="111" height="80" rx="12" fill="#bfdfc8" stroke="#7fae8d" stroke-width="4"/>
+<circle cx="610" cy="258" r="68" fill="#ffe3b5" stroke="#d3a86f" stroke-width="4"/>
+<path d="M569 260h82m-41-40v80" fill="none" stroke="#ca9859" stroke-width="9" stroke-linecap="round"/>
+<path d="M678 343h85l28 33h-139z" fill="#437d9f" stroke="#2e5f7c" stroke-width="4" stroke-linejoin="round"/>
+<circle cx="682" cy="377" r="18" fill="#294f67" stroke="#f8fbfd" stroke-width="5"/>
+<circle cx="764" cy="377" r="18" fill="#294f67" stroke="#f8fbfd" stroke-width="5"/>
+<path d="M516 133c0-27 22-47 51-47h94c31 0 48 21 48 47 0 30-20 47-48 47h-35l-25 24v-24h-34c-30 0-51-19-51-47z" fill="#fff" stroke="#669ab7" stroke-width="4"/>
+<path d="M547 127h130m-130 21h89" fill="none" stroke="#94b9ce" stroke-width="7" stroke-linecap="round"/>
+</svg>
