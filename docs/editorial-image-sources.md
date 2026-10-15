@@ -673,3 +673,9 @@ Three new educational SVG assets created as original AutismHub vector markup; no
 | `autism-multidimensional-profile.svg` | AutismHub original SVG | Educational list of profile domains, not a diagnostic scoring tool. |
 | `autism-heterogeneity-influences.svg` | AutismHub original SVG | Conceptual distinctions among biology, age, health and environment; does not assign causality to parenting. |
 
+## Kazakhstan registered autism cases chart 2020-2024 (added 15 October 2026)
+
+| Local file | Data and visual provenance | Limitations |
+| --- | --- | --- |
+| `autism-kazakhstan-registered-2020-2024.svg` | Editable SVG bar chart included in AutismHub research page `statistika-autizma-kazahstan-2020-2026.md`; values are 3568, 4886, 6558, 9611 and 12456 registered people ages 0-17 for years 2020-2024, credited within the chart to Inbusiness.kz's 16 April 2025 report of Kazakhstan electronic registry figures. | Registration counts, not population prevalence, new diagnoses per year, or counts of all autistic people. Year-specific registry snapshot dates are not specified. Original individual data or patient records are not shown. |
+
