@@ -682,3 +682,9 @@ Fourteen hand-authored AutismHub SVG assets accompany the seven Russian guides t
 | `autism-heterogeneity-cover.svg` | Original AutismHub SVG | Conceptual pattern, not an individual connectome or subtype. |
 | `autism-multidimensional-profile.svg` | Original AutismHub SVG | Educational dimensions, not a clinical classification tool. |
 | `autism-heterogeneity-influences.svg` | Original AutismHub SVG | Conceptual genetics, development and environment interactions; does not imply parenting causes autism. |
+
+## Regional Kazakhstan autism registration comparison (15 October 2026)
+
+| File | Provenance and limitations |
+| --- | --- |
+| `kazakhstan-regional-autism-registration-2025.svg` | Original hand-authored AutismHub SVG bar chart. Three 2025 rates of registered children with ASD per 100,000 children: Astana 712.9, Kostanay region 492.8 and East Kazakhstan region 450.0. Data attributed to Kazakhstan Ministry of Health by Factcheck.kz (23 April 2026): https://factcheck.kz/articles/faktchek-deputaty-o-roste-chisla-detey-s-autizmom-v-kazahstane . This is an administrative registry comparison, not a population survey, causal estimate or map of the full country. No generated image or borrowed publisher figure used. |
