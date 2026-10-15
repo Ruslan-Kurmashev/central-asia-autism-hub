@@ -642,3 +642,23 @@ The three self-hosted SVG assets below are original AutismHub educational vector
 | `sensory-signal-processing-path.svg` | AutismHub original 15 October 2026 | Conceptual receptor, neural pathway, network and experience levels; actual processing is dynamic and not strictly linear. |
 | `sensory-responses-three-patterns.svg` | AutismHub original 15 October 2026 | Illustrative hyperreactivity, hyporeactivity and sensory seeking; these are not exclusive permanent subtypes or a prevalence chart. |
 
+## Scientific literacy: original covers and explanatory diagrams (15 October 2026)
+
+Fourteen hand-authored AutismHub SVG assets accompany the seven Russian guides to reading research. None is an AI-generated raster image or borrowed publisher artwork. Except for the final reading diagram, all numbers are synthetic. The last diagram redraws (without copying the original art) published values from Hviid et al., 2019 (DOI 10.7326/M18-2101): HR 0.93, 95% CI 0.85 to 1.02, with a linear scale and null value 1. Each cover is an abstract editorial illustration, not a scientific result.
+
+| File | Provenance and scope |
+| --- | --- |
+| `research-literacy-study-process-cover.svg` | Original AutismHub vector cover: последовательность исследования от вопроса до вывода; editorial-only, not measurement data. |
+| `research-literacy-study-process-diagram.svg` | Original AutismHub explanatory SVG: последовательность исследования от вопроса до вывода; see above for synthetic-data limitations and primary-paper exception. |
+| `research-literacy-study-designs-cover.svg` | Original AutismHub vector cover: сравнение поперечного, когортного, экспериментального и обзорного дизайна; editorial-only, not measurement data. |
+| `research-literacy-study-designs-diagram.svg` | Original AutismHub explanatory SVG: сравнение поперечного, когортного, экспериментального и обзорного дизайна; see above for synthetic-data limitations and primary-paper exception. |
+| `research-literacy-correlation-cover.svg` | Original AutismHub vector cover: различение статистической связи и причинных гипотез; editorial-only, not measurement data. |
+| `research-literacy-correlation-diagram.svg` | Original AutismHub explanatory SVG: различение статистической связи и причинных гипотез; see above for synthetic-data limitations and primary-paper exception. |
+| `research-literacy-statistics-cover.svg` | Original AutismHub vector cover: точечные оценки и ширина статистического интервала; editorial-only, not measurement data. |
+| `research-literacy-statistics-diagram.svg` | Original AutismHub explanatory SVG: точечные оценки и ширина статистического интервала; see above for synthetic-data limitations and primary-paper exception. |
+| `research-literacy-graphs-cover.svg` | Original AutismHub vector cover: два способа визуализировать одинаковые условные данные с разными осями; editorial-only, not measurement data. |
+| `research-literacy-graphs-diagram.svg` | Original AutismHub explanatory SVG: два способа визуализировать одинаковые условные данные с разными осями; see above for synthetic-data limitations and primary-paper exception. |
+| `research-literacy-contradictions-cover.svg` | Original AutismHub vector cover: оценки двух работ и перекрытие их интервалов; editorial-only, not measurement data. |
+| `research-literacy-contradictions-diagram.svg` | Original AutismHub explanatory SVG: оценки двух работ и перекрытие их интервалов; see above for synthetic-data limitations and primary-paper exception. |
+| `research-literacy-critical-reading-cover.svg` | Original AutismHub vector cover: первичная научная статья, опубликованная оценка и интервал; editorial-only, not measurement data. |
+| `research-literacy-critical-reading-diagram.svg` | Original AutismHub explanatory SVG: первичная научная статья, опубликованная оценка и интервал; see above for synthetic-data limitations and primary-paper exception. |

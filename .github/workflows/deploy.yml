@@ -34,6 +34,8 @@ jobs:
           python scripts/validate-professional-evidence-claim-form.py
           python scripts/build-professional-practice-tools.py
           python scripts/validate-professional-practice-tools.py
+          python scripts/build-research-reading-worksheet.py
+          python scripts/validate-research-reading-worksheet.py
       - name: Validate, build, and upload site
         uses: withastro/action@v6
         with:

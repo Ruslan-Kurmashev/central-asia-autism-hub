@@ -23,7 +23,7 @@
     "prebuild": "node scripts/sync-editorial-photos.mjs",
     "build": "astro build",
     "preview": "astro preview",
-    "validate": "npm run check:typography && npm run check:type-scale && npm run check:parent-articles && npm run check:learning-outcomes && npm run check && npm run build && npm run check:about-policies && npm run check:prelaunch-site && npm run check:internal-links && npm run check:learning-language-filter && npm run check:learning-filter-interactions && npm run check:professionals-directory && npm run check:professional-assessment && npm run check:professional-articles && npm run check:evidence-support && npm run check:professional-ethics && npm run check:professional-practice-tools && npm run check:kz-professional-library && npm run check:accessibility-html && npm run check:english-design && npm run check:research-routes && npm run check:research-editorial && npm run check:research-images && npm run check:kazakh-design && npm run check:kz-help-en-translations && npm run check:kz-help-kk-translations && npm run check:kz-help-editorial && npm run check:parent-images && npm run audit:parent-visuals && npm run check:kz-legal && npm run check:intervention-safety && npm run check:behavior-aac-safety && npm run check:training-skills-safety",
+    "validate": "npm run check:typography && npm run check:type-scale && npm run check:parent-articles && npm run check:learning-outcomes && npm run check && npm run build && npm run check:about-policies && npm run check:prelaunch-site && npm run check:internal-links && npm run check:learning-language-filter && npm run check:learning-filter-interactions && npm run check:professionals-directory && npm run check:professional-assessment && npm run check:professional-articles && npm run check:evidence-support && npm run check:professional-ethics && npm run check:professional-practice-tools && npm run check:kz-professional-library && npm run check:accessibility-html && npm run check:english-design && npm run check:research-routes && npm run check:research-literacy && npm run check:research-editorial && npm run check:research-images && npm run check:kazakh-design && npm run check:kz-help-en-translations && npm run check:kz-help-kk-translations && npm run check:kz-help-editorial && npm run check:parent-images && npm run audit:parent-visuals && npm run check:kz-legal && npm run check:intervention-safety && npm run check:behavior-aac-safety && npm run check:training-skills-safety",
     "check:internal-links": "node scripts/check-internal-links.mjs",
     "check:english-design": "node scripts/check-english-design.mjs",
     "check:research-routes": "node scripts/check-research-routes.mjs",
@@ -43,7 +43,8 @@
     "check:training-skills-safety": "node scripts/check-training-skills-safety.mjs",
     "check:evidence-support": "node scripts/check-professional-evidence.mjs",
     "check:professional-ethics": "node scripts/check-professional-ethics.mjs",
-    "check:professional-practice-tools": "node scripts/check-professional-practice-tools.mjs"
+    "check:professional-practice-tools": "node scripts/check-professional-practice-tools.mjs",
+    "check:research-literacy": "node scripts/check-research-literacy.mjs"
   },
   "dependencies": {
     "@astrojs/sitemap": "3.7.3",
