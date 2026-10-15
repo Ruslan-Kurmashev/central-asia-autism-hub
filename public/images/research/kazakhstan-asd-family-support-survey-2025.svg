@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="710" viewBox="0 0 1200 710" role="img" aria-labelledby="chart-title chart-description">
+<title id="chart-title">Опрос 390 родителей в Казахстане: финансовая поддержка и изменение занятости</title>
+<desc id="chart-description">Оригинальная столбчатая диаграмма по Imamatdinova и соавторам, BMC Public Health, 2025: 73,3 процента опрошенных сообщили о недостаточной государственной финансовой поддержке; 25,4 процента сообщали об уходе с работы; 18,8 процента об изменении вида занятости или графика. Это отдельные ответы одной исследовательской выборки, они не суммируются, не характеризуют всех родителей Казахстана и не являются причинными эффектами.</desc>
+<rect width="1200" height="710" rx="20" fill="#f3f8fb"/>
+<rect x="37" y="34" width="1126" height="640" rx="22" fill="white" stroke="#cbdde7" stroke-width="2"/>
+<g font-family="Arial,sans-serif">
+<text x="70" y="99" fill="#143e59" font-size="32" font-weight="700">С какими трудностями сталкивались опрошенные семьи?</text>
+<text x="70" y="141" fill="#4d7084" font-size="21">Опрос 390 родителей детей с РАС в Казахстане, публикация 2025 года</text>
+<g stroke="#d6e6ee" stroke-width="2"><line x1="500" y1="205" x2="500" y2="525"/><line x1="642" y1="205" x2="642" y2="525"/><line x1="784" y1="205" x2="784" y2="525"/><line x1="926" y1="205" x2="926" y2="525"/><line x1="1068" y1="205" x2="1068" y2="525"/></g>
+<g fill="#597588" font-size="16" text-anchor="middle"><text x="500" y="193">0%</text><text x="642" y="193">25%</text><text x="784" y="193">50%</text><text x="926" y="193">75%</text><text x="1068" y="193">100%</text></g>
+<g fill="#153e5a" font-size="20" font-weight="700">
+<text x="72" y="272">Недостаточная</text><text x="72" y="298">господдержка</text>
+<text x="72" y="373">Уход с работы</text>
+<text x="72" y="465">Смена занятости</text><text x="72" y="491">или графика</text>
+</g>
+<rect x="500" y="248" width="416.3" height="55" rx="10" fill="#24698b"/>
+<rect x="500" y="353" width="144.3" height="55" rx="10" fill="#5084a1"/>
+<rect x="500" y="458" width="106.8" height="55" rx="10" fill="#719bb2"/>
+<g fill="#153e5a" font-size="27" font-weight="700"><text x="929" y="285">73,3%</text><text x="659" y="390">25,4%</text><text x="621" y="495">18,8%</text></g>
+<rect x="70" y="559" width="1060" height="77" rx="12" fill="#eff6f9"/>
+<text x="91" y="590" fill="#284f6a" font-size="18">Показатели описывают разные ответы и могут пересекаться. Их нельзя суммировать.</text>
+<text x="91" y="616" fill="#4d7188" font-size="17">Источник: Imamatdinova et al., BMC Public Health (2025), DOI 10.1186/s12889-025-23764-3.</text>
+</g>
+</svg>
