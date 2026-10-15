@@ -110,7 +110,8 @@ for (const locale of ['ru', 'en', 'kk']) {
 
     assert.ok(src, `Published article missing featuredImage: ${article}`);
     assert.ok(alt.length >= 30, `Missing descriptive featuredImageAlt: ${article}`);
-    assert.ok(src.startsWith(`${base}images/editorial/`),
+    assert.ok(src.startsWith(`${base}images/editorial/`) ||
+      (value(frontmatter, 'section') === 'research' && src.startsWith(`${base}images/research/`)),
       `Editorial image is not self-hosted: ${article}: ${src}`);
     const localFile = path.resolve(publicDir, src.slice(base.length));
     assert.ok(localFile.startsWith(publicDir + path.sep),
