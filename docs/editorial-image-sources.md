@@ -662,3 +662,14 @@ Fourteen hand-authored AutismHub SVG assets accompany the seven Russian guides t
 | `research-literacy-contradictions-diagram.svg` | Original AutismHub explanatory SVG: оценки двух работ и перекрытие их интервалов; see above for synthetic-data limitations and primary-paper exception. |
 | `research-literacy-critical-reading-cover.svg` | Original AutismHub vector cover: первичная научная статья, опубликованная оценка и интервал; editorial-only, not measurement data. |
 | `research-literacy-critical-reading-diagram.svg` | Original AutismHub explanatory SVG: первичная научная статья, опубликованная оценка и интервал; see above for synthetic-data limitations and primary-paper exception. |
+
+## Original autism heterogeneity diagrams (15 October 2026)
+
+Three new educational SVG assets created as original AutismHub vector markup; no generative image models, publisher reproductions, stock photos, diagnostic figures or identifiable participant data.
+
+| Asset | Authorship | Limitations |
+| --- | --- | --- |
+| `autism-heterogeneity-cover.svg` | AutismHub original SVG | Conceptual diversity, not a measured brain connectome or subtype. |
+| `autism-multidimensional-profile.svg` | AutismHub original SVG | Educational list of profile domains, not a diagnostic scoring tool. |
+| `autism-heterogeneity-influences.svg` | AutismHub original SVG | Conceptual distinctions among biology, age, health and environment; does not assign causality to parenting. |
+
