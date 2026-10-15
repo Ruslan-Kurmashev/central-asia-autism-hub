@@ -68,15 +68,19 @@ const home = await readFile(path.join(root, 'dist/kz/ru/index.html'), 'utf8');
 const cards = [...home.matchAll(/<article\b[^>]*\bclass="[^"]*\bhome-v2__card--article\b[^"]*"[^>]*>[\s\S]*?<\/article>/g)]
   .map(match => match[0])
   .filter(card => card.includes(base + 'kz/ru/research/'));
-assert.equal(cards.length, 1, 'Homepage must feature one research explainer in the balanced updates feed');
+// Chronological updates may contain zero, one or several scientific explainers.
+// The dedicated research collection uses curated Pexels cards; explanatory
+// research pages in the pages collection carry their own editorial cover.
 const featuredPhotos = new Set();
 for (const card of cards) {
   const slug = card.match(/href="\/central-asia-autism-hub\/kz\/ru\/research\/([a-z0-9-]+)\/"/)?.[1];
-  assert.ok(slug && visuals.has(slug), 'Homepage research card has an unmapped article slug');
-  const src = base + visuals.get(slug);
-  assert.ok(card.includes('src="' + src + '"'),
-    'Homepage research highlight does not use its own specific photo: ' + slug);
-  featuredPhotos.add(src);
+  assert.ok(slug, 'Homepage research article must have a local article link');
+  if (visuals.has(slug)) {
+    const src = base + visuals.get(slug);
+    assert.ok(card.includes('src="' + src + '"'),
+      'Homepage research highlight does not use its specific photo: ' + slug);
+    assert.ok(!featuredPhotos.has(src), 'Research photos must remain distinct');
+    featuredPhotos.add(src);
+  }
 }
-assert.equal(featuredPhotos.size, cards.length, 'Homepage research card photos must be distinct');
-console.log('Research visual QA passed: ' + published.length + ' unique documented local covers; ' + featuredPhotos.size + ' distinct homepage research highlights.');
+console.log('Research visual QA passed: ' + published.length + ' unique documented research covers; ' + featuredPhotos.size + ' research-collection cards in the chronological homepage feed.');

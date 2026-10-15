@@ -66,45 +66,25 @@ const publishedPages = (
     (left.data.publishedAt?.getTime() ?? 0),
 );
 
-// The family-first landing page must not be taken over by a batch of newly
-// published professional legal documents. Keep useful, reviewed resources from
-// families, Kazakhstan services and research visible together.
-const publishedResearch = (await getCollection(
+// The homepage is a true chronological publication feed, not a curated set
+// with reserved section slots. Every newly published article pushes the older
+// entries down by one position, regardless of its section or collection.
+const publishedResearch = await getCollection(
   'research',
   ({ data }) =>
     !data.draft &&
     data.language === locale &&
     data.translationStatus !== 'pending' &&
     Boolean(data.publishedAt),
-)).sort(
-  (left, right) =>
-    (right.data.publishedAt?.getTime() ?? 0) -
-    (left.data.publishedAt?.getTime() ?? 0),
 );
-// Select recent published articles from different sections to avoid dominance
-// by large batches of professional documents or parent materials.
-const recentCandidates = [
+const homeMaterials = [
   ...publishedPages.filter((entry) => entry.data.section !== 'about'),
   ...publishedResearch,
-].sort((a, b) =>
-  (b.data.publishedAt?.getTime() ?? 0) - (a.data.publishedAt?.getTime() ?? 0),
-);
-const prioritySections: Section[] = [
-  'parents', 'help-kazakhstan', 'research', 'learning', 'professionals',
-];
-const featuredUpdates = prioritySections
-  .map((section) => recentCandidates.find((entry) =>
-    entry.data.section === section && (section !== 'research' || entry.collection === 'research'),
-  ))
-  .filter((entry): entry is (typeof recentCandidates)[number] => Boolean(entry));
-const includedUpdates = new Set(featuredUpdates.map((entry) => entry.collection + ':' + entry.id));
-const extraUpdates = recentCandidates.filter((entry) =>
-  !includedUpdates.has(entry.collection + ':' + entry.id) &&
-  entry.data.section !== 'research' && entry.data.section !== 'professionals',
-).slice(0, Math.max(0, 6 - featuredUpdates.length));
-const homeMaterials = [...featuredUpdates, ...extraUpdates]
+]
   .sort((a, b) =>
-    (b.data.publishedAt?.getTime() ?? 0) - (a.data.publishedAt?.getTime() ?? 0),
+    (b.data.publishedAt?.getTime() ?? 0) - (a.data.publishedAt?.getTime() ?? 0) ||
+    (b.data.updatedAt?.getTime() ?? 0) - (a.data.updatedAt?.getTime() ?? 0) ||
+    (a.collection + ':' + a.id).localeCompare(b.collection + ':' + b.id),
   )
   .slice(0, 6);
 const homeV2Labels = locale === 'en'

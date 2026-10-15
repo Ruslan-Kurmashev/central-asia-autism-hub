@@ -123,7 +123,7 @@ for (const locale of locales) {
   const featured = [...homepage.matchAll(/<article\b[^>]*\bclass="[^"]*\bhome-v2__card--article\b[^"]*"[^>]*>[\s\S]*?<\/article>/g)]
     .map(match => match[0])
     .filter(card => card.includes('/kz/' + locale + '/help-kazakhstan/'));
-  if (featured.length < 1) errors.push(locale + ': missing featured help cards on homepage');
+  // A chronological homepage can contain no help cards until a newer guide is published.
   const seenFeatured = new Set();
   for (const card of featured) {
     const href = card.match(/href="([^"]*\/help-kazakhstan\/[^"]+)"/)?.[1] ?? '';

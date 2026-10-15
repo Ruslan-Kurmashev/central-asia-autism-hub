@@ -19,6 +19,48 @@ const expectedMainNavigation = {
   en: ['Home', 'For Parents', 'Research Explained', 'Help in Kazakhstan', 'Learning', 'For Professionals', 'About'],
 };
 
+// Verify the six home cards against all publication frontmatters, rather than
+// allocating permanent positions to selected sections.
+function frontValue(frontmatter, key) {
+  const line = frontmatter.split(/\r?\n/).find(row => row.startsWith(key + ':'));
+  return line?.slice(key.length + 1).trim().replace(/^["']|["']$/g, '') ?? '';
+}
+async function expectedRecentArticles(lang) {
+  const entries = [];
+  for (const [collection, directory] of [
+    ['pages', path.resolve('src/content/pages/kz', lang)],
+    ['research', path.resolve('src/content/research')],
+  ]) {
+    const filenames = (await readdir(directory)).filter(name => /\.mdx?$/.test(name));
+    for (const filename of filenames) {
+      const raw = await readFile(path.join(directory, filename), 'utf8');
+      const front = raw.match(/^---\s*\r?\n([\s\S]*?)\r?\n---/)?.[1] ?? '';
+      if (!front || frontValue(front, 'draft') !== 'false' ||
+          frontValue(front, 'language') !== lang ||
+          frontValue(front, 'translationStatus') === 'pending' ||
+          !frontValue(front, 'publishedAt') ||
+          frontValue(front, 'section') === 'about') continue;
+      const published = Date.parse(frontValue(front, 'publishedAt'));
+      if (!Number.isFinite(published)) continue;
+      const updated = Date.parse(frontValue(front, 'updatedAt')) || 0;
+      const id = collection === 'pages'
+        ? 'kz/' + lang + '/' + filename.replace(/\.mdx?$/, '')
+        : filename.replace(/\.mdx?$/, '');
+      entries.push({
+        id: collection + ':' + id,
+        section: frontValue(front, 'section'),
+        slug: frontValue(front, 'slug'),
+        published,
+        updated,
+      });
+    }
+  }
+  return entries
+    .sort((a, b) => b.published - a.published ||
+      b.updated - a.updated || a.id.localeCompare(b.id))
+    .slice(0, 6);
+}
+
 function checkLocalizedHeader(html, lang, id) {
   const header = html.match(/<header class="site-header">([\s\S]*?)<\/header>/)?.[0] ?? '';
   const navigation = header.match(/<nav class="primary-nav"[\s\S]*?<\/nav>/)?.[0] ?? '';
@@ -130,8 +172,17 @@ for (const lang of locales) {
   check(!html.includes('home-v2__card--statement') &&
     !html.includes('home-v2__card--principles'),
     id + ': redundant informational cards must not reappear on homepage');
-  check(cards.filter(card => card.includes(base + lang + '/professionals/')).length <= 1,
-    id + ': professional documents should not dominate the homepage');
+  const expectedLatest = await expectedRecentArticles(lang);
+  check(expectedLatest.length === 6, id + ': expected six latest articles in source');
+  for (const [index, item] of expectedLatest.entries()) {
+    const expectedLink = base + lang + '/' + item.section + '/' + item.slug + '/';
+    check(Boolean(cards[index]?.includes('href="' + expectedLink + '"')),
+      id + ': recent card ' + (index + 1) +
+      ' must be the matching latest publication regardless of section: ' + expectedLink);
+    const date = cards[index]?.match(/<time datetime="([^"]+)"/)?.[1];
+    check(Boolean(date) && Date.parse(date) === item.published,
+      id + ': incorrect publication date on card ' + (index + 1));
+  }
   if (lang === 'ru') {
     const toolComparisonCard = cards.find(card => card.includes('/ados-2-adi-r-cars-2-vozmozhnosti-ogranicheniya/'));
     if (toolComparisonCard) check(toolComparisonCard.includes('professional-ados-adi-cars-central-asia.webp'),
@@ -146,8 +197,6 @@ for (const lang of locales) {
     if (referralCard) check(referralCard.includes('professional-early-referral-family-consultation.jpg'),
       id + ': early referral article needs its consultation photograph, not the diagram cover');
   }
-  check(cards.some(card => card.includes(base + lang + '/parents/')),
-    id + ': latest feed must contain a parent information article');
   if (lang === 'ru') {
     const meltdownCard = cards.find(card => card.includes('/meltdaun-i-shatdaun-pri-autizme/'));
     if (meltdownCard) check(meltdownCard.includes('parent-meltdown-overload-covering-ear.jpg'),
@@ -166,20 +215,6 @@ for (const lang of locales) {
     check(communicationArticleHtml.includes('parent-communication-drawings-family.jpg'),
       id + ': published communication article cover is not updated');
   }
-  check(cards.some(card => card.includes(base + lang + '/help-kazakhstan/')),
-    id + ': Kazakhstan support must be represented on the homepage');
-  if (lang === 'ru') {
-    check(cards.some(card => card.includes(base + lang + '/research/')),
-      id + ': published research explainers are omitted from the homepage');
-    const researchCards = cards.filter(card => card.includes(base + lang + '/research/'));
-    check(researchCards.length === 1, id + ': expected one scientific update');
-    check(researchCards.every(card => card.includes('images/editorial/photos/research-')),
-      id + ': research highlights must use locally hosted, topic-specific photographs');
-    const images = researchCards.map(card => card.match(/src="([^"]*\/images\/editorial\/photos\/research-[^"]+\.jpg)"/)?.[1]);
-    check(images.every(Boolean) && new Set(images).size === researchCards.length,
-      id + ': research highlights must not share the same image');
-  }
-
   for (const anchor of ['editorial', 'privacy', 'accessibility']) {
     check(html.includes('href="' + base + lang + '/about/policies/#' + anchor + '"'),
       id + ': footer policy link missing: ' + anchor);
@@ -243,5 +278,5 @@ if (errors.length) {
   console.error('Prelaunch navigation and homepage audit FAILED:\n' + errors.map(x => ' - ' + x).join('\n'));
   process.exitCode = 1;
 } else {
-  console.log('Prelaunch navigation QA passed: 3 language-specific homepages, 18 section routes, 18 balanced recent article cards, footer anchors, missing-translation routing, image labels, focus and >=4.5:1 secondary-text contrast.');
+  console.log('Prelaunch navigation QA passed: 3 language-specific homepages, 18 section routes, 18 chronologically ordered recent article cards, footer anchors, missing-translation routing, image labels, focus and >=4.5:1 secondary-text contrast.');
 }
