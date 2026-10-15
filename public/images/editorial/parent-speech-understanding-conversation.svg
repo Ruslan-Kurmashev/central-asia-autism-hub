@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 540" role="img" aria-labelledby="t d">
+<title id="t">Общение, понимание речи и выражение смысла</title>
+<desc id="d">Редакционная векторная схема: два поля с условными речевыми облаками, между которыми располагаются элементы общения - жест, предмет, изображение и слова. Не клиническая инфографика или тест.</desc>
+<rect width="960" height="540" fill="#e9f2f8"/>
+<rect x="44" y="47" width="872" height="446" rx="28" fill="#f8fbfd" stroke="#c8dce9" stroke-width="2"/>
+<rect x="96" y="95" width="346" height="335" rx="22" fill="#e2eff6" stroke="#9dbbd0" stroke-width="2"/>
+<rect x="518" y="95" width="346" height="335" rx="22" fill="#edf3ee" stroke="#a7c5b8" stroke-width="2"/>
+<g fill="#fff" stroke="#5785aa" stroke-width="4">
+<path d="M157 197 Q157 157 200 157 H318 Q359 157 359 197 V237 Q359 276 320 276 H247 L206 305 V276 H199 Q157 276 157 236Z"/>
+<path d="M596 197 Q596 157 638 157 H759 Q798 157 798 197 V237 Q798 276 758 276 H714 L674 305 V276 H637 Q596 276 596 236Z"/>
+</g>
+<g stroke="#4c7697" stroke-width="9" stroke-linecap="round" fill="none">
+<path d="M200 203 H319"/>
+<path d="M200 229 H275"/>
+<path d="M638 203 H746"/>
+<path d="M638 229 H720"/>
+</g>
+<g>
+<circle cx="267" cy="355" r="29" fill="#d6e8f2" stroke="#719bb9" stroke-width="3"/>
+<path d="M250 352 Q267 331 284 352 M253 362 Q268 369 282 362" fill="none" stroke="#315f94" stroke-width="4" stroke-linecap="round"/>
+<circle cx="692" cy="355" r="29" fill="#e2eee7" stroke="#8aada0" stroke-width="3"/>
+<path d="M679 360 L689 371 L708 342" fill="none" stroke="#437f70" stroke-width="5" stroke-linejoin="round" stroke-linecap="round"/>
+</g>
+<circle cx="481" cy="232" r="55" fill="#fff" stroke="#9fbdd4" stroke-width="3"/>
+<rect x="461" y="211" width="41" height="42" rx="8" fill="#f5d9a8" stroke="#ba995f" stroke-width="2"/>
+<path d="M475 207 V194 M490 207 V194 M504 215 L517 209" stroke="#ba995f" stroke-width="5" stroke-linecap="round"/>
+<path d="M449 228 H432 M516 228 H533" stroke="#8daac2" stroke-width="4" stroke-linecap="round"/>
+<path d="M442 332 C453 314 463 306 482 309 C501 306 512 314 523 332" fill="none" stroke="#7da3bf" stroke-width="7" stroke-linecap="round"/>
+<path d="M442 359 C455 374 470 381 482 381 C494 381 510 374 523 359" fill="none" stroke="#7da3bf" stroke-width="6" stroke-linecap="round"/>
+<path d="M126 454 H396 M562 454 H831" stroke="#d2e1ec" stroke-width="4" stroke-linecap="round"/>
+</svg>
