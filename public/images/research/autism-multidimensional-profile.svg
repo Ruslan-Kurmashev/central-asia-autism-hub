@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1100 875" role="img" aria-labelledby="t d">
+<title id="t">Аутизм - не единая шкала тяжести, а многомерный профиль</title>
+<desc id="d">Вокруг центрального круга «Индивидуальный профиль» расположены шесть самостоятельных блоков: коммуникация, сенсорика, повседневные навыки, внимание и обучение, здоровье и сопутствующие состояния, интересы и сильные стороны. Линии обозначают взаимодействие, а не цифры, тяжесть заболевания или подтипы.</desc>
+<rect width="1100" height="875" rx="22" fill="#f1f8fc"/>
+<text x="44" y="65" font-family="Arial,sans-serif" font-size="29" font-weight="700" fill="#17476c">Не линия от «лёгкого» к «тяжёлому»</text>
+<text x="44" y="100" font-family="Arial,sans-serif" font-size="18" fill="#53758d">Профиль состоит из разных областей, каждая из которых имеет значение</text>
+<g fill="none" stroke="#6ca1c1" stroke-width="5" stroke-linecap="round"><path d="M554 423 L258 242 M554 423 L834 242 M554 423 L248 434 M554 423 L849 434 M554 423 L258 626 M554 423 L833 626"/></g>
+<g fill="#fff" stroke="#9ac1da" stroke-width="3"><rect x="72" y="170" width="348" height="121" rx="18"/><rect x="688" y="170" width="338" height="121" rx="18"/><rect x="72" y="362" width="348" height="121" rx="18"/><rect x="688" y="362" width="338" height="121" rx="18"/><rect x="72" y="554" width="348" height="121" rx="18"/><rect x="688" y="554" width="338" height="121" rx="18"/></g>
+<circle cx="552" cy="423" r="112" fill="#307eae" stroke="#fff" stroke-width="7"/>
+<g fill="#fff" font-family="Arial,sans-serif" font-size="25" font-weight="700" text-anchor="middle"><text x="552" y="414">Индивидуальный</text><text x="552" y="447">профиль</text></g>
+<g font-family="Arial,sans-serif" fill="#22577b" text-anchor="middle" font-size="23" font-weight="700"><text x="246" y="222">Коммуникация</text><text x="857" y="222">Сенсорика</text><text x="246" y="412">Навыки быта</text><text x="857" y="412">Внимание и учёба</text><text x="246" y="607">Здоровье</text><text x="857" y="607">Интересы и силы</text></g>
+<g font-family="Arial,sans-serif" fill="#50778e" text-anchor="middle" font-size="17"><text x="246" y="253">Речь, жесты, AAC</text><text x="857" y="253">Разные реакции</text><text x="246" y="444">Самостоятельность</text><text x="857" y="444">Индивидуальные способы</text><text x="246" y="639">Сон, тревога и др.</text><text x="857" y="639">Предпочтения и умения</text></g>
+<rect x="44" y="735" width="1010" height="102" rx="16" fill="#deedf7"/>
+<text x="69" y="772" font-family="Arial,sans-serif" font-size="18" font-weight="700" fill="#204d70">Важно:</text>
+<text x="169" y="772" font-family="Arial,sans-serif" font-size="18" fill="#3b607b">этот рисунок - перечень характеристик, а не шкала оценки.</text>
+<text x="69" y="803" font-family="Arial,sans-serif" font-size="18" fill="#3b607b">Две семьи могут нуждаться в совершенно разной поддержке при одном диагнозе.</text>
+</svg>
