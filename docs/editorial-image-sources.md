@@ -546,3 +546,14 @@ These three original AutismHub self-hosted geometric SVG illustrations were prep
 | `professional-ethics-clinical-scope.svg` | Original AutismHub geometric SVG illustration, 14 October 2026 | Separate professional scopes, an abstract health symbol and a safe coordination route; does not grant diagnostic or restraint authority. |
 | `professional-ethics-rights-participation.svg` | Original AutismHub geometric SVG illustration, 14 October 2026 | Four neutral symbols for rights, accessible communication, supported choice and participation; not a reproduction of UN insignia or a legal rights chart. |
 | `professional-ethics-data-ai-privacy.svg` | Original AutismHub geometric SVG illustration, 14 October 2026 | Abstract document, data flow, security shield and controlled access; not a claim of legal compliance, encryption certification or AI accuracy. |
+
+## Biology of autism introductory explainer: original SVG graphics (15 October 2026)
+
+These two self-hosted assets were authored as original vector SVG markup for AutismHub. No stock photos, external research figures, branded diagrams, patient images, proprietary datasets, or generative image model outputs were used. The illustrations provide educational metaphors, not actual microscopy, neuroimaging, participants or patient-specific biological findings. SVG source remains editable in the repository.
+
+| Asset | Location | Purpose and limitations |
+| --- | --- | --- |
+| `autism-biology-overview-cover.svg` | `public/images/research/` | Abstract neuron-like network cover with no identifiable individuals. The drawing does not represent a measured brain network, diagnostic test or proven universal neurobiological autism signature. |
+| `autism-biology-levels-diagram.svg` | `public/images/research/` | Four-level conceptual map of genetic variation, cellular development, neural networks and individual characteristics; separately notes still-investigated environmental and other contributions. The arrows are illustrative and do not assert a causal chain in every autistic person. |
+
+Review requirement: check legibility on mobile screen sizes and ensure captions remain adjacent to figures when the Markdown draft is published.
