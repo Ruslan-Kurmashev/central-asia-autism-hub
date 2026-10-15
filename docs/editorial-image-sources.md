@@ -789,3 +789,14 @@ Three original editable SVGs written for AutismHub, without generated images, me
 | File | Authorship, numerical source and limitations |
 | --- | --- |
 | `kazakhstan-asd-family-support-survey-2025.svg` | Original hand-authored AutismHub SVG horizontal bar chart, based on three separately reported results from a sample of 390 parents in Imamatdinova et al. (2025), BMC Public Health: 73.3% reported insufficient state financial support; 25.4% reported leaving employment; 18.8% changing employment or schedules. Primary scientific source: https://doi.org/10.1186/s12889-025-23764-3 . Percentages refer to survey answers in the same non-probability sample; outcomes can overlap and must not be added, generalized to the national population, or interpreted as causal effects. Vector is original code, no AI-generated images, patient images, publisher figures or identifiable personal data. |
+
+## Parent daily independence and self-care visuals (15 October 2026)
+
+| File | Provenance and limitations |
+| --- | --- |
+| `parent-daily-independence-cover.svg` | Original AutismHub source-coded vector of simple clothing, cup and toy storage symbols. Conceptual editorial illustration, not a developmental measure or patient image. |
+| `selfcare-shirt-sequence.svg` | Original AutismHub schematic of partial assistance with putting on a shirt, three approximate stages. Does not prescribe a therapeutic protocol. |
+| `selfcare-handwashing-sequence.svg` | Original AutismHub handwashing schematic with four approximate stages. Refer to NHS guidance for hygiene and supervision. |
+| `selfcare-table-sequence.svg` | Original AutismHub three-stage schematic for preparing an accessible meal place, without external borrowed art. |
+
+Three Russian educational PDF resources at `public/downloads/selfcare/` are generated at deployment using `scripts/build-parent-daily-independence-pdfs.py` and editable parent instructions in `scripts/data/parent-daily-independence-tasks-ru.json`. The diagrams and cards are neither a standardized scale nor an individual self-care therapy programme. NHS, CDC, AAP and NICE sources are linked from the article.
