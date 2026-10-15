@@ -50,7 +50,7 @@ sources:
     accessedAt: 2026-10-15
   - title: "Generalizability and reproducibility of functional connectivity in autism"
     url: "https://pmc.ncbi.nlm.nih.gov/articles/PMC6591952/"
-    organisation: "Scientific Reports"
+    organisation: "Molecular Autism"
     publicationYear: 2019
     note: "Проверка воспроизводимости отдельных выводов о функциональной связности на многоцентровых данных ABIDE."
     accessedAt: 2026-10-15
