@@ -569,3 +569,14 @@ These are **real Pexels stock photographs**, not AI-generated images. They are i
 
 These photo files are downloaded and verified during the standard build using `scripts/sync-editorial-photos.mjs`, then served as first-party static assets without client-side Pexels hotlinks. License: https://www.pexels.com/license/ (checked 15 October 2026).
 
+## Professional practical guides: original geometric SVG covers (15 October 2026)
+
+These five original AutismHub diagrams belong to the Russian-language "Workflows and tools" professional guides. They are deliberately abstract: no identifiable people, proprietary visual communication symbols, licensed tests, diagnoses, real clinical data, brand claims or institutional logos. All represent conceptual processes rather than tested clinical algorithms or official Kazakhstan forms.
+
+| Self-hosted SVG | Provenance | What the diagram illustrates and does not validate |
+| --- | --- | --- |
+| `professional-tools-family-pathway.svg` | Original self-authored AutismHub SVG, 15 October 2026 | Family referral and return of feedback across services; not a statutory referral pathway. |
+| `professional-tools-support-plan.svg` | Original self-authored AutismHub SVG, 15 October 2026 | Individual goals, measured progress and review; not an official state IEP or treatment plan. |
+| `professional-tools-aac-selection.svg` | Original self-authored AutismHub SVG, 15 October 2026 | AAC options and comparison; no reproduction of proprietary AAC pictures or communication boards. |
+| `professional-tools-fba-observation.svg` | Original self-authored AutismHub SVG, 15 October 2026 | ABC observation and alternative hypotheses; not a test of causal function or formal FBA. |
+| `professional-tools-environment-access.svg` | Original self-authored AutismHub SVG, 15 October 2026 | Accessibility of class/clinic environment; not an approved facility safety inspection. |

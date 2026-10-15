@@ -32,7 +32,7 @@ for (const [locale, copy] of Object.entries(expected)) {
   assert.ok(html.includes('professional-directory__grid'), locale + ': missing category grid');
   assert.ok(html.includes('professional-directory__card'), locale + ': missing cards');
   assert.ok(html.includes(copy.back), locale + ': missing back navigation');
-  assert.ok(html.includes(copy.pending), locale + ': missing draft markers');
+  if (locale !== 'ru') assert.ok(html.includes(copy.pending), locale + ': missing draft markers');
   assert.equal((html.match(/class="professional-directory__title-row"/g) ?? []).length, 7, locale + ': header and six category headings must have title rows');
   assert.equal((html.match(/class="professional-directory__training-link"/g) ?? []).length, 7, locale + ': training link must sit beside each heading');
   assert.equal(html.split('<h1').length - 1, 1, locale + ': page should have exactly one H1');
@@ -48,9 +48,9 @@ for (const [locale, copy] of Object.entries(expected)) {
   assert.equal((html.match(/class="professional-directory__card"/g) ?? []).length, 6, locale + ': expected six area cards');
   assert.equal((html.match(/class="professional-directory__detail"/g) ?? []).length, 6, locale + ': expected six detail panels');
   assert.equal((html.match(/class="professional-directory__item"/g) ?? []).length, 30, locale + ': expected 30 direct planned resources; international country folders are counted separately');
-  // The RU directory has three additional ethics guides and five remaining pending direct entries.
+  // The RU directory has all 30 direct planned practitioner entries published.
   // Internal-link QA separately verifies that linked destination pages exist.
-  assert.equal((html.match(/class="professional-directory__status"/g) ?? []).length, locale === 'ru' ? 5 : 30, locale + ': only genuinely published direct entries should be linked');
+  assert.equal((html.match(/class="professional-directory__status"/g) ?? []).length, locale === 'ru' ? 0 : 30, locale + ': only genuinely published direct entries should be linked');
   if (locale === 'ru') {
     const articleHref = '/central-asia-autism-hub/kz/ru/professionals/kak-rabotat-s-professionalnymi-rekomendaciyami/';
     assert.ok(html.includes('href="' + articleHref + '"'), 'Russian first professional resource must have a working article link');

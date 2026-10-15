@@ -28,6 +28,8 @@ jobs:
           python scripts/validate-assessment-toolkit.py
           python scripts/build-professional-evidence-claim-form.py
           python scripts/validate-professional-evidence-claim-form.py
+          python scripts/build-professional-practice-tools.py
+          python scripts/validate-professional-practice-tools.py
 
       - name: Set up Node.js
         uses: actions/setup-node@v6
