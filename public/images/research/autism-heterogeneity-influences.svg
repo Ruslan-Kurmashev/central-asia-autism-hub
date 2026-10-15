@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1100 885" role="img" aria-labelledby="t d">
+<title id="t">Откуда берётся разнообразие профилей аутизма</title>
+<desc id="d">Схематическая модель: разная наследственная информация и нейроразвитие, сопутствующие состояния, доступная коммуникация, условия среды, возраст и опыт совместно влияют на наблюдаемые навыки и потребности. Стрелки не означают, что воспитание или окружающая среда вызывают аутизм. Нет математических весов или количественных данных.</desc>
+<rect width="1100" height="885" rx="22" fill="#f0f7fc"/>
+<text x="50" y="68" font-family="Arial,sans-serif" font-size="30" font-weight="700" fill="#17466e">Почему профили и потребности не совпадают</text>
+<text x="50" y="105" font-family="Arial,sans-serif" font-size="18" fill="#53748d">Несколько взаимосвязанных уровней, а не одна причина</text>
+<g fill="#fff" stroke="#a8cadd" stroke-width="2"><rect x="75" y="156" width="446" height="142" rx="19"/><rect x="579" y="156" width="446" height="142" rx="19"/><rect x="75" y="333" width="446" height="142" rx="19"/><rect x="579" y="333" width="446" height="142" rx="19"/><rect x="75" y="510" width="446" height="142" rx="19"/><rect x="579" y="510" width="446" height="142" rx="19"/></g>
+<g font-family="Arial,sans-serif" fill="#225579" font-size="23" font-weight="700"><text x="104" y="210">Генетические варианты</text><text x="607" y="210">Развитие нервных сетей</text><text x="104" y="386">Сопутствующие состояния</text><text x="607" y="386">Общение и доступная AAC</text><text x="104" y="563">Возраст и приобретённые навыки</text><text x="607" y="563">Среда и поддержка</text></g>
+<g font-family="Arial,sans-serif" fill="#4e7188" font-size="18"><text x="104" y="252">Обычные и редкие варианты ДНК</text><text x="607" y="252">Разные клеточные пути</text><text x="104" y="429">Сон, тревога, эпилепсия и др.</text><text x="607" y="429">Слова, жесты, устройства, выбор</text><text x="104" y="606">Изменение требований и опыта</text><text x="607" y="606">Доступность, прогнозируемость</text></g>
+<g fill="none" stroke="#4a84ac" stroke-width="5" stroke-linecap="round"><path d="M270 667 V710 M830 667 V710 M270 710 H830 M550 710 V735"/></g>
+<rect x="190" y="735" width="720" height="90" rx="18" fill="#2f79a8"/>
+<text x="550" y="775" font-family="Arial,sans-serif" font-size="25" font-weight="700" text-anchor="middle" fill="#fff">Индивидуальный профиль и потребности</text>
+<text x="550" y="804" font-family="Arial,sans-serif" font-size="17" text-anchor="middle" fill="#e5f2fb">Биологические причины и условия жизни необходимо различать</text>
+</svg>
