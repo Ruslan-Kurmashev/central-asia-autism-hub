@@ -1,0 +1,34 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="500" viewBox="0 0 1000 500" role="img" aria-labelledby="chart-title chart-desc">
+<title id="chart-title">Зарегистрированные дети и подростки с РАС в Казахстане за 2020-2024 годы</title>
+<desc id="chart-desc">Данные электронного регистра в публикации Inbusiness.kz от 16 апреля 2025 года. 2020: 3568, 2021: 4886, 2022: 6558, 2023: 9611, 2024: 12456. Дети 0-17 лет. Это число зарегистрированных детей, не истинная распространённость аутизма.</desc>
+<rect width="1000" height="500" rx="18" fill="#f7fbfd"/>
+<text x="54" y="48" fill="#153957" font-size="25" font-family="Arial,sans-serif" font-weight="700">Динамика числа зарегистрированных детей</text>
+<text x="54" y="75" fill="#456679" font-size="16" font-family="Arial,sans-serif">Электронный регистр диспансерных больных, возраст 0-17 лет</text>
+<line x1="95" y1="395.0" x2="930" y2="395.0" stroke="#dbe7ec" stroke-width="1"/>
+<text x="81" y="400.0" fill="#496678" text-anchor="end" font-size="15" font-family="Arial,sans-serif">0</text>
+<line x1="95" y1="319.3" x2="930" y2="319.3" stroke="#dbe7ec" stroke-width="1"/>
+<text x="81" y="324.3" fill="#496678" text-anchor="end" font-size="15" font-family="Arial,sans-serif">4 000</text>
+<line x1="95" y1="243.5" x2="930" y2="243.5" stroke="#dbe7ec" stroke-width="1"/>
+<text x="81" y="248.5" fill="#496678" text-anchor="end" font-size="15" font-family="Arial,sans-serif">8 000</text>
+<line x1="95" y1="167.8" x2="930" y2="167.8" stroke="#dbe7ec" stroke-width="1"/>
+<text x="81" y="172.8" fill="#496678" text-anchor="end" font-size="15" font-family="Arial,sans-serif">12 000</text>
+<line x1="95" y1="92.0" x2="930" y2="92.0" stroke="#dbe7ec" stroke-width="1"/>
+<text x="81" y="97.0" fill="#496678" text-anchor="end" font-size="15" font-family="Arial,sans-serif">16 000</text>
+<rect x="126" y="327.4" width="105" height="67.6" rx="8" fill="#28688a"/>
+<text x="178.5" y="313.4" fill="#153957" text-anchor="middle" font-size="19" font-family="Arial,sans-serif" font-weight="700">3 568</text>
+<text x="178.5" y="423" fill="#153957" text-anchor="middle" font-size="18" font-family="Arial,sans-serif">2020</text>
+<rect x="293" y="302.5" width="105" height="92.5" rx="8" fill="#28688a"/>
+<text x="345.5" y="288.5" fill="#153957" text-anchor="middle" font-size="19" font-family="Arial,sans-serif" font-weight="700">4 886</text>
+<text x="345.5" y="423" fill="#153957" text-anchor="middle" font-size="18" font-family="Arial,sans-serif">2021</text>
+<rect x="460" y="270.8" width="105" height="124.2" rx="8" fill="#28688a"/>
+<text x="512.5" y="256.8" fill="#153957" text-anchor="middle" font-size="19" font-family="Arial,sans-serif" font-weight="700">6 558</text>
+<text x="512.5" y="423" fill="#153957" text-anchor="middle" font-size="18" font-family="Arial,sans-serif">2022</text>
+<rect x="627" y="213.0" width="105" height="182.0" rx="8" fill="#28688a"/>
+<text x="679.5" y="199.0" fill="#153957" text-anchor="middle" font-size="19" font-family="Arial,sans-serif" font-weight="700">9 611</text>
+<text x="679.5" y="423" fill="#153957" text-anchor="middle" font-size="18" font-family="Arial,sans-serif">2023</text>
+<rect x="794" y="159.1" width="105" height="235.9" rx="8" fill="#28688a"/>
+<text x="846.5" y="145.1" fill="#153957" text-anchor="middle" font-size="19" font-family="Arial,sans-serif" font-weight="700">12 456</text>
+<text x="846.5" y="423" fill="#153957" text-anchor="middle" font-size="18" font-family="Arial,sans-serif">2024</text>
+<text x="55" y="467" fill="#496678" font-size="13" font-family="Arial,sans-serif">Источник: Inbusiness.kz (16.04.2025), со ссылкой на электронный регистр Минздрава Казахстана.</text>
+<text x="55" y="485" fill="#496678" font-size="12" font-family="Arial,sans-serif">Это зарегистрированные дети, не оценка истинной распространённости аутизма.</text>
+</svg>
