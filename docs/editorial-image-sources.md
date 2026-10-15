@@ -589,3 +589,15 @@ The two original self-hosted SVGs were drawn as editable markup for AutismHub. N
 | --- | --- | --- |
 | `autism-genetics-overview-cover.svg` | AutismHub original science illustration, 15 October 2026 | Schematic DNA helix, not a real genomic variant or patient's sequence. |
 | `autism-genetics-variant-types.svg` | AutismHub original educational diagram, 15 October 2026 | Common versus rare variants and separately inherited versus de novo origin; symbolic circle sizes do not represent clinical risk or diagnostic effects. |
+
+## Gene regulation and brain development: original SVG diagrams (15 October 2026)
+
+These three original AutismHub scientific vector illustrations are hand-authored, editable SVG markup; no photographic patients, publisher figures, generative image models, branded medical diagrams, or real individual genomic data are used.
+
+| Local file | Source | Editorial scope and limitations |
+| --- | --- | --- |
+| `autism-gene-regulation-cover.svg` | AutismHub original science diagram, 15 October 2026 | Conceptual relation between DNA and a neuron-like cell; not a measured genomic or cellular result. |
+| `gene-expression-brain-development.svg` | AutismHub original science diagram, 15 October 2026 | Simple protein-coding gene flow DNA → RNA → protein; does not capture non-coding RNA or detailed regulatory dynamics, and is not a causal autism diagnostic chain. |
+| `chromatin-accessibility-explained.svg` | AutismHub original science diagram, 15 October 2026 | Simplified concept of accessible and compact chromatin; not evidence of any one epigenetic mechanism for all autistic people. |
+
+Review captions and mobile legibility with the article when publishing.

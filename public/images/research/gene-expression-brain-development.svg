@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1080 950" role="img" aria-labelledby="title description">
+<title id="title">Как информация из гена используется клеткой</title><desc id="description">Образовательная схема по этапам: часть ДНК служит инструкцией, при транскрипции создаётся РНК, при трансляции по информационной РНК создаётся белок, белок участвует в работе клеток мозга. Отдельно показано, что на активность гена влияет регуляция, а не каждое изменение ДНК определяет поведение человека.</desc>
+<rect width="1080" height="950" rx="24" fill="#f2f8fc"/>
+<text x="52" y="75" font-family="Arial,sans-serif" font-size="33" font-weight="700" fill="#153f66">Как клетка использует информацию гена</text>
+<text x="52" y="112" font-family="Arial,sans-serif" font-size="20" fill="#537188">Упрощённый путь для генов, кодирующих белки</text>
+<g font-family="Arial,sans-serif">
+<rect x="75" y="168" width="930" height="142" rx="18" fill="#fff" stroke="#82b1d1" stroke-width="3"/>
+<rect x="99" y="195" width="112" height="88" rx="14" fill="#d9eaf6"/>
+<path d="M129 209 Q187 239 129 268 M180 209 Q123 239 180 268" stroke="#286d9f" stroke-width="5" fill="none"/><g stroke="#86b6d2" stroke-width="3"><path d="M143 214 H167 M140 230 H169 M143 246 H167 M145 260 H166"/></g>
+<text x="241" y="214" font-size="28" font-weight="700" fill="#174869">ДНК и ген</text><text x="241" y="250" font-size="21" fill="#435c74">В молекуле ДНК записана</text><text x="241" y="280" font-size="21" fill="#435c74">информация для работы клетки</text>
+<rect x="75" y="386" width="930" height="142" rx="18" fill="#fff" stroke="#82b1d1" stroke-width="3"/>
+<rect x="99" y="415" width="112" height="85" rx="14" fill="#d9eaf6"/><path d="M119 454 Q139 421 157 454 T194 454" stroke="#286d9f" stroke-width="6" fill="none"/>
+<text x="241" y="433" font-size="28" font-weight="700" fill="#174869">РНК (транскрипция)</text><text x="241" y="469" font-size="21" fill="#435c74">Клетка создаёт РНК на основе</text><text x="241" y="499" font-size="21" fill="#435c74">участка генетической инструкции</text>
+<rect x="75" y="604" width="930" height="142" rx="18" fill="#fff" stroke="#82b1d1" stroke-width="3"/>
+<rect x="99" y="634" width="112" height="83" rx="14" fill="#d9eaf6"/><g fill="#4088b4"><circle cx="121" cy="675" r="13"/><circle cx="150" cy="664" r="13"/><circle cx="176" cy="684" r="13"/></g>
+<text x="241" y="650" font-size="28" font-weight="700" fill="#174869">Белок (трансляция)</text><text x="241" y="687" font-size="21" fill="#435c74">Рибосома использует информационную</text><text x="241" y="717" font-size="21" fill="#435c74">РНК, чтобы построить белок</text>
+</g>
+<g stroke="#3d7cac" stroke-width="5" stroke-linecap="round" fill="none"><path d="M539 314 V380 l-12 -14 M539 380 l12 -14"/><path d="M539 532 V598 l-12 -14 M539 598 l12 -14"/></g>
+<rect x="75" y="794" width="930" height="101" rx="16" fill="#dceef9"/><text x="103" y="836" font-family="Arial,sans-serif" font-size="23" font-weight="700" fill="#164b72">Белки участвуют в росте и работе нервных клеток</text><text x="103" y="870" font-family="Arial,sans-serif" font-size="19" fill="#3f617a">На каждом этапе действуют механизмы регуляции; это не путь «ген → диагноз».</text>
+</svg>

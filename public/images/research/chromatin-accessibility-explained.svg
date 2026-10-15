@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1080 780" role="img" aria-labelledby="t d">
+<title id="t">Доступность ДНК и регуляция активности генов</title><desc id="d">Сравнение условной более доступной и более компактно упакованной ДНК вокруг белков-гистонов. В первом случае доступ регуляторных белков к определённому участку может быть легче, во втором сложнее. Это упрощение, не утверждение, что метилирование всегда выключает гены, и не биомаркер аутизма.</desc>
+<rect width="1080" height="780" rx="22" fill="#f2f8fc"/><text x="50" y="73" font-family="Arial,sans-serif" font-size="32" font-weight="700" fill="#15446c">Как «упаковка» ДНК влияет на работу генов</text><text x="50" y="112" font-family="Arial,sans-serif" font-size="20" fill="#536e84">Хроматин: ДНК и белки, с которыми она связана</text>
+<rect x="52" y="155" width="976" height="229" rx="18" fill="#fff" stroke="#a9c9df" stroke-width="3"/>
+<text x="80" y="204" font-family="Arial,sans-serif" font-size="26" font-weight="700" fill="#174a71">Более доступный участок</text>
+<text x="80" y="242" font-family="Arial,sans-serif" font-size="19" fill="#536c80">Регуляторным белкам проще взаимодействовать с ДНК</text>
+<path d="M88 311 C178 250 268 365 356 311 S534 256 626 311 S814 363 985 311" stroke="#2c7daa" stroke-width="9" fill="none" stroke-linecap="round"/>
+<g fill="#c9dfed" stroke="#598caf" stroke-width="3"><circle cx="206" cy="321" r="25"/><circle cx="451" cy="299" r="25"/><circle cx="736" cy="326" r="25"/></g>
+<rect x="52" y="414" width="976" height="229" rx="18" fill="#fff" stroke="#a9c9df" stroke-width="3"/>
+<text x="80" y="463" font-family="Arial,sans-serif" font-size="26" font-weight="700" fill="#174a71">Более компактный участок</text>
+<text x="80" y="501" font-family="Arial,sans-serif" font-size="19" fill="#536c80">Доступ к некоторым участкам может быть ограничен</text>
+<g fill="#adcfe3" stroke="#598caf" stroke-width="3"><circle cx="198" cy="565" r="31"/><circle cx="266" cy="565" r="31"/><circle cx="334" cy="565" r="31"/><circle cx="402" cy="565" r="31"/><circle cx="470" cy="565" r="31"/><circle cx="538" cy="565" r="31"/><circle cx="606" cy="565" r="31"/><circle cx="674" cy="565" r="31"/><circle cx="742" cy="565" r="31"/><circle cx="810" cy="565" r="31"/><circle cx="878" cy="565" r="31"/></g>
+<path d="M151 566 Q198 511 233 565 T334 565 T470 565 T606 565 T742 565 T878 565 T930 566" stroke="#2c7daa" stroke-width="7" fill="none"/>
+<rect x="52" y="678" width="976" height="69" rx="13" fill="#dceef9"/><text x="79" y="708" font-family="Arial,sans-serif" font-size="17" font-weight="700" fill="#1a4b70">Важно:</text><text x="161" y="708" font-family="Arial,sans-serif" font-size="17" fill="#355d79">упаковка ДНК динамична; схема не показывает конкретный механизм аутизма.</text><text x="79" y="731" font-family="Arial,sans-serif" font-size="17" fill="#355d79">Активность генов зависит также от многих других факторов.</text>
+</svg>
