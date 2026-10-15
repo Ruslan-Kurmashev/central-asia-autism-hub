@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 540" role="img" aria-labelledby="title desc">
+<title id="title">Дневник наблюдений за развитием ребёнка</title>
+<desc id="desc">Редакционная схема: открытый блокнот с тремя группами записей, обозначающих ситуацию, наблюдение и вопрос для специалиста. Не содержит медицинских данных и изображений детей.</desc>
+<rect width="960" height="540" fill="#e7f0f6"/>
+<rect x="50" y="54" width="860" height="432" rx="24" fill="#f7fafc" stroke="#cadce8" stroke-width="2"/>
+<rect x="209" y="91" width="556" height="356" rx="17" fill="#d9e6f0"/>
+<rect x="186" y="76" width="556" height="356" rx="15" fill="#fff" stroke="#91adc5" stroke-width="3"/>
+<rect x="215" y="104" width="174" height="24" rx="6" fill="#dce9f3"/>
+<rect x="215" y="147" width="496" height="2" rx="1" fill="#d5e3ef"/>
+<circle cx="248" cy="196" r="23" fill="#deebf5" stroke="#6c97bb" stroke-width="3"/>
+<circle cx="248" cy="192" r="7" fill="#315f94"/>
+<path d="M234 206 Q248 192 262 206" fill="none" stroke="#315f94" stroke-width="3" stroke-linecap="round"/>
+<rect x="292" y="180" width="338" height="10" rx="5" fill="#799bbb"/>
+<rect x="292" y="202" width="238" height="7" rx="3.5" fill="#c4d6e5"/>
+<circle cx="248" cy="278" r="23" fill="#e4f0ed" stroke="#77a8a1" stroke-width="3"/>
+<path d="M237 279 l8 8 15-18" fill="none" stroke="#2f756c" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+<rect x="292" y="265" width="306" height="10" rx="5" fill="#799bbb"/>
+<rect x="292" y="287" width="280" height="7" rx="3.5" fill="#c4d6e5"/>
+<circle cx="248" cy="360" r="23" fill="#fff0de" stroke="#caa574" stroke-width="3"/>
+<path d="M239 354 a9 9 0 1 1 15 7 l-6 5" fill="none" stroke="#9d7543" stroke-width="3.5" stroke-linecap="round"/>
+<circle cx="248" cy="374" r="2.5" fill="#9d7543"/>
+<rect x="292" y="347" width="348" height="10" rx="5" fill="#799bbb"/>
+<rect x="292" y="369" width="209" height="7" rx="3.5" fill="#c4d6e5"/>
+<rect x="770" y="165" width="62" height="62" rx="11" fill="#d0e3ef" stroke="#9ebdd4" stroke-width="2"/>
+<path d="M784 185 h34 m-34 12 h34 m-34 12 h22" stroke="#315f94" stroke-width="4" stroke-linecap="round"/>
+</svg>
