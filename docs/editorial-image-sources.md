@@ -707,3 +707,13 @@ Fourteen hand-authored AutismHub SVG assets accompany the seven Russian guides t
 | --- | --- |
 | `parent-everyday-communication-cover.svg` | Original AutismHub vector illustration, authored for the article about everyday communication. Domestic objects, stylised hands and speech symbols; no real identifiable persons or clinical data. Not a diagnostic diagram or a borrowed stock image. |
 | `parent-child-play-together-cover.svg` | Original AutismHub vector illustration, authored for the article about parent participation in play. Blocks, toy vehicle and a simple play path; not a developmental screening task, clinical test or reproduction of an external illustration. |
+
+## Genetics, environment and autism: original scientific SVG diagrams (15 October 2026)
+
+All three graphics were created as original AutismHub educational SVG markup. They contain no generative-image output, stock photography, actual medical imagery, personal patient data, copyrighted publisher diagrams, or empirical risk predictions.
+
+| Local file | Provenance | Educational scope and scientific limitations |
+| --- | --- | --- |
+| `autism-genetics-environment-cover.svg` | Original AutismHub editorial vector illustration, 15 October 2026 | Abstract DNA and environmental signals; not a causal model, exposure measurement or diagnostic marker. |
+| `association-confounding-pregnancy.svg` | Original AutismHub evidence-literacy diagram, 15 October 2026 | Illustrates confounding by indication; no assertion that infection, fever or medication causes autism. |
+| `autism-risk-evidence-levels.svg` | Original AutismHub evidence-literacy diagram, 15 October 2026 | Three simplified evidence categories; not a formal grading system, a personalized risk tool or evidence that any single exposure determines autism. |
