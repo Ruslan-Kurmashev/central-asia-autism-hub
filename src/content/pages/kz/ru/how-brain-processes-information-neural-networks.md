@@ -31,8 +31,8 @@ keyPoints:
   - "По одному снимку МРТ, графику ЭЭГ или рассчитанному показателю связанности нельзя самостоятельно подтвердить или исключить аутизм."
 evidenceLimitations: "Статья является научно-популярным синтезом общих принципов нейронауки и исследований аутизма, но не систематическим обзором или индивидуальной клинической оценкой. Большинство находок нейровизуализации имеют групповой статистический характер; результаты зависят от движения участников, параметров сканирования, возраста, когнитивного и клинического состава выборки, а также вычислительных процедур. Повышенная или сниженная корреляция фМРТ не доказывает прямую анатомическую связь, направление передачи или причинный механизм. Теории дисбаланса возбуждения/торможения и предиктивной обработки пока не подтверждены как универсальное объяснение всего аутистического спектра."
 sources:
-  - title: "Brain Basics: Know Your Brain"
-    url: "https://www.ninds.nih.gov/health-information/public-education/brain-basics/brain-basics-know-your-brain"
+  - title: "Brain Basics"
+    url: "https://www.ninds.nih.gov/health-information/public-education/brain-basics"
     organisation: "National Institute of Neurological Disorders and Stroke (NINDS)"
     note: "Основы нервной системы и функций областей мозга."
     accessedAt: 2026-10-15
@@ -73,7 +73,7 @@ sources:
     accessedAt: 2026-10-15
   - title: "Atypical Social Behavior is Predicted by Overconnectivity Between Salience and Default Mode Networks in Autism Spectrum Disorder"
     url: "https://pubmed.ncbi.nlm.nih.gov/40272731/"
-    organisation: "Biological Psychiatry / PubMed"
+    organisation: "Journal of Autism and Developmental Disorders"
     publicationYear: 2025
     note: "Пример связи функциональной корреляции между сетями с некоторыми исследуемыми социальными характеристиками; это не клинический индивидуальный прогноз."
     accessedAt: 2026-10-15
