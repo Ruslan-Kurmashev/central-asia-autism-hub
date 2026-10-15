@@ -546,3 +546,12 @@ These three original AutismHub self-hosted geometric SVG illustrations were prep
 | `professional-ethics-clinical-scope.svg` | Original AutismHub geometric SVG illustration, 14 October 2026 | Separate professional scopes, an abstract health symbol and a safe coordination route; does not grant diagnostic or restraint authority. |
 | `professional-ethics-rights-participation.svg` | Original AutismHub geometric SVG illustration, 14 October 2026 | Four neutral symbols for rights, accessible communication, supported choice and participation; not a reproduction of UN insignia or a legal rights chart. |
 | `professional-ethics-data-ai-privacy.svg` | Original AutismHub geometric SVG illustration, 14 October 2026 | Abstract document, data flow, security shield and controlled access; not a claim of legal compliance, encryption certification or AI accuracy. |
+
+## Autism genetics and inheritance: original SVG diagrams (15 October 2026)
+
+Both SVG files were hand-authored as editable markup for AutismHub. They contain no generative imagery, patient data, borrowed publisher artwork, diagnostic genomic findings or third-party trademarks. The diagrams are explanatory and do not encode numerical genetic risk.
+
+| Local file | Original source | Scientific limitations |
+| --- | --- | --- |
+| `autism-genetics-overview-cover.svg` | Original AutismHub vector illustration, 15 October 2026 | Abstract DNA helix, not a genetic test or real sequence. |
+| `autism-genetics-variant-types.svg` | Original AutismHub vector diagram, 15 October 2026 | Contrasts common variants with individually small effects and some rare variants with larger effects; distinguishes inherited and de novo variants. Circle size is purely illustrative and no risk percentages are implied. |
