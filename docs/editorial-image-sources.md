@@ -717,3 +717,9 @@ All three graphics were created as original AutismHub educational SVG markup. Th
 | `autism-genetics-environment-cover.svg` | Original AutismHub editorial vector illustration, 15 October 2026 | Abstract DNA and environmental signals; not a causal model, exposure measurement or diagnostic marker. |
 | `association-confounding-pregnancy.svg` | Original AutismHub evidence-literacy diagram, 15 October 2026 | Illustrates confounding by indication; no assertion that infection, fever or medication causes autism. |
 | `autism-risk-evidence-levels.svg` | Original AutismHub evidence-literacy diagram, 15 October 2026 | Three simplified evidence categories; not a formal grading system, a personalized risk tool or evidence that any single exposure determines autism. |
+
+## Central Asian country statistics availability (15 October 2026)
+
+| Asset | Author, data sources and limitations |
+| --- | --- |
+| `central-asia-autism-five-countries-evidence-map.svg` | Original hand-coded AutismHub vector illustration based on differentiated types of available data: Kazakhstan Ministry of Health (2026) 17,196 children with ASD on dynamic follow-up; Kyrgyzstan Electronic Health Center figures reported by Open.kg (2025) for year 2024, 423 children with autism; Tajikistan registry study Addullozoda et al. (2026) 170 registered cases over 2020-2025; Uzbekistan and Turkmenistan national comparable ASD figures not confirmed as of 15 October 2026. Conceptual information cards, **not** a ranked prevalence graph, representative population estimates or comparable time series. Sources: https://www.gov.kz/org/dsm/press/news/details/1192936?lang=ru ; https://open.kg/news/health/45914-v-2024-godu-v-kyrgyzstane-zaregistrirovano-423-rebenka-s-autizmom.html ; https://doi.org/10.66269/2414-0252-2026-16-2-258-266 . No personal or clinical data, source image tracing, generative image or copyrighted third-party figures used. |
