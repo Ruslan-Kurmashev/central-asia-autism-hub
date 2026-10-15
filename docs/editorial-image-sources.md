@@ -756,3 +756,14 @@ Associated PDFs in `public/downloads/motor/` are original generated educational 
 | `parent-emotions-communication-choice.svg` | Original AutismHub vector depicting four illustrative messages (pause, help, quieter, stop). Not a copyrighted AAC package, communication assessment, standardized symbol set or diagnosis. |
 
 Two original Russian-language PDFs in `public/downloads/emotions/` are created on deployment by `scripts/build-parent-emotion-resources.py`. Their scenarios and notes are editorial examples grounded in linked AAP, CDC, NICE, WHO and NHS sources; the PDFs are not copied figures or third-party program materials.
+
+## Microglia and immune system in autism: original SVG diagrams (15 October 2026)
+
+The following files are original, editable AutismHub diagrams made directly in vector SVG markup. No generative images, external journal figures, actual histological data, patient records or stock photography are included.
+
+| Asset | Editorial provenance | Scope and limitations |
+| --- | --- | --- |
+| `autism-microglia-immune-cover.svg` | Original AutismHub vector science illustration, 15 October 2026 | Schematic ramified cell near neurons, not a micrograph, inflammatory lesion or autism-specific cellular pattern. |
+| `microglia-normal-functions.svg` | Original AutismHub educational diagram, 15 October 2026 | Normal surveillance, clearance, cell signaling and synaptic remodeling; immune activity is not automatically inflammation or autism pathology. |
+| `microglia-evidence-ladder.svg` | Original AutismHub educational diagram, 15 October 2026 | Compares animal experiments, human cell cultures and observational human data; not an empirically ranked evidence scale or diagnostic pathway. |
+
