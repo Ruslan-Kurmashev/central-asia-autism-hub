@@ -93,7 +93,9 @@ const prioritySections: Section[] = [
   'parents', 'help-kazakhstan', 'research', 'learning', 'professionals',
 ];
 const featuredUpdates = prioritySections
-  .map((section) => recentCandidates.find((entry) => entry.data.section === section))
+  .map((section) => recentCandidates.find((entry) =>
+    entry.data.section === section && (section !== 'research' || entry.collection === 'research'),
+  ))
   .filter((entry): entry is (typeof recentCandidates)[number] => Boolean(entry));
 const includedUpdates = new Set(featuredUpdates.map((entry) => entry.collection + ':' + entry.id));
 const extraUpdates = recentCandidates.filter((entry) =>
