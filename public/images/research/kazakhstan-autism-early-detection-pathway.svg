@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="680" viewBox="0 0 1200 680" role="img" aria-labelledby="title desc">
+<title id="title">Раннее выявление аутизма: от вопросов родителей к профессиональной оценке</title>
+<desc id="desc">Оригинальная пояснительная схема AutismHub из четырёх этапов: наблюдение развития ребёнка, скрининговая анкета, уточнение результата и профессиональная оценка при наличии оснований. Стрелка от наблюдения к профессиональной оценке напоминает, что выраженное беспокойство требует оценки независимо от результата скрининга. Это не диагностический алгоритм и не воспроизведение M-CHAT-R/F.</desc>
+<rect width="1200" height="680" fill="#f2f8fb" rx="20"/>
+<rect x="36" y="34" width="1128" height="614" rx="24" fill="white" stroke="#cedfe8" stroke-width="2"/>
+<g font-family="Arial,sans-serif">
+<text x="70" y="92" font-size="33" font-weight="700" fill="#153e5a">Скрининг - это этап выявления, а не диагноз</text>
+<text x="70" y="132" font-size="20" fill="#4d7085">Как данные о развитии помогают определить необходимость профессиональной оценки</text>
+<g stroke="#9cbdd0" stroke-width="2">
+<rect x="67" y="225" width="242" height="181" rx="17" fill="#e7f1f6"/>
+<rect x="343" y="225" width="242" height="181" rx="17" fill="#e7f1f6"/>
+<rect x="619" y="225" width="242" height="181" rx="17" fill="#dcebf2"/>
+<rect x="895" y="225" width="242" height="181" rx="17" fill="#286889" stroke="#286889"/>
+</g>
+<g fill="#143e5a" text-anchor="middle" font-size="24" font-weight="700">
+<text x="188" y="289">Наблюдение</text><text x="188" y="322">развития</text>
+<text x="464" y="289">Скрининг</text><text x="464" y="322">риска</text>
+<text x="740" y="289">Уточнение</text><text x="740" y="322">результата</text>
+</g>
+<g fill="#f7fcff" text-anchor="middle" font-size="24" font-weight="700">
+<text x="1016" y="289">Профессиональная</text><text x="1016" y="322">оценка</text>
+</g>
+<g fill="#516f83" text-anchor="middle" font-size="18">
+<text x="188" y="371">Семья и специалист</text>
+<text x="464" y="371">Анкета, не диагноз</text>
+<text x="740" y="371">Беседа при показаниях</text>
+</g>
+<text x="1016" y="371" text-anchor="middle" font-size="18" fill="#e9f6fb">Развитие и поведение</text>
+<g fill="none" stroke="#2e6e90" stroke-width="5" stroke-linecap="round" stroke-linejoin="round">
+<path d="M317 317h18m-8-9 9 9-9 9"/>
+<path d="M593 317h18m-8-9 9 9-9 9"/>
+<path d="M869 317h18m-8-9 9 9-9 9"/>
+<path d="M189 412V460H1015V416"/>
+<path d="M996 434l19-20 19 20"/>
+</g>
+<rect x="67" y="483" width="1070" height="106" fill="#f2f8fb" stroke="#d6e7f0" stroke-width="2" rx="13"/>
+<text x="93" y="523" font-size="21" fill="#174967" font-weight="700">При сохраняющемся беспокойстве оценка нужна независимо от результата анкеты.</text>
+<text x="93" y="556" font-size="18" fill="#4c7086">Положительный скрининг не подтверждает РАС; отрицательный не исключает особенности развития.</text>
+<text x="71" y="623" font-size="15" fill="#56778c">Оригинальная схема AutismHub. Без диагностических порогов, анкетных заданий и данных пациентов.</text>
+</g>
+</svg>
