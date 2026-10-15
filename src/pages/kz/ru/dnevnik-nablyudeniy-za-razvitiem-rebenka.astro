@@ -1,0 +1,106 @@
+---
+import BaseLayout from '../../../../layouts/BaseLayout.astro';
+import { articlePath } from '../../../../lib/urls';
+const source = articlePath('ru', 'parents', 'kak-nablyudat-za-razvitiem-rebenka-doma');
+---
+<BaseLayout
+  title="Дневник наблюдений за развитием ребёнка | AutismHub"
+  description="Печатный дневник для фиксации повседневных наблюдений и подготовки вопросов для консультации. Не диагностический тест."
+  locale="ru"
+  currentSection="parents"
+>
+  <div class="diary-wrap">
+    <div class="diary-toolbar">
+      <a href={source}>← К статье</a>
+      <button id="print-diary" type="button">Распечатать или сохранить как PDF</button>
+    </div>
+
+    <section class="diary-sheet" aria-labelledby="diary-title">
+      <p class="diary-kicker">AutismHub · Материал для родителей</p>
+      <h1 id="diary-title">Дневник наблюдений за развитием ребёнка</h1>
+      <p>Здесь можно записывать конкретные ситуации из обычной жизни ребёнка: как он общается, играет, двигается, участвует в повседневных делах и что помогает ему.</p>
+      <p><strong>Это не тест, не диагностическая шкала и не инструмент оценки аутизма.</strong> Нет баллов, нормативов, результата или обязательной частоты заполнения. Не откладывайте консультацию ради дневника.</p>
+      <h2>Как вести записи</h2>
+      <ol>
+        <li>Выберите знакомую ситуацию: завтрак, прогулку, игру или одевание.</li>
+        <li>Запишите наблюдаемое действие или слова ребёнка без оценок и догадок о причине.</li>
+        <li>Отметьте условия и поддержку: шум, усталость, подсказки, особенности обстановки.</li>
+        <li>Укажите, что получилось, что интересовало ребёнка и какие вопросы возникли.</li>
+      </ol>
+      <h2>Пример</h2>
+      <p><strong>Дата и ситуация:</strong> 15 октября, обед дома.</p>
+      <p><strong>Что наблюдалось:</strong> ребёнок взял кружку и подвёл взрослого к кувшину с водой.</p>
+      <p><strong>Условия и поддержка:</strong> в комнате было тихо; взрослый показал кувшин и спросил, нужна ли вода.</p>
+      <p><strong>Результат:</strong> ребёнок кивнул и протянул кружку. Это пример коммуникации, хотя слово «вода» не прозвучало.</p>
+      <p><strong>Вопрос:</strong> какими ещё способами ребёнок сообщает просьбы в других ситуациях?</p>
+      <h2>Информация для семьи</h2>
+      <p>Имя или обозначение ребёнка (необязательно): <span class="line"></span></p>
+      <p>Возраст на момент наблюдений: <span class="line"></span></p>
+      <p>Период записей: <span class="line"></span></p>
+    </section>
+
+    <section class="diary-sheet" aria-labelledby="episodes-title">
+      <h2 id="episodes-title">Наблюдения из повседневной жизни</h2>
+      <p>Можно записать один или несколько эпизодов. Описывайте факты, а не причины или диагнозы.</p>
+      {Array.from({ length: 3 }).map((_, index) => (
+        <div class="entry">
+          <h3>Наблюдение {index + 1}</h3>
+          <p><strong>Дата, место, ситуация:</strong></p><div class="writing-line"></div>
+          <p><strong>Что ребёнок сказал или сделал:</strong></p><div class="writing-line"></div><div class="writing-line"></div>
+          <p><strong>Условия, особенности обстановки, помощь:</strong></p><div class="writing-line"></div>
+          <p><strong>Что получилось и какой вопрос возник:</strong></p><div class="writing-line"></div>
+        </div>
+      ))}
+    </section>
+
+    <section class="diary-sheet" aria-labelledby="review-title">
+      <h2 id="review-title">Обзор наблюдений и разговор со специалистом</h2>
+      <p>Выберите только то, что действительно важно вашей семье. Заполните столько строк, сколько нужно.</p>
+      <h3>Новые навыки, интересы и сильные стороны</h3>
+      <div class="writing-line"></div><div class="writing-line"></div><div class="writing-line"></div>
+      <h3>Какие ситуации остаются сложными</h3>
+      <div class="writing-line"></div><div class="writing-line"></div><div class="writing-line"></div>
+      <h3>Что помогает ребёнку</h3>
+      <div class="writing-line"></div><div class="writing-line"></div>
+      <h3>Изменения, которые заметили другие взрослые</h3>
+      <div class="writing-line"></div><div class="writing-line"></div>
+      <h3>Три вопроса, которые я хочу задать</h3>
+      <ol class="question-list"><li><div class="writing-line"></div></li><li><div class="writing-line"></div></li><li><div class="writing-line"></div></li></ol>
+      <p class="diary-note"><strong>Важно:</strong> если ребёнок потерял ранее устойчивые речевые, социальные или двигательные навыки, обратитесь к медицинскому специалисту без продолжительного ожидания. При острых выраженных симптомах нужна срочная медицинская помощь.</p>
+      <p class="diary-footer">AutismHub · Бесплатный организационный шаблон для семей. Не стандартизирован и не предназначен для диагностики. Все записи остаются на бумаге или в файле, который вы сохраните самостоятельно.</p>
+    </section>
+  </div>
+  <script>
+    document.getElementById('print-diary')?.addEventListener('click', () => window.print());
+  </script>
+</BaseLayout>
+<style>
+  .diary-wrap { max-width: 870px; margin: 2rem auto; padding: 0 1rem 3rem; color: #183756; }
+  .diary-toolbar { display: flex; justify-content: space-between; gap: 1rem; align-items: center; margin-bottom: 1.25rem; flex-wrap: wrap; }
+  .diary-toolbar button { cursor: pointer; border: 1px solid #315f94; color: #fff; background: #315f94; border-radius: .4rem; padding: .7rem 1.1rem; font-size: var(--type-control); }
+  .diary-toolbar a { color: #174c85; }
+  .diary-sheet { background: #fff; border: 1px solid #cbd8e4; border-radius: .5rem; margin-bottom: 1.5rem; padding: 2rem; }
+  .diary-sheet h1 { font-size: var(--type-h1); margin: .5rem 0 1rem; }
+  .diary-sheet h2 { font-size: var(--type-h2); margin: 1.2rem 0 .75rem; }
+  .diary-sheet h3 { font-size: var(--type-h3); margin: .9rem 0 .5rem; }
+  .diary-sheet p, .diary-sheet li { font-size: var(--type-body); line-height: 1.55; }
+  .diary-kicker, .diary-footer { color: #4a617c; }
+  .line { display: inline-block; min-width: 40%; border-bottom: 1px solid #9fb1c6; min-height: 1rem; }
+  .entry { break-inside: avoid; margin: 1rem 0; border-top: 1px solid #cbd8e4; }
+  .writing-line { border-bottom: 1px solid #9fb1c6; min-height: 1.6rem; }
+  .question-list li { padding-bottom: .4rem; }
+  .diary-note { background: #f0f5fa; padding: 1rem; border-left: 3px solid #315f94; }
+  @page { size: A4; margin: 14mm; }
+  @media print {
+    :global(header), :global(footer), :global(.skip-link), .diary-toolbar { display: none !important; }
+    .diary-wrap { margin: 0; padding: 0; max-width: 100%; }
+    .diary-sheet { border: none; border-radius: 0; margin: 0; padding: 0; min-height: 260mm; break-after: page; }
+    .diary-sheet:last-child { break-after: auto; }
+    .diary-sheet h1 { font-size: var(--type-print-h1); }
+    .diary-sheet h2 { font-size: var(--type-print-h2); }
+    .diary-sheet h3 { font-size: var(--type-print-h3); }
+    .diary-sheet p, .diary-sheet li { font-size: var(--type-print-body); line-height: 1.25; }
+    .diary-note { background: none; border: 1px solid #8ca1b6; }
+    .writing-line { min-height: 16pt; }
+  }
+</style>
