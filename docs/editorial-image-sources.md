@@ -745,3 +745,14 @@ All three graphics were created as original AutismHub educational SVG markup. Th
 | `motor-diagram-spoon-transfer.svg` | Original AutismHub three-panel educational SVG created as source-code geometry for the specific named motor activity. Sequence is illustrative, not a clinical technique manual, prescribed exercise protocol, assessment or safety certification. |
 
 Associated PDFs in `public/downloads/motor/` are original generated educational material from `scripts/data/parent-motor-activity-pack-ru.json`, with output produced by `scripts/build-parent-motor-activity-pdfs.py`. They do not reproduce NHS illustrations or third-party PDF contents.
+
+
+## Parent emotion and co-regulation article (15 October 2026)
+
+| File | Provenance and limitations |
+| --- | --- |
+| `parent-emotions-coregulation-cover.svg` | Original AutismHub source-coded vector cover with two stylized figures, communication symbols and a supportive setting. No real person's image, clinical measurement or diagnostic labels. |
+| `parent-emotions-three-moments.svg` | Original AutismHub three-panel explanatory diagram. "Before, during, after" is a plain-language organisational framework, not an independently validated treatment protocol or quantitative scale. |
+| `parent-emotions-communication-choice.svg` | Original AutismHub vector depicting four illustrative messages (pause, help, quieter, stop). Not a copyrighted AAC package, communication assessment, standardized symbol set or diagnosis. |
+
+Two original Russian-language PDFs in `public/downloads/emotions/` are created on deployment by `scripts/build-parent-emotion-resources.py`. Their scenarios and notes are editorial examples grounded in linked AAP, CDC, NICE, WHO and NHS sources; the PDFs are not copied figures or third-party program materials.
