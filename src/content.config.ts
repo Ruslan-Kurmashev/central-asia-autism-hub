@@ -187,45 +187,9 @@ const learning = defineCollection({
       registrationStatus: z.string().min(1).optional(),
       completionOutcome: z.string().min(1).optional(),
       resourceDisclaimerType: z.enum(['project', 'external']),
-      // An optional mixed lesson sequence: hosted video, organizer page, or
-      // AutismHub editorial explanation. All source links retain ownership.
-      lessons: z.array(z.object({
-        title: z.string().min(1),
-        description: z.string().min(1).optional(),
-        sourceUrl: z.url().optional(),
-        sourceName: z.string().min(1).optional(),
-        youtubeVideoId: z.string().regex(/^[A-Za-z0-9_-]{11}$/).optional(),
-        supplementary: z.boolean().default(false),
-      })).optional(),
     })
     .superRefine((data, context) => {
       validatePublication(data, context);
-      if (data.lessons) {
-        data.lessons.forEach((lesson, index) => {
-          if (lesson.youtubeVideoId) {
-            // A video is only safe to publish when its original YouTube
-            // source is recorded. Do not automatically grab/rehost videos.
-            let original: URL | undefined;
-            try { original = new URL(lesson.sourceUrl ?? ''); } catch { /* reported below */ }
-            if (!original ||
-                !(['youtube.com', 'www.youtube.com', 'm.youtube.com', 'youtu.be'].includes(original.hostname)) ||
-                (original.hostname === 'youtu.be'
-                  ? original.pathname.slice(1) !== lesson.youtubeVideoId
-                  : original.searchParams.get('v') !== lesson.youtubeVideoId)) {
-              context.addIssue({
-                code: 'custom', path: ['lessons', index, 'sourceUrl'],
-                message: 'Embedded video must have a matching official YouTube watch or youtu.be source URL.',
-              });
-            }
-            if (!lesson.sourceName) {
-              context.addIssue({
-                code: 'custom', path: ['lessons', index, 'sourceName'],
-                message: 'Embedded video must explicitly credit its author/channel.',
-              });
-            }
-          }
-        });
-      }
       if (!data.draft) {
         for (const field of ['registrationStatus', 'completionOutcome'] as const) {
           if (!data[field] || data[field].trim().length < 20) {
