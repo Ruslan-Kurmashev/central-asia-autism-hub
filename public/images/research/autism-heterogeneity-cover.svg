@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" role="img" aria-labelledby="t d">
+<title id="t">Почему аутизм у разных людей различается</title>
+<desc id="d">Оригинальная абстрактная векторная схема нескольких пересекающихся нейронных путей и различных кругов вокруг общего центра. Это концепция разнообразия индивидуальных профилей, а не изображение реальных пациентов, данных обследования или типов аутизма.</desc>
+<defs><linearGradient id="b" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#eef7fc"/><stop offset="1" stop-color="#dceefa"/></linearGradient></defs>
+<rect width="1200" height="630" fill="url(#b)"/>
+<g fill="none" stroke="#699fc1" stroke-width="8" opacity=".64"><path d="M642 319 Q760 173 923 193 Q1080 211 1082 367 Q1069 514 868 494 Q735 480 642 319"/><path d="M647 312 Q833 251 968 334 Q1044 412 988 529"/><path d="M659 322 Q751 474 860 442 Q1010 401 1008 207"/><path d="M665 320 L761 170 M667 322 L873 515"/></g>
+<g fill="#3c88b3" stroke="#f7fcff" stroke-width="7"><circle cx="645" cy="322" r="51"/><circle cx="763" cy="170" r="31"/><circle cx="922" cy="193" r="38"/><circle cx="1082" cy="367" r="35"/><circle cx="870" cy="493" r="40"/><circle cx="1007" cy="207" r="21"/><circle cx="989" cy="530" r="27"/></g>
+<g fill="#c3e1f2"><circle cx="645" cy="322" r="18"/><circle cx="922" cy="193" r="12"/><circle cx="870" cy="493" r="13"/></g>
+<rect x="49" y="45" width="692" height="132" rx="17" fill="#fff" opacity=".95"/>
+<text x="76" y="97" font-family="Arial,sans-serif" font-size="30" font-weight="700" fill="#17466b">Почему аутизм настолько различается?</text>
+<text x="76" y="136" font-family="Arial,sans-serif" font-size="19" fill="#50758d">Биология, развитие и индивидуальные потребности</text>
+<rect x="49" y="504" width="659" height="64" rx="13" fill="#fff" opacity=".86"/>
+<text x="75" y="542" font-family="Arial,sans-serif" font-size="17" fill="#315b79">Один спектр - множество неповторимых профилей</text>
+</svg>

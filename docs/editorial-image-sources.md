@@ -674,3 +674,11 @@ Fourteen hand-authored AutismHub SVG assets accompany the seven Russian guides t
 | File | Provenance and interpretation |
 | --- | --- |
 | `parent-development-observation-diary.svg` | Original AutismHub editorial vector drawn in source code: abstract three-step notebook (context, observed action, follow-up question). Illustrative, no patient information, no source photograph, no medical or statistical claims. |
+
+## Autism heterogeneity: original vector science images (15 October 2026)
+
+| File | Provenance | Limitations |
+| --- | --- | --- |
+| `autism-heterogeneity-cover.svg` | Original AutismHub SVG | Conceptual pattern, not an individual connectome or subtype. |
+| `autism-multidimensional-profile.svg` | Original AutismHub SVG | Educational dimensions, not a clinical classification tool. |
+| `autism-heterogeneity-influences.svg` | Original AutismHub SVG | Conceptual genetics, development and environment interactions; does not imply parenting causes autism. |
