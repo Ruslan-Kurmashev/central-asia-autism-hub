@@ -21,13 +21,14 @@
 .team-directory__section-heading h2, .team-directory__collaboration h2 { font-size: var(--type-h2); line-height: var(--leading-heading); font-weight: 640; color: #173b5d; }
 .team-directory__section-heading p { margin-top: .65rem; color: var(--team-text); line-height: 1.7; }
 .team-directory__member { display: grid; grid-template-columns: minmax(11rem, 15rem) minmax(0, 1fr); overflow: hidden; background: #fff; border: 1px solid var(--team-border); border-radius: 1.1rem; box-shadow: 0 8px 26px rgb(24 76 113 / 6%); }
-.team-directory__member-avatar { display: grid; min-height: 18rem; place-items: center; padding: 2rem; background: linear-gradient(148deg, #daeaf4, #e9f4f8); border-right: 1px solid var(--team-border); }
-.team-directory__member-avatar img { width: 100%; height: 100%; max-height: 21rem; object-fit: cover; border-radius: .65rem; }
+.team-directory__member-avatar { display: flex; align-items: flex-start; min-height: 18rem; padding: .85rem; background: #f1f7fa; border-right: 1px solid var(--team-border); }
+.team-directory__member-avatar img { display: block; width: 100%; height: auto; aspect-ratio: 4 / 5; object-fit: cover; object-position: center top; border-radius: .65rem; }
 .team-directory__initials { display: grid; place-items: center; width: 8.1rem; height: 8.1rem; border: 2px solid #a7c9dc; border-radius: 50%; background: #f4f9fc; font-size: var(--type-h1); font-weight: 620; letter-spacing: .02em; color: #2d6a95; }
 .team-directory__member-info { padding: clamp(1.5rem, 3vw, 2.5rem); }
 .team-directory__role { color: var(--team-accent); font-size: var(--type-small); font-weight: 750; }
 .team-directory__member h3 { margin-top: .6rem; font-size: var(--type-h2); line-height: 1.25; color: #143b5d; }
-.team-directory__bio { margin-top: 1rem; line-height: 1.75; color: var(--team-text); }
+.team-directory__bio { margin-top: .9rem; line-height: 1.72; color: var(--team-text); }
+.team-directory__bio + .team-directory__bio { margin-top: .65rem; }
 .team-directory__responsibilities { margin-top: 1.55rem; padding-top: 1.3rem; border-top: 1px solid #e5edf3; }
 .team-directory__responsibilities h4 { color: #234e70; font-size: var(--type-small); }
 .team-directory__responsibilities ul { display: flex; flex-wrap: wrap; gap: .5rem; list-style: none; padding: 0; margin: .8rem 0 0; }
@@ -54,7 +55,8 @@
   .team-directory .container { width: min(calc(100% - 1.25rem), 70rem); }
   .team-directory__breadcrumbs { margin-bottom: 1.5rem; }
   .team-directory__member { grid-template-columns: minmax(0, 1fr); }
-  .team-directory__member-avatar { min-height: 12rem; border-right: 0; border-bottom: 1px solid var(--team-border); }
+  .team-directory__member-avatar { min-height: 12rem; justify-content: center; border-right: 0; border-bottom: 1px solid var(--team-border); }
+  .team-directory__member-avatar img { max-width: 16rem; }
   .team-directory__initials { width: 6rem; height: 6rem; font-size: var(--type-h2); }
   .team-directory__roles-grid { grid-template-columns: minmax(0,1fr); }
 }

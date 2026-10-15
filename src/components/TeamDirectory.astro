@@ -12,9 +12,9 @@ const labels = {
     about: 'О проекте',
     title: 'Наша команда',
     eyebrow: 'Люди проекта',
-    intro: 'У AutismHub есть конкретные люди и понятные зоны ответственности. Здесь мы показываем только подтверждённых участников, которые действительно работают над платформой.',
-    people: 'Кто развивает AutismHub',
-    peopleLead: 'На данном этапе проект развивается под руководством основателя. По мере появления подтверждённых участников здесь будут добавляться их реальные роли и вклад.',
+    intro: 'Люди, которые создают и развивают AutismHub.',
+    people: 'Основатель проекта',
+    peopleLead: 'Медицинский опыт, научная работа и развитие доступной информации об аутизме.',
     responsibilities: 'Направления работы',
     principles: 'Как мы представляем участников',
     principleLead: 'Мы различаем постоянную работу над проектом и отдельное участие в подготовке материалов.',
@@ -25,7 +25,7 @@ const labels = {
     ],
     growEyebrow: 'Сотрудничество',
     growTitle: 'Команда развивается постепенно',
-    growText: 'Мы открыты к сотрудничеству с авторами, исследователями, медицинскими и образовательными специалистами, а также участниками, которые могут помочь в развитии доступных материалов. Не размещаем имена или фотографии без подтверждения участия и согласования.',
+    growText: 'По вопросам сотрудничества и предложений по развитию проекта можно связаться с AutismHub через раздел контактов.',
     experts: 'Наши эксперты',
     contact: 'Предложить сотрудничество',
     disclosure: 'Публикация профиля не означает, что человек проверил все материалы AutismHub или что его организация официально поддерживает проект.',
@@ -36,9 +36,9 @@ const labels = {
     about: 'Жоба туралы',
     title: 'Біздің команда',
     eyebrow: 'Жобаға қатысушылар',
-    intro: 'AutismHub жобасын нақты адамдар дамытады. Мұнда платформа жұмысына іс жүзінде қатысатыны расталған адамдар мен олардың міндеттері ғана көрсетіледі.',
-    people: 'AutismHub жобасын кім дамытады',
-    peopleLead: 'Қазіргі кезеңде жобаны оның негізін қалаушы басқарады. Басқа қатысушылардың үлесі расталғаннан кейін олардың нақты рөлі мен жұмысы осы жерде көрсетіледі.',
+    intro: 'AutismHub жобасын құратын және дамытатын адамдар.',
+    people: 'Жобаның негізін қалаушы',
+    peopleLead: 'Медициналық тәжірибе, ғылыми жұмыс және аутизм туралы қолжетімді ақпаратты дамыту.',
     responsibilities: 'Жұмыс бағыттары',
     principles: 'Қатысушыларды қалай таныстырамыз',
     principleLead: 'Жобада тұрақты жұмыс істеу мен жекелеген материалдарға қатысуды бөлек көрсетеміз.',
@@ -60,9 +60,9 @@ const labels = {
     about: 'About',
     title: 'Our team',
     eyebrow: 'People behind the project',
-    intro: 'AutismHub is developed by identifiable people with clear responsibilities. We list only confirmed contributors who actually work on the platform.',
-    people: 'Who develops AutismHub',
-    peopleLead: 'At this stage, the founder leads the project. Additional people and their actual contributions will be listed once their involvement is confirmed.',
+    intro: 'The people creating and developing AutismHub.',
+    people: 'Project founder',
+    peopleLead: 'Medical experience, research and accessible information about autism.',
     responsibilities: 'Areas of work',
     principles: 'How we present contributors',
     principleLead: 'Ongoing project roles are different from contributing to individual publications.',
@@ -109,7 +109,7 @@ const t = labels[locale];
           <article class="team-directory__member">
             <div class="team-directory__member-avatar">
               {member.photo ? (
-                <img src={member.photo} alt={member.photoAlt?.[locale] ?? ''} loading="lazy" decoding="async" />
+                <img src={member.photo} alt={member.photoAlt?.[locale] ?? ''} width="360" height="450" loading="lazy" decoding="async" />
               ) : (
                 <span class="team-directory__initials" aria-hidden="true">{member.initials[locale]}</span>
               )}
@@ -117,27 +117,8 @@ const t = labels[locale];
             <div class="team-directory__member-info">
               <p class="team-directory__role">{member.role[locale]}</p>
               <h3>{member.name[locale]}</h3>
-              <p class="team-directory__bio">{member.profile[locale]}</p>
-              <div class="team-directory__responsibilities">
-                <h4>{t.responsibilities}</h4>
-                <ul>{member.responsibilities[locale].map((item) => <li>{item}</li>)}</ul>
-              </div>
+              {member.profile[locale].map((paragraph) => <p class="team-directory__bio">{paragraph}</p>)}
             </div>
-          </article>
-        ))}
-      </div>
-    </section>
-
-    <section class="team-directory__roles" aria-labelledby="team-roles-heading">
-      <div class="team-directory__section-heading">
-        <h2 id="team-roles-heading">{t.principles}</h2>
-        <p>{t.principleLead}</p>
-      </div>
-      <div class="team-directory__roles-grid">
-        {t.principlesItems.map((item) => (
-          <article class="team-directory__role-card">
-            <h3>{item.title}</h3>
-            <p>{item.text}</p>
           </article>
         ))}
       </div>
