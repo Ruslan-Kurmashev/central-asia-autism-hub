@@ -30,6 +30,9 @@ jobs:
           python scripts/validate-professional-evidence-claim-form.py
           python scripts/build-professional-practice-tools.py
           python scripts/validate-professional-practice-tools.py
+          python scripts/build-child-development-diary.py
+          python scripts/build-parent-motor-activity-pdfs.py
+          python scripts/build-parent-emotion-resources.py
           python scripts/build-research-reading-worksheet.py
           python scripts/validate-research-reading-worksheet.py
 
