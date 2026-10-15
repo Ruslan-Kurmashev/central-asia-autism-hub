@@ -729,3 +729,19 @@ All three graphics were created as original AutismHub educational SVG markup. Th
 | File | Author and evidentiary limitations |
 | --- | --- |
 | `central-asia-autism-research-timeline-cover.svg` | Original AutismHub hand-authored editorial SVG timeline with illustrative milestone years 2013, 2019, 2024, 2025 and 2026, based on selected scientific publications and the 2024 scoping review, DOI https://doi.org/10.1177/13623613231170553. It is **not** a comprehensive bibliography, a cumulative count of studies, a histogram or an empirical trend, and should not be interpreted as evidence of year-by-year research activity. 2013 Markova & Sultanalieva https://jsps.hse.ru/article/view/3414; 2019 Sandygulova et al. https://doi.org/10.1515/pjbr-2019-0027; additional 2024-2026 references are cited in the corresponding AutismHub article. No image generation, patient data or borrowed publisher art. |
+
+## Parent gross and fine motor home activities (15 October 2026)
+
+| File | Provenance and limitations |
+| --- | --- |
+| `parent-motor-skills-guide-cover.svg` | Original AutismHub vector illustration of a soft ball, safe ground-level route, paper and large blocks. Decorative cover; no patient data or developmental measurements. |
+| `motor-diagram-walking-line.svg` | Original AutismHub three-panel educational SVG created as source-code geometry for the specific named motor activity. Sequence is illustrative, not a clinical technique manual, prescribed exercise protocol, assessment or safety certification. |
+| `motor-diagram-rolling-ball.svg` | Original AutismHub three-panel educational SVG created as source-code geometry for the specific named motor activity. Sequence is illustrative, not a clinical technique manual, prescribed exercise protocol, assessment or safety certification. |
+| `motor-diagram-avoid-objects.svg` | Original AutismHub three-panel educational SVG created as source-code geometry for the specific named motor activity. Sequence is illustrative, not a clinical technique manual, prescribed exercise protocol, assessment or safety certification. |
+| `motor-diagram-step-over-towel.svg` | Original AutismHub three-panel educational SVG created as source-code geometry for the specific named motor activity. Sequence is illustrative, not a clinical technique manual, prescribed exercise protocol, assessment or safety certification. |
+| `motor-diagram-clothes-pegs.svg` | Original AutismHub three-panel educational SVG created as source-code geometry for the specific named motor activity. Sequence is illustrative, not a clinical technique manual, prescribed exercise protocol, assessment or safety certification. |
+| `motor-diagram-tear-paper.svg` | Original AutismHub three-panel educational SVG created as source-code geometry for the specific named motor activity. Sequence is illustrative, not a clinical technique manual, prescribed exercise protocol, assessment or safety certification. |
+| `motor-diagram-play-dough.svg` | Original AutismHub three-panel educational SVG created as source-code geometry for the specific named motor activity. Sequence is illustrative, not a clinical technique manual, prescribed exercise protocol, assessment or safety certification. |
+| `motor-diagram-spoon-transfer.svg` | Original AutismHub three-panel educational SVG created as source-code geometry for the specific named motor activity. Sequence is illustrative, not a clinical technique manual, prescribed exercise protocol, assessment or safety certification. |
+
+Associated PDFs in `public/downloads/motor/` are original generated educational material from `scripts/data/parent-motor-activity-pack-ru.json`, with output produced by `scripts/build-parent-motor-activity-pdfs.py`. They do not reproduce NHS illustrations or third-party PDF contents.
