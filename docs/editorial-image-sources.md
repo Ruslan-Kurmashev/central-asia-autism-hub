@@ -772,3 +772,14 @@ The following files are original, editable AutismHub diagrams made directly in v
 | `autism-microglia-immune-cover.svg` | Original AutismHub vector science illustration, 15 October 2026 | Schematic ramified cell near neurons, not a micrograph, inflammatory lesion or autism-specific cellular pattern. |
 | `microglia-normal-functions.svg` | Original AutismHub educational diagram, 15 October 2026 | Normal surveillance, clearance, cell signaling and synaptic remodeling; immune activity is not automatically inflammation or autism pathology. |
 | `microglia-evidence-ladder.svg` | Original AutismHub educational diagram, 15 October 2026 | Compares animal experiments, human cell cultures and observational human data; not an empirically ranked evidence scale or diagnostic pathway. |
+
+## Gut microbiome and autism: original evidence diagrams (15 October 2026)
+
+Three original editable SVGs written for AutismHub, without generated images, medical images, research participants' raw biological datasets or third-party illustrations.
+
+| Image file | Authorship | Scope and scientific limitations |
+| --- | --- | --- |
+| `gut-microbiome-autism-cover.svg` | Original AutismHub educational graphic (15 October 2026) | Abstract intestinal outline and microbe symbols, not an anatomical image, confirmed mechanism or autism marker. |
+| `gut-brain-axis-pathways.svg` | Original AutismHub educational graphic (15 October 2026) | Conceptual neural, immune, metabolic and hormonal pathways; not experimental pathway measurements or proof of microbial causation in autism. |
+| `gut-microbiome-confounding-direction.svg` | Original AutismHub causal-inference diagram (15 October 2026) | Illustrative influence of selective eating, family environment, age, medications and GI symptoms on gut microbial measurements; not a quantified causal model and does not exclude all biological microbiome effects. |
+
