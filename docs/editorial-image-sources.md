@@ -632,3 +632,13 @@ These three SVG illustrations were created as original, editable vector markup f
 | `neurons-circuits-networks-levels.svg` | Original AutismHub explanatory figure, 15 October 2026 | Describes conceptual levels from individual neurons to behavior, not a direct causal pathway. |
 | `structural-vs-functional-connectivity.svg` | Original AutismHub explanatory figure, 15 October 2026 | Illustrative physical paths versus correlated synthetic curves; not real fMRI data, proof of direct pathways, or diagnostic connectivity measure. |
 
+## Sensory perception in autism: original vector figures (15 October 2026)
+
+The three self-hosted SVG assets below are original AutismHub educational vector markup. No AI-image generation, copyrighted publisher figure, real brain recordings, patient scans, stock photographs or identifying subject data were used.
+
+| Local asset | Original authorship | Scientific interpretation limit |
+| --- | --- | --- |
+| `autism-sensory-differences-cover.svg` | AutismHub original 15 October 2026 | Abstract sound, light and touch symbols; not quantified sensory intensity or a diagnostic signature. |
+| `sensory-signal-processing-path.svg` | AutismHub original 15 October 2026 | Conceptual receptor, neural pathway, network and experience levels; actual processing is dynamic and not strictly linear. |
+| `sensory-responses-three-patterns.svg` | AutismHub original 15 October 2026 | Illustrative hyperreactivity, hyporeactivity and sensory seeking; these are not exclusive permanent subtypes or a prevalence chart. |
+
