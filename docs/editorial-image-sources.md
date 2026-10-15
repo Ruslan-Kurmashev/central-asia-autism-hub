@@ -662,3 +662,9 @@ Fourteen hand-authored AutismHub SVG assets accompany the seven Russian guides t
 | `research-literacy-contradictions-diagram.svg` | Original AutismHub explanatory SVG: оценки двух работ и перекрытие их интервалов; see above for synthetic-data limitations and primary-paper exception. |
 | `research-literacy-critical-reading-cover.svg` | Original AutismHub vector cover: первичная научная статья, опубликованная оценка и интервал; editorial-only, not measurement data. |
 | `research-literacy-critical-reading-diagram.svg` | Original AutismHub explanatory SVG: первичная научная статья, опубликованная оценка и интервал; see above for synthetic-data limitations and primary-paper exception. |
+
+## Kazakhstan ASD registration statistics chart (15 October 2026)
+
+| File | Provenance and interpretation |
+| --- | --- |
+| `autism-kazakhstan-registered-2020-2024.svg` | Original AutismHub SVG chart, drawn from the 2020-2024 counts (3,568; 4,886; 6,558; 9,611; 12,456) reported by Inbusiness.kz on 16 April 2025, citing the Kazakhstan Ministry of Health Electronic Dispensary Register: https://www.inbusiness.kz/ru/news/chislo-detej-s-autizmom-bet-rekordy-trehkratnyj-rost-za-pyat-let . Children aged 0-17. Exact yearly snapshot dates were not given. Depicts administrative registrations, not true population prevalence; no cross-source mixing, generative image, borrowed publisher figure or individual clinical records. |
