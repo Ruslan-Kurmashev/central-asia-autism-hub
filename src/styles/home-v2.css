@@ -787,6 +787,13 @@
   background: #f1f8fc;
 }
 .home-v2__event-media--logo img { object-fit: contain; }
+/* Portrait-oriented stock source: preserve its subject without a severe wide crop. */
+.home-v2__event[data-event-id='ari-gi-symptoms-behavior-2026-12-02'] .home-v2__event-media {
+  background: #e5eef5;
+}
+.home-v2__event[data-event-id='ari-gi-symptoms-behavior-2026-12-02'] .home-v2__event-media img {
+  object-fit: contain;
+}
 .home-v2__event-media figcaption {
   position: absolute;
   right: .5rem;

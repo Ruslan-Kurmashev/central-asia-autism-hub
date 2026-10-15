@@ -104,7 +104,7 @@ const filters: Array<'all' | AnnouncementKind> = ['all', 'webinar', 'event', 'co
 
     <div class="home-v2__event-list" data-event-list hidden={announcements.length === 0}>
       {announcements.map((event) => (
-        <article class="home-v2__event" data-event-kind={event.kind} data-event-expires={event.expiresOn}>
+        <article class="home-v2__event" data-event-id={event.id} data-event-kind={event.kind} data-event-expires={event.expiresOn}>
           <figure class:list={[
             'home-v2__event-media',
             event.imageKind === 'official-brand' && 'home-v2__event-media--brand',

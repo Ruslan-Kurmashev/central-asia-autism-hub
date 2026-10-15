@@ -72,8 +72,8 @@ for (const lang of locales) {
     ['2026-10-19', 'beyim.edu.kz', 'beyim-preschool-user-photo.webp'],
     ['2026-10-27', 'tamyrplatform.com', 'group-18739.png'],
     ['2026-10-30', 'conference-satr.kz', 'satr-logo.svg'],
-    ['2026-11-18', 'autism.org/webinar/using-multimodal-communication', 'ari-hand-gestures-2026.svg'],
-    ['2026-12-02', 'autism.org/webinar/2026-research-updates-gi-symptoms-behavior', 'ari-gi-research-2026.svg'],
+    ['2026-11-18', 'autism.org/webinar/using-multimodal-communication', 'event-ari-gestures-sign-language.jpg'],
+    ['2026-12-02', 'autism.org/webinar/2026-research-updates-gi-symptoms-behavior', 'event-ari-gi-anatomical-model.jpg'],
   ].filter(([expires]) => expires >= todayInKazakhstan);
   check(eventCards.length === expectedEvents.length,
     id + ': expected ' + expectedEvents.length + ' valid unexpired events, found ' + eventCards.length);

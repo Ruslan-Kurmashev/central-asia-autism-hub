@@ -25,7 +25,7 @@ export interface KazakhstanAnnouncement {
   sourceUrl: string;
   imageSrc: string;
   imageAlt: Record<Locale, string>;
-  imageKind: 'official-brand' | 'organiser-logo' | 'organiser-image' | 'editorial-illustration' | 'owner-supplied-photo';
+  imageKind: 'official-brand' | 'organiser-logo' | 'organiser-image' | 'editorial-illustration' | 'owner-supplied-photo' | 'stock-photo';
   isPublished: boolean;
   sourceVerified: boolean;
 }
@@ -148,13 +148,13 @@ export const KZ_ANNOUNCEMENTS: KazakhstanAnnouncement[] = [
       en: 'Autism Research Institute',
     },
     sourceUrl: 'https://autism.org/webinar/using-multimodal-communication-with-hand-gestures-to-support-language-development-in-neurodiverse-individuals/',
-    imageSrc: 'images/events/ari-hand-gestures-2026.svg',
+    imageSrc: 'images/editorial/photos/event-ari-gestures-sign-language.jpg',
     imageAlt: {
-      ru: 'Авторская абстрактная иллюстрация: речевые облака и символические жесты. Не официальный баннер организатора.',
-      kk: 'Авторлық абстрактілі иллюстрация: сөйлеу белгілері мен шартты ым-ишаралар. Ұйымдастырушының ресми баннері емес.',
-      en: 'Original abstract illustration of speech bubbles and symbolic gestures. Not an official organiser banner.',
+      ru: 'Стоковая фотография Pexels: крупный план рук, выполняющих жесты. Тематическая иллюстрация коммуникации, не официальная афиша вебинара.',
+      kk: 'Pexels сток фотосуреті: ым-ишара жасап тұрған қолдар. Қарым-қатынас тақырыбына арналған, ұйымдастырушының ресми афишасы емес.',
+      en: 'Pexels stock photograph of hands making sign-language gestures; used to illustrate communication, not as the official event banner.',
     },
-    imageKind: 'editorial-illustration',
+    imageKind: 'stock-photo',
     isPublished: true,
     sourceVerified: true,
   },
@@ -182,13 +182,13 @@ export const KZ_ANNOUNCEMENTS: KazakhstanAnnouncement[] = [
       en: 'Autism Research Institute',
     },
     sourceUrl: 'https://autism.org/webinar/2026-research-updates-gi-symptoms-behavior/',
-    imageSrc: 'images/events/ari-gi-research-2026.svg',
+    imageSrc: 'images/editorial/photos/event-ari-gi-anatomical-model.jpg',
     imageAlt: {
-      ru: 'Авторская абстрактная иллюстрация: научный график и символическая схема пищеварения. Не официальный баннер организатора.',
-      kk: 'Авторлық абстрактілі иллюстрация: ғылыми график пен ас қорыту сызбасы. Ұйымдастырушының ресми баннері емес.',
-      en: 'Original abstract illustration of a research chart and digestive-system concept. Not an official organiser banner.',
+      ru: 'Стоковая фотография Pexels: учебная анатомическая модель с органами пищеварения. Не официальная афиша вебинара.',
+      kk: 'Pexels сток фотосуреті: ас қорыту мүшелері көрсетілген анатомиялық оқу моделі. Ұйымдастырушының ресми афишасы емес.',
+      en: 'Pexels stock photograph of an educational anatomical model showing digestive organs, not the organiser’s official event banner.',
     },
-    imageKind: 'editorial-illustration',
+    imageKind: 'stock-photo',
     isPublished: true,
     sourceVerified: true,
   },

@@ -1,4 +1,4 @@
-/* Editorial photo downloads for Kazakhstan help and parent-facing articles.
+/* Editorial photo downloads for Kazakhstan help, parent articles and events.
  * Real Pexels photographs, individually credited in docs/editorial-image-sources.md.
  * Generated public files are intentionally not committed; CI downloads and validates
  * each file before the static site is built and deployed. No remote hotlinks in HTML.
@@ -10,6 +10,8 @@ import process from 'node:process';
 const folder = path.join(process.cwd(), 'public/images/editorial/photos');
 const photos = [
   ['professional-ados-adi-cars-clinical-observation.jpg', '8653951'],
+  ['event-ari-gestures-sign-language.jpg', '10029356'],
+  ['event-ari-gi-anatomical-model.jpg', '18272488'],
   ['parent-meltdown-overload-covering-ear.jpg', '12449967'],
   ['parent-communication-drawings-family.jpg', '4474037'],
   ['professional-early-referral-family-consultation.jpg', '7653091'],

@@ -557,3 +557,15 @@ These two self-hosted assets were authored as original vector SVG markup for Aut
 | `autism-biology-levels-diagram.svg` | `public/images/research/` | Four-level conceptual map of genetic variation, cellular development, neural networks and individual characteristics; separately notes still-investigated environmental and other contributions. The arrows are illustrative and do not assert a causal chain in every autistic person. |
 
 Review requirement: check legibility on mobile screen sizes and ensure captions remain adjacent to figures when the Markdown draft is published.
+
+## Two Autism Research Institute event card photographs (15 October 2026)
+
+These are **real Pexels stock photographs**, not AI-generated images. They are illustrative stock imagery, **not official Autism Research Institute event artwork** and not evidence that a pictured person or material was involved in the webinar. Both photos were selected from their original Pexels pages, which list the photographer, the image's original camera metadata and the free Pexels license. The original event registration pages are linked from the cards.
+
+| Self-hosted build asset | Author / Pexels source | Editorial scope |
+| --- | --- | --- |
+| `images/editorial/photos/event-ari-gestures-sign-language.jpg` | RDNE Stock project, https://www.pexels.com/photo/close-up-on-womans-hands-doing-sign-language-sign-10029356/ | Close-up of hands making sign-language gestures, illustrating a general communication topic, not a documented practice or official event image. |
+| `images/editorial/photos/event-ari-gi-anatomical-model.jpg` | General Kenobi, https://www.pexels.com/photo/mannequin-of-human-digestive-tract-18272488/ | Photograph of a physical educational torso model showing digestive organs. It is not a clinical finding, scientific figure, webinar screenshot or official event image. |
+
+These photo files are downloaded and verified during the standard build using `scripts/sync-editorial-photos.mjs`, then served as first-party static assets without client-side Pexels hotlinks. License: https://www.pexels.com/license/ (checked 15 October 2026).
+
