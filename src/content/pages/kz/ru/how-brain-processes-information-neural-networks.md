@@ -37,10 +37,10 @@ sources:
     organisation: "National Institute of Neurological Disorders and Stroke (NINDS)"
     note: "Основы нервной системы и функций областей мозга."
     accessedAt: 2026-10-15
-  - title: "Correlation Analysis (aka functional connectivity)"
-    url: "https://afni.nimh.nih.gov/CorrAna"
+  - title: "AFNI program documentation: 3dTcorr1D, voxel time-series correlation"
+    url: "https://afni.nimh.nih.gov/pub/dist/doc/program_help/3dTcorr1D.html"
     organisation: "National Institute of Mental Health (NIMH), AFNI"
-    note: "Корреляция BOLD-сигналов при анализе функциональной связанности не доказывает прямое соединение или причинную передачу сигналов."
+    note: "Документация официального инструмента AFNI для вычисления корреляции временных рядов в данных функциональной МРТ; коэффициент корреляции не устанавливает прямую причинность."
     accessedAt: 2026-10-15
   - title: "The autism brain imaging data exchange: towards a large-scale evaluation of the intrinsic brain architecture in autism"
     url: "https://pubmed.ncbi.nlm.nih.gov/23774715/"
@@ -176,7 +176,7 @@ sources:
 
 Иногда обе области реагируют на третий фактор; иногда их активность связана через промежуточные системы. Кроме того, на BOLD-сигнал могут влиять физиологические и технические обстоятельства.
 
-Эту границу прямо подчёркивает документация [AFNI Национального института психического здоровья США](https://afni.nimh.nih.gov/CorrAna).
+Эту границу прямо подчёркивает документация [AFNI Национального института психического здоровья США](https://afni.nimh.nih.gov/pub/dist/doc/program_help/3dTcorr1D.html).
 
 ![Слева изображены условные анатомические пути между областями мозга; справа - два похожих по форме сигнала как пример статистической корреляции. Похожесть сигналов сама по себе не доказывает прямой связи.](/central-asia-autism-hub/images/research/structural-vs-functional-connectivity.svg)
 
