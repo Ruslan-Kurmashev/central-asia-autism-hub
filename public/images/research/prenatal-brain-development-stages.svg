@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1100 780" role="img" aria-labelledby="title desc">
+<title id="title">Этапы раннего развития нервной системы</title>
+<desc id="desc">Непропорциональная временная схема: в ранней беременности формируется нервная трубка, затем начинается размножение и специализация нервных клеток, миграция, формирование связей. Многие процессы перекрываются, продолжаются после рождения, и схема не используется для датирования возникновения аутизма.</desc>
+<rect width="1100" height="780" rx="20" fill="#f2f8fc"/>
+<text x="54" y="66" font-family="Arial,sans-serif" font-size="32" font-weight="700" fill="#153e65">Как формируется нервная система</text>
+<text x="54" y="102" font-family="Arial,sans-serif" font-size="19" fill="#54758f">Этапы перекрываются; схема не отражает точную продолжительность процессов</text>
+<g font-family="Arial,sans-serif" font-size="18" font-weight="700" fill="#244c68" text-anchor="middle"><text x="256" y="170">Начало</text><text x="508" y="170">Середина</text><text x="760" y="170">Конец</text><text x="973" y="170">После</text><text x="973" y="191">рождения</text></g>
+<g stroke="#d3e3ed" stroke-width="2"><path d="M258 203 V672 M508 203 V672 M760 203 V672 M970 203 V672"/></g>
+<g font-family="Arial,sans-serif" font-size="20" fill="#19466a"><text x="52" y="258">Нервная трубка</text><text x="52" y="349">Клетки-предшественники</text><text x="52" y="440">Миграция нейронов</text><text x="52" y="531">Специализация клеток</text><text x="52" y="622">Связи и созревание сетей</text></g>
+<g><rect x="259" y="222" width="130" height="51" rx="13" fill="#347cac"/><rect x="294" y="312" width="505" height="52" rx="13" fill="#4b91bc"/><rect x="382" y="405" width="419" height="52" rx="13" fill="#62a5c8"/><rect x="347" y="496" width="576" height="52" rx="13" fill="#357ba7"/><rect x="477" y="587" width="555" height="52" rx="13" fill="#1f5d90"/></g>
+<rect x="56" y="691" width="980" height="56" rx="10" fill="#e0edf7"/>
+<text x="78" y="714" font-family="Arial,sans-serif" font-size="16" fill="#25536f">Условная последовательность без календарных недель. Нормальное развитие значительно разнообразнее</text>
+<text x="78" y="735" font-family="Arial,sans-serif" font-size="16" fill="#25536f">и не завершается при рождении.</text>
+</svg>
