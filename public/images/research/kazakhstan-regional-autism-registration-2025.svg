@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="675" viewBox="0 0 1200 675" role="img" aria-labelledby="title description">
+<title id="title">Зарегистрированные РАС на сто тысяч детей в трёх регионах Казахстана, 2025 год</title>
+<desc id="description">По сведениям Минздрава, приведённым Factcheck.kz 23 апреля 2026 года, в 2025 году зарегистрированы показатели: Астана 712,9; Костанайская область 492,8; Восточно-Казахстанская область 450,0 на сто тысяч детей. Сравнение относится к регистрации, а не истинной распространённости аутизма.</desc>
+<rect width="1200" height="675" fill="#f4f9fc"/>
+<rect x="38" y="36" width="1124" height="602" rx="25" fill="#ffffff" stroke="#d4e4ed" stroke-width="2"/>
+<text x="85" y="100" font-family="Arial,sans-serif" font-size="33" font-weight="700" fill="#153957">Где чаще регистрировали РАС в 2025 году</text>
+<text x="85" y="143" font-family="Arial,sans-serif" font-size="21" fill="#456679">Зарегистрированных детей с РАС на 100 000 детского населения</text>
+<line x1="382" y1="210" x2="382" y2="502" stroke="#c0d7e3" stroke-width="2"/>
+<g font-family="Arial,sans-serif" font-size="23" fill="#153957">
+<text x="356" y="264" text-anchor="end">Астана</text>
+<text x="356" y="365" text-anchor="end">Костанайская область</text>
+<text x="356" y="466" text-anchor="end">Восточно-Казахстанская область</text>
+</g>
+<rect x="384" y="225" width="659.4" height="54" rx="9" fill="#24698a"/>
+<rect x="384" y="326" width="455.8" height="54" rx="9" fill="#4787a9"/>
+<rect x="384" y="427" width="416.3" height="54" rx="9" fill="#669bb4"/>
+<g font-family="Arial,sans-serif" font-size="25" font-weight="700" fill="#153957">
+<text x="1055" y="261">712,9</text>
+<text x="851" y="362">492,8</text>
+<text x="812" y="463">450,0</text>
+</g>
+<text x="85" y="563" font-family="Arial,sans-serif" font-size="18" fill="#456679">Не показатель биологической распространённости. Полная таблица регионов не опубликована.</text>
+<text x="85" y="597" font-family="Arial,sans-serif" font-size="18" fill="#456679">Источник: Минздрав РК, ответ Factcheck.kz (публикация 23.04.2026).</text>
+</svg>
