@@ -694,3 +694,9 @@ Fourteen hand-authored AutismHub SVG assets accompany the seven Russian guides t
 | File | Provenance and interpretation |
 | --- | --- |
 | `parent-speech-understanding-conversation.svg` | Original AutismHub non-photorealistic vector cover with symbolic communication forms and two speech bubbles. Conceptual decoration; not a clinical developmental diagram or a copy of external artwork. |
+
+## Kazakhstan ASD diagnosis registration pathway (15 October 2026)
+
+| File | Provenance and limitations |
+| --- | --- |
+| `kazakhstan-autism-registration-pathway.svg` | Original hand-authored AutismHub SVG flow diagram illustrating hypothetical stages from noticing developmental differences to accessing professional assessment and registration. Conceptual educational artwork only: no measured flows, no patients, no population denominators, no borrowed published figures, no generative-image usage. Evidence and country-specific registry limitations are documented in Baikatov et al. (2026), https://doi.org/10.3389/fpsyt.2026.1880419. |
