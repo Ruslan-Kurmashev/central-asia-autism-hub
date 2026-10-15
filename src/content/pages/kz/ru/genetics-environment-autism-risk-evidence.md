@@ -86,7 +86,7 @@ sources:
     publicationYear: 2026
     note: "Полный систематический обзор ВОЗ, опубликованный 3 сентября 2026 года."
     accessedAt: 2026-10-15
-  - title: "A assessment of the effects of parental age on the development of autism in children: a systematic review and a meta-analysis"
+  - title: "Assessment of the effects of parental age on autism in children: a systematic review and meta-analysis"
     url: "https://pmc.ncbi.nlm.nih.gov/articles/PMC11583425/"
     organisation: "BMC Pediatrics"
     publicationYear: 2024
@@ -110,9 +110,9 @@ sources:
     publicationYear: 2025
     note: "Обзор наблюдательных результатов о приёме фолиевой кислоты; снижение относительного риска в ассоциациях не доказывает профилактику аутизма."
     accessedAt: 2026-10-15
-  - title: "Maternal prenatal use of acetaminophen and autism: latest evidence review"
+  - title: "Paracetamol (acetaminophen) use during pregnancy and autism risk: Evidence does not support causal association."
     url: "https://pubmed.ncbi.nlm.nih.gov/41028913/"
-    organisation: "PubMed-indexed scientific editorial"
+    organisation: "International Journal of Gynecology & Obstetrics (FIGO-affiliated editorial)"
     publicationYear: 2025
     note: "Редакционный научный комментарий об ограничениях причинных заявлений и пользе методов контроля семейного смешения."
     accessedAt: 2026-10-15
