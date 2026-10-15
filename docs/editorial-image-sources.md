@@ -612,3 +612,13 @@ These three images are original, editable AutismHub SVG graphics. No generative 
 | `prenatal-brain-development-stages.svg` | AutismHub original educational vector diagram, 15 October 2026 | Overlapping stages of neural development without calibrated week lengths or a claim about an individual age of autism onset. |
 | `prenatal-neuronal-migration.svg` | AutismHub original educational vector diagram, 15 October 2026 | Illustrates one type of radial migration; not all neurons use this route and no autism signature is portrayed. |
 
+## Neurons and synapses: original scientific SVG figures (15 October 2026)
+
+These three illustrations are original hand-authored vector assets for AutismHub. No generative image models, identifiable patients, publisher figures, micrographs or real brain images are included.
+
+| Local file | Authorship | Scope and limitations |
+| --- | --- | --- |
+| `neuron-synapse-autism-cover.svg` | Original AutismHub vector illustration, 15 October 2026 | Conceptual neurons and neurotransmitter particles; not a measured autism-specific cellular structure. |
+| `chemical-synapse-steps.svg` | Original AutismHub educational illustration, 15 October 2026 | Schematic impulse, vesicle release and receptor binding; neither anatomically to scale nor autism-specific. |
+| `synaptic-plasticity-three-processes.svg` | Original AutismHub educational illustration, 15 October 2026 | Creation, strengthening/weakening and removal of synaptic contacts; not evidence of universal excess synapses or abnormal pruning in autism. |
+
