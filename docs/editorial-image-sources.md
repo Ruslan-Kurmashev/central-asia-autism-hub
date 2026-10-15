@@ -700,3 +700,10 @@ Fourteen hand-authored AutismHub SVG assets accompany the seven Russian guides t
 | File | Provenance and limitations |
 | --- | --- |
 | `kazakhstan-autism-registration-pathway.svg` | Original hand-authored AutismHub SVG flow diagram illustrating hypothetical stages from noticing developmental differences to accessing professional assessment and registration. Conceptual educational artwork only: no measured flows, no patients, no population denominators, no borrowed published figures, no generative-image usage. Evidence and country-specific registry limitations are documented in Baikatov et al. (2026), https://doi.org/10.3389/fpsyt.2026.1880419. |
+
+## Parent daily communication and play covers (15 October 2026)
+
+| File | Provenance and interpretation |
+| --- | --- |
+| `parent-everyday-communication-cover.svg` | Original AutismHub vector illustration, authored for the article about everyday communication. Domestic objects, stylised hands and speech symbols; no real identifiable persons or clinical data. Not a diagnostic diagram or a borrowed stock image. |
+| `parent-child-play-together-cover.svg` | Original AutismHub vector illustration, authored for the article about parent participation in play. Blocks, toy vehicle and a simple play path; not a developmental screening task, clinical test or reproduction of an external illustration. |
