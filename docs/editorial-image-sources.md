@@ -756,3 +756,9 @@ Associated PDFs in `public/downloads/motor/` are original generated educational 
 | `parent-emotions-communication-choice.svg` | Original AutismHub vector depicting four illustrative messages (pause, help, quieter, stop). Not a copyrighted AAC package, communication assessment, standardized symbol set or diagnosis. |
 
 Two original Russian-language PDFs in `public/downloads/emotions/` are created on deployment by `scripts/build-parent-emotion-resources.py`. Their scenarios and notes are editorial examples grounded in linked AAP, CDC, NICE, WHO and NHS sources; the PDFs are not copied figures or third-party program materials.
+
+## Kazakhstan early autism detection explanatory diagram (15 October 2026)
+
+| File | Provenance and scientific boundaries |
+| --- | --- |
+| `kazakhstan-autism-early-detection-pathway.svg` | Original hand-authored AutismHub educational SVG diagram (2026-10-15) illustrating the conceptual sequence from family observation through autism screening, follow-up and professional developmental assessment. It is not a diagnostic algorithm, an authorised or reproduced M-CHAT questionnaire, a personal diagnosis, or empirical flow data; no artificial image generator or borrowed figures used. Source background: Kazakhstan 2022 local M-CHAT-R/F study https://doi.org/10.23950/jcmk/11574 ; Kazakhstan 2024 observational screening study https://doi.org/10.1016/j.cegh.2024.101703 ; screening copyright and instructions https://www.mchatscreen.com/ . |
