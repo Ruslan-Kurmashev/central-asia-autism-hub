@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 540" role="img" aria-labelledby="title desc">
+<title id="title">Общение в повседневных ситуациях</title>
+<desc id="desc">Авторская графическая иллюстрация предметов дома: кружка, книга, две речевые подсказки и две руки, обращённые к общему предмету. Иллюстрация без диагностического значения.</desc>
+<rect width="960" height="540" fill="#eaf3f8"/>
+<rect x="50" y="54" width="860" height="432" rx="28" fill="#f9fcfe" stroke="#c1d8e5" stroke-width="3"/>
+<rect x="121" y="146" width="718" height="273" rx="21" fill="#e3eff6" stroke="#b0cadc" stroke-width="2"/>
+<rect x="177" y="305" width="608" height="16" rx="8" fill="#8fb1c9"/>
+<path d="M343 229h80v78c0 21-15 34-40 34s-40-13-40-34v-78z" fill="#fff" stroke="#427a9e" stroke-width="5"/>
+<path d="M421 242h18c34 0 31 45-6 45h-10" fill="none" stroke="#427a9e" stroke-width="7"/>
+<path d="M525 244h129v72H525z" fill="#fefefe" stroke="#427a9e" stroke-width="5" stroke-linejoin="round"/>
+<path d="M540 260h97 M540 277h83 M540 295h64" fill="none" stroke="#9ebdd0" stroke-width="6" stroke-linecap="round"/>
+<path d="M261 184c-16-25-3-52 26-59h106c48 3 53 69 6 78h-55l-25 21v-21h-29c-9 0-21-8-29-19z" fill="#fff" stroke="#477fa6" stroke-width="4"/>
+<path d="M286 166h86 M286 181h57" fill="none" stroke="#8fb0c7" stroke-width="6" stroke-linecap="round"/>
+<path d="M566 161c0-28 18-43 44-43h96c49 0 52 70 0 74h-40l-26 22v-22h-30c-24 0-44-11-44-31z" fill="#fff" stroke="#539886" stroke-width="4"/>
+<path d="M593 150h93 M593 167h66" fill="none" stroke="#a1c8b9" stroke-width="6" stroke-linecap="round"/>
+<path d="M220 366c-13-32-2-43 17-46l60-13c12-3 23 5 25 16s-5 19-15 23l-37 11c36 0 51 11 49 25-4 20-34 28-62 29-20 1-30-17-37-45z" fill="#e0bb9d" stroke="#b6886a" stroke-width="4"/>
+<path d="M744 362c8-33-4-44-21-49l-58-15c-12-3-24 2-27 15-3 12 5 23 15 26l33 10c-33 1-50 13-45 27 8 25 40 25 66 25 17 0 29-13 37-39z" fill="#efcbaa" stroke="#b6886a" stroke-width="4"/>
+</svg>
