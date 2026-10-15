@@ -762,3 +762,13 @@ Two original Russian-language PDFs in `public/downloads/emotions/` are created o
 | File | Provenance and scientific boundaries |
 | --- | --- |
 | `kazakhstan-autism-early-detection-pathway.svg` | Original hand-authored AutismHub educational SVG diagram (2026-10-15) illustrating the conceptual sequence from family observation through autism screening, follow-up and professional developmental assessment. It is not a diagnostic algorithm, an authorised or reproduced M-CHAT questionnaire, a personal diagnosis, or empirical flow data; no artificial image generator or borrowed figures used. Source background: Kazakhstan 2022 local M-CHAT-R/F study https://doi.org/10.23950/jcmk/11574 ; Kazakhstan 2024 observational screening study https://doi.org/10.1016/j.cegh.2024.101703 ; screening copyright and instructions https://www.mchatscreen.com/ . |
+
+## Microglia and immune system in autism: original SVG diagrams (15 October 2026)
+
+The following files are original, editable AutismHub diagrams made directly in vector SVG markup. No generative images, external journal figures, actual histological data, patient records or stock photography are included.
+
+| Asset | Editorial provenance | Scope and limitations |
+| --- | --- | --- |
+| `autism-microglia-immune-cover.svg` | Original AutismHub vector science illustration, 15 October 2026 | Schematic ramified cell near neurons, not a micrograph, inflammatory lesion or autism-specific cellular pattern. |
+| `microglia-normal-functions.svg` | Original AutismHub educational diagram, 15 October 2026 | Normal surveillance, clearance, cell signaling and synaptic remodeling; immune activity is not automatically inflammation or autism pathology. |
+| `microglia-evidence-ladder.svg` | Original AutismHub educational diagram, 15 October 2026 | Compares animal experiments, human cell cultures and observational human data; not an empirically ranked evidence scale or diagnostic pathway. |
