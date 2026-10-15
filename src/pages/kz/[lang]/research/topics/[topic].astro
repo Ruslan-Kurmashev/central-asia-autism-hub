@@ -52,26 +52,22 @@ const languageText = {
     count: 'Опубликованные материалы',
     empty: 'Проверенные материалы для этого направления пока не опубликованы. Подраздел будет пополняться после редакционной проверки.',
     regionalEmpty: 'Проверенные региональные материалы пока не опубликованы. Позже здесь появятся исследования и научные проекты, относящиеся к Казахстану и Центральной Азии.',
-    participationEmpty: 'В настоящее время на сайте нет проверенных объявлений о наборе участников. Мы будем размещать только проекты с понятными организаторами, условиями и информацией об этике исследования.',
   },
   kk: {
     back: 'Барлық зерттеу тақырыптары',
     count: 'Жарияланған материалдар',
     empty: 'Бұл бағыт бойынша тексерілген материалдар әзірге жарияланған жоқ. Материалдар редакциялық тексеруден кейін қосылады.',
     regionalEmpty: 'Қазақстан мен Орталық Азияға қатысты тексерілген өңірлік материалдар әзірге жарияланған жоқ.',
-    participationEmpty: 'Қазір сайтта қатысушыларды қабылдау туралы тексерілген хабарландырулар жоқ. Тек ұйымдастырушылары, шарттары және зерттеу этикасы көрсетілген жобалар жарияланады.',
   },
   en: {
     back: 'All research topics',
     count: 'Published resources',
     empty: 'No reviewed resources have been published in this topic yet. New materials will be added following editorial review.',
     regionalEmpty: 'No verified regional resources have been published yet. Research concerning Kazakhstan and Central Asia will appear here.',
-    participationEmpty: 'There are currently no verified research recruitment notices on the site. Only projects with clear organisers, eligibility conditions and ethics information will be listed.',
   },
 };
 const labels = languageText[locale];
-const emptyMessage = topicId === 'kazakhstan-research' ? labels.regionalEmpty :
-  topicId === 'research-participation' ? labels.participationEmpty : labels.empty;
+const emptyMessage = topicId === 'kazakhstan-research' ? labels.regionalEmpty : labels.empty;
 const dateFormatter = new Intl.DateTimeFormat(DATE_LOCALES[locale], {
   day: 'numeric', month: 'short', year: 'numeric',
 });

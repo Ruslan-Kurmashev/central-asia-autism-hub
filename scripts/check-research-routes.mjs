@@ -106,15 +106,13 @@ for (const file of await collect(researchFolder)) {
   checked += 1;
 }
 
-// Research landing: each language must expose four main topics and two
-// supplementary destinations; all six must have a working list page.
+// Research landing: each language must expose exactly four main topics,
+// no legacy supplementary block, and only the four selected topic pages.
 const researchTopicIds = [
   'research-reviews',
   'causes-and-biology',
-  'support-evidence',
   'reading-research',
   'kazakhstan-research',
-  'research-participation',
 ];
 for (const language of ['ru', 'kk', 'en']) {
   const landing = await firstExisting([
@@ -127,9 +125,15 @@ for (const language of ['ru', 'kk', 'en']) {
   }
   const html = await readFile(landing, 'utf8');
   if (!html.includes('research-directory__grid') ||
-      !html.includes('research-directory__extras') ||
-      html.includes('section-v2__topic-map')) {
+      html.includes('research-directory__extras') ||
+      html.includes('section-v2__topic-map') ||
+      html.includes('/research/topics/support-evidence/') ||
+      html.includes('/research/topics/research-participation/')) {
     errors.push('Research topic landing has old or incomplete navigation: ' + language);
+  }
+  const topicLinks = [...html.matchAll(/href="[^"]*\/research\/topics\/([^/]+)\/"/g)].map(m => m[1]);
+  if (JSON.stringify([...new Set(topicLinks)].sort()) !== JSON.stringify([...researchTopicIds].sort())) {
+    errors.push('Research landing must show exactly four planned topics: ' + language);
   }
   for (const topicId of researchTopicIds) {
     if (!html.includes('/research/topics/' + topicId + '/')) {

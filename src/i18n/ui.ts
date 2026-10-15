@@ -167,10 +167,8 @@ const BASE_UI: Record<Locale, LocaleCopy> = {
         topics: [
           { id: 'research-reviews', title: 'Разборы научных исследований', description: 'Анализ отдельных научных работ: методы, результаты, ограничения и значение выводов.' },
           { id: 'causes-and-biology', title: 'Биология и механизмы аутизма', description: 'Что известно о генетике, нейроразвитии, мозге и факторах, связанных с аутизмом.' },
-          { id: 'support-evidence', title: 'Доказательства о поддержке', description: 'Обобщение данных об эффективности, безопасности и ограничениях подходов к поддержке.' },
           { id: 'reading-research', title: 'Как устроены исследования', description: 'Научные методы, критическое чтение, статистика и исследовательская этика.' },
           { id: 'kazakhstan-research', title: 'Наука в Казахстане и Центральной Азии', description: 'Подборка региональных научных материалов и исследовательских проектов.' },
-          { id: 'research-participation', title: 'Участие в исследованиях', description: 'Информация о проверенных возможностях участия в научных проектах.' },
         ],
       },
       'help-kazakhstan': {
@@ -296,10 +294,8 @@ const BASE_UI: Record<Locale, LocaleCopy> = {
         topics: [
           { id: 'research-reviews', title: 'Ғылыми зерттеулерге шолу', description: 'Жеке ғылыми еңбектердің әдістерін, нәтижелерін, шектеулерін және маңызын талдау.' },
           { id: 'causes-and-biology', title: 'Аутизмнің биологиясы мен механизмдері', description: 'Генетика, ми дамуы және аутизммен байланысты факторлар туралы ғылыми деректер.' },
-          { id: 'support-evidence', title: 'Қолдау туралы ғылыми дәлелдер', description: 'Қолдау тәсілдерінің тиімділігі, қауіпсіздігі және шектеулері туралы жинақталған деректер.' },
           { id: 'reading-research', title: 'Зерттеулер қалай жүргізіледі', description: 'Ғылыми әдістер, зерттеулерді сыни оқу, статистика және зерттеу этикасы.' },
           { id: 'kazakhstan-research', title: 'Қазақстан мен Орталық Азиядағы ғылым', description: 'Өңірлік ғылыми материалдар мен зерттеу жобаларының жинағы.' },
-          { id: 'research-participation', title: 'Зерттеулерге қатысу', description: 'Ғылыми жобаларға қатысудың тексерілген мүмкіндіктері туралы ақпарат.' },
         ],
       },
       'help-kazakhstan': {
@@ -417,10 +413,8 @@ const BASE_UI: Record<Locale, LocaleCopy> = {
         topics: [
           { id: 'research-reviews', title: 'Scientific study explainers', description: 'Analysis of individual studies: methods, results, limitations and implications.' },
           { id: 'causes-and-biology', title: 'Biology and mechanisms of autism', description: 'Evidence on genetics, brain development and factors associated with autism.' },
-          { id: 'support-evidence', title: 'Evidence about support', description: 'Syntheses of evidence on the effectiveness, safety and limitations of support approaches.' },
           { id: 'reading-research', title: 'How research works', description: 'Research methods, critical reading, statistics and research ethics.' },
           { id: 'kazakhstan-research', title: 'Research in Kazakhstan and Central Asia', description: 'A collection of regional research resources and projects.' },
-          { id: 'research-participation', title: 'Participating in research', description: 'Information on verified opportunities to participate in research projects.' },
         ],
       },
       'help-kazakhstan': {

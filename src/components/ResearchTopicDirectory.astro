@@ -11,26 +11,19 @@ interface Props {
 
 const { locale, materials } = Astro.props;
 const topics = UI[locale].sections.research.topics;
-const mainTopics = topics.slice(0, 4);
-const additionalTopics = topics.slice(4);
+const mainTopics = topics;
 const translations = {
   ru: {
     heading: 'Темы исследований',
     intro: 'Выберите направление, чтобы открыть список материалов.',
-    more: 'Другие возможности',
-    moreIntro: 'Региональные исследования и информация об участии в научных проектах.',
   },
   kk: {
     heading: 'Зерттеу тақырыптары',
     intro: 'Материалдар тізімін ашу үшін бағытты таңдаңыз.',
-    more: 'Қосымша мүмкіндіктер',
-    moreIntro: 'Өңірлік зерттеулер және ғылыми жобаларға қатысу туралы ақпарат.',
   },
   en: {
     heading: 'Research topics',
     intro: 'Choose a subject to see its published resources.',
-    more: 'More ways to explore',
-    moreIntro: 'Regional research and information on participating in research projects.',
   },
 };
 const labels = translations[locale];
@@ -77,27 +70,5 @@ function countLabel(count: number) {
       );
     })}
   </div>
-  <div class="research-directory__extras" aria-labelledby="research-directory-extras-title">
-    <div class="research-directory__extras-heading">
-      <h2 id="research-directory-extras-title">{labels.more}</h2>
-      <p>{labels.moreIntro}</p>
-    </div>
-    <div class="research-directory__extra-links">
-      {additionalTopics.map((topic) => {
-        const count = materialCount(topic.id);
-        return (
-          <a class="research-directory__extra" href={localePath(locale, 'research/topics/' + topic.id)}>
-            <span class="research-directory__extra-copy">
-              <strong>{topic.title}</strong>
-              <span>{topic.description}</span>
-            </span>
-            <span class="research-directory__extra-tail">
-              <span>{count} {countLabel(count)}</span>
-              <span aria-hidden="true">→</span>
-            </span>
-          </a>
-        );
-      })}
-    </div>
-  </div>
+
 </section>
