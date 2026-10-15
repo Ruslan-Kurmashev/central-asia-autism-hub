@@ -783,3 +783,9 @@ Three original editable SVGs written for AutismHub, without generated images, me
 | `gut-brain-axis-pathways.svg` | Original AutismHub educational graphic (15 October 2026) | Conceptual neural, immune, metabolic and hormonal pathways; not experimental pathway measurements or proof of microbial causation in autism. |
 | `gut-microbiome-confounding-direction.svg` | Original AutismHub causal-inference diagram (15 October 2026) | Illustrative influence of selective eating, family environment, age, medications and GI symptoms on gut microbial measurements; not a quantified causal model and does not exclude all biological microbiome effects. |
 
+
+## Kazakhstan family challenges survey infographic (15 October 2026)
+
+| File | Authorship, numerical source and limitations |
+| --- | --- |
+| `kazakhstan-asd-family-support-survey-2025.svg` | Original hand-authored AutismHub SVG horizontal bar chart, based on three separately reported results from a sample of 390 parents in Imamatdinova et al. (2025), BMC Public Health: 73.3% reported insufficient state financial support; 25.4% reported leaving employment; 18.8% changing employment or schedules. Primary scientific source: https://doi.org/10.1186/s12889-025-23764-3 . Percentages refer to survey answers in the same non-probability sample; outcomes can overlap and must not be added, generalized to the national population, or interpreted as causal effects. Vector is original code, no AI-generated images, patient images, publisher figures or identifiable personal data. |
