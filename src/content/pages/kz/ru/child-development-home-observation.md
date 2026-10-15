@@ -38,7 +38,7 @@ sources:
     note: "Различие между наблюдением за развитием и стандартизированным скринингом; участие родителей в наблюдении."
     accessedAt: 2026-10-15
   - title: "CDC's Developmental Milestones"
-    url: "https://www.cdc.gov/milestones"
+    url: "https://www.cdc.gov/act-early/milestones/index.html"
     organisation: "Centers for Disease Control and Prevention (CDC)"
     publicationYear: 2026
     note: "Возрастные ориентиры в игре, общении, познании и движении; материал для дальнейшего чтения, не основа для самостоятельной диагностики."
