@@ -58,7 +58,7 @@ async function expectedRecentArticles(lang) {
   return entries
     .sort((a, b) => b.published - a.published ||
       b.updated - a.updated || a.id.localeCompare(b.id))
-    .slice(0, 6);
+    ;
 }
 
 function checkLocalizedHeader(html, lang, id) {
@@ -172,16 +172,26 @@ for (const lang of locales) {
   check(!html.includes('home-v2__card--statement') &&
     !html.includes('home-v2__card--principles'),
     id + ': redundant informational cards must not reappear on homepage');
-  const expectedLatest = await expectedRecentArticles(lang);
-  check(expectedLatest.length === 6, id + ': expected six latest articles in source');
-  for (const [index, item] of expectedLatest.entries()) {
-    const expectedLink = base + lang + '/' + item.section + '/' + item.slug + '/';
-    check(Boolean(cards[index]?.includes('href="' + expectedLink + '"')),
-      id + ': recent card ' + (index + 1) +
-      ' must be the matching latest publication regardless of section: ' + expectedLink);
-    const date = cards[index]?.match(/<time datetime="([^"]+)"/)?.[1];
-    check(Boolean(date) && Date.parse(date) === item.published,
+  const published = await expectedRecentArticles(lang);
+  const cutoff = published[5]?.published ?? 0;
+  const rendered = [];
+  for (const [index, card] of cards.entries()) {
+    const link = card.match(new RegExp('href="' + base + lang + '/([^/]+)/([^/]+)/"'));
+    const item = published.find(entry => entry.section === link?.[1] && entry.slug === link?.[2]);
+    check(Boolean(item), id + ': recent card ' + (index + 1) + ' is not a published article');
+    const time = card.match(/<time datetime="([^"]+)"/)?.[1];
+    check(Boolean(item && time) && Date.parse(time) === item.published,
       id + ': incorrect publication date on card ' + (index + 1));
+    check(Boolean(item) && item.published >= cutoff,
+      id + ': an older article has displaced a newer article in the feed');
+    if (item) rendered.push(item);
+  }
+  check(rendered.every((entry, index) => index === 0 ||
+      rendered[index - 1].published >= entry.published),
+    id + ': recent articles must be sorted by publication date');
+  for (const entry of published.filter(entry => entry.published > cutoff)) {
+    check(rendered.some(item => item.id === entry.id),
+      id + ': a strictly newer article is missing from the homepage: ' + entry.slug);
   }
   if (lang === 'ru') {
     const toolComparisonCard = cards.find(card => card.includes('/ados-2-adi-r-cars-2-vozmozhnosti-ogranicheniya/'));

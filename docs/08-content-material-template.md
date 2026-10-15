@@ -89,6 +89,15 @@ Every article is rendered through the common typography system in `docs/typograp
 
 Optional structured fields include key points, an evidence-limitations note, and a correction or version note.
 
+### Exact publication time for the homepage feed
+
+The **"Latest on AutismHub"** homepage block now displays the six most recently published materials in descending `publishedAt` order **without category quotas**. The seventh item is pushed out of the six-card block, but remains available in its normal section.
+
+For every newly published article, set `publishedAt` to an **ISO 8601 timestamp with a UTC offset**, for example `publishedAt: "2026-10-15T13:15:00Z"`. Using only a day (for example `2026-10-15`) makes the order of articles published on the same day ambiguous. Historical day-only dates remain valid for compatibility. Keep `publishedAt` unchanged when editing an existing article; update `updatedAt` instead. A translated article should use its own actual publication timestamp when released.
+
+The site shows a readable local calendar date; the exact publication time is used for ordering. These requirements apply equally to `pages` and `research` collection records.
+
+
 ## 6. Publication rules
 
 A record cannot be treated as publishable when:
