@@ -622,3 +622,13 @@ These three illustrations are original hand-authored vector assets for AutismHub
 | `chemical-synapse-steps.svg` | Original AutismHub educational illustration, 15 October 2026 | Schematic impulse, vesicle release and receptor binding; neither anatomically to scale nor autism-specific. |
 | `synaptic-plasticity-three-processes.svg` | Original AutismHub educational illustration, 15 October 2026 | Creation, strengthening/weakening and removal of synaptic contacts; not evidence of universal excess synapses or abnormal pruning in autism. |
 
+## Brain networks and information processing: original science diagrams (15 October 2026)
+
+These three SVG illustrations were created as original, editable vector markup for AutismHub. No generative illustration tool, borrowed publisher figure, personal clinical data, actual functional MRI images or recorded EEG signals were used.
+
+| Asset | Provenance | Scientific limits |
+| --- | --- | --- |
+| `neural-network-information-processing-cover.svg` | Original AutismHub editorial vector illustration, 15 October 2026 | Abstract links between neuron-like nodes, not a brain connectome or a biomarker of autism. |
+| `neurons-circuits-networks-levels.svg` | Original AutismHub explanatory figure, 15 October 2026 | Describes conceptual levels from individual neurons to behavior, not a direct causal pathway. |
+| `structural-vs-functional-connectivity.svg` | Original AutismHub explanatory figure, 15 October 2026 | Illustrative physical paths versus correlated synthetic curves; not real fMRI data, proof of direct pathways, or diagnostic connectivity measure. |
+
