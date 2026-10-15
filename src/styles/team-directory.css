@@ -1,0 +1,60 @@
+.team-directory {
+  --team-ink: #173f65;
+  --team-text: #2e526f;
+  --team-muted: #537089;
+  --team-accent: #145f94;
+  --team-border: #d5e4ee;
+  background: #f7fafc;
+  color: var(--team-ink);
+  min-height: 62vh;
+}
+.team-directory .container { width: min(calc(100% - 2.5rem), 70rem); }
+.team-directory__hero { padding: clamp(2.2rem, 5vw, 4.5rem) 0 clamp(2.5rem, 5vw, 4rem); background: linear-gradient(120deg, #e9f3f9 0%, #f7fbfd 70%, #fff 100%); border-bottom: 1px solid var(--team-border); }
+.team-directory__breadcrumbs { display: flex; flex-wrap: wrap; gap: .6rem; align-items: center; margin-bottom: 2.6rem; color: var(--team-muted); font-size: var(--type-meta); }
+.team-directory__breadcrumbs a { color: var(--team-accent); text-decoration: none; }
+.team-directory__breadcrumbs a:hover { text-decoration: underline; }
+.team-directory__eyebrow { color: var(--team-accent); text-transform: uppercase; font-size: var(--type-meta); font-weight: 750; letter-spacing: .065em; }
+.team-directory__hero h1 { margin-top: .8rem; font-size: var(--type-display); line-height: var(--leading-heading); font-weight: 570; color: #102f50; }
+.team-directory__intro { max-width: 47rem; margin-top: 1.2rem; color: var(--team-text); font-size: var(--type-lead); line-height: 1.63; }
+.team-directory__main { padding: clamp(2.5rem, 5vw, 4.25rem) 0 4rem; }
+.team-directory__section-heading { max-width: 53rem; margin-bottom: 1.6rem; }
+.team-directory__section-heading h2, .team-directory__collaboration h2 { font-size: var(--type-h2); line-height: var(--leading-heading); font-weight: 640; color: #173b5d; }
+.team-directory__section-heading p { margin-top: .65rem; color: var(--team-text); line-height: 1.7; }
+.team-directory__member { display: grid; grid-template-columns: minmax(11rem, 15rem) minmax(0, 1fr); overflow: hidden; background: #fff; border: 1px solid var(--team-border); border-radius: 1.1rem; box-shadow: 0 8px 26px rgb(24 76 113 / 6%); }
+.team-directory__member-avatar { display: grid; min-height: 18rem; place-items: center; padding: 2rem; background: linear-gradient(148deg, #daeaf4, #e9f4f8); border-right: 1px solid var(--team-border); }
+.team-directory__member-avatar img { width: 100%; height: 100%; max-height: 21rem; object-fit: cover; border-radius: .65rem; }
+.team-directory__initials { display: grid; place-items: center; width: 8.1rem; height: 8.1rem; border: 2px solid #a7c9dc; border-radius: 50%; background: #f4f9fc; font-size: 2.3rem; font-weight: 620; letter-spacing: .02em; color: #2d6a95; }
+.team-directory__member-info { padding: clamp(1.5rem, 3vw, 2.5rem); }
+.team-directory__role { color: var(--team-accent); font-size: var(--type-small); font-weight: 750; }
+.team-directory__member h3 { margin-top: .6rem; font-size: clamp(1.45rem, 2.9vw, 2rem); line-height: 1.25; color: #143b5d; }
+.team-directory__bio { margin-top: 1rem; line-height: 1.75; color: var(--team-text); }
+.team-directory__responsibilities { margin-top: 1.55rem; padding-top: 1.3rem; border-top: 1px solid #e5edf3; }
+.team-directory__responsibilities h4 { color: #234e70; font-size: var(--type-small); }
+.team-directory__responsibilities ul { display: flex; flex-wrap: wrap; gap: .5rem; list-style: none; padding: 0; margin: .8rem 0 0; }
+.team-directory__responsibilities li { padding: .4rem .65rem; color: #215378; background: #f0f7fb; border: 1px solid #d9e7f0; border-radius: .45rem; font-size: var(--type-small); }
+.team-directory__roles { margin-top: clamp(3rem, 6vw, 4.7rem); }
+.team-directory__roles-grid { display: grid; grid-template-columns: repeat(3,minmax(0,1fr)); gap: 1rem; }
+.team-directory__role-card { min-width: 0; padding: 1.45rem; border: 1px solid var(--team-border); border-radius: .85rem; background: #fff; }
+.team-directory__role-card h3 { font-size: var(--type-h3); color: #164264; line-height: 1.4; }
+.team-directory__role-card p { margin-top: .7rem; line-height: 1.7; font-size: var(--type-small); color: var(--team-text); }
+.team-directory__collaboration { margin-top: clamp(2.8rem, 6vw, 4.5rem); padding: clamp(1.5rem, 4vw, 2.5rem); background: #eaf4fa; border: 1px solid #c9dfe9; border-radius: 1rem; }
+.team-directory__collaboration h2 { margin-top: .7rem; }
+.team-directory__collaboration > p:not(.team-directory__eyebrow):not(.team-directory__disclosure) { margin-top: .85rem; color: var(--team-text); line-height: 1.75; max-width: 55rem; }
+.team-directory__actions { display: flex; flex-wrap: wrap; gap: .75rem; margin-top: 1.6rem; }
+.team-directory__action { display: inline-flex; align-items: center; justify-content: center; gap: 1rem; min-height: 2.75rem; padding: .72rem 1.05rem; font-size: var(--type-small); font-weight: 720; text-decoration: none; border-radius: .5rem; border: 1px solid #145f94; }
+.team-directory__action--primary { background: #145f94; color: white; }
+.team-directory__action--secondary { background: #fff; color: #145f94; }
+.team-directory__action--primary:hover { background: #0c4d7b; color: white; }
+.team-directory__action--secondary:hover { background: #f4f9fc; color: #145f94; }
+.team-directory__action:focus-visible, .team-directory__back:focus-visible, .team-directory__breadcrumbs a:focus-visible { outline: 3px solid #e2a943; outline-offset: 3px; }
+.team-directory__disclosure { margin-top: 1.4rem; padding-top: 1rem; border-top: 1px solid #cbdfe9; color: var(--team-muted); font-size: var(--type-small); line-height: 1.65; }
+.team-directory__back { display: inline-flex; align-items: center; gap: .5rem; margin-top: 2rem; color: var(--team-accent); font-size: var(--type-small); font-weight: 720; text-decoration: none; }
+.team-directory__back:hover { text-decoration: underline; }
+@media (max-width: 48rem) {
+  .team-directory .container { width: min(calc(100% - 1.25rem), 70rem); }
+  .team-directory__breadcrumbs { margin-bottom: 1.5rem; }
+  .team-directory__member { grid-template-columns: minmax(0, 1fr); }
+  .team-directory__member-avatar { min-height: 12rem; border-right: 0; border-bottom: 1px solid var(--team-border); }
+  .team-directory__initials { width: 6rem; height: 6rem; font-size: 1.9rem; }
+  .team-directory__roles-grid { grid-template-columns: minmax(0,1fr); }
+}

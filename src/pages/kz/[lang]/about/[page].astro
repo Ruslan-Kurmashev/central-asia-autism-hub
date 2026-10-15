@@ -1,6 +1,7 @@
 ---
 import BaseLayout from '../../../../layouts/BaseLayout.astro';
 import ExpertsDirectory from '../../../../components/ExpertsDirectory.astro';
+import TeamDirectory from '../../../../components/TeamDirectory.astro';
 import ContactHub from '../../../../components/ContactHub.astro';
 import { localePath, sectionPath } from '../../../../lib/urls';
 import { SITE, SUPPORTED_LOCALES, type Locale } from '../../../../site.config';
@@ -133,9 +134,11 @@ const current = copy[page];
   locale={locale}
   currentSection="about"
   alternatePath={'about/' + page}
-  bodyClass={page === 'experts' ? 'experts-directory-body' : page === 'contact' ? 'contact-hub-body' : 'about-subpage'}
+  bodyClass={page === 'team' ? 'team-directory-body' : page === 'experts' ? 'experts-directory-body' : page === 'contact' ? 'contact-hub-body' : 'about-subpage'}
 >
-  {page === 'experts' ? (
+  {page === 'team' ? (
+    <TeamDirectory locale={locale} />
+  ) : page === 'experts' ? (
     <ExpertsDirectory locale={locale} />
   ) : page === 'contact' ? (
     <ContactHub locale={locale} />

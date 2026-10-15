@@ -1,0 +1,159 @@
+---
+import { TEAM_MEMBERS } from '../data/team-profiles';
+import { localePath, sectionPath } from '../lib/urls';
+import type { Locale } from '../site.config';
+import '../styles/team-directory.css';
+
+const { locale } = Astro.props as { locale: Locale };
+const members = TEAM_MEMBERS.filter((member) => member.confirmed && member.publicProfileApproved);
+const labels = {
+  ru: {
+    home: 'Главная',
+    about: 'О проекте',
+    title: 'Наша команда',
+    eyebrow: 'Люди проекта',
+    intro: 'У AutismHub есть конкретные люди и понятные зоны ответственности. Здесь мы показываем только подтверждённых участников, которые действительно работают над платформой.',
+    people: 'Кто развивает AutismHub',
+    peopleLead: 'На данном этапе проект развивается под руководством основателя. По мере появления подтверждённых участников здесь будут добавляться их реальные роли и вклад.',
+    responsibilities: 'Направления работы',
+    principles: 'Как мы представляем участников',
+    principleLead: 'Мы различаем постоянную работу над проектом и отдельное участие в подготовке материалов.',
+    principlesItems: [
+      { title: 'Команда проекта', text: 'Люди, которые непосредственно участвуют в развитии платформы. Для каждого указана фактическая ответственность.' },
+      { title: 'Авторы и консультанты', text: 'Специалисты могут участвовать в отдельных публикациях, не входя в основную команду.' },
+      { title: 'Независимая проверка', text: 'Статус рецензента указывается только после реального документированного рецензирования конкретного материала.' },
+    ],
+    growEyebrow: 'Сотрудничество',
+    growTitle: 'Команда развивается постепенно',
+    growText: 'Мы открыты к сотрудничеству с авторами, исследователями, медицинскими и образовательными специалистами, а также участниками, которые могут помочь в развитии доступных материалов. Не размещаем имена или фотографии без подтверждения участия и согласования.',
+    experts: 'Наши эксперты',
+    contact: 'Предложить сотрудничество',
+    disclosure: 'Публикация профиля не означает, что человек проверил все материалы AutismHub или что его организация официально поддерживает проект.',
+    back: 'Вернуться к разделу «О проекте»',
+  },
+  kk: {
+    home: 'Басты бет',
+    about: 'Жоба туралы',
+    title: 'Біздің команда',
+    eyebrow: 'Жобаға қатысушылар',
+    intro: 'AutismHub жобасын нақты адамдар дамытады. Мұнда платформа жұмысына іс жүзінде қатысатыны расталған адамдар мен олардың міндеттері ғана көрсетіледі.',
+    people: 'AutismHub жобасын кім дамытады',
+    peopleLead: 'Қазіргі кезеңде жобаны оның негізін қалаушы басқарады. Басқа қатысушылардың үлесі расталғаннан кейін олардың нақты рөлі мен жұмысы осы жерде көрсетіледі.',
+    responsibilities: 'Жұмыс бағыттары',
+    principles: 'Қатысушыларды қалай таныстырамыз',
+    principleLead: 'Жобада тұрақты жұмыс істеу мен жекелеген материалдарға қатысуды бөлек көрсетеміз.',
+    principlesItems: [
+      { title: 'Жоба командасы', text: 'Платформаны дамытуға тікелей қатысатын адамдар. Әрқайсысының нақты міндеті көрсетіледі.' },
+      { title: 'Авторлар мен кеңесшілер', text: 'Мамандар белгілі бір материалға қатысуы мүмкін, бірақ бұл оларды негізгі команданың мүшесі етпейді.' },
+      { title: 'Тәуелсіз сараптама', text: 'Рецензент мәртебесі нақты материалға құжатталған тәуелсіз тексеру жүргізілгеннен кейін ғана көрсетіледі.' },
+    ],
+    growEyebrow: 'Ынтымақтастық',
+    growTitle: 'Команда біртіндеп кеңейеді',
+    growText: 'Біз авторлармен, зерттеушілермен, медицина және білім беру мамандарымен, сондай-ақ қолжетімді ақпаратты дамытуға көмектесетін қатысушылармен ынтымақтастыққа ашықпыз. Қатысуы расталып, келісім алынбайынша есімдер мен фотосуреттерді жарияламаймыз.',
+    experts: 'Біздің сарапшылар',
+    contact: 'Ынтымақтастық ұсыну',
+    disclosure: 'Профильдің жариялануы адам AutismHub материалдарының бәрін тексерді немесе оның ұйымы жобаны ресми қолдайды дегенді білдірмейді.',
+    back: '«Жоба туралы» бөліміне оралу',
+  },
+  en: {
+    home: 'Home',
+    about: 'About',
+    title: 'Our team',
+    eyebrow: 'People behind the project',
+    intro: 'AutismHub is developed by identifiable people with clear responsibilities. We list only confirmed contributors who actually work on the platform.',
+    people: 'Who develops AutismHub',
+    peopleLead: 'At this stage, the founder leads the project. Additional people and their actual contributions will be listed once their involvement is confirmed.',
+    responsibilities: 'Areas of work',
+    principles: 'How we present contributors',
+    principleLead: 'Ongoing project roles are different from contributing to individual publications.',
+    principlesItems: [
+      { title: 'Project team', text: 'People directly involved in developing the platform, with an accurately described responsibility.' },
+      { title: 'Authors and consultants', text: 'Specialists may contribute to individual resources without becoming part of the core team.' },
+      { title: 'Independent review', text: 'A reviewer role is shown only after documented independent review of a particular resource has occurred.' },
+    ],
+    growEyebrow: 'Collaboration',
+    growTitle: 'The team is growing gradually',
+    growText: 'We welcome collaboration with authors, researchers, healthcare and education specialists, and others contributing to accessible information. Names and photographs are published only with verified involvement and agreement.',
+    experts: 'Our experts',
+    contact: 'Propose a collaboration',
+    disclosure: 'A profile does not imply that the person has reviewed all AutismHub resources or that their employer officially endorses the project.',
+    back: 'Back to About',
+  },
+} as const;
+const t = labels[locale];
+---
+<article class="team-directory">
+  <header class="team-directory__hero">
+    <div class="container">
+      <nav class="team-directory__breadcrumbs" aria-label={t.about}>
+        <a href={localePath(locale)}>{t.home}</a>
+        <span aria-hidden="true">/</span>
+        <a href={sectionPath(locale, 'about')}>{t.about}</a>
+        <span aria-hidden="true">/</span>
+        <span aria-current="page">{t.title}</span>
+      </nav>
+      <p class="team-directory__eyebrow">{t.eyebrow}</p>
+      <h1>{t.title}</h1>
+      <p class="team-directory__intro">{t.intro}</p>
+    </div>
+  </header>
+
+  <div class="container team-directory__main">
+    <section class="team-directory__people" aria-labelledby="team-people-heading">
+      <div class="team-directory__section-heading">
+        <h2 id="team-people-heading">{t.people}</h2>
+        <p>{t.peopleLead}</p>
+      </div>
+      <div class="team-directory__members">
+        {members.map((member) => (
+          <article class="team-directory__member">
+            <div class="team-directory__member-avatar">
+              {member.photo ? (
+                <img src={member.photo} alt={member.photoAlt?.[locale] ?? ''} loading="lazy" decoding="async" />
+              ) : (
+                <span class="team-directory__initials" aria-hidden="true">{member.initials[locale]}</span>
+              )}
+            </div>
+            <div class="team-directory__member-info">
+              <p class="team-directory__role">{member.role[locale]}</p>
+              <h3>{member.name[locale]}</h3>
+              <p class="team-directory__bio">{member.profile[locale]}</p>
+              <div class="team-directory__responsibilities">
+                <h4>{t.responsibilities}</h4>
+                <ul>{member.responsibilities[locale].map((item) => <li>{item}</li>)}</ul>
+              </div>
+            </div>
+          </article>
+        ))}
+      </div>
+    </section>
+
+    <section class="team-directory__roles" aria-labelledby="team-roles-heading">
+      <div class="team-directory__section-heading">
+        <h2 id="team-roles-heading">{t.principles}</h2>
+        <p>{t.principleLead}</p>
+      </div>
+      <div class="team-directory__roles-grid">
+        {t.principlesItems.map((item) => (
+          <article class="team-directory__role-card">
+            <h3>{item.title}</h3>
+            <p>{item.text}</p>
+          </article>
+        ))}
+      </div>
+    </section>
+
+    <section class="team-directory__collaboration" aria-labelledby="team-collaboration-heading">
+      <p class="team-directory__eyebrow">{t.growEyebrow}</p>
+      <h2 id="team-collaboration-heading">{t.growTitle}</h2>
+      <p>{t.growText}</p>
+      <div class="team-directory__actions">
+        <a class="team-directory__action team-directory__action--primary" href={localePath(locale, 'about/contact')}>{t.contact}<span aria-hidden="true">→</span></a>
+        <a class="team-directory__action team-directory__action--secondary" href={localePath(locale, 'about/experts')}>{t.experts}<span aria-hidden="true">↗</span></a>
+      </div>
+      <p class="team-directory__disclosure">{t.disclosure}</p>
+    </section>
+
+    <a class="team-directory__back" href={sectionPath(locale, 'about')}><span aria-hidden="true">←</span> {t.back}</a>
+  </div>
+</article>
