@@ -844,3 +844,11 @@ The companion parent PDF `public/downloads/development/forma-nablyudeniy-poterya
 | File | Authorship, scientific background and limitations |
 | --- | --- |
 | `central-asia-autism-research-gaps-roadmap.svg` | Original manually coded AutismHub SVG showing six editorially proposed research questions: population measurement, adult lifespan, validated language instruments, evaluation of meaningful support outcomes, involvement of autistic people/families, and regional collaboration with ethical data handling. Grounded in Zakirova-Engstrand & Yakubova (2024) DOI https://doi.org/10.1177/13623613231170553 and later registry studies https://doi.org/10.3389/fpsyt.2026.1880419 and https://www.vestnik-ipovszrt.tj/en/detail.php?id=106 . This is a conceptual educational chart, not a systematic bibliometric count, ranking of research urgency, official funding plan, diagnostic tool, or copied journal illustration. All vector elements were manually authored; no generative images or patient data were used. |
+
+## Bilingual RU/KZ parent guide cover (16 October 2026)
+
+| File | Source and interpretation |
+| --- | --- |
+| `parent-bilingual-language-book-cover.svg` | Original AutismHub text-editable editorial geometry: open book and RU/KAZ speech marks. No external photograph, generative photorealistic imagery, clinical inference, or diagnostic symbol coding. Intended only as an editorial illustration for the bilingual family language article. |
+
+The printable parent worksheets at `public/downloads/bilingual/` are original educational templates generated from `scripts/build-parent-bilingual-language-pdfs.py`. They contain examples, not language tests or verified Kazakh/Russian translations of a clinical instrument.
