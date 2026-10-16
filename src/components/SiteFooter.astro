@@ -1,5 +1,6 @@
 ---
 import { UI } from '../i18n/ui';
+import { CONTACT_CHANNELS } from '../data/contact-channels';
 import { localePath } from '../lib/urls';
 import { SITE, type Locale } from '../site.config';
 
@@ -27,6 +28,9 @@ const policiesPath = localePath(locale, 'about/policies');
           <li><a href={`${policiesPath}#privacy`}>{copy.footerLinks.privacy}</a></li>
           <li><a href={`${policiesPath}#accessibility`}>{copy.footerLinks.accessibility}</a></li>
           <li><a href={`${localePath(locale, 'about/contact')}`}>{copy.footerLinks.contact}</a></li>
+          {CONTACT_CHANNELS.email && (
+            <li><a href={'mailto:' + CONTACT_CHANNELS.email}>{CONTACT_CHANNELS.email}</a></li>
+          )}
         </ul>
       </nav>
       <a class="site-footer__repository" href={SITE.repositoryUrl} rel="external">
