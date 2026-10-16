@@ -26,7 +26,7 @@ jobs:
           python-version: '3.12'
       - name: Generate PDF, DOCX and XLSX assessment downloads
         run: |
-          python -m pip install --disable-pip-version-check "reportlab>=4.2,<5" "python-docx>=1.1,<2" "pypdf>=5,<7" "lxml>=5,<7" "cssselect2>=0.7,<1" "tinycss2>=1.2,<2"
+          python -m pip install --disable-pip-version-check "reportlab>=4.2,<5" "python-docx>=1.1,<2" "pypdf>=5,<7" "lxml>=5,<7" "cssselect2>=0.7,<1" "tinycss2>=1.2,<2" "pymupdf>=1.24,<2"
           python -m pip install --no-deps "svglib==1.6.0"
           python scripts/build-professional-assessment-downloads.py
           python scripts/build-professional-assessment-toolkit-v2.py
@@ -43,8 +43,21 @@ jobs:
           python scripts/build-parent-bilingual-language-pdfs.py
           python scripts/build-parent-home-preschool-context-pdfs.py
           python scripts/rebuild-parent-printables.py
+          python scripts/qa-parent-printables.py
+          python scripts/audit-child-development-external-sources.py
           python scripts/build-research-reading-worksheet.py
           python scripts/validate-research-reading-worksheet.py
+      - name: Upload 15-PDF preview and external citation QA reports
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: autismhub-parent-development-qa
+          path: |
+            docs/audit-results/pdf-preview/
+            docs/audit-results/child-development-external-sources.md
+            docs/audit-results/child-development-external-sources.json
+          if-no-files-found: warn
+          retention-days: 30
       - name: Validate, build, and upload site
         uses: withastro/action@v6
         with:
