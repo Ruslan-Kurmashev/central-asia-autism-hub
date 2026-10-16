@@ -865,3 +865,5 @@ The printable parent worksheets at `public/downloads/bilingual/` are original ed
 | `parent-home-preschool-context-observation.svg` | Original AutismHub three-panel conceptual SVG illustrating contextual observations: setting, accessible support and participation. Not a validated behaviour scale, a functional assessment, or a diagnostic instrument. |
 
 Two educational unscored PDF forms under `public/downloads/contexts/` are generated during static deployment by `scripts/build-parent-home-preschool-context-pdfs.py`. They record contextual observations and family-educator agreements for personal use without uploading child information; they do not constitute medical records, crisis protocols or treatment.
+
+| `selfcare-bag-sequence.svg` | Original AutismHub three-step SVG: choose a large light item, open a safe bag, place item inside. Created for the 11pt visual printable self-care sequences; no third-party imagery or diagnostic significance. |
