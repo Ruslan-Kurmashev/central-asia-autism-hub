@@ -11,7 +11,7 @@ type Copy = {
   home: string; about: string; eyebrow: string; title: string; lead: string;
   mainLabel: string; mainTitle: string; mainDetail: string;
   mailTitle: string; mailReady: string; mailPending: string; mailAction: string;
-  fallback: string; githubAction: string; githubNotice: string; currentChannel: string; plannedChannel: string;
+  fallback: string; githubAction: string; githubNotice: string; emailNotice: string; currentChannel: string; plannedChannel: string;
   channelsTitle: string; channelsLead: string; channelLabels: Record<ChannelKey, { title: string; description: string; action: string }>;
   workTitle: string; workLead: string; workAction: string; privateContactPending: string;
   workItems: { title: string; detail: string; symbol: string }[];
@@ -29,13 +29,14 @@ const translations: Record<Locale, Copy> = {
     lead: 'Вопросы о проекте, экспертное участие, партнёрства и предложения по развитию Autism Hub Kazakhstan. Мы открыты к содержательной обратной связи.',
     mainLabel: '01 / ОБЩИЙ КОНТАКТ',
     mainTitle: 'Свяжитесь с AutismHub',
-    mainDetail: 'Для обращений к проекту будет использоваться один общий адрес. Личные контакты участников команды публиковать не планируется.',
+    mainDetail: 'Для обращений к проекту используется единый официальный email. Личные адреса членов команды не публикуются.',
     mailTitle: 'Официальная почта проекта',
     mailReady: 'Электронная почта', mailPending: 'Адрес готовится к запуску',
     mailAction: 'Написать на почту',
     fallback: 'Пока официальная почта не открыта, через GitHub можно сообщить только о публичной ошибке сайта или предложить исправление материала. Частные обращения и предложения с персональными данными здесь не принимаются.',
     githubAction: 'Сообщить о публичной ошибке сайта',
     githubNotice: 'Для обращения нужен аккаунт GitHub. Все обращения публичные: не размещайте номера телефонов, документы, сведения о детях или медицинскую информацию.',
+    emailNotice: 'Пишите по общим вопросам, вопросам сотрудничества или исправления материалов. Не отправляйте медицинские документы, фотографии детей, сведения о диагнозах и другие чувствительные персональные данные.',
     currentChannel: 'Доступно', plannedChannel: 'Скоро',
     channelsTitle: 'Наши площадки',
     channelsLead: 'Следите за развитием проекта и новыми образовательными материалами. Ссылки появляются только после создания соответствующих страниц.',
@@ -81,13 +82,14 @@ const translations: Record<Locale, Copy> = {
     lead: 'Autism Hub Kazakhstan жобасы туралы сұрақтар, сарапшылық қатысу, серіктестік және дамытуға қатысты ұсыныстар. Маңызды пікірлер мен ұсыныстарға ашықпыз.',
     mainLabel: '01 / БІРЫҢҒАЙ БАЙЛАНЫС',
     mainTitle: 'AutismHub жобасымен байланысыңыз',
-    mainDetail: 'Жобаға арналған бір ортақ электрондық пошта мекенжайы пайдаланылады. Команда мүшелерінің жеке байланыс деректерін жариялау жоспарланбаған.',
+    mainDetail: 'Жобаға хабарласу үшін ортақ ресми электрондық пошта қолданылады. Команда мүшелерінің жеке мекенжайлары жарияланбайды.',
     mailTitle: 'Жобаның ресми электрондық поштасы',
     mailReady: 'Электрондық пошта', mailPending: 'Мекенжай әзірленіп жатыр',
     mailAction: 'Электрондық хат жазу',
     fallback: 'Жобаның ресми поштасы ашылғанға дейін GitHub арқылы тек сайттағы жария қателерді немесе материалдарды түзету ұсыныстарын жіберуге болады. Жеке және медициналық мәліметтерді жібермеңіз.',
     githubAction: 'Сайттағы ашық қатені хабарлау',
     githubNotice: 'Хабарласу үшін GitHub тіркелгісі қажет. Барлық өтініш ашық көрінеді: телефон нөмірлерін, құжаттарды, балалар туралы немесе медициналық мәліметтерді жарияламаңыз.',
+    emailNotice: 'Электрондық поштаға жоба, ынтымақтастық және жарияланған материалдар бойынша жазыңыз. Балалардың медициналық құжаттарын, фотосуреттерін, диагноздарын немесе өзге сезімтал деректерін жібермеңіз.',
     currentChannel: 'Қолжетімді', plannedChannel: 'Жақында',
     channelsTitle: 'Біздің платформалар',
     channelsLead: 'Жоба жаңалықтары мен оқу материалдарын қадағалаңыз. Сілтемелер тиісті парақшалар ашылғаннан кейін ғана қосылады.',
@@ -133,13 +135,14 @@ const translations: Record<Locale, Copy> = {
     lead: 'Enquiries about Autism Hub Kazakhstan, expert contributions, partnerships and suggestions for improving the platform. We welcome constructive feedback.',
     mainLabel: '01 / SHARED CONTACT',
     mainTitle: 'Get in touch with AutismHub',
-    mainDetail: 'One shared project inbox will be used for enquiries. We do not plan to publish individual team members\' contact details.',
+    mainDetail: 'A shared official email address is available for project enquiries. Individual team members\' addresses are not published.',
     mailTitle: 'Official project email',
     mailReady: 'Email address', mailPending: 'Project email is being set up',
     mailAction: 'Send an email',
     fallback: 'Until the official project inbox opens, GitHub can be used only for public website corrections and content feedback. Do not submit private collaboration details or any personal or medical information.',
     githubAction: 'Report a public website issue',
     githubNotice: 'A GitHub account is required and all issues are public. Do not share phone numbers, documents, children\'s details or medical information.',
+    emailNotice: 'Email us about the project, collaboration or content corrections. Do not send medical records, photographs of children, diagnoses or other sensitive personal information.',
     currentChannel: 'Available', plannedChannel: 'Coming soon',
     channelsTitle: 'Find us online',
     channelsLead: 'Follow the project and explore our educational resources. Links will appear only after the corresponding channels have been created.',
@@ -224,6 +227,8 @@ const channelCards: Array<{ id: ChannelKey; glyph: string; href: string | null }
           <>
             <a class="contact-hub__email" href={'mailto:' + CONTACT_CHANNELS.email}>{CONTACT_CHANNELS.email}</a>
             <a class="contact-hub__button" href={'mailto:' + CONTACT_CHANNELS.email}>{c.mailAction} <span aria-hidden="true">↗</span></a>
+            <p class="contact-hub__privacy-notice">{c.emailNotice}</p>
+            <p><a href={CONTACT_CHANNELS.githubIssues} rel="external">{c.githubAction} <span aria-hidden="true">↗</span></a></p>
           </>
         ) : (
           <>
