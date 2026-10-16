@@ -832,3 +832,9 @@ The companion parent PDF `public/downloads/development/forma-nablyudeniy-poterya
 | Asset | Editorial source and limitations |
 | --- | --- |
 | `kazakhstan-inclusive-education-participation-path.svg` | Original manually authored AutismHub SVG showing conceptual distinctions between access, physical presence, participation, and learning, plus enabling school supports. Not a validated scale, measured comparison, government checklist, diagnostic algorithm, or observed student outcome. Inspired by research on parental experiences of inclusive schooling (An et al. DOI 10.1080/1034912X.2018.1499879), teacher attitudes and preparedness (Prisiazhniuk et al. DOI 10.1016/j.childyouth.2024.107535; Movkebayeva et al. DOI 10.14689/ejer.2024.112.14), and system evaluation by UNICEF Kazakhstan (https://www.unicef.org/kazakhstan/en/reports/evidence-inclusive-education-kazakhstan-based-formative-and-big-data-evaluation). No borrowed published figure, personal data or generative image used. |
+
+## Kazakhstan autism support technologies diagram (16 October 2026)
+
+| File | Editorial provenance and limitations |
+| --- | --- |
+| `kazakhstan-autism-support-technologies-map.svg` | Original manually authored AutismHub SVG diagram comparing conceptual purposes of AAC, assistive educational technologies, social robots and apps/VR, without a ranking or quantitative efficacy claims. Background: Sandygulova et al. (2019) https://doi.org/10.1515/pjbr-2019-0027 ; Rakhymbayeva et al. (2021) https://doi.org/10.3389/frobt.2021.669972 ; UNICEF Kazakhstan https://www.unicef.org/kazakhstan/en/reports/assistive-technologies-childs-needs-assessment-and-ecosystem-kazakhstan ; Therrien et al. (2025) https://doi.org/10.1080/07434618.2025.2479768 . Diagram is educational, not a validated clinical pathway, effectiveness ranking, empirical graph, or instruction to purchase devices. No AI image generation, publisher artwork, patient images or personal data used. |
