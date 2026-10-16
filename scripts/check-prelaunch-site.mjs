@@ -195,12 +195,12 @@ for (const lang of locales) {
   }
   if (lang === 'ru') {
     const toolComparisonCard = cards.find(card => card.includes('/ados-2-adi-r-cars-2-vozmozhnosti-ogranicheniya/'));
-    if (toolComparisonCard) check(toolComparisonCard.includes('professional-ados-adi-cars-central-asia.webp'),
-      id + ': ADOS-2/ADI-R/CARS-2 latest card must display the updated Central Asia assessment illustration');
+    if (toolComparisonCard) check(toolComparisonCard.includes('professional-assessment-ados-adi-cars.svg'),
+      id + ': ADOS-2/ADI-R/CARS-2 latest card must display the verified original non-AI assessment SVG');
     const toolComparisonPage = await readFile(
       path.join(dist, 'kz', lang, 'professionals', 'ados-2-adi-r-cars-2-vozmozhnosti-ogranicheniya', 'index.html'), 'utf8');
-    check(toolComparisonPage.includes('professional-ados-adi-cars-central-asia.webp'),
-      id + ': ADOS-2/ADI-R/CARS-2 article hero must display the updated Central Asia assessment illustration');
+    check(toolComparisonPage.includes('professional-assessment-ados-adi-cars.svg'),
+      id + ': ADOS-2/ADI-R/CARS-2 article hero must display the verified original non-AI assessment SVG');
   }
   if (lang === 'ru') {
     const referralCard = cards.find(card => card.includes('rannee-vyyavlenie-autizma-marshrut-specialista'));
