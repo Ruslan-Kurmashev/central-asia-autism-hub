@@ -61,7 +61,6 @@ for (const locale of ['ru', 'kk', 'en']) {
       // Keep validation strict: a01 uses JPEG; a05 uses a locally hosted WebP.
       const approvedRasterCovers = {
         'professionals-a01': 'professional-early-referral-family-consultation.jpg',
-        'professionals-a05': 'professional-ados-adi-cars-central-asia.webp',
       };
       const approvedFilename = approvedRasterCovers[key];
       const approvedRaster = Boolean(approvedFilename) &&
