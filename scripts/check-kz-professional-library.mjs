@@ -67,8 +67,8 @@ for (const group of groups) {
     assert.ok(key.startsWith('professionals-kz-'), filename + ': invalid translation key prefix');
     const reviewed = field(fm, 'updatedAt');
     const due = field(fm, 'reviewDueAt');
-    assert.match(reviewed ?? '', /^\\d{4}-\\d{2}-\\d{2}$/, filename + ': malformed update date');
-    assert.match(due ?? '', /^\\d{4}-\\d{2}-\\d{2}$/, filename + ': malformed next review date');
+    assert.match(reviewed ?? '', /^\d{4}-\d{2}-\d{2}$/, filename + ': malformed update date');
+    assert.match(due ?? '', /^\d{4}-\d{2}-\d{2}$/, filename + ': malformed next review date');
     assert.ok(due > reviewed, filename + ': next review date must follow latest update');
     assert.ok(fm.includes('evidenceLimitations:'), filename + ': missing evidence limitations');
     if (group.id === 'healthcare-diagnosis') {
