@@ -1,5 +1,6 @@
 ---
 import type { Locale } from '../site.config';
+import { CONTACT_CHANNELS } from '../data/contact-channels';
 
 interface PolicySection {
   id: string;
@@ -17,6 +18,7 @@ interface PolicyCopy {
   fullPolicy: string;
   reportIssue: string;
   accountNote: string;
+  emailLabel: string;
 }
 
 interface Props {
@@ -34,6 +36,7 @@ const copy: Record<Locale, PolicyCopy> = {
     navigation: 'Разделы страницы',
     fullPolicy: 'Полный документ политики (на английском)',
     reportIssue: 'Сообщить об ошибке через GitHub',
+    emailLabel: 'Официальная почта проекта',
     accountNote: 'Для отправки обращения в GitHub потребуется учётная запись. Не публикуйте имена детей, диагнозы, контакты или медицинские документы.',
     sections: [
       { id: 'mission', heading: 'Миссия и статус проекта', paragraphs: [
@@ -71,6 +74,7 @@ const copy: Record<Locale, PolicyCopy> = {
     navigation: 'Бет бөлімдері',
     fullPolicy: 'Саясаттың толық мәтіні (ағылшын тілінде)',
     reportIssue: 'GitHub арқылы қате туралы хабарлау',
+    emailLabel: 'Жобаның ресми электрондық поштасы',
     accountNote: 'GitHub-та хабарлама жіберу үшін есептік жазба қажет. Балалардың аттарын, диагноздарын, байланыс деректерін немесе медициналық құжаттарын жарияламаңыз.',
     sections: [
       { id: 'mission', heading: 'Миссия және жоба мәртебесі', paragraphs: [
@@ -108,6 +112,7 @@ const copy: Record<Locale, PolicyCopy> = {
     navigation: 'On this page',
     fullPolicy: 'Read the complete policy',
     reportIssue: 'Report an issue on GitHub',
+    emailLabel: 'Official project email',
     accountNote: 'A GitHub account is required to submit an issue. Do not disclose children’s names, diagnoses, contact details or medical documents.',
     sections: [
       { id: 'mission', heading: 'Mission and project status', paragraphs: [
@@ -170,6 +175,9 @@ const content = copy[locale];
         )}
         {section.id === 'contact' && (
           <>
+            {CONTACT_CHANNELS.email && (
+              <p class="about-policies__document"><a href={'mailto:' + CONTACT_CHANNELS.email}>{content.emailLabel}: {CONTACT_CHANNELS.email}</a></p>
+            )}
             <p class="about-policies__document"><a href={issueUrl} rel="external">{content.reportIssue} <span aria-hidden="true">↗</span></a></p>
             <p class="about-policies__note">{content.accountNote}</p>
           </>
