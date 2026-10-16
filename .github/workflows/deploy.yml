@@ -63,6 +63,8 @@ jobs:
         with:
           node-version: 24
           build-cmd: npm run validate
+      - name: Final regional research article browser and external URL audit
+        run: node scripts/check-regional-research-final.mjs
 
   deploy:
     needs: build
