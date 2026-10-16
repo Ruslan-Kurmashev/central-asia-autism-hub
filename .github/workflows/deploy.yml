@@ -26,7 +26,7 @@ jobs:
           python-version: '3.12'
       - name: Generate PDF, DOCX and XLSX assessment downloads
         run: |
-          python -m pip install --disable-pip-version-check "reportlab>=4.2,<5" "python-docx>=1.1,<2" "pypdf>=5,<7"
+          python -m pip install --disable-pip-version-check "reportlab>=4.2,<5" "python-docx>=1.1,<2" "pypdf>=5,<7" "svglib>=1.5,<2"
           python scripts/build-professional-assessment-downloads.py
           python scripts/build-professional-assessment-toolkit-v2.py
           python scripts/validate-assessment-toolkit.py
@@ -41,6 +41,7 @@ jobs:
           python scripts/build-parent-skill-loss-observation-pdf.py
           python scripts/build-parent-bilingual-language-pdfs.py
           python scripts/build-parent-home-preschool-context-pdfs.py
+          python scripts/rebuild-parent-printables.py
           python scripts/build-research-reading-worksheet.py
           python scripts/validate-research-reading-worksheet.py
       - name: Validate, build, and upload site
