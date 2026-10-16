@@ -14,7 +14,7 @@ export const CONTACT_CHANNELS: {
   githubRepository: string;
   githubIssues: string;
 } = {
-  email: null,
+  email: 'autismhub.kz@gmail.com',
   linkedin: null,
   telegram: null,
   instagramPersonal: null,
