@@ -838,3 +838,9 @@ The companion parent PDF `public/downloads/development/forma-nablyudeniy-poterya
 | File | Editorial provenance and limitations |
 | --- | --- |
 | `kazakhstan-autism-support-technologies-map.svg` | Original manually authored AutismHub SVG diagram comparing conceptual purposes of AAC, assistive educational technologies, social robots and apps/VR, without a ranking or quantitative efficacy claims. Background: Sandygulova et al. (2019) https://doi.org/10.1515/pjbr-2019-0027 ; Rakhymbayeva et al. (2021) https://doi.org/10.3389/frobt.2021.669972 ; UNICEF Kazakhstan https://www.unicef.org/kazakhstan/en/reports/assistive-technologies-childs-needs-assessment-and-ecosystem-kazakhstan ; Therrien et al. (2025) https://doi.org/10.1080/07434618.2025.2479768 . Diagram is educational, not a validated clinical pathway, effectiveness ranking, empirical graph, or instruction to purchase devices. No AI image generation, publisher artwork, patient images or personal data used. |
+
+## Central Asia autism evidence gaps roadmap (16 October 2026)
+
+| File | Authorship, scientific background and limitations |
+| --- | --- |
+| `central-asia-autism-research-gaps-roadmap.svg` | Original manually coded AutismHub SVG showing six editorially proposed research questions: population measurement, adult lifespan, validated language instruments, evaluation of meaningful support outcomes, involvement of autistic people/families, and regional collaboration with ethical data handling. Grounded in Zakirova-Engstrand & Yakubova (2024) DOI https://doi.org/10.1177/13623613231170553 and later registry studies https://doi.org/10.3389/fpsyt.2026.1880419 and https://www.vestnik-ipovszrt.tj/en/detail.php?id=106 . This is a conceptual educational chart, not a systematic bibliometric count, ranking of research urgency, official funding plan, diagnostic tool, or copied journal illustration. All vector elements were manually authored; no generative images or patient data were used. |
