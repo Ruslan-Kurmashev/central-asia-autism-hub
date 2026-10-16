@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="700" viewBox="0 0 1200 700" role="img" aria-labelledby="title description">
+<title id="title">Симптомы психологического неблагополучия в опросе родителей детей с аутизмом в Казахстане</title>
+<desc id="description">Редакционный график AutismHub по исследованию Alibekova и коллег, собранному в 2018 году и опубликованному в 2022 году. Среди 136 участников с полными ответами по шкале DASS-21 у 61 процента показатели симптомов стресса были от лёгких до крайне выраженных, у 52,9 процента показатели тревоги и у 53,7 процента депрессивных симптомов. Категории пересекаются, это не клинические диагнозы и не доля всех родителей Казахстана.</desc>
+<rect width="1200" height="700" fill="#f1f7fa" rx="24"/>
+<rect x="32" y="29" width="1136" height="638" rx="22" fill="#fff" stroke="#c8dce8" stroke-width="2"/>
+<g font-family="Arial,sans-serif">
+<text x="70" y="94" font-weight="700" font-size="32" fill="#153f5c">Что сообщили участники одного исследования</text>
+<text x="70" y="132" font-size="20" fill="#4e7288">Казахстан, сбор данных в 2018 году, 136 полных ответов по DASS-21</text>
+<g fill="none" stroke="#d3e4ec" stroke-width="2">
+<path d="M420 206V519"/><path d="M570 206V519"/><path d="M720 206V519"/><path d="M870 206V519"/><path d="M1020 206V519"/>
+</g>
+<g fill="#55768a" font-size="17" text-anchor="middle">
+<text x="420" y="196">0%</text><text x="570" y="196">25%</text><text x="720" y="196">50%</text><text x="870" y="196">75%</text><text x="1020" y="196">100%</text>
+</g>
+<g fill="#174460" font-size="25" font-weight="700">
+<text x="75" y="287">Стресс</text>
+<text x="75" y="386">Тревога</text>
+<text x="75" y="485">Депрессивные симптомы</text>
+</g>
+<rect x="420" y="251" width="366" height="56" rx="10" fill="#276a8b"/>
+<rect x="420" y="350" width="317.4" height="56" rx="10" fill="#5485a0"/>
+<rect x="420" y="449" width="322.2" height="56" rx="10" fill="#719ab0"/>
+<g font-size="28" fill="#174460" font-weight="700">
+<text x="804" y="288">61,0%</text>
+<text x="754" y="387">52,9%</text>
+<text x="758" y="486">53,7%</text>
+</g>
+<rect x="70" y="538" width="1060" height="87" rx="14" fill="#eff6fa" stroke="#d9e9f1"/>
+<text x="88" y="572" font-size="19" fill="#24556f">Один человек мог сообщить о симптомах сразу в нескольких категориях.</text>
+<text x="88" y="599" font-size="17" fill="#4d7185">Самоотчёты не устанавливают диагноз и не представляют всё население Казахстана.</text>
+<text x="72" y="645" font-size="16" fill="#57798b">Источник: Alibekova et al., Global Mental Health (2022). DOI: 10.1017/gmh.2022.51</text>
+</g>
+</svg>
