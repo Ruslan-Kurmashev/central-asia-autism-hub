@@ -858,3 +858,12 @@ The printable parent worksheets at `public/downloads/bilingual/` are original ed
 | File | Editorial provenance and limitations |
 | --- | --- |
 | `central-asia-autism-future-research-roadmap.svg` | Original manually authored AutismHub SVG of a **hypothetical** three-stage 2027-2030 research-development sequence: shared questions, ethics and protocols; local pilots; then cross-site replication and communication. Informed by the regional scoping review of Zakirova-Engstrand and Yakubova (2024), DOI https://doi.org/10.1177/13623613231170553; community priority-setting research by Cage et al. (2024), https://pmc.ncbi.nlm.nih.gov/articles/PMC11401337/; and scientific reporting guidance https://www.equator-network.org/reporting-guidelines/strobe/ . Years and steps are **illustrative editorial proposals**, not funded programmes, government policy, committed partners or evidence of projects currently under way. No AI-generated imagery, third-party copyrighted chart or personal data used. |
+
+## Home and preschool context differences, parent guide (16 October 2026)
+
+| File | Provenance and interpretation |
+| --- | --- |
+| `parent-home-preschool-context-differences.svg` | Original AutismHub source-coded vector showing two generic indoor contexts (home and group setting), an open book and play materials. No real people, no AI-generated photo and no diagnostic inference. |
+| `parent-home-preschool-context-observation.svg` | Original AutismHub three-panel conceptual SVG illustrating contextual observations: setting, accessible support and participation. Not a validated behaviour scale, a functional assessment, or a diagnostic instrument. |
+
+Two educational unscored PDF forms under `public/downloads/contexts/` are generated during static deployment by `scripts/build-parent-home-preschool-context-pdfs.py`. They record contextual observations and family-educator agreements for personal use without uploading child information; they do not constitute medical records, crisis protocols or treatment.
