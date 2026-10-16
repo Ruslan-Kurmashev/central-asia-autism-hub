@@ -33,6 +33,7 @@ jobs:
           python scripts/build-child-development-diary.py
           python scripts/build-parent-motor-activity-pdfs.py
           python scripts/build-parent-emotion-resources.py
+          python scripts/build-parent-daily-independence-pdfs.py
           python scripts/build-research-reading-worksheet.py
           python scripts/validate-research-reading-worksheet.py
 

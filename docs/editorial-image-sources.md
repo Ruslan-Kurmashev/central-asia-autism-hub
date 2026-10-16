@@ -800,3 +800,14 @@ Three original editable SVGs written for AutismHub, without generated images, me
 | `selfcare-table-sequence.svg` | Original AutismHub three-stage schematic for preparing an accessible meal place, without external borrowed art. |
 
 Three Russian educational PDF resources at `public/downloads/selfcare/` are generated at deployment using `scripts/build-parent-daily-independence-pdfs.py` and editable parent instructions in `scripts/data/parent-daily-independence-tasks-ru.json`. The diagrams and cards are neither a standardized scale nor an individual self-care therapy programme. NHS, CDC, AAP and NICE sources are linked from the article.
+
+## Autism clinical diagnosis and biological tests: original scientific SVG diagrams (16 October 2026)
+
+All three educational graphics are original editable SVG diagrams authored for AutismHub. No AI-generated imagery, commercial stock illustration, medical scans, EEG recordings, genetic reports, clinical data, actual patient images or figures from published research were used.
+
+| Local asset | Original source | Scientific scope and limitations |
+| --- | --- | --- |
+| `autism-biological-testing-cover.svg` | Original AutismHub educational vector artwork, 15 October 2026 | Abstract MRI, DNA, blood test and diagnostic-question symbols; not a clinical test, scan or result. |
+| `autism-diagnostic-pathway-evidence.svg` | Original AutismHub science diagram, 15 October 2026 | General conceptual developmental assessment, history and differential-diagnosis pathway; not a validated diagnostic checklist or Kazakhstan clinical protocol. |
+| `autism-test-purpose-matrix.svg` | Original AutismHub educational science diagram, 15 October 2026 | Different MRI, EEG, genetic and blood-testing indications; does not recommend routine testing for all or suggest any one test can diagnose autism. |
+
