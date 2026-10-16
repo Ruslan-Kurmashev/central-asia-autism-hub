@@ -57,5 +57,46 @@ export const TEAM_MEMBERS: TeamMember[] = [
     },
     confirmed: true,
     publicProfileApproved: true,
+  },  {
+    id: 'adina-yessimova',
+    name: { ru: 'Адина Есимова', kk: 'Адина Есимова', en: 'Adina Yessimova' },
+    role: {
+      ru: 'Специалист по медицине и аналитике данных',
+      kk: 'Медицина және деректерді талдау маманы',
+      en: 'Medical and Data Analytics Specialist',
+    },
+    profile: {
+      ru: [
+        'Врач по образованию, специалист в области анализа медицинских данных и искусственного интеллекта.',
+        'Окончила Казахский национальный медицинский университет имени С. Д. Асфендиярова. Получила квалификацию Higher Diploma in Data Analytics в City Colleges (Дублин, Ирландия).',
+        'Имеет опыт клинической работы, анализа данных и оценки качества систем искусственного интеллекта. Работала над вопросами инклюзивной коммуникации и адаптации взаимодействия с детьми с особенностями развития.',
+        'Участвовала в исследовательской работе по применению машинного обучения к данным, связанным с аутизмом.',
+        'В AutismHub занимается подготовкой и развитием информационных материалов, объединяя медицинские знания с современными методами анализа данных.',
+      ],
+      kk: [
+        'Білімі бойынша дәрігер, медициналық деректерді талдау және жасанды интеллект саласының маманы.',
+        'С. Д. Асфендияров атындағы Қазақ ұлттық медицина университетін бітірген. Ирландияның Дублин қаласындағы City Colleges оқу орнында Data Analytics мамандығы бойынша Higher Diploma біліктілігін алған.',
+        'Клиникалық жұмыс, деректерді талдау және жасанды интеллект жүйелерінің сапасын бағалау тәжірибесі бар. Даму ерекшеліктері бар балалармен инклюзивті қарым-қатынас пен өзара әрекеттесу тәсілдерін бейімдеу бағытында жұмыс істеген.',
+        'Аутизмге қатысты деректерге машиналық оқытуды қолдану жөніндегі зерттеу жұмысына қатысқан.',
+        'AutismHub жобасында медициналық білім мен деректерді талдау тәсілдерін біріктіріп, ақпараттық материалдарды дайындауға және дамытуға қатысады.',
+      ],
+      en: [
+        'Medical doctor by training, specialising in healthcare data analytics and artificial intelligence.',
+        'Graduated from Asfendiyarov Kazakh National Medical University and earned a Higher Diploma in Data Analytics from City Colleges, Dublin, Ireland.',
+        'Has experience in clinical care, data analysis and evaluating the quality of AI systems. Has worked on inclusive communication and adapting interactions for children with developmental differences.',
+        'Contributed to research applying machine learning to autism-related datasets.',
+        'At AutismHub, helps develop accessible educational resources by bringing together medical knowledge and data analytics.',
+      ],
+    },
+    initials: { ru: 'АЕ', kk: 'АЕ', en: 'AY' },
+    photo: '/central-asia-autism-hub/images/team/adina-yessimova.webp',
+    photoAlt: {
+      ru: 'Портрет Адины Есимовой',
+      kk: 'Адина Есимованың портреті',
+      en: 'Portrait of Adina Yessimova',
+    },
+    confirmed: true,
+    publicProfileApproved: true,
   },
+
 ];

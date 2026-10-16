@@ -20,6 +20,7 @@
 .team-directory__section-heading { max-width: 53rem; margin-bottom: 1.6rem; }
 .team-directory__section-heading h2, .team-directory__collaboration h2 { font-size: var(--type-h2); line-height: var(--leading-heading); font-weight: 640; color: #173b5d; }
 .team-directory__section-heading p { margin-top: .65rem; color: var(--team-text); line-height: 1.7; }
+.team-directory__members { display: grid; gap: 1.3rem; }
 .team-directory__member { display: grid; grid-template-columns: minmax(11rem, 15rem) minmax(0, 1fr); overflow: hidden; background: #fff; border: 1px solid var(--team-border); border-radius: 1.1rem; box-shadow: 0 8px 26px rgb(24 76 113 / 6%); }
 .team-directory__member-avatar { display: flex; align-items: flex-start; min-height: 18rem; padding: .85rem; background: #f1f7fa; border-right: 1px solid var(--team-border); }
 .team-directory__member-avatar img { display: block; width: 100%; height: auto; aspect-ratio: 4 / 5; object-fit: cover; object-position: center top; border-radius: .65rem; }
