@@ -77,9 +77,16 @@ for (const locale of locales) {
   inspect((contactHtml.match(/<h2\b/g) || []).length === 5, 'contact page must have five H2 sections');
   inspect(contactHtml.includes('https://github.com/Ruslan-Kurmashev/central-asia-autism-hub/issues/new'), 'active GitHub issue contact missing');
   inspect(contactHtml.includes('about/policies/#editorial') && contactHtml.includes('about/policies/#privacy'), 'policy and privacy links missing from contact');
-  inspect(!contactHtml.includes('mailto:') && !contactHtml.includes('href="https://www.linkedin.com/') &&
-    !contactHtml.includes('href="https://t.me/') && !contactHtml.includes('href="https://www.instagram.com/'),
-    'unverified email or social links must not be published');
+  inspect(contactHtml.includes('mailto:autismhub.kz@gmail.com') &&
+    contactHtml.includes('autismhub.kz@gmail.com'),
+    'official project email must be visible and clickable in all languages');
+  inspect(page.includes('mailto:autismhub.kz@gmail.com') &&
+    overview.includes('mailto:autismhub.kz@gmail.com'),
+    'official project email must be accessible from policy and shared footer');
+  inspect(!contactHtml.includes('href="https://www.linkedin.com/') &&
+    !contactHtml.includes('href="https://t.me/') &&
+    !contactHtml.includes('href="https://www.instagram.com/'),
+    'unverified social links must not be published');
   inspect(!/<form\b/i.test(contactHtml), 'contact form is not approved');
   inspect(!/<a\b[^>]*href="[^"]*(?:paypal|stripe|donate)[^"]*"/i.test(contactHtml), 'payments must not be enabled');
   inspect({
