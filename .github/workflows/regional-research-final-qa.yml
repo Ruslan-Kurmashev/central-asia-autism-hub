@@ -4,6 +4,9 @@ on:
   push:
     paths:
       - '.github/workflows/regional-research-final-qa.yml'
+      - 'src/layouts/ArticleLayout.astro'
+      - 'src/content/pages/kz/ru/*.md'
+      - 'scripts/check-regional-research-final.mjs'
   workflow_dispatch:
 
 permissions:
