@@ -66,8 +66,8 @@ sources:
   - title: "Digital Inclusion in Primary Schools: Assistive Technology Needs Assessment and Capacity Building"
     url: "https://www.unicef.org/kazakhstan/en/media/15801/file/Analytical_Mission_Report_Kazakhstan_2025.pdf.pdf"
     organisation: "UNICEF Kazakhstan"
-    publicationYear: 2026
-    note: "Отчёт о работах марта-декабря 2025 года; 34 ребёнка получили индивидуально подобранные средства, 11 школ оснащены ресурсными комплектами, педагогов обучали АДК."
+    publicationYear: 2025
+    note: "Отчёт UNICEF датирован декабрём 2025 года и охватывает работы марта-декабря 2025 года; 34 ребёнка получили индивидуально подобранные средства, 11 школ оснащены ресурсными комплектами, педагогов обучали АДК."
     accessedAt: 2026-10-16
   - title: "A Systematic review of AAC interventions using speech generating devices for autistic preschoolers"
     url: "https://doi.org/10.1080/07434618.2025.2479768"
@@ -225,7 +225,7 @@ sources:
 
 ### Результаты работ марта-декабря 2025 года
 
-В подробном отчёте о цифровой инклюзии, опубликованном UNICEF в 2026 году, представлены итоги практической программы:
+В подробном отчёте UNICEF о цифровой инклюзии, **датированном декабрём 2025 года**, представлены итоги программы марта-декабря 2025 года:
 
 | Что учитывали | Результат |
 | --- | ---: |
@@ -354,7 +354,7 @@ UNICEF в [обзоре управления данными образовате
 3. [Nazarbayev University (2025). Совместный проект APRIL с Фондом Булата Утемуратова.](https://nu.edu.kz/news-en/nu-and-the-bulat-utemuratov-foundation-launch-joint-project-to-support-children-with-autism/)
 4. [Nazarbayev University (2026). Презентация системы APRIL.](https://nu.edu.kz/news-en/nu-showcases-robot-assisted-therapy-technologies-for-children-with-autism/)
 5. [UNICEF Kazakhstan (2025). Оценка экосистемы вспомогательных технологий.](https://www.unicef.org/kazakhstan/en/reports/assistive-technologies-childs-needs-assessment-and-ecosystem-kazakhstan)
-6. [UNICEF Kazakhstan (2026). Digital Inclusion in Primary Schools: отчёт за 2025 год.](https://www.unicef.org/kazakhstan/en/media/15801/file/Analytical_Mission_Report_Kazakhstan_2025.pdf.pdf)
+6. [UNICEF Kazakhstan (2025). Digital Inclusion in Primary Schools: отчёт от декабря 2025 года.](https://www.unicef.org/kazakhstan/en/media/15801/file/Analytical_Mission_Report_Kazakhstan_2025.pdf.pdf)
 7. [Therrien и соавторы (2025). Систематический обзор 20 исследований устройств АДК.](https://doi.org/10.1080/07434618.2025.2479768)
 8. [Pope, Light, Laubscher (2025). Систематический обзор и метаанализ NDBI и АДК.](https://doi.org/10.1007/s10803-024-06382-7)
 9. [Метаанализ шести исследований иммерсивной VR (2024).](https://doi.org/10.1016/j.ridd.2024.104771)
