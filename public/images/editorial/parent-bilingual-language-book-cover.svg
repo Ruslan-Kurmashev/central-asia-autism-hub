@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 540" role="img" aria-labelledby="title desc">
+<title id="title">Два языка в одной семье: общение и совместное чтение</title>
+<desc id="desc">Редакционная геометрическая схема: открытая книга, два облака разговора и соединяющая их линия. Цветовая кодировка не обозначает диагностические категории. Реальных детей и сгенерированных фотопортретов нет.</desc>
+<rect width="960" height="540" fill="#eaf3f8"/>
+<rect x="49" y="52" width="862" height="436" rx="28" fill="#f9fcfe" stroke="#c1d9e7" stroke-width="3"/>
+<path d="M475 310c-75-48-160-51-283-17v131c121-35 209-32 283 15z" fill="#fcfdfd" stroke="#6e98b5" stroke-width="5"/>
+<path d="M477 310c76-49 160-51 283-17v131c-121-35-208-32-283 15z" fill="#fcfdfd" stroke="#6e98b5" stroke-width="5"/>
+<path d="M476 310v132" stroke="#8aaec6" stroke-width="7" stroke-linecap="round"/>
+<path d="M221 325q96-22 215 16M221 354q107-18 213 16M221 385q100-14 213 20" stroke="#bad0df" fill="none" stroke-width="10" stroke-linecap="round"/>
+<path d="M518 341q118-38 211-16M518 370q111-34 211-16M518 405q109-34 211-20" stroke="#bad0df" fill="none" stroke-width="10" stroke-linecap="round"/>
+<path d="M169 137c0-32 26-57 58-57h153c76 0 78 111 3 111h-72l-36 34v-34h-48c-34 0-58-23-58-54z" fill="#e4f0f7" stroke="#6796b8" stroke-width="5"/>
+<path d="M582 137c0-32 26-57 58-57h109c72 0 80 111 3 111h-39l-35 34v-34h-37c-35 0-59-22-59-54z" fill="#e4efe8" stroke="#78a994" stroke-width="5"/>
+<text x="282" y="149" font-family="Arial, sans-serif" font-size="42" font-weight="bold" text-anchor="middle" fill="#346f98">RU</text>
+<text x="684" y="149" font-family="Arial, sans-serif" font-size="37" font-weight="bold" text-anchor="middle" fill="#437e68">ҚАЗ</text>
+<path d="M392 195q68 39 123 0" fill="none" stroke="#8cabbe" stroke-width="6" stroke-dasharray="11 15" stroke-linecap="round"/>
+<circle cx="452" cy="193" r="7" fill="#689bbc"/>
+<circle cx="487" cy="206" r="7" fill="#689bbc"/>
+<path d="M196 455h564" stroke="#d0e2ee" stroke-width="4" stroke-linecap="round"/>
+</svg>
