@@ -811,3 +811,12 @@ All three educational graphics are original editable SVG diagrams authored for A
 | `autism-diagnostic-pathway-evidence.svg` | Original AutismHub science diagram, 15 October 2026 | General conceptual developmental assessment, history and differential-diagnosis pathway; not a validated diagnostic checklist or Kazakhstan clinical protocol. |
 | `autism-test-purpose-matrix.svg` | Original AutismHub educational science diagram, 15 October 2026 | Different MRI, EEG, genetic and blood-testing indications; does not recommend routine testing for all or suggest any one test can diagnose autism. |
 
+
+## Child acquired skill loss guide (16 October 2026)
+
+| File | Provenance and interpretation |
+| --- | --- |
+| `parent-child-skill-regression-cover.svg` | Original AutismHub source-coded editorial vector of a diary and symbols for different developmental skills. Does not depict a real child, measured patient data, or a standardized clinical test. |
+| `parent-skill-regression-observation-steps.svg` | Original AutismHub source-coded three-step explanatory vector about recording observations, speaking to a medical professional, and professional assessment. It is not triage, a diagnostic decision tree or a time-to-care algorithm. |
+
+The companion parent PDF `public/downloads/development/forma-nablyudeniy-poterya-navykov-ru.pdf` is an original unscored organisational worksheet, generated at build time by `scripts/build-parent-skill-loss-observation-pdf.py`. No patient data, copyrighted third-party diagrams or validated scales are embedded.
