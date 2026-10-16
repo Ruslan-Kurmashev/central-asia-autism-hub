@@ -110,6 +110,10 @@ for (const locale of ['ru', 'en', 'kk']) {
 
     assert.ok(src, `Published article missing featuredImage: ${article}`);
     assert.ok(alt.length >= 30, `Missing descriptive featuredImageAlt: ${article}`);
+    assert.ok(!/(?:создан(?:а|о|ы|ное|ные)?\s+(?:с помощью\s+)?ИИ|сгенерирован\w*\s+(?:ИИ|нейросетью)|AI[- ]generated|generated (?:by|with) AI|жасанды интеллект(?:пен| арқылы) жасалған)/i.test(alt),
+      `AI-generated cover is prohibited by editorial policy: ${article}`);
+    assert.ok(!src.includes('professional-ados-adi-cars-central-asia.webp'),
+      `Retired AI-generated ADOS cover must not be reused: ${article}`);
     assert.ok(src.startsWith(`${base}images/editorial/`) ||
       (value(frontmatter, 'section') === 'research' && src.startsWith(`${base}images/research/`)),
       `Editorial image is not self-hosted: ${article}: ${src}`);
