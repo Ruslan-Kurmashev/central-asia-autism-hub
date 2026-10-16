@@ -22,6 +22,7 @@ disclaimerType: informational
 conflictOfInterest: "Конфликт интересов не заявлен."
 publishedAt: 2026-10-09
 updatedAt: 2026-10-09
+reviewDueAt: 2027-01-09
 draft: false
 keyPoints:
   - "Социальная поддержка зависит не только от диагноза, но и от установленного правового статуса, результатов МСЭ и индивидуальных мер поддержки."
