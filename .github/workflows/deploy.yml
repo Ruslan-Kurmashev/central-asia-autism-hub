@@ -40,6 +40,7 @@ jobs:
           python scripts/build-parent-daily-independence-pdfs.py
           python scripts/build-parent-skill-loss-observation-pdf.py
           python scripts/build-parent-bilingual-language-pdfs.py
+          python scripts/build-parent-home-preschool-context-pdfs.py
           python scripts/build-research-reading-worksheet.py
           python scripts/validate-research-reading-worksheet.py
       - name: Validate, build, and upload site
