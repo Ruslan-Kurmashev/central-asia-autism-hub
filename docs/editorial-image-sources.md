@@ -1,7 +1,7 @@
 # Editorial image sources
 
 These images are used as editorial illustrations on the Autism Hub Kazakhstan website.
-The register includes Pexels photographs, original project vectors, and explicitly labelled AI-generated editorial illustrations. Pexels licensing applies only to the Pexels-sourced photographs.
+The active site uses licensed photographs and original editorial vectors. Earlier AI-generated artwork is retained below only in the historical removal log; it is not part of the published image collection. Pexels licensing applies only to Pexels-sourced photographs.
 
 License checked: 2026-10-07  
 License: https://www.pexels.com/license/
@@ -521,11 +521,9 @@ The research-card image-coverage validation enforces one mapped and locally avai
 | --- | --- | --- | --- |
 | `photos/professional-ados-adi-cars-clinical-observation.jpg` | Mikhail Nilov | https://www.pexels.com/photo/therapist-helping-boy-with-a-document-8653951/ | Professional and child examine a document. Not a validated administration of ADOS-2, ADI-R or CARS-2; the child must not be described as having autism. |
 
-## Professional assessment A05 replacement cover (2026-10-14)
+## Retired ADOS-2 / ADI-R / CARS-2 cover (historical audit record)
 
-| Local file | Source and date | Editorial scope and limitations |
-| --- | --- | --- |
-| `photos/professional-ados-adi-cars-central-asia.webp` | Original AI-generated illustration created for AutismHub in ChatGPT, 14 October 2026; optimized locally to WebP (1200 × 900 px) | Fictional, regionally contextualized child-and-specialist interaction with picture cards and note-taking. No actual patient or clinician is portrayed. This is not a demonstration or validated administration of ADOS-2, ADI-R or CARS-2 and does not reproduce their proprietary test materials. |
+An AI-generated image named `photos/professional-ados-adi-cars-central-asia.webp` was briefly used as the A05 cover starting 14 October 2026. It has been retired and removed from the public assets on 16 October 2026 to comply with AutismHub's no-AI-generated-imagery editorial rule. The article now uses the previously documented original `professional-assessment-ados-adi-cars.svg` explanatory diagram, which contains no patient likenesses, proprietary test items or test screenshots. This note is historical provenance only, not an active asset listing.
 
 ## Evidence-support professional article SVG covers (14 October 2026)
 
