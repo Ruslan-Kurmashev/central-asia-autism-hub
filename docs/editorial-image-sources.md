@@ -852,3 +852,9 @@ The companion parent PDF `public/downloads/development/forma-nablyudeniy-poterya
 | `parent-bilingual-language-book-cover.svg` | Original AutismHub text-editable editorial geometry: open book and RU/KAZ speech marks. No external photograph, generative photorealistic imagery, clinical inference, or diagnostic symbol coding. Intended only as an editorial illustration for the bilingual family language article. |
 
 The printable parent worksheets at `public/downloads/bilingual/` are original educational templates generated from `scripts/build-parent-bilingual-language-pdfs.py`. They contain examples, not language tests or verified Kazakh/Russian translations of a clinical instrument.
+
+## Proposed Central Asia autism research roadmap (16 October 2026)
+
+| File | Editorial provenance and limitations |
+| --- | --- |
+| `central-asia-autism-future-research-roadmap.svg` | Original manually authored AutismHub SVG of a **hypothetical** three-stage 2027-2030 research-development sequence: shared questions, ethics and protocols; local pilots; then cross-site replication and communication. Informed by the regional scoping review of Zakirova-Engstrand and Yakubova (2024), DOI https://doi.org/10.1177/13623613231170553; community priority-setting research by Cage et al. (2024), https://pmc.ncbi.nlm.nih.gov/articles/PMC11401337/; and scientific reporting guidance https://www.equator-network.org/reporting-guidelines/strobe/ . Years and steps are **illustrative editorial proposals**, not funded programmes, government policy, committed partners or evidence of projects currently under way. No AI-generated imagery, third-party copyrighted chart or personal data used. |
