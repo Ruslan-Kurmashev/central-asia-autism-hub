@@ -265,7 +265,7 @@ build("development/forma-nablyudeniy-poterya-navykov-ru.pdf","Наблюдени
 
 bilingual=literal_list("scripts/build-parent-bilingual-language-pdfs.py","stories")
 story=[]
-intro(story,"7 ситуаций для общения на двух языках","Русский и казахский: бытовые примеры, не переводческий или речевой тест.")
+intro(story,"7 ситуаций для общения на двух языках","Русский и казахский: бытовые примеры, не речевой тест. Независимая вычитка казахских фраз двуязычным специалистом ещё не подтверждена.")
 for i,(heading_text,example) in enumerate(bilingual):
     if i==4:
         newpage(story)
