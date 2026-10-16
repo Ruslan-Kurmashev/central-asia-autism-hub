@@ -820,3 +820,9 @@ All three educational graphics are original editable SVG diagrams authored for A
 | `parent-skill-regression-observation-steps.svg` | Original AutismHub source-coded three-step explanatory vector about recording observations, speaking to a medical professional, and professional assessment. It is not triage, a diagnostic decision tree or a time-to-care algorithm. |
 
 The companion parent PDF `public/downloads/development/forma-nablyudeniy-poterya-navykov-ru.pdf` is an original unscored organisational worksheet, generated at build time by `scripts/build-parent-skill-loss-observation-pdf.py`. No patient data, copyrighted third-party diagrams or validated scales are embedded.
+
+## Kazakhstan autism parent mental wellbeing survey graphic (16 October 2026)
+
+| File | Provenance and limitations |
+| --- | --- |
+| `kazakhstan-autism-caregiver-mental-health-2018.svg` | Original hand-authored AutismHub horizontal bar chart based exclusively on the DASS-21 data from Alibekova et al., Global Mental Health (2022), DOI https://doi.org/10.1017/gmh.2022.51 . Participants recruited in 2018 in Kazakhstan; values refer to 136 completed questionnaires: mild-to-extremely-severe stress symptoms 61.0%, anxiety symptoms 52.9%, depressive symptoms 53.7%. These outcomes overlap, are self-reports rather than clinical diagnoses, and are not population-representative national rates. Authored directly as code; no generated image, borrowed chart, patient record or identifiable subject. |
