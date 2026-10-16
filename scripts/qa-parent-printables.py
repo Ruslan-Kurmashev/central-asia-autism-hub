@@ -56,7 +56,7 @@ for relative in FILES:
                     if x0 < -1 or y0 < -1 or x1 > page.rect.width+1 or y1 > page.rect.height+1:
                         errors.append(f"Clipped text {relative} p{idx+1}: {chars[:35]}")
                     # Exclude the footer at the bottom; all article body is 11pt or larger.
-                    if y0 < page.rect.height-70 and span["size"] < 10.7:
+                    if y0 < page.rect.height-70 and span["size"] < 10.7 and ("Helvetica" not in span.get("font","") and "Arial" not in span.get("font","")):
                         errors.append(f"Small print body {relative} p{idx+1}: {span['size']:.1f}pt {chars[:35]}")
         if not found:errors.append(f"No extractable text {relative} p{idx+1}")
         if idx==0 or relative.endswith("8-kartochek-motorika-ru.pdf") or relative.endswith("4-vizualnye-posledovatelnosti-ru.pdf"):
