@@ -14,7 +14,7 @@ This review does **not** constitute a newly performed systematic review, individ
 | 4 | `prenatal-brain-development-and-autism.md` | Verified Stoner et al. (NEJM 2014) focal patches in 10/11 autism and 1/11 comparison postmortem samples; explicitly noted small sampled brain regions and non-prenatal observation. Standardized irregular Markdown spacing. |
 | 5 | `neurons-synapses-how-brain-cells-connect.md` | Clarified excitation/inhibition terms, context-dependent GABA actions, receptor and developmental conditions; avoided universal synaptic imbalance claims. |
 | 6 | `how-brain-processes-information-neural-networks.md` | Added interpretation safeguards for resting-state fMRI: motion artifacts, recording conditions, protocol harmonization, and reproducibility across sites. |
-| 7 | `autism-sensory-sound-light-touch.md` | Checked 2026 Ayres Sensory Integration review: 12 studies including 4 RCTs, evidence concerning participation and functional goals rather than treating core autism. |
+| 7 | `autism-sensory-sound-light-touch.md` | Checked contrasting 2026 Ayres Sensory Integration reviews: Piller et al. (12 studies; 4 RCTs) found encouraging goal-attainment evidence, whereas Kishida et al. (10 studies; 4 with low risk of bias) found limited and inconsistent higher-quality evidence. Clarified that results concern selected participation outcomes, not treating core autism or all sensory therapies. |
 | 8 | `why-autism-differs-between-people.md` | Clarified 2025 Litman et al. cluster findings: algorithm-derived statistical groups are neither four fixed biological subtypes nor separate clinical diagnoses. |
 | 9 | `genetics-environment-autism-risk-evidence.md` | Verified 2013 valproate study: n=655,615, exposed n=508, estimated 14-year absolute risk 4.42% (95% CI 2.59-7.46%) versus 1.53% (1.47-1.58%) in full cohort. Retained strong warnings against stopping treatment without medical care and distinguished this from vaccines and observational exposures. |
 | 10 | `microglia-immune-system-and-autism.md` | Compared conflicting Suzuki, Zürcher and Simpson TSPO-PET findings; made lack of cell-type specificity explicit and avoided extrapolation from animal or iPSC findings to all autistic people. |
@@ -28,6 +28,7 @@ This review does **not** constitute a newly performed systematic review, individ
 - Stoner et al., cortical patches, 2014: https://doi.org/10.1056/NEJMoa1307491
 - King et al., functional connectivity replicability, 2019: https://pubmed.ncbi.nlm.nih.gov/31285817/
 - Piller et al., Ayres Sensory Integration review, 2026: https://pubmed.ncbi.nlm.nih.gov/41324442/
+- Kishida et al., contrasting Ayres Sensory Integration review, 2026: https://doi.org/10.1007/s10803-026-07283-7
 - Litman et al., autism heterogeneity clusters, 2025: https://doi.org/10.1038/s41588-025-02224-z
 - Christensen et al., valproate, 2013: https://pubmed.ncbi.nlm.nih.gov/23613074/
 - Paolicelli et al., mouse synaptic pruning, 2011: https://pubmed.ncbi.nlm.nih.gov/21778362/
