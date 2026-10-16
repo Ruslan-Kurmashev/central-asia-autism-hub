@@ -65,17 +65,32 @@ for (const group of groups) {
     assert.ok(fm.includes('language: ru'), filename + ': unexpected source language');
     assert.ok(fm.includes('translationStatus: source'), filename + ': unexpected translation status');
     assert.ok(key.startsWith('professionals-kz-'), filename + ': invalid translation key prefix');
-    assert.ok(fm.includes('reviewDueAt:'), filename + ': missing next review date');
+    const reviewed = field(fm, 'updatedAt');
+    const due = field(fm, 'reviewDueAt');
+    assert.match(reviewed ?? '', /^\\d{4}-\\d{2}-\\d{2}$/, filename + ': malformed update date');
+    assert.match(due ?? '', /^\\d{4}-\\d{2}-\\d{2}$/, filename + ': malformed next review date');
+    assert.ok(due > reviewed, filename + ': next review date must follow latest update');
     assert.ok(fm.includes('evidenceLimitations:'), filename + ': missing evidence limitations');
+    if (group.id === 'healthcare-diagnosis') {
+      assert.equal(field(fm, 'riskLevel'), 'high',
+        filename + ': Kazakhstan clinical/legal healthcare review must stay flagged as high risk');
+      assert.equal(field(fm, 'disclaimerType'), 'medical',
+        filename + ': medical limitation notice missing');
+      assert.ok(fm.includes('versionNote:'), filename + ': healthcare change log absent');
+    }
     assert.ok(fm.includes('featuredImageAlt:'), filename + ': missing image alternative text');
     assert.ok(fm.includes('sources:'), filename + ': missing references');
 
     const sourceUrls = [...fm.matchAll(/^\s+url:\s*"?([^"\n]+)/gm)].map(match => match[1]);
     assert.ok(sourceUrls.length >= 2, filename + ': at least two sourced records expected');
     if (key.endsWith('autism-clinical-protocol')) {
+      assert.ok(sourceUrls.some(url => url.includes('nrchd.kz/storage/documents/') && url.includes('.pdf')),
+        filename + ': institutional ASD protocol PDF is required as the primary source');
       assert.ok(sourceUrls.some(url => url.includes('medelement.com')),
-        filename + ': missing provenance of the 2021 protocol copy');
+        filename + ': missing secondary MedElement version history');
       assert.ok(raw.includes('не подтверждён'), filename + ': clinical current-force caveat missing');
+      assert.ok(raw.includes('размещение') || raw.includes('Размещение'),
+        filename + ': published PDF must not imply the protocol is still in force');
     } else {
       assert.ok(sourceUrls.some(url => url.includes('adilet.zan.kz/rus/docs/')),
         filename + ': official Adilet law/ministerial primary source missing');
