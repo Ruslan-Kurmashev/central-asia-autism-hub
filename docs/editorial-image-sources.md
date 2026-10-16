@@ -826,3 +826,9 @@ The companion parent PDF `public/downloads/development/forma-nablyudeniy-poterya
 | File | Provenance and limitations |
 | --- | --- |
 | `kazakhstan-autism-caregiver-mental-health-2018.svg` | Original hand-authored AutismHub horizontal bar chart based exclusively on the DASS-21 data from Alibekova et al., Global Mental Health (2022), DOI https://doi.org/10.1017/gmh.2022.51 . Participants recruited in 2018 in Kazakhstan; values refer to 136 completed questionnaires: mild-to-extremely-severe stress symptoms 61.0%, anxiety symptoms 52.9%, depressive symptoms 53.7%. These outcomes overlap, are self-reports rather than clinical diagnoses, and are not population-representative national rates. Authored directly as code; no generated image, borrowed chart, patient record or identifiable subject. |
+
+## Kazakhstan inclusive education research explanatory diagram (16 October 2026)
+
+| Asset | Editorial source and limitations |
+| --- | --- |
+| `kazakhstan-inclusive-education-participation-path.svg` | Original manually authored AutismHub SVG showing conceptual distinctions between access, physical presence, participation, and learning, plus enabling school supports. Not a validated scale, measured comparison, government checklist, diagnostic algorithm, or observed student outcome. Inspired by research on parental experiences of inclusive schooling (An et al. DOI 10.1080/1034912X.2018.1499879), teacher attitudes and preparedness (Prisiazhniuk et al. DOI 10.1016/j.childyouth.2024.107535; Movkebayeva et al. DOI 10.14689/ejer.2024.112.14), and system evaluation by UNICEF Kazakhstan (https://www.unicef.org/kazakhstan/en/reports/evidence-inclusive-education-kazakhstan-based-formative-and-big-data-evaluation). No borrowed published figure, personal data or generative image used. |
