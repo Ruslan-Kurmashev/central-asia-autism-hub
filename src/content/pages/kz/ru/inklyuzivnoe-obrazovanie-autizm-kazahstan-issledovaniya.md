@@ -52,16 +52,16 @@ sources:
     note: "Опрос 869 учителей Казахстана, Кыргызстана, Таджикистана и Узбекистана, отношение к широкому спектру особых образовательных потребностей, не только РАС."
     accessedAt: 2026-10-16
   - title: "Assessing the Preparedness of Future Special Education Teachers for Inclusive Classrooms in Kazakhstan"
-    url: "https://doi.org/10.14689/ejer.2024.112.14"
+    url: "https://ejer.com.tr/article-view/?id=1862"
     organisation: "Movkebayeva, Bilyalov, Dyussenbayeva, Kudaibergenova, Kabdyrova; Eurasian Journal of Educational Research"
     publicationYear: 2024
-    note: "Самооценка готовности 1005 студентов специальной педагогики в восьми специально отобранных университетах Казахстана."
+    note: "Самооценка готовности 1005 студентов специальной педагогики в восьми специально отобранных университетах Казахстана. DOI 10.14689/ejer.2024.112.14 указан издателем, но DOI-редирект возвращал 404; ссылка ведёт на официальную страницу журнала."
     accessedAt: 2026-10-16
   - title: "Barriers To Inclusion: Insights from Special Education Teachers in Kazakhstan"
-    url: "https://doi.org/10.14689/ejer.2024.113.04"
+    url: "https://ejer.com.tr/article-view/?id=1916"
     organisation: "Bilyalov, Movkebayeva, Khamitova, Duzelbayeva; Eurasian Journal of Educational Research"
     publicationYear: 2024
-    note: "Качественные интервью 41 специального педагога из восьми городов о времени, документации, взаимодействии с семьями, инфраструктуре и методической поддержке."
+    note: "Качественные интервью 41 специального педагога из восьми городов о времени, документации, взаимодействии с семьями, инфраструктуре и методической поддержке. DOI 10.14689/ejer.2024.113.04 указан издателем, но DOI-редирект возвращал 404; ссылка ведёт на официальную страницу журнала."
     accessedAt: 2026-10-16
   - title: "Inclusive practices in Kazakhstan: validating the teacher efficacy for inclusive practice scale for the local context"
     url: "https://doi.org/10.1080/20473869.2025.2492091"
@@ -195,7 +195,7 @@ sources:
 
 **Практическое значение:** образовательные программы целесообразно оценивать не только по перечню дисциплин, но и по доступности реального опыта работы, супервизии и методической поддержки.
 
-[Movkebayeva и соавторы, 2024](https://doi.org/10.14689/ejer.2024.112.14).
+[Movkebayeva и соавторы, 2024](https://ejer.com.tr/article-view/?id=1862).
 
 ## Исследование №5. Барьеры глазами 41 специального педагога
 
@@ -214,7 +214,7 @@ sources:
 
 Авторы также обсуждали профессиональное выгорание и необходимость практического обучения педагогов. Однако в этой работе не проводилось рандомизированное сравнение школ с разными программами обучения специалистов.
 
-[Исследование Bilyalov и соавторов, 2024](https://doi.org/10.14689/ejer.2024.113.04).
+[Исследование Bilyalov и соавторов, 2024](https://ejer.com.tr/article-view/?id=1916).
 
 ## Исследование №6. Что показали ответы 6186 учителей Казахстана
 
@@ -387,8 +387,8 @@ sources:
 1. [An, Chan, Kaukenova (2018 онлайн / 2020 выпуск). Опыт 17 родителей детей с аутизмом.](https://doi.org/10.1080/1034912X.2018.1499879)
 2. [Yessirkepova, Lekerova, Polatova (2022). Интервью 16 педагогов специальных классов.](https://doi.org/10.26577/JPsS.2022.v81.i2.04)
 3. [Prisiazhniuk, Makoelle, Zangieva (2024). Установки 869 учителей четырёх стран Центральной Азии.](https://doi.org/10.1016/j.childyouth.2024.107535)
-4. [Movkebayeva и соавторы (2024). Самооценка готовности 1005 будущих специальных педагогов Казахстана.](https://doi.org/10.14689/ejer.2024.112.14)
-5. [Bilyalov и соавторы (2024). Качественные интервью 41 специального педагога из восьми городов.](https://doi.org/10.14689/ejer.2024.113.04)
+4. [Movkebayeva и соавторы (2024). Самооценка готовности 1005 будущих специальных педагогов Казахстана.](https://ejer.com.tr/article-view/?id=1862)
+5. [Bilyalov и соавторы (2024). Качественные интервью 41 специального педагога из восьми городов.](https://ejer.com.tr/article-view/?id=1916)
 6. [Butabayeva и соавторы (2025). TEIP и 6186 учителей Казахстана.](https://doi.org/10.1080/20473869.2025.2492091)
 7. [Orynbassarova, Maulen, Rollan (2025 онлайн). Опрос 59 учителей Алматы.](https://doi.org/10.1080/1034912X.2025.2571766)
 8. [UNICEF Kazakhstan (2024). Evidence on Inclusive Education in Kazakhstan: formative and big-data evaluations.](https://www.unicef.org/kazakhstan/en/reports/evidence-inclusive-education-kazakhstan-based-formative-and-big-data-evaluation)
