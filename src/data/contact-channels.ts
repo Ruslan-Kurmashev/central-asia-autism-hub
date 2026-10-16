@@ -19,5 +19,5 @@ export const CONTACT_CHANNELS: {
   telegram: null,
   instagramPersonal: null,
   githubRepository: SITE.repositoryUrl,
-  githubIssues: SITE.repositoryUrl + '/issues/new',
+  githubIssues: SITE.repositoryUrl + '/issues/new?template=website-feedback.yml',
 };
