@@ -13,7 +13,7 @@ type Copy = {
   mailTitle: string; mailReady: string; mailPending: string; mailAction: string;
   fallback: string; githubAction: string; githubNotice: string; currentChannel: string; plannedChannel: string;
   channelsTitle: string; channelsLead: string; channelLabels: Record<ChannelKey, { title: string; description: string; action: string }>;
-  workTitle: string; workLead: string; workAction: string;
+  workTitle: string; workLead: string; workAction: string; privateContactPending: string;
   workItems: { title: string; detail: string; symbol: string }[];
   supportEyebrow: string; supportTitle: string; supportLead: string;
   supportStatus: string; supportNoPayments: string;
@@ -33,8 +33,8 @@ const translations: Record<Locale, Copy> = {
     mailTitle: 'Официальная почта проекта',
     mailReady: 'Электронная почта', mailPending: 'Адрес готовится к запуску',
     mailAction: 'Написать на почту',
-    fallback: 'Пока почтовый адрес не создан, сообщения об ошибках, идеях и сотрудничестве можно оставить в публичном репозитории проекта.',
-    githubAction: 'Связаться через GitHub',
+    fallback: 'Пока официальная почта не открыта, через GitHub можно сообщить только о публичной ошибке сайта или предложить исправление материала. Частные обращения и предложения с персональными данными здесь не принимаются.',
+    githubAction: 'Сообщить о публичной ошибке сайта',
     githubNotice: 'Для обращения нужен аккаунт GitHub. Все обращения публичные: не размещайте номера телефонов, документы, сведения о детях или медицинскую информацию.',
     currentChannel: 'Доступно', plannedChannel: 'Скоро',
     channelsTitle: 'Наши площадки',
@@ -48,6 +48,7 @@ const translations: Record<Locale, Copy> = {
     workTitle: 'Сотрудничество с проектом',
     workLead: 'Мы приветствуем предложения от специалистов, исследователей, общественных и образовательных организаций. Каждое участие и партнёрство согласовывается отдельно.',
     workAction: 'Обсудить сотрудничество',
+    privateContactPending: 'Для непубличных предложений о сотрудничестве официальный канал связи пока не открыт. Не отправляйте частные сведения через GitHub.',
     workItems: [
       { title: 'Стать экспертом', detail: 'Авторство, профессиональные консультации и независимое рецензирование конкретных материалов.', symbol: '01' },
       { title: 'Организации и партнёры', detail: 'Совместные образовательные инициативы, исследовательские проекты и поддержка доступных ресурсов.', symbol: '02' },
@@ -84,8 +85,8 @@ const translations: Record<Locale, Copy> = {
     mailTitle: 'Жобаның ресми электрондық поштасы',
     mailReady: 'Электрондық пошта', mailPending: 'Мекенжай әзірленіп жатыр',
     mailAction: 'Электрондық хат жазу',
-    fallback: 'Электрондық пошта ашылғанға дейін қателер, идеялар және ынтымақтастық туралы ұсыныстарды жобаның ашық репозиторийінде қалдыруға болады.',
-    githubAction: 'GitHub арқылы хабарласу',
+    fallback: 'Жобаның ресми поштасы ашылғанға дейін GitHub арқылы тек сайттағы жария қателерді немесе материалдарды түзету ұсыныстарын жіберуге болады. Жеке және медициналық мәліметтерді жібермеңіз.',
+    githubAction: 'Сайттағы ашық қатені хабарлау',
     githubNotice: 'Хабарласу үшін GitHub тіркелгісі қажет. Барлық өтініш ашық көрінеді: телефон нөмірлерін, құжаттарды, балалар туралы немесе медициналық мәліметтерді жарияламаңыз.',
     currentChannel: 'Қолжетімді', plannedChannel: 'Жақында',
     channelsTitle: 'Біздің платформалар',
@@ -99,6 +100,7 @@ const translations: Record<Locale, Copy> = {
     workTitle: 'Жобамен ынтымақтастық',
     workLead: 'Мамандардың, зерттеушілердің, қоғамдық және білім беру ұйымдарының ұсыныстарын құптаймыз. Қатысу мен серіктестіктің әр түрі жеке келісіліп анықталады.',
     workAction: 'Ынтымақтастықты талқылау',
+    privateContactPending: 'Құпия ынтымақтастық ұсыныстары үшін ресми байланыс арнасы әлі ашылған жоқ. Жеке мәліметтерді GitHub арқылы жібермеңіз.',
     workItems: [
       { title: 'Сарапшы болу', detail: 'Авторлық, кәсіби кеңес беру және нақты материалдарға тәуелсіз рецензия жасау.', symbol: '01' },
       { title: 'Ұйымдар мен серіктестер', detail: 'Бірлескен білім беру бастамалары, зерттеу жобалары және қолжетімді ресурстарды дамыту.', symbol: '02' },
@@ -135,8 +137,8 @@ const translations: Record<Locale, Copy> = {
     mailTitle: 'Official project email',
     mailReady: 'Email address', mailPending: 'Project email is being set up',
     mailAction: 'Send an email',
-    fallback: 'Until the shared inbox is available, you can use the public project repository to suggest improvements, report an error or discuss collaboration.',
-    githubAction: 'Contact via GitHub',
+    fallback: 'Until the official project inbox opens, GitHub can be used only for public website corrections and content feedback. Do not submit private collaboration details or any personal or medical information.',
+    githubAction: 'Report a public website issue',
     githubNotice: 'A GitHub account is required and all issues are public. Do not share phone numbers, documents, children\'s details or medical information.',
     currentChannel: 'Available', plannedChannel: 'Coming soon',
     channelsTitle: 'Find us online',
@@ -150,6 +152,7 @@ const translations: Record<Locale, Copy> = {
     workTitle: 'Work with us',
     workLead: 'We welcome ideas from professionals, researchers, community and education organisations. Contributions and partnerships are discussed and agreed individually.',
     workAction: 'Discuss collaboration',
+    privateContactPending: 'A private channel for collaboration proposals is not available yet. Do not post confidential information through GitHub.',
     workItems: [
       { title: 'Become a contributor', detail: 'Authorship, subject-matter consultation and independent review of specific materials.', symbol: '01' },
       { title: 'Organisations and partners', detail: 'Joint education initiatives, research activities and support for accessible resources.', symbol: '02' },
@@ -178,7 +181,7 @@ const translations: Record<Locale, Copy> = {
   },
 };
 const c = translations[locale];
-const contactHref = CONTACT_CHANNELS.email ? 'mailto:' + CONTACT_CHANNELS.email : CONTACT_CHANNELS.githubIssues;
+const contactHref = CONTACT_CHANNELS.email ? 'mailto:' + CONTACT_CHANNELS.email : null;
 const channelCards: Array<{ id: ChannelKey; glyph: string; href: string | null }> = [
   { id: 'linkedin', glyph: 'in', href: CONTACT_CHANNELS.linkedin },
   { id: 'telegram', glyph: '↗', href: CONTACT_CHANNELS.telegram },
@@ -279,7 +282,11 @@ const channelCards: Array<{ id: ChannelKey; glyph: string; href: string | null }
           </div>
         ))}
       </div>
-      <a href={contactHref} class="contact-hub__secondary-button" rel={CONTACT_CHANNELS.email ? undefined : 'external'}>{c.workAction} <span aria-hidden="true">↗</span></a>
+      {contactHref ? (
+        <a href={contactHref} class="contact-hub__secondary-button">{c.workAction} <span aria-hidden="true">↗</span></a>
+      ) : (
+        <p class="contact-hub__privacy-notice">{c.privateContactPending}</p>
+      )}
     </div>
   </section>
 
@@ -295,7 +302,11 @@ const channelCards: Array<{ id: ChannelKey; glyph: string; href: string | null }
             <p>{c.supportNoPayments}</p>
           </div>
           <p class="contact-hub__support-principle">{c.supportPrinciple}</p>
-          <a href={contactHref} class="contact-hub__secondary-button" rel={CONTACT_CHANNELS.email ? undefined : 'external'}>{c.supportAction} <span aria-hidden="true">↗</span></a>
+          {contactHref ? (
+            <a href={contactHref} class="contact-hub__secondary-button">{c.supportAction} <span aria-hidden="true">↗</span></a>
+          ) : (
+            <p class="contact-hub__privacy-notice">{c.privateContactPending}</p>
+          )}
         </div>
         <div class="contact-hub__support-ways">
           {c.supportWays.map((way) => (
