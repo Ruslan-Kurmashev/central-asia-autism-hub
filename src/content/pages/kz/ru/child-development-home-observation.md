@@ -20,7 +20,7 @@ riskLevel: moderate
 disclaimerType: medical
 conflictOfInterest: "Конфликт интересов не заявлен."
 publishedAt: "2026-10-15T17:11:24.160Z"
-updatedAt: "2026-10-15T17:11:24.162Z"
+updatedAt: "2026-10-16T20:33:22.995Z"
 reviewDueAt: 2027-10-15
 draft: false
 keyPoints:
@@ -61,7 +61,7 @@ sources:
     note: "Учет родительских наблюдений, разных условий и потери ранее приобретённых навыков; обновлено в 2017 году."
     accessedAt: 2026-10-15
   - title: "Растем и развиваемся вместе"
-    url: "https://www.unicef.org/kazakhstan/documents/растем-и-развиваемся-вместе"
+    url: "https://www.unicef.org/kazakhstan/documents/%D1%80%D0%B0%D1%81%D1%82%D0%B5%D0%BC-%D0%B8-%D1%80%D0%B0%D0%B7%D0%B2%D0%B8%D0%B2%D0%B0%D0%B5%D0%BC%D1%81%D1%8F-%D0%B2%D0%BC%D0%B5%D1%81%D1%82%D0%B5"
     organisation: "UNICEF Kazakhstan"
     note: "Руководство для семей Казахстана по наблюдению за развитием детей от 0 до 7 лет."
     accessedAt: 2026-10-15
