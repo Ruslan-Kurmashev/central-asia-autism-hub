@@ -20,7 +20,7 @@ riskLevel: moderate
 disclaimerType: medical
 conflictOfInterest: "Конфликт интересов не заявлен."
 publishedAt: 2026-10-12
-updatedAt: 2026-10-12
+updatedAt: 2026-10-17
 reviewDueAt: 2027-04-12
 draft: false
 keyPoints:
@@ -35,31 +35,31 @@ sources:
     organisation: "World Health Organization"
     publicationYear: 2025
     note: "Общие представления об аутизме, многофакторных причинах, вакцинации и разнообразии потребностей."
-    accessedAt: 2026-10-12
+    accessedAt: 2026-10-17
   - title: "WHO expert group's new analysis reaffirms there is no link between vaccines and autism"
     url: "https://www.who.int/news/item/11-12-2025-who-expert-group-s-new-analysis-reaffirms-there-is-no-link-between-vaccines-and-autism"
     organisation: "World Health Organization"
     publicationYear: 2025
     note: "Обновлённый анализ исследований о вакцинах и аутизме."
-    accessedAt: 2026-10-12
+    accessedAt: 2026-10-17
   - title: "Autism spectrum disorder in under 19s: recognition, referral and diagnosis - Recommendations"
     url: "https://www.nice.org.uk/guidance/cg128/chapter/Recommendations"
     organisation: "National Institute for Health and Care Excellence"
     publicationYear: 2011
     note: "Клиническое руководство, обновлённое в 2017 году: зрительный контакт, речь, возможное недораспознавание у девочек и необходимость комплексной оценки."
-    accessedAt: 2026-10-12
+    accessedAt: 2026-10-17
   - title: "Autism spectrum disorder in under 19s: support and management - Recommendations"
     url: "https://www.nice.org.uk/guidance/cg170/chapter/recommendations"
     organisation: "National Institute for Health and Care Excellence"
     publicationYear: 2013
     note: "Пределы применения исключающих диет и принципы подбора поддержки."
-    accessedAt: 2026-10-12
+    accessedAt: 2026-10-17
   - title: "Autism and empathy"
     url: "https://www.autism.org.uk/learn/knowledge-hub/professional-practice/autism-and-empathy"
     organisation: "National Autistic Society"
     publicationYear: 2024
     note: "Разнообразие опыта эмпатии; качественное исследование не следует обобщать на всех аутичных людей."
-    accessedAt: 2026-10-12
+    accessedAt: 2026-10-17
 ---
 
 ## Почему вокруг аутизма столько мифов?
@@ -74,7 +74,7 @@ sources:
 
 ## Миф 2. Прививки вызывают аутизм
 
-**Факт:** качественные исследования не обнаружили причинной связи между вакцинацией и аутизмом. Всемирная организация здравоохранения вновь подтвердила этот вывод по итогам обзора данных 2010-2025 годов, опубликованного в декабре 2025 года.
+**Факт:** качественные исследования не обнаружили причинной связи между вакцинацией и аутизмом. Всемирная организация здравоохранения вновь подтвердила этот вывод в декабре 2025 года после анализа 31 исследования, опубликованного с января 2010 года по август 2025 года.
 
 Иногда особенности развития становятся заметнее примерно в том возрасте, когда ребёнку делают плановые прививки. Совпадение по времени не означает, что одно событие вызвало другое. Вопросы о вакцинации и противопоказаниях следует обсуждать с медицинским специалистом, а не использовать миф об аутизме как основание для отказа от профилактики инфекций.
 
@@ -86,7 +86,7 @@ sources:
 
 ## Миф 4. Аутичные люди не испытывают чувств и не способны к эмпатии
 
-**Факт:** эмоции и эмпатия не отсутствуют у всех аутичных людей. Способы воспринимать, выражать и распознавать чувства отличаются, и окружающие могут неправильно их трактовать. Исследования опыта аутичных взрослых описывают большой разброс эмпатических реакций, а не один общий дефицит (National Autistic Society, 2024).
+**Факт:** эмоции и эмпатия не отсутствуют у всех аутичных людей. Способы воспринимать, выражать и распознавать чувства отличаются, и окружающие могут неправильно их трактовать. Качественное исследование опыта 76 аутичных участников описало большой разброс эмпатических реакций, а не один общий дефицит (National Autistic Society, 2024). Его результаты нельзя автоматически распространять на всех аутичных людей.
 
 Не стоит делать вывод о чувствах ребёнка только по мимике, зрительному контакту или привычному способу общения.
 
