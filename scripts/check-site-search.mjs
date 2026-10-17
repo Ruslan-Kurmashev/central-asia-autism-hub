@@ -48,7 +48,12 @@ for (const collection of ['pages', 'research', 'learning']) {
         /^translationStatus:\s*pending$/m.test(fm)) continue;
       if (collection === 'learning' && !/^externalUrl:\s*/m.test(fm)) continue;
       published++;
-      const field = (name) => fm.match(new RegExp('^' + name + ':\\s*["\']?([^"\'\\n]+)', 'm'))?.[1]?.trim();
+      const field = (name) => {
+        const raw = fm.split('\\n').find((line) => line.startsWith(name + ': '))?.slice(name.length + 2).trim() ?? '';
+        return (raw.startsWith('"') && raw.endsWith('"')) ||
+          (raw.startsWith("'") && raw.endsWith("'"))
+          ? raw.slice(1, -1) : raw;
+      };
       const section = field('section');
       const slug = field('slug');
       const href = base + 'kz/' + locale + '/' + section + '/' +
