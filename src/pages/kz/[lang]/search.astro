@@ -83,7 +83,7 @@ const endpoint = import.meta.env.BASE_URL + 'search-index.json';
   alternatePath="search"
   bodyClass="site-search-body"
 >
-  <article class="site-search" data-site-search data-locale={locale} data-index={endpoint}>
+  <article class="site-search" data-site-search data-locale={locale} data-index={endpoint} data-base={import.meta.env.BASE_URL}>
     <header class="site-search__hero">
       <div class="container">
         <nav class="site-search__breadcrumb" aria-label={copy.title}>
