@@ -129,6 +129,8 @@ These 16 published Russian parent articles now have **one distinct local, real P
 
 | Published article (source file) | Image filename | Editorial meaning |
 | --- | --- | --- |
+
+| `after-autism-assessment-kazakhstan.md` | `photos/parent-after-assessment-clinician-notes.jpg` | SHVETS production | https://www.pexels.com/photo/doctor-writing-down-on-a-clipboard-8413085/ | A masked healthcare worker writing on a clipboard; illustration of reviewing findings, not an autism diagnosis or a Kazakhstan clinic. Unique cover replacing `kz-help-004.jpg`, which is retained for the medical-licence article. |
 | `what-is-autism.md` | `who-cst-cards-books.jpg` | Books and illustrated cards, an introduction to understanding autism |
 | `when-to-discuss-development.md` | `rubi-wooden-blocks.jpg` | Play objects, discussing observations of child development |
 | `screening-assessment-diagnosis.md` | `adapted-cbt-notebook.jpg` | Notebook for keeping observations before assessment |
