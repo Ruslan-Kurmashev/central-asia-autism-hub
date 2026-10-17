@@ -49,7 +49,7 @@ for (const collection of ['pages', 'research', 'learning']) {
       if (collection === 'learning' && !/^externalUrl:\s*/m.test(fm)) continue;
       published++;
       const field = (name) => {
-        const raw = fm.split('\\n').find((line) => line.startsWith(name + ': '))?.slice(name.length + 2).trim() ?? '';
+        const raw = fm.split('\n').find((line) => line.startsWith(name + ': '))?.slice(name.length + 2).trim() ?? '';
         return (raw.startsWith('"') && raw.endsWith('"')) ||
           (raw.startsWith("'") && raw.endsWith("'"))
           ? raw.slice(1, -1) : raw;
