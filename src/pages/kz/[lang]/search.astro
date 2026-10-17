@@ -1,0 +1,133 @@
+---
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+import { UI } from '../../../i18n/ui';
+import { localePath } from '../../../lib/urls';
+import { SITE, SUPPORTED_LOCALES, type Locale } from '../../../site.config';
+import '../../../styles/site-search.css';
+
+export function getStaticPaths() {
+  return SUPPORTED_LOCALES.map((locale) => ({
+    params: { lang: locale },
+    props: { locale },
+  }));
+}
+
+interface Props { locale: Locale }
+const { locale } = Astro.props;
+const copy = {
+  ru: {
+    title: 'Поиск по сайту',
+    description: 'Поиск по опубликованным статьям для родителей и специалистов, исследованиям, документам Казахстана и бесплатным курсам.',
+    label: 'Что вы хотите найти?',
+    placeholder: 'Например: ADOS-2, ПМПК, коммуникация',
+    action: 'Найти',
+    scope: 'Раздел',
+    all: 'Все разделы',
+    fallback: 'Показывать также материалы на русском языке',
+    fallbackNotice: 'Непереведённые материалы отмечены как доступные только на русском языке.',
+    privacy: 'Поиск работает в браузере. Не вводите имена детей, диагнозы или личные сведения.',
+    initial: 'Введите слово или тему, чтобы найти материалы.',
+    noScript: 'Для поиска по каталогу необходимо включить JavaScript.',
+    more: 'Показать ещё',
+    sections: {
+      parents: 'Родителям', professionals: 'Специалистам', research: 'Исследования',
+      'help-kazakhstan': 'Помощь в Казахстане', learning: 'Курсы',
+    },
+  },
+  kk: {
+    title: 'Сайттан іздеу',
+    description: 'Ата-аналар мен мамандарға арналған мақалаларды, зерттеулерді, Қазақстан құжаттарын және тегін курстарды іздеу.',
+    label: 'Не іздегіңіз келеді?',
+    placeholder: 'Мысалы: ADOS-2, ПМПК, коммуникация',
+    action: 'Іздеу',
+    scope: 'Бөлім',
+    all: 'Барлық бөлімдер',
+    fallback: 'Орыс тіліндегі материалдарды да көрсету',
+    fallbackNotice: 'Аударылмаған материалдар тек орыс тілінде қолжетімді деп белгіленеді.',
+    privacy: 'Іздеу браузерде жұмыс істейді. Балалардың есімдерін, диагноздарын немесе жеке деректерін енгізбеңіз.',
+    initial: 'Материалдарды табу үшін сөз немесе тақырып енгізіңіз.',
+    noScript: 'Іздеуді пайдалану үшін JavaScript қосыңыз.',
+    more: 'Тағы көрсету',
+    sections: {
+      parents: 'Ата-аналарға', professionals: 'Мамандарға', research: 'Зерттеулер',
+      'help-kazakhstan': 'Қазақстандағы көмек', learning: 'Курстар',
+    },
+  },
+  en: {
+    title: 'Search AutismHub',
+    description: 'Search published articles for families and professionals, research, Kazakhstan resources and free learning courses.',
+    label: 'What are you looking for?',
+    placeholder: 'For example: ADOS-2, screening, communication',
+    action: 'Search',
+    scope: 'Section',
+    all: 'All sections',
+    fallback: 'Include articles available only in Russian',
+    fallbackNotice: 'Untranslated resources are clearly marked as available in Russian only.',
+    privacy: 'Search runs in your browser. Do not enter children\'s names, diagnoses or personal information.',
+    initial: 'Enter a term or topic to find published resources.',
+    noScript: 'JavaScript is required to search the resource catalogue.',
+    more: 'Show more',
+    sections: {
+      parents: 'For parents', professionals: 'For professionals', research: 'Research',
+      'help-kazakhstan': 'Kazakhstan support', learning: 'Courses',
+    },
+  },
+}[locale];
+const endpoint = import.meta.env.BASE_URL + 'search-index.json';
+---
+
+<BaseLayout
+  title={copy.title + ' - ' + SITE.name}
+  description={copy.description}
+  locale={locale}
+  alternatePath="search"
+  bodyClass="site-search-body"
+>
+  <article class="site-search" data-site-search data-locale={locale} data-index={endpoint}>
+    <header class="site-search__hero">
+      <div class="container">
+        <nav class="site-search__breadcrumb" aria-label={copy.title}>
+          <a href={localePath(locale)}>{UI[locale].homeLabel}</a>
+          <span aria-hidden="true"> / </span>
+          <span aria-current="page">{copy.title}</span>
+        </nav>
+        <h1>{copy.title}</h1>
+        <p>{copy.description}</p>
+      </div>
+    </header>
+
+    <div class="container site-search__main">
+      <form role="search" class="site-search__form" data-search-form>
+        <label for="global-site-query">{copy.label}</label>
+        <div class="site-search__input-row">
+          <input id="global-site-query" type="search" name="q" data-search-query
+            autocomplete="off" maxlength="120" placeholder={copy.placeholder} />
+          <button type="submit">{copy.action}</button>
+        </div>
+        <div class="site-search__filters">
+          <label for="global-site-section">{copy.scope}
+            <select id="global-site-section" data-search-section>
+              <option value="all">{copy.all}</option>
+              {Object.entries(copy.sections).map(([value, label]) => (
+                <option value={value}>{label}</option>
+              ))}
+            </select>
+          </label>
+          {locale !== 'ru' && (
+            <label class="site-search__fallback">
+              <input type="checkbox" data-search-ru checked />
+              <span>{copy.fallback}</span>
+            </label>
+          )}
+        </div>
+      </form>
+      {locale !== 'ru' && <p class="site-search__notice">{copy.fallbackNotice}</p>}
+      <p class="site-search__privacy">{copy.privacy}</p>
+      <p class="site-search__status" role="status" aria-live="polite" data-search-status>{copy.initial}</p>
+      <ol class="site-search__results" data-search-results aria-label={copy.title}></ol>
+      <button type="button" class="site-search__more" data-search-more hidden>{copy.more}</button>
+      <noscript><p>{copy.noScript}</p></noscript>
+    </div>
+  </article>
+</BaseLayout>
+<script src="../../../scripts/site-search-client.js"></script>
