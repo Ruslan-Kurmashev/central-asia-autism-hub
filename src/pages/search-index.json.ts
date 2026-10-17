@@ -26,6 +26,7 @@ export async function GET() {
     language: entry.data.language,
     section: entry.data.section,
     kind: 'article',
+    translationKey: entry.data.translationKey,
     title: entry.data.title,
     summary: entry.data.summary,
     href: articlePath(entry.data.language, entry.data.section, entry.data.slug),
@@ -45,6 +46,7 @@ export async function GET() {
     language: entry.data.language,
     section: 'learning',
     kind: 'course',
+    translationKey: entry.data.translationKey,
     title: entry.data.title,
     summary: entry.data.summary,
     href: localePath(entry.data.language, 'learning') + '#course-' + entry.data.slug,
@@ -60,7 +62,7 @@ export async function GET() {
   }));
 
   const extras = [{
-    language: 'ru', section: 'parents', kind: 'guide',
+    language: 'ru', section: 'parents', kind: 'guide', translationKey: 'parents-autism-glossary-ru',
     title: 'Словарь терминов об аутизме',
     summary: 'Понятные объяснения терминов, используемых в диагностике, исследованиях и поддержке.',
     href: localePath('ru', 'parents/glossary'),
