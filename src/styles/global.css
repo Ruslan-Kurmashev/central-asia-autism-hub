@@ -276,6 +276,19 @@ details.nav-disclosure:not([open]) > .primary-nav {
   .primary-nav__dropdown > summary { white-space: nowrap; }
 }
 
+.primary-nav .primary-nav__search-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  white-space: nowrap;
+}
+.primary-nav__search-link svg {
+  display: block;
+  width: 1.05rem;
+  height: 1.05rem;
+  flex: none;
+}
+
 .primary-nav a {
   display: block;
   min-height: 2.25rem;
