@@ -83,6 +83,8 @@ const photos = [
   ['parent-specialist-selection-checklist.jpg', '35719571'],
   ['parent-support-goals-planner.jpg', '6892906'],
   ['parent-support-types-toy-blocks.jpg', '7269678'],
+  ['parent-mediated-shared-puzzle-hands.jpg', '8653705'],
+  ['peer-mediated-shared-toy-hands.jpg', '7780905'],
   ['parent-special-educator-classroom.jpg', '8923153'],
   ['parent-outcomes-visual-chart.jpg', '7947671'],
   ['parent-evidence-article-highlighter.jpg', '5537544'],
