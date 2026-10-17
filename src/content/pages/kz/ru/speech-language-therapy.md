@@ -2,8 +2,8 @@
 title: "Логопедическая и речевая помощь при аутизме"
 summary: "Как оценивать и поддерживать понимание речи, язык, функциональную и социальную коммуникацию, разборчивость речи и AAC."
 description: "Практическое руководство для родителей о логопедической и речевой помощи при аутизме: оценка, языковые вмешательства, социальная коммуникация, моторная речь, AAC, орально-моторные методы и мониторинг."
-featuredImage: "/central-asia-autism-hub/images/editorial/article-who-cst-asian.jpg"
-featuredImageAlt: "Взрослый читает книгу вместе с ребёнком: пример речевого общения в повседневной жизни, не логопедическая процедура."
+featuredImage: "/central-asia-autism-hub/images/editorial/photos/parent-speech-language-picture-book.jpg"
+featuredImageAlt: "Ребёнок перелистывает иллюстрированную книгу: пример естественного интереса к изображениям и возможного разговора о них, не фотография логопедического занятия."
 country: kz
 language: ru
 section: parents
@@ -20,7 +20,7 @@ riskLevel: moderate
 disclaimerType: informational
 conflictOfInterest: "Конфликт интересов не заявлен."
 publishedAt: 2026-09-18
-updatedAt: "2026-09-20T15:05:25.596Z"
+updatedAt: 2026-10-17
 reviewDueAt: 2027-03-18
 draft: false
 keyPoints:
