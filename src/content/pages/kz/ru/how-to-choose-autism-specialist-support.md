@@ -2,8 +2,8 @@
 title: "Как выбрать специалиста и помощь для ребёнка с аутизмом"
 summary: "Практическое руководство для родителей: как определить главную потребность ребёнка, проверить специалиста, согласовать цель и понять, работает ли выбранная помощь."
 description: "Как выбрать специалиста и помощь для ребёнка с аутизмом в Казахстане: квалификация, цели занятий, оценка результата, красные флаги и проверка медицинских услуг."
-featuredImage: "/central-asia-autism-hub/images/editorial/photos/kz-help-003.jpg"
-featuredImageAlt: "Бланк и ноутбук на столе: проверка сведений о специалисте и условиях предлагаемой помощи."
+featuredImage: "/central-asia-autism-hub/images/editorial/photos/parent-specialist-selection-checklist.jpg"
+featuredImageAlt: "Рука отмечает пункты списка в блокноте: иллюстрация вопросов для проверки квалификации специалиста, а не профессиональный сертификат."
 country: kz
 language: ru
 section: parents
@@ -20,7 +20,7 @@ riskLevel: moderate
 disclaimerType: medical
 conflictOfInterest: "Конфликт интересов не заявлен."
 publishedAt: 2026-09-14
-updatedAt: 2026-09-14
+updatedAt: 2026-10-17
 reviewDueAt: 2027-03-14
 draft: false
 keyPoints:
