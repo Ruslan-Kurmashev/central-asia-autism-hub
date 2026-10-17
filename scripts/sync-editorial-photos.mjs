@@ -78,6 +78,7 @@ const photos = [
   ['parent-joint-attention-play-floor.jpg', '7491262'],
   ['parent-kz-diagnosis-medical-documents.jpg', '7089620'],
   ['parent-first-month-written-plan.jpg', '5239918'],
+  ['parent-after-assessment-clinician-notes.jpg', '8413085'],
   ['parent-special-educator-classroom.jpg', '8923153'],
   ['parent-outcomes-visual-chart.jpg', '7947671'],
   ['parent-evidence-article-highlighter.jpg', '5537544'],
