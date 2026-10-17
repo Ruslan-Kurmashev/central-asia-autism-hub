@@ -31,7 +31,8 @@ async function walk(dir) {
     const fm=source.match(/^---\s*\r?\n([\s\S]*?)\r?\n---/)?.[1];
     if(!fm || get(fm,'draft')!=='false' || get(fm,'translationStatus')==='pending')continue;
     const published=get(fm,'publishedAt');
-    assert.match(published ?? '',/^\d{4}-\d{2}-\d{2}$/,'published article missing first date: '+current);
+    assert.ok(published && !Number.isNaN(Date.parse(published)),
+      'published article missing a valid first publication timestamp: '+current);
     const p=current.replaceAll('\\','/');
     const section=get(fm,'section')||'research';
     const lang=get(fm,'language')||'ru';
@@ -46,7 +47,8 @@ for(const [name,item] of reviewed){
   const actual=all.find(x=>x.path===name);
   assert.ok(actual,'audited page no longer public or not found: '+name);
   assert.equal(actual.published,item.firstPublishedAt,'first-publication date changed: '+name);
-  assert.ok(item.checkedAt >= actual.published,'audit date predates first publication: '+name);
+  assert.ok(Date.parse(item.checkedAt+'T23:59:59Z') >= Date.parse(actual.published),
+    'audit date predates first publication: '+name);
 }
 const waiting=all.filter(x=>!reviewed.has(x.path));
 waiting.sort((a,b) => (tracker.auditOrder.indexOf(a.section)-tracker.auditOrder.indexOf(b.section)) ||
