@@ -2,8 +2,8 @@
 title: "Поддержка с участием родителей"
 summary: "Как родители могут участвовать в поддержке коммуникации, игры и повседневных навыков ребёнка без превращения семейной жизни в круглосуточную терапию."
 description: "Практическое руководство для родителей о вмешательствах с участием родителей при аутизме: цели, примеры, доказательства, домашняя нагрузка, AAC, благополучие семьи, WHO CST, Stepping Stones Triple P и Казахстанский контекст."
-featuredImage: "/central-asia-autism-hub/images/editorial/photos/kz-help-002.jpg"
-featuredImageAlt: "Деревянные игрушки в игровой комнате: среда для совместной игры с участием родителей."
+featuredImage: "/central-asia-autism-hub/images/editorial/photos/parent-mediated-shared-puzzle-hands.jpg"
+featuredImageAlt: "Руки взрослого и ребёнка вместе собирают деревянный пазл: обычная совместная деятельность, не иллюстрация конкретного лечебного протокола."
 country: kz
 language: ru
 section: parents
