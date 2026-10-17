@@ -24,7 +24,8 @@ catch {
 
 function firstPublishedDate(source) {
   const front = source.match(/^---\s*\r?\n([\s\S]*?)\r?\n---(?:\r?\n|$)/)?.[1] ?? '';
-  return front.match(/^publishedAt:\s*['"]?(\d{4}-\d{2}-\d{2})['"]?\s*$/m)?.[1] ?? null;
+  const raw = front.split(/\r?\n/).find((line) => line.startsWith('publishedAt:'))?.slice('publishedAt:'.length).trim();
+  return raw ? raw.replace(/^["']|["']$/g, '') : null;
 }
 
 const changed = git('diff', '--name-status', '-M', base, 'HEAD', '--',
