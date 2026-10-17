@@ -73,7 +73,7 @@ for (const locale of ['ru', 'kk', 'en']) {
   assert.ok(search.includes('data-site-search') && search.includes('data-locale="' + locale + '"'), 'localized search surface missing: ' + locale);
   assert.ok(search.includes('data-search-query') && search.includes('data-search-section'), 'search inputs missing: ' + locale);
   assert.ok(search.includes('search-index.json'), 'static index URL absent: ' + locale);
-  assert.ok(/<script\\b[^>]*src="[^"]+\\.js"/.test(search),
+  assert.ok(/<script\b[^>]*src="[^"]+\.js"/.test(search),
     'search JavaScript bundle not linked: ' + locale);
   assert.ok(!search.includes('action="https://'), 'search must not forward queries to external services');
   if (locale !== 'ru') assert.ok(search.includes('data-search-ru'), 'Russian translation fallback missing: ' + locale);
