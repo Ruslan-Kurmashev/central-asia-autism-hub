@@ -249,24 +249,33 @@ const researchLabel: Record<Locale, string> = {
         <div class="container article-v2__layout">
           <aside class="article-v2__sidebar" aria-label={articleV2Text.toc}>
             <details class="article-v2__toc" open>
-              <summary class="article-v2__toc-title">{articleV2Text.toc}</summary>
-              {tocHeadings.length > 0 ? (
-                <nav aria-label={articleV2Text.toc}>
-                  <ol>
-                    {tocHeadings.map((heading) => (
-                      <li class:list={[heading.depth === 3 && 'article-v2__toc-subitem']}>
-                        <a href={`#${heading.slug}`}>{heading.text}</a>
-                      </li>
-                    ))}
-                  </ol>
-                </nav>
-              ) : (
-                <p class="article-v2__toc-empty">{articleV2Text.tocEmpty}</p>
-              )}
+              <summary class="article-v2__toc-title">
+                <span>{articleV2Text.toc}</span>
+                {tocHeadings.length > 0 && (
+                  <span class="article-v2__toc-progress" aria-hidden="true">
+                    <span data-toc-current>01</span> / {String(tocHeadings.length).padStart(2, '0')}
+                  </span>
+                )}
+              </summary>
+              <div class="article-v2__toc-panel">
+                {tocHeadings.length > 0 ? (
+                  <nav aria-label={articleV2Text.toc}>
+                    <ol>
+                      {tocHeadings.map((heading) => (
+                        <li class:list={[heading.depth === 3 && 'article-v2__toc-subitem']}>
+                          <a href={`#${heading.slug}`}>{heading.text}</a>
+                        </li>
+                      ))}
+                    </ol>
+                  </nav>
+                ) : (
+                  <p class="article-v2__toc-empty">{articleV2Text.tocEmpty}</p>
+                )}
 
-              <div class="article-v2__toc-boundary">
-                <strong>{boundaryTitle}</strong>
-                <span>{boundaryText}</span>
+                <div class="article-v2__toc-boundary">
+                  <strong>{boundaryTitle}</strong>
+                  <span>{boundaryText}</span>
+                </div>
               </div>
             </details>
           </aside>
@@ -469,9 +478,88 @@ const researchLabel: Record<Locale, string> = {
 </BaseLayout>
 
 <script is:inline>
-  if (window.matchMedia('(max-width: 58rem)').matches) {
-    document.querySelectorAll('.article-v2__toc').forEach((element) => {
-      if (element instanceof HTMLDetailsElement) element.open = false;
+  // Keep navigation on the same article URL: no pagination or hidden chapters.
+  // Follow scroll position, not click order, so readers can jump to any section.
+  const articleToc = document.querySelector('.article-v2__toc');
+  const articlePage = document.querySelector('.article-v2__page');
+  const articleSidebar = document.querySelector('.article-v2__sidebar');
+  const articleHeader = document.querySelector('.site-header');
+  if (articleToc instanceof HTMLDetailsElement && articlePage) {
+    const mobileToc = window.matchMedia('(max-width: 58rem)');
+    const links = Array.from(articleToc.querySelectorAll('nav a[href^="#"]'))
+      .filter((link) => link instanceof HTMLAnchorElement);
+    const sections = links.map((link) => ({
+      link,
+      heading: document.getElementById(decodeURIComponent(link.hash.slice(1))),
+    })).filter((item) => item.heading);
+    const progress = articleToc.querySelector('[data-toc-current]');
+    let scheduled = false;
+    let lastActive = -1;
+
+    const updateOffsets = () => {
+      const height = articleHeader instanceof HTMLElement
+        ? articleHeader.getBoundingClientRect().height : 80;
+      const tocHeight = mobileToc.matches
+        ? articleToc.querySelector('summary')?.getBoundingClientRect().height ?? 48
+        : 0;
+      articlePage.style.setProperty('--article-toc-top', (height + 12) + 'px');
+      articlePage.style.setProperty('--article-anchor-offset', (height + tocHeight + 18) + 'px');
+    };
+
+    const highlight = () => {
+      scheduled = false;
+      if (!sections.length) return;
+      const threshold = (articleHeader instanceof HTMLElement
+        ? articleHeader.getBoundingClientRect().height : 80)
+        + (mobileToc.matches ? articleToc.querySelector('summary')?.getBoundingClientRect().height ?? 48 : 0) + 32;
+      let active = 0;
+      for (let i = 0; i < sections.length; i++) {
+        if (sections[i].heading.getBoundingClientRect().top <= threshold) active = i;
+        else break;
+      }
+      if (active === lastActive) return;
+      lastActive = active;
+      sections.forEach(({ link }, index) => {
+        if (index === active) link.setAttribute('aria-current', 'location');
+        else link.removeAttribute('aria-current');
+      });
+      if (progress) progress.textContent = String(active + 1).padStart(2, '0');
+      if (!mobileToc.matches && articleSidebar instanceof HTMLElement) {
+        const rect = sections[active].link.getBoundingClientRect();
+        const scrollBox = articleSidebar.getBoundingClientRect();
+        if (rect.top < scrollBox.top + 8) articleSidebar.scrollTop -= (scrollBox.top + 8 - rect.top);
+        if (rect.bottom > scrollBox.bottom - 8) articleSidebar.scrollTop += (rect.bottom - scrollBox.bottom + 8);
+      }
+    };
+
+    const queueHighlight = () => {
+      if (scheduled) return;
+      scheduled = true;
+      window.requestAnimationFrame(highlight);
+    };
+    const syncViewport = () => {
+      updateOffsets();
+      articleToc.open = !mobileToc.matches;
+      lastActive = -1;
+      queueHighlight();
+    };
+    syncViewport();
+    mobileToc.addEventListener('change', syncViewport);
+    window.addEventListener('scroll', queueHighlight, { passive: true });
+    window.addEventListener('hashchange', queueHighlight);
+    window.addEventListener('resize', () => { updateOffsets(); queueHighlight(); }, { passive: true });
+    if (articleHeader instanceof HTMLElement && 'ResizeObserver' in window) {
+      new ResizeObserver(updateOffsets).observe(articleHeader);
+    }
+    articleToc.addEventListener('click', (event) => {
+      const link = event.target instanceof Element
+        ? event.target.closest('a[href^="#"]') : null;
+      if (!(link instanceof HTMLAnchorElement)) return;
+      // Native anchors preserve deep links, the browser's history and keyboard navigation.
+      if (mobileToc.matches) {
+        window.requestAnimationFrame(() => { articleToc.open = false; });
+      }
+      queueHighlight();
     });
   }
 
