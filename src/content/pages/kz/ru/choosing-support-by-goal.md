@@ -2,8 +2,8 @@
 title: "Как выбирать помощь под конкретную цель"
 summary: "Пошаговый алгоритм для родителей: определить проблему, проверить медицинские причины, сформулировать цель, оценить доказательства, нагрузку и результат."
 description: "Как выбирать помощь при аутизме по конкретной цели: медицинские причины, среда, доказательность, квалификация специалиста, исходный уровень, мониторинг и правила пересмотра."
-featuredImage: "/central-asia-autism-hub/images/editorial/photos/kz-help-001.jpg"
-featuredImageAlt: "Планировщик и записи на рабочем столе: постановка и отслеживание конкретных целей помощи."
+featuredImage: "/central-asia-autism-hub/images/editorial/photos/parent-support-goals-planner.jpg"
+featuredImageAlt: "Человек записывает планы в ежедневник: иллюстрация постановки целей поддержки, а не результаты клинического исследования."
 country: kz
 language: ru
 section: parents
@@ -20,7 +20,7 @@ riskLevel: moderate
 disclaimerType: medical
 conflictOfInterest: "Конфликт интересов не заявлен."
 publishedAt: 2026-09-17
-updatedAt: "2026-09-20T13:56:17.108Z"
+updatedAt: 2026-10-17
 reviewDueAt: 2027-03-17
 draft: false
 keyPoints:
