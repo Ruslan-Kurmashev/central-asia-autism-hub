@@ -131,6 +131,10 @@ These 16 published Russian parent articles now have **one distinct local, real P
 | --- | --- | --- |
 
 | `after-autism-assessment-kazakhstan.md` | `photos/parent-after-assessment-clinician-notes.jpg` | SHVETS production | https://www.pexels.com/photo/doctor-writing-down-on-a-clipboard-8413085/ | A masked healthcare worker writing on a clipboard; illustration of reviewing findings, not an autism diagnosis or a Kazakhstan clinic. Unique cover replacing `kz-help-004.jpg`, which is retained for the medical-licence article. |
+
+| `how-to-choose-autism-specialist-support.md` | `photos/parent-specialist-selection-checklist.jpg` | Jakub Zerdzicki | https://www.pexels.com/photo/hand-writing-on-notebook-with-checklist-35719571/ | Writing a checklist: checking credentials and agreed goals; not a professional licence or medical protocol. |
+| `choosing-support-by-goal.md` | `photos/parent-support-goals-planner.jpg` | cottonbro studio | https://www.pexels.com/photo/person-planning-day-in-calendar-6892906/ | Scheduling personal goals: a visual metaphor for support planning, not a healthcare outcome. |
+| `types-of-autism-support.md` | `photos/parent-support-types-toy-blocks.jpg` | kaboompics.com | https://www.pexels.com/photo/child-playing-with-toy-blocks-7269678/ | Child's hands and educational toys: illustrative play material; no depicted diagnosis or claimed treatment efficacy. |
 | `what-is-autism.md` | `who-cst-cards-books.jpg` | Books and illustrated cards, an introduction to understanding autism |
 | `when-to-discuss-development.md` | `rubi-wooden-blocks.jpg` | Play objects, discussing observations of child development |
 | `screening-assessment-diagnosis.md` | `adapted-cbt-notebook.jpg` | Notebook for keeping observations before assessment |
