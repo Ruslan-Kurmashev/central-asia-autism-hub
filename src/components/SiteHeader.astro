@@ -72,6 +72,19 @@ const aboutLinks: Record<Locale, { label: string; path: string }[]> = {
                     {UI[locale].homeLabel}
                   </a>
                 </li>
+                <li>
+                  <a
+                    class="primary-nav__search-link"
+                    href={localePath(locale, 'search')}
+                    aria-current={Astro.url.pathname.replace(/\\/+$/, '') === localePath(locale, 'search').replace(/\\/+$/, '') ? 'page' : undefined}
+                  >
+                    <svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true" focusable="false">
+                      <circle cx="10.5" cy="10.5" r="6.5" fill="none" stroke="currentColor" stroke-width="2" />
+                      <path d="m15.5 15.5 5 5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+                    </svg>
+                    <span>{locale === 'ru' ? 'Поиск' : locale === 'kk' ? 'Іздеу' : 'Search'}</span>
+                  </a>
+                </li>
                 {SECTIONS.map((section) => (
                   <li>
                     {section === 'about' ? (
@@ -164,3 +177,13 @@ const aboutLinks: Record<Locale, { label: string; path: string }[]> = {
     });
   });
 </script>
+
+<style>
+  .primary-nav .primary-nav__search-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    white-space: nowrap;
+  }
+  .primary-nav__search-link svg { display: block; width: 1.05rem; height: 1.05rem; flex: none; }
+</style>
