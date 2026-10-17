@@ -77,13 +77,14 @@ for (const root of document.querySelectorAll('[data-site-search]')) {
     if (!items.length) { status.textContent = tr.loading; return; }
     const terms = words(q);
     if (!terms.length) { status.textContent = tr.empty; return; }
+    const localKeys = new Set(items.filter((item) => item.language === locale).map((item) => item.translationKey));
     matches = items
-      .filter((item) => (item.language === locale || (item.language === 'ru' && includeRu?.checked)) &&
+      .filter((item) => (item.language === locale || (item.language === 'ru' && includeRu?.checked && !localKeys.has(item.translationKey))) &&
         (selected === 'all' || item.section === selected))
       .map((item) => {
-        const title = normalize(item.title);
-        const summary = normalize(item.summary);
-        const body = normalize(item.searchText);
+        const title = item.normalizedTitle;
+        const summary = item.normalizedSummary;
+        const body = item.normalizedText;
         const applicable = terms.every((term) => title.includes(term) || summary.includes(term) || body.includes(term));
         if (!applicable) return null;
         const score = terms.reduce((sum, term) => sum +
@@ -113,7 +114,12 @@ for (const root of document.querySelectorAll('[data-site-search]')) {
     .then((response) => { if (!response.ok) throw new Error('search-index'); return response.json(); })
     .then((data) => {
       if (!Array.isArray(data.entries)) throw new Error('search-index-shape');
-      items = data.entries;
+      items = data.entries.map((item) => ({
+        ...item,
+        normalizedTitle: normalize(item.title),
+        normalizedSummary: normalize(item.summary),
+        normalizedText: normalize(item.searchText),
+      }));
       search();
     })
     .catch(() => { loadError = true; status.textContent = tr.failure; });
