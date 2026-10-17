@@ -2,8 +2,8 @@
 title: "Поддержка через сверстников"
 summary: "Как сверстники могут поддерживать общение, совместную игру и участие аутичного ребёнка без превращения других детей в терапевтов."
 description: "Практическое руководство для родителей о поддержке через сверстников при аутизме: цели, примеры, AAC, добровольность участия, риски стигматизации и оценка результата."
-featuredImage: "/central-asia-autism-hub/images/editorial/photos/kz-help-006.jpg"
-featuredImageAlt: "Школьная классная комната с партами: среда для совместного обучения со сверстниками, без изображения конкретного метода."
+featuredImage: "/central-asia-autism-hub/images/editorial/photos/peer-mediated-shared-toy-hands.jpg"
+featuredImageAlt: "Руки детей вместе собирают деревянные детали игрушки: совместная игра, не фотография специального вмешательства или диагностического обследования."
 country: kz
 language: ru
 section: parents
@@ -20,7 +20,7 @@ riskLevel: lower
 disclaimerType: informational
 conflictOfInterest: "Конфликт интересов не заявлен."
 publishedAt: "2026-09-18T20:45:00Z"
-updatedAt: "2026-09-28T13:58:00+01:00"
+updatedAt: 2026-10-18
 reviewDueAt: 2027-03-18
 draft: false
 versionNote: "28 сентября 2026: уточнены различия между peer mediation и более широкой категорией Peer-Based Instruction and Intervention, добавлены размеры доказательной базы NCAEP, ограничения школьного систематического обзора и данные более раннего обзора групповых исследований."
