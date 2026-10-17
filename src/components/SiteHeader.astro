@@ -76,7 +76,7 @@ const aboutLinks: Record<Locale, { label: string; path: string }[]> = {
                   <a
                     class="primary-nav__search-link"
                     href={localePath(locale, 'search')}
-                    aria-current={Astro.url.pathname.replace(/\\/+$/, '') === localePath(locale, 'search').replace(/\\/+$/, '') ? 'page' : undefined}
+                    aria-current={Astro.url.pathname === localePath(locale, 'search') ? 'page' : undefined}
                   >
                     <svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true" focusable="false">
                       <circle cx="10.5" cy="10.5" r="6.5" fill="none" stroke="currentColor" stroke-width="2" />
