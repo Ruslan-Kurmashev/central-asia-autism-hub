@@ -116,6 +116,7 @@ const availableTopics = [...new Set(items.map((entry) => entry.data.topicArea).f
         <div class="course-catalogue__list">
           {items.map((entry) => (
             <article
+              id={"course-" + entry.data.slug}
               class="course-catalogue__item"
               data-course-item
               data-audience={entry.data.audience.join(' ')}
@@ -275,4 +276,9 @@ const availableTopics = [...new Set(items.map((entry) => entry.data.topicArea).f
 @media(max-width:69rem){.course-catalogue__filters{grid-template-columns:repeat(2,minmax(0,1fr))}.course-catalogue__action{align-self:start}}
 @media(max-width:47rem){.course-catalogue__filters{grid-template-columns:1fr}.course-catalogue__item{grid-template-columns:minmax(0,1fr)}.course-catalogue__action{grid-column:1;max-width:none}.course-catalogue__action a{width:100%}}
 @media(max-width:26rem){.course-catalogue__item{padding:1.1rem;gap:.65rem}}
+</style>
+
+<style is:global>
+  .course-catalogue__item[id^='course-'] { scroll-margin-top: 8rem; }
+  .course-catalogue__item:target { outline: 3px solid #2b719c; outline-offset: 3px; }
 </style>
