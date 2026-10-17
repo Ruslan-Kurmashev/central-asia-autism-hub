@@ -148,7 +148,7 @@ These 16 published Russian parent articles now have **one distinct local, real P
 | `sensory-environmental-support.md` | `sensory-hands.jpg` | Hands exploring tactile materials |
 | `adaptive-physical-activity.md` | `photos/parent-afk-equipment.jpg` | Exercise mats and simple equipment, not a prescribed intervention |
 | `development-interaction-play.md` | `article-rubi-asian.jpg` | Joint play with toys |
-| `speech-language-therapy.md` | `article-who-cst-asian.jpg` | Shared reading and speech interaction, not clinical speech therapy |
+| `speech-language-therapy.md` | `photos/parent-speech-language-picture-book.jpg` | Meruyert Gonullu | https://www.pexels.com/photo/anonymous-girl-looking-at-picture-in-book-6034059/ | Anonymous child reading an illustrated book; a natural communication opportunity, not a verified speech-language treatment session. Photo replaces reused article-who-cst-asian.jpg. |
 | `parent-mediated-intervention.md` | `photos/kz-help-002.jpg` | Toys for caregiver-supported everyday play |
 | `feeding-therapy.md` | `photos/parent-feeding-meal.jpg` | Real food and place setting, not a treatment method |
 
