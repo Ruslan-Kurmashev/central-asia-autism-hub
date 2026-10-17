@@ -31,7 +31,7 @@ for (const root of document.querySelectorAll('[data-site-search]')) {
   const pageSize = 18;
 
   const hrefSafe = (href) => typeof href === 'string'
-    && href.startsWith(window.location.origin === 'not-used' ? '/unused' : root.dataset.base || '/central-asia-autism-hub/')
+    && href.startsWith(root.dataset.base || '/')
     && !href.includes('..');
 
   const draw = () => {
