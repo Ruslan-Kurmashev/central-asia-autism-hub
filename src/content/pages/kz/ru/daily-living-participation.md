@@ -20,7 +20,7 @@ riskLevel: moderate
 disclaimerType: informational
 conflictOfInterest: "Конфликт интересов не заявлен."
 publishedAt: "2026-09-30T18:18:00+01:00"
-updatedAt: "2026-10-01T11:53:00+01:00"
+updatedAt: 2026-10-18
 reviewDueAt: 2027-04-01
 draft: false
 versionNote: "1 октября 2026: опубликована отдельная P1-статья о специальной педагогической помощи и роли учителя-дефектолога; добавлены прямые переходы к эрготерапии, ADL, туалетным навыкам и специальной педагогической помощи."
@@ -322,7 +322,8 @@ AAC должно оставаться доступным во время обу�
 
 - [Эрготерапия при аутизме: когда она нужна и как оценить результат](/kz/ru/parents/ergoterapiya-pri-autizme/)
 - [Обучение повседневным навыкам: ADL и самостоятельность в реальной жизни](/kz/ru/parents/obuchenie-povsednevnym-navykam/)
-- [Обучение туалетным навыкам при аутизме: с чего начинать и когда нужен врач](/kz/ru/parents/obuchenie-tualetnym-navykam-pri-autizme/)\n- [Специальный педагог и дефектолог при аутизме: чем занимается специалист и как выбрать помощь](/kz/ru/parents/special-pedagog-defektolog/)
+- [Обучение туалетным навыкам при аутизме: с чего начинать и когда нужен врач](/kz/ru/parents/obuchenie-tualetnym-navykam-pri-autizme/)
+- [Специальный педагог и дефектолог при аутизме: чем занимается специалист и как выбрать помощь](/kz/ru/parents/special-pedagog-defektolog/)
 
 ## Короткий итог
 
