@@ -19,7 +19,7 @@ riskLevel: moderate
 disclaimerType: medical
 conflictOfInterest: "Конфликт интересов не заявлен. Обзор является редакционной информацией AutismHub, не официальным переводом NICE и не национальным клиническим протоколом."
 publishedAt: 2026-10-12
-updatedAt: 2026-10-12
+updatedAt: 2026-10-18
 reviewDueAt: 2027-01-12
 versionNote: "Подготовлено 12 октября 2026 года на основе NICE CG170. Первоначальная публикация 28 августа 2013 года; последнее указанное обновление 14 июня 2021 года."
 draft: false
@@ -31,6 +31,12 @@ keyPoints:
   - "Руководство подготовлено для британской системы и требует отдельной оценки применимости в Казахстане."
 evidenceLimitations: "CG170 относится к практике здравоохранения и социальной помощи Великобритании. Некоторые рекомендации первоначально разработаны в 2013 году, а указанные обновления относятся к 2021 году: необходимо проверять последующие данные и действующую редакцию на сайте NICE. Настоящий обзор не даёт рекомендаций по дозировкам, назначению лекарств или индивидуальному лечению. Национальная применимость, профессиональные роли, согласие и формы оказания помощи в Казахстане требуют независимой проверки."
 sources:
+  - title: "September 2025 exceptional surveillance of NICE CG170"
+    url: "https://www.nice.org.uk/guidance/cg170/resources/september-2025-exceptional-surveillance-of-autism-spectrum-disorder-in-under-19s-support-and-management-nice-guideline-cg170-pdf-20061528294085"
+    organisation: "NICE"
+    publicationYear: 2025
+    note: "Тематический surveillance от 5 сентября 2025 года: не обновлять рекомендации о вмешательствах при сопутствующих психических состояниях."
+    accessedAt: 2026-10-18
   - title: "Autism spectrum disorder in under 19s: support and management (CG170). Recommendations"
     url: "https://www.nice.org.uk/guidance/cg170/chapter/recommendations"
     organisation: "National Institute for Health and Care Excellence"
@@ -60,6 +66,7 @@ sources:
 | **Разработчик** | National Institute for Health and Care Excellence (NICE), Великобритания |
 | **Дата публикации** | 28 августа 2013 года |
 | **Последнее указанное обновление** | 14 июня 2021 года |
+| **Позднейший тематический пересмотр** | 5 сентября 2025 года NICE пересмотрел рекомендации по помощи при сопутствующих психических состояниях и решил их не обновлять. Это не новая редакция CG170. |
 | **Целевая группа** | Аутичные дети и молодые люди младше 19 лет |
 | **Цель** | Организация комплексной поддержки, учёт здоровья, общения, среды и повседневных потребностей |
 | **Официальный текст** | [NICE CG170: рекомендации](https://www.nice.org.uk/guidance/cg170/chapter/recommendations) |

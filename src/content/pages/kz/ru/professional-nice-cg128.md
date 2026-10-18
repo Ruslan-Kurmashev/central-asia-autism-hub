@@ -19,7 +19,7 @@ riskLevel: moderate
 disclaimerType: medical
 conflictOfInterest: "Конфликт интересов не заявлен. Это редакционный обзор документа NICE, а не официальная публикация NICE или утверждённый протокол Республики Казахстан."
 publishedAt: 2026-10-12
-updatedAt: 2026-10-12
+updatedAt: 2026-10-18
 reviewDueAt: 2027-01-12
 versionNote: "Обзор подготовлен 12 октября 2026 года по NICE CG128 (2011, последнее указанное обновление 20 декабря 2017 года). Сверяйте текущую версию первоисточника перед использованием."
 draft: false
@@ -30,6 +30,12 @@ keyPoints:
   - "Указанные в NICE сроки, состав служб и британский маршрут направления не являются автоматически обязательными для Казахстана."
 evidenceLimitations: "CG128 разработано для британской системы здравоохранения и описывает организацию диагностических служб в этом контексте. Последнее указанное обновление рекомендаций относится к 2017 году; не следует считать это обзором всей последующей литературы. Наличие в тексте ссылок на инструменты не подтверждает локальную валидизацию, лицензирование или компетенцию специалиста. Страница не заменяет национальные протоколы, медицинское решение и проверку текущих правовых требований Казахстана."
 sources:
+  - title: "NICE 2021 surveillance of autism guidelines CG128, CG142 and CG170"
+    url: "https://www.ncbi.nlm.nih.gov/books/NBK571333/"
+    organisation: "National Institute for Health and Care Excellence (NICE), NCBI Bookshelf"
+    publicationYear: 2021
+    note: "По итогам проверки в 2021 году NICE не счёл необходимым обновлять CG128; редакция рекомендаций остаётся 2017 года."
+    accessedAt: 2026-10-18
   - title: "Autism spectrum disorder in under 19s: recognition, referral and diagnosis. NICE guideline CG128: Recommendations"
     url: "https://www.nice.org.uk/guidance/cg128/chapter/Recommendations"
     organisation: "National Institute for Health and Care Excellence"
@@ -59,6 +65,7 @@ sources:
 | **Разработчик** | National Institute for Health and Care Excellence (NICE), Великобритания |
 | **Опубликован** | 28 сентября 2011 года |
 | **Последнее указанное обновление** | 20 декабря 2017 года |
+| **Последующая проверка актуальности** | В ходе общего surveillance в июне 2021 года NICE не выявил оснований обновлять CG128. Это проверка актуальности, а не новая редакция рекомендаций. |
 | **Целевая группа** | Дети и молодые люди младше 19 лет, у которых предполагается аутизм |
 | **Назначение** | Распознавание особенностей, направление и комплексная диагностическая оценка |
 | **Оригинал** | [Рекомендации NICE CG128](https://www.nice.org.uk/guidance/cg128/chapter/Recommendations) |
