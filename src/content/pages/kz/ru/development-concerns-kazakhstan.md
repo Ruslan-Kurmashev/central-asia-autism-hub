@@ -20,7 +20,7 @@ riskLevel: moderate
 disclaimerType: medical
 conflictOfInterest: "Конфликт интересов не заявлен."
 publishedAt: 2026-10-09
-updatedAt: 2026-10-10
+updatedAt: 2026-10-19
 draft: false
 keyPoints:
   - "Вопросы о развитии можно обсуждать в системе ПМСП; действующий стандарт педиатрической помощи предусматривает центры развития и раннего вмешательства и психофизический скрининг."
@@ -146,7 +146,7 @@ sources:
 
 Если основной вопрос сейчас связан с возможной диагностикой аутизма, продолжите с материалом [«Какие обследования нужны при подозрении на аутизм в Казахстане»](/central-asia-autism-hub/kz/ru/parents/obsledovaniya-pri-podozrenii-na-autizm/).
 
-Если задача связана прежде всего с образованием, следующим материалом будет отдельная инструкция по детскому саду или школе.
+Если задача связана прежде всего с образованием, используйте уже опубликованные инструкции: [«Аутизм и детский сад в Казахстане»](/central-asia-autism-hub/kz/ru/help-kazakhstan/autism-kindergarten-kazakhstan/) и [«Аутизм и школа в Казахстане»](/central-asia-autism-hub/kz/ru/help-kazakhstan/autism-school-kazakhstan/).
 
 
 Для общего обзора маршрутов см. [«Помощь при аутизме в Казахстане: с чего начать»](/central-asia-autism-hub/kz/ru/help-kazakhstan/help-kazakhstan-start/).
