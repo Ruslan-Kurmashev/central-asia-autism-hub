@@ -12,7 +12,7 @@ translationStatus: checked
 audience:
   - parents
   - families
-versionNote: "10 October 2026: English translation checked against the Russian article dated 9 October 2026, covering the Social Code as amended through 6 September 2026 and MSE changes effective 25 August 2026."
+versionNote: "20 October 2026: legal reference aligned with the updated Russian source; Articles 183-184 specify the allowance for a person raising a child with a disability. Original publication date retained."
 featuredImage: "/central-asia-autism-hub/images/editorial/photos/kz-help-007.jpg"
 featuredImageAlt: "Organised folders, papers and a notebook on a desk, representing preparation of social support documents."
 author: Ruslan Kurmashev
@@ -21,7 +21,7 @@ riskLevel: moderate
 disclaimerType: informational
 conflictOfInterest: "No conflict of interest declared."
 publishedAt: 2026-10-10
-updatedAt: 2026-10-10
+updatedAt: 2026-10-20
 draft: false
 keyPoints:
   - "Access to social support depends on the child's legally established status, medical and social expert assessment (MSE) and individually determined support needs, not only on a diagnosis."
@@ -35,7 +35,7 @@ sources:
     url: "https://adilet.zan.kz/rus/docs/K2300000224"
     organisation: "Adilet legal information system"
     publicationYear: 2023
-    note: "Social Code as amended through 6 September 2026, including Articles 154-157, 170 and 175-177. Provisions taking effect in 2027 must not be described as already applicable."
+    note: "Social Code as amended through 6 September 2026, including Articles 154-157, 170, 175-177 and 183-184. Provisions taking effect in 2027 must not be described as already applicable."
     accessedAt: 2026-10-09
   - title: "Rules for medical and social expert assessment"
     url: "https://adilet.zan.kz/rus/docs/V2300032922"
@@ -121,7 +121,7 @@ In particular, distinguish:
 - the **state social disability benefit**; and
 - the **allowance for a person raising a child with a disability**.
 
-These are **different grounds for entitlement and different award procedures**, reflected in Article 170 of the Social Code.
+These are **different grounds for entitlement and different award procedures**. Article 170 of the Social Code lists general forms of social protection. The **allowance for a person raising a child with a disability** is regulated specifically by **Article 183 (entitlement)** and **Article 184 (amount)**; the state social disability benefit is addressed in **Articles 175-177**.
 
 Benefit amounts may change when statutory calculation indices or the law change. AutismHub therefore does not present a single undated amount as permanently valid. Any published figure should be verified against official sources and labelled with the date of the check.
 
@@ -159,7 +159,7 @@ A list without these qualifications can quickly become outdated or create mislea
 
 ## Main official sources
 
-1. [Social Code of the Republic of Kazakhstan, including Articles 154-157 and 170-177 (official Russian text)](https://adilet.zan.kz/rus/docs/K2300000224).
+1. [Social Code of the Republic of Kazakhstan, including Articles 154-157, 170, 175-177 and 183-184 (official Russian text)](https://adilet.zan.kz/rus/docs/K2300000224).
 2. [MSE rules, in the version applicable after 25 August 2026 (Russian)](https://adilet.zan.kz/rus/docs/V2300032922).
 3. [gov.kz: application for the state social disability benefit (Russian)](https://www.gov.kz/services/3000?lang=ru).
 4. [gov.kz: specialised social services delivered at home (Russian)](https://www.gov.kz/situations/234/intro?lang=ru).
