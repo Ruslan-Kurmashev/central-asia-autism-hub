@@ -128,8 +128,29 @@ try {
       await send('Emulation.setDeviceMetricsOverride',{ width, height: 900, deviceScaleFactor: 1, mobile: false });
       for (const article of articles) {
         const url = 'http://127.0.0.1:' + address.port + base + '/kz/ru/research/' + article.slug + '/';
-        await send('Page.navigate', { url });
-        await delay(275);
+        const navigation = await send('Page.navigate', { url });
+        if (navigation.errorText) throw Error('Navigation failed for ' + article.slug + ': ' + navigation.errorText);
+        // Page.navigate can return before the new document finishes loading.
+        // Waiting a fixed 275 ms sometimes inspected an interim document.
+        // Require the requested path and document.readyState=complete first.
+        const expectedPath = new URL(url).pathname;
+        const deadline = Date.now() + 10000;
+        let lastState = '';
+        let ready = false;
+        while (Date.now() < deadline) {
+          const snapshot = await send('Runtime.evaluate', {
+            expression: '({ pathname: location.pathname, readyState: document.readyState })',
+            returnByValue: true,
+          });
+          const current = snapshot.result?.value;
+          lastState = JSON.stringify(current ?? null);
+          if (current?.pathname === expectedPath && current?.readyState === 'complete') {
+            ready = true;
+            break;
+          }
+          await delay(100);
+        }
+        if (!ready) throw Error('Page not ready for ' + article.slug + ' (' + mode + '): ' + lastState);
         const evaluated = await send('Runtime.evaluate', { expression, returnByValue: true });
         const m = evaluated.result?.value;
         if (!m) throw Error('No browser result for ' + article.slug);
