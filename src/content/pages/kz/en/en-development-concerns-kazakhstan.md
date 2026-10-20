@@ -20,7 +20,7 @@ riskLevel: moderate
 disclaimerType: medical
 conflictOfInterest: "No conflict of interest declared."
 publishedAt: 2026-10-10
-updatedAt: 2026-10-10
+updatedAt: 2026-10-20
 draft: false
 keyPoints:
   - "Questions about development can be discussed in primary healthcare. Kazakhstan's paediatric care standard provides for development and early intervention centres and psychophysical screening."
@@ -154,7 +154,7 @@ Do not:
 
 If your concern is about health or development, contact your child's registered primary healthcare provider and bring your observations.
 
-If educational adjustments are the main question, ask about PMPK assessment. These pathways may proceed in parallel.
+If educational adjustments are the main question, ask about PMPK assessment. See the published guides to [autism and kindergarten in Kazakhstan](/central-asia-autism-hub/kz/en/help-kazakhstan/autism-kindergarten-support-kazakhstan/) and [autism and school in Kazakhstan](/central-asia-autism-hub/kz/en/help-kazakhstan/autism-school-enrolment-support-kazakhstan/) for practical questions about admission and educational support. Healthcare and educational pathways may proceed in parallel.
 
 For a wider overview, read [Autism support in Kazakhstan: where to start](/central-asia-autism-hub/kz/en/help-kazakhstan/autism-support-kazakhstan-start/).
 
