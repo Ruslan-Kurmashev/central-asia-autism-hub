@@ -37,7 +37,7 @@ const server = createServer(async (req,res) => {
     let requestPath = decodeURIComponent(url.pathname);
     if (!requestPath.startsWith(base + '/')) { res.writeHead(404); res.end(); return; }
     requestPath = requestPath.slice(base.length);
-    const relative = requestPath.replace(/^\\/+/, '');
+    const relative = requestPath.replace(/^\/+/, '');
     let target = path.resolve(dist, relative);
     if (!(target === dist || target.startsWith(dist + path.sep))) {
       res.writeHead(403); res.end(); return;
@@ -66,7 +66,7 @@ try {
   let debugPort = null;
   for(let attempt=0;attempt<120;attempt++){
     try {
-      debugPort = Number((await readFile(path.join(profile,'DevToolsActivePort'),'utf8')).split('\\n')[0]);
+      debugPort = Number((await readFile(path.join(profile,'DevToolsActivePort'),'utf8')).split('\n')[0]);
       if(debugPort) break;
     } catch {}
     if(chrome.exitCode!==null)break;
