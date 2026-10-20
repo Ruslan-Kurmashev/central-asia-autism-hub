@@ -1,0 +1,45 @@
+name: User journey browser QA
+
+on:
+  push:
+    paths:
+      - '.github/workflows/user-journey-qa.yml'
+      - 'scripts/check-user-journeys.mjs'
+      - 'src/components/**'
+      - 'src/scripts/site-search-client.js'
+      - 'src/styles/**'
+      - 'src/pages/**'
+      - 'src/data/kazakhstan-announcements.ts'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  browser-smoke:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - name: Check out source
+        uses: actions/checkout@v4
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 24
+          cache: npm
+      - name: Install dependencies
+        run: npm ci
+      - name: Check visitor QA script syntax
+        run: node --check scripts/check-user-journeys.mjs
+      - name: Build three-language static site
+        run: npm run build
+      - name: Run user journeys in Chromium at three viewport widths
+        run: node scripts/check-user-journeys.mjs
+      - name: Upload homepage screenshots
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: autismhub-browser-screenshots
+          path: docs/audit-results/site-browser-snapshots/
+          if-no-files-found: warn
+          retention-days: 14
