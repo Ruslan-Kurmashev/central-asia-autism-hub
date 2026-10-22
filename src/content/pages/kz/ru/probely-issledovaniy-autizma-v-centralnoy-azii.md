@@ -28,7 +28,7 @@ draft: false
 keyPoints:
   - "Обзор Zakirova-Engstrand и Yakubova, опубликованный онлайн в 2023 и в выпуске 2024 года, включил 11 эмпирических исследований 2013-2021 годов: 10 из Казахстана и одно из Узбекистана. Поиск завершился в январе 2022 года."
   - "В раннем обзоре не было отвечавших критериям работ о взрослом жизненном пути и инфраструктуре эпидемиологического наблюдения. После завершения поиска появились национальные анализы медицинских реестров Казахстана и исследование регистрации в Таджикистане."
-  - "Реестровые показатели не заменяют популяционных исследований; в работе Казахстана за 2014-2024 годы 214904 записи означают наблюдения ребёнок-год, а не число уникальных аутичных детей."
+  - "Реестровые показатели не заменяют популяционных исследований, в работе Казахстана за 2014-2024 годы 214904 записи означают наблюдения ребёнок-год, а не число уникальных аутичных детей."
   - "Локальное исследование M-CHAT-R/F показало внутреннюю согласованность языковых версий, но не определило чувствительность и специфичность скрининга в репрезентативной популяции Казахстана."
   - "Недостаточно изучены опыт аутичных взрослых, доступность услуг вне крупных городов, долгосрочные результаты поддержки и участие аутичных людей в выборе научных вопросов."
   - "Шесть направлений в статье являются редакционно предложенной картой вопросов на основе литературы, а не национальным официальным приоритетным рейтингом или подтверждением отсутствия иных исследований."
@@ -36,63 +36,63 @@ evidenceLimitations: "Материал представляет выборочн
 sources:
   - title: "A scoping review of autism research conducted in Central Asia: Knowledge gaps and research priorities"
     url: "https://doi.org/10.1177/13623613231170553"
-    organisation: "Rano Zakirova-Engstrand и Gulnoza Yakubova; Autism"
+    organisation: "Rano Zakirova-Engstrand и Gulnoza Yakubova, Autism"
     publicationYear: 2024
-    note: "Онлайн с мая 2023, выпуск 2024; обзор 11 работ 2013-2021 годов, последняя дата поиска 8 января 2022; исторические пробелы lifespan issues, infrastructure and surveillance."
+    note: "Онлайн с мая 2023, выпуск 2024, обзор 11 работ 2013-2021 годов, последняя дата поиска 8 января 2022, исторические пробелы lifespan issues, infrastructure and surveillance."
     accessedAt: 2026-10-16
   - title: "Epidemiological trends in autism and other neurodevelopmental disorders in Kazakhstan (2016-2022): a regional and national perspective"
     url: "https://doi.org/10.3389/fpsyt.2025.1520460"
-    organisation: "Nukeshtayeva и соавторы; Karaganda Medical University; Frontiers in Psychiatry"
+    organisation: "Nukeshtayeva и соавторы, Karaganda Medical University, Frontiers in Psychiatry"
     publicationYear: 2025
     note: "Реестровые показатели детей 0-17 лет по кодам детского и атипичного аутизма и региональные различия. Не популяционная перепись."
     accessedAt: 2026-10-16
   - title: "Diverging trends in neurodevelopmental disorder diagnoses among children aged below 16 years in Kazakhstan (2014-2024): a national registry study"
     url: "https://doi.org/10.3389/fpsyt.2026.1880419"
-    organisation: "Baikatov и соавторы; Frontiers in Psychiatry"
+    organisation: "Baikatov и соавторы, Frontiers in Psychiatry"
     publicationYear: 2026
-    note: "Повторные годовые срезы детей 0-15 лет, 214904 ребёнок-летних записей; идентификаторы в файлах разных лет не позволяют надёжно подсчитать уникальных детей за весь период."
+    note: "Повторные годовые срезы детей 0-15 лет, 214904 ребёнок-летних записей, идентификаторы в файлах разных лет не позволяют надёжно подсчитать уникальных детей за весь период."
     accessedAt: 2026-10-16
   - title: "Modified checklist for autism in toddlers, revised, with follow-up application in Central Kazakhstan"
     url: "https://doi.org/10.23950/jcmk/11574"
-    organisation: "Nukeshtayeva и соавторы; Journal of Clinical Medicine of Kazakhstan"
+    organisation: "Nukeshtayeva и соавторы, Journal of Clinical Medicine of Kazakhstan"
     publicationYear: 2022
-    note: "171 ребёнок, проверка внутренней согласованности русской и казахской версий M-CHAT-R/F; не общенациональная оценка диагностической чувствительности и специфичности."
+    note: "171 ребёнок, проверка внутренней согласованности русской и казахской версий M-CHAT-R/F, не общенациональная оценка диагностической чувствительности и специфичности."
     accessedAt: 2026-10-16
   - title: "Autism spectrum disorders: experience of parents in Kazakhstan"
     url: "https://doi.org/10.1186/s12889-025-23764-3"
-    organisation: "Imamatdinova и соавторы; BMC Public Health"
+    organisation: "Imamatdinova и соавторы, BMC Public Health"
     publicationYear: 2025
     note: "Опрос 390 родителей о доступности поддержки, работе и расходах, не национальная случайная выборка."
     accessedAt: 2026-10-16
   - title: "Understanding of Autism and the Diagnostic Process in Uzbekistan: Mothers' Perspectives"
     url: "https://doi.org/10.1177/15407969251343493"
-    organisation: "Asaro-Saddler, Hamsho, Uzoqova и Ghazali; Research and Practice for Persons with Severe Disabilities"
+    organisation: "Asaro-Saddler, Hamsho, Uzoqova и Ghazali, Research and Practice for Persons with Severe Disabilities"
     publicationYear: 2026
     note: "Онлайн в 2025, выпуск 2026: дистанционная качественная фокус-группа семи матерей в Узбекистане о процессе получения диагноза."
     accessedAt: 2026-10-16
   - title: "The registered incidence of autism spectrum disorders and other disorders of psychological development in children in the Republic of Tajikistan"
     url: "https://www.vestnik-ipovszrt.tj/en/detail.php?id=106"
-    organisation: "Addullozoda и соавторы; Bulletin of Postgraduate Education in Healthcare"
+    organisation: "Addullozoda и соавторы, Bulletin of Postgraduate Education in Healthcare"
     publicationYear: 2026
-    note: "Отчётные регистрационные случаи среди детей 0-17 лет в Таджикистане за 2020-2025 годы; суммарно 170 случаев РАС, не доказанное число уникальных аутичных людей."
+    note: "Отчётные регистрационные случаи среди детей 0-17 лет в Таджикистане за 2020-2025 годы, суммарно 170 случаев РАС, не доказанное число уникальных аутичных людей."
     accessedAt: 2026-10-16
   - title: "What are the autism research priorities of autistic adults in Scotland?"
     url: "https://pmc.ncbi.nlm.nih.gov/articles/PMC11401337/"
-    organisation: "Шотландское исследование с участием аутичных исследователей и респондентов; Autism"
+    organisation: "Шотландское исследование с участием аутичных исследователей и респондентов, Autism"
     publicationYear: 2024
-    note: "225 аутичных взрослых участвовали в определении исследовательских приоритетов; пример партисипаторного дизайна в другом контексте, не результаты для стран Центральной Азии."
+    note: "225 аутичных взрослых участвовали в определении исследовательских приоритетов, пример партисипаторного дизайна в другом контексте, не результаты для стран Центральной Азии."
     accessedAt: 2026-10-16
   - title: "Reporting community involvement in autism research: Findings from the journal Autism"
     url: "https://pmc.ncbi.nlm.nih.gov/articles/PMC11816470/"
-    organisation: "Autism; исследование прозрачности участия сообщества в научных публикациях"
+    organisation: "Autism, исследование прозрачности участия сообщества в научных публикациях"
     publicationYear: 2025
-    note: "Анализ 283 статей журнала в 2019 и 2022 годах; сам факт консультаций с участниками не означает равного участия в принятии решений."
+    note: "Анализ 283 статей журнала в 2019 и 2022 годах, сам факт консультаций с участниками не означает равного участия в принятии решений."
     accessedAt: 2026-10-16
   - title: "Assistive Technologies Child’s Needs Assessment and Ecosystem in Kazakhstan"
     url: "https://www.unicef.org/kazakhstan/en/reports/assistive-technologies-childs-needs-assessment-and-ecosystem-kazakhstan"
     organisation: "UNICEF Kazakhstan"
     publicationYear: 2025
-    note: "Оценка системы вспомогательных образовательных технологий и условий внедрения; не клиническая оценка эффективности вмешательств для всех детей с РАС."
+    note: "Оценка системы вспомогательных образовательных технологий и условий внедрения, не клиническая оценка эффективности вмешательств для всех детей с РАС."
     accessedAt: 2026-10-16
 ---
 
@@ -196,11 +196,11 @@ Rano Zakirova-Engstrand из Стокгольмского университет
 
 Для планирования поддержки важны такие темы:
 
-- позднее выявление и диагностика аутизма у взрослых;
-- переход от детской системы здравоохранения к взрослой;
-- продолжение образования, профессиональная подготовка и занятость;
-- самостоятельная жизнь, доступная среда и коммуникация;
-- социальные отношения, качество жизни и благополучие;
+- позднее выявление и диагностика аутизма у взрослых
+- переход от детской системы здравоохранения к взрослой
+- продолжение образования, профессиональная подготовка и занятость
+- самостоятельная жизнь, доступная среда и коммуникация
+- социальные отношения, качество жизни и благополучие
 - особенности поддержки женщин, людей с разными потребностями в коммуникации и взрослых с сопутствующими состояниями.
 
 **Отсутствие работ по взрослой жизни в обзоре с поиском до января 2022 года не означает, что в 2026 году совсем не существует подобных исследований.** Оно показывает, что эта область недостаточно представлена в известной исторической выборке.
@@ -287,7 +287,7 @@ Rano Zakirova-Engstrand из Стокгольмского университет
 
 **Наличие строки «мы посоветовались с семьями» ещё не означает равного сотрудничества.**
 
-[Исследование приоритетов аутичных взрослых](https://pmc.ncbi.nlm.nih.gov/articles/PMC11401337/); [исследование прозрачности участия сообщества](https://pmc.ncbi.nlm.nih.gov/articles/PMC11816470/).
+[Исследование приоритетов аутичных взрослых](https://pmc.ncbi.nlm.nih.gov/articles/PMC11401337/), [исследование прозрачности участия сообщества](https://pmc.ncbi.nlm.nih.gov/articles/PMC11816470/).
 
 ### Как можно организовать участие в региональной науке
 
@@ -309,12 +309,12 @@ Rano Zakirova-Engstrand из Стокгольмского университет
 
 Если исследователи хотят сравнить результаты, им необходимо заранее согласовать:
 
-- определения и возрастные группы;
-- способ отбора участников и учёта недоступных групп;
-- критерии подтверждения диагноза или особенности развития;
-- языковую и культурную проверку вопросов;
-- способ измерения результатов;
-- перечень потенциальных смещений и отсутствующих данных;
+- определения и возрастные группы
+- способ отбора участников и учёта недоступных групп
+- критерии подтверждения диагноза или особенности развития
+- языковую и культурную проверку вопросов
+- способ измерения результатов
+- перечень потенциальных смещений и отсутствующих данных
 - условия законного обмена информацией и защиты конфиденциальности.
 
 Без этого большое международное исследование может создать **иллюзию точности**, сравнивая разные по смыслу показатели.

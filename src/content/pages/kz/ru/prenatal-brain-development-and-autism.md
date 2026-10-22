@@ -46,7 +46,7 @@ sources:
   - title: "Brain Basics: Life and Death of a Neuron"
     url: "https://www.ninds.nih.gov/health-information/public-education/brain-basics"
     organisation: "National Institute of Neurological Disorders and Stroke"
-    note: "Образование, специализация и миграция нейронов; базовые принципы развития нервных цепей."
+    note: "Образование, специализация и миграция нейронов, базовые принципы развития нервных цепей."
     accessedAt: 2026-10-15
   - title: "The new frontier in understanding human and mammalian brain development"
     url: "https://doi.org/10.1038/s41586-025-09652-1"
@@ -94,7 +94,7 @@ sources:
     url: "https://pmc.ncbi.nlm.nih.gov/articles/PMC7373219/"
     organisation: "Trends in Neurosciences"
     publicationYear: 2020
-    note: "Концептуальная модель пренатального происхождения некоторых нейробиологических особенностей; необходимо отделять модель от доказанной универсальной причины."
+    note: "Концептуальная модель пренатального происхождения некоторых нейробиологических особенностей, необходимо отделять модель от доказанной универсальной причины."
     accessedAt: 2026-10-15
   - title: "Latest clinical frontiers related to autism diagnostic strategies"
     url: "https://doi.org/10.1016/j.xcrm.2024.101916"
