@@ -30,8 +30,8 @@ costLabel: "Free"
 externalUrl: "https://autisminternetmodules.org/"
 lastVerifiedAt: 2026-10-15
 projectOwned: false
-registrationStatus: "Create a free AIM account and select a module. Modules and standard professional-development certificates are free; optional university credit requires payment."
-completionOutcome: "Free module completion certificates are available after the required activities and post-assessment; they do not constitute professional licensure."
+registrationStatus: "Create a free AIM account and select a module. Modules and standard professional-development certificates are free, optional university credit requires payment."
+completionOutcome: "Free module completion certificates are available after the required activities and post-assessment, they do not constitute professional licensure."
 resourceDisclaimerType: external
 sources:
   - title: "Official course information and access"
@@ -40,4 +40,4 @@ sources:
     accessedAt: 2026-10-15
 ---
 
-This is an external educational resource. Links open the provider's website; AutismHub does not deliver the course or award a qualification.
+This is an external educational resource. Links open the provider's website, AutismHub does not deliver the course or award a qualification.

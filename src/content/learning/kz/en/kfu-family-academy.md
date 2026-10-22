@@ -32,7 +32,7 @@ externalUrl: "https://stepik.org/course/115174/"
 lastVerifiedAt: 2026-10-11
 projectOwned: false
 registrationStatus: "Visit the course page and register if prompted. The provider determines ongoing access conditions."
-completionOutcome: "Course learning and practical exercises; availability of a completion certificate for this specific course has not been confirmed."
+completionOutcome: "Course learning and practical exercises, availability of a completion certificate for this specific course has not been confirmed."
 resourceDisclaimerType: external
 sources:
   - title: "Official provider description"
@@ -41,4 +41,4 @@ sources:
     accessedAt: 2026-10-11
 ---
 
-External programme or open learning resource. Terms can change; check with the provider.
+External programme or open learning resource. Terms can change, check with the provider.
