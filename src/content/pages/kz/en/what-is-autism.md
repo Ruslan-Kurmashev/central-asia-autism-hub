@@ -20,6 +20,7 @@ riskLevel: moderate
 disclaimerType: medical
 conflictOfInterest: "No conflict of interest declared."
 publishedAt: "2026-10-22T19:45:00Z"
+originalPublishedAt: 2026-08-08
 updatedAt: "2026-10-22T19:45:00Z"
 reviewDueAt: 2027-08-08
 draft: false
