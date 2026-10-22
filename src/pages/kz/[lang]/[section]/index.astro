@@ -3,6 +3,7 @@ import { getCollection } from 'astro:content';
 import ArticleCard from '../../../../components/ArticleCard.astro';
 import AboutOverview from '../../../../components/AboutOverview.astro';
 import LearningCatalog from '../../../../components/LearningCatalog.astro';
+import GlossaryListingCard from '../../../../components/GlossaryListingCard.astro';
 import ProfessionalDirectory from '../../../../components/ProfessionalDirectory.astro';
 import ResearchTopicDirectory from '../../../../components/ResearchTopicDirectory.astro';
 import { CONTENT_UI, DATE_LOCALES } from '../../../../i18n/content';
@@ -130,8 +131,8 @@ const materials = [...pageMaterials, ...researchMaterials].sort((left, right) =>
   return left.data.title.localeCompare(right.data.title, locale);
 });
 
-const showRussianGlossary = section === 'parents' && locale === 'ru';
-const displayCount = materials.length + learningMaterials.length + (showRussianGlossary ? 1 : 0);
+const showLocalizedGlossary = section === 'parents';
+const displayCount = materials.length + learningMaterials.length + (showLocalizedGlossary ? 1 : 0);
 const displayCountLabel = section === 'learning'
   ? locale === 'ru' ? 'учебных материалов'
     : locale === 'kk' ? 'оқу материалы'
@@ -281,7 +282,7 @@ const sectionGroups = groupDefinitions.map((group) => ({
     group.topics.includes(material.data.topic),
   ).sort((left, right) => {
     // Keep the approved introductory sequence ahead of newer resources.
-    if (!showRussianGlossary || group.id !== 'autism-basics') return 0;
+    if (!showLocalizedGlossary || group.id !== 'autism-basics') return 0;
     const editorialOrder = [
       'chto-takoe-autizm',
       'pochemu-voznikaet-autizm',
@@ -300,7 +301,7 @@ const sectionGroups = groupDefinitions.map((group) => ({
     };
     return position(left.data.slug) - position(right.data.slug);
   }),
-  glossaryCount: showRussianGlossary && group.id === 'autism-basics' ? 1 : 0,
+  glossaryCount: showLocalizedGlossary && group.id === 'autism-basics' ? 1 : 0,
 }));
 
 const visibleGroups =
@@ -481,34 +482,20 @@ function russianMaterialWord(count: number) {
                             </span>
                           </a>
                           {group.glossaryCount > 0 && materialIndex === 0 && (
-                            <a
-                              class="section-v2__article-row section-v2__article-row--image"
-                              href={localePath(locale, 'parents/glossary')}
-                            >
-                              <span class="section-v2__article-index" aria-hidden="true">
-                                02
-                              </span>
-                              <img
-                                class="section-v2__article-thumb"
-                                src={`${sitePath()}images/glossary/terminology-desk.webp`}
-                                alt=""
-                                width="96"
-                                height="72"
-                                loading="lazy"
-                                decoding="async"
-                              />
-                              <span class="section-v2__article-copy">
-                                <strong>Словарь терминов</strong>
-                                <span>217 понятий об аутизме с понятными объяснениями, поиском по словам и тематическими категориями.</span>
-                              </span>
-                              <span class="section-v2__article-meta">
-                                <time datetime="2026-10-12">{dateFormatter.format(new Date('2026-10-12T12:00:00Z'))}</time>
-                                <span aria-hidden="true">→</span>
-                              </span>
-                            </a>
+                            <GlossaryListingCard
+                              locale={locale}
+                              index={2}
+                              dateLabel={dateFormatter.format(new Date('2026-10-12T12:00:00Z'))}
+                            />
                           )}
                           </Fragment>
                         ))
+                      ) : group.glossaryCount > 0 ? (
+                        <GlossaryListingCard
+                          locale={locale}
+                          index={1}
+                          dateLabel={dateFormatter.format(new Date('2026-10-12T12:00:00Z'))}
+                        />
                       ) : (
                         <p class="section-v2__empty">{sectionV2Text.emptyGroup}</p>
                       )}

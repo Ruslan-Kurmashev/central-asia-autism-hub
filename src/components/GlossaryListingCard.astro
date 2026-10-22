@@ -1,0 +1,55 @@
+---
+import { localePath, sitePath } from '../lib/urls';
+import type { Locale } from '../site.config';
+
+interface Props {
+  locale: Locale;
+  index: number;
+  dateLabel: string;
+}
+
+const { locale, index, dateLabel } = Astro.props;
+
+const localizedText: Record<Locale, { title: string; description: string }> = {
+  ru: {
+    title: 'Словарь терминов',
+    description: '217 понятий об аутизме с понятными объяснениями, поиском по словам и тематическими категориями.',
+  },
+  kk: {
+    title: 'Терминдер сөздігі',
+    description: 'Аутизм туралы 217 ұғымның түсінікті анықтамалары, сөз бойынша іздеу және тақырыптық санаттар.',
+  },
+  en: {
+    title: 'Glossary of Terms',
+    description: '217 autism-related terms with clear explanations, keyword search and topic categories.',
+  },
+};
+
+const copy = localizedText[locale];
+---
+
+<a
+  class="section-v2__article-row section-v2__article-row--image"
+  href={localePath(locale, 'parents/glossary')}
+>
+  <span class="section-v2__article-index" aria-hidden="true">
+    {String(index).padStart(2, '0')}
+  </span>
+  <img
+    class="section-v2__article-thumb"
+    src={`${sitePath()}images/glossary/terminology-desk.webp`}
+    alt=""
+    width="96"
+    height="72"
+    loading="lazy"
+    decoding="async"
+  />
+  <span class="section-v2__article-copy">
+    <strong>{copy.title}</strong>
+    <span>{copy.description}</span>
+  </span>
+  <span class="section-v2__article-meta">
+    <time datetime="2026-10-12">{dateLabel}</time>
+    <span aria-hidden="true">→</span>
+  </span>
+</a>
