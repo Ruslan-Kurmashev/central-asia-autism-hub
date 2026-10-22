@@ -31,7 +31,7 @@ costLabel: "Бесплатно"
 externalUrl: "https://irav.online/mini_kurs_ras"
 lastVerifiedAt: 2026-10-11
 projectOwned: false
-registrationStatus: "Зарегистрируйтесь через форму курса на сайте организатора. Записи и поддерживающий чат доступны участникам; материалы предоставляются на три месяца."
+registrationStatus: "Зарегистрируйтесь через форму курса на сайте организатора. Записи и поддерживающий чат доступны участникам, материалы предоставляются на три месяца."
 completionOutcome: "Электронный сертификат участия после прохождения курса."
 resourceDisclaimerType: external
 sources:

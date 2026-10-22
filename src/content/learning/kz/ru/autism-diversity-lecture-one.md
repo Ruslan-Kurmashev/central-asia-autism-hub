@@ -31,7 +31,7 @@ costLabel: "Бесплатно"
 externalUrl: "https://autismjournal.help/articles/povedencheskaya-pedagogika"
 lastVerifiedAt: 2026-10-11
 projectOwned: false
-registrationStatus: "Откройте страницу первой лекции и прочитайте опубликованный учебный материал; он доступен непосредственно на странице."
+registrationStatus: "Откройте страницу первой лекции и прочитайте опубликованный учебный материал, он доступен непосредственно на странице."
 completionOutcome: "Текст первой лекции с пояснениями и ссылками на дополнительные источники для изучения."
 resourceDisclaimerType: external
 sources:

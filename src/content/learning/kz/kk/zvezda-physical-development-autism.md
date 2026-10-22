@@ -30,8 +30,8 @@ costLabel: "Тегін"
 externalUrl: "https://zvezda74.ru/online_lessons/fizicheskoe-razvitie/"
 lastVerifiedAt: 2026-10-15
 projectOwned: false
-registrationStatus: "Курс бетін ашып, кірістірілген YouTube видеоларын қараңыз. Қазір 1-4 және 6-7 сабақтары жарияланған; 5-сабақ бетте жоқ."
-completionOutcome: "Өздігінен танысуға арналған алты бейнесабақ бар; сертификат расталмаған."
+registrationStatus: "Курс бетін ашып, кірістірілген YouTube видеоларын қараңыз. Қазір 1-4 және 6-7 сабақтары жарияланған, 5-сабақ бетте жоқ."
+completionOutcome: "Өздігінен танысуға арналған алты бейнесабақ бар, сертификат расталмаған."
 resourceDisclaimerType: external
 sources:
   - title: "Official course information and access"
@@ -40,4 +40,4 @@ sources:
     accessedAt: 2026-10-15
 ---
 
-Бұл сыртқы білім беру ресурсы. Сілтеме ұйымдастырушы сайтына апарады; AutismHub оқытуды жүргізбейді және қатысушының біліктілігін растамайды.
+Бұл сыртқы білім беру ресурсы. Сілтеме ұйымдастырушы сайтына апарады, AutismHub оқытуды жүргізбейді және қатысушының біліктілігін растамайды.
