@@ -23,7 +23,7 @@ publishedAt: "2026-09-30T17:22:00+01:00"
 updatedAt: "2026-09-30T17:22:00+01:00"
 reviewDueAt: 2027-03-30
 draft: false
-versionNote: "30 сентября 2026: блок завершён тремя отдельными P1-материалами об АФК, Physical Therapy / Physiotherapy и лечебной физической культуре (ЛФК); уточнены различия между этими направлениями."
+versionNote: "30 сентября 2026: блок завершён тремя отдельными P1-материалами об АФК, Physical Therapy / Physiotherapy и лечебной физической культуре (ЛФК), уточнены различия между этими направлениями."
 keyPoints:
   - "Движение и физическая активность - это не одна терапия аутизма, а группа разных видов поддержки с разными целями."
   - "Наиболее обоснованные цели связаны с конкретными двигательными навыками, физической формой, безопасностью, самостоятельностью и участием в школе, спорте и повседневной жизни."
@@ -36,19 +36,19 @@ sources:
     url: "https://pubmed.ncbi.nlm.nih.gov/40077051/"
     organisation: "Xing and Wu / Healthcare"
     publicationYear: 2025
-    note: "57 исследований, 1 622 аутичных ребёнка 3-17 лет. Общая оценка качества доказательств была низкой; только 8 исследований сообщали о приобретении, сохранении или переносе двигательных навыков."
+    note: "57 исследований, 1 622 аутичных ребёнка 3-17 лет. Общая оценка качества доказательств была низкой, только 8 исследований сообщали о приобретении, сохранении или переносе двигательных навыков."
     accessedAt: 2026-09-30
   - title: "Effects of Physical Exercise on Motor Skills in Children With Autism Spectrum Disorder: A Systematic Review and Meta-analysis of Randomized Controlled Trials"
     url: "https://pubmed.ncbi.nlm.nih.gov/42340634/"
     organisation: "Lei et al. / Journal of Autism and Developmental Disorders"
     publicationYear: 2026
-    note: "10 RCT, 256 детей до 12 лет. Сообщены улучшения общей моторики, локомоции, контроля предметов и равновесия; для общей моторики и равновесия обнаружен публикационный сдвиг."
+    note: "10 RCT, 256 детей до 12 лет. Сообщены улучшения общей моторики, локомоции, контроля предметов и равновесия, для общей моторики и равновесия обнаружен публикационный сдвиг."
     accessedAt: 2026-09-30
   - title: "Dose-response relationship between exercise interventions and motor skills in children with autism spectrum disorder: a systematic review and multilevel meta-analysis"
     url: "https://pubmed.ncbi.nlm.nih.gov/42758334/"
     organisation: "Wang et al. / European Journal of Pediatrics"
     publicationYear: 2026
-    note: "34 исследования, 1 082 ребёнка 3-12 лет. Положительные эффекты для общей, крупной и мелкой моторики; дозовые оценки были исследовательскими, а непосредственные эффекты для общей моторики были больше отсроченных."
+    note: "34 исследования, 1 082 ребёнка 3-12 лет. Положительные эффекты для общей, крупной и мелкой моторики, дозовые оценки были исследовательскими, а непосредственные эффекты для общей моторики были больше отсроченных."
     accessedAt: 2026-09-30
   - title: "Physical exercise therapy for autism spectrum disorder: a scoping review of systematic reviews"
     url: "https://pubmed.ncbi.nlm.nih.gov/42755967/"

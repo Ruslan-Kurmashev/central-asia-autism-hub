@@ -35,7 +35,7 @@ sources:
     url: "https://pubmed.ncbi.nlm.nih.gov/37963634/"
     organisation: "Sandbank et al. / BMJ"
     publicationYear: 2023
-    note: "В обновлении Project AIM 252 исследования и 13 304 участника; эффекты различаются по видам вмешательств, показателям и риску смещения. Общая выборка не состоит только из исследований NDBI."
+    note: "В обновлении Project AIM 252 исследования и 13 304 участника, эффекты различаются по видам вмешательств, показателям и риску смещения. Общая выборка не состоит только из исследований NDBI."
     accessedAt: 2026-10-10
   - title: "Meta-analysis of naturalistic developmental behavioral interventions for young children with autism spectrum disorder"
     url: "https://pubmed.ncbi.nlm.nih.gov/31018655/"
