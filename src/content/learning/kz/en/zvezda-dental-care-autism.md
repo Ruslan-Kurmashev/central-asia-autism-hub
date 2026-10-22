@@ -31,7 +31,7 @@ externalUrl: "https://zvezda74.ru/online_lessons/programma-zubnaya-feya/"
 lastVerifiedAt: 2026-10-15
 projectOwned: false
 registrationStatus: "Watch six YouTube videos on the provider's page with no stated registration requirement. The lessons do not replace individual dental advice."
-completionOutcome: "Six lessons are available for self-study; no certificate or individual dental treatment is provided."
+completionOutcome: "Six lessons are available for self-study, no certificate or individual dental treatment is provided."
 resourceDisclaimerType: external
 sources:
   - title: "Official course information and access"
@@ -40,4 +40,4 @@ sources:
     accessedAt: 2026-10-15
 ---
 
-This is an external educational resource. Links open the provider's website; AutismHub does not deliver the course or award a qualification.
+This is an external educational resource. Links open the provider's website, AutismHub does not deliver the course or award a qualification.

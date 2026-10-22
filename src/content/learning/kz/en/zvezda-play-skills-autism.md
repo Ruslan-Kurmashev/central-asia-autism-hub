@@ -30,7 +30,7 @@ costLabel: "Free"
 externalUrl: "https://zvezda74.ru/online_lessons/programma-igrovaya-deyatelnost/"
 lastVerifiedAt: 2026-10-15
 projectOwned: false
-registrationStatus: "Six embedded YouTube lessons are available on the organiser's page. Open the page and view the lessons; no fee or enrolment is stated."
+registrationStatus: "Six embedded YouTube lessons are available on the organiser's page. Open the page and view the lessons, no fee or enrolment is stated."
 completionOutcome: "Six video lessons can be completed independently. No certificate is listed."
 resourceDisclaimerType: external
 sources:
@@ -40,4 +40,4 @@ sources:
     accessedAt: 2026-10-15
 ---
 
-This is an external educational resource. Links open the provider's website; AutismHub does not deliver the course or award a qualification.
+This is an external educational resource. Links open the provider's website, AutismHub does not deliver the course or award a qualification.

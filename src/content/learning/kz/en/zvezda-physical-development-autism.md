@@ -30,8 +30,8 @@ costLabel: "Free"
 externalUrl: "https://zvezda74.ru/online_lessons/fizicheskoe-razvitie/"
 lastVerifiedAt: 2026-10-15
 projectOwned: false
-registrationStatus: "Open the course page and watch the embedded YouTube videos. Lessons 1-4 and 6-7 are published; lesson 5 is missing from the page."
-completionOutcome: "Six videos are available for self-directed viewing; no certificate is confirmed."
+registrationStatus: "Open the course page and watch the embedded YouTube videos. Lessons 1-4 and 6-7 are published, lesson 5 is missing from the page."
+completionOutcome: "Six videos are available for self-directed viewing, no certificate is confirmed."
 resourceDisclaimerType: external
 sources:
   - title: "Official course information and access"
@@ -40,4 +40,4 @@ sources:
     accessedAt: 2026-10-15
 ---
 
-This is an external educational resource. Links open the provider's website; AutismHub does not deliver the course or award a qualification.
+This is an external educational resource. Links open the provider's website, AutismHub does not deliver the course or award a qualification.

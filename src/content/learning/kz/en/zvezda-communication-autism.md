@@ -30,7 +30,7 @@ costLabel: "Free"
 externalUrl: "https://zvezda74.ru/online_lessons/razvitie-kommunikatsii-u-detej-s-autizmom/"
 lastVerifiedAt: 2026-10-15
 projectOwned: false
-registrationStatus: "Open the provider's page and play one of six embedded VK videos. No registration is stated; VK accessibility may vary by region."
+registrationStatus: "Open the provider's page and play one of six embedded VK videos. No registration is stated, VK accessibility may vary by region."
 completionOutcome: "Six self-study video lessons are available. No completion certificate is advertised."
 resourceDisclaimerType: external
 sources:
@@ -40,4 +40,4 @@ sources:
     accessedAt: 2026-10-15
 ---
 
-This is an external educational resource. Links open the provider's website; AutismHub does not deliver the course or award a qualification.
+This is an external educational resource. Links open the provider's website, AutismHub does not deliver the course or award a qualification.
