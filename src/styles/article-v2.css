@@ -12,7 +12,7 @@
   --article-line: #d6e4ef;
   --article-warm: #fff4df;
   --article-warm-border: #e8c57a;
-  --article-warm-accent: #c9891f;
+  --article-warm-accent: #ab7220;
   background: var(--article-bg);
   color: var(--article-text);
 }
@@ -432,31 +432,53 @@
   text-align: left;
 }
 
+/* Shared, compact limitation callout for every article and supported locale.
+   One reading column prevents the Important label from colliding with the heading. */
 .article-v2__limitations {
-  margin-top: 3rem;
-  margin-bottom: 3rem;
-  padding: 1.7rem 1.8rem;
-  border: 1px solid var(--article-warm-border);
-  border-left: 5px solid var(--article-warm-accent);
-  background: var(--article-warm);
-  box-shadow: 0 10px 28px rgb(122 86 25 / 8%);
+  display: block;
+  margin-top: 2.5rem;
+  margin-bottom: 2.7rem;
+  padding: 1.35rem 1.5rem;
+  border: 0;
+  border-left: 3px solid var(--article-warm-accent);
+  border-radius: 0.6rem;
+  background: #fffaf1;
+  box-shadow: none;
 }
 
 .article-v2__limitations .article-v2__block-label {
-  color: #8a5a10;
+  display: inline-block;
+  margin: 0 0 0.65rem;
+  padding: 0.22rem 0.7rem;
+  border-radius: 999px;
+  background: #f4e6cc;
+  color: #68450e;
+  font-family: var(--font-body);
+  font-size: var(--type-meta);
   font-weight: 700;
+  line-height: 1.4;
+  letter-spacing: 0.01em;
 }
 
 .article-v2__limitations h2 {
-  color: #5f4214;
-  font-size: var(--type-h2);
+  margin: 0;
+  color: var(--article-ink);
+  font-family: var(--font-body);
+  font-size: var(--type-h3);
+  font-weight: 650;
+  letter-spacing: normal;
+  line-height: 1.35;
+  overflow-wrap: anywhere;
 }
 
-.article-v2__limitations p {
-  margin: 0.75rem 0 0;
-  color: #5f5138;
-  font-size: var(--type-lead);
-  line-height: 1.7;
+.article-v2__limitations p:not(.article-v2__block-label) {
+  max-width: 64ch;
+  margin: 0.7rem 0 0;
+  color: var(--article-text);
+  font-family: var(--font-body);
+  font-size: var(--type-reading);
+  line-height: var(--leading-reading);
+  overflow-wrap: anywhere;
 }
 
 .article-v2__sources {
