@@ -35,7 +35,7 @@ sources:
     url: "https://pubmed.ncbi.nlm.nih.gov/37963634/"
     organisation: "Sandbank et al. / BMJ"
     publicationYear: 2023
-    note: "252 исследования различных ранних вмешательств (не только ABA); результаты зависят от качества оценок, нежелательные события отслеживались недостаточно. Исправление BMJ от 11 мая 2026 касалось списка ссылок в приложениях."
+    note: "252 исследования различных ранних вмешательств (не только ABA), результаты зависят от качества оценок, нежелательные события отслеживались недостаточно. Исправление BMJ от 11 мая 2026 касалось списка ссылок в приложениях."
     accessedAt: 2026-10-10
   - title: "Autism spectrum disorder in under 19s: support and management - Recommendations"
     url: "https://www.nice.org.uk/guidance/cg170/chapter/recommendations"

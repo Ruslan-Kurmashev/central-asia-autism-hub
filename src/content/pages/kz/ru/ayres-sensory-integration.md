@@ -20,7 +20,7 @@ riskLevel: moderate
 disclaimerType: informational
 conflictOfInterest: "Конфликт интересов не заявлен."
 publishedAt: "2026-09-24T21:16:43Z"
-versionNote: "10 октября 2026: интерпретация уверенности в ASI согласована с обзором Kishida et al. (2026); ограничены обобщающие заявления."
+versionNote: "10 октября 2026: интерпретация уверенности в ASI согласована с обзором Kishida et al. (2026), ограничены обобщающие заявления."
 updatedAt: 2026-10-18
 reviewDueAt: 2027-03-24
 draft: false
@@ -52,7 +52,7 @@ sources:
     url: "https://pubmed.ncbi.nlm.nih.gov/40193295/"
     organisation: "Acuña et al."
     publicationYear: 2025
-    note: "9 рандомизированных контролируемых исследований, 344 участника; 6 исследований включали аутичных детей. Использовано для данных по индивидуальным функциональным целям и отсутствию пользы для раздражительности и невыполнения требований."
+    note: "9 рандомизированных контролируемых исследований, 344 участника, 6 исследований включали аутичных детей. Использовано для данных по индивидуальным функциональным целям и отсутствию пользы для раздражительности и невыполнения требований."
     accessedAt: 2026-09-24
   - title: "Sensory integration therapy for children with autism and sensory processing difficulties: the SenITA RCT"
     url: "https://pubmed.ncbi.nlm.nih.gov/35766242/"
@@ -64,13 +64,13 @@ sources:
     url: "https://pubmed.ncbi.nlm.nih.gov/40815044/"
     organisation: "Schaaf et al."
     publicationYear: 2025
-    note: "Рандомизированное сравнительное исследование OT-ASI, ABA и отсутствия лечения. Обе активные группы улучшили индивидуальные цели относительно группы без лечения; улучшения повседневных навыков относительно группы без лечения не достигли статистической значимости."
+    note: "Рандомизированное сравнительное исследование OT-ASI, ABA и отсутствия лечения. Обе активные группы улучшили индивидуальные цели относительно группы без лечения, улучшения повседневных навыков относительно группы без лечения не достигли статистической значимости."
     accessedAt: 2026-09-24
   - title: "Efficacy of Interventions Adhering to the Revised Ayres Sensory Integration® Fidelity Measure: A Systematic Review"
     url: "https://pubmed.ncbi.nlm.nih.gov/41903087/"
     organisation: "Kishida et al."
     publicationYear: 2026
-    note: "10 исследований; только 4 оценены как имеющие низкий риск систематической ошибки. В исследованиях с низким риском результаты были смешанными; качество Goal Attainment Scaling в исследованиях с положительными результатами было низким. Авторы оценили текущие доказательства положительного эффекта как ограниченные."
+    note: "10 исследований, только 4 оценены как имеющие низкий риск систематической ошибки. В исследованиях с низким риском результаты были смешанными, качество Goal Attainment Scaling в исследованиях с положительными результатами было низким. Авторы оценили текущие доказательства положительного эффекта как ограниченные."
     accessedAt: 2026-09-24
   - title: "Effects of sensory integration therapy in children: A systematic review and meta-analysis of randomized controlled trials"
     url: "https://pubmed.ncbi.nlm.nih.gov/41935430/"
