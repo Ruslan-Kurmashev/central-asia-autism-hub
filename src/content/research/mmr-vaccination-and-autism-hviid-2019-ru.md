@@ -4,7 +4,7 @@ summary: "В датском исследовании с участием 657 461
 description: "Научно-популярный разбор Hviid et al. (2019): 657 461 ребёнок, вакцина MMR, 6 517 диагнозов, скорректированное отношение рисков 0,93, ограничения исследования и обзор ВОЗ 2025 года."
 featuredImage: "https://upload.wikimedia.org/wikipedia/commons/0/0d/Priorix_%28MMR_vaccine%29.jpg"
 featuredImageAlt: "Настоящая фотография коробки вакцины Priorix против кори, паротита и краснухи (MMR). Изображение служит примером типа вакцины и не относится к датскому исследованию."
-featuredImageCredit: "Фотография упаковки MMR-вакцины Priorix: Whispyhistory (2020), Wikimedia Commons, CC BY-SA 4.0. Без изменений. Не является изображением вакцины, применённой в исследовании; упоминание марки не означает её рекомендацию."
+featuredImageCredit: "Фотография упаковки MMR-вакцины Priorix: Whispyhistory (2020), Wikimedia Commons, CC BY-SA 4.0. Без изменений. Не является изображением вакцины, применённой в исследовании, упоминание марки не означает её рекомендацию."
 featuredImageSourceUrl: "https://commons.wikimedia.org/wiki/File:Priorix_(MMR_vaccine).jpg"
 featuredImageLicenseUrl: "https://creativecommons.org/licenses/by-sa/4.0/"
 country: kz
@@ -39,7 +39,7 @@ doi: "10.7326/M18-2101"
 sourceUrl: "https://pubmed.ncbi.nlm.nih.gov/30831578/"
 studyType: "Общенациональное наблюдательное когортное исследование с анализом датских медицинских регистров"
 sampleSize: 657461
-population: "657 461 ребёнок, родившийся в Дании с 1999 по 2010 год; наблюдение с годовалого возраста до 31 августа 2013 года."
+population: "657 461 ребёнок, родившийся в Дании с 1999 по 2010 год, наблюдение с годовалого возраста до 31 августа 2013 года."
 sourceStatusCheckedAt: 2026-10-10
 sources:
   - title: "Hviid et al. (2019). Measles, Mumps, Rubella Vaccination and Autism: A Nationwide Cohort Study"

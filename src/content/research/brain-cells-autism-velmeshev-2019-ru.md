@@ -45,7 +45,7 @@ doi: "10.1126/science.aav8130"
 sourceUrl: "https://pmc.ncbi.nlm.nih.gov/articles/PMC7678724/"
 studyType: "Наблюдательное сравнение посмертных образцов коры мозга с секвенированием РНК отдельных клеточных ядер (snRNA-seq)"
 sampleSize: 31
-population: "15 аутичных людей и 16 человек контрольной группы, возраст от 4 до 22 лет; 41 образец тканей двух областей коры; 104 559 профилей клеточных ядер."
+population: "15 аутичных людей и 16 человек контрольной группы, возраст от 4 до 22 лет, 41 образец тканей двух областей коры, 104 559 профилей клеточных ядер."
 sourceStatusCheckedAt: 2026-10-10
 sources:
   - title: "Velmeshev et al. (2019). Single-cell genomics identifies cell type-specific molecular changes in autism"

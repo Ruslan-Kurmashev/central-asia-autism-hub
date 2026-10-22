@@ -49,7 +49,7 @@ doi: "10.1001/jama.2023.13295"
 sourceUrl: "https://pmc.ncbi.nlm.nih.gov/articles/PMC10481242/"
 studyType: "Проспективное многоцентровое двойное слепое исследование диагностической точности технологии отслеживания взгляда в сравнении с экспертной клинической оценкой"
 sampleSize: 475
-population: "499 детей в возрасте от 16 до 30 месяцев направлены в шесть специализированных клиник США; пригодные данные получены у 475 детей."
+population: "499 детей в возрасте от 16 до 30 месяцев направлены в шесть специализированных клиник США, пригодные данные получены у 475 детей."
 sourceStatusCheckedAt: 2026-10-10
 sources:
   - title: "Jones et al. (2023). Eye-Tracking-Based Measurement of Social Visual Engagement Compared With Expert Clinical Diagnosis of Autism"
