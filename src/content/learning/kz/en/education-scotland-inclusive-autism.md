@@ -31,7 +31,7 @@ externalUrl: "https://www.open.edu/openlearncreate/course/view.php?id=6935"
 lastVerifiedAt: 2026-10-11
 projectOwned: false
 registrationStatus: "Learning materials can be accessed online. Registration is needed to complete quizzes and receive a participation document."
-completionOutcome: "A statement of participation and a digital badge after successful completion; no formal academic credit is awarded."
+completionOutcome: "A statement of participation and a digital badge after successful completion, no formal academic credit is awarded."
 resourceDisclaimerType: external
 sources:
   - title: "Official provider description"
@@ -40,4 +40,4 @@ sources:
     accessedAt: 2026-10-11
 ---
 
-External programme or open learning resource. Terms can change; check with the provider.
+External programme or open learning resource. Terms can change, check with the provider.

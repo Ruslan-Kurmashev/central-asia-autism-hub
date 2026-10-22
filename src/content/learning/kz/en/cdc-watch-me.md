@@ -48,4 +48,4 @@ sources:
     accessedAt: 2026-10-11
 ---
 
-External programme or open learning resource. Terms can change; check with the provider.
+External programme or open learning resource. Terms can change, check with the provider.

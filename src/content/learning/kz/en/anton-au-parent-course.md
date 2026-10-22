@@ -30,7 +30,7 @@ costLabel: "Free"
 externalUrl: "https://antontut.ru/project/au-kursy-dlya-roditelej/"
 lastVerifiedAt: 2026-10-15
 projectOwned: false
-registrationStatus: "Use the registration link on the charity's page. The 2026 cohort began on 5 October; confirm late enrolment and recording access with the organiser."
+registrationStatus: "Use the registration link on the charity's page. The 2026 cohort began on 5 October, confirm late enrolment and recording access with the organiser."
 completionOutcome: "Recorded lectures, supplementary materials, webinars and peer chats are described for the cohort. No certificate is confirmed on the course page."
 resourceDisclaimerType: external
 sources:
@@ -40,4 +40,4 @@ sources:
     accessedAt: 2026-10-15
 ---
 
-This is an external educational resource. Links open the provider's website; AutismHub does not deliver the course or award a qualification.
+This is an external educational resource. Links open the provider's website, AutismHub does not deliver the course or award a qualification.

@@ -31,7 +31,7 @@ costLabel: "Free"
 externalUrl: "https://irav.online/mini_kurs_ras"
 lastVerifiedAt: 2026-10-11
 projectOwned: false
-registrationStatus: "Register using the course form on the provider website. Participants receive access to recorded videos and a support chat; materials remain accessible for three months."
+registrationStatus: "Register using the course form on the provider website. Participants receive access to recorded videos and a support chat, materials remain accessible for three months."
 completionOutcome: "An electronic certificate of participation after completing the course."
 resourceDisclaimerType: external
 sources:

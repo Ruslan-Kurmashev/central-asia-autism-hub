@@ -31,7 +31,7 @@ externalUrl: "https://iris.peabody.vanderbilt.edu/module/asd1/"
 lastVerifiedAt: 2026-10-11
 projectOwned: false
 registrationStatus: "Read the module without an account. For the credential route, sign in and complete the pretest and posttest."
-completionOutcome: "An IRIS professional development (PD) certificate after completing required assessments; no certificate for the no-login module-only route."
+completionOutcome: "An IRIS professional development (PD) certificate after completing required assessments, no certificate for the no-login module-only route."
 resourceDisclaimerType: external
 sources:
   - title: "Official provider description"
@@ -40,4 +40,4 @@ sources:
     accessedAt: 2026-10-11
 ---
 
-External programme or open learning resource. Terms can change; check with the provider.
+External programme or open learning resource. Terms can change, check with the provider.
