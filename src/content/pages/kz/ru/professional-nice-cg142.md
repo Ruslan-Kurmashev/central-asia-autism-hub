@@ -35,7 +35,7 @@ sources:
     url: "https://www.nice.org.uk/guidance/cg142/resources/september-2025-exceptional-surveillance-of-autism-spectrum-disorder-in-adults-diagnosis-and-management-nice-guideline-cg142-pdf-20061482944453"
     organisation: "NICE"
     publicationYear: 2025
-    note: "Тематический пересмотр вмешательств при сопутствующих психических расстройствах от 5 сентября 2025 года; решение не изменять данные рекомендации."
+    note: "Тематический пересмотр вмешательств при сопутствующих психических расстройствах от 5 сентября 2025 года, решение не изменять данные рекомендации."
     accessedAt: 2026-10-18
   - title: "Autism spectrum disorder in adults: diagnosis and management (CG142). Recommendations"
     url: "https://www.nice.org.uk/guidance/cg142/chapter/recommendations"
