@@ -27,10 +27,10 @@ keyPoints:
   - "A centre's name or list of certificates does not tell you whether it is entitled to provide the specific service advertised."
   - "Check the organisation and the individual practitioner separately. Requirements depend on whether the service is medical, psychological, educational or another type."
   - "Where a medical licence is required, verify the licensee, status and permitted activity through the official eGov/eLicense search."
-  - "The 2026 Law on Psychological Activity contains phased provisions, including a registration transition; absence from a developing registry alone is not proof of a breach."
+  - "The 2026 Law on Psychological Activity contains phased provisions, including a registration transition, absence from a developing registry alone is not proof of a breach."
   - "Ask for written fees, goals, qualifications, cancellation terms and evidence for any claimed benefits before paying."
 versionNote: "10 October 2026: translated from the Russian article dated 9 October 2026, retaining its references to the 2026 psychology law, licensing checks and teaching qualification rules."
-evidenceLimitations: "Legal requirements differ between healthcare, psychological, pedagogical and other services. The 2026 psychology legislation includes transitional provisions; implementation and registry arrangements may change. Verify the current law and a provider's particular activities before making conclusions about compliance."
+evidenceLimitations: "Legal requirements differ between healthcare, psychological, pedagogical and other services. The 2026 psychology legislation includes transitional provisions, implementation and registry arrangements may change. Verify the current law and a provider's particular activities before making conclusions about compliance."
 sources:
   - title: "Law on Psychological Activity"
     url: "https://adilet.zan.kz/rus/docs/Z2600000332"
@@ -63,7 +63,7 @@ sources:
   - title: "Professional qualification requirements for teachers"
     url: "https://adilet.zan.kz/rus/docs/V090005750_"
     organisation: "Adilet legal information system / Ministry of Education of Kazakhstan"
-    note: "Order No. 338 as amended by Order No. 173-NQ of 19 June 2026; applicability depends on the specific teaching role and organisation."
+    note: "Order No. 338 as amended by Order No. 173-NQ of 19 June 2026, applicability depends on the specific teaching role and organisation."
     accessedAt: 2026-10-09
 ---
 
@@ -77,11 +77,11 @@ A reliable check starts with one question: **What type of service are we being o
 
 A single organisation may offer several services, such as:
 
-- healthcare;
-- psychological support;
-- teaching or educational support;
-- social services;
-- learning sessions;
+- healthcare
+- psychological support
+- teaching or educational support
+- social services
+- learning sessions
 - consultations or commercial programmes.
 
 It would be misleading to apply exactly the same legal test to every professional.
@@ -94,9 +94,9 @@ The official [eGov service for checking permits and licences](https://egov.kz/cm
 
 Check **more than whether a document exists**. Compare:
 
-- the full legal name of the licence holder;
-- the licence's current status;
-- the authorised type or subtype of medical activity;
+- the full legal name of the licence holder
+- the licence's current status
+- the authorised type or subtype of medical activity
 - any relevant annex or additional licence details.
 
 A licence issued to a different legal entity, or for a different medical service, does not establish permission to deliver the advertised service.
@@ -125,9 +125,9 @@ A short commercial training certificate does not automatically replace relevant 
 
 A centre may have a valid legal registration while the child works with a particular individual. Ask for both organisational details and the professional's:
 
-- full name and actual role;
-- field of qualification;
-- evidence of relevant education;
+- full name and actual role
+- field of qualification
+- evidence of relevant education
 - registration, licence or other legally required documents where applicable.
 
 If someone promises to "diagnose autism" or another medical condition, ask **who** will make the diagnosis and **what legal basis** allows them to do so.
@@ -160,12 +160,12 @@ Checking documents can reduce risk but **does not guarantee quality or results**
 
 Be cautious when a provider:
 
-- claims it can "cure autism";
-- guarantees results for every child;
-- sells a large package before assessing the child's individual goals;
-- refuses to explain staff qualifications;
-- presents a course attendance certificate as a substitute for professional credentials;
-- claims a licence proves an intervention is effective;
+- claims it can "cure autism"
+- guarantees results for every child
+- sells a large package before assessing the child's individual goals
+- refuses to explain staff qualifications
+- presents a course attendance certificate as a substitute for professional credentials
+- claims a licence proves an intervention is effective
 - will not explain fees, session length or termination rules.
 
 ## Next steps

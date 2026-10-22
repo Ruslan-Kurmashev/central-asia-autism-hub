@@ -12,7 +12,7 @@ translationStatus: checked
 audience:
   - parents
   - families
-versionNote: "10 October 2026: legal QA corrected the revoked 2017 PMPK source and the mismatched source notes; admission dates now explain the regional phasing."
+versionNote: "10 October 2026: legal QA corrected the revoked 2017 PMPK source and the mismatched source notes, admission dates now explain the regional phasing."
 featuredImage: "/central-asia-autism-hub/images/editorial/photos/kz-help-006.jpg"
 featuredImageAlt: "A school classroom with desks, learning materials and a board."
 author: Ruslan Kurmashev
@@ -25,7 +25,7 @@ updatedAt: 2026-10-10
 draft: false
 keyPoints:
   - "School admission and arrangements for special educational support are separate questions. An autism diagnosis does not remove a child's right to education."
-  - "PMPK assesses special educational needs and provides recommendations for educational support; it does not replace a medical diagnosis."
+  - "PMPK assesses special educational needs and provides recommendations for educational support, it does not replace a medical diagnosis."
   - "Schools organise psychological and pedagogical support under rules amended in 2026, with arrangements guided by individual needs."
   - "Home education on medical grounds requires the relevant medical advisory commission (VKK) conclusion. It does not follow automatically from autism or a PMPK recommendation."
   - "Parents can ask for specific adjustments and measurable support goals, rather than relying solely on a general promise of 'inclusion'."
@@ -50,7 +50,7 @@ sources:
   - title: "Admission to a general education school"
     url: "https://www.gov.kz/situations/15/80?lang=ru"
     organisation: "gov.kz"
-    note: "National first-grade admission window in 2026; region-specific staggered opening dates were announced separately."
+    note: "National first-grade admission window in 2026, region-specific staggered opening dates were announced separately."
     accessedAt: 2026-10-09
   - title: "Model operating rules for education organisations of the relevant types and categories"
     url: "https://adilet.zan.kz/rus/docs/V2200029329"
@@ -74,7 +74,7 @@ These are related but separate matters. They should not be determined automatica
 
 ## Starting Grade 1 in the 2026-2027 academic year
 
-According to [gov.kz](https://www.gov.kz/situations/15/80?lang=ru), the national first-grade admission campaign for the **2026-2027 academic year** ran from **27 May to 31 August 2026**, but applications opened [in phases by region](https://www.gov.kz/memleket/entities/tmr-roo/press/news/details/1225580?lang=ru): 27 May (Astana and specified regions), 10 June (Almaty city and another group), 18 June (Shymkent and another group), and 29 June (remaining specified regions). Parents could apply through the official online channels or at their school. This was the schedule for **2026 only**; do not use these dates to plan applications in subsequent years.
+According to [gov.kz](https://www.gov.kz/situations/15/80?lang=ru), the national first-grade admission campaign for the **2026-2027 academic year** ran from **27 May to 31 August 2026**, but applications opened [in phases by region](https://www.gov.kz/memleket/entities/tmr-roo/press/news/details/1225580?lang=ru): 27 May (Astana and specified regions), 10 June (Almaty city and another group), 18 June (Shymkent and another group), and 29 June (remaining specified regions). Parents could apply through the official online channels or at their school. This was the schedule for **2026 only**, do not use these dates to plan applications in subsequent years.
 
 Under the admission rules, children who are six years old by 1 September are enrolled regardless of their level of academic preparation. Where a child turns six **after** 1 September, admission may take place at the request of their parent or legal representative. Other enrolment situations and transfers have their own procedures and should be checked separately.
 
@@ -108,13 +108,13 @@ In practice, the school should plan support around what helps the child take par
 
 Depending on the child, adjustments might include:
 
-- a predictable visual structure and timetable;
-- accessible communication, including **augmentative and alternative communication (AAC)**;
-- presenting instructions in a different way;
-- extra time;
-- sensory adjustments;
-- support when moving between lessons;
-- support during breaks and school activities;
+- a predictable visual structure and timetable
+- accessible communication, including **augmentative and alternative communication (AAC)**
+- presenting instructions in a different way
+- extra time
+- sensory adjustments
+- support when moving between lessons
+- support during breaks and school activities
 - work towards clear learning and functional goals.
 
 **Not every child needs every adjustment.** The aim is to agree on measures that address observed barriers to participation.

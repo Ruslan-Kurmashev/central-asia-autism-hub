@@ -13,7 +13,7 @@ audience:
   - parents
   - families
   - general
-versionNote: "10 October 2026: English translation based on the Russian guide of 9 October 2026; search criteria reflect the official eGov instructions updated on 7 April 2026."
+versionNote: "10 October 2026: English translation based on the Russian guide of 9 October 2026, search criteria reflect the official eGov instructions updated on 7 April 2026."
 featuredImage: "/central-asia-autism-hub/images/editorial/photos/kz-help-004.jpg"
 featuredImageAlt: "A laptop and documents on a desk, representing a medical licensing search."
 author: Ruslan Kurmashev
@@ -60,9 +60,9 @@ Kazakhstan's eGov/eLicense system allows you to search for permits and licences 
 
 Ideally, have one or more of the following:
 
-- the organisation's **business identification number (BIN)**;
-- the **individual identification number (IIN)** of a sole proprietor, where applicable;
-- the licence holder's official legal name;
+- the organisation's **business identification number (BIN)**
+- the **individual identification number (IIN)** of a sole proprietor, where applicable
+- the licence holder's official legal name
 - the licence or permit number.
 
 A BIN is often more useful than the advertised brand name because the brand and legal entity may have different names.
@@ -99,9 +99,9 @@ Finding a document with a similar title is not enough.
 
 Pause the process if:
 
-- the licence belongs to a different legal entity than the one named in the contract;
-- the status indicates that its operation is suspended, terminated or invalid;
-- the licence exists but does not cover the medical activity being offered;
+- the licence belongs to a different legal entity than the one named in the contract
+- the status indicates that its operation is suspended, terminated or invalid
+- the licence exists but does not cover the medical activity being offered
 - the provider shows only an image and will not provide the BIN, licence number or identity of the licence holder.
 
 **A missing search result alone is not proof of illegal activity.** Double-check the legal name, BIN, search criteria and the precise service before drawing conclusions.

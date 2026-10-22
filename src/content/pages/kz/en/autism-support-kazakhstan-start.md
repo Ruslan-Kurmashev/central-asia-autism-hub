@@ -31,13 +31,13 @@ keyPoints:
   - "The state PMPK service is free and may be requested in person or through the government portal. The rules specify a wait of up to 30 calendar days for assessment."
   - "Medical and social expert assessment (MSE) generally follows a referral from a medical organisation's medical advisory commission (VKK). Disability is not established automatically on the basis of an autism diagnosis."
   - "A licence, qualification or course certificate does not by itself prove that a particular autism intervention is safe or effective."
-evidenceLimitations: "This article provides a general overview of Kazakhstan's system as of 9 October 2026. It is not individual medical, educational or legal advice. Access to specialists, centres and services varies by region. Laws, public services and administrative requirements may change; check the current official source before applying."
+evidenceLimitations: "This article provides a general overview of Kazakhstan's system as of 9 October 2026. It is not individual medical, educational or legal advice. Access to specialists, centres and services varies by region. Laws, public services and administrative requirements may change, check the current official source before applying."
 sources:
   - title: "Standard for the organisation of paediatric care in the Republic of Kazakhstan"
     url: "https://adilet.zan.kz/rus/docs/V2200027182"
     organisation: "Adilet legal information system / Ministry of Health of Kazakhstan"
     publicationYear: 2022
-    note: "Consolidated paediatric care standard after the Minister of Health's Order No. 11 of 21 February 2025; includes child development and early intervention centres and multidisciplinary teams."
+    note: "Consolidated paediatric care standard after the Minister of Health's Order No. 11 of 21 February 2025, includes child development and early intervention centres and multidisciplinary teams."
     accessedAt: 2026-10-09
   - title: "Standard for medical and social care in the field of mental health in Kazakhstan"
     url: "https://adilet.zan.kz/rus/docs/V2000021712"
@@ -112,13 +112,13 @@ Actual access to a centre or a particular professional can vary by region. A use
 
 You do not need to decide on a diagnosis yourself. Write down specific observations, such as:
 
-- how your child communicates needs, pain or requests for help;
-- how they understand spoken language;
-- how they use words, gestures, augmentative and alternative communication (AAC), or other means of communication;
-- how they play and interact with others;
-- how they cope with changes;
-- how they eat and sleep;
-- whether there have been unusual episodes involving movement;
+- how your child communicates needs, pain or requests for help
+- how they understand spoken language
+- how they use words, gestures, augmentative and alternative communication (AAC), or other means of communication
+- how they play and interact with others
+- how they cope with changes
+- how they eat and sleep
+- whether there have been unusual episodes involving movement
 - whether any previously used skills have been lost.
 
 If your child's condition changes **suddenly**, new medical symptoms appear or there is an immediate risk to health or safety, seek medical care appropriate to the urgency rather than waiting for a routine PMPK appointment.
@@ -149,12 +149,12 @@ Rules for the PMPK state service were amended by Order No. **180-NҚ dated 26 Ju
 
 Under the applicable rules:
 
-- PMPK provides the service;
-- applications may be submitted through the PMPK office or the digital government portal;
-- the service is free;
-- the waiting period for an assessment is **up to 30 calendar days**;
-- for in-person applications, an assessment date is assigned on the day of application;
-- for online applications, a date is assigned within **two working days**;
+- PMPK provides the service
+- applications may be submitted through the PMPK office or the digital government portal
+- the service is free
+- the waiting period for an assessment is **up to 30 calendar days**
+- for in-person applications, an assessment date is assigned on the day of application
+- for online applications, a date is assigned within **two working days**
 - a written conclusion is issued on the assessment day and/or delivered electronically to the applicant's portal account within **two working days**.
 
 The rules also prohibit asking applicants to supply information that the authority can retrieve through government digital systems.
@@ -169,9 +169,9 @@ The 2025 standard explicitly includes children with communication and social int
 
 The standard describes four main components:
 
-1. multidisciplinary assessment;
-2. an individual development programme;
-3. corrective and developmental sessions;
+1. multidisciplinary assessment,
+2. an individual development programme,
+3. corrective and developmental sessions,
 4. consultation with parents or legal representatives and educators.
 
 Support is provided on the basis of a PMPK conclusion.
@@ -186,12 +186,12 @@ This is **not** the role of PMPK.
 
 **Medical and social expert assessment** (MSE, `МСЭ`) follows separate rules and is generally based on a referral from a medical organisation's **medical advisory commission** (VKK, `ВКК`).
 
-The MSE rules were amended during 2025 and 2026; the most recent amendments taken into account here took effect on **25 August 2026**.
+The MSE rules were amended during 2025 and 2026, the most recent amendments taken into account here took effect on **25 August 2026**.
 
 The rules require three conditions to be present together:
 
-1. a persistent impairment of bodily functions;
-2. limitations in everyday functioning;
+1. a persistent impairment of bodily functions,
+2. limitations in everyday functioning,
 3. a need for social protection measures.
 
 Therefore, **an autism diagnosis does not automatically establish disability status**.
@@ -204,10 +204,10 @@ After the relevant status and eligibility have been established, a family may qu
 
 The Social Code covers, among other matters:
 
-- specialised social services;
-- social protection for people with disabilities;
-- individual support programmes;
-- certain state social benefits;
+- specialised social services
+- social protection for people with disabilities
+- individual support programmes
+- certain state social benefits
 - selected goods and services supplied through the Social Services Portal.
 
 Eligibility for any particular measure depends on its conditions, an assessment of need and other legal criteria.
@@ -220,11 +220,11 @@ Rather than looking for a universal online list of "all autism benefits", ask:
 
 Private services are a separate consideration. Before paying, establish **exactly what is being offered**:
 
-- healthcare;
-- psychological support;
-- teaching or educational support;
-- social services;
-- a learning programme;
+- healthcare
+- psychological support
+- teaching or educational support
+- social services
+- a learning programme
 - a commercial course not classified as regulated healthcare.
 
 Licensing and qualification requirements differ by service type.
@@ -257,13 +257,13 @@ There is also a [Russian-language guide to the first 30 days after an autism dia
 
 Requirements vary by organisation, but it is useful to keep together:
 
-- identification for the child and legal representative;
-- any existing medical reports;
-- results of assessments already completed;
-- the PMPK conclusion, if available;
-- MSE documents and an individual programme, if issued;
-- relevant preschool or school documentation;
-- a current medication list and significant medical information;
+- identification for the child and legal representative
+- any existing medical reports
+- results of assessments already completed
+- the PMPK conclusion, if available
+- MSE documents and an individual programme, if issued
+- relevant preschool or school documentation
+- a current medication list and significant medical information
 - contact information for professionals already supporting the child.
 
 Do not arrange extensive testing "just in case". PMPK rules specifically restrict the repeated collection of data available to authorities through government digital systems.
@@ -272,13 +272,13 @@ Do not arrange extensive testing "just in case". PMPK rules specifically restric
 
 Avoid:
 
-- arranging all possible tests and appointments at once;
-- treating a screening result as a medical diagnosis;
-- treating a PMPK conclusion as a medical diagnosis;
-- assuming disability status follows automatically from autism;
-- choosing support by the reputation of a method's name alone;
-- paying for a large package of sessions before agreeing on goals;
-- taking a photograph of a licence or a course certificate as proof of effectiveness;
+- arranging all possible tests and appointments at once
+- treating a screening result as a medical diagnosis
+- treating a PMPK conclusion as a medical diagnosis
+- assuming disability status follows automatically from autism
+- choosing support by the reputation of a method's name alone
+- paying for a large package of sessions before agreeing on goals
+- taking a photograph of a licence or a course certificate as proof of effectiveness
 - repeating assessments unnecessarily when relevant documentation already exists.
 
 ## A simple five-question plan

@@ -12,7 +12,7 @@ translationStatus: checked
 audience:
   - parents
   - families
-versionNote: "20 October 2026: legal reference aligned with the updated Russian source; Articles 183-184 specify the allowance for a person raising a child with a disability. Original publication date retained."
+versionNote: "20 October 2026: legal reference aligned with the updated Russian source, Articles 183-184 specify the allowance for a person raising a child with a disability. Original publication date retained."
 featuredImage: "/central-asia-autism-hub/images/editorial/photos/kz-help-007.jpg"
 featuredImageAlt: "Organised folders, papers and a notebook on a desk, representing preparation of social support documents."
 author: Ruslan Kurmashev
@@ -103,9 +103,9 @@ When considering a service, check whether it is included in the person's IPAR an
 
 Confirm whether:
 
-- a formal MSE decision has been issued;
-- disability status has been established;
-- any relevant duration or review date has been specified;
+- a formal MSE decision has been issued
+- disability status has been established
+- any relevant duration or review date has been specified
 - the necessary measures are included in the IPAR.
 
 If the decision contains an error or unclear wording, seek clarification through the authorised agency and the prescribed procedure.
@@ -118,10 +118,10 @@ Kazakhstan's **Social Code** provides for state social benefits and a separate a
 
 In particular, distinguish:
 
-- the **state social disability benefit**; and
+- the **state social disability benefit**, and
 - the **allowance for a person raising a child with a disability**.
 
-These are **different grounds for entitlement and different award procedures**. Article 170 of the Social Code lists general forms of social protection. The **allowance for a person raising a child with a disability** is regulated specifically by **Article 183 (entitlement)** and **Article 184 (amount)**; the state social disability benefit is addressed in **Articles 175-177**.
+These are **different grounds for entitlement and different award procedures**. Article 170 of the Social Code lists general forms of social protection. The **allowance for a person raising a child with a disability** is regulated specifically by **Article 183 (entitlement)** and **Article 184 (amount)**, the state social disability benefit is addressed in **Articles 175-177**.
 
 Benefit amounts may change when statutory calculation indices or the law change. AutismHub therefore does not present a single undated amount as permanently valid. Any published figure should be verified against official sources and labelled with the date of the check.
 
@@ -137,7 +137,7 @@ Eligibility, assessed needs, the service provider and regional availability matt
 
 Use the current versions of Kazakhstan's [Social Code](https://adilet.zan.kz/rus/docs/K2300000224) and [MSE rules](https://adilet.zan.kz/rus/docs/V2300032922). For an application, follow the relevant government service page on **eGov.kz** or **gov.kz**.
 
-Verify the requirements immediately before applying. Some legal amendments have **delayed commencement dates, including provisions scheduled to take effect in 2027**; they must not be treated as already in force.
+Verify the requirements immediately before applying. Some legal amendments have **delayed commencement dates, including provisions scheduled to take effect in 2027**, they must not be treated as already in force.
 
 For specialised social services, identify the specific format needed, such as support at home, semi-residential support or residential services, and check eligibility and local availability.
 

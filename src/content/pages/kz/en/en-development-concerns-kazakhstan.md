@@ -24,7 +24,7 @@ updatedAt: 2026-10-20
 draft: false
 keyPoints:
   - "Questions about development can be discussed in primary healthcare. Kazakhstan's paediatric care standard provides for development and early intervention centres and psychophysical screening."
-  - "PMPK focuses on educational needs and psychological and educational support; it does not replace medical assessment."
+  - "PMPK focuses on educational needs and psychological and educational support, it does not replace medical assessment."
   - "Specific examples of what your child does, has difficulty doing or has stopped doing help professionals understand your concerns."
   - "You can discuss support for everyday difficulties even before a final diagnosis is established, although particular state services have their own eligibility rules."
   - "A sudden deterioration or new medical symptoms require an appropriate medical response, not waiting for a routine PMPK appointment."
@@ -34,7 +34,7 @@ sources:
     url: "https://old.adilet.zan.kz/rus/docs/V1000006490"
     organisation: "ИПС «Әділет» / Министерство здравоохранения Республики Казахстан"
     publicationYear: 2010
-    note: "Sections 80-89 as amended by Ministry of Health Order No. 82 dated 21 August 2025; developmental screening from birth to age six."
+    note: "Sections 80-89 as amended by Ministry of Health Order No. 82 dated 21 August 2025, developmental screening from birth to age six."
     accessedAt: 2026-10-10
   - title: "Standard for the organisation of paediatric care in Kazakhstan"
     url: "https://adilet.zan.kz/rus/docs/V2200027182"
@@ -87,11 +87,11 @@ In Kazakhstan, medical developmental assessment and PMPK assessment have **diffe
 
 Before your appointment, note examples over several days:
 
-- how your child expresses needs or discomfort;
-- how they understand spoken language;
-- how they play and interact with other people;
-- how they move and use their hands;
-- how they eat and sleep;
+- how your child expresses needs or discomfort
+- how they understand spoken language
+- how they play and interact with other people
+- how they move and use their hands
+- how they eat and sleep
 - whether they have stopped using a skill they previously used.
 
 It helps to record **when** changes began and **in which situations** they occur. Discuss loss of acquired skills with a healthcare professional without unnecessary delay. Losing a skill alone does not allow anyone to judge the urgency of the situation remotely.
@@ -104,7 +104,7 @@ Kazakhstan's current paediatric care standard provides for child development and
 
 This makes the child's polyclinic a reasonable first contact for questions about health, development and medical referrals.
 
-Under the [Kazakh screening rules amended by Order No. 82 of 21 August 2025](https://old.adilet.zan.kz/rus/docs/V1000006490), developmental screening is provided for children **from birth to six years of age**. The process includes information from parents and a health professional's age-appropriate developmental checks. Screening identifies possible developmental concerns; it does not itself diagnose autism.
+Under the [Kazakh screening rules amended by Order No. 82 of 21 August 2025](https://old.adilet.zan.kz/rus/docs/V1000006490), developmental screening is provided for children **from birth to six years of age**. The process includes information from parents and a health professional's age-appropriate developmental checks. Screening identifies possible developmental concerns, it does not itself diagnose autism.
 
 A practical question to ask is:
 
@@ -144,10 +144,10 @@ There is no need to pay for a broad set of tests before a clinician has identifi
 
 Do not:
 
-- assume that one screening score proves or rules out autism;
-- substitute PMPK for medical assessment;
-- wait for a final diagnosis before discussing functional difficulties and appropriate support;
-- pay for multiple investigations without a clear clinical purpose;
+- assume that one screening score proves or rules out autism
+- substitute PMPK for medical assessment
+- wait for a final diagnosis before discussing functional difficulties and appropriate support
+- pay for multiple investigations without a clear clinical purpose
 - use outdated requirements for a government service without checking its current rules.
 
 ## Your next step

@@ -28,7 +28,7 @@ keyPoints:
   - "Before paying, identify the exact registered company or sole proprietor providing the service and obtain clear written terms."
   - "Consumers are entitled to accurate information about a service and documentary evidence of payment or the agreement."
   - "If the activity requires a licence, verify its current status through the official government service, not just a promotional screenshot."
-  - "Check professional qualifications separately from evidence that a proposed intervention is effective; these are different questions."
+  - "Check professional qualifications separately from evidence that a proposed intervention is effective, these are different questions."
   - "Keep contracts, receipts, correspondence and advertising claims in case a dispute or complaint arises."
 evidenceLimitations: "Refund rights and dispute resolution depend on the agreement, the actual service delivered, the evidence and the applicable law. This general checklist is not individual legal advice and does not guarantee a refund in any particular case."
 sources:
@@ -90,13 +90,13 @@ Check that the name on the agreement and payment documents matches the provider 
 
 Make sure the written terms explain at least:
 
-- the name and nature of the service;
-- who will provide it;
-- the length and frequency of sessions;
-- the **full price**;
-- what is included and excluded;
-- cancellation and rescheduling rules;
-- conditions for ending the programme;
+- the name and nature of the service
+- who will provide it
+- the length and frequency of sessions
+- the **full price**
+- what is included and excluded
+- cancellation and rescheduling rules
+- conditions for ending the programme
 - whether and how any results or written reports will be provided.
 
 Do not rely only on verbal statements or a promotional page that may later change.
@@ -121,10 +121,10 @@ Official consumer protection guidance stresses the importance of retaining docum
 
 Keep, as applicable:
 
-- the **fiscal receipt** or another document confirming payment;
-- the service agreement;
-- the invoice or payment confirmation;
-- written messages describing the terms;
+- the **fiscal receipt** or another document confirming payment
+- the service agreement
+- the invoice or payment confirmation
+- written messages describing the terms
 - the advertising offer that influenced your decision.
 
 The format of legally required receipt documents depends on the transaction and applicable rules.
@@ -133,9 +133,9 @@ The format of legally required receipt documents depends on the transaction and 
 
 Be cautious about statements such as:
 
-- "We will make your child speak";
-- "We will remove autism";
-- "Results guaranteed";
+- "We will make your child speak"
+- "We will remove autism"
+- "Results guaranteed"
 - "You will see an effect after 20 sessions".
 
 Ask for a clear, observable goal instead of a guarantee.

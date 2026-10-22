@@ -26,7 +26,7 @@ draft: false
 keyPoints:
   - "There is no single mandatory kindergarten setting for every autistic child. Focus on what the child needs for participation, learning, communication and safety."
   - "General preschools, special groups and specialised preschool institutions may offer different pathways, depending on local availability."
-  - "PMPK assesses special educational needs and makes recommendations; it is not a substitute for medical diagnosis."
+  - "PMPK assesses special educational needs and makes recommendations, it is not a substitute for medical diagnosis."
   - "Kazakhstan's psychological and educational support rules cover preschool education, with individual support shaped by a child's needs rather than diagnosis alone."
   - "Ask how the kindergarten will support communication, transitions, sensory needs, wellbeing and progress before deciding."
 evidenceLimitations: "Preschool admission procedures and available support vary by institution and region. PMPK recommendations inform an educational pathway but do not guarantee a place in a specific kindergarten. Check current national and local rules and the actual resources of the preschool."
@@ -64,8 +64,8 @@ There is **no single type of kindergarten** that every autistic child must atten
 
 Depending on the child's educational needs and what is available in the region, families may consider:
 
-- a general preschool or kindergarten;
-- a specialised group;
+- a general preschool or kindergarten
+- a specialised group
 - a specialised preschool institution.
 
 The best route should **not be chosen on the basis of diagnosis alone**.
@@ -136,10 +136,10 @@ Likewise, a general preschool group does not automatically provide appropriate s
 
 Seek clarification if someone tells you that:
 
-- admission requires purchasing private therapy;
-- AAC or other communication methods are prohibited without a clear justification;
-- the autism diagnosis automatically means the child must be isolated from peers;
-- parents cannot be told the goals or arrangements of the support;
+- admission requires purchasing private therapy
+- AAC or other communication methods are prohibited without a clear justification
+- the autism diagnosis automatically means the child must be isolated from peers
+- parents cannot be told the goals or arrangements of the support
 - the same intervention is compulsory for every autistic child.
 
 ## Regulatory framework
