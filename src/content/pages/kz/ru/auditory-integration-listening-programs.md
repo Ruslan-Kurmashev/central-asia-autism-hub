@@ -26,7 +26,7 @@ reviewDueAt: 2027-03-26
 draft: false
 keyPoints:
   - "Слуховая чувствительность может серьёзно мешать ребёнку, но это не означает, что ему нужна слуховая интеграционная тренировка или коммерческая listening-программа."
-  - "AIT отличается от обычной защиты от шума, адаптации среды и более новых sound-based interventions; данные одного подхода нельзя переносить на другой."
+  - "AIT отличается от обычной защиты от шума, адаптации среды и более новых sound-based interventions, данные одного подхода нельзя переносить на другой."
   - "Cochrane не нашёл достаточных доказательств эффективности AIT, NICE не рекомендует её для речевых и языковых трудностей, а ASHA не одобряет AIT как клиническую практику."
   - "Для современных listening-программ есть предварительные положительные данные, но исследования малочисленны и неоднородны, поэтому каждую программу нужно оценивать отдельно."
 evidenceLimitations: "Классические исследования AIT в основном небольшие, старые и неоднородные. Поиск для актуальной версии Cochrane завершён в сентябре 2010 года, поэтому обзор не охватывает все современные listening-программы. Более новый систематический обзор 2025 года нашёл только восемь публикаций по шести разным sound-based interventions и назвал результаты предварительными. Положительный китайский метаанализ AIT 2018 года расходится с Cochrane, NICE и ASHA. Исследования одной звуковой программы нельзя автоматически переносить на AIT, Tomatis или другие коммерческие программы."
@@ -35,7 +35,7 @@ sources:
     url: "https://www.cochrane.org/evidence/CD003681_auditory-integration-therapy-autism-spectrum-disorders"
     organisation: "Cochrane"
     publicationYear: 2022
-    note: "7 исследований, 182 участника; поиск для обновления завершён в сентябре 2010 года. Использовано для вывода об отсутствии достаточных доказательств в пользу AIT и похожих ранних звуковых терапий."
+    note: "7 исследований, 182 участника, поиск для обновления завершён в сентябре 2010 года. Использовано для вывода об отсутствии достаточных доказательств в пользу AIT и похожих ранних звуковых терапий."
     accessedAt: 2026-09-26
   - title: "Autism spectrum disorder in under 19s: support and management - Recommendations"
     url: "https://www.nice.org.uk/guidance/cg170/chapter/recommendations"
@@ -52,25 +52,25 @@ sources:
     url: "https://pubmed.ncbi.nlm.nih.gov/30429234/"
     organisation: "PubMed"
     publicationYear: 2018
-    note: "13 рандомизированных исследований, 976 детей; использовано для отражения положительных выводов, которые расходятся с Cochrane, NICE и ASHA."
+    note: "13 рандомизированных исследований, 976 детей, использовано для отражения положительных выводов, которые расходятся с Cochrane, NICE и ASHA."
     accessedAt: 2026-09-26
   - title: "Effectiveness of Sound-Based Interventions for Improving Functional Outcomes in Children: A Systematic Review of the Evidence"
     url: "https://pubmed.ncbi.nlm.nih.gov/40519630/"
     organisation: "Occupational Therapy International"
     publicationYear: 2025
-    note: "8 публикаций по 6 sound-based interventions; результаты предварительные, исследования сильно неоднородны, необходимы более качественные RCT."
+    note: "8 публикаций по 6 sound-based interventions, результаты предварительные, исследования сильно неоднородны, необходимы более качественные RCT."
     accessedAt: 2026-09-26
   - title: "Effect of hyperbaric oxygen therapy and Tomatis sound therapy in children with autism spectrum disorder"
     url: "https://pubmed.ncbi.nlm.nih.gov/34662695/"
     organisation: "Progress in Neuro-Psychopharmacology and Biological Psychiatry"
     publicationYear: 2022
-    note: "Открытое рандомизированное исследование 146 детей; использовано как пример более нового положительного исследования Tomatis с существенными ограничениями дизайна."
+    note: "Открытое рандомизированное исследование 146 детей, использовано как пример более нового положительного исследования Tomatis с существенными ограничениями дизайна."
     accessedAt: 2026-09-26
   - title: "Autism and central and peripheral hearing loss: A systematic review"
     url: "https://pubmed.ncbi.nlm.nih.gov/40449032/"
     organisation: "Medicina Clinica"
     publicationYear: 2025
-    note: "21 исследование; 17 сообщили о предрасположенности к центральным или периферическим нарушениям слуха. Авторы рекомендуют проверку слуха, чтобы избежать задержки диагностики."
+    note: "21 исследование, 17 сообщили о предрасположенности к центральным или периферическим нарушениям слуха. Авторы рекомендуют проверку слуха, чтобы избежать задержки диагностики."
     accessedAt: 2026-09-26
   - title: "Auditory Sensitivity in Autism: A Systematic Review of Mismatch Negativity and Mismatch Field Responses"
     url: "https://pubmed.ncbi.nlm.nih.gov/42144892/"

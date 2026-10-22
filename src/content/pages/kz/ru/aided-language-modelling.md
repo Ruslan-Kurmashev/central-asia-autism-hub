@@ -39,7 +39,7 @@ sources:
     url: "https://pubmed.ncbi.nlm.nih.gov/30198767/"
     organisation: "PubMed"
     publicationYear: 2018
-    note: "48 экспериментальных исследований, 267 участников; данные в целом поддерживают подход, но исследования существенно различаются."
+    note: "48 экспериментальных исследований, 267 участников, данные в целом поддерживают подход, но исследования существенно различаются."
     accessedAt: 2026-09-18
   - title: "Effects of an Augmentative and Alternative Communication Intervention Package on Socio-Communicative Behaviors Between Minimally Speaking Autistic Children and Their Peers"
     url: "https://pubs.asha.org/doi/10.1044/2024_AJSLP-23-00313"
