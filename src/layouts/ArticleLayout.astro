@@ -6,7 +6,7 @@ import { internationalGuidelineCountries } from '../data/international-professio
 import { CONTENT_UI, DATE_LOCALES } from '../i18n/content';
 import { UI } from '../i18n/ui';
 import { articlePath, localePath, sectionPath } from '../lib/urls';
-import { SITE, SUPPORTED_LOCALES, type Locale } from '../site.config';
+import { SITE, type Locale } from '../site.config';
 import '../styles/article-v2.css';
 import BaseLayout from './BaseLayout.astro';
 
@@ -21,13 +21,13 @@ interface Props {
   alternatePaths: Partial<Record<Locale, string>>;
   headings?: Heading[];
   nextEntry?: CollectionEntry<'pages'> | CollectionEntry<'research'>;
+  firstPublishedAt: Date;
 }
 
-const { entry, alternatePaths, headings = [], nextEntry } = Astro.props;
+const { entry, alternatePaths, headings = [], nextEntry, firstPublishedAt } = Astro.props;
 const data = entry.data;
 const researchDetails = entry.collection === 'research' ? entry.data : null;
 const locale = data.language;
-const hasMissingTranslations = SUPPORTED_LOCALES.some(language => !alternatePaths[language]);
 const copy = CONTENT_UI[locale];
 const sectionCopy = UI[locale].sections[data.section];
 // Restore the full three-level document route on all 25 Kazakhstan professional
@@ -92,15 +92,10 @@ const articleV2Text = locale === 'en'
       next: 'Следующий материал по теме',
     };
 const tocHeadings = headings.filter((heading) => heading.depth === 2 || heading.depth === 3);
-// For the introductory autism article, show the original publication date.
-// Retain updatedAt in metadata for editorial tracking without replacing the first date.
-const showFirstPublicationDate = data.translationKey === 'parents-what-is-autism';
-const displayDate = showFirstPublicationDate
-  ? (data.originalPublishedAt ?? data.publishedAt)
-  : (data.updatedAt ?? data.publishedAt);
-const displayDateLabel = showFirstPublicationDate
-  ? copy.publishedLabel
-  : (data.updatedAt ? copy.updatedLabel : copy.publishedLabel);
+// All articles show their first publication date, shared across translations.
+// updatedAt remains in content metadata for editorial history only.
+const displayDate = firstPublishedAt;
+const displayDateLabel = copy.publishedLabel;
 const researchLabel: Record<Locale, string> = {
   ru: 'Разбор научного исследования',
   kk: 'Ғылыми зерттеуді түсіндіру',
@@ -214,10 +209,6 @@ const researchLabel: Record<Locale, string> = {
 
             <div class="article-v2__header-details">
               <p class="article-v2__summary">{data.summary}</p>
-              {hasMissingTranslations && (
-                <p class="article-v2__translation-notice" role="note">{copy.translationNotice}</p>
-              )}
-
               <dl class="article-v2__meta">
                 {displayDate && (
                   <div>
@@ -408,10 +399,10 @@ const researchLabel: Record<Locale, string> = {
             <p class="article-header__summary">{data.summary}</p>
 
             <dl class="article-meta">
-              {data.publishedAt && (
+              {displayDate && (
                 <div>
-                  <dt>{copy.publishedLabel}</dt>
-                  <dd><time datetime={data.publishedAt.toISOString()}>{dateFormatter.format(data.publishedAt)}</time></dd>
+                  <dt>{displayDateLabel}</dt>
+                  <dd><time datetime={displayDate.toISOString()}>{dateFormatter.format(displayDate)}</time></dd>
                 </div>
               )}
             </dl>

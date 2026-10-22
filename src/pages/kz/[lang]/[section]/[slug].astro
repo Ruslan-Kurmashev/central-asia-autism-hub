@@ -23,6 +23,19 @@ export async function getStaticPaths() {
   );
 
   const entries = [...pages, ...research];
+
+  // Display the earliest recorded publication date for every language version
+  // of the same article. Keep each file's publishedAt and updatedAt unchanged.
+  const firstPublicationDates = new Map<string, Date>();
+  for (const item of entries) {
+    const firstDate = item.data.originalPublishedAt ?? item.data.publishedAt;
+    if (!firstDate) continue;
+    const previous = firstPublicationDates.get(item.data.translationKey);
+    if (!previous || firstDate.getTime() < previous.getTime()) {
+      firstPublicationDates.set(item.data.translationKey, firstDate);
+    }
+  }
+
   const routeIds = new Set<string>();
 
   for (const entry of entries) {
@@ -38,6 +51,10 @@ export async function getStaticPaths() {
       const translations = entries.filter(
         (candidate) => candidate.data.translationKey === entry.data.translationKey,
       );
+      const firstPublishedAt = firstPublicationDates.get(entry.data.translationKey);
+      if (!firstPublishedAt) {
+        throw new Error(`Missing first publication date for ${entry.data.translationKey}`);
+      }
       const alternatePaths = Object.fromEntries(
         translations.map((translation) => [
           translation.data.language,
@@ -71,7 +88,7 @@ export async function getStaticPaths() {
           section: entry.data.section,
           slug: entry.data.slug,
         },
-        props: { entry, alternatePaths, nextEntry },
+        props: { entry, alternatePaths, nextEntry, firstPublishedAt },
       };
     }),
   );
@@ -81,9 +98,10 @@ interface Props {
   entry: CollectionEntry<'pages'> | CollectionEntry<'research'>;
   alternatePaths: Partial<Record<Locale, string>>;
   nextEntry?: CollectionEntry<'pages'> | CollectionEntry<'research'>;
+  firstPublishedAt: Date;
 }
 
-const { entry, alternatePaths, nextEntry } = Astro.props;
+const { entry, alternatePaths, nextEntry, firstPublishedAt } = Astro.props;
 const { Content, headings } = await render(entry);
 ---
 
@@ -92,6 +110,7 @@ const { Content, headings } = await render(entry);
   alternatePaths={alternatePaths}
   headings={headings}
   nextEntry={nextEntry}
+  firstPublishedAt={firstPublishedAt}
 >
   <Content />
 </ArticleLayout>
