@@ -38,6 +38,9 @@ const commonFields = {
   editor: z.string().min(1),
   externalReviewer: z.string().min(1).optional(),
   publishedAt: z.coerce.date().optional(),
+  // Preserve each translation's real publication date, but allow the original
+  // article date to be shown consistently across language versions.
+  originalPublishedAt: z.coerce.date().optional(),
   updatedAt: z.coerce.date().optional(),
   reviewDueAt: z.coerce.date().optional(),
   riskLevel: z.enum(['lower', 'moderate', 'high']),
