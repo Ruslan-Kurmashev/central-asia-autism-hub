@@ -99,7 +99,7 @@ General information on the internet cannot determine whether a child is autistic
 
 Before an appointment, it may help to write down specific observations: what concerns you, when you first noticed it, and whether it occurs at home and in other settings. Previous assessment records or professional reports can also be brought along. Such notes help explain the child's development but are not a way to make a diagnosis independently.
 
-For families in Kazakhstan, see the [guide to seeking help with developmental concerns](../../help-kazakhstan/child-development-concerns-kazakhstan/) and the [overview of autism assessment in Kazakhstan (available in Russian)](../../ru/parents/kak-stavyat-diagnoz-autizma-v-kazakhstane/).
+For families in Kazakhstan, see the [guide to seeking help with developmental concerns](../../help-kazakhstan/child-development-concerns-kazakhstan/) and the [overview of autism assessment in Kazakhstan (available in Russian)](/central-asia-autism-hub/kz/ru/parents/kak-stavyat-diagnoz-autizma-v-kazakhstane/).
 
 ## What is important to remember?
 
