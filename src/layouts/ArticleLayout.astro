@@ -92,8 +92,15 @@ const articleV2Text = locale === 'en'
       next: 'Следующий материал по теме',
     };
 const tocHeadings = headings.filter((heading) => heading.depth === 2 || heading.depth === 3);
-const displayDate = data.updatedAt ?? data.publishedAt;
-const displayDateLabel = data.updatedAt ? copy.updatedLabel : copy.publishedLabel;
+// For the introductory autism article, show the original publication date.
+// Retain updatedAt in metadata for editorial tracking without replacing the first date.
+const showFirstPublicationDate = data.translationKey === 'parents-what-is-autism';
+const displayDate = showFirstPublicationDate
+  ? data.publishedAt
+  : (data.updatedAt ?? data.publishedAt);
+const displayDateLabel = showFirstPublicationDate
+  ? copy.publishedLabel
+  : (data.updatedAt ? copy.updatedLabel : copy.publishedLabel);
 const researchLabel: Record<Locale, string> = {
   ru: 'Разбор научного исследования',
   kk: 'Ғылыми зерттеуді түсіндіру',
