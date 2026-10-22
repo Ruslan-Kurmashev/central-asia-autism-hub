@@ -31,7 +31,7 @@ costLabel: "Тегін"
 externalUrl: "https://irav.online/mini_kurs_ras"
 lastVerifiedAt: 2026-10-11
 projectOwned: false
-registrationStatus: "Ұйымдастырушы сайтындағы курс формасы арқылы тіркеліңіз. Жазбалар мен қолдау чаты қатысушыларға қолжетімді; материалдарға үш ай бойы кіруге болады."
+registrationStatus: "Ұйымдастырушы сайтындағы курс формасы арқылы тіркеліңіз. Жазбалар мен қолдау чаты қатысушыларға қолжетімді, материалдарға үш ай бойы кіруге болады."
 completionOutcome: "Курсты аяқтағаннан кейін қатысу туралы электрондық сертификат беріледі."
 resourceDisclaimerType: external
 sources:
