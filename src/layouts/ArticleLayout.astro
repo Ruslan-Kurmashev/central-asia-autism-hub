@@ -322,7 +322,6 @@ const researchLabel: Record<Locale, string> = {
               <div class="article-v2__sources-heading">
                 <p class="article-v2__eyebrow">{locale === 'ru' ? 'Библиография' : locale === 'kk' ? 'Пайдаланылған әдебиеттер' : 'References'}</p>
                 <h2 id="sources-title">{copy.sourcesTitle}</h2>
-                <p>{copy.sourceResponsibility}</p>
               </div>
 
               <ol>
@@ -509,9 +508,16 @@ const researchLabel: Record<Locale, string> = {
     const highlight = () => {
       scheduled = false;
       if (!sections.length) return;
-      const threshold = (articleHeader instanceof HTMLElement
-        ? articleHeader.getBoundingClientRect().height : 80)
-        + (mobileToc.matches ? articleToc.querySelector('summary')?.getBoundingClientRect().height ?? 48 : 0) + 32;
+      const headerHeight = articleHeader instanceof HTMLElement
+        ? articleHeader.getBoundingClientRect().height : 80;
+      const tocHeight = mobileToc.matches
+        ? (articleToc.querySelector('summary')?.getBoundingClientRect().height ?? 48) : 0;
+      // Highlight a section once its heading enters the upper reading area,
+      // rather than waiting until it touches the sticky header.
+      const threshold = Math.max(
+        headerHeight + tocHeight + 32,
+        Math.min(window.innerHeight * 0.4, headerHeight + tocHeight + 220),
+      );
       let active = 0;
       for (let i = 0; i < sections.length; i++) {
         if (sections[i].heading.getBoundingClientRect().top <= threshold) active = i;
