@@ -27,29 +27,29 @@ reviewDueAt: 2027-04-16
 draft: false
 keyPoints:
   - "В Казахстане исследовали взаимодействие 14 детей с роботом NAO в 2019 году и вовлечённость 11 детей в продолжении 2021 года. Долгосрочная клиническая эффективность роботов этими работами не доказана."
-  - "APRIL является продолжающейся научной разработкой Nazarbayev University и партнёров; сообщения о демонстрации и расширении проекта не эквивалентны независимому клиническому испытанию."
+  - "APRIL является продолжающейся научной разработкой Nazarbayev University и партнёров, сообщения о демонстрации и расширении проекта не эквивалентны независимому клиническому испытанию."
   - "В программе UNICEF о технологиях доступности за 2025 год индивидуальную оценку и оборудование получили 34 ребёнка, а ресурсные комплекты получили 11 школ. Это отчёт о внедрении для детей с разными особыми потребностями, а не результат лечения аутизма."
-  - "Систематические обзоры альтернативной и дополнительной коммуникации показывают потенциал устройств для некоторых коммуникативных действий; перенос навыков в разные жизненные ситуации изучен не полностью."
-  - "Приложения, виртуальная реальность и искусственный интеллект не имеют универсально доказанной эффективности; важны конкретная задача, научный дизайн проверки, пользовательская доступность и защита данных ребёнка."
-evidenceLimitations: "Материал представляет выборочный научно-популярный обзор, а не зарегистрированный систематический обзор. В исследованиях Nazarbayev University участвовали небольшие наблюдательные группы (14 в 2019 и 11 в 2021), и они не являются независимыми крупными рандомизированными испытаниями. Измерение вовлечённости в занятие нельзя автоматически переносить на коммуникацию в обычной жизни. Пресс-релизы APRIL описывают разработки, но не независимую проверку лечебной эффективности. Данные UNICEF за 2025 год отражают обучение педагогов и оснащение детей с разными особыми образовательными потребностями, а не измеренное улучшение состояния всех аутичных детей. Обзоры АДК и виртуальной реальности неоднородны по выборкам, исходам и качеству; их результаты не подтверждают универсальную пользу конкретного продукта в Казахстане. Редакционная SVG-схема не является шкалой или рейтингом эффективности."
+  - "Систематические обзоры альтернативной и дополнительной коммуникации показывают потенциал устройств для некоторых коммуникативных действий, перенос навыков в разные жизненные ситуации изучен не полностью."
+  - "Приложения, виртуальная реальность и искусственный интеллект не имеют универсально доказанной эффективности, важны конкретная задача, научный дизайн проверки, пользовательская доступность и защита данных ребёнка."
+evidenceLimitations: "Материал представляет выборочный научно-популярный обзор, а не зарегистрированный систематический обзор. В исследованиях Nazarbayev University участвовали небольшие наблюдательные группы (14 в 2019 и 11 в 2021), и они не являются независимыми крупными рандомизированными испытаниями. Измерение вовлечённости в занятие нельзя автоматически переносить на коммуникацию в обычной жизни. Пресс-релизы APRIL описывают разработки, но не независимую проверку лечебной эффективности. Данные UNICEF за 2025 год отражают обучение педагогов и оснащение детей с разными особыми образовательными потребностями, а не измеренное улучшение состояния всех аутичных детей. Обзоры АДК и виртуальной реальности неоднородны по выборкам, исходам и качеству, их результаты не подтверждают универсальную пользу конкретного продукта в Казахстане. Редакционная SVG-схема не является шкалой или рейтингом эффективности."
 sources:
   - title: "Interaction design and methodology of robot-assisted therapy for children with severe ASD and ADHD"
     url: "https://doi.org/10.1515/pjbr-2019-0027"
-    organisation: "Sandygulova и соавторы; Paladyn, Nazarbayev University"
+    organisation: "Sandygulova и соавторы, Paladyn, Nazarbayev University"
     publicationYear: 2019
-    note: "Итеративные сценарии взаимодействия робота NAO с 14 детьми, наблюдения и интервью с семьями; разработка дизайна, а не клиническое испытание."
+    note: "Итеративные сценарии взаимодействия робота NAO с 14 детьми, наблюдения и интервью с семьями, разработка дизайна, а не клиническое испытание."
     accessedAt: 2026-10-16
   - title: "A Long-Term Engagement with a Social Robot for Autism Therapy"
     url: "https://doi.org/10.3389/frobt.2021.669972"
-    organisation: "Rakhymbayeva, Amirova и Sandygulova; Frontiers in Robotics and AI"
+    organisation: "Rakhymbayeva, Amirova и Sandygulova, Frontiers in Robotics and AI"
     publicationYear: 2021
-    note: "11 детей 4-11 лет, 7 с сопутствующим СДВГ, изучали вовлечённость и предпочтение знакомых сценариев; не контролируемое клиническое исследование."
+    note: "11 детей 4-11 лет, 7 с сопутствующим СДВГ, изучали вовлечённость и предпочтение знакомых сценариев, не контролируемое клиническое исследование."
     accessedAt: 2026-10-16
   - title: "NU and the Bulat Utemuratov Foundation Launch Joint Project to Support Children with Autism"
     url: "https://nu.edu.kz/news-en/nu-and-the-bulat-utemuratov-foundation-launch-joint-project-to-support-children-with-autism/"
     organisation: "Nazarbayev University"
     publicationYear: 2025
-    note: "Сообщение о соглашении по APRIL 16 июля 2025 года и продолжающемся тестировании; проектный источник."
+    note: "Сообщение о соглашении по APRIL 16 июля 2025 года и продолжающемся тестировании, проектный источник."
     accessedAt: 2026-10-16
   - title: "NU Showcases Robot-Assisted Therapy Technologies for Children with Autism"
     url: "https://nu.edu.kz/news-en/nu-showcases-robot-assisted-therapy-technologies-for-children-with-autism/"
@@ -67,19 +67,19 @@ sources:
     url: "https://www.unicef.org/kazakhstan/en/media/15801/file/Analytical_Mission_Report_Kazakhstan_2025.pdf.pdf"
     organisation: "UNICEF Kazakhstan"
     publicationYear: 2025
-    note: "Отчёт UNICEF датирован декабрём 2025 года и охватывает работы марта-декабря 2025 года; 34 ребёнка получили индивидуально подобранные средства, 11 школ оснащены ресурсными комплектами, педагогов обучали АДК."
+    note: "Отчёт UNICEF датирован декабрём 2025 года и охватывает работы марта-декабря 2025 года, 34 ребёнка получили индивидуально подобранные средства, 11 школ оснащены ресурсными комплектами, педагогов обучали АДК."
     accessedAt: 2026-10-16
   - title: "A Systematic review of AAC interventions using speech generating devices for autistic preschoolers"
     url: "https://doi.org/10.1080/07434618.2025.2479768"
-    organisation: "Therrien и соавторы; Augmentative and Alternative Communication"
+    organisation: "Therrien и соавторы, Augmentative and Alternative Communication"
     publicationYear: 2025
-    note: "20 экспериментальных исследований; 14 о просьбах и 6 о других коммуникативных действиях, ограниченная экологическая валидность."
+    note: "20 экспериментальных исследований, 14 о просьбах и 6 о других коммуникативных действиях, ограниченная экологическая валидность."
     accessedAt: 2026-10-16
   - title: "The Effect of Naturalistic Developmental Behavioral Interventions and Aided AAC on the Language Development of Children on the Autism Spectrum with Minimal Speech"
     url: "https://doi.org/10.1007/s10803-024-06382-7"
-    organisation: "Pope, Light и Laubscher; Journal of Autism and Developmental Disorders"
+    organisation: "Pope, Light и Laubscher, Journal of Autism and Developmental Disorders"
     publicationYear: 2025
-    note: "Систематический обзор и метаанализ сочетания NDBI и АДК при минимальной устной речи; неоднородные дизайны."
+    note: "Систематический обзор и метаанализ сочетания NDBI и АДК при минимальной устной речи, неоднородные дизайны."
     accessedAt: 2026-10-16
   - title: "Effect of immersive virtual reality-based training on cognitive, social, and emotional skills in children and adolescents with autism spectrum disorder"
     url: "https://doi.org/10.1016/j.ridd.2024.104771"
@@ -95,7 +95,7 @@ sources:
     accessedAt: 2026-10-16
   - title: "Digital interventions for enhancing communication and collaboration in children with autism spectrum disorder: An integrative review"
     url: "https://doi.org/10.1016/j.reia.2025.202625"
-    organisation: "Kauts и Rather; Research in Autism"
+    organisation: "Kauts и Rather, Research in Autism"
     publicationYear: 2025
     note: "Обзор 11 исследований приложений, робототехники, игр и VR, неоднородность данных."
     accessedAt: 2026-10-16
@@ -181,7 +181,7 @@ sources:
 
 На октябрь 2026 года корректно говорить, что **APRIL исследуется и развивается**. Утверждать доказанную универсальную эффективность или возможность заменить специалиста нельзя.
 
-[Сообщение Назарбаев Университета о проекте, 2025](https://nu.edu.kz/news-en/nu-and-the-bulat-utemuratov-foundation-launch-joint-project-to-support-children-with-autism/); [демонстрация APRIL, апрель 2026](https://nu.edu.kz/news-en/nu-showcases-robot-assisted-therapy-technologies-for-children-with-autism/).
+[Сообщение Назарбаев Университета о проекте, 2025](https://nu.edu.kz/news-en/nu-and-the-bulat-utemuratov-foundation-launch-joint-project-to-support-children-with-autism/), [демонстрация APRIL, апрель 2026](https://nu.edu.kz/news-en/nu-showcases-robot-assisted-therapy-technologies-for-children-with-autism/).
 
 ## АДК: когда технология прежде всего помогает ребёнку говорить за себя
 
@@ -255,7 +255,7 @@ VR, игры, видеомоделирование и мобильные при�
 
 Систематический обзор 2025 года, включивший **14 исследований VR**, также отметил небольшие выборки, неодинаковые задания и методы оценки, поэтому суммировать результаты в единую надёжную оценку было трудно.
 
-[Метаанализ VR, 2024](https://doi.org/10.1016/j.ridd.2024.104771); [обзор VR, 2025](https://pmc.ncbi.nlm.nih.gov/articles/PMC11840372/).
+[Метаанализ VR, 2024](https://doi.org/10.1016/j.ridd.2024.104771), [обзор VR, 2025](https://pmc.ncbi.nlm.nih.gov/articles/PMC11840372/).
 
 Другой интегративный обзор 2025 года проанализировал **11 исследований** цифровых средств поддержки коммуникации и совместной деятельности. Результаты были неоднородными, поэтому авторы не могли доказать, что один тип цифровой технологии превосходит остальные в любых условиях.
 
