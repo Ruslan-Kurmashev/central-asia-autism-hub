@@ -1265,6 +1265,28 @@
   }
 }
 
+
+/* Inline educational diagram within long-form article content. */
+.article-v2__body .autism-spectrum-figure {
+  max-width: 28rem;
+  margin: 2rem auto;
+  text-align: center;
+}
+
+.article-v2__body .autism-spectrum-figure img {
+  display: block;
+  width: 100%;
+  max-width: 23.75rem;
+  height: auto;
+  margin: 0 auto;
+}
+
+.article-v2__body .autism-spectrum-figure figcaption {
+  margin-top: 0.75rem;
+  color: var(--color-muted);
+  line-height: 1.5;
+}
+
 @media print {
   .article-v2__sidebar {
     position: static !important;
