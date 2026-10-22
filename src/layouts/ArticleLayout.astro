@@ -96,7 +96,7 @@ const tocHeadings = headings.filter((heading) => heading.depth === 2 || heading.
 // Retain updatedAt in metadata for editorial tracking without replacing the first date.
 const showFirstPublicationDate = data.translationKey === 'parents-what-is-autism';
 const displayDate = showFirstPublicationDate
-  ? data.publishedAt
+  ? (data.originalPublishedAt ?? data.publishedAt)
   : (data.updatedAt ?? data.publishedAt);
 const displayDateLabel = showFirstPublicationDate
   ? copy.publishedLabel
