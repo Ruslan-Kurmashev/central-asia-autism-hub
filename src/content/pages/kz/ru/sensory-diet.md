@@ -51,7 +51,7 @@ sources:
     url: "https://publish.kne-publishing.com/index.php/JMR/article/view/17507"
     organisation: "Dehghani et al."
     publicationYear: 2025
-    note: "32 аутичных ребёнка 4-10 лет. Обе группы получали программу сенсорной диеты; исследование сравнивало очное и дистанционно поддерживаемое предоставление программы, поэтому не определяет эффективность сенсорной диеты относительно её отсутствия."
+    note: "32 аутичных ребёнка 4-10 лет. Обе группы получали программу сенсорной диеты, исследование сравнивало очное и дистанционно поддерживаемое предоставление программы, поэтому не определяет эффективность сенсорной диеты относительно её отсутствия."
     accessedAt: 2026-09-26
   - title: "Effectiveness of Ayres Sensory Integration® and Sensory-Based Interventions for People With Autism Spectrum Disorder: A Systematic Review"
     url: "https://journals.sagepub.com/doi/full/10.5014/ajot.2015.018051"

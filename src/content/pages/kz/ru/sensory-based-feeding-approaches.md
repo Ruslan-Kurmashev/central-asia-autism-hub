@@ -28,7 +28,7 @@ keyPoints:
   - "Систематический обзор 2026 года нашёл перспективные результаты отдельных сенсорных и десенсибилизационных подходов, но небольшие выборки и короткое наблюдение ограничивают уверенность."
   - "Нельзя переносить доказательства Ayres Sensory Integration для других функциональных целей на feeding-программы без feeding-specific данных."
   - "Кашель, удушье, боль, рвота, обезвоживание, потеря веса или нутриционный риск нельзя объяснять только сенсорной чувствительностью."
-  - "Практика должна быть постепенной и переносимой ребёнком; отказ, distress и ухудшение участия являются сигналами пересмотреть программу."
+  - "Практика должна быть постепенной и переносимой ребёнком, отказ, distress и ухудшение участия являются сигналами пересмотреть программу."
 evidenceLimitations: "Feeding-specific данные остаются неоднородными. Систематический обзор 2026 года включил 11 РКИ разных вмешательств при sensory-behavioral feeding problems и сообщил перспективные результаты для systematic desensitization, sensory play и repeated exposure, но выборки были небольшими, а follow-up коротким. Autism-specific scoping review 2025 года включил 61 исследование и отметил методологическую неоднородность и недостаточную оценку специфического вклада occupational therapy. Небольшое сравнительное исследование M-SOS и ABA включило только 6 детей и не может решить вопрос эффективности всей категории сенсорных feeding-подходов."
 sources:
   - title: "Current therapeutic and educational interventions for feeding problems in early childhood: A systematic review"
@@ -41,7 +41,7 @@ sources:
     url: "https://pubmed.ncbi.nlm.nih.gov/40126234/"
     organisation: "Simeon et al. / Pediatric Reports"
     publicationYear: 2025
-    note: "Scoping review 61 исследования: методы и исходы неоднородны, выборки часто небольшие; специфический вклад occupational therapy остаётся недостаточно изученным."
+    note: "Scoping review 61 исследования: методы и исходы неоднородны, выборки часто небольшие, специфический вклад occupational therapy остаётся недостаточно изученным."
     accessedAt: 2026-10-01
   - title: "A comparison of a modified sequential oral sensory approach to an applied behavior-analytic approach in the treatment of food selectivity in children with autism spectrum disorder"
     url: "https://pubmed.ncbi.nlm.nih.gov/27449267/"
@@ -64,7 +64,7 @@ sources:
   - title: "Pediatric Feeding and Swallowing"
     url: "https://www.asha.org/practice-portal/clinical-topics/pediatric-feeding-and-swallowing/"
     organisation: "American Speech-Language-Hearing Association"
-    note: "Практический ресурс по pediatric feeding disorder и dysphagia; кашель, choking и другие признаки swallowing difficulty требуют соответствующей оценки."
+    note: "Практический ресурс по pediatric feeding disorder и dysphagia, кашель, choking и другие признаки swallowing difficulty требуют соответствующей оценки."
     accessedAt: 2026-10-01
   - title: "О здоровье народа и системе здравоохранения"
     url: "https://old.adilet.zan.kz/rus/docs/K2000000360"
@@ -89,9 +89,9 @@ sources:
 
 В исследованиях под этим могут подразумеваться:
 
-- **systematic desensitization** - постепенное знакомство с пугающими или неприятными характеристиками пищи;
-- **sensory play** - сенсорная игра с пищей или похожими материалами без обязательного требования съесть продукт;
-- **repeated exposure** - многократное спокойное знакомство с продуктом;
+- **systematic desensitization** - постепенное знакомство с пугающими или неприятными характеристиками пищи
+- **sensory play** - сенсорная игра с пищей или похожими материалами без обязательного требования съесть продукт
+- **repeated exposure** - многократное спокойное знакомство с продуктом
 - сенсорно-ориентированные feeding-программы, где работают с текстурой, запахом, вкусом, температурой и другими свойствами пищи.
 
 Эти процедуры нельзя автоматически считать одним и тем же вмешательством.

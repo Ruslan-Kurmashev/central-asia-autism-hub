@@ -40,25 +40,25 @@ sources:
     url: "https://pubmed.ncbi.nlm.nih.gov/29280714/"
     organisation: "American Journal of Occupational Therapy"
     publicationYear: 2018
-    note: "8 исследований; обзор нашёл умеренную доказательную поддержку сенсорной адаптации стоматологической среды, но данные других отдельных сенсорных техник были неоднородными."
+    note: "8 исследований, обзор нашёл умеренную доказательную поддержку сенсорной адаптации стоматологической среды, но данные других отдельных сенсорных техник были неоднородными."
     accessedAt: 2026-09-26
   - title: "Sensory Adaptations to Improve Physiological and Behavioral Distress During Dental Visits in Autistic Children: A Randomized Crossover Trial"
     url: "https://pubmed.ncbi.nlm.nih.gov/37266941/"
     organisation: "JAMA Network Open"
     publicationYear: 2023
-    note: "Рандомизированное перекрёстное исследование 162 аутичных детей 6-12 лет; сенсорно адаптированная стоматологическая среда снижала физиологический стресс и видеокодированное поведенческое напряжение."
+    note: "Рандомизированное перекрёстное исследование 162 аутичных детей 6-12 лет, сенсорно адаптированная стоматологическая среда снижала физиологический стресс и видеокодированное поведенческое напряжение."
     accessedAt: 2026-09-26
   - title: "Effect of Sensory Adapted Dental Environment (SADE) on physiological and behavioral parameters related to stress and anxiety in children with Autism Spectrum Disorder (ASD) undergoing dental treatment: A systematic review and meta-analysis"
     url: "https://pubmed.ncbi.nlm.nih.gov/38689539/"
     organisation: "Special Care in Dentistry"
     publicationYear: 2024
-    note: "В метаанализ вошли 3 исследования; уровень кожной проводимости был ниже в адаптированной среде, но для других поведенческих показателей статистически значимого общего преимущества не показано."
+    note: "В метаанализ вошли 3 исследования, уровень кожной проводимости был ниже в адаптированной среде, но для других поведенческих показателей статистически значимого общего преимущества не показано."
     accessedAt: 2026-09-26
   - title: "The use of multisensory environments in children and adults with autism spectrum disorder: A systematic review"
     url: "https://pubmed.ncbi.nlm.nih.gov/40087858/"
     organisation: "Autism"
     publicationYear: 2025
-    note: "10 исследований мультисенсорных сред; отдельные положительные результаты описаны, но доказательств недостаточно из-за малого числа исследований, небольших выборок и существенной неоднородности."
+    note: "10 исследований мультисенсорных сред, отдельные положительные результаты описаны, но доказательств недостаточно из-за малого числа исследований, небольших выборок и существенной неоднородности."
     accessedAt: 2026-09-26
   - title: "Using sensory integration therapy, sensory-based interventions and sensory approaches with children and young people"
     url: "https://www.rcot.co.uk/explore-resources/children-young-people-families/sensory-approaches"

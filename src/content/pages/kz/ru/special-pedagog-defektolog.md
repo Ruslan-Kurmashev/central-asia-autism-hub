@@ -23,7 +23,7 @@ publishedAt: "2026-10-01T12:00:00+01:00"
 updatedAt: "2026-10-01T12:00:00+01:00"
 reviewDueAt: 2027-04-01
 draft: false
-versionNote: "1 октября 2026: опубликована отдельная P1-статья о специальной педагогической помощи и роли учителя-дефектолога; добавлены актуальные профессиональные стандарты Казахстана 2025 года, правила работы КППК и современная evidence-база школьных вмешательств."
+versionNote: "1 октября 2026: опубликована отдельная P1-статья о специальной педагогической помощи и роли учителя-дефектолога, добавлены актуальные профессиональные стандарты Казахстана 2025 года, правила работы КППК и современная evidence-база школьных вмешательств."
 keyPoints:
   - "Специальный педагог и дефектолог - прежде всего образовательная профессиональная роль, а не отдельная универсальная терапия аутизма."
   - "В Казахстане профессиональный стандарт 2025 года отдельно описывает специального педагога и также выделяет педагогическую работу с детьми с трудностями общения и социального взаимодействия, включая аутизм и РАС."
@@ -54,19 +54,19 @@ sources:
     url: "https://pubmed.ncbi.nlm.nih.gov/30869925/"
     organisation: "Watkins et al. / Psychological Bulletin"
     publicationYear: 2019
-    note: "28 исследований, соответствовавших стандартам What Works Clearinghouse; в инклюзивной среде изучались function-based interventions, visual supports, self-monitoring, peer-mediated and teacher-delivered interventions."
+    note: "28 исследований, соответствовавших стандартам What Works Clearinghouse, в инклюзивной среде изучались function-based interventions, visual supports, self-monitoring, peer-mediated and teacher-delivered interventions."
     accessedAt: 2026-10-01
   - title: "What are we targeting when we support inclusive education for autistic students?"
     url: "https://pubmed.ncbi.nlm.nih.gov/40757974/"
     organisation: "Systematic review of 233 empirical studies"
     publicationYear: 2025
-    note: "233 экспериментальных исследования; наиболее частые цели - социальные взаимодействия и социальные навыки; выявлена большая неоднородность исходов и недостаток данных об implementation."
+    note: "233 экспериментальных исследования, наиболее частые цели - социальные взаимодействия и социальные навыки, выявлена большая неоднородность исходов и недостаток данных об implementation."
     accessedAt: 2026-10-01
   - title: "School-Based Interventions for Increasing Autistic Pupils' Social Inclusion in Mainstream Schools"
     url: "https://pubmed.ncbi.nlm.nih.gov/41868250/"
     organisation: "Tsou et al. / Review Journal of Autism and Developmental Disorders"
     publicationYear: 2026
-    note: "56 исследований; школьные вмешательства увеличивали доступность участия в школьных активностях, но улучшение взаимности и дружеских отношений происходило не всегда."
+    note: "56 исследований, школьные вмешательства увеличивали доступность участия в школьных активностях, но улучшение взаимности и дружеских отношений происходило не всегда."
     accessedAt: 2026-10-01
   - title: "Interventions to Support Participation in Education for Autistic Students (2013-2021)"
     url: "https://pubmed.ncbi.nlm.nih.gov/37585656/"
