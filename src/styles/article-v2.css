@@ -1287,6 +1287,23 @@
   line-height: 1.5;
 }
 
+
+/* The source illustration has a Russian caption embedded at the bottom.
+   Crop it only for translated editions and provide localized HTML captions. */
+.article-v2__body .autism-spectrum-figure--translated .autism-spectrum-crop {
+  width: 100%;
+  max-width: 23.75rem;
+  aspect-ratio: 780 / 815;
+  margin: 0 auto;
+  overflow: hidden;
+}
+
+.article-v2__body .autism-spectrum-figure--translated .autism-spectrum-crop img {
+  width: 100%;
+  max-width: none;
+  height: auto;
+}
+
 @media print {
   .article-v2__sidebar {
     position: static !important;
