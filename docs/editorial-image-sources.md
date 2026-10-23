@@ -874,3 +874,17 @@ The printable parent worksheets at `public/downloads/bilingual/` are original ed
 Two educational unscored PDF forms under `public/downloads/contexts/` are generated during static deployment by `scripts/build-parent-home-preschool-context-pdfs.py`. They record contextual observations and family-educator agreements for personal use without uploading child information; they do not constitute medical records, crisis protocols or treatment.
 
 | `selfcare-bag-sequence.svg` | Original AutismHub three-step SVG: choose a large light item, open a safe bag, place item inside. Created for the 11pt visual printable self-care sequences; no third-party imagery or diagnostic significance. |
+
+
+## Co-occurring conditions: six user-supplied subsection illustrations (23 October 2026)
+
+These six images were supplied by the project owner in a ChatGPT conversation and resized to locally hosted WebP files for the Russian parent article `soputstvuyushchie-sostoyaniya-pri-autizme`. The original photographers, illustrators, sources, and reuse licences were not independently verified. Inclusion was requested by the project owner. Illustrations are thematic only, not examples of diagnostic signs or clinical treatment. In particular, the seizure illustration must not be interpreted as first-aid guidance.
+
+| Local image file | Uploaded file name | Article subsection |
+| --- | --- | --- |
+| `cooccurring-adhd-blocks.webp` | `31pgvafepcz0zeskibtzuwwluobku0ub(2).jpeg` | 1. СДВГ: внимание, активность и саморегуляция |
+| `cooccurring-anxiety-child.webp` | `an_ag_i(2).jpg` | 2. Тревожность, депрессия и эмоциональное благополучие |
+| `cooccurring-epilepsy-illustration.webp` | `eplp_5(2).webp` | 3. Эпилепсия и другие неврологические состояния |
+| `cooccurring-sleeping-child.webp` | `images(2).jpg` | 4. Сон и хроническая усталость |
+| `cooccurring-eating-sandwich.webp` | `one-happy-boy-eating-table_1308-68783(2).jpg` | 5. Питание, пищеварение и боль |
+| `cooccurring-learning-children.webp` | `sm_full(2).jpg` | 6. Интеллектуальное развитие и трудности обучения |
