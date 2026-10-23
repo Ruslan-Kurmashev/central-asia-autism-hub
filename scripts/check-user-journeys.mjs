@@ -234,6 +234,29 @@ try {
       verify(article.brokenImages.length===0,marker+': missing article images '+article.brokenImages);
     }
   }
+  // Verify actual browser rendering, not just Markdown source or AST nodes.
+  for (const width of [360, 1440]) {
+    await navigate(base+'/kz/ru/parents/kak-autichnye-deti-obshchayutsya/',width);
+    const emphasis=await evaluate(()=>{
+      const body=document.querySelector('.article-v2__body');
+      const paragraph=[...(body?.querySelectorAll('p')||[])].find(
+        p=>p.textContent?.trim().startsWith('Жесты и движения.')
+      );
+      const label=paragraph?.querySelector('strong');
+      return {
+        text:label?.textContent?.trim()||'',
+        className:label?.className||'',
+        labelWeight:label?getComputedStyle(label).fontWeight:null,
+        paragraphWeight:paragraph?getComputedStyle(paragraph).fontWeight:null,
+      };
+    });
+    console.log('USER_JOURNEY_EMPHASIS '+width+' '+JSON.stringify(emphasis));
+    verify(emphasis.text==='Жесты и движения.' &&
+      emphasis.className.includes('article-key-label') &&
+      Number(emphasis.labelWeight)>=600 &&
+      Number(emphasis.labelWeight)>Number(emphasis.paragraphWeight),
+      'ru communication / '+width+': semantic category label not visibly bold');
+  }
   console.log('USER_JOURNEY_SUMMARY '+checks+' assertions; '+errors.length+' problems; '+(locales.length*widths.length*3)+' route visits.');
   for(const message of errors)console.log('USER_JOURNEY_FAIL '+message);
   if(errors.length)process.exitCode=1;
