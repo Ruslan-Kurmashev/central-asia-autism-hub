@@ -66,6 +66,7 @@ jobs:
           BASE_COMMIT: ${{ github.event.before }}
         with:
           node-version: 24
+          cache: 'false'
           build-cmd: npm run validate
       - name: Final regional research article browser and external URL audit
         run: node scripts/check-regional-research-final.mjs
