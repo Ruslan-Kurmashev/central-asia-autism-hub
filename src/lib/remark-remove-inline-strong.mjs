@@ -19,7 +19,7 @@ function lead(node) {
 function isTermDefinition(label, rest) {
   if (label.length > 65 || /[.!?]\s*$/.test(label)) return false;
   // Some terms have an abbreviation or translation in brackets before a dash.
-  return /^\s*(?:\([^)]{1,110}\)\s*)?(?:-|:\s|–\s|—\s|(?:означает|обозначает|называют|это|является|помогает|помогают|относится|относятся)(?=\s|$)|refers\s+to\b|means\b|is\s+(?:a|an|the)\b|are\b|(?:дегеніміз|білдіреді|болып\s+табылады)(?=\s|$))/iu.test(rest);
+  return /^\s*(?:\([^)]{1,110}\)\s*)?(?:-|:\s|–\s|\u2014\s|(?:означает|обозначает|называют|это|является|помогает|помогают|относится|относятся)(?=\s|$)|refers\s+to\b|means\b|is\s+(?:a|an|the)\b|are\b|(?:дегеніміз|білдіреді|болып\s+табылады)(?=\s|$))/iu.test(rest);
 }
 
 function isCategoryLabel(label) {
