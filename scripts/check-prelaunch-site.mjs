@@ -113,6 +113,9 @@ for (const lang of locales) {
   const expectedEvents = [
     ['2026-10-19', 'beyim.edu.kz', 'beyim-preschool-user-photo.webp'],
     ['2026-10-27', 'tamyrplatform.com', 'group-18739.png'],
+    ['2026-10-27', 'humanitix.com/autism-in-education-learn-teach-and-thrive-differently', '9f5551_ee88ccf4c3094f74bce74fae139da432'],
+    ['2026-10-28', 'twinkl.co.uk/events/teachmeet/Conduit-Festival-of-Learning-Day-Three', 'teachmeet-fb-events-profile-image-1615892637.jpg'],
+    ['2026-10-31', 'uchmet.ru/events/item/4197389', '680x300.png'],
     ['2026-10-30', 'conference-satr.kz', 'satr-logo.svg'],
     ['2026-11-18', 'autism.org/webinar/using-multimodal-communication', 'event-ari-gestures-sign-language.jpg'],
     ['2026-12-02', 'autism.org/webinar/2026-research-updates-gi-symptoms-behavior', 'event-ari-gi-anatomical-model.jpg'],
@@ -124,14 +127,14 @@ for (const lang of locales) {
       id + ': missing correct event source or relevant visual ' + imageFilename);
   }
   check((html.match(/class="home-v2__event-media(?: home-v2__event-media--(?:brand|logo))?"/g) || []).length === expectedEvents.length,
-    id + ': each live event must have a distinct image with an alt description');
+    id + ': each live event must have an image with an alt description');
   if (expectedEvents.some(([, domain]) => domain === 'conference-satr.kz')) {
     check(html.includes('home-v2__event-media--logo'), id + ': SATR logo must be fully visible, not cropped as a stock photo');
   }
   check(html.includes('data-event-pagination') && html.includes('data-event-page="1"'),
     id + ': events must have accessible numbered pagination');
   if (expectedEvents.length > 3) {
-    check(html.includes('data-event-page="2"'), id + ': second page must be available for five events');
+    check(html.includes('data-event-page="2"'), id + ': additional event pages must be available when more than three events exist');
   }
   check(html.includes('home-v2__events-empty'), id + ': empty state must remain available after expiry');
   check(html.includes('home-v2__materials-description'), id + ': update section intro missing');
