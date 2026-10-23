@@ -21,6 +21,7 @@ riskLevel: moderate
 disclaimerType: informational
 conflictOfInterest: "Мүдделер қақтығысы мәлімделмеген."
 publishedAt: 2026-10-10
+originalPublishedAt: 2026-10-09
 updatedAt: 2026-10-20
 draft: false
 keyPoints:
