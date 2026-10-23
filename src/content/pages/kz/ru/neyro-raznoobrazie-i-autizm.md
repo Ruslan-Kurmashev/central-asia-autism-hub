@@ -2,8 +2,8 @@
 title: "Нейроразнообразие: как правильно понимать и говорить об аутизме"
 summary: "Объясняем термины «нейроразнообразие», «нейроотличия» и «нейротипичность», уважительный язык, индивидуальные предпочтения и связь принятия с реальной поддержкой."
 description: "Нейроразнообразие и аутизм для родителей: словарь терминов, нейроотличия, нейротипичность, инклюзия, уважительное общение и практические примеры."
-featuredImage: "/central-asia-autism-hub/images/editorial/kz-development-path-shapes.svg"
-featuredImageAlt: "Три разные геометрические фигуры и плавная линия на светлом фоне символизируют разнообразие путей развития."
+featuredImage: "/central-asia-autism-hub/images/editorial/neurodiversity-people-connected.avif"
+featuredImageAlt: "Силуэты людей и символы общения, идей и различий на ярком фоне как иллюстрация нейроразнообразия."
 country: kz
 language: ru
 section: parents
@@ -20,7 +20,7 @@ riskLevel: lower
 disclaimerType: informational
 conflictOfInterest: "Конфликт интересов не заявлен."
 publishedAt: 2026-10-12
-updatedAt: 2026-10-12
+updatedAt: 2026-10-23
 reviewDueAt: 2027-04-12
 draft: false
 keyPoints:
