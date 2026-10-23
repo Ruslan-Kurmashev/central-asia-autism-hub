@@ -117,7 +117,7 @@ These concepts may overlap, but they are not identical.
 
 In clinical descriptions, some of these behaviours are grouped under restricted or repetitive patterns of behaviour and interests. In daily life, their functions can be different.
 
-Read more in the Russian-language article [How autistic children communicate](../../ru/parents/kak-autichnye-deti-obshchayutsya/).
+Read more in the Russian-language article [How autistic children communicate](/central-asia-autism-hub/kz/ru/parents/kak-autichnye-deti-obshchayutsya/).
 
 ## When is additional help needed?
 
@@ -153,6 +153,6 @@ Such observations are not a diagnosis. If there are substantial difficulties, a 
 
 - [Sensory differences in autism](../sensory-differences-in-autism/)
 - [Neurodiversity and respectful language](../neurodiversity-and-autism/)
-- [Meltdown and shutdown in autism (Russian)](../../ru/parents/meltdaun-i-shatdaun-pri-autizme/)
+- [Meltdown and shutdown in autism (Russian)](/central-asia-autism-hub/kz/ru/parents/meltdaun-i-shatdaun-pri-autizme/)
 
 This article is for information only. It cannot be used to diagnose autism, establish the causes of self-injury or choose an individual treatment.
