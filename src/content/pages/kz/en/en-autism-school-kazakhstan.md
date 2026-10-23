@@ -21,6 +21,7 @@ riskLevel: moderate
 disclaimerType: informational
 conflictOfInterest: "No conflict of interest declared."
 publishedAt: 2026-10-10
+originalPublishedAt: 2026-10-09
 updatedAt: 2026-10-10
 draft: false
 keyPoints:

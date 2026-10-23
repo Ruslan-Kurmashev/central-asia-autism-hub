@@ -22,6 +22,7 @@ disclaimerType: informational
 conflictOfInterest: "No conflict of interest declared."
 versionNote: "10 October 2026: English translation based on the Russian article updated on 9 October 2026. It retains the regulatory changes to PMPK services dated 26 June 2026 and MSE rules effective from 25 August 2026."
 publishedAt: 2026-10-10
+originalPublishedAt: 2026-10-09
 updatedAt: 2026-10-10
 draft: false
 keyPoints:
