@@ -23,18 +23,18 @@ for (const directory of roots) {
     const lines = body.split(/\r?\n/);
     if (!/\*\*[^*\n]+\*\*/.test(body)) stats.withoutEmphasis++;
     // Flag unformatted category labels for a human editorial pass. No automated content rewrite.
-    const listLabel = /^\\s*(?:[-*+]\\s+|\\d+[.)]\\s+)(?!\\*\\*)([^*:[\\]\\n]{3,65}?)[.:]\\s+(?!\\[)([^\\n]{8,})$/u;
-    const paraLabel = /^(?!\\*\\*|#|>|[-*]|\\||\\d+[.)])([\\p{Lu}][\\p{L}\\s()\\-]{4,55}?)[.]\\s+([\\p{Lu}][^\\n]{8,})$/u;
+    const listLabel = /^\s*(?:[-*+]\s+|\d+[.)]\s+)(?!\*\*)([\p{Lu}][\p{L}\s()-]{3,65}?)[.:]\s+(?!\[)(.{8,})$/u;
+    const paraLabel = /^(?!\*\*|#|>|[-*]|\||\d+[.)])([\p{Lu}][\p{L}\s()-]{4,55}?)[.]\s+([\p{Lu}].{8,})$/u;
     for (let i = 0; i < lines.length; i++) {
       const line = lines[i], entry = listLabel.exec(line);
-      if (entry && entry[1].trim().split(/\\s+/).length <= 6 &&
+      if (entry && entry[1].trim().split(/\s+/).length <= 6 &&
           !/^(?:предыдущ|следующ|вернуться|далее|также по теме|previous|next|further)/iu.test(entry[1].trim()) &&
-          !line.includes('](') && !/^\\s*[-*]\\s+https?:/iu.test(line)) {
+          !line.includes('](') && !/^\s*[-*]\s+https?:/iu.test(line)) {
         candidateCounts.plainListLabels++;
         if (reviewCandidates.length < 150) reviewCandidates.push([language, filename, i + 1, 'list', entry[1].trim(), line.slice(0, 145)]);
       }
       const m = paraLabel.exec(line);
-      if (m && m[1].trim().split(/\\s+/).length <= 6) {
+      if (m && m[1].trim().split(/\s+/).length <= 6) {
         const neighbor = [i-2,i-1,i+1,i+2].some(j => j>=0&&j<lines.length&&paraLabel.test(lines[j]));
         if (neighbor) {
           candidateCounts.groupedPlainParagraphs++;
