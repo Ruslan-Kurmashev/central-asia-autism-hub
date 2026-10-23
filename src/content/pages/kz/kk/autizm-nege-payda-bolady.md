@@ -5,7 +5,7 @@ description: "Аутизм себептері туралы түсінікті м
 featuredImage: "/central-asia-autism-hub/images/editorial/research-lab.jpg"
 featuredImageAlt: "Зертханада компьютермен жұмыс істеп отырған зерттеуші."
 country: kz
-language: "kk"
+language: kk
 section: parents
 topic: autism-basics
 slug: "autizm-nege-payda-bolady"

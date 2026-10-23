@@ -5,7 +5,7 @@ description: "Аутизм туралы сегіз миф пен ғылыми ф
 featuredImage: "/central-asia-autism-hub/images/editorial/family-reading.jpg"
 featuredImageAlt: "Отбасы мүшелері тыныш үй жағдайында бірге кітап қарап отыр."
 country: kz
-language: "kk"
+language: kk
 section: parents
 topic: autism-basics
 slug: "autizm-turaly-mifter-men-faktiler"

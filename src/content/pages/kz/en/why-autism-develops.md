@@ -5,7 +5,7 @@ description: "An accessible explanation of autism causation, genetics, brain dev
 featuredImage: "/central-asia-autism-hub/images/editorial/research-lab.jpg"
 featuredImageAlt: "A researcher working at a computer in a laboratory."
 country: kz
-language: "en"
+language: en
 section: parents
 topic: autism-basics
 slug: "why-autism-develops"

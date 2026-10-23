@@ -5,7 +5,7 @@ description: "Eight myths about autism examined using scientific and clinical so
 featuredImage: "/central-asia-autism-hub/images/editorial/family-reading.jpg"
 featuredImageAlt: "Family members looking at a book together in a calm home setting."
 country: kz
-language: "en"
+language: en
 section: parents
 topic: autism-basics
 slug: "autism-myths-and-facts"
