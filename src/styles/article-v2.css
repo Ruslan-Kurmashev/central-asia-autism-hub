@@ -377,6 +377,12 @@
   margin-top: 0;
 }
 
+/* Imported HTML may contain <b> or <strong> tags outside Markdown parsing.
+   Keep prose weight uniform, without altering heading or table-header weight. */
+.article-v2__body :is(p, li, blockquote, td, dd) :is(b, strong) {
+  font-weight: inherit;
+}
+
 .article-v2__body h2 {
   margin: 3.2rem 0 1rem;
   padding-top: 0.4rem;
