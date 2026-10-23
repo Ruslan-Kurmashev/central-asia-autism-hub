@@ -121,9 +121,21 @@ for (const locale of ['ru', 'en', 'kk']) {
     assert.ok(localFile.startsWith(publicDir + path.sep),
       `Unsafe editorial image path: ${article}`);
     const image = await stat(localFile);
-    const isVector = path.extname(localFile).toLowerCase() === '.svg';
-    assert.ok(image.isFile() && (isVector ? image.size > 600 : image.size > 12000),
+    const extension = path.extname(localFile).toLowerCase();
+    const isVector = extension === '.svg';
+    const isWebp = extension === '.webp';
+    // Efficiently compressed WebP photographs and illustrations may be below 12 KB.
+    // Check their RIFF/WEBP headers and declared size rather than requiring a JPEG-sized file.
+    const minimumBytes = isVector ? 600 : isWebp ? 4096 : 12000;
+    assert.ok(image.isFile() && image.size > minimumBytes,
       `Missing, empty or truncated editorial image: ${article}: ${src}`);
+    if (isWebp) {
+      const bytes = await readFile(localFile);
+      assert.ok(bytes.subarray(0, 4).toString('ascii') === 'RIFF' &&
+        bytes.subarray(8, 12).toString('ascii') === 'WEBP' &&
+        bytes.readUInt32LE(4) + 8 <= bytes.length,
+        `Invalid or truncated WebP editorial image: ${article}: ${src}`);
+    }
     if (isVector) {
       const svg = await readFile(localFile, 'utf8');
       assert.match(svg, /<svg\b/i, `Invalid SVG image: ${article}`);
