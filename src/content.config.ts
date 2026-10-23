@@ -41,6 +41,8 @@ const commonFields = {
   // Preserve each translation's real publication date, but allow the original
   // article date to be shown consistently across language versions.
   originalPublishedAt: z.coerce.date().optional(),
+  // Explicit editorial display date. The actual publishedAt stays immutable.
+  displayPublishedAt: z.coerce.date().optional(),
   updatedAt: z.coerce.date().optional(),
   reviewDueAt: z.coerce.date().optional(),
   riskLevel: z.enum(['lower', 'moderate', 'high']),

@@ -37,6 +37,7 @@ for (const locale of locales) {
       slug: field(text, 'slug'),
       publication: field(text, 'publishedAt'),
       original: field(text, 'originalPublishedAt'),
+      display: field(text, 'displayPublishedAt'),
     });
   }
 }
@@ -47,7 +48,7 @@ assert.ok(sources.length >= 10, 'Expected at least ten Russian autism-basics art
 let checked = 0;
 for (const [sourceKey, source] of sources) {
   const key = sourceKey.slice(3);
-  const first = source.publication;
+  const first = source.display || source.publication;
   if (!/^\d{4}-\d{2}-\d{2}$/.test(first)) {
     errors.push(sourceKey + ': missing original date in YYYY-MM-DD format');
     continue;
@@ -55,9 +56,12 @@ for (const [sourceKey, source] of sources) {
   for (const locale of locales) {
     const article = values.get(locale + '/' + key);
     if (!article) continue; // Additional language versions may be published later.
-    if (locale !== 'ru' && article.original !== first) {
+    if (locale !== 'ru' && article.original !== source.publication) {
       errors.push(locale + '/' + article.file + ': originalPublishedAt ' +
-        (article.original || '(missing)') + ' does not match Russian ' + first);
+        (article.original || '(missing)') + ' does not match Russian ' + source.publication);
+    }
+    if ((article.display || '') !== (source.display || '')) {
+      errors.push(locale + '/' + article.file + ': displayPublishedAt does not match Russian editorial display date');
     }
     const htmlFile = path.join(dist, locale, 'parents', article.slug, 'index.html');
     let html;

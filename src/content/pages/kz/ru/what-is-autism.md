@@ -20,6 +20,7 @@ riskLevel: moderate
 disclaimerType: medical
 conflictOfInterest: "Конфликт интересов не заявлен."
 publishedAt: 2026-08-08
+displayPublishedAt: 2026-10-12
 updatedAt: 2026-10-22
 reviewDueAt: 2027-08-08
 draft: false

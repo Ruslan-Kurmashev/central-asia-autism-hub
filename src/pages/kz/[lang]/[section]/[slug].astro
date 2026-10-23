@@ -28,7 +28,7 @@ export async function getStaticPaths() {
   // of the same article. Keep each file's publishedAt and updatedAt unchanged.
   const firstPublicationDates = new Map<string, Date>();
   for (const item of entries) {
-    const firstDate = item.data.originalPublishedAt ?? item.data.publishedAt;
+    const firstDate = item.data.displayPublishedAt ?? item.data.originalPublishedAt ?? item.data.publishedAt;
     if (!firstDate) continue;
     const previous = firstPublicationDates.get(item.data.translationKey);
     if (!previous || firstDate.getTime() < previous.getTime()) {

@@ -40,7 +40,7 @@ async function expectedRecentArticles(lang) {
           frontValue(front, 'translationStatus') === 'pending' ||
           !frontValue(front, 'publishedAt') ||
           frontValue(front, 'section') === 'about') continue;
-      const published = Date.parse(frontValue(front, 'originalPublishedAt') || frontValue(front, 'publishedAt'));
+      const published = Date.parse(frontValue(front, 'displayPublishedAt') || frontValue(front, 'originalPublishedAt') || frontValue(front, 'publishedAt'));
       if (!Number.isFinite(published)) continue;
       const updated = Date.parse(frontValue(front, 'updatedAt')) || 0;
       const id = collection === 'pages'
