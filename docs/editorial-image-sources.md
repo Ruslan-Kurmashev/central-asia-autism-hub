@@ -888,3 +888,10 @@ These six images were supplied by the project owner in a ChatGPT conversation an
 | `cooccurring-sleeping-child.webp` | `images(2).jpg` | 4. Сон и хроническая усталость |
 | `cooccurring-eating-sandwich.webp` | `one-happy-boy-eating-table_1308-68783(2).jpg` | 5. Питание, пищеварение и боль |
 | `cooccurring-learning-children.webp` | `sm_full(2).jpg` | 6. Интеллектуальное развитие и трудности обучения |
+
+
+## Neurodiversity article: project-owner-supplied cover (23 October 2026)
+
+| Local image file | Original upload | Provenance and editorial use |
+| --- | --- | --- |
+| `neurodiversity-colorful-profiles.webp` | `images (1).jpg` | Colourful overlapping silhouettes with stylised brains, supplied by the project owner for the Russian parent article `neyro-raznoobrazie-i-autizm`. Rehosted as an editorial illustration. The original artist, licence and publication rights were not independently verified. This visual is illustrative only and does not depict a diagnostic marker of autism. |
