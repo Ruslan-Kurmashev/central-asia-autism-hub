@@ -377,10 +377,15 @@
   margin-top: 0;
 }
 
-/* Imported HTML may contain <b> or <strong> tags outside Markdown parsing.
-   Keep prose weight uniform, without altering heading or table-header weight. */
+/* Suppress decorative bold within sentences, including pasted HTML.
+   The Markdown plugin retains semantic labels at the start of enumerated items. */
 .article-v2__body :is(p, li, blockquote, td, dd) :is(b, strong) {
   font-weight: inherit;
+}
+
+/* Keep bold labels in grouped examples, list items and first-column table terms. */
+.article-v2__body :is(p, li, td) > strong:first-child {
+  font-weight: 700;
 }
 
 .article-v2__body h2 {
