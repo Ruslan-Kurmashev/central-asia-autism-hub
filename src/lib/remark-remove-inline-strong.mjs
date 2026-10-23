@@ -62,9 +62,16 @@ function shouldKeep(parent, child, index, ancestors) {
   if (label.length <= MAX_CATEGORY_LENGTH && /[:：]$/.test(label)) return true;
   if (isTermDefinition(label, value.rest)) return true;
 
-  // Restore paragraph-style enumerations such as "Gestures. ..." only if
-  // neighbouring paragraphs use the same structure.
-  if (isCategoryLabel(label) && isGroupedLabel(parent, ancestors)) return true;
+  // These short, explicit lead-ins are labels even when other paragraphs
+  // intervene. The former sibling-only rule silently removed user-facing
+  // category labels in the final rendered article.
+  const words = label.split(/\s+/u).length;
+  if (isCategoryLabel(label) && label.length <= MAX_CATEGORY_LENGTH &&
+      words <= 7 && /^[^!?"«»]+[.:：]$/u.test(label)) return true;
+
+  // Long labels remain context dependent to avoid broad sentence emphasis.
+  if (isCategoryLabel(label) && isGroupedLabel(parent, ancestors) &&
+      words <= 10) return true;
 
   return false;
 }
