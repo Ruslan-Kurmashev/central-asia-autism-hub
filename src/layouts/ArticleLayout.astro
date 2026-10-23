@@ -567,6 +567,29 @@ const researchLabel: Record<Locale, string> = {
     });
   }
 
+
+  // No request to YouTube is made until the visitor activates the player.
+  document.querySelectorAll('[data-youtube-video]').forEach((block) => {
+    const button = block.querySelector('.article-video-embed__activate');
+    const player = block.querySelector('.article-video-embed__player');
+    if (!(button instanceof HTMLButtonElement) || !(player instanceof HTMLElement)) return;
+
+    button.addEventListener('click', () => {
+      const videoId = block.getAttribute('data-youtube-video');
+      if (!videoId || !/^[A-Za-z0-9_-]{11}$/.test(videoId)) return;
+
+      const iframe = document.createElement('iframe');
+      iframe.className = 'article-video-embed__iframe';
+      iframe.src = 'https://www.youtube-nocookie.com/embed/' + videoId + '?rel=0';
+      iframe.title = button.getAttribute('aria-label') || 'Видео YouTube';
+      iframe.allow = 'encrypted-media; picture-in-picture; web-share';
+      iframe.allowFullscreen = true;
+      iframe.referrerPolicy = 'strict-origin-when-cross-origin';
+      player.replaceChildren(iframe);
+      iframe.focus();
+    }, { once: true });
+  });
+
   document.querySelectorAll('.article-body table').forEach((table) => {
     const headers = Array.from(table.querySelectorAll('thead th')).map((header) =>
       header.textContent?.trim() ?? '',

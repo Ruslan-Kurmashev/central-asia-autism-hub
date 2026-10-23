@@ -72,6 +72,21 @@ sources:
 
 Это примеры, а не тест. Один человек использует несколько способов, другой почти не демонстрирует заметных повторяющихся действий.
 
+### Видеопример: как выглядят взмахи руками
+
+Ниже приведён внешний видеопример повторяющихся движений рук. Он помогает увидеть само движение, но **по видео нельзя определить диагноз ребёнка или причину его действий**.
+
+<figure class="article-video-embed" data-youtube-video="R_gZqQy_Ae4">
+  <div class="article-video-embed__player">
+    <button type="button" class="article-video-embed__activate" aria-label="Смотреть видеопример взмахивания руками у ребёнка">
+      <span class="article-video-embed__play-icon" aria-hidden="true">▶</span>
+      <span class="article-video-embed__play-label">Смотреть видео: взмахи руками у ребёнка</span>
+      <span class="article-video-embed__privacy-hint">Внешний плеер YouTube загрузится только после нажатия</span>
+    </button>
+  </div>
+  <figcaption>Пример движения, которое может встречаться при стимминге, а также у детей без аутизма. Видео размещено на YouTube, его содержание принадлежит автору. Если плеер недоступен, <a href="https://www.youtube.com/watch?v=R_gZqQy_Ae4" target="_blank" rel="noopener noreferrer external">откройте оригинал на YouTube</a>.</figcaption>
+</figure>
+
 ## Зачем это может быть нужно ребёнку?
 
 1. **Радость.** Некоторые люди машут руками или подпрыгивают, когда взволнованы приятным событием.
