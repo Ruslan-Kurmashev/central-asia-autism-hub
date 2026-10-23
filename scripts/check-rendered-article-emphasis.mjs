@@ -4,9 +4,9 @@ import path from 'node:path';
 
 const pathToArticle = path.resolve('dist/kz/ru/parents/kak-autichnye-deti-obshchayutsya/index.html');
 const html = readFileSync(pathToArticle, 'utf8');
-const start = html.indexOf('Как общаются дети, которые мало говорят?');
-assert.ok(start > 0, 'Communication article subsection not found in built HTML');
-const slice = html.slice(start, start + 4400);
+const start = html.indexOf('article-v2__body article-body');
+assert.ok(start > 0, 'Article body not found in built HTML');
+const slice = html.slice(start);
 const labels = [
   'Жесты и движения.',
   'Изображения и символы.',
