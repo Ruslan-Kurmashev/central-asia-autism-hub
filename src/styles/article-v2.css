@@ -383,8 +383,9 @@
   font-weight: inherit;
 }
 
-/* Keep bold labels in grouped examples, list items and first-column table terms. */
-.article-v2__body :is(p, li, td) > strong:first-child {
+/* Bold only the semantic labels explicitly selected by the Markdown review.
+   This avoids highlighting entire assertions or arbitrary pasted HTML spans. */
+.article-v2__body :is(p, li, blockquote, td, dd) strong.article-key-label {
   font-weight: 700;
 }
 
