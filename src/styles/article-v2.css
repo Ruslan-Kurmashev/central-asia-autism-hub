@@ -842,17 +842,41 @@
   }
 }
 
-/* Wider first columns in the two terminology tables of the neurodiversity article.
-   Respect word boundaries and retain mobile stacked-card rendering. */
+/* Neurodiversity article: keep the supplied illustration fully visible. */
+.article-v2.neurodiversity-article-body .article-v2__hero-art {
+  background: #fdebe6;
+}
+
+.article-v2.neurodiversity-article-body .article-v2__hero-art img {
+  object-fit: contain;
+}
+
+/* The two terminology tables need predictable column widths and natural
+   word boundaries. Avoid arbitrarily splitting Russian words across lines. */
+.article-v2.neurodiversity-article-body .article-v2__body table {
+  width: 100%;
+  table-layout: fixed;
+}
+
+.article-v2.neurodiversity-article-body .article-v2__body table th,
+.article-v2.neurodiversity-article-body .article-v2__body table td {
+  word-break: normal;
+  overflow-wrap: break-word;
+  hyphens: none;
+}
+
 .article-v2.neurodiversity-article-body .article-v2__body table th:first-child,
 .article-v2.neurodiversity-article-body .article-v2__body table td:first-child {
-  width: 38%;
-  min-width: 14rem;
+  width: 35%;
+  min-width: 0;
   overflow-wrap: normal;
-  word-break: normal;
 }
 
 @media (max-width: 48rem) {
+  .article-v2.neurodiversity-article-body .article-v2__body table[data-mobile-cards='true'] {
+    table-layout: auto;
+  }
+
   .article-v2.neurodiversity-article-body .article-v2__body table[data-mobile-cards='true'] td:first-child {
     width: 100%;
     min-width: 0;
