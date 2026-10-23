@@ -62,8 +62,8 @@ const publishedPages = (
   )
 ).sort(
   (left, right) =>
-    ((right.data.displayPublishedAt ?? .data.originalPublishedAt ?? right.data.publishedAt)?.getTime() ?? 0) -
-    ((left.data.displayPublishedAt ?? .data.originalPublishedAt ?? left.data.publishedAt)?.getTime() ?? 0),
+    ((right.data.displayPublishedAt ?? right.data.originalPublishedAt ?? right.data.publishedAt)?.getTime() ?? 0) -
+    ((left.data.displayPublishedAt ?? left.data.originalPublishedAt ?? left.data.publishedAt)?.getTime() ?? 0),
 );
 
 // The homepage is a true chronological publication feed, not a curated set
@@ -82,7 +82,7 @@ const homeMaterials = [
   ...publishedResearch,
 ]
   .sort((a, b) =>
-    ((b.data.displayPublishedAt ?? .data.originalPublishedAt ?? b.data.publishedAt)?.getTime() ?? 0) - ((a.data.displayPublishedAt ?? .data.originalPublishedAt ?? a.data.publishedAt)?.getTime() ?? 0) ||
+    ((b.data.displayPublishedAt ?? b.data.originalPublishedAt ?? b.data.publishedAt)?.getTime() ?? 0) - ((a.data.displayPublishedAt ?? a.data.originalPublishedAt ?? a.data.publishedAt)?.getTime() ?? 0) ||
     (b.data.updatedAt?.getTime() ?? 0) - (a.data.updatedAt?.getTime() ?? 0) ||
     (a.collection + ':' + a.id).localeCompare(b.collection + ':' + b.id),
   )
@@ -284,8 +284,8 @@ const dateFormatter = new Intl.DateTimeFormat(DATE_LOCALES[locale], {
                         </h3>
                         <p>{material.data.summary}</p>
                         <div class="home-v2__card-meta">
-                          <time datetime={(material.data.displayPublishedAt ?? .data.originalPublishedAt ?? material.data.publishedAt)!.toISOString()}>
-                            {dateFormatter.format((material.data.displayPublishedAt ?? .data.originalPublishedAt ?? material.data.publishedAt)!)}
+                          <time datetime={(material.data.displayPublishedAt ?? material.data.originalPublishedAt ?? material.data.publishedAt)!.toISOString()}>
+                            {dateFormatter.format((material.data.displayPublishedAt ?? material.data.originalPublishedAt ?? material.data.publishedAt)!)}
                           </time>
                           <span aria-hidden="true">→</span>
                         </div>
@@ -427,9 +427,9 @@ const dateFormatter = new Intl.DateTimeFormat(DATE_LOCALES[locale], {
                     </h3>
                     <p>{material.data.summary}</p>
                     <div class="featured-material-card__footer">
-                      <time datetime={(material.data.displayPublishedAt ?? .data.originalPublishedAt ?? material.data.publishedAt)!.toISOString()}>
+                      <time datetime={(material.data.displayPublishedAt ?? material.data.originalPublishedAt ?? material.data.publishedAt)!.toISOString()}>
                         {contentCopy.publishedLabel}:{' '}
-                        {dateFormatter.format((material.data.displayPublishedAt ?? .data.originalPublishedAt ?? material.data.publishedAt)!)}
+                        {dateFormatter.format((material.data.displayPublishedAt ?? material.data.originalPublishedAt ?? material.data.publishedAt)!)}
                       </time>
                       <span aria-hidden="true">→</span>
                     </div>

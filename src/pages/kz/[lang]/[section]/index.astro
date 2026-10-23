@@ -117,8 +117,8 @@ const learningMaterials = section === 'learning'
 
 const materials = [...pageMaterials, ...researchMaterials].sort((left, right) => {
   const publishedDiff =
-    ((right.data.displayPublishedAt ?? .data.originalPublishedAt ?? right.data.publishedAt)?.getTime() ?? 0) -
-    ((left.data.displayPublishedAt ?? .data.originalPublishedAt ?? left.data.publishedAt)?.getTime() ?? 0);
+    ((right.data.displayPublishedAt ?? right.data.originalPublishedAt ?? right.data.publishedAt)?.getTime() ?? 0) -
+    ((left.data.displayPublishedAt ?? left.data.originalPublishedAt ?? left.data.publishedAt)?.getTime() ?? 0);
 
   if (publishedDiff !== 0) return publishedDiff;
 
@@ -662,7 +662,7 @@ function russianMaterialWord(count: number) {
                     href={articlePath(locale, section, material.data.slug)}
                     title={material.data.title}
                     summary={material.data.summary}
-                    publishedAt={(material.data.displayPublishedAt ?? .data.originalPublishedAt ?? material.data.publishedAt)!}
+                    publishedAt={(material.data.displayPublishedAt ?? material.data.originalPublishedAt ?? material.data.publishedAt)!}
                     locale={locale}
                   />
                 ))}
