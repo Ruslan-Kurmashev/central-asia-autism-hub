@@ -67,7 +67,7 @@ function shouldKeep(parent, child, index, ancestors) {
   // category labels in the final rendered article.
   const words = label.split(/\s+/u).length;
   if (isCategoryLabel(label) && label.length <= MAX_CATEGORY_LENGTH &&
-      words <= 7 && /^[^!?"«»]+[.:：]$/u.test(label)) return true;
+      words <= 6 && /^[^!?"«»]+[.:：]$/u.test(label)) return true;
 
   // Long labels remain context dependent to avoid broad sentence emphasis.
   if (isCategoryLabel(label) && isGroupedLabel(parent, ancestors) &&
