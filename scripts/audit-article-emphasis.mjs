@@ -5,6 +5,8 @@ import { join } from 'node:path';
 const roots = ['src/content/pages/kz/ru', 'src/content/pages/kz/kk', 'src/content/pages/kz/en', 'src/content/research'];
 const stats = { inspected: 0, published: 0, byLanguage: {}, boldLabels: 0, bulletsWithLabels: 0, definitionLabels: 0, tableLabels: 0, boldInlineSegments: 0, withoutEmphasis: 0 };
 const suspicious = [];
+const reviewCandidates = [];
+const candidateCounts = { groupedPlainParagraphs: 0, plainListLabels: 0 };
 for (const directory of roots) {
   for (const filename of await readdir(directory)) {
     if (!/\.mdx?$/.test(filename)) continue;
@@ -20,6 +22,26 @@ for (const directory of roots) {
     const body = source.slice(match[0].length);
     const lines = body.split(/\r?\n/);
     if (!/\*\*[^*\n]+\*\*/.test(body)) stats.withoutEmphasis++;
+    // Flag unformatted category labels for a human editorial pass. No automated content rewrite.
+    const listLabel = /^\\s*(?:[-*+]\\s+|\\d+[.)]\\s+)(?!\\*\\*)([^*:[\\]\\n]{3,65}?)[.:]\\s+(?!\\[)([^\\n]{8,})$/u;
+    const paraLabel = /^(?!\\*\\*|#|>|[-*]|\\||\\d+[.)])([\\p{Lu}][\\p{L}\\s()\\-]{4,55}?)[.]\\s+([\\p{Lu}][^\\n]{8,})$/u;
+    for (let i = 0; i < lines.length; i++) {
+      const line = lines[i], entry = listLabel.exec(line);
+      if (entry && entry[1].trim().split(/\\s+/).length <= 6 &&
+          !/^(?:предыдущ|следующ|вернуться|далее|также по теме|previous|next|further)/iu.test(entry[1].trim()) &&
+          !line.includes('](') && !/^\\s*[-*]\\s+https?:/iu.test(line)) {
+        candidateCounts.plainListLabels++;
+        if (reviewCandidates.length < 150) reviewCandidates.push([language, filename, i + 1, 'list', entry[1].trim(), line.slice(0, 145)]);
+      }
+      const m = paraLabel.exec(line);
+      if (m && m[1].trim().split(/\\s+/).length <= 6) {
+        const neighbor = [i-2,i-1,i+1,i+2].some(j => j>=0&&j<lines.length&&paraLabel.test(lines[j]));
+        if (neighbor) {
+          candidateCounts.groupedPlainParagraphs++;
+          if (reviewCandidates.length < 150) reviewCandidates.push([language, filename, i + 1, 'group', m[1].trim(), line.slice(0, 145)]);
+        }
+      }
+    }
     for (const line of lines) {
       if (/^\s*\*\*[^*\n]{1,100}\*\*/.test(line)) stats.boldLabels++;
       if (/^\s*(?:[-*+]|\d+\.)\s+\*\*[^*\n]+\*\*/.test(line)) stats.bulletsWithLabels++;
@@ -33,4 +55,5 @@ for (const directory of roots) {
 }
 console.log('Editorial emphasis audit (published articles): ' + JSON.stringify(stats));
 if (suspicious.length) console.log('Long emphasis lines for manual inspection: ' + [...new Set(suspicious)].join(', '));
+console.log('Unformatted labels for editorial review: ' + JSON.stringify({counts:candidateCounts, cases:reviewCandidates}));
 if (stats.published < 200) throw new Error('Article inventory unexpectedly incomplete');
