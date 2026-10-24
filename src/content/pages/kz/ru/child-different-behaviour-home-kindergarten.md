@@ -187,7 +187,29 @@ sources:
 
 ## 7. Наглядная схема: сравниваем условия, а не «характер»
 
-![Три последовательных вопроса для взрослых: условия, доступная поддержка, фактическое участие и состояние ребёнка.](/central-asia-autism-hub/images/editorial/parent-home-preschool-context-observation.svg)
+<div class="context-observation-grid" role="group" aria-label="Сравнение условий, поддержки и участия ребёнка">
+  <figure class="context-observation-card">
+    <div class="context-observation-card__images" aria-hidden="true">
+      <img src="/central-asia-autism-hub/images/editorial/context-lucide-house.svg" width="64" height="64" alt="" loading="lazy" />
+      <img src="/central-asia-autism-hub/images/editorial/context-lucide-school.svg" width="64" height="64" alt="" loading="lazy" />
+    </div>
+    <figcaption><strong>Условия</strong><span>Дом и садик, шум, люди, расписание</span></figcaption>
+  </figure>
+  <figure class="context-observation-card">
+    <div class="context-observation-card__images" aria-hidden="true">
+      <img src="/central-asia-autism-hub/images/editorial/context-lucide-messages-square.svg" width="64" height="64" alt="" loading="lazy" />
+      <img src="/central-asia-autism-hub/images/editorial/context-lucide-hand-heart.svg" width="64" height="64" alt="" loading="lazy" />
+    </div>
+    <figcaption><strong>Поддержка</strong><span>Паузы, общение и понятные шаги</span></figcaption>
+  </figure>
+  <figure class="context-observation-card">
+    <div class="context-observation-card__images" aria-hidden="true">
+      <img src="/central-asia-autism-hub/images/editorial/context-lucide-users-round.svg" width="64" height="64" alt="" loading="lazy" />
+      <img src="/central-asia-autism-hub/images/editorial/context-lucide-badge-check.svg" width="64" height="64" alt="" loading="lazy" />
+    </div>
+    <figcaption><strong>Участие</strong><span>Что ребёнок делает и как себя чувствует</span></figcaption>
+  </figure>
+</div>
 
 Вместо фразы «В садике он хороший, дома плохой» лучше вместе описать три составляющие.
 

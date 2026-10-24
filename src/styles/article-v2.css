@@ -1535,3 +1535,79 @@
     overflow-wrap: break-word;
   }
 }
+
+
+/* Context comparison: freely licensed vector pictures, with captions outside the SVGs. */
+.article-v2.context-home-preschool-article-body .article-v2__body .context-observation-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 0.75rem;
+  padding: 0.65rem;
+  margin: 1.5rem 0;
+  border-radius: 1rem;
+  background: #eef4fa;
+}
+.article-v2.context-home-preschool-article-body .article-v2__body .context-observation-card {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  min-width: 0;
+  padding: 1rem 0.8rem 1.15rem;
+  margin: 0;
+  border: 1px solid #bbd2ea;
+  border-radius: 0.85rem;
+  background: #fff;
+  text-align: center;
+}
+.article-v2.context-home-preschool-article-body .article-v2__body .context-observation-card__images {
+  display: flex;
+  flex: 0 0 auto;
+  justify-content: center;
+  align-items: center;
+  gap: 0.65rem;
+  height: 6.5rem;
+  margin-bottom: 0.8rem;
+}
+.article-v2.context-home-preschool-article-body .article-v2__body .context-observation-card__images img {
+  display: block;
+  flex: 0 1 3.5rem;
+  width: 3.5rem;
+  height: 3.5rem;
+  max-width: 100%;
+  object-fit: contain;
+}
+.article-v2.context-home-preschool-article-body .article-v2__body .context-observation-card figcaption {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.4rem;
+  margin: 0;
+  color: #173f72;
+  line-height: 1.45;
+  overflow-wrap: normal;
+  word-break: normal;
+  hyphens: none;
+}
+.article-v2.context-home-preschool-article-body .article-v2__body .context-observation-card figcaption strong {
+  display: block;
+  font-size: 1rem;
+  font-weight: 700;
+}
+.article-v2.context-home-preschool-article-body .article-v2__body .context-observation-card figcaption span {
+  display: block;
+  font-size: 0.85rem;
+  line-height: 1.55;
+}
+@media (max-width: 48rem) {
+  .article-v2.context-home-preschool-article-body .article-v2__body .context-observation-grid {
+    grid-template-columns: 1fr;
+    padding: 0.6rem;
+  }
+  .article-v2.context-home-preschool-article-body .article-v2__body .context-observation-card {
+    padding: 0.8rem 1rem 1.1rem;
+  }
+  .article-v2.context-home-preschool-article-body .article-v2__body .context-observation-card__images {
+    height: 4.75rem;
+    margin-bottom: 0.5rem;
+  }
+}

@@ -279,9 +279,28 @@ try {
         insideWidth:scroll?.clientWidth || 0,
         scrollWidth:scroll?.scrollWidth || 0,
         pageOverflow:document.documentElement.scrollWidth - innerWidth,
+        diagram:(()=>{
+          const cards=[...document.querySelectorAll('.context-observation-card')];
+          const icons=cards.flatMap(card=>[...card.querySelectorAll('img')]);
+          return {
+            count:cards.length,
+            labels:cards.map(card=>card.querySelector('figcaption strong')?.textContent?.trim()||''),
+            iconsLoaded:icons.length===6 && icons.every(img=>img.complete && img.naturalWidth>0),
+            overlapping:cards.some(card=>{
+              const art=card.querySelector('.context-observation-card__images');
+              const caption=card.querySelector('figcaption');
+              if(!art || !caption)return true;
+              return caption.getBoundingClientRect().top < art.getBoundingClientRect().bottom + 4;
+            }),
+          };
+        })(),
       };
     });
     console.log('USER_JOURNEY_CONTEXT_ARTICLE '+width+' '+JSON.stringify(layout));
+    verify(layout.diagram.count===3 &&
+      layout.diagram.labels.join('|')==='Условия|Поддержка|Участие' &&
+      layout.diagram.iconsLoaded && !layout.diagram.overlapping,
+      'Context article '+width+': three captioned illustrations must load without overlap');
     verify(layout.sectionCount===14,'Context article '+width+': TOC must have 14 sections');
     verify(layout.tables===4,'Context article '+width+': all four tables should be scroll-safe');
     verify(layout.coverFound&&layout.coverLoaded,'Context article '+width+': local Pexels photo not loaded');

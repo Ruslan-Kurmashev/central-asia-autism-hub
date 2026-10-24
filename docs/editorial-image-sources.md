@@ -902,7 +902,7 @@ These six images were supplied by the project owner in a ChatGPT conversation an
 | Local file | Attribution | Editorial use and rights |
 | --- | --- | --- |
 | `parent-context-home-preschool-pexels-7780915.jpg` | Mikhail Nilov, [Pexels photo 7780915](https://www.pexels.com/photo/a-woman-and-boy-playing-toys-together-7780915/), [Pexels licence](https://www.pexels.com/license/) | Natural stock photograph of an Asian parent playing with her child at home, illustrating one context of the article. It does not portray or identify autism or behavioural masking. The same hosted file is the hero and the listing card. |
-| `parent-home-preschool-context-observation.svg` | Original editable AutismHub line-icon diagram, updated 24 October 2026 | Illustrates comparison of conditions, support, and the child's participation. Educational schematic, not a diagnostic score. |
+| `context-lucide-house.svg`, `context-lucide-school.svg`, `context-lucide-messages-square.svg`, `context-lucide-hand-heart.svg`, `context-lucide-users-round.svg`, `context-lucide-badge-check.svg` | [Lucide Icons](https://github.com/lucide-icons/lucide/tree/main/icons), Copyright (c) 2026 Lucide Icons and Contributors, ISC License. Local copies recoloured to match AutismHub. License text: `public/images/editorial/context-lucide-icons-LICENSE.txt` | Matching open-source illustrations. Captions are separate HTML text so they wrap without overlapping the graphics. |
 
 
 ## Stock photograph for bilingual family speech and language guide (24 October 2026)
