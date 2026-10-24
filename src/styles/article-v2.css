@@ -1655,12 +1655,12 @@
   overflow-wrap: break-word;
 }
 .article-v2.parents-article-body .article-v2__body .skill-loss-stock-step figcaption strong {
-  font-size: 1.05rem;
+  font-size: var(--type-reading);
   letter-spacing: 0.04em;
   font-weight: 700;
 }
 .article-v2.parents-article-body .article-v2__body .skill-loss-stock-step figcaption span {
-  font-size: 0.95rem;
+  font-size: var(--type-small);
   line-height: 1.52;
 }
 @media (max-width: 48rem) {
