@@ -91,16 +91,20 @@ const articleV2Text = locale === 'en'
       important: 'Важно',
       next: 'Следующий материал по теме',
     };
-// The navigation counts top-level article sections (h2), not nested h3 subsections.
-// This long-form parents' guide has fourteen numbered chapters. Its FAQ questions,
-// internal h3s and unnumbered conclusion remain readable but are not TOC chapters.
+// Count main H2 chapters only. H3 subheadings always stay in the article body.
+// Where main chapters are explicitly numbered, unnumbered conclusions and
+// ancillary H2 blocks should not inflate the section total.
 const isHomePreschoolContext = data.translationKey === 'parents-child-context-dependent-behaviour-home-preschool';
 const isBilingualFamilyGuide = data.translationKey === 'parents-bilingual-family-speech-development';
+const mainHeadings = headings.filter(heading => heading.depth === 2);
+const numberedMainHeadings = mainHeadings.filter(heading => /^\d+[.)]\s/u.test(heading.text));
 const tocHeadings = isHomePreschoolContext
-  ? headings.filter(heading => heading.depth === 2 && /^(?:[1-9]|1[0-4])\.\s/u.test(heading.text))
+  ? mainHeadings.filter(heading => /^(?:[1-9]|1[0-4])\.\s/u.test(heading.text))
   : isBilingualFamilyGuide
-    ? headings.filter(heading => heading.depth === 2)
-    : headings.filter((heading) => heading.depth === 2);
+    ? mainHeadings
+    : numberedMainHeadings.length >= 2
+      ? numberedMainHeadings
+      : mainHeadings;
 // All articles show their first publication date, shared across translations.
 // updatedAt remains in content metadata for editorial history only.
 const displayDate = firstPublishedAt;
