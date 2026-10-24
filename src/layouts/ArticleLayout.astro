@@ -96,7 +96,7 @@ const articleV2Text = locale === 'en'
 // Where main chapters are explicitly numbered, unnumbered conclusions and
 // ancillary H2 blocks should not inflate the section total.
 const isHomePreschoolContext = data.translationKey === 'parents-child-context-dependent-behaviour-home-preschool';
-const tocHeadings = selectArticleSections(headings);
+const tocHeadings: Heading[] = selectArticleSections(headings);
 // All articles show their first publication date, shared across translations.
 // updatedAt remains in content metadata for editorial history only.
 const displayDate = firstPublishedAt;
