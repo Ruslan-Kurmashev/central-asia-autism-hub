@@ -1523,8 +1523,11 @@
   width: 22%;
 }
 @media (max-width: 48rem) {
-  .article-v2.context-home-preschool-article-body .article-v2__body .context-comparison-table-scroll table[data-mobile-cards='true'] {
+  .article-v2.context-home-preschool-article-body .article-v2__body .context-comparison-table-scroll table[data-mobile-cards='true'],
+  .article-v2.context-home-preschool-article-body .article-v2__body .context-comparison-table-scroll table[data-mobile-cards='true']:has(th:nth-child(3)),
+  .article-v2.context-home-preschool-article-body .article-v2__body .context-comparison-table-scroll table[data-mobile-cards='true']:has(th:nth-child(4)) {
     min-width: 0;
+    width: 100%;
   }
   .article-v2.context-home-preschool-article-body .article-v2__body .context-comparison-table-scroll :is(th, td) {
     min-width: 0;

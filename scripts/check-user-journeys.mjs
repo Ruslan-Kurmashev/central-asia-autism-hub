@@ -289,6 +289,8 @@ try {
     verify(layout.pageOverflow<=3,'Context article '+width+': horizontal document overflow');
     if(width===1440)verify(layout.scrollWidth>layout.insideWidth,
       'Context article '+width+': dense comparison table needs a horizontal scrollbar');
+    else verify(layout.scrollWidth<=layout.insideWidth+3,
+      'Context article '+width+': stacked mobile comparison cards should not scroll horizontally');
   }
   console.log('USER_JOURNEY_SUMMARY '+checks+' assertions; '+errors.length+' problems; '+(locales.length*widths.length*3)+' route visits.');
   for(const message of errors)console.log('USER_JOURNEY_FAIL '+message);
