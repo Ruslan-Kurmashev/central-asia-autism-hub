@@ -1522,7 +1522,7 @@
   min-width: 11rem;
   width: 22%;
 }
-@media (max-width: 38rem) {
+@media (max-width: 48rem) {
   .article-v2.context-home-preschool-article-body .article-v2__body .context-comparison-table-scroll table[data-mobile-cards='true'] {
     min-width: 0;
   }

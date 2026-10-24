@@ -257,6 +257,39 @@ try {
       Number(emphasis.labelWeight)>Number(emphasis.paragraphWeight),
       'ru communication / '+width+': semantic category label not visibly bold');
   }
+
+  // Verify the exact parent article that previously showed a 24-item TOC,
+  // small table columns and a placeholder instead of a stock photograph.
+  for (const width of [360, 768, 1440]) {
+    await navigate(base+'/kz/ru/parents/pochemu-rebenok-vedet-sebya-po-raznomu-doma-i-v-sadike/', width);
+    const layout = await evaluate(() => {
+      const toc=document.querySelector('.article-v2__sidebar nav');
+      const rows=[...document.querySelectorAll('.context-comparison-table-scroll table')];
+      const images=[...document.querySelectorAll('.article-v2__hero-art img')];
+      const image=images.find(x=>x.src.includes('parent-context-home-preschool-pexels-7780915.jpg'));
+      const first=rows[0]?.querySelector('td');
+      const scroll=document.querySelector('.context-comparison-table-scroll');
+      return {
+        sectionCount:toc?.querySelectorAll('li').length || 0,
+        headings:[...(toc?.querySelectorAll('a')||[])].map(x=>x.textContent?.trim()).slice(-2),
+        tables:rows.length,
+        cellWrap:first?getComputedStyle(first).overflowWrap:'',
+        coverFound:!!image,
+        coverLoaded:!!image?.naturalWidth,
+        insideWidth:scroll?.clientWidth || 0,
+        scrollWidth:scroll?.scrollWidth || 0,
+        pageOverflow:document.documentElement.scrollWidth - innerWidth,
+      };
+    });
+    console.log('USER_JOURNEY_CONTEXT_ARTICLE '+width+' '+JSON.stringify(layout));
+    verify(layout.sectionCount===14,'Context article '+width+': TOC must have 14 sections');
+    verify(layout.tables===4,'Context article '+width+': all four tables should be scroll-safe');
+    verify(layout.coverFound&&layout.coverLoaded,'Context article '+width+': local Pexels photo not loaded');
+    verify(layout.cellWrap!=='anywhere','Context article '+width+': broken word wrapping still enabled');
+    verify(layout.pageOverflow<=3,'Context article '+width+': horizontal document overflow');
+    if(width===1440)verify(layout.scrollWidth>layout.insideWidth,
+      'Context article '+width+': dense comparison table needs a horizontal scrollbar');
+  }
   console.log('USER_JOURNEY_SUMMARY '+checks+' assertions; '+errors.length+' problems; '+(locales.length*widths.length*3)+' route visits.');
   for(const message of errors)console.log('USER_JOURNEY_FAIL '+message);
   if(errors.length)process.exitCode=1;
