@@ -1590,12 +1590,12 @@
 }
 .article-v2.context-home-preschool-article-body .article-v2__body .context-observation-card figcaption strong {
   display: block;
-  font-size: 1rem;
+  font-size: var(--type-reading);
   font-weight: 700;
 }
 .article-v2.context-home-preschool-article-body .article-v2__body .context-observation-card figcaption span {
   display: block;
-  font-size: 0.85rem;
+  font-size: var(--type-small);
   line-height: 1.55;
 }
 @media (max-width: 48rem) {
