@@ -27,11 +27,19 @@ async function visit(directory, locale) {
     assert.ok(html.includes('article-v2__body'), relative + ': article body missing');
     assert.ok(!html.includes('data-article-next-chapter'), relative + ': unexpected forced pagination');
     const sidebar = html.match(/<aside class="article-v2__sidebar"[^>]*>([\s\S]*?)<\/aside>/)?.[1] ?? '';
-    for (const match of sidebar.matchAll(/<a\s+href="#([^"]+)"/g)) {
+    const tocLinks = [...sidebar.matchAll(/<a\s+href="#([^"]+)"/g)];
+    const h2Ids = new Set([...html.matchAll(/<h2\b[^>]*\bid="([^"]+)"/g)].map(match => match[1]));
+    for (const match of tocLinks) {
       const id = match[1];
-      assert.ok(id && html.includes('id="' + id + '"'),
-        relative + ': TOC anchor has no matching destination #' + id);
+      assert.ok(h2Ids.has(id),
+        relative + ': navigation must link to a top-level H2 section, not a nested H3: #' + id);
       chapterLinks++;
+    }
+    const shownTotal = sidebar.match(/data-toc-current[^>]*>[\s\S]*?<\/span>\s*\/\s*(\d+)/)?.[1];
+    if (tocLinks.length > 0) {
+      assert.ok(shownTotal, relative + ': section progress total is missing');
+      assert.equal(Number(shownTotal), tocLinks.length,
+        relative + ': section progress total must equal the number of main sections');
     }
     results[locale]++;
   }
