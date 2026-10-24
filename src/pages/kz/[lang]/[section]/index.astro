@@ -474,9 +474,9 @@ function russianMaterialWord(count: number) {
                             </span>
                             <span class="section-v2__article-meta">
                               <time
-                                datetime={material.data.updatedAt!.toISOString()}
+                                datetime={(material.data.displayPublishedAt ?? material.data.originalPublishedAt ?? material.data.publishedAt)!.toISOString()}
                               >
-                                {dateFormatter.format(material.data.updatedAt!)}
+                                {dateFormatter.format((material.data.displayPublishedAt ?? material.data.originalPublishedAt ?? material.data.publishedAt)!)}
                               </time>
                               <span aria-hidden="true">→</span>
                             </span>
@@ -574,9 +574,9 @@ function russianMaterialWord(count: number) {
                           </span>
                           <span class="section-v2__article-meta">
                             <time
-                              datetime={material.data.updatedAt!.toISOString()}
+                              datetime={(material.data.displayPublishedAt ?? material.data.originalPublishedAt ?? material.data.publishedAt)!.toISOString()}
                             >
-                              {dateFormatter.format(material.data.updatedAt!)}
+                              {dateFormatter.format((material.data.displayPublishedAt ?? material.data.originalPublishedAt ?? material.data.publishedAt)!)}
                             </time>
                             <span aria-hidden="true">→</span>
                           </span>
