@@ -6,6 +6,7 @@
 import assert from 'node:assert/strict';
 import { readFile, readdir } from 'node:fs/promises';
 import path from 'node:path';
+import { selectArticleSections } from '../src/lib/article-outline.mjs';
 
 const locales = ['ru', 'kk', 'en'];
 const root = path.resolve('dist/kz');
@@ -136,12 +137,7 @@ for (const directory of outlineRoots) {
       });
     }
     const main = headings.filter(h => h.depth === 2);
-    const numbered = main.filter(h => /^\d+[.)]\s/u.test(h.text));
-    const isContext = key === 'parents-child-context-dependent-behaviour-home-preschool';
-    const isBilingual = key === 'parents-bilingual-family-speech-development';
-    const expected = isContext
-      ? main.filter(h => /^(?:[1-9]|1[0-4])\.\s/u.test(h.text))
-      : isBilingual ? main : numbered.length >= 2 ? numbered : main;
+    const expected = selectArticleSections(headings);
 
     const htmlPath = path.join(root, language, section, slug, 'index.html');
     const html = await readFile(htmlPath, 'utf8');

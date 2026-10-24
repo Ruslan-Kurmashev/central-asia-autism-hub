@@ -6,6 +6,7 @@ import { internationalGuidelineCountries } from '../data/international-professio
 import { CONTENT_UI, DATE_LOCALES } from '../i18n/content';
 import { UI } from '../i18n/ui';
 import { articlePath, localePath, sectionPath } from '../lib/urls';
+import { selectArticleSections } from '../lib/article-outline.mjs';
 import { SITE, type Locale } from '../site.config';
 import '../styles/article-v2.css';
 import BaseLayout from './BaseLayout.astro';
@@ -95,16 +96,7 @@ const articleV2Text = locale === 'en'
 // Where main chapters are explicitly numbered, unnumbered conclusions and
 // ancillary H2 blocks should not inflate the section total.
 const isHomePreschoolContext = data.translationKey === 'parents-child-context-dependent-behaviour-home-preschool';
-const isBilingualFamilyGuide = data.translationKey === 'parents-bilingual-family-speech-development';
-const mainHeadings = headings.filter(heading => heading.depth === 2);
-const numberedMainHeadings = mainHeadings.filter(heading => /^\d+[.)]\s/u.test(heading.text));
-const tocHeadings = isHomePreschoolContext
-  ? mainHeadings.filter(heading => /^(?:[1-9]|1[0-4])\.\s/u.test(heading.text))
-  : isBilingualFamilyGuide
-    ? mainHeadings
-    : numberedMainHeadings.length >= 2
-      ? numberedMainHeadings
-      : mainHeadings;
+const tocHeadings = selectArticleSections(headings);
 // All articles show their first publication date, shared across translations.
 // updatedAt remains in content metadata for editorial history only.
 const displayDate = firstPublishedAt;
