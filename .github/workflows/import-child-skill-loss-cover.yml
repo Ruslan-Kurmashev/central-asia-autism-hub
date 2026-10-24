@@ -1,0 +1,31 @@
+name: Import licensed skill-loss article stock photo
+on:
+  push:
+    paths:
+      - '.github/workflows/import-child-skill-loss-cover.yml'
+  workflow_dispatch:
+permissions:
+  contents: write
+jobs:
+  import-stock:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: true
+      - name: Download and validate original Pexels stock photograph
+        run: |
+          set -euo pipefail
+          mkdir -p public/images/editorial
+          curl --fail --location --retry 4 --connect-timeout 20 --max-time 120 'https://images.pexels.com/photos/7943496/pexels-photo-7943496.jpeg?auto=compress&cs=tinysrgb&w=1400&q=83' --output public/images/editorial/parent-child-skills-cards-pexels-7943496.jpg
+          test "$(wc -c < public/images/editorial/parent-child-skills-cards-pexels-7943496.jpg)" -gt 20000
+          file public/images/editorial/parent-child-skills-cards-pexels-7943496.jpg | grep -q 'JPEG image'
+      - name: Commit licensed image asset to main
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add public/images/editorial/parent-child-skills-cards-pexels-7943496.jpg
+          if ! git diff --cached --quiet; then
+            git commit -m 'Import Nicola Barts stock photograph for child skill loss article'
+            git push origin HEAD:main
+          fi
