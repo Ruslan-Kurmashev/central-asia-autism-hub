@@ -9,6 +9,7 @@ on:
       - 'src/scripts/site-search-client.js'
       - 'src/styles/**'
       - 'src/pages/**'
+      - 'src/content/pages/**'
       - 'src/data/kazakhstan-announcements.ts'
   workflow_dispatch:
 
