@@ -2,8 +2,8 @@
 title: "Развитие речи в двуязычной семье: что нужно знать родителям"
 summary: "Русский, казахский и другие языки в семье: как развивается общение, почему смешивание языков нормально, что делать дома и как обсуждать речевое развитие со специалистом."
 description: "Практическое руководство для двуязычных семей Казахстана о развитии речи, двух языках при аутизме, мифах, семейном общении и корректной оценке речевых трудностей."
-featuredImage: "/central-asia-autism-hub/images/editorial/parent-bilingual-language-book-cover.svg"
-featuredImageAlt: "Раскрытая книга с обозначениями русского и казахского языков, иллюстрация семейного чтения и двуязычного развития."
+featuredImage: "/central-asia-autism-hub/images/editorial/parent-bilingual-childrens-books-cc0.jpg"
+featuredImageAlt: "Реальная фотография детских книг на полке, без людей в кадре."
 country: kz
 language: ru
 section: parents
