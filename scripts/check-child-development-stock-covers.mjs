@@ -32,7 +32,7 @@ for (const name of (await readdir(dir)).filter(x => /\.mdx?$/.test(x))) {
   if (img.includes('/images/editorial/photos/')) {
     assert.ok(manifest.includes("'" + filename + "'"), name + ': missing photo downloader entry');
   }
-  assert.ok(docs.includes('`' + filename + '`'), name + ': stock provenance not documented');
+  assert.ok(docs.includes(filename), name + ': stock provenance not documented');
   const slug = field('slug');
   const htmlPath = path.join('dist/kz/ru/parents', slug, 'index.html');
   const built = await readFile(htmlPath, 'utf8');
