@@ -59,20 +59,36 @@ if (!chromeName) {
 }
 let profile, chrome, socket;
 try {
-  profile = await mkdtemp(path.join(os.tmpdir(),'autismhub-visitor-qa-'));
-  chrome = spawn(chromeName,['--headless=new','--no-sandbox','--disable-gpu',
-    '--disable-dev-shm-usage','--no-first-run','--remote-debugging-port=0',
-    '--user-data-dir='+profile,'about:blank'],{stdio:'ignore'});
+  // Some GitHub runners fail to start headless Chrome on the first attempt.
+  // Retry with a clean profile and print a short diagnostic instead of
+  // silently exiting without any browser assertions.
+  const variants = ['--headless=new', '--headless', '--headless=new'];
   let debugPort = null;
-  for(let attempt=0;attempt<120;attempt++){
-    try {
-      debugPort = Number((await readFile(path.join(profile,'DevToolsActivePort'),'utf8')).split('\n')[0]);
-      if(debugPort) break;
-    } catch {}
-    if(chrome.exitCode!==null)break;
-    await delay(100);
+  for (let retry=0;retry<variants.length && !debugPort;retry++){
+    profile = await mkdtemp(path.join(os.tmpdir(),'autismhub-visitor-qa-'));
+    let stderr = '';
+    chrome = spawn(chromeName,[variants[retry],'--no-sandbox','--disable-gpu',
+      '--disable-dev-shm-usage','--no-first-run','--remote-debugging-port=0',
+      '--user-data-dir='+profile,'about:blank'],{stdio:['ignore','ignore','pipe']});
+    chrome.stderr?.on('data',bytes=>{stderr=(stderr+String(bytes)).slice(-1200);});
+    chrome.on('error',e=>{stderr=(stderr+' '+String(e)).slice(-1200);});
+    for(let attempt=0;attempt<120;attempt++){
+      try {
+        debugPort = Number((await readFile(path.join(profile,'DevToolsActivePort'),'utf8')).split('\n')[0]);
+        if(debugPort)break;
+      } catch {}
+      if(chrome.exitCode!==null)break;
+      await delay(100);
+    }
+    if(!debugPort){
+      console.warn('Chrome start retry '+(retry+1)+': exit='+chrome.exitCode+' '+stderr.slice(-500));
+      if(chrome.exitCode===null)chrome.kill('SIGTERM');
+      await delay(250);
+      await rm(profile,{recursive:true,force:true,maxRetries:5,retryDelay:100}).catch(()=>{});
+      profile=null;
+    }
   }
-  if(!debugPort)throw Error('Chrome debugger did not start');
+  if(!debugPort)throw Error('BROWSER_INCONCLUSIVE: Chrome debugger did not start after three attempts');
   const targets = await (await fetch('http://127.0.0.1:'+debugPort+'/json/list')).json();
   const tab = targets.find(t=>t.type==='page');
   if(!tab)throw Error('Chrome page target unavailable');
