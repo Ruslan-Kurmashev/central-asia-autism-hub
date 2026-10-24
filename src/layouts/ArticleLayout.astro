@@ -91,6 +91,7 @@ const articleV2Text = locale === 'en'
       important: 'Важно',
       next: 'Следующий материал по теме',
     };
+// The navigation counts top-level article sections (h2), not nested h3 subsections.
 // This long-form parents' guide has fourteen numbered chapters. Its FAQ questions,
 // internal h3s and unnumbered conclusion remain readable but are not TOC chapters.
 const isHomePreschoolContext = data.translationKey === 'parents-child-context-dependent-behaviour-home-preschool';
@@ -99,7 +100,7 @@ const tocHeadings = isHomePreschoolContext
   ? headings.filter(heading => heading.depth === 2 && /^(?:[1-9]|1[0-4])\.\s/u.test(heading.text))
   : isBilingualFamilyGuide
     ? headings.filter(heading => heading.depth === 2)
-    : headings.filter((heading) => heading.depth === 2 || heading.depth === 3);
+    : headings.filter((heading) => heading.depth === 2);
 // All articles show their first publication date, shared across translations.
 // updatedAt remains in content metadata for editorial history only.
 const displayDate = firstPublishedAt;
