@@ -11,12 +11,13 @@ const base = '/central-asia-autism-hub/';
 const manifest = await readFile('scripts/sync-editorial-photos.mjs', 'utf8');
 const docs = await readFile('docs/editorial-image-sources.md', 'utf8');
 const owners = new Map();
+const parentListing = await readFile('dist/kz/ru/parents/index.html', 'utf8');
 let scanned = 0;
 for (const name of (await readdir(dir)).filter(x => /\.mdx?$/.test(x))) {
   const raw = await readFile(path.join(dir, name), 'utf8');
   const meta = raw.match(/^---\r?\n([\s\S]*?)\r?\n---/)?.[1] ?? '';
   const field = key => meta.match(new RegExp('^' + key + ':\\s*(.+)$', 'm'))?.[1]?.trim().replace(/^["']|["']$/g,'') ?? '';
-  if (field('section') !== 'parents' || field('topic') !== 'child-development' ||
+  if (field('section') !== 'parents' || !['child-development', 'development-concerns'].includes(field('topic')) ||
       field('draft') !== 'false' || field('translationStatus') === 'pending') continue;
   scanned++;
   const img = field('featuredImage');
@@ -38,7 +39,8 @@ for (const name of (await readdir(dir)).filter(x => /\.mdx?$/.test(x))) {
   const built = await readFile(htmlPath, 'utf8');
   assert.ok(built.includes('class="article-v2__hero-art') && built.includes(img),
     name + ': built article hero must contain its featured photograph');
+  assert.ok(parentListing.includes(img), name + ': subsection listing must use the same photograph');
 }
-assert.ok(scanned >= 11, 'Child-development coverage unexpectedly small: ' + scanned);
-console.log('Child-development real stock covers PASS:', scanned,
+assert.ok(scanned >= 12, 'Child-development coverage unexpectedly small: ' + scanned);
+console.log('Full development subsection real stock covers PASS:', scanned,
   'published Russian articles, distinct photos with documented source, valid files and HTML heroes.');
