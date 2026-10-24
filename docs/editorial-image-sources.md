@@ -903,3 +903,10 @@ These six images were supplied by the project owner in a ChatGPT conversation an
 | --- | --- | --- |
 | `parent-context-home-preschool-pexels-7780915.jpg` | Mikhail Nilov, [Pexels photo 7780915](https://www.pexels.com/photo/a-woman-and-boy-playing-toys-together-7780915/), [Pexels licence](https://www.pexels.com/license/) | Natural stock photograph of an Asian parent playing with her child at home, illustrating one context of the article. It does not portray or identify autism or behavioural masking. The same hosted file is the hero and the listing card. |
 | `parent-home-preschool-context-observation.svg` | Original editable AutismHub line-icon diagram, updated 24 October 2026 | Illustrates comparison of conditions, support, and the child's participation. Educational schematic, not a diagnostic score. |
+
+
+## Stock photograph for bilingual family speech and language guide (24 October 2026)
+
+| Hosted file | Photographer and licence | Editorial use |
+| --- | --- | --- |
+| `parent-bilingual-family-reading-pexels-7105614.jpg` | Kindel Media, [Pexels photo 7105614](https://www.pexels.com/photo/a-mother-and-her-kids-reading-a-book-7105614/), [Pexels licence](https://www.pexels.com/license/) | Documentary stock photograph of a mother reading an illustrated book with two children at home. Used as the article cover, parent listing thumbnail and hero image for `bilingual-family-speech-language-development.md`. The people shown are stock models and are not presented as a Kazakh family, autistic people or patients. The photo illustrates family reading and communication, not a specific language technique or diagnostic outcome. |
