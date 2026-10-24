@@ -909,9 +909,15 @@ These six images were supplied by the project owner in a ChatGPT conversation an
 
 | Hosted file | Photographer and licence | Editorial use |
 | --- | --- | --- |
-| `parent-bilingual-reading-pexels-5094108.jpg` | Kamaji Ogino, [Pexels photo 5094108](https://www.pexels.com/photo/crop-asian-mother-with-daughter-reading-tale-5094108/), [Pexels licence](https://www.pexels.com/license/) | Documentary stock photograph of a parent with a child sharing a storybook. Chosen for a natural domestic reading scene, without claiming the pictured models are from Kazakhstan or have any diagnosis. Used as the same cover in the article and parents' directory. |
+| `parent-bilingual-childrens-books-cc0.jpg` | Robyn Budlender, [Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Children%27s_books_(Unsplash).jpg), [CC0](https://creativecommons.org/publicdomain/zero/1.0/) | Photograph of children's books on a shelf, used on the article page and its listing card. |
+| `parent-bilingual-reading-pexels-5094108.jpg` | Kamaji Ogino, Pexels photo 5094108 | Former cover, withdrawn from publication. |
 | `parent-bilingual-family-reading-pexels-7105614.jpg` | Kindel Media, [Pexels photo 7105614](https://www.pexels.com/photo/a-mother-and-her-kids-reading-a-book-7105614/), [Pexels licence](https://www.pexels.com/license/) | Former cover, withdrawn from the site at the project owner's request because the visual did not align with the project's regional editorial direction. The file is removed from the repository and must not be reused as a cover without separate review. |
 
 ## Regional photo selection policy for AutismHub (24 October 2026)
 
 For parent, professional and healthcare articles about Kazakhstan and Central Asia, favour authentic, natural photographs sourced from or directly relevant to Kazakhstan and Central Asia. When a geographically documented photo is unavailable, use a neutral family interaction photo that does not imply any specific nationality or local community. Do not represent stock models as Kazakh families, autism patients, or real local families without verified provenance. Avoid visually irrelevant stock selections and do not use AI-generated imagery. Check subject matter, crop, licence, editorial attribution and distinctiveness before publishing. For region-specific material, verify geographic provenance from a caption or reliable source rather than inferring nationality or ethnicity from appearance.
+
+
+## Photo selection rule for regional articles (24 October 2026)
+
+Prefer photographs with documented Kazakhstan or Central Asian provenance. When no suitable photo is available, use a neutral object-only photograph, such as books, materials or educational tools, rather than a generic portrait. Do not infer regional provenance from appearance. Review the subject and crop before publishing.
