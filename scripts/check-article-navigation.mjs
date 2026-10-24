@@ -11,6 +11,7 @@ const locales = ['ru', 'kk', 'en'];
 const root = path.resolve('dist/kz');
 const results = Object.fromEntries(locales.map((locale) => [locale, 0]));
 let chapterLinks = 0;
+let skillLossGuideChecked = false;
 
 async function visit(directory, locale) {
   for (const item of await readdir(directory, { withFileTypes: true })) {
@@ -41,6 +42,11 @@ async function visit(directory, locale) {
       assert.equal(Number(shownTotal), tocLinks.length,
         relative + ': section progress total must equal the number of main sections');
     }
+    if (locale === 'ru' && relative.includes('rebenok-perestal-delat-to-chto-umel-poterya-navykov/')) {
+      assert.equal(tocLinks.length, 13,
+        'Skill-loss guide must show exactly 13 numbered chapters, excluding 11 H3s and the summary');
+      skillLossGuideChecked = true;
+    }
     results[locale]++;
   }
 }
@@ -50,6 +56,7 @@ for (const locale of locales) {
   assert.ok(results[locale] > 0, locale + ': no published one-page articles tested');
 }
 assert.ok(chapterLinks > 50, 'too few linked chapter headings in built articles');
+assert.ok(skillLossGuideChecked, 'the Russian skill-loss article must be included in navigation QA');
 
 const css = await readFile('src/styles/article-v2.css', 'utf8');
 const layout = await readFile('src/layouts/ArticleLayout.astro', 'utf8');
