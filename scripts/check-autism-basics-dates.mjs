@@ -45,6 +45,21 @@ for (const locale of locales) {
 const sources = [...values.entries()].filter(([key]) => key.startsWith('ru/'));
 assert.ok(sources.length >= 10, 'Expected at least ten Russian autism-basics articles');
 
+// Verify the actual accordion card dates, not only dates inside article pages.
+const listingRowsByLocale = new Map();
+for (const locale of locales) {
+  const listingPath = path.join(dist, locale, 'parents', 'index.html');
+  try {
+    const listingHtml = await readFile(listingPath, 'utf8');
+    const rows = listingHtml.match(/<a\\b[^>]*class="[^"]*section-v2__article-row[^"]*"[^>]*>[\\s\\S]*?<\\/a>/g) ?? [];
+    listingRowsByLocale.set(locale, rows);
+    if (rows.length < 10) errors.push(locale + ': too few parent article cards in built HTML');
+  } catch {
+    errors.push(locale + ': parent section listing missing: ' + listingPath);
+    listingRowsByLocale.set(locale, []);
+  }
+}
+
 let checked = 0;
 for (const [sourceKey, source] of sources) {
   const key = sourceKey.slice(3);
@@ -71,6 +86,17 @@ for (const [sourceKey, source] of sources) {
     if (!actual || actual.slice(0, 10) !== first) {
       errors.push(locale + '/' + article.slug + ': page date ' +
         (actual || '(missing)') + ', expected Russian ' + first);
+    }
+    const matchingRows = (listingRowsByLocale.get(locale) ?? []).filter(row =>
+      row.includes('/' + locale + '/parents/' + article.slug + '/'));
+    if (matchingRows.length !== 1) {
+      errors.push(locale + '/' + article.slug + ': expected one listing card, found ' + matchingRows.length);
+    } else {
+      const listedDate = matchingRows[0].match(/<time\\b[^>]*datetime="([^"]+)"/)?.[1];
+      if (!listedDate || listedDate.slice(0, 10) !== first) {
+        errors.push(locale + '/' + article.slug + ': listing date ' +
+          (listedDate || '(missing)') + ', expected Russian ' + first);
+      }
     }
     checked++;
   }
