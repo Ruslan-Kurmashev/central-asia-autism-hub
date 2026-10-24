@@ -2,8 +2,8 @@
 title: "Как наблюдать за развитием ребёнка дома: практическое руководство"
 summary: "Как замечать новые навыки и возникающие трудности в обычной жизни, вести короткие записи без тестирования ребёнка и подготовить полезные вопросы для специалиста."
 description: "Практическое руководство для родителей по домашнему наблюдению за развитием ребёнка: примеры записей, дневник наблюдений, разговор со специалистом и ограничения самостоятельной оценки."
-featuredImage: "/central-asia-autism-hub/images/editorial/parent-development-observation-diary.svg"
-featuredImageAlt: "Редакционная схема дневника: место для записи ситуации, наблюдения и вопроса к специалисту."
+featuredImage: "/central-asia-autism-hub/images/editorial/photos/parent-child-development-observation-desk.jpg"
+featuredImageAlt: "Открытые тетради, карандаши, книги и игрушки на столе, материалы для наблюдений за развитием ребёнка."
 country: kz
 language: ru
 section: parents

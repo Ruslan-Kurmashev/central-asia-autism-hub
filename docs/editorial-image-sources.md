@@ -927,3 +927,17 @@ For parent, professional and healthcare articles about Kazakhstan and Central As
 ## Photo selection rule for regional articles (24 October 2026)
 
 Prefer photographs with documented Kazakhstan or Central Asian provenance. When no suitable photo is available, use a neutral object-only photograph, such as books, materials or educational tools, rather than a generic portrait. Do not infer regional provenance from appearance. Review the subject and crop before publishing.
+
+## «Родителям → Развитие ребёнка»: отдельные реальные стоковые фотографии (2026-10-24)
+
+Все изображения — документальные стоковые фотографии Pexels, а не рисунки или изображения, созданные ИИ. Лицензия: https://www.pexels.com/license/ . Источники и авторы сверены 24 октября 2026 года. Все JPEG загружаются на этапе сборки в локальную папку `public/images/editorial/photos`, то есть браузер не загружает фотографии с внешнего сайта. Одна фотография используется на карточке публикации и на странице статьи. Фотографии иллюстративные, они не доказывают нейроразвитийный статус ребёнка или эффективность какой-либо помощи.
+
+| Файл | Статья | Фотограф | Оригинал Pexels | Что на фотографии |
+| --- | --- | --- | --- | --- |
+| `photos/parent-child-independent-clothes-folding.jpg` | Как развивается самостоятельность ребёнка в повседневной жизни | Annushka Ahuja | https://www.pexels.com/photo/mother-and-daughter-holding-and-folding-clothes-8055730/ | Совместное складывание одежды в семье, реальная домашняя практика |
+| `photos/parent-child-development-observation-desk.jpg` | Как наблюдать за развитием ребёнка дома | Ron Lach | https://www.pexels.com/photo/a-shot-of-a-desk-with-notebooks-on-it-9871135/ | Книги, тетради, карандаши и игрушки, наблюдение и записи |
+| `photos/parent-child-emotion-coregulation-family.jpg` | Развитие эмоций и саморегуляции | Kamaji Ogino | https://www.pexels.com/photo/positive-young-asian-mother-and-daughter-embracing-while-playing-together-at-home-5094014/ | Тёплое взаимодействие матери и дочери во время совместной игры |
+| `photos/parent-child-everyday-communication-book.jpg` | Как помогать ребёнку развивать общение в повседневной жизни | Leeloo The First | https://www.pexels.com/photo/child-reading-a-book-7307940/ | Рука ребёнка указывает на рисунок в детской книге |
+| `photos/parent-child-motor-stacking-wooden-toys.jpg` | Развитие движений и мелкой моторики | Artem Podrez | https://www.pexels.com/photo/a-kid-playing-wooden-toys-6951563/ | Игра с деревянными игрушками и предметами для манипуляции руками |
+| `photos/parent-child-pretend-kitchen-play.jpg` | Как развивается игра ребёнка | Kamaji Ogino | https://www.pexels.com/photo/unrecognizable-child-playing-with-fake-kitchenware-5093655/ | Анонимный ребёнок использует игрушечную кухонную посуду, сюжетная игра |
+| `photos/parent-child-speech-shared-reading.jpg` | Развитие речи и понимания | Mizuno K | https://www.pexels.com/photo/mother-reading-a-book-to-her-child-in-the-bedroom-12788608/ | Совместное чтение ребёнка с матерью, повседневное общение |

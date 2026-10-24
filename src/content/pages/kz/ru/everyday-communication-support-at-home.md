@@ -2,8 +2,8 @@
 title: "Как помогать ребёнку развивать общение в повседневной жизни"
 summary: "Понятные способы поддерживать общение во время еды, прогулок, одевания, чтения и игры: замечать инициативу ребёнка, отвечать на неё и принимать разные способы коммуникации."
 description: "Практическое руководство AutismHub для родителей: как поддерживать общение ребёнка дома без специальных занятий, давления, обязательного зрительного контакта и принуждения к устной речи."
-featuredImage: "/central-asia-autism-hub/images/editorial/parent-everyday-communication-cover.svg"
-featuredImageAlt: "Авторская векторная обложка: домашние предметы, речевые облака и жесты, символизирующие разные способы общения."
+featuredImage: "/central-asia-autism-hub/images/editorial/photos/parent-child-everyday-communication-book.jpg"
+featuredImageAlt: "Рука ребёнка указывает на рисунок в открытой детской книге, пример общения при совместном чтении."
 country: kz
 language: ru
 section: parents

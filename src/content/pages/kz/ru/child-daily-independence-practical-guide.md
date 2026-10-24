@@ -2,8 +2,8 @@
 title: "Как развивается самостоятельность ребёнка в повседневной жизни"
 summary: "Как помогать ребёнку участвовать в одевании, еде, гигиене и домашних делах: пошаговые примеры, картинки и три бесплатных набора карточек для печати."
 description: "Практическое руководство для родителей по бытовой самостоятельности: одежда, ложка, чашка, мытьё рук, зубы, туалет, безопасные домашние дела, визуальные подсказки и PDF."
-featuredImage: "/central-asia-autism-hub/images/editorial/parent-daily-independence-cover.svg"
-featuredImageAlt: "Оригинальная схематическая иллюстрация: одежда, чашка и коробка для игрушек, обозначающие участие ребёнка в повседневных делах."
+featuredImage: "/central-asia-autism-hub/images/editorial/photos/parent-child-independent-clothes-folding.jpg"
+featuredImageAlt: "Мама и дочь вместе складывают одежду дома, пример освоения ребёнком повседневных действий без оценки самостоятельности."
 country: kz
 language: ru
 section: parents

@@ -2,8 +2,8 @@
 title: "Развитие движений и мелкой моторики: что можно делать дома"
 summary: "25 безопасно адаптируемых домашних игр, восемь пошаговых схем и четыре сборника для печати: движение, координация рук, самостоятельность, недельный план и дневник наблюдений."
 description: "Практические игры для развития крупной и мелкой моторики у детей: упражнения, пошаговые иллюстрации, 25 идей и четыре бесплатных PDF для родителей."
-featuredImage: "/central-asia-autism-hub/images/editorial/parent-motor-skills-guide-cover.svg"
-featuredImageAlt: "Векторная иллюстрация больших кубиков, мягкого мяча, полосы на полу и бумаги: примеры безопасных материалов для двигательной игры дома."
+featuredImage: "/central-asia-autism-hub/images/editorial/photos/parent-child-motor-stacking-wooden-toys.jpg"
+featuredImageAlt: "Ребёнок играет с деревянными предметами для складывания и сортировки, пример игры с движениями рук и пальцев."
 country: kz
 language: ru
 section: parents
