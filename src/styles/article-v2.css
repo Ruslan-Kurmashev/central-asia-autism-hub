@@ -1481,3 +1481,54 @@
   }
 }
 
+
+
+/* The parent home/preschool guide contains meaningful multi-column comparisons.
+   Preserve whole words; offer accessible horizontal scrolling at desktop zoom. */
+.article-v2.context-home-preschool-article-body .context-comparison-table-scroll {
+  max-width: 100%;
+  margin: 1.5rem 0 2rem;
+  overflow-x: auto;
+  overscroll-behavior-x: contain;
+  border: 1px solid var(--article-line);
+  border-radius: var(--radius-small);
+}
+.article-v2.context-home-preschool-article-body .context-comparison-table-scroll:focus-visible {
+  outline: 3px solid var(--color-focus);
+  outline-offset: 3px;
+}
+.article-v2.context-home-preschool-article-body .article-v2__body .context-comparison-table-scroll table {
+  min-width: 38rem;
+  width: 100%;
+  max-width: none;
+  margin: 0;
+  border: 0;
+  table-layout: auto;
+}
+.article-v2.context-home-preschool-article-body .article-v2__body .context-comparison-table-scroll table:has(th:nth-child(3)) {
+  min-width: 49rem;
+}
+.article-v2.context-home-preschool-article-body .article-v2__body .context-comparison-table-scroll table:has(th:nth-child(4)) {
+  min-width: 63rem;
+}
+.article-v2.context-home-preschool-article-body .article-v2__body .context-comparison-table-scroll :is(th, td) {
+  overflow-wrap: normal;
+  word-break: normal;
+  hyphens: none;
+  min-width: 9rem;
+  vertical-align: top;
+}
+.article-v2.context-home-preschool-article-body .article-v2__body .context-comparison-table-scroll :is(th, td):first-child {
+  min-width: 11rem;
+  width: 22%;
+}
+@media (max-width: 38rem) {
+  .article-v2.context-home-preschool-article-body .article-v2__body .context-comparison-table-scroll table[data-mobile-cards='true'] {
+    min-width: 0;
+  }
+  .article-v2.context-home-preschool-article-body .article-v2__body .context-comparison-table-scroll :is(th, td) {
+    min-width: 0;
+    width: auto;
+    overflow-wrap: break-word;
+  }
+}

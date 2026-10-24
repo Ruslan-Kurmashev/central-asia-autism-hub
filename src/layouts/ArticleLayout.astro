@@ -91,7 +91,12 @@ const articleV2Text = locale === 'en'
       important: 'Важно',
       next: 'Следующий материал по теме',
     };
-const tocHeadings = headings.filter((heading) => heading.depth === 2 || heading.depth === 3);
+// This long-form parents' guide has fourteen numbered chapters. Its FAQ questions,
+// internal h3s and unnumbered conclusion remain readable but are not TOC chapters.
+const isHomePreschoolContext = data.translationKey === 'parents-child-context-dependent-behaviour-home-preschool';
+const tocHeadings = isHomePreschoolContext
+  ? headings.filter(heading => heading.depth === 2 && /^(?:[1-9]|1[0-4])\.\s/u.test(heading.text))
+  : headings.filter((heading) => heading.depth === 2 || heading.depth === 3);
 // All articles show their first publication date, shared across translations.
 // updatedAt remains in content metadata for editorial history only.
 const displayDate = firstPublishedAt;
@@ -111,7 +116,7 @@ const researchLabel: Record<Locale, string> = {
   currentSection={data.section}
   alternatePath={data.section}
   alternatePaths={alternatePaths}
-  bodyClass={useArticleV2 ? (data.section === 'parents' ? (data.translationKey === 'parents-autism-neurodiversity-language' ? 'article-v2 parents-article-body neurodiversity-article-body' : 'article-v2 parents-article-body') : data.section === 'research' ? 'article-v2 research-article-body' : data.section === 'help-kazakhstan' ? 'article-v2 kz-help-article-body' : kazakhstanGroup ? 'article-v2 professionals-article-body kz-professionals-document-body' : data.section === 'professionals' ? 'article-v2 professionals-article-body' : 'article-v2') : undefined}
+  bodyClass={useArticleV2 ? (data.section === 'parents' ? (data.translationKey === 'parents-autism-neurodiversity-language' ? 'article-v2 parents-article-body neurodiversity-article-body' : isHomePreschoolContext ? 'article-v2 parents-article-body context-home-preschool-article-body' : 'article-v2 parents-article-body') : data.section === 'research' ? 'article-v2 research-article-body' : data.section === 'help-kazakhstan' ? 'article-v2 kz-help-article-body' : kazakhstanGroup ? 'article-v2 professionals-article-body kz-professionals-document-body' : data.section === 'professionals' ? 'article-v2 professionals-article-body' : 'article-v2') : undefined}
 >
   {
     useArticleV2 ? (
@@ -606,6 +611,18 @@ const researchLabel: Record<Locale, string> = {
         }
       });
     });
+
+    // The context-comparison guide uses detailed four-column tables. At laptop
+    // widths, scroll the complete table instead of breaking Russian words.
+    if (document.body.classList.contains('context-home-preschool-article-body')) {
+      const wrapper = document.createElement('div');
+      wrapper.className = 'context-comparison-table-scroll';
+      wrapper.tabIndex = 0;
+      wrapper.setAttribute('role', 'region');
+      wrapper.setAttribute('aria-label', 'Таблица: прокрутите по горизонтали, чтобы увидеть остальные столбцы');
+      table.parentNode?.insertBefore(wrapper, table);
+      wrapper.appendChild(table);
+    }
   });
 </script>
 

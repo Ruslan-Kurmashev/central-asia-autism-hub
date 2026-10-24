@@ -895,3 +895,11 @@ These six images were supplied by the project owner in a ChatGPT conversation an
 | Local image file | Original upload | Provenance and editorial use |
 | --- | --- | --- |
 | `neurodiversity-colorful-profiles.webp` | `images (1).jpg` | Colourful overlapping silhouettes with stylised brains, supplied by the project owner for the Russian parent article `neyro-raznoobrazie-i-autizm`. Rehosted as an editorial illustration. The original artist, licence and publication rights were not independently verified. This visual is illustrative only and does not depict a diagnostic marker of autism. |
+
+
+## Parent guide: different behaviour at home and preschool (24 October 2026)
+
+| Local file | Attribution | Editorial use and rights |
+| --- | --- | --- |
+| `parent-context-home-preschool-pexels-7780915.jpg` | Mikhail Nilov, [Pexels photo 7780915](https://www.pexels.com/photo/a-woman-and-boy-playing-toys-together-7780915/), [Pexels licence](https://www.pexels.com/license/) | Natural stock photograph of an Asian parent playing with her child at home, illustrating one context of the article. It does not portray or identify autism or behavioural masking. The same hosted file is the hero and the listing card. |
+| `parent-home-preschool-context-observation.svg` | Original editable AutismHub line-icon diagram, updated 24 October 2026 | Illustrates comparison of conditions, support, and the child's participation. Educational schematic, not a diagnostic score. |
