@@ -51,7 +51,7 @@ for (const locale of locales) {
   const listingPath = path.join(dist, locale, 'parents', 'index.html');
   try {
     const listingHtml = await readFile(listingPath, 'utf8');
-    const rows = listingHtml.match(/<a\\b[^>]*class="[^"]*section-v2__article-row[^"]*"[^>]*>[\\s\\S]*?<\\/a>/g) ?? [];
+    const rows = listingHtml.match(/<a\b[^>]*class="[^"]*section-v2__article-row[^"]*"[^>]*>[\s\S]*?<\/a>/g) ?? [];
     listingRowsByLocale.set(locale, rows);
     if (rows.length < 10) errors.push(locale + ': too few parent article cards in built HTML');
   } catch {
@@ -92,7 +92,7 @@ for (const [sourceKey, source] of sources) {
     if (matchingRows.length !== 1) {
       errors.push(locale + '/' + article.slug + ': expected one listing card, found ' + matchingRows.length);
     } else {
-      const listedDate = matchingRows[0].match(/<time\\b[^>]*datetime="([^"]+)"/)?.[1];
+      const listedDate = matchingRows[0].match(/<time\b[^>]*datetime="([^"]+)"/)?.[1];
       if (!listedDate || listedDate.slice(0, 10) !== first) {
         errors.push(locale + '/' + article.slug + ': listing date ' +
           (listedDate || '(missing)') + ', expected Russian ' + first);
