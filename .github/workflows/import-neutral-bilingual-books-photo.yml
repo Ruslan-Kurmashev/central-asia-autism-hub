@@ -1,0 +1,34 @@
+name: Import CC0 children's books stock photo
+on:
+  push:
+    paths:
+      - '.github/workflows/import-neutral-bilingual-books-photo.yml'
+  workflow_dispatch:
+permissions:
+  contents: write
+jobs:
+  import-books:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: true
+      - name: Download license-verified CC0 stock photograph of books only
+        run: |
+          set -euo pipefail
+          mkdir -p public/images/editorial
+          curl --fail --location --retry 5 --retry-delay 3 --connect-timeout 20 --max-time 120 \
+            --user-agent 'AutismHubEditorial/1.0 (https://github.com/Ruslan-Kurmashev/central-asia-autism-hub)' \
+            'https://upload.wikimedia.org/wikipedia/commons/thumb/c/ca/Children%27s_books_%28Unsplash%29.jpg/1280px-Children%27s_books_%28Unsplash%29.jpg' \
+            --output public/images/editorial/parent-bilingual-childrens-books-cc0.jpg
+          file public/images/editorial/parent-bilingual-childrens-books-cc0.jpg | grep -E 'JPEG image'
+          test "$(wc -c < public/images/editorial/parent-bilingual-childrens-books-cc0.jpg)" -gt 25000
+      - name: Commit CC0 photograph
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add public/images/editorial/parent-bilingual-childrens-books-cc0.jpg
+          if ! git diff --cached --quiet; then
+            git commit -m 'Import CC0 stock photograph of childrens books for bilingual guide'
+            git push origin HEAD:main
+          fi
