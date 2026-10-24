@@ -77,3 +77,104 @@ assert.ok(layout.includes('<slot />'), 'article body must remain entirely presen
 
 console.log('One-page article navigation PASS:', results, 'articles with', chapterLinks,
   'valid in-page topic links; sticky desktop TOC, tracked active section and compact mobile menu.');
+
+
+/**
+ * Cross-check every published Markdown article against its rendered navigation.
+ * Nested H3s, as well as unnumbered summaries after numbered chapters, must
+ * not inflate the counter shown to readers.
+ */
+const outlineRoots = [
+  'src/content/pages/kz/ru', 'src/content/pages/kz/kk',
+  'src/content/pages/kz/en', 'src/content/research',
+];
+const outlineStats = { ru: 0, kk: 0, en: 0 };
+const outlineExceptions = [];
+let nestedHeadingsExcluded = 0;
+let unnumberedHeadingsExcluded = 0;
+let outlineLinks = 0;
+
+const metadata = (frontmatter, key) => {
+  const line = frontmatter.match(new RegExp('^' + key + ':\\s*(.*)$', 'm'))?.[1]?.trim();
+  return line?.replace(/^["']|["']$/g, '') ?? '';
+};
+
+for (const directory of outlineRoots) {
+  for (const file of await readdir(directory)) {
+    if (!/\.mdx?$/i.test(file)) continue;
+    const sourcePath = path.join(directory, file);
+    const source = await readFile(sourcePath, 'utf8');
+    const matter = source.match(/^---\r?\n([\s\S]*?)\r?\n---\r?\n/);
+    assert.ok(matter, sourcePath + ': missing frontmatter');
+    const frontmatter = matter[1];
+    if (metadata(frontmatter, 'draft') !== 'false' ||
+      metadata(frontmatter, 'translationStatus') === 'pending' ||
+      !metadata(frontmatter, 'publishedAt') ||
+      !metadata(frontmatter, 'updatedAt')) continue;
+    const language = metadata(frontmatter, 'language');
+    const section = metadata(frontmatter, 'section');
+    const slug = metadata(frontmatter, 'slug');
+    const key = metadata(frontmatter, 'translationKey');
+    assert.ok(locales.includes(language) && section && slug && key,
+      sourcePath + ': missing public route metadata');
+
+    const headings = [];
+    let fenced = false;
+    let fenceMark = '';
+    for (const line of source.slice(matter[0].length).split(/\r?\n/)) {
+      const fence = line.match(/^\s*(\x60{3,}|~{3,})/);
+      if (fence) {
+        if (!fenced) { fenced = true; fenceMark = fence[1][0]; }
+        else if (fence[1][0] === fenceMark) fenced = false;
+        continue;
+      }
+      if (fenced) continue;
+      const hit = line.match(/^(#{2,3})\s+(.+?)\s*#*\s*$/u);
+      if (hit) headings.push({
+        depth: hit[1].length,
+        text: hit[2].replace(/\[([^\]]+)\]\([^)]+\)/g, '$1').replace(/[*_\x60~]/g, ''),
+      });
+    }
+    const main = headings.filter(h => h.depth === 2);
+    const numbered = main.filter(h => /^\d+[.)]\s/u.test(h.text));
+    const isContext = key === 'parents-child-context-dependent-behaviour-home-preschool';
+    const isBilingual = key === 'parents-bilingual-family-speech-development';
+    const expected = isContext
+      ? main.filter(h => /^(?:[1-9]|1[0-4])\.\s/u.test(h.text))
+      : isBilingual ? main : numbered.length >= 2 ? numbered : main;
+
+    const htmlPath = path.join(root, language, section, slug, 'index.html');
+    const html = await readFile(htmlPath, 'utf8');
+    const aside = html.match(/<aside class="article-v2__sidebar"[^>]*>([\s\S]*?)<\/aside>/)?.[1];
+    assert.ok(aside, sourcePath + ': published article missing generated TOC');
+    const links = [...aside.matchAll(/<a\s+href="#([^"]+)"/g)].map(m => m[1]);
+    assert.equal(links.length, expected.length,
+      sourcePath + ': displayed ' + links.length + ' sections, expected ' + expected.length +
+      ' from main H2 headings (' + main.length + ' H2, ' +
+      headings.filter(h => h.depth === 3).length + ' H3)');
+    assert.equal(new Set(links).size, links.length, sourcePath + ': repeated TOC anchor');
+    const total = aside.match(/data-toc-current[^>]*>[\s\S]*?<\/span>\s*\/\s*(\d+)/)?.[1];
+    if (expected.length > 0) {
+      assert.equal(Number(total), expected.length, sourcePath + ': displayed progress count differs');
+    } else {
+      assert.ok(aside.includes('article-v2__toc-empty'), sourcePath + ': empty outline is not labelled');
+    }
+    nestedHeadingsExcluded += headings.filter(h => h.depth === 3).length;
+    unnumberedHeadingsExcluded += main.length - expected.length;
+    outlineLinks += links.length;
+    outlineStats[language]++;
+    const omitted = main.filter(h => !expected.includes(h));
+    if (omitted.length) outlineExceptions.push({
+      file: sourcePath, displayed: expected.length, skipped: omitted.map(h => h.text),
+    });
+  }
+}
+assert.deepEqual(outlineStats, results,
+  'source-to-built article count mismatch: some published articles were not audited');
+console.log('FULL ARTICLE TOC AUDIT PASS:', JSON.stringify({
+  publishedArticles: outlineStats,
+  checkedLinks: outlineLinks,
+  nestedH3NotCounted: nestedHeadingsExcluded,
+  otherH2NotCounted: unnumberedHeadingsExcluded,
+  exceptions: outlineExceptions,
+}));
