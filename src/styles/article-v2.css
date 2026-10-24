@@ -1611,3 +1611,75 @@
     margin-bottom: 0.5rem;
   }
 }
+
+/* Acquired-skill-loss guide: original licensed Lucide stock symbols, captions in HTML. */
+.article-v2.parents-article-body .article-v2__body .skill-loss-stock-steps {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 0.85rem;
+  padding: 0.75rem;
+  margin: 1.65rem 0;
+  background: #edf5fa;
+  border-radius: 1.1rem;
+}
+.article-v2.parents-article-body .article-v2__body .skill-loss-stock-step {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-width: 0;
+  margin: 0;
+  padding: 1.15rem 0.85rem;
+  border: 1px solid #bdd4e7;
+  border-radius: 0.9rem;
+  background: #fff;
+  text-align: center;
+  gap: 0.8rem;
+}
+.article-v2.parents-article-body .article-v2__body .skill-loss-stock-step img {
+  display: block;
+  width: 6.25rem;
+  height: 6.25rem;
+  object-fit: contain;
+  margin: 0;
+  padding: 0;
+  flex: 0 0 auto;
+}
+.article-v2.parents-article-body .article-v2__body .skill-loss-stock-step figcaption {
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.55rem;
+  align-items: center;
+  color: #153e6a;
+  line-height: 1.5;
+  overflow-wrap: break-word;
+}
+.article-v2.parents-article-body .article-v2__body .skill-loss-stock-step figcaption strong {
+  font-size: 1.05rem;
+  letter-spacing: 0.04em;
+  font-weight: 700;
+}
+.article-v2.parents-article-body .article-v2__body .skill-loss-stock-step figcaption span {
+  font-size: 0.95rem;
+  line-height: 1.52;
+}
+@media (max-width: 48rem) {
+  .article-v2.parents-article-body .article-v2__body .skill-loss-stock-steps {
+    grid-template-columns: 1fr;
+    padding: 0.6rem;
+    gap: 0.6rem;
+  }
+  .article-v2.parents-article-body .article-v2__body .skill-loss-stock-step {
+    flex-direction: row;
+    gap: 1rem;
+    text-align: left;
+  }
+  .article-v2.parents-article-body .article-v2__body .skill-loss-stock-step img {
+    width: 4.25rem;
+    height: 4.25rem;
+  }
+  .article-v2.parents-article-body .article-v2__body .skill-loss-stock-step figcaption {
+    flex: 1;
+    align-items: flex-start;
+  }
+}

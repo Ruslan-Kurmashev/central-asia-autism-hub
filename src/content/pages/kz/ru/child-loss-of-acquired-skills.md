@@ -2,8 +2,8 @@
 title: "Если ребёнок перестал делать то, что умел раньше: потеря навыков"
 summary: "Как заметить утрату ранее устойчивых навыков речи, общения и движения, чем это отличается от временных трудностей, когда нужна срочная помощь и как подготовиться к медицинской консультации."
 description: "Понятное руководство родителям о регрессе навыков ребёнка: примеры речи, общения, игры, движений и самообслуживания, медицинские признаки и подготовка к врачу."
-featuredImage: "/central-asia-autism-hub/images/editorial/parent-child-skill-regression-cover.svg"
-featuredImageAlt: "Авторская схематическая обложка с дневником наблюдений и символами навыков общения, игры и движения. Не диагностический тест."
+featuredImage: "/central-asia-autism-hub/images/editorial/parent-child-skills-cards-pexels-7943496.jpg"
+featuredImageAlt: "Мать и дочь рассматривают обучающие карточки дома, документальная стоковая фотография без указаний на диагноз или потерю навыков."
 country: kz
 language: ru
 section: parents
@@ -176,7 +176,20 @@ CDC прямо рекомендует действовать без ожидан
 
 ## 6. Что делать родителям до консультации
 
-![Схема из трёх этапов: заметить конкретное изменение, сообщить медицинскому специалисту, обсудить необходимую профессиональную оценку. Это не алгоритм диагностики.](/central-asia-autism-hub/images/editorial/parent-skill-regression-observation-steps.svg)
+<div class="skill-loss-stock-steps" role="group" aria-label="Подготовка к медицинской консультации: заметить изменение, сообщить врачу и обсудить профессиональную оценку">
+  <figure class="skill-loss-stock-step">
+    <img src="/central-asia-autism-hub/images/editorial/skill-loss-lucide-notebook-pen.svg" alt="Блокнот и ручка для записи наблюдений" width="100" height="100" loading="lazy" />
+    <figcaption><strong>ЗАМЕТИТЬ</strong><span>Конкретные примеры того, что ребёнок умел раньше и что изменилось</span></figcaption>
+  </figure>
+  <figure class="skill-loss-stock-step">
+    <img src="/central-asia-autism-hub/images/editorial/skill-loss-lucide-stethoscope.svg" alt="Стетоскоп, обращение за медицинской помощью" width="100" height="100" loading="lazy" />
+    <figcaption><strong>СООБЩИТЬ</strong><span>Обратиться за медицинской помощью, рассказать о замеченных изменениях</span></figcaption>
+  </figure>
+  <figure class="skill-loss-stock-step">
+    <img src="/central-asia-autism-hub/images/editorial/skill-loss-lucide-clipboard-check.svg" alt="Лист медицинской оценки с отметкой" width="100" height="100" loading="lazy" />
+    <figcaption><strong>ОЦЕНИТЬ</strong><span>Возможные причины и необходимые обследования определяет специалист</span></figcaption>
+  </figure>
+</div>
 
 1. **Свяжитесь с медицинским специалистом.** Сообщите, что ребёнок перестал использовать ранее устойчивый навык. При острых опасных симптомах используйте экстренную помощь.
 2. **Опишите конкретный навык.** Не «перестал развиваться», а «раньше каждый день сам говорил "дай" во время еды, теперь не говорит».

@@ -817,14 +817,20 @@ All three educational graphics are original editable SVG diagrams authored for A
 | `autism-test-purpose-matrix.svg` | Original AutismHub educational science diagram, 15 October 2026 | Different MRI, EEG, genetic and blood-testing indications; does not recommend routine testing for all or suggest any one test can diagnose autism. |
 
 
-## Child acquired skill loss guide (16 October 2026)
+## Child acquired skill loss guide (16 October 2026, cover and illustration updated 24 October 2026)
 
-| File | Provenance and interpretation |
+| File | Provenance and editorial use |
 | --- | --- |
-| `parent-child-skill-regression-cover.svg` | Original AutismHub source-coded editorial vector of a diary and symbols for different developmental skills. Does not depict a real child, measured patient data, or a standardized clinical test. |
-| `parent-skill-regression-observation-steps.svg` | Original AutismHub source-coded three-step explanatory vector about recording observations, speaking to a medical professional, and professional assessment. It is not triage, a diagnostic decision tree or a time-to-care algorithm. |
+| `parent-child-skills-cards-pexels-7943496.jpg` | Nicola Barts, [Pexels stock photo 7943496](https://www.pexels.com/photo/mother-and-child-looking-at-a-card-7943496/), [Pexels License](https://www.pexels.com/license/). Authentic photographic image of a parent and child with learning cards at home. Used as both article hero and parent listing cover. The models are not presented as autistic, experiencing regression or being from Kazakhstan. |
+| `skill-loss-lucide-notebook-pen.svg` | Original stock pictogram [Lucide notebook-pen](https://github.com/lucide-icons/lucide/blob/main/icons/notebook-pen.svg), colour adapted to AutismHub. Represents documenting observations of previously acquired skills. |
+| `skill-loss-lucide-stethoscope.svg` | Original stock pictogram [Lucide stethoscope](https://github.com/lucide-icons/lucide/blob/main/icons/stethoscope.svg), colour adapted to AutismHub. Represents contacting a medical professional. |
+| `skill-loss-lucide-clipboard-check.svg` | Original stock pictogram [Lucide clipboard-check](https://github.com/lucide-icons/lucide/blob/main/icons/clipboard-check.svg), colour adapted to AutismHub. Represents professional evaluation and decisions about tests. |
 
-The companion parent PDF `public/downloads/development/forma-nablyudeniy-poterya-navykov-ru.pdf` is an original unscored organisational worksheet, generated at build time by `scripts/build-parent-skill-loss-observation-pdf.py`. No patient data, copyrighted third-party diagrams or validated scales are embedded.
+All Lucide source symbols are released under the [ISC License](https://github.com/lucide-icons/lucide/blob/main/LICENSE). A local copy of the copyright and full license notice is maintained at `public/images/editorial/context-lucide-icons-LICENSE.txt`. The symbols are arranged as responsive HTML cards so Russian explanatory text remains readable and does not overlap images. These are not AI-generated images or a diagnostic decision algorithm.
+
+The previous source-coded editorial SVG files (`parent-child-skill-regression-cover.svg` and `parent-skill-regression-observation-steps.svg`) have been retired from the published article and removed from the repository.
+
+The companion parent PDF `public/downloads/development/forma-nablyudeniy-poterya-navykov-ru.pdf` is an original unscored organisational worksheet, generated at build time by `scripts/build-parent-skill-loss-observation-pdf.py`. No patient data or validated diagnostic tests are included.
 
 ## Kazakhstan autism parent mental wellbeing survey graphic (16 October 2026)
 
