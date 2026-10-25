@@ -95,7 +95,40 @@ AAP описывает совместную регуляцию как важну
 
 ## 2. Три момента, в которые помощь может выглядеть по-разному
 
-![Три этапа поддержки: до трудной ситуации - уменьшить нагрузку, во время сильного напряжения - обеспечить безопасность, после - дать время на восстановление и обсудить потребности.](/central-asia-autism-hub/images/editorial/parent-emotions-three-moments.svg)
+<div class="emotion-moment-grid" role="group" aria-label="Три момента поддержки ребёнка: до, во время и после трудной ситуации">
+  <div class="emotion-moment-card">
+    <svg class="emotion-moment-icon" viewBox="0 0 80 80" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+      <path d="M14 12h37l13 13v43H14z" />
+      <path d="M51 12v13h13" />
+      <path d="m24 37 5 5 8-10" />
+      <path d="M43 37h12M24 53h31" />
+      <circle cx="56" cy="56" r="3.2" fill="#e5ae3d" stroke="none" />
+    </svg>
+    <h3>До</h3>
+    <p>Предупредить заранее. Дать понятный выбор.</p>
+    <span class="emotion-moment-step">01 · Подготовка</span>
+  </div>
+  <div class="emotion-moment-card">
+    <svg class="emotion-moment-icon" viewBox="0 0 80 80" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+      <path d="M40 9 63 20v17c0 15-8 26-23 34-15-8-23-19-23-34V20z" />
+      <path d="m28 39 9 9 16-18" />
+      <circle cx="40" cy="9" r="4" fill="#e5ae3d" stroke="none" />
+    </svg>
+    <h3>Во время</h3>
+    <p>Обеспечить безопасность. Снизить нагрузку.</p>
+    <span class="emotion-moment-step">02 · Поддержка</span>
+  </div>
+  <div class="emotion-moment-card">
+    <svg class="emotion-moment-icon" viewBox="0 0 80 80" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+      <path d="M19 17h39a12 12 0 0 1 12 12v18a12 12 0 0 1-12 12H36L22 69V59h-3A12 12 0 0 1 7 47V29a12 12 0 0 1 12-12z" />
+      <path d="M29 36h27M29 47h18" />
+      <circle cx="61" cy="15" r="4" fill="#e5ae3d" stroke="none" />
+    </svg>
+    <h3>После</h3>
+    <p>Дать время на отдых. Обсудить позже.</p>
+    <span class="emotion-moment-step">03 · Восстановление</span>
+  </div>
+</div>
 
 | Когда | Что прежде всего важно | Что обычно не помогает |
 | --- | --- | --- |

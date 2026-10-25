@@ -54,3 +54,10 @@ assert.ok(manifest.includes("['parent-emotion-coregulation-tashkent-18427960.jpg
   'The real Pexels image must be downloaded and verified');
 assert.ok(docs.includes('https://www.pexels.com/photo/mother-hugging-daughter-in-darkness-18427960/') &&
   docs.includes('Ташкентской области'), 'Region-specific source and image provenance missing');
+
+const emotionHtml = await readFile('dist/kz/ru/parents/emotsii-samoregulyatsiya-kak-pomoch-rebenku/index.html', 'utf8');
+assert.ok(emotionHtml.includes('class="emotion-moment-grid"'), 'Emotion stages missing');
+assert.equal((emotionHtml.match(/class="emotion-moment-card"/g) ?? []).length, 3,
+  'Exactly three concise support cards are required');
+assert.ok(!emotionHtml.includes('parent-emotions-three-moments.svg'), 'Old stage image still present in article');
+console.log('Emotion stages QA PASS: three compact HTML cards.');
