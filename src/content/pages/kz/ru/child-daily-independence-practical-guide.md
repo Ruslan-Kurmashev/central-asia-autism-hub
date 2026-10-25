@@ -213,7 +213,7 @@ sources:
 **Материалы:** нескользкий коврик, устойчивая чашка, безопасная ложка.
 
 <figure class="independence-table-setting-figure">
-  <img src="/central-asia-autism-hub/images/editorial/diagrams/child-daily-independence-table-setting.webp" alt="Четыре иллюстрированных шага подготовки места за столом: ребёнок вместе с мамой кладёт коврик, ставит чашку, добавляет ложку и постепенно делает это самостоятельно." width="1448" height="1086" loading="lazy" decoding="async" style="display:block;width:100%;height:auto;border-radius:16px" />
+  <img src="/central-asia-autism-hub/images/editorial/diagrams/child-daily-independence-table-setting-clean-v2.webp" alt="Четыре иллюстрированных шага подготовки места за столом: ребёнок вместе с мамой кладёт коврик, ставит чашку, добавляет ложку и постепенно делает это самостоятельно." width="1448" height="1086" loading="lazy" decoding="async" style="display:block;width:100%;height:auto;border-radius:16px" />
   <figcaption>Пример подготовки места за столом. Ребёнок может выполнить один или несколько шагов, необходимая помощь взрослого сохраняется.</figcaption>
 </figure>
 
