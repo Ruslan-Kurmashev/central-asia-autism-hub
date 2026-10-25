@@ -412,7 +412,7 @@ function russianMaterialWord(count: number) {
                   <details
                     class="section-v2__group"
                     id={group.id}
-                    open={group.id === initiallyOpenGroupId}
+                    open={section !== 'parents' && group.id === initiallyOpenGroupId}
                   >
                     <summary>
                       <span class="section-v2__group-copy">
@@ -506,7 +506,7 @@ function russianMaterialWord(count: number) {
                 {ungroupedMaterials.length > 0 && (
                   <details
                     class="section-v2__group section-v2__group--other"
-                    open={visibleGroups.length === 0}
+                    open={section !== 'parents' && visibleGroups.length === 0}
                   >
                     <summary>
                       <span class="section-v2__group-copy">
