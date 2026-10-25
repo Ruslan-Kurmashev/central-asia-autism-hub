@@ -44,6 +44,7 @@ jobs:
           python scripts/build-parent-skill-loss-observation-pdf.py
           python scripts/build-parent-bilingual-language-pdfs.py
           python scripts/build-parent-home-preschool-context-pdfs.py
+          python scripts/build-parent-development-translated-pdfs.py
           python scripts/rebuild-parent-printables.py
           python scripts/qa-parent-printables.py
           python scripts/audit-child-development-external-sources.py
