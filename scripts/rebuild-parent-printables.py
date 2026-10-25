@@ -2,8 +2,8 @@
 """Rebuild the 15 AutismHub parent PDFs with the canonical 11pt print body.
 
 Runs AFTER legacy generators and replaces their outputs. Source activity facts
-stay in existing JSON/Python data; no real child data or third-party imagery.
-Original vector sequences are placed in the matching printable exercises.
+stay in existing JSON/Python data. Visual sequences include source-coded diagrams
+and licensed stock photographs where a schematic has been retired.
 """
 from __future__ import annotations
 import ast
@@ -18,7 +18,7 @@ from reportlab.lib.pagesizes import A4
 from reportlab.lib.styles import ParagraphStyle
 from reportlab.pdfbase import pdfmetrics
 from reportlab.pdfbase.ttfonts import TTFont
-from reportlab.platypus import SimpleDocTemplate, Paragraph, Spacer, PageBreak, HRFlowable
+from reportlab.platypus import SimpleDocTemplate, Paragraph, Spacer, PageBreak, HRFlowable, Image, Table, TableStyle
 from pypdf import PdfReader
 from svglib.svglib import svg2rlg
 
@@ -86,6 +86,38 @@ def diagram(story,relative):
     drawing.height*=scale
     story.append(drawing)
     story.append(Spacer(1,11))
+def shirt_photo_grid(story):
+    """Four licensed Pexels photographs replace the obsolete shirt schematic."""
+    photos=[
+        ("selfcare-shirt-step-7104238.jpg","1. Взрослый помогает с одеванием"),
+        ("selfcare-shirt-step-7220910.jpg","2. Ребёнок делает посильную часть"),
+        ("selfcare-shirt-step-7943242.jpg","3. Добавляем ещё одно действие"),
+        ("selfcare-shirt-step-5715080.jpg","4. Постепенно увеличиваем участие"),
+    ]
+    cells=[]
+    for name,caption in photos:
+        photo=ART/name
+        if not photo.is_file():
+            raise RuntimeError(f"Licensed photo missing: {photo}")
+        pic=Image(str(photo))
+        scale=min(210/pic.imageWidth,109/pic.imageHeight)
+        pic.drawWidth=pic.imageWidth*scale
+        pic.drawHeight=pic.imageHeight*scale
+        pic.hAlign="CENTER"
+        cells.append([pic,Spacer(1,5),ptext(caption,SMALL)])
+    grid=Table([cells[:2],cells[2:]],colWidths=[244,244],hAlign="CENTER")
+    grid.setStyle(TableStyle([
+        ("BOX",(0,0),(-1,-1),0.6,EDGE),
+        ("INNERGRID",(0,0),(-1,-1),0.5,EDGE),
+        ("VALIGN",(0,0),(-1,-1),"TOP"),
+        ("TOPPADDING",(0,0),(-1,-1),9),
+        ("BOTTOMPADDING",(0,0),(-1,-1),9),
+        ("LEFTPADDING",(0,0),(-1,-1),9),
+        ("RIGHTPADDING",(0,0),(-1,-1),9),
+    ]))
+    story.append(grid)
+    story.append(Spacer(1,9))
+
 def foot(canvas,doc):
     canvas.saveState()
     canvas.setStrokeColor(EDGE)
@@ -216,7 +248,7 @@ selfcare=json_data("scripts/data/parent-daily-independence-tasks-ru.json","tasks
 many_activities("selfcare/12-zadanii-samostoyatelnost-ru.pdf","12 домашних заданий для самостоятельности",selfcare)
 seq=literal_list("scripts/build-parent-daily-independence-pdfs.py","SEQUENCES")
 selfcare_figures=[
- "selfcare-shirt-sequence.svg",
+ None,  # page one uses licensed photographs instead of the old SVG
  "selfcare-handwashing-sequence.svg",
  "selfcare-table-sequence.svg",
  "selfcare-bag-sequence.svg"
@@ -226,7 +258,10 @@ story=[]
 for i,(name,steps) in enumerate(seq):
     if i:newpage(story)
     intro(story,"Визуальная последовательность",name)
-    diagram(story,selfcare_figures[i])
+    if i == 0:
+        shirt_photo_grid(story)
+    else:
+        diagram(story,selfcare_figures[i])
     for step,name,description in steps:
         story.append(ptext(f"Шаг {step}. {name}",LABEL))
         story.append(ptext(description))
