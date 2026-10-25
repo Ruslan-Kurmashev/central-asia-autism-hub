@@ -95,32 +95,12 @@ AAP описывает совместную регуляцию как важну
 
 ## 2. Три момента, в которые помощь может выглядеть по-разному
 
-<div class="emotion-moment-grid" role="group" aria-label="Схема: как поддержать ребёнка до, во время и после эмоционального напряжения">
-  <section class="emotion-moment-card">
-    <div class="emotion-moment-card__label">01 · ДО</div>
-    <figure class="emotion-moment-example">
-      <img src="/central-asia-autism-hub/images/editorial/parent-emotion-stage-01-prepare.svg" alt="Схема: взрослый показывает ребёнку карточки «Игра» и «Отдых», ребёнок указывает на свой выбор." width="600" height="400" loading="lazy" decoding="async" />
-      <figcaption>Показать выбор</figcaption>
-    </figure>
-    <p>Заранее объяснить, что будет дальше.</p>
-  </section>
-  <section class="emotion-moment-card">
-    <div class="emotion-moment-card__label">02 · ВО ВРЕМЯ</div>
-    <figure class="emotion-moment-example">
-      <img src="/central-asia-autism-hub/images/editorial/parent-emotion-stage-02-support.svg" alt="Схема: ребёнок закрывает уши, взрослый спокойно сидит рядом, перечёркнутый динамик означает тишину." width="600" height="400" loading="lazy" decoding="async" />
-      <figcaption>Уменьшить нагрузку</figcaption>
-    </figure>
-    <p>Снизить шум, говорить коротко, быть рядом.</p>
-  </section>
-  <section class="emotion-moment-card">
-    <div class="emotion-moment-card__label">03 · ПОСЛЕ</div>
-    <figure class="emotion-moment-example">
-      <img src="/central-asia-autism-hub/images/editorial/parent-emotion-stage-03-recover.svg" alt="Схема: ребёнок сначала отдыхает на диване, затем спокойно разговаривает со взрослым." width="600" height="400" loading="lazy" decoding="async" />
-      <figcaption>Отдых, затем разговор</figcaption>
-    </figure>
-    <p>Дать восстановиться. Обсудить позже.</p>
-  </section>
-</div>
+<figure class="emotion-reference-figure">
+  <a href="/central-asia-autism-hub/images/editorial/emotion-three-moments-reference.png" target="_blank" rel="noopener noreferrer" aria-label="Открыть увеличенную схему трёх этапов поддержки ребёнка">
+    <img src="/central-asia-autism-hub/images/editorial/emotion-three-moments-reference.png" width="1672" height="941" alt="Три иллюстрации в едином мультяшном стиле: до трудной ситуации мама предлагает мальчику выбрать занятие по карточкам, во время сильного эмоционального напряжения мама спокойно находится рядом с расстроенным ребёнком, после мама и ребёнок отдыхают и разговаривают, когда он готов." loading="lazy" decoding="async" />
+  </a>
+  <figcaption>Нажмите на изображение, чтобы открыть схему крупнее.</figcaption>
+</figure>
 
 | Когда | Что прежде всего важно | Что обычно не помогает |
 | --- | --- | --- |

@@ -56,27 +56,19 @@ assert.ok(docs.includes('https://www.pexels.com/photo/mother-hugging-daughter-in
   docs.includes('Ташкентской области'), 'Region-specific source and image provenance missing');
 
 const emotionHtml = await readFile('dist/kz/ru/parents/emotsii-samoregulyatsiya-kak-pomoch-rebenku/index.html', 'utf8');
-assert.ok(emotionHtml.includes('class="emotion-moment-grid"'), 'Emotion stages missing');
-assert.equal((emotionHtml.match(/class="emotion-moment-card"/g) ?? []).length, 3,
-  'Exactly three clear action cards are required');
-assert.equal((emotionHtml.match(/class="emotion-moment-example"/g) ?? []).length, 3,
-  'Each stage must illustrate a specific interaction');
-const expectedEmotionSchematics = ["parent-emotion-stage-01-prepare.svg","parent-emotion-stage-02-support.svg","parent-emotion-stage-03-recover.svg"];
-for (const file of expectedEmotionSchematics) {
-  assert.ok(emotionHtml.includes('/images/editorial/' + file),
-    'Missing meaningful authored diagram scene: ' + file);
-  assert.ok(docs.includes('images/editorial/' + file),
-    'Original vector diagram provenance missing: ' + file);
-  const svg = await readFile(path.resolve('public/images/editorial', file), 'utf8');
-  assert.ok(svg.includes('<svg') && svg.includes('<title') && svg.includes('<desc'),
-    'SVG must be accessible: ' + file);
-  assert.ok(svg.length > 2000 && svg.includes('<circle') && svg.includes('<path'),
-    'Diagram must depict concrete characters and actions: ' + file);
-}
-assert.ok(!["emotion-before-parent-shows-cards-pexels-7943496.jpg","emotion-during-parent-comforts-pexels-6134904.jpg","emotion-after-mother-daughter-talk-pexels-7204110.jpg"].some(file => emotionHtml.includes(file)),
-  'Old photographic cards must not remain in the article');
-assert.ok(!emotionHtml.includes('class="emotion-moment-icon"'),
-  'Decorative abstract icons are not explanatory diagrams');
-assert.ok(!emotionHtml.includes('parent-emotions-three-moments.svg'),
-  'Obsolete abstract diagram must not be shown');
-console.log('Emotion stages QA PASS: three hand-authored vector scenes with meaningful examples.');
+const approvedInfographic = 'emotion-three-moments-reference.png';
+const approvedUrl = '/central-asia-autism-hub/images/editorial/' + approvedInfographic;
+assert.ok(emotionHtml.includes('class="emotion-reference-figure"'),
+  'Missing user-approved infographic placement');
+assert.equal((emotionHtml.match(/emotion-three-moments-reference.png/g) || []).length, 2,
+  'Article must link full-resolution file and show it exactly once');
+assert.ok(emotionHtml.includes(approvedUrl), 'Generated article must use the locally deployed infographic');
+assert.ok(!emotionHtml.includes('emotion-moment-card') && !emotionHtml.includes('parent-emotion-stage-01-prepare.svg'),
+  'Previous separate cards must not remain visible');
+assert.ok(docs.includes('images/editorial/' + approvedInfographic),
+  'User-approved image provenance missing from editorial records');
+const originalPng = await readFile(path.resolve('public/images/editorial', approvedInfographic));
+assert.ok(originalPng.length > 1000000 &&
+  originalPng.subarray(0,8).toString('hex') === '89504e470d0a1a0a',
+  'Original generated image must be a complete valid PNG file');
+console.log('Emotion stages QA PASS: user-approved full-size illustration published, old scheme removed.');
