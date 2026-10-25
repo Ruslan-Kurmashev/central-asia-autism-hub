@@ -1814,14 +1814,14 @@
   margin: 0 0 0.55rem;
   color: #0b315f;
   font-family: var(--font-editorial);
-  font-size: 1.28rem;
+  font-size: var(--type-subhead);
   font-weight: 700;
   line-height: 1.3;
 }
 .article-v2.parents-article-body .article-v2__body .emotion-moment-card p {
   margin: 0 0 1.05rem;
   color: #294a68;
-  font-size: 0.98rem;
+  font-size: var(--type-body);
   line-height: 1.55;
   overflow-wrap: break-word;
 }
@@ -1831,7 +1831,7 @@
   padding-top: 0.65rem;
   border-top: 1px solid #d4e2ee;
   color: #14539a;
-  font-size: 0.8rem;
+  font-size: var(--type-meta);
   font-weight: 750;
 }
 @media (max-width: 48rem) {
