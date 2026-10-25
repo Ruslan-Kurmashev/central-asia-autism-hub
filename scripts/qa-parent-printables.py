@@ -41,9 +41,13 @@ for relative in FILES:
     for idx,page in enumerate(document):
         pages+=1
         shapes=page.get_drawings()
-        if (relative.endswith("8-kartochek-motorika-ru.pdf") or
-            relative.endswith("4-vizualnye-posledovatelnosti-ru.pdf")) and len(shapes)<8:
+        if relative.endswith("8-kartochek-motorika-ru.pdf") and len(shapes)<8:
             errors.append(f"Missing vector illustration {relative} p{idx+1}: shapes={len(shapes)}")
+        if relative.endswith("4-vizualnye-posledovatelnosti-ru.pdf"):
+            if idx==0 and len(page.get_images(full=True))<4:
+                errors.append(f"Four original stock photographs required {relative} p1")
+            if idx>0 and len(shapes)<8:
+                errors.append(f"Missing vector illustration {relative} p{idx+1}: shapes={len(shapes)}")
         blocks=page.get_text("dict").get("blocks",[])
         found=False
         for block in blocks:
@@ -70,4 +74,4 @@ if errors:
     for err in errors[:35]:print("PDF_QA_ERROR",err)
     raise RuntimeError(f"Parent PDF preflight found {len(errors)} issues")
 print(f"PARENT_PDF_PREFLIGHT_PASSED: {count} PDFs, {pages} pages; every body span >=11pt; "
-      "all vector image pages identified; screenshot previews stored for manual QA")
+      "stock-photo and vector illustration pages validated; previews stored for visual QA")

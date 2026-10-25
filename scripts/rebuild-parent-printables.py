@@ -104,7 +104,7 @@ def shirt_photo_grid(story):
         pic.drawWidth=pic.imageWidth*scale
         pic.drawHeight=pic.imageHeight*scale
         pic.hAlign="CENTER"
-        cells.append([pic,Spacer(1,5),ptext(caption,SMALL)])
+        cells.append([pic,Spacer(1,5),ptext(caption,NORMAL)])
     grid=Table([cells[:2],cells[2:]],colWidths=[244,244],hAlign="CENTER")
     grid.setStyle(TableStyle([
         ("BOX",(0,0),(-1,-1),0.6,EDGE),
