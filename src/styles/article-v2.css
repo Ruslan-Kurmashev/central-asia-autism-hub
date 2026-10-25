@@ -1683,3 +1683,44 @@
     align-items: flex-start;
   }
 }
+
+
+/* Bilingual family guide: keep the PDF links intact at all viewport sizes.
+   On smaller screens scroll the comparison rather than splitting Russian words. */
+.article-v2.parents-article-body .article-v2__body .bilingual-downloads-scroll {
+  max-width: 100%;
+  margin: 1.5rem 0 2rem;
+  overflow-x: auto;
+  overscroll-behavior-inline: contain;
+  -webkit-overflow-scrolling: touch;
+  border: 1px solid var(--article-line);
+  border-radius: var(--radius-small);
+}
+.article-v2.parents-article-body .article-v2__body .bilingual-downloads-scroll:focus-visible {
+  outline: 3px solid var(--color-focus);
+  outline-offset: 3px;
+}
+.article-v2.parents-article-body .article-v2__body .bilingual-downloads-table {
+  width: 100%;
+  min-width: 42rem;
+  max-width: none;
+  margin: 0;
+  border: 0;
+  table-layout: auto;
+}
+.article-v2.parents-article-body .article-v2__body .bilingual-downloads-table :is(th, td) {
+  word-break: normal;
+  overflow-wrap: normal;
+  hyphens: none;
+  vertical-align: top;
+}
+.article-v2.parents-article-body .article-v2__body .bilingual-downloads-table :is(th, td):last-child {
+  min-width: 10rem;
+  width: 10rem;
+  white-space: nowrap;
+}
+.article-v2.parents-article-body .article-v2__body .bilingual-downloads-table td:last-child a {
+  white-space: nowrap;
+  word-break: normal;
+  overflow-wrap: normal;
+}

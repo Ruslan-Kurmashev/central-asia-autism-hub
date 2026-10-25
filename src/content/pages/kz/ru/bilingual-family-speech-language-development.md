@@ -236,10 +236,29 @@ ASHA подчёркивает, что **монолингвальный стан�
 
 Чтобы родители могли использовать идеи из статьи на практике, подготовлены два печатных материала AutismHub:
 
-| Материал | Что внутри | Скачать |
-| --- | --- | --- |
-| **7 ситуаций для общения на двух языках** | Примеры повседневных фраз на русском и казахском, варианты реакции на жесты, слова и AAC, памятка без принуждения. | [Открыть PDF](/central-asia-autism-hub/downloads/bilingual/7-situatsii-dva-yazyka-v-seme-ru.pdf) |
-| **Языковая карта семьи и лист наблюдений** | Кто говорит на каждом языке, что ребёнок понимает и как общается, примеры для консультации и вопросы специалисту. | [Открыть PDF](/central-asia-autism-hub/downloads/bilingual/karta-yazykov-i-nablyudenii-dlya-spetsialista-ru.pdf) |
+<div class="bilingual-downloads-scroll" role="region" aria-label="Бесплатные материалы для родителей" tabindex="0">
+  <table class="bilingual-downloads-table">
+    <thead>
+      <tr>
+        <th scope="col">Материал</th>
+        <th scope="col">Что внутри</th>
+        <th scope="col">Скачать</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><strong>7 ситуаций для общения на двух языках</strong></td>
+        <td>Примеры повседневных фраз на русском и казахском, варианты реакции на жесты, слова и AAC, памятка без принуждения.</td>
+        <td><a href="/central-asia-autism-hub/downloads/bilingual/7-situatsii-dva-yazyka-v-seme-ru.pdf">Открыть PDF</a></td>
+      </tr>
+      <tr>
+        <td><strong>Языковая карта семьи и лист наблюдений</strong></td>
+        <td>Кто говорит на каждом языке, что ребёнок понимает и как общается, примеры для консультации и вопросы специалисту.</td>
+        <td><a href="/central-asia-autism-hub/downloads/bilingual/karta-yazykov-i-nablyudenii-dlya-spetsialista-ru.pdf">Открыть PDF</a></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
 
 Эти файлы бесплатные и не собирают данные ребёнка. Они **не являются стандартными речевыми тестами**, не предлагают нормы числа слов и не позволяют поставить или исключить диагноз. При заполнении сведений о ребёнке храните документ конфиденциально.
 
