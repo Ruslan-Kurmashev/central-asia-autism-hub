@@ -6,7 +6,7 @@ on:
   workflow_dispatch:
 
 permissions:
-  contents: read
+  contents: write
   pages: write
   id-token: write
 
@@ -22,6 +22,19 @@ jobs:
         uses: actions/checkout@v7
         with:
           fetch-depth: 0
+      - name: Import approved AutismHub illustration and commit to repository
+        env:
+          IMAGE_URL: "https://oaisdmntprukwest.blob.core.windows.net/files/00000000-9474-8243-aed6-2830d90f9c06/raw?se=2026-10-25T23%3A09%3A48Z&sp=r&sv=2026-02-06&sr=b&scid=5de64281-6b16-4d06-ab67-c0a922c6c288&skoid=a4604a88-85e4-4562-b6ab-a5622268de80&sktid=a48cca56-e6da-484e-a814-9c849652bcb3&skt=2026-10-25T05%3A24%3A12Z&ske=2026-10-26T05%3A24%3A12Z&sks=b&skv=2026-02-06&sig=ERir6ejAaQ7vpC03n1WMMjVXvQw1domQZX%2B1yi/aSlg%3D"
+        run: |
+          set -euo pipefail
+          mkdir -p public/images/editorial
+          curl --fail --location --silent --show-error --retry 3 "$IMAGE_URL" --output public/images/editorial/emotion-three-moments-reference.png
+          python -c "import struct; p='public/images/editorial/emotion-three-moments-reference.png'; d=open(p,'rb').read(); assert d[:8] == bytes.fromhex('89504e470d0a1a0a') and len(d)>100000; print('Valid generated illustration:',len(d),'bytes')"
+          git config user.name "autismhub-pages-bot"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add public/images/editorial/emotion-three-moments-reference.png
+          git commit -m "Add approved emotion-support infographic as repository image"
+          git push origin HEAD:main
       - name: Install Python for printable practice resources
         uses: actions/setup-python@v6
         with:
