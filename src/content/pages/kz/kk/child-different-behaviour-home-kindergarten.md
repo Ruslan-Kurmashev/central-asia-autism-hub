@@ -5,12 +5,12 @@ description: "Ата-аналарға арналған нұсқаулық: үй 
 featuredImage: "/central-asia-autism-hub/images/editorial/parent-context-home-preschool-pexels-7780915.jpg"
 featuredImageAlt: "Үйде анасы мен баласы дамытушы ойыншықтармен бірге ойнап отырған шынайы сток фотосурет. Сурет бойынша баланың мінез-құлқы бағаланбайды."
 country: kz
-language: "kk"
+language: kk
 section: parents
 topic: child-development
 slug: "bala-uyde-balabakshada-arturli-minez-korsetu"
 translationKey: parents-child-context-dependent-behaviour-home-preschool
-translationStatus: "checked"
+translationStatus: checked
 audience:
   - parents
   - families

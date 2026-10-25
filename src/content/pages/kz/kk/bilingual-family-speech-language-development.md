@@ -5,12 +5,12 @@ description: "Қазақстандағы екітілді отбасыларға
 featuredImage: "/central-asia-autism-hub/images/editorial/parent-bilingual-childrens-books-cc0.jpg"
 featuredImageAlt: "Сөреге қойылған балалар кітаптарының шынайы фотосуреті, кадрда адамдар жоқ."
 country: kz
-language: "kk"
+language: kk
 section: parents
 topic: child-development
 slug: "ekitildi-otbasyndagy-soileu-damuy"
 translationKey: parents-bilingual-family-speech-development
-translationStatus: "checked"
+translationStatus: checked
 audience:
   - parents
   - families

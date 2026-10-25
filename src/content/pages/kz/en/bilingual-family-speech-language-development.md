@@ -5,12 +5,12 @@ description: "An evidence-informed parent guide for bilingual families in Kazakh
 featuredImage: "/central-asia-autism-hub/images/editorial/parent-bilingual-childrens-books-cc0.jpg"
 featuredImageAlt: "Authentic photograph of children's books on a shelf, with no people pictured."
 country: kz
-language: "en"
+language: en
 section: parents
 topic: child-development
 slug: "speech-language-development-bilingual-family"
 translationKey: parents-bilingual-family-speech-development
-translationStatus: "checked"
+translationStatus: checked
 audience:
   - parents
   - families

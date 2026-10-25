@@ -5,12 +5,12 @@ description: "Баланың бұрынғы дағдысын жоғалтуы т
 featuredImage: "/central-asia-autism-hub/images/editorial/parent-child-skills-cards-pexels-7943496.jpg"
 featuredImageAlt: "Анасы мен қызы үйде оқу карточкаларын қарап отырған шынайы сток фотосурет. Суреттен диагноз немесе дағдының жоғалуы анықталмайды."
 country: kz
-language: "kk"
+language: kk
 section: parents
 topic: child-development
 slug: "balada-buryn-bolgan-dagdylardyn-zhogaluy"
 translationKey: parents-child-developmental-skill-loss
-translationStatus: "checked"
+translationStatus: checked
 audience:
   - parents
   - families

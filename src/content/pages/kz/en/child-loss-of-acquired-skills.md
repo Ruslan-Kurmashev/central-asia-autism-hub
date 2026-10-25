@@ -5,12 +5,12 @@ description: "Practical evidence-informed parent guide to developmental regressi
 featuredImage: "/central-asia-autism-hub/images/editorial/parent-child-skills-cards-pexels-7943496.jpg"
 featuredImageAlt: "Authentic stock photograph of a mother and daughter looking at learning cards at home. Their diagnosis or developmental history cannot be inferred from the image."
 country: kz
-language: "en"
+language: en
 section: parents
 topic: child-development
 slug: "child-loss-of-acquired-skills"
 translationKey: parents-child-developmental-skill-loss
-translationStatus: "checked"
+translationStatus: checked
 audience:
   - parents
   - families

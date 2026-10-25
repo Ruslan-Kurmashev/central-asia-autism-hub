@@ -5,12 +5,12 @@ description: "A parent guide to differences between home and preschool behaviour
 featuredImage: "/central-asia-autism-hub/images/editorial/parent-context-home-preschool-pexels-7780915.jpg"
 featuredImageAlt: "Authentic stock photograph of a mother and son playing with educational toys at home, without assessing the child's behaviour."
 country: kz
-language: "en"
+language: en
 section: parents
 topic: child-development
 slug: "why-child-behaves-differently-home-preschool"
 translationKey: parents-child-context-dependent-behaviour-home-preschool
-translationStatus: "checked"
+translationStatus: checked
 audience:
   - parents
   - families
