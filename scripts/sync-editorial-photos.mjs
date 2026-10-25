@@ -37,7 +37,7 @@ const photos = [
   ['parent-development-shape-sorter.jpg', '6692956'],
   ['parent-child-independent-clothes-folding.jpg', '8055730'],
   ['parent-child-development-observation-desk.jpg', '9871135'],
-  ['parent-child-emotion-coregulation-family.jpg', '5094014'],
+  ['parent-emotion-coregulation-tashkent-18427960.jpg', '18427960'],
   ['parent-child-everyday-communication-book.jpg', '7307940'],
   ['parent-child-motor-stacking-wooden-toys.jpg', '6951563'],
   ['parent-child-pretend-kitchen-play.jpg', '5093655'],

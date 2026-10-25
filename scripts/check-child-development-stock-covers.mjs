@@ -44,3 +44,13 @@ for (const name of (await readdir(dir)).filter(x => /\.mdx?$/.test(x))) {
 assert.ok(scanned >= 12, 'Child-development coverage unexpectedly small: ' + scanned);
 console.log('Full development subsection real stock covers PASS:', scanned,
   'published Russian articles, distinct photos with documented source, valid files and HTML heroes.');
+
+// Ensure the emotionally supportive photo is tied to a verified Central Asian
+// stock source rather than relying on inferred nationality from appearance.
+const regulatedCover = await readFile(path.join(dir, 'child-emotion-regulation-support-at-home.md'), 'utf8');
+assert.ok(regulatedCover.includes('parent-emotion-coregulation-tashkent-18427960.jpg'),
+  'The emotion regulation guide must use the new regionally documented photograph');
+assert.ok(manifest.includes("['parent-emotion-coregulation-tashkent-18427960.jpg', '18427960']"),
+  'The real Pexels image must be downloaded and verified');
+assert.ok(docs.includes('https://www.pexels.com/photo/mother-hugging-daughter-in-darkness-18427960/') &&
+  docs.includes('Ташкентской области'), 'Region-specific source and image provenance missing');
