@@ -95,30 +95,30 @@ AAP описывает совместную регуляцию как важну
 
 ## 2. Три момента, в которые помощь может выглядеть по-разному
 
-<div class="emotion-moment-grid" role="group" aria-label="Три наглядных примера поддержки ребёнка: до, во время и после эмоциональной трудности">
+<div class="emotion-moment-grid" role="group" aria-label="Схема: как поддержать ребёнка до, во время и после эмоционального напряжения">
   <section class="emotion-moment-card">
     <div class="emotion-moment-card__label">01 · ДО</div>
     <figure class="emotion-moment-example">
-      <img src="/central-asia-autism-hub/images/editorial/photos/emotion-before-parent-shows-cards-pexels-7943496.jpg" alt="Мама показывает дочери карточку за столом, помогая объяснить, что будет дальше." width="600" height="400" loading="lazy" decoding="async" />
-      <figcaption>Показать, что будет дальше</figcaption>
+      <img src="/central-asia-autism-hub/images/editorial/parent-emotion-stage-01-prepare.svg" alt="Схема: взрослый показывает ребёнку карточки «Игра» и «Отдых», ребёнок указывает на свой выбор." width="600" height="400" loading="lazy" decoding="async" />
+      <figcaption>Показать выбор</figcaption>
     </figure>
-    <p>Предупредить заранее и дать два понятных варианта.</p>
+    <p>Заранее объяснить, что будет дальше.</p>
   </section>
   <section class="emotion-moment-card">
     <div class="emotion-moment-card__label">02 · ВО ВРЕМЯ</div>
     <figure class="emotion-moment-example">
-      <img src="/central-asia-autism-hub/images/editorial/photos/emotion-during-parent-comforts-pexels-6134904.jpg" alt="Мама находится рядом и поддерживает расстроенную дочь дома." width="600" height="400" loading="lazy" decoding="async" />
-      <figcaption>Спокойно быть рядом</figcaption>
+      <img src="/central-asia-autism-hub/images/editorial/parent-emotion-stage-02-support.svg" alt="Схема: ребёнок закрывает уши, взрослый спокойно сидит рядом, перечёркнутый динамик означает тишину." width="600" height="400" loading="lazy" decoding="async" />
+      <figcaption>Уменьшить нагрузку</figcaption>
     </figure>
-    <p>Обеспечить безопасность, снизить шум и требования.</p>
+    <p>Снизить шум, говорить коротко, быть рядом.</p>
   </section>
   <section class="emotion-moment-card">
     <div class="emotion-moment-card__label">03 · ПОСЛЕ</div>
     <figure class="emotion-moment-example">
-      <img src="/central-asia-autism-hub/images/editorial/photos/emotion-after-mother-daughter-talk-pexels-7204110.jpg" alt="Мама и дочь спокойно разговаривают друг с другом, сидя на диване." width="600" height="400" loading="lazy" decoding="async" />
-      <figcaption>Обсудить, когда ребёнок готов</figcaption>
+      <img src="/central-asia-autism-hub/images/editorial/parent-emotion-stage-03-recover.svg" alt="Схема: ребёнок сначала отдыхает на диване, затем спокойно разговаривает со взрослым." width="600" height="400" loading="lazy" decoding="async" />
+      <figcaption>Отдых, затем разговор</figcaption>
     </figure>
-    <p>Сначала дать отдохнуть, затем выяснить, что помогло.</p>
+    <p>Дать восстановиться. Обсудить позже.</p>
   </section>
 </div>
 

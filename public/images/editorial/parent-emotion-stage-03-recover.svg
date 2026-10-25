@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 400" width="600" height="400" role="img" aria-labelledby="t d"><title id="t">После сильного напряжения: сначала отдых, затем спокойный разговор</title><desc id="d">Слева ребёнок отдыхает на диване под пледом. Справа взрослый и ребёнок спокойно сидят рядом и разговаривают. Стрелка между сценами показывает последовательность, а не требование говорить немедленно.</desc>
+  <rect width="600" height="400" rx="18" fill="#edf6fb"/>
+  <rect x="18" y="24" width="246" height="347" rx="18" fill="#f8fcfe" stroke="#bed6e6" stroke-width="3"/>
+  <rect x="334" y="24" width="248" height="347" rx="18" fill="#f8fcfe" stroke="#bed6e6" stroke-width="3"/>
+  <text x="141" y="65" text-anchor="middle" font-family="Arial,sans-serif" font-size="24" font-weight="700" fill="#1e527c">ОТДЫХ</text>
+  <text x="459" y="65" text-anchor="middle" font-family="Arial,sans-serif" font-size="23" font-weight="700" fill="#1e527c">РАЗГОВОР</text>
+  <path d="M277 185h43m-14-15 15 15-15 15" stroke="#5f93b7" stroke-width="8" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+  <rect x="52" y="228" width="177" height="93" rx="22" fill="#92bbc9"/>
+  <rect x="43" y="259" width="28" height="69" rx="13" fill="#709eae"/>
+  <rect x="211" y="259" width="28" height="69" rx="13" fill="#709eae"/>
+  <rect x="74" y="221" width="133" height="30" rx="15" fill="#c8e0e6"/>
+  <circle cx="136" cy="190" r="35" fill="#edbc96"/>
+  <path d="M103 189q-4-43 31-44 27 0 36 37l-22-15-26 9z" fill="#44506a"/>
+  <path d="M118 193q8 6 16 0m12 0q7 5 15 0" stroke="#70585a" stroke-width="3" fill="none" stroke-linecap="round"/>
+  <path d="M124 211q12 7 25 0" stroke="#ae795e" stroke-width="3" fill="none" stroke-linecap="round"/>
+  <path d="M90 248q43-31 88-6l28 52H83z" fill="#e9aa69"/>
+  <path d="M78 273q65-40 136 4v40H78z" fill="#d4e5ee" stroke="#abc8da" stroke-width="3"/>
+  <path d="M94 296h104" stroke="#a0bdcf" stroke-width="3"/>
+  <path d="M68 326v16m151-16v16" stroke="#648da4" stroke-width="8" stroke-linecap="round"/>
+  <rect x="355" y="256" width="208" height="72" rx="24" fill="#91bac9"/>
+  <rect x="349" y="272" width="26" height="61" rx="12" fill="#709eae"/>
+  <rect x="548" y="272" width="25" height="61" rx="12" fill="#709eae"/>
+  <path d="M370 329v15m181-15v15" stroke="#648da4" stroke-width="8" stroke-linecap="round"/>
+  <circle cx="403" cy="201" r="29" fill="#e9b98c"/>
+  <path d="M375 199q-4-37 29-36 22 0 30 32l-19-15-32 11z" fill="#374d62"/>
+  <circle cx="393" cy="206" r="2.5" fill="#3a5269"/><circle cx="414" cy="206" r="2.5" fill="#3a5269"/>
+  <path d="M394 218q9 6 18 0" fill="none" stroke="#ae795e" stroke-width="2.7"/>
+  <path d="M366 285q1-59 39-59 37 0 43 59z" fill="#487da8"/>
+  <circle cx="514" cy="210" r="27" fill="#f0bf96"/>
+  <path d="M489 204q-4-35 25-34 26 0 27 31l-15-14-28 11z" fill="#44506a"/>
+  <circle cx="504" cy="214" r="2.5" fill="#3a5269"/><circle cx="523" cy="214" r="2.5" fill="#3a5269"/>
+  <path d="M504 224q9 7 18 0" stroke="#ae795e" stroke-width="2.6" fill="none"/>
+  <path d="M479 287q2-49 34-49 39 0 39 49z" fill="#e9aa69"/>
+  <path d="M433 272q30-10 49 0" stroke="#e9b98c" stroke-width="11" stroke-linecap="round" fill="none"/>
+  <path d="M475 270q-24-8-33 2" stroke="#f0bf96" stroke-width="10" stroke-linecap="round" fill="none"/>
+  <rect x="399" y="95" width="123" height="58" rx="22" fill="#fff" stroke="#a5c5d9" stroke-width="3"/>
+  <path d="M431 152l-16 16 4-19" fill="#fff" stroke="#a5c5d9" stroke-width="3"/>
+  <circle cx="425" cy="125" r="5" fill="#699ab6"/>
+  <circle cx="461" cy="125" r="5" fill="#699ab6"/>
+  <circle cx="496" cy="125" r="5" fill="#699ab6"/>
+  
+</svg>
