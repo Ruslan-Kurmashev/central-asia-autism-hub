@@ -9,6 +9,9 @@ import process from 'node:process';
 
 const folder = path.join(process.cwd(), 'public/images/editorial/photos');
 const photos = [
+  ['emotion-before-parent-shows-cards-pexels-7943496.jpg', '7943496'],
+  ['emotion-during-parent-comforts-pexels-6134904.jpg', '6134904'],
+  ['emotion-after-mother-daughter-talk-pexels-7204110.jpg', '7204110'],
   ['professional-ados-adi-cars-clinical-observation.jpg', '8653951'],
   ['event-ari-gestures-sign-language.jpg', '10029356'],
   ['event-ari-gi-anatomical-model.jpg', '18272488'],

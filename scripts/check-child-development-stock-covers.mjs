@@ -58,6 +58,18 @@ assert.ok(docs.includes('https://www.pexels.com/photo/mother-hugging-daughter-in
 const emotionHtml = await readFile('dist/kz/ru/parents/emotsii-samoregulyatsiya-kak-pomoch-rebenku/index.html', 'utf8');
 assert.ok(emotionHtml.includes('class="emotion-moment-grid"'), 'Emotion stages missing');
 assert.equal((emotionHtml.match(/class="emotion-moment-card"/g) ?? []).length, 3,
-  'Exactly three concise support cards are required');
-assert.ok(!emotionHtml.includes('parent-emotions-three-moments.svg'), 'Old stage image still present in article');
-console.log('Emotion stages QA PASS: three compact HTML cards.');
+  'Exactly three clear action cards are required');
+assert.equal((emotionHtml.match(/class="emotion-moment-example"/g) ?? []).length, 3,
+  'Each stage must illustrate a specific interaction');
+const expectedEmotionPhotos = ["emotion-before-parent-shows-cards-pexels-7943496.jpg","emotion-during-parent-comforts-pexels-6134904.jpg","emotion-after-mother-daughter-talk-pexels-7204110.jpg"];
+for (const file of expectedEmotionPhotos) {
+  assert.ok(emotionHtml.includes('/images/editorial/photos/' + file),
+    'Missing real explanatory stock photo: ' + file);
+  assert.ok(docs.includes('photos/' + file), 'Photo source not documented: ' + file);
+  assert.ok(manifest.includes("'" + file + "'"), 'Photo not registered for download: ' + file);
+  const bytes = await stat(path.resolve('public/images/editorial/photos', file));
+  assert.ok(bytes.isFile() && bytes.size > 15000, 'Missing or invalid photo: ' + file);
+}
+assert.ok(!emotionHtml.includes('class="emotion-moment-icon"'), 'Generic decorative icons must not replace meaning');
+assert.ok(!emotionHtml.includes('parent-emotions-three-moments.svg'), 'Old infographic still present');
+console.log('Emotion stages QA PASS: three real photographs illustrating concrete actions.');

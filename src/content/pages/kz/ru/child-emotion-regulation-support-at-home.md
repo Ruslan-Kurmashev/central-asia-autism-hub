@@ -95,39 +95,31 @@ AAP описывает совместную регуляцию как важну
 
 ## 2. Три момента, в которые помощь может выглядеть по-разному
 
-<div class="emotion-moment-grid" role="group" aria-label="Три момента поддержки ребёнка: до, во время и после трудной ситуации">
-  <div class="emotion-moment-card">
-    <svg class="emotion-moment-icon" viewBox="0 0 80 80" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-      <path d="M14 12h37l13 13v43H14z" />
-      <path d="M51 12v13h13" />
-      <path d="m24 37 5 5 8-10" />
-      <path d="M43 37h12M24 53h31" />
-      <circle cx="56" cy="56" r="3.2" fill="#e5ae3d" stroke="none" />
-    </svg>
-    <h3>До</h3>
-    <p>Предупредить заранее. Дать понятный выбор.</p>
-    <span class="emotion-moment-step">01 · Подготовка</span>
-  </div>
-  <div class="emotion-moment-card">
-    <svg class="emotion-moment-icon" viewBox="0 0 80 80" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-      <path d="M40 9 63 20v17c0 15-8 26-23 34-15-8-23-19-23-34V20z" />
-      <path d="m28 39 9 9 16-18" />
-      <circle cx="40" cy="9" r="4" fill="#e5ae3d" stroke="none" />
-    </svg>
-    <h3>Во время</h3>
-    <p>Обеспечить безопасность. Снизить нагрузку.</p>
-    <span class="emotion-moment-step">02 · Поддержка</span>
-  </div>
-  <div class="emotion-moment-card">
-    <svg class="emotion-moment-icon" viewBox="0 0 80 80" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-      <path d="M19 17h39a12 12 0 0 1 12 12v18a12 12 0 0 1-12 12H36L22 69V59h-3A12 12 0 0 1 7 47V29a12 12 0 0 1 12-12z" />
-      <path d="M29 36h27M29 47h18" />
-      <circle cx="61" cy="15" r="4" fill="#e5ae3d" stroke="none" />
-    </svg>
-    <h3>После</h3>
-    <p>Дать время на отдых. Обсудить позже.</p>
-    <span class="emotion-moment-step">03 · Восстановление</span>
-  </div>
+<div class="emotion-moment-grid" role="group" aria-label="Три наглядных примера поддержки ребёнка: до, во время и после эмоциональной трудности">
+  <section class="emotion-moment-card">
+    <div class="emotion-moment-card__label">01 · ДО</div>
+    <figure class="emotion-moment-example">
+      <img src="/central-asia-autism-hub/images/editorial/photos/emotion-before-parent-shows-cards-pexels-7943496.jpg" alt="Мама показывает дочери карточку за столом, помогая объяснить, что будет дальше." width="600" height="400" loading="lazy" decoding="async" />
+      <figcaption>Показать, что будет дальше</figcaption>
+    </figure>
+    <p>Предупредить заранее и дать два понятных варианта.</p>
+  </section>
+  <section class="emotion-moment-card">
+    <div class="emotion-moment-card__label">02 · ВО ВРЕМЯ</div>
+    <figure class="emotion-moment-example">
+      <img src="/central-asia-autism-hub/images/editorial/photos/emotion-during-parent-comforts-pexels-6134904.jpg" alt="Мама находится рядом и поддерживает расстроенную дочь дома." width="600" height="400" loading="lazy" decoding="async" />
+      <figcaption>Спокойно быть рядом</figcaption>
+    </figure>
+    <p>Обеспечить безопасность, снизить шум и требования.</p>
+  </section>
+  <section class="emotion-moment-card">
+    <div class="emotion-moment-card__label">03 · ПОСЛЕ</div>
+    <figure class="emotion-moment-example">
+      <img src="/central-asia-autism-hub/images/editorial/photos/emotion-after-mother-daughter-talk-pexels-7204110.jpg" alt="Мама и дочь спокойно разговаривают друг с другом, сидя на диване." width="600" height="400" loading="lazy" decoding="async" />
+      <figcaption>Обсудить, когда ребёнок готов</figcaption>
+    </figure>
+    <p>Сначала дать отдохнуть, затем выяснить, что помогло.</p>
+  </section>
 </div>
 
 | Когда | Что прежде всего важно | Что обычно не помогает |
