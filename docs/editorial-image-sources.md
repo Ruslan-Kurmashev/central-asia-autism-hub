@@ -950,3 +950,14 @@ Prefer photographs with documented Kazakhstan or Central Asian provenance. When 
 ## Self-care shirt example stock-photo revision (25 October 2026)
 
 In the Russian parent guide `child-daily-independence-practical-guide.md`, the ambiguous illustrated shirt sequence is replaced by four real Pexels photographs, each with a separate readable Russian caption. The photographs depict different people and are not sequential images of one child. They do not imply autism diagnoses or verified geographical origin, and must not be described as documentary evidence of the intervention. The accompanying description is an educational example of gradual support, not a mandatory protocol. No AI-generated images are used. Original article publication date is retained.
+
+
+## Региональная наука: три стоковые фотографии для обложек (25 октября 2026)
+
+Ниже указаны настоящие фотографии с Pexels по лицензии https://www.pexels.com/license/ . Фотографии используются в карточках научного раздела, в общей ленте и в шапке каждой статьи. Сюжеты иллюстративные, не являются документальными свидетельствами научных работ, применения AAC или инклюзивного образования непосредственно в Казахстане. Оригинальные информативные схемы сохранены внутри статей.
+
+| Локальный файл | Статья | Автор фото | Исходная страница | Сюжет |
+| --- | --- | --- | --- | --- |
+| `photos/research-kz-evidence-gaps-team-meeting.jpg` | Пробелы в изучении аутизма в Центральной Азии | Yan Krukau | https://www.pexels.com/photo/coworkers-looking-at-a-laptop-in-a-meeting-7698802/ | Стоковая фотография обсуждения данных коллегами за ноутбуком. Иллюстрация исследовательской работы, не документальный снимок учёных Центральной Азии. |
+| `photos/research-kz-technology-child-tablet.jpg` | Цифровые технологии поддержки детей | Anna Pou | https://www.pexels.com/photo/a-child-using-a-tablet-9345618/ | Реальная стоковая фотография ребёнка с планшетом, пример цифрового устройства. Использование AAC и диагноз ребёнка по снимку не устанавливаются. |
+| `photos/research-kz-inclusive-classroom-teacher-support.jpg` | Поддержка участия ребёнка в школьном классе | Max Fischer | https://www.pexels.com/photo/teacher-helping-a-student-5212354/ | Реальная стоковая фотография учителя, который помогает ученику на уроке в классе. Снимок иллюстрирует поддержку в школе и не выдаётся за школу Казахстана. |

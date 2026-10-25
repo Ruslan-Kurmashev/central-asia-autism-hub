@@ -84,3 +84,25 @@ for (const card of cards) {
   }
 }
 console.log('Research visual QA passed: ' + published.length + ' unique documented research covers; ' + featuredPhotos.size + ' research-collection cards in the chronological homepage feed.');
+
+
+// Regression check for three regional science explainers: distinct real stock photographs
+// on listing cards and article heroes, retaining scientific figures in the body.
+const regionalCovers = [{"name":"probely-issledovaniy-autizma-v-centralnoy-azii.md","slug":"probely-issledovaniy-autizma-v-centralnoy-azii","file":"research-kz-evidence-gaps-team-meeting.jpg","old":"central-asia-autism-research-gaps-roadmap.svg","id":"7698802"},{"name":"tehnologii-podderzhki-autizma-v-kazahstane-nauchnye-dannye.md","slug":"tehnologii-podderzhki-autizma-v-kazahstane-nauchnye-dannye","file":"research-kz-technology-child-tablet.jpg","old":"kazakhstan-autism-support-technologies-map.svg","id":"9345618"},{"name":"inklyuzivnoe-obrazovanie-autizm-kazahstan-issledovaniya.md","slug":"inklyuzivnoe-obrazovanie-autizm-kazahstan-issledovaniya","file":"research-kz-inclusive-classroom-teacher-support.jpg","old":"kazakhstan-inclusive-education-participation-path.svg","id":"5212354"}];
+const regionalListing = await readFile(path.join(root, 'dist/kz/ru/research/topics/kazakhstan-research/index.html'), 'utf8');
+for (const cover of regionalCovers) {
+  const articleSource = await readFile(path.join(root, 'src/content/pages/kz/ru', cover.name), 'utf8');
+  const photoUrl = base + 'images/editorial/photos/' + cover.file;
+  assert.ok(articleSource.includes('featuredImage: "' + photoUrl + '"'), cover.slug + ': no new stock cover');
+  assert.ok(articleSource.includes(cover.old), cover.slug + ': explanatory original diagram must remain');
+  assert.ok(manifest.includes("['" + cover.file + "', '" + cover.id + "']"), cover.slug + ': missing Pexels source in downloader');
+  assert.ok(attribution.includes(cover.file) && attribution.includes('pexels.com/photo/'), cover.slug + ': no source credit');
+  const photo = await readFile(path.join(root, 'public/images/editorial/photos', cover.file));
+  assert.ok(photo.length > 15000 && photo[0] === 255 && photo[1] === 216 && photo.at(-2) === 255 && photo.at(-1) === 217,
+    cover.slug + ': downloaded photo is invalid');
+  const html = await readFile(path.join(root, 'dist/kz/ru/research', cover.slug, 'index.html'), 'utf8');
+  assert.ok(html.includes(photoUrl), cover.slug + ': hero image does not show photo');
+  assert.ok(regionalListing.includes(photoUrl), cover.slug + ': topic card does not show photo');
+}
+assert.equal(new Set(regionalCovers.map(c => c.file)).size, 3, 'Regional science covers must be distinct');
+console.log('Regional Kazakhstan research covers PASS: three unique Pexels photos on article and catalogue pages.');
