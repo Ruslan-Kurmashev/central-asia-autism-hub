@@ -44,9 +44,9 @@ assert.ok(parents.includes('balanyn-damu-bagdarlary'));
 // Parent visitors should see the complete subsection directory before opening articles.
 for (const locale of ['ru', 'kk', 'en']) {
   const html = await readFile(path.join(dist, 'kz', locale, 'parents', 'index.html'), 'utf8');
-  const groups = [...html.matchAll(/<details\\b[^>]*class="section-v2__group(?: section-v2__group--other)?"[^>]*>/g)].map(m => m[0]);
+  const groups = [...html.matchAll(/<details\b[^>]*class="section-v2__group(?: section-v2__group--other)?"[^>]*>/g)].map(m => m[0]);
   assert.ok(groups.length >= 6, locale + ': not all parent subsections are displayed');
-  assert.ok(groups.every(tag => !/\\bopen(?:\\s|=|>)/.test(tag)),
+  assert.ok(groups.every(tag => !/\bopen(?:\s|=|>)/.test(tag)),
     locale + ': parent subsections must be initially collapsed');
 }
 
