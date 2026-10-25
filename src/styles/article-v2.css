@@ -1724,3 +1724,60 @@
   word-break: normal;
   overflow-wrap: normal;
 }
+
+
+/* Daily independence guide: real Pexels photographs and accessible captions.
+   Cards describe teaching steps but do not claim a single photographed child. */
+.article-v2.parents-article-body .article-v2__body .independence-shirt-example-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1rem;
+  margin: 1.6rem 0 0.75rem;
+  padding: 0;
+}
+.article-v2.parents-article-body .article-v2__body .independence-shirt-example-card {
+  margin: 0;
+  min-width: 0;
+  background: #fff;
+  border: 1px solid var(--article-line);
+  border-radius: var(--radius-small);
+  overflow: hidden;
+}
+.article-v2.parents-article-body .article-v2__body .independence-shirt-example-card img {
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 3 / 2;
+  object-fit: cover;
+  margin: 0;
+  border-radius: 0;
+}
+.article-v2.parents-article-body .article-v2__body .independence-shirt-example-card figcaption {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  margin: 0;
+  padding: 1rem;
+  line-height: var(--leading-reading);
+  color: var(--article-ink);
+  overflow-wrap: break-word;
+}
+.article-v2.parents-article-body .article-v2__body .independence-shirt-example-card figcaption strong {
+  font-size: var(--type-reading);
+  color: var(--article-blue-dark);
+  line-height: var(--leading-reading);
+}
+.article-v2.parents-article-body .article-v2__body .independence-shirt-example-card figcaption span {
+  font-size: var(--type-control);
+  line-height: var(--leading-reading);
+}
+.article-v2.parents-article-body .article-v2__body .independence-shirt-photo-note {
+  margin: 0.5rem 0 1.5rem;
+  font-size: var(--type-small);
+  color: var(--article-ink);
+}
+@media (max-width: 40rem) {
+  .article-v2.parents-article-body .article-v2__body .independence-shirt-example-grid {
+    grid-template-columns: 1fr;
+  }
+}

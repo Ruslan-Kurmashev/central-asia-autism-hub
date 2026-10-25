@@ -136,7 +136,38 @@ sources:
 3. Когда этот шаг стал удобным, можно предложить и предыдущий: самостоятельно провести руку в рукав.
 4. Постепенно ребёнок может брать на себя больше этапов. Если пока это трудно или неприятно, прежняя помощь остаётся допустимой.
 
-![Три схематичных действия: взрослый помогает надеть футболку, ребёнок участвует с рукавом, затем завершает действие, опуская её нижний край.](/central-asia-autism-hub/images/editorial/selfcare-shirt-sequence.svg)
+<div class="independence-shirt-example-grid" role="group" aria-label="Четыре этапа поддержки самостоятельности при одевании">
+  <figure class="independence-shirt-example-card">
+    <img src="/central-asia-autism-hub/images/editorial/selfcare-shirt-step-7104238.jpg" alt="Взрослая помогает ребёнку одеться дома" width="1200" height="800" loading="lazy" decoding="async" />
+    <figcaption>
+      <strong>1. Взрослый помогает</strong>
+      <span>Взрослый помогает надеть футболку и провести руки в рукава.</span>
+    </figcaption>
+  </figure>
+  <figure class="independence-shirt-example-card">
+    <img src="/central-asia-autism-hub/images/editorial/selfcare-shirt-step-7220910.jpg" alt="Отец помогает ребёнку с одеждой в домашней обстановке" width="1200" height="800" loading="lazy" decoding="async" />
+    <figcaption>
+      <strong>2. Последний шаг ребёнка</strong>
+      <span>Если ребёнок готов, он сам опускает нижний край футболки.</span>
+    </figcaption>
+  </figure>
+  <figure class="independence-shirt-example-card">
+    <img src="/central-asia-autism-hub/images/editorial/selfcare-shirt-step-7943242.jpg" alt="Ребёнок вместе с матерью выбирает одежду дома" width="1200" height="800" loading="lazy" decoding="async" />
+    <figcaption>
+      <strong>3. Добавляем ещё один шаг</strong>
+      <span>Позже можно предложить самостоятельно провести руку в рукав, сохранив нужную помощь.</span>
+    </figcaption>
+  </figure>
+  <figure class="independence-shirt-example-card">
+    <img src="/central-asia-autism-hub/images/editorial/selfcare-shirt-step-5715080.jpg" alt="Ребёнок стоит дома в повседневной одежде" width="1200" height="800" loading="lazy" decoding="async" />
+    <figcaption>
+      <strong>4. Больше самостоятельности</strong>
+      <span>Постепенно ребёнок выполняет больше этапов. Если сложно, помощь остаётся.</span>
+    </figcaption>
+  </figure>
+</div>
+
+<p class="independence-shirt-photo-note">Фотографии иллюстрируют бытовые ситуации с разными семьями, а не последовательную съёмку одного ребёнка. Переход к следующему шагу зависит от комфорта и готовности ребёнка.</p>
 
 Это пример **необязательной** организации бытового действия, а не медицинское назначение или алгоритм, одинаково подходящий всем.
 

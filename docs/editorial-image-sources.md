@@ -800,7 +800,11 @@ Three original editable SVGs written for AutismHub, without generated images, me
 | File | Provenance and limitations |
 | --- | --- |
 | `parent-daily-independence-cover.svg` | Original AutismHub source-coded vector of simple clothing, cup and toy storage symbols. Conceptual editorial illustration, not a developmental measure or patient image. |
-| `selfcare-shirt-sequence.svg` | Original AutismHub schematic of partial assistance with putting on a shirt, three approximate stages. Does not prescribe a therapeutic protocol. |
+| `selfcare-shirt-sequence.svg` | Former AutismHub schematic, withdrawn because its steps were visually unclear. File retired from published article. |
+| `selfcare-shirt-step-7104238.jpg` | RDNE Stock project, [Pexels 7104238](https://www.pexels.com/photo/a-mother-helping-her-daughter-get-dressed-7104238/), [Pexels licence](https://www.pexels.com/license/). Documentary stock image of adult helping child to dress, shown as the first example card. |
+| `selfcare-shirt-step-7220910.jpg` | Pavel Danilyuk, [Pexels 7220910](https://www.pexels.com/photo/man-in-white-shirt-with-a-child-sitting-on-the-bed-7220910/), [Pexels licence](https://www.pexels.com/license/). Adult supporting child during dressing, shown as second example card. |
+| `selfcare-shirt-step-7943242.jpg` | Nicola Barts, [Pexels 7943242](https://www.pexels.com/photo/a-girl-picking-clothes-with-her-mother-7943242/), [Pexels licence](https://www.pexels.com/license/). Child choosing clothing with adult, shown as third example card. |
+| `selfcare-shirt-step-5715080.jpg` | Bulat Khamitov, [Pexels 5715080](https://www.pexels.com/photo/little-child-posing-at-home-5715080/), [Pexels licence](https://www.pexels.com/license/). Child in everyday clothing at home, shown as fourth example card. |
 | `selfcare-handwashing-sequence.svg` | Original AutismHub handwashing schematic with four approximate stages. Refer to NHS guidance for hygiene and supervision. |
 | `selfcare-table-sequence.svg` | Original AutismHub three-stage schematic for preparing an accessible meal place, without external borrowed art. |
 
@@ -941,3 +945,8 @@ Prefer photographs with documented Kazakhstan or Central Asian provenance. When 
 | `photos/parent-child-motor-stacking-wooden-toys.jpg` | Развитие движений и мелкой моторики | Artem Podrez | https://www.pexels.com/photo/a-kid-playing-wooden-toys-6951563/ | Игра с деревянными игрушками и предметами для манипуляции руками |
 | `photos/parent-child-pretend-kitchen-play.jpg` | Как развивается игра ребёнка | Kamaji Ogino | https://www.pexels.com/photo/unrecognizable-child-playing-with-fake-kitchenware-5093655/ | Анонимный ребёнок использует игрушечную кухонную посуду, сюжетная игра |
 | `photos/parent-child-speech-shared-reading.jpg` | Развитие речи и понимания | Mizuno K | https://www.pexels.com/photo/mother-reading-a-book-to-her-child-in-the-bedroom-12788608/ | Совместное чтение ребёнка с матерью, повседневное общение |
+
+
+## Self-care shirt example stock-photo revision (25 October 2026)
+
+In the Russian parent guide `child-daily-independence-practical-guide.md`, the ambiguous illustrated shirt sequence is replaced by four real Pexels photographs, each with a separate readable Russian caption. The photographs depict different people and are not sequential images of one child. They do not imply autism diagnoses or verified geographical origin, and must not be described as documentary evidence of the intervention. The accompanying description is an educational example of gradual support, not a mandatory protocol. No AI-generated images are used. Original article publication date is retained.
