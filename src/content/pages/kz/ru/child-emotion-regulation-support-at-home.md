@@ -96,8 +96,8 @@ AAP описывает совместную регуляцию как важну
 ## 2. Три момента, в которые помощь может выглядеть по-разному
 
 <figure class="emotion-reference-figure">
-  <a href="/central-asia-autism-hub/images/editorial/emotion-three-moments-reference.png" target="_blank" rel="noopener noreferrer" aria-label="Открыть увеличенную схему трёх этапов поддержки ребёнка">
-    <img src="/central-asia-autism-hub/images/editorial/emotion-three-moments-reference.png" width="1672" height="941" alt="Три иллюстрации в едином мультяшном стиле: до трудной ситуации мама предлагает мальчику выбрать занятие по карточкам, во время сильного эмоционального напряжения мама спокойно находится рядом с расстроенным ребёнком, после мама и ребёнок отдыхают и разговаривают, когда он готов." loading="lazy" decoding="async" />
+  <a href="/central-asia-autism-hub/images/editorial/emotion-three-moments-no-duplicate-title.png" target="_blank" rel="noopener noreferrer" aria-label="Открыть увеличенную схему трёх этапов поддержки ребёнка">
+    <img src="/central-asia-autism-hub/images/editorial/emotion-three-moments-no-duplicate-title.png" width="2179" height="722" alt="Три иллюстрации без повторяющегося заголовка: до трудной ситуации мама предлагает ребёнку выбрать между двумя занятиями, во время сильного напряжения спокойно остаётся рядом, после даёт отдохнуть и общается с ребёнком, когда он готов." loading="lazy" decoding="async" />
   </a>
   <figcaption>Нажмите на изображение, чтобы открыть схему крупнее.</figcaption>
 </figure>

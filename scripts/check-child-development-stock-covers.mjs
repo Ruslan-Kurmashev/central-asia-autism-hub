@@ -56,13 +56,14 @@ assert.ok(docs.includes('https://www.pexels.com/photo/mother-hugging-daughter-in
   docs.includes('Ташкентской области'), 'Region-specific source and image provenance missing');
 
 const emotionHtml = await readFile('dist/kz/ru/parents/emotsii-samoregulyatsiya-kak-pomoch-rebenku/index.html', 'utf8');
-const approvedInfographic = 'emotion-three-moments-reference.png';
+const approvedInfographic = 'emotion-three-moments-no-duplicate-title.png';
 const approvedUrl = '/central-asia-autism-hub/images/editorial/' + approvedInfographic;
 assert.ok(emotionHtml.includes('class="emotion-reference-figure"'),
   'Missing user-approved infographic placement');
-assert.equal((emotionHtml.match(/emotion-three-moments-reference.png/g) || []).length, 2,
+assert.equal((emotionHtml.match(/emotion-three-moments-no-duplicate-title.png/g) || []).length, 2,
   'Article must link full-resolution file and show it exactly once');
 assert.ok(emotionHtml.includes(approvedUrl), 'Generated article must use the locally deployed infographic');
+assert.ok(!emotionHtml.includes('emotion-three-moments-reference.png'), 'Old infographic with duplicated heading must not appear');
 assert.ok(!emotionHtml.includes('emotion-moment-card') && !emotionHtml.includes('parent-emotion-stage-01-prepare.svg'),
   'Previous separate cards must not remain visible');
 assert.ok(docs.includes('images/editorial/' + approvedInfographic),
@@ -71,6 +72,8 @@ const originalPng = await readFile(path.resolve('public/images/editorial', appro
 assert.ok(originalPng.length > 1000000 &&
   originalPng.subarray(0,8).toString('hex') === '89504e470d0a1a0a',
   'Original generated image must be a complete valid PNG file');
+assert.equal(originalPng.readUInt32BE(16), 2179, 'Wrong illustration width');
+assert.equal(originalPng.readUInt32BE(20), 722, 'Wrong illustration height');
 console.log('Emotion stages QA PASS: user-approved full-size illustration published, old scheme removed.');
 
 
