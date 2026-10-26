@@ -41,7 +41,7 @@ for (const file of pages) {
     }
   }
 }
-async function request(url, method, partial = true) {
+async function request(url, method, partial = true, browserAgent = false) {
   const controller = new AbortController();
   const timer = setTimeout(() => controller.abort(), timeoutMs);
   try {
@@ -50,7 +50,7 @@ async function request(url, method, partial = true) {
       signal: controller.signal,
       redirect: 'follow',
       headers: {
-        'user-agent': 'AutismHub-LinkQA/1.0 (+https://github.com/Ruslan-Kurmashev/central-asia-autism-hub)',
+        'user-agent': browserAgent ? 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/125.0.0.0 Safari/537.36' : 'AutismHub-LinkQA/1.0 (+https://github.com/Ruslan-Kurmashev/central-asia-autism-hub)',
         'accept': 'text/html,application/pdf,*/*',
         ...(method === 'GET' && partial ? { range: 'bytes=0-1023' } : {}),
       },
@@ -80,7 +80,17 @@ async function check(url) {
       return { url, state: 'ok', status: full.status, method: 'GET without Range' };
     }
     if (full.status === 404 || full.status === 410) {
-      return { url, state: 'broken', status: full.status, method: 'GET without Range' };
+      // A public page may reject a crawler-specific User-Agent. Confirm once
+      // with the same request a normal browser would send, without Range.
+      const browser = await request(url, 'GET', false, true);
+      if (browser.status !== null && browser.status >= 200 && browser.status < 400) {
+        return { url, state: 'ok', status: browser.status, method: 'browser-style GET' };
+      }
+      if (browser.status === 404 || browser.status === 410) {
+        return { url, state: 'broken', status: browser.status, method: 'browser-style GET' };
+      }
+      return { url, state: 'inconclusive', status: browser.status ?? full.status,
+        reason: browser.error ?? 'browser-style GET restricted' };
     }
     return { url, state: 'inconclusive', status: full.status ?? get.status, reason: full.error ?? 'full GET refused' };
   }
