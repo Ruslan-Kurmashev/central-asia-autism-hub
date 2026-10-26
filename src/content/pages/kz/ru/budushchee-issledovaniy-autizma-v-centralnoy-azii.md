@@ -107,11 +107,11 @@ sources:
     note: "Международный ориентир по информационным системам, научным данным, доступности услуг и жизненному пути, не отдельная государственная программа РАС Центральной Азии."
     accessedAt: 2026-10-16
   - title: "STROBE Statement: guidelines for reporting observational studies"
-    url: "https://www.equator-network.org/reporting-guidelines/strobe/"
-    organisation: "EQUATOR Network"
+    url: "https://doi.org/10.1371/journal.pmed.0040296"
+    organisation: "PLOS Medicine"
     publicationYear: 2007
     note: "Рекомендации для отчётности о когортных, поперечных исследованиях и исследованиях случай-контроль. Чек-лист не заменяет оценку методологического качества."
-    accessedAt: 2026-10-16
+    accessedAt: 2026-10-26
   - title: "CONSORT 2025 Statement: updated guideline for reporting randomised trials"
     url: "https://doi.org/10.1136/bmj-2024-081123"
     organisation: "BMJ"
@@ -291,7 +291,7 @@ sources:
 
 Эти рекомендации **не являются сертификатами высокого научного качества**. Они прежде всего помогают прозрачно рассказать, что было сделано. Хорошая отчётность необходима, но не исправляет изначально неподходящий дизайн.
 
-[STROBE](https://www.equator-network.org/reporting-guidelines/strobe/), [CONSORT 2025](https://www.equator-network.org/reporting-guidelines/consort/).
+[STROBE](https://doi.org/10.1371/journal.pmed.0040296), [CONSORT 2025](https://doi.org/10.1136/bmj-2024-081123).
 
 ### Публикация неопределённости и отрицательных результатов
 
@@ -389,8 +389,8 @@ sources:
 10. [UNICEF Kazakhstan, 2025. Оценка экосистемы вспомогательных технологий.](https://www.unicef.org/kazakhstan/en/reports/assistive-technologies-childs-needs-assessment-and-ecosystem-kazakhstan)
 11. [ВОЗ, 2021. План действий в области психического здоровья на 2013-2030 годы.](https://www.who.int/publications/i/item/9789240031029)
 12. [ВОЗ, 2021. Запуск подготовки тренеров CST в Казахстане.](https://www.who.int/europe/news/item/05-03-2021-who-europe-launches-caregiver-skills-training-in-kazakhstan-to-support-children-with-neurodevelopmental-delays)
-13. [EQUATOR Network. STROBE для наблюдательных исследований.](https://www.equator-network.org/reporting-guidelines/strobe/)
-14. [EQUATOR Network. CONSORT 2025 для рандомизированных испытаний.](https://www.equator-network.org/reporting-guidelines/consort/)
+13. [von Elm et al. (2007). STROBE для наблюдательных исследований.](https://doi.org/10.1371/journal.pmed.0040296)
+14. [Hopewell et al. (2025). CONSORT 2025 для рандомизированных испытаний.](https://doi.org/10.1136/bmj-2024-081123)
 15. [ВОЗ, 2024. Artificial Intelligence for Health.](https://www.who.int/publications/m/item/artificial-intelligence-for-health)
 
 *Актуальность проверки: 16 октября 2026 года. Автор и редактор: Ruslan Kurmashev. Независимое внешнее рецензирование этой статьи не проводилось. Представленная дорожная карта является редакционной иллюстрацией возможных исследований и не представляет государственную политику, финансируемый проект или индивидуальную медицинскую рекомендацию.*

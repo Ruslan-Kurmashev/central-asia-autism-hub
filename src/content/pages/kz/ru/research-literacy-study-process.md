@@ -21,7 +21,7 @@ riskLevel: lower
 disclaimerType: informational
 conflictOfInterest: "Коммерческих интересов не заявлено. Все учебные примеры вымышлены."
 publishedAt: 2026-10-15
-updatedAt: 2026-10-15
+updatedAt: 2026-10-26
 reviewDueAt: 2027-04-15
 draft: false
 keyPoints:
@@ -45,11 +45,11 @@ sources:
     note: "Прозрачность отчёта, протокол, участники и заранее определённые исходы."
     accessedAt: 2026-10-15
   - title: "STROBE Statement: observational studies"
-    url: "https://www.equator-network.org/reporting-guidelines/strobe/"
-    organisation: "EQUATOR Network"
+    url: "https://doi.org/10.1371/journal.pmed.0040296"
+    organisation: "PLOS Medicine"
     publicationYear: 2007
     note: "Полная отчётность когортных, поперечных и исследований случай–контроль."
-    accessedAt: 2026-10-15
+    accessedAt: 2026-10-26
   - title: "Cochrane Handbook, Chapter 14: certainty of evidence"
     url: "https://www.cochrane.org/authors/handbooks-and-manuals/handbook/current/chapter-14"
     organisation: "Cochrane"
