@@ -27,11 +27,6 @@ jobs:
       - name: Install dependencies
         run: npm ci
 
-      - name: Probe compatible npm security remediation (temporary)
-        run: |
-          npm audit fix --package-lock-only --ignore-scripts || true
-          node --input-type=commonjs -e 'const p=require("./package-lock.json").packages; for (const n of ["undici","zod","fast-uri"]) console.log("REMEDIATION_NODE " + n + " " + JSON.stringify(p["node_modules/"+n]));'
-          git diff --numstat -- package-lock.json
       - name: Build static pages for URL inspection
         run: npm run build
 

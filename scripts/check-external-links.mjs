@@ -41,7 +41,7 @@ for (const file of pages) {
     }
   }
 }
-async function request(url, method) {
+async function request(url, method, partial = true) {
   const controller = new AbortController();
   const timer = setTimeout(() => controller.abort(), timeoutMs);
   try {
@@ -52,7 +52,7 @@ async function request(url, method) {
       headers: {
         'user-agent': 'AutismHub-LinkQA/1.0 (+https://github.com/Ruslan-Kurmashev/central-asia-autism-hub)',
         'accept': 'text/html,application/pdf,*/*',
-        ...(method === 'GET' ? { range: 'bytes=0-1023' } : {}),
+        ...(method === 'GET' && partial ? { range: 'bytes=0-1023' } : {}),
       },
     });
     await response.body?.cancel().catch(() => {});
@@ -73,7 +73,16 @@ async function check(url) {
     return { url, state: 'ok', status: get.status, method: 'GET' };
   }
   if (get.status === 404 || get.status === 410) {
-    return { url, state: 'broken', status: get.status, method: 'GET' };
+    // Some servers reject a partial-range GET with 404 despite serving a full GET.
+    // Retry without Range before labelling the original URL as genuinely broken.
+    const full = await request(url, 'GET', false);
+    if (full.status !== null && full.status >= 200 && full.status < 400) {
+      return { url, state: 'ok', status: full.status, method: 'GET without Range' };
+    }
+    if (full.status === 404 || full.status === 410) {
+      return { url, state: 'broken', status: full.status, method: 'GET without Range' };
+    }
+    return { url, state: 'inconclusive', status: full.status ?? get.status, reason: full.error ?? 'full GET refused' };
   }
   return { url, state: 'inconclusive', status: get.status ?? head.status, reason: get.error ?? head.error ?? 'restricted or server error' };
 }
