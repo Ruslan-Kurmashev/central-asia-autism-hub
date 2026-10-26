@@ -1028,3 +1028,10 @@ In the Russian parent guide `child-daily-independence-practical-guide.md`, the a
 | Local file | Source and permission | Status and use |
 | --- | --- | --- |
 | `public/images/editorial/parent-emotions-communication-cards-approved-2026-10-26.webp` | User-supplied original image `Коммуникационные карточки_ пауза, помощь, тише, стоп(1).png`, explicitly selected by the project owner for this article on 2026-10-26 | Replaces only the illustration in section 6 of `src/content/pages/kz/ru/child-emotion-regulation-support-at-home.md`. Contains the four Russian-language cards ПАУЗА, ПОМОГИ, ТИШЕ, СТОП. Original PNG was 1956 x 804 px. Optimized WebP is 840 x 345 px, visually reviewed against the supplied image. User-supplied instructional image, not a licensed stock cover or clinical assessment instrument. |
+
+
+## Approved instructional illustration: tearing and crumpling paper (26 October 2026)
+
+| Local file | Source | Status and use |
+| --- | --- | --- |
+| `public/images/editorial/motor/motor-tear-and-crumple-paper-steps.webp` | Original AI-assisted illustration generated in the AutismHub conversation using the owner's mother-and-child style reference | Owner selected the three-panel illustration for game 6, "Рвём и мнём бумагу", in `src/content/pages/kz/ru/home-motor-and-fine-motor-practice.md`. The approved 1916 x 821 PNG was optimized as WebP. This is an instructional image, not a stock photograph, clinical evidence, or an article cover. |
