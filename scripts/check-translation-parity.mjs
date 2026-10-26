@@ -52,7 +52,7 @@ for(const [key,items] of groups){
     if(item.risk!==source.risk || item.disclaimer!==source.disclaimer)errors.push(item.file+': safety metadata differs');
     // First release dates are immutable and may differ for later translations.
     if(item.original && item.original!==source.published)errors.push(item.file+': originalPublishedAt differs from source publishedAt');
-    if(item.display && item.display!==source.published)errors.push(item.file+': displayPublishedAt differs from source publishedAt');
+    if(item.display && item.display!==(source.display||source.published))errors.push(item.file+': displayPublishedAt differs from source display date');
     if(!item.original || !item.display)notes.push(item.file+': explicit display/original date metadata not complete');
   }
 }
