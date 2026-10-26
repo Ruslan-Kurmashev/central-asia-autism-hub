@@ -20,7 +20,6 @@ const requiredDistinct = [
   'screening-assessment-diagnosis',
   'autism-diagnosis-kazakhstan',
   'autism-assessments-kazakhstan',
-  'communication-aac',
   'aac',
   'types-of-autism-support',
   'choosing-support-by-goal',
@@ -36,11 +35,9 @@ const distinctSet = new Set(requiredDistinct);
 const firstWave = new Map();
 const sensoryDistinctFiles = new Set([
   'sensornye-osobennosti-pri-autizme',
-  'sensory-based-strategies',
   'sensory-environmental-support',
   'ayres-sensory-integration',
   'stimming-i-povtoryayushchiesya-deystviya-pri-autizme',
-  'sensory-diet',
   'auditory-integration-listening-programs',
   'sensory-overload-environmental-adaptations',
 ]);
@@ -50,8 +47,7 @@ const editorialDistinctGroups = {
   communicationAAC: new Set([
     'aac',
     'aided-language-modelling',
-    'communication-aac',
-    'communication-partner-training',
+      'communication-partner-training',
     'functional-communication-training',
     'pecs',
     'speech-language-therapy',
@@ -181,13 +177,47 @@ for (const locale of ['ru', 'en', 'kk']) {
     `Published ${locale} articles lacking a featured image`);
 }
 
+// Previously published covers remain part of the provenance record after an
+// editorial merge. Their source pages are drafts, not silently deleted.
+const retiredSupportFiles = [
+  "communication-aac",
+  "aided-language-modelling",
+  "antecedent-based-interventions",
+  "play-based-interventions",
+  "joint-attention",
+  "sensory-based-strategies",
+  "sensory-diet",
+  "daily-living-participation",
+  "task-analysis",
+  "adapted-cbt-autistic-people"
+];
+const archivedImages = new Set();
+for (const name of retiredSupportFiles) {
+  const file = path.join(baseDir, 'ru', name + '.md');
+  const raw = await readFile(file, 'utf8');
+  const frontmatter = raw.match(/^---\n([\s\S]*?)\n---/)?.[1];
+  assert.ok(frontmatter, 'Retired support source missing metadata: ' + name);
+  assert.equal(value(frontmatter, 'draft'), 'true', 'Retired support page still published: ' + name);
+  const src = value(frontmatter, 'featuredImage');
+  const alt = value(frontmatter, 'featuredImageAlt');
+  assert.ok(src.startsWith(base + 'images/editorial/') && alt.length >= 30,
+    'Retired source lost its documented image or alt text: ' + name);
+  assert.ok(!archivedImages.has(src), 'Duplicate image among retired support pages: ' + name);
+  archivedImages.add(src);
+  const localFile = path.resolve(publicDir, src.slice(base.length));
+  const image = await stat(localFile);
+  assert.ok(image.isFile() && image.size > 600, 'Archived support image lost: ' + name);
+  assert.ok(documentation.includes(path.basename(localFile)),
+    'Archived support image provenance missing: ' + name);
+}
+
 for (const [group, files] of Object.entries(editorialDistinctGroups)) {
   assert.equal(editorialImageOwners[group].size, files.size,
     `All ${files.size} ${group} parent covers must be present and distinct`);
 }
 assert.equal(allParentImageOwners.size, totals.ru.parents,
   'Every published Russian parent article must have a distinct, documented cover');
-assert.equal(sensoryImageOwners.size, sensoryDistinctFiles.size, 'Eight sensory-topic covers must be present and distinct');
+assert.equal(sensoryImageOwners.size, sensoryDistinctFiles.size, 'Published sensory-topic covers must be present and distinct');
 assert.equal(firstWave.size, requiredDistinct.length,
   'First-wave editorial images are not complete or distinct');
 for (const [locale, result] of Object.entries(totals)) {
