@@ -15,8 +15,23 @@ Treat the approved documents in `docs/` as the product and policy sources of tru
 - `docs/07-technical-plan.md` for architecture, dependencies, validation, and deployment;
 - `docs/08-content-material-template.md` for information-material structure and metadata;
 - `docs/typography-system.md` for the mandatory type scale, allowed font families, and typography QA.
+- `docs/decisions/README.md` for approved current decisions and superseded requirements;
+- `docs/AUTISMHUB_VISUAL_STYLE.md` for image references, instructional graphics, stock covers, attribution, and accessibility;
+- `docs/evidence/README.md` for the claim-to-source verification register;
+- `docs/release-and-browser-qa.md` for release status, browser checks, and branch protection limitations.
 
 Read only the documents relevant to the task, but read each selected document completely. Do not silently change an approved policy. If implementation and an approved document conflict, report the conflict before deciding which one to change.
+
+## Authoritative decisions and publication truth
+
+- At the start of a new site task, inspect the current repository and the relevant decision records. A previous session's tool limitations do not establish access limitations in the current session.
+- Check GitHub read and write tools before declaring publication impossible. Distinguish missing local files from unavailable repository write permissions.
+- Current owner-approved decisions in `docs/decisions/` take precedence over historical plans where they expressly supersede earlier sections. Resolve and document contradictions, rather than silently retaining obsolete policy.
+- The curated external course catalogue contains only verified free-to-learn resources. See the editorial policy and decision record. Do not silently add paid learning entries.
+- Keep image examples tied to their exact licensed or project-owned files. Do not claim an illustrative reference is owner-approved when approval cannot be substantiated.
+- Distinguish work prepared locally, committed to GitHub, passed CI, and confirmed on the public site. Never claim publication from a commit alone.
+- PR validation and browser QA must be reviewed on the final commit before merging. Browser screenshots and automated assertions do not independently prove clinical accuracy, appropriate visuals, or full accessibility.
+- Commit and publication actions still require an explicit user request. Instructions to publish or put changes into the repository count as such a request for the named scope.
 
 ## Technical boundaries
 

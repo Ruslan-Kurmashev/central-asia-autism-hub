@@ -1,10 +1,13 @@
 name: User journey browser QA
 
 on:
+  pull_request:
+    branches: [main]
   push:
     paths:
       - '.github/workflows/user-journey-qa.yml'
       - 'scripts/check-user-journeys.mjs'
+      - 'docs/AUTISMHUB_VISUAL_STYLE.md'
       - 'src/components/**'
       - 'src/scripts/site-search-client.js'
       - 'src/styles/**'
@@ -36,7 +39,7 @@ jobs:
         run: npm run build
       - name: Run user journeys in Chromium at three viewport widths
         run: node scripts/check-user-journeys.mjs
-      - name: Upload homepage screenshots
+      - name: Upload homepage and article screenshots
         if: always()
         uses: actions/upload-artifact@v4
         with:

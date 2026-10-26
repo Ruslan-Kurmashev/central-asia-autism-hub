@@ -4,9 +4,9 @@
 **Country implementation:** Autism Hub Kazakhstan  
 **Document:** 03 - Information Architecture and Navigation
 **Status:** Approved for the first website version  
-**Version:** 1.2
+**Version:** 1.3
 **Decision date:** 28 July 2026
-**Last updated:** 11 October 2026
+**Last updated:** 26 October 2026
 
 ## 1. Purpose
 
@@ -61,9 +61,7 @@ Home
 │   ├── New research explainers
 │   ├── How to read research
 │   ├── Causes and biology
-│   ├── Evidence about support
-│   ├── Research in Kazakhstan
-│   └── Research participation (future phase)
+│   └── Research in Kazakhstan
 │
 ├── Help in Kazakhstan
 │   ├── Where to begin
@@ -175,6 +173,10 @@ Research explainers must be original summaries. They must not reproduce copyrigh
 
 Detailed evidence and review rules will be defined in the editorial, evidence, and medical safety document.
 
+### 6.3. Active research navigation decision (26 October 2026)
+
+The former standalone navigation groups `Evidence about support` and `Research participation` have been removed by the project owner and must not reappear as categories, empty placeholders, or automatically generated navigation blocks. This does not forbid factual discussion of intervention evidence within an appropriate existing article. Continue using the approved current science-literacy and biology material categories without recreating the removed groups. See `docs/decisions/2026-10-26-research-navigation.md`.
+
 ## 7. Help in Kazakhstan
 
 This section explains the general support landscape in Kazakhstan without presenting an incomplete professional directory.
@@ -196,7 +198,7 @@ Learning is the only place for structured education, including **Autism School K
 
 A project-owned course is not a collection of parent-facing articles. Courses need defined learning goals, a sequence of lessons, practice tasks, named editorial or educator responsibility, and a transparent way to check learning when appropriate. Courses and external listings must not imply clinical certification or accreditation without evidence.
 
-External opportunities include title, organiser, audience, language, format, cost, dates if relevant, destination link, last verified date, and a clear external-provider notice. External listings are not endorsements; do not list clinical sessions or unsupported autism “cures.”
+External course listings are restricted to verified free-to-learn offerings. Each listing records title, organiser, audience, language, format, free-access conditions, dates if relevant, destination link, last verified date, and an external-provider notice. This restriction concerns the course catalogue, not every third-party event announcement. External listings are not endorsements; do not list clinical sessions or unsupported autism “cures.”
 
 Learning is a **process and a programme directory**, not a second professional reference library.
 
