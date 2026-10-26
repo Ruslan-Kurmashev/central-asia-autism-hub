@@ -133,11 +133,11 @@ try {
     if(!ready)throw Error('Timed out loading '+pathname+' ('+last+')');
     await delay(60);
   }
-  async function screenshot(lang,width) {
+  async function screenshot(lang,width,kind='home') {
     const shot=await send('Page.captureScreenshot',{format:'png',captureBeyondViewport:false,fromSurface:true});
     if(!shot.data)throw Error('No screenshot data for '+lang+' '+width);
     await mkdir(outDir,{recursive:true});
-    await writeFile(path.join(outDir,lang+'-home-'+width+'.png'),Buffer.from(shot.data,'base64'));
+    await writeFile(path.join(outDir,lang+'-'+kind+'-'+width+'.png'),Buffer.from(shot.data,'base64'));
   }
   for(const locale of locales){
     for(const width of widths){
@@ -168,7 +168,7 @@ try {
         });
         verify(toggled.open&&toggled.visible,marker+': mobile navigation did not open');
       }
-      if(width!==768) await screenshot(locale,width);
+      await screenshot(locale,width);
       if(width===360){
         const eventTest=await evaluate(()=>{
           const board=document.querySelector('[data-events-board]');
@@ -248,6 +248,32 @@ try {
         marker+': article table of contents does not navigate');
       verify(article.overflow<=3,marker+': article overflows viewport '+article.overflow);
       verify(article.brokenImages.length===0,marker+': missing article images '+article.brokenImages);
+      // Detect clipped article headings/captions and forcibly broken words in table cells.
+      // Tables may scroll in a deliberate wrapper. Horizontal page overflow remains a failure.
+      const textLayout = await evaluate(() => {
+        const nodes = [...document.querySelectorAll(
+          'main h1, .article-v2__body h2, .article-v2__body h3, .article-v2__body figcaption, .article-v2__body th, .article-v2__body td'
+        )];
+        const clipped = [];
+        const forcedBreaks = [];
+        for (const el of nodes) {
+          if (!el.getClientRects().length || el.clientWidth === 0) continue;
+          const css = getComputedStyle(el);
+          const isTableCell = el.matches('th, td');
+          if (isTableCell && css.wordBreak === 'break-all') {
+            forcedBreaks.push(el.textContent.trim().slice(0, 60));
+          }
+          if (el.scrollWidth > el.clientWidth + 3 &&
+              (['hidden','clip'].includes(css.overflowX) || css.textOverflow === 'ellipsis')) {
+            clipped.push(el.textContent.trim().slice(0, 60));
+          }
+        }
+        return {clipped:clipped.slice(0,8),forcedBreaks:forcedBreaks.slice(0,8)};
+      });
+      verify(textLayout.clipped.length===0,marker+': clipped article text '+JSON.stringify(textLayout.clipped));
+      verify(textLayout.forcedBreaks.length===0,marker+': forced midword table wrapping '+JSON.stringify(textLayout.forcedBreaks));
+      await evaluate(() => { window.scrollTo(0,0); return true; });
+      await screenshot(locale,width,'article');
     }
   }
   // Verify actual browser rendering, not just Markdown source or AST nodes.

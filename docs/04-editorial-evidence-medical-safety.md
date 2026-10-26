@@ -4,7 +4,8 @@
 **Country implementation:** Autism Hub Kazakhstan  
 **Document:** 04 - Editorial, Evidence, and Medical Safety Policy
 **Status:** Approved for the first website version  
-**Version:** 1.0  
+**Version:** 1.1
+**Last updated:** 26 October 2026  
 **Decision date:** 29 July 2026
 
 ## 1. Purpose
@@ -244,9 +245,17 @@ The standard label is:
 
 > External resource. Autism Hub Kazakhstan has not conducted a full independent audit of this programme and does not guarantee its quality. Review the organiser, programme, evidence claims, cost, and participation terms before registering.
 
-Paid content is visibly labelled. Affiliate links and commissions are not used in the MVP.
+**Current catalogue rule (approved 26 October 2026): only free-to-learn external courses may appear in the public course catalogue.** The primary lessons and educational content must be accessible without required payment. If registration is free but a certificate, examination, or optional add-on costs money, disclose that distinction clearly and ensure the free learning content remains complete. Exclude trials that require payment to continue, paywalled core lessons, unclear prices, and unverified free-access claims. Affiliate links and commissions are not used in the MVP.
+
+A separate editorially verified event announcement is not automatically a course catalogue listing. Its cost must still be transparent and its inclusion follows the announcements policy.
 
 The initial directory lists educational courses, lectures, webinars, workshops, seminars, and parent or professional education. It does not function as a marketplace for individual child therapy.
+
+### 9.1. Claim verification record
+
+For high-impact medical, developmental, statistical, and Kazakhstan-specific legal claims, the editor may record claim text, scope, primary source, DOI or official URL, evidence limitations, verification date, reviewer identity or self-check, and next review date. The source register is `docs/evidence/claims-register.csv`, with its status vocabulary and minimum criteria in `docs/evidence/README.md`.
+
+A blank record or an unverified source must never be described as approved evidence. This ledger supports, but does not replace, article sources or human editorial judgment.
 
 ## 10. Conflicts of interest
 

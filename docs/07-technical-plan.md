@@ -4,9 +4,9 @@
 **Country implementation:** Autism Hub Kazakhstan  
 **Document:** 07 - Technical Plan
 **Status:** Approved for the first website version  
-**Version:** 1.1
+**Version:** 1.2
 **Decision date:** 31 July 2026
-**Last updated:** 2 August 2026
+**Last updated:** 26 October 2026
 
 ## 1. Purpose
 
@@ -34,13 +34,13 @@ The MVP will not require:
 - user accounts;
 - authentication;
 - user-submitted forms;
-- file uploads;
+- public visitor file uploads;
 - payment processing;
 - personalised recommendations;
 - persistent user profiles;
 - a learning-management system;
 - a search service;
-- an administrative content-management interface.
+- a server-side administrative CMS or authenticated visitor accounts.
 
 All public pages must be generated as static HTML, CSS, JavaScript, and media files.
 
@@ -54,6 +54,7 @@ All public pages must be generated as static HTML, CSS, JavaScript, and media fi
 | Page and UI structure | Astro Components |
 | Styling | Plain CSS with shared design tokens |
 | Content format | Markdown with validated frontmatter |
+| Editorial CMS | Decap CMS (static admin UI, GitHub-backed editorial workflow) |
 | Structured content | Astro Content Collections |
 | Package manager | npm |
 | Dependency lock | `package-lock.json` committed to Git |
@@ -68,6 +69,12 @@ All public pages must be generated as static HTML, CSS, JavaScript, and media fi
 The project will use the current stable Astro release available when implementation begins. The selected Astro and Node.js versions must be recorded and locked rather than silently changing between builds.
 
 The initial implementation should use the current supported even-numbered Node.js release used by the official Astro GitHub Pages action, unless implementation-time compatibility checks require a different supported version.
+
+### 3.1. Implemented editorial workflow update (26 October 2026)
+
+Decap CMS now exists at `public/admin/`, with `public/admin/config.yml` configuring `turbo-github`, the repository `main` branch, and `publish_mode: editorial_workflow`. It edits the existing Markdown collections through GitHub, rather than adding a server-side CMS, database, public accounts, or visitor uploads. The presence of a Turbo site ID in configuration does not independently verify that current external authentication succeeds. Confirm access manually before depending on the admin UI.
+
+This implementation supersedes the earlier planned absence of any CMS. See `docs/decap-cms.md` and `docs/decisions/2026-10-26-decap-cms.md`. The static site and build-time validation remain authoritative. Current browser smoke testing is based on Chromium DevTools Protocol in `scripts/check-user-journeys.mjs`, with no new Playwright dependency.
 
 ## 4. Dependency policy
 
@@ -755,12 +762,16 @@ The following are not part of the first implementation:
 - course enrolment and progress tracking;
 - quizzes, certificates, or payments;
 - automated translation publication;
-- a headless CMS;
+- a server-hosted headless CMS;
 - a mobile application;
 - advertising technology;
 - continuous collection of visitor-level analytics.
 
 Their absence is an intentional MVP boundary, not an incomplete implementation.
+
+### 30.1. Current release verification extension (26 October 2026)
+
+The repository includes `.github/workflows/validate.yml`, `.github/workflows/deploy.yml`, and `.github/workflows/user-journey-qa.yml`. A committed file is not proof that it was deployed. Release claims require verification of the exact commit, relevant checks, Pages deployment, and the target page. Guidance and known branch-permission limitations are in `docs/release-and-browser-qa.md`.
 
 ## 31. Risks and controls
 

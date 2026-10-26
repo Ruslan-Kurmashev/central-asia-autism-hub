@@ -26,6 +26,10 @@ npm run build
 
 The local preview uses the GitHub Pages base path configured in `astro.config.mjs`.
 
+## Active editorial and delivery standards
+
+The approved historical planning documents are supplemented by the dated [decision register](docs/decisions/README.md), [visual style guide](docs/AUTISMHUB_VISUAL_STYLE.md), [evidence ledger instructions](docs/evidence/README.md), and [release/browser QA rules](docs/release-and-browser-qa.md). When an old plan conflicts with a dated owner-approved decision, follow the decision and update the plan.
+
 ## Planning documents
 
 The approved project decisions are stored in [`docs/`](docs/):
