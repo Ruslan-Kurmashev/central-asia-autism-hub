@@ -125,12 +125,14 @@ export const PARENT_SUPPORT_SUBGROUPS = [
       "parents-sensory-overload-environmental-adaptations",
       "parents-sensory-based-strategies",
       "parents-sensory-diet",
-      "parents-ayres-sensory-integration"
+      "parents-ayres-sensory-integration",
+      "parents-weighted-items"
     ],
     "primaryKeys": [
       "parents-sensory-environmental-support",
       "parents-sensory-overload-environmental-adaptations",
-      "parents-ayres-sensory-integration"
+      "parents-ayres-sensory-integration",
+      "parents-weighted-items"
     ]
   },
   {
@@ -253,15 +255,13 @@ export const PARENT_SUPPORT_SUBGROUPS = [
       "parents-creative-approaches",
       "parents-technology-support",
       "parents-neuropsychological-correction",
-      "parents-auditory-integration-listening-programs",
-      "parents-weighted-items"
+      "parents-auditory-integration-listening-programs"
     ],
     "primaryKeys": [
       "parents-creative-approaches",
       "parents-technology-support",
       "parents-neuropsychological-correction",
-      "parents-auditory-integration-listening-programs",
-      "parents-weighted-items"
+      "parents-auditory-integration-listening-programs"
     ]
   }
 ] as const;
