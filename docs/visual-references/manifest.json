@@ -1,0 +1,53 @@
+{
+  "schemaVersion": 1,
+  "policy": "Owner-supplied reference images set stylistic direction. Repo anchors are frozen examples, not replacements for the originals.",
+  "ownerSuppliedComparators": [
+    {
+      "label": "Reference 1 - table setting",
+      "originalFilename": "Референсы мамы и ребенка 1.png",
+      "sizePx": [
+        1448,
+        1086
+      ],
+      "sha256": "a02fef44c2f204d5f632ab8b34796878c4afee7e84058f19280ea78ccda24a2b",
+      "storageStatus": "project_attachment_not_in_git",
+      "approvedRole": "visual style reference only",
+      "textApproved": false
+    },
+    {
+      "label": "Reference 2 - dressing",
+      "originalFilename": "Референсы мамы и ребенка 2.png",
+      "sizePx": [
+        1448,
+        1086
+      ],
+      "sha256": "01e7e65fd0224c01d21ee4e2158eb9e5bbd3bddc6376ccf6aa73d4d3213e98ac",
+      "storageStatus": "project_attachment_not_in_git",
+      "approvedRole": "visual style reference only",
+      "textApproved": false
+    }
+  ],
+  "lockedRepositoryExamples": [
+    {
+      "path": "public/images/editorial/diagrams/child-daily-independence-table-setting-user-approved-v3.webp",
+      "gitBlobSha1": "d5708fe087cf357ddbaf8f340010c1835f53d7e4",
+      "bytes": 1198770,
+      "status": "approved_existing_instructional_image",
+      "role": "table-setting owner-approved iteration"
+    },
+    {
+      "path": "public/images/editorial/diagrams/child-daily-independence-handwashing-steps.webp",
+      "gitBlobSha1": "6be5dd1ffc6e39ea6b9cf1818e55b1fab7d60736",
+      "bytes": 391222,
+      "status": "approved_existing_instructional_image",
+      "role": "handwashing instruction"
+    },
+    {
+      "path": "public/images/editorial/emotion-three-moments-no-duplicate-title.png",
+      "gitBlobSha1": "cf7a8bd93ba7b7561b0b006b400776f0d349a011",
+      "bytes": 1473278,
+      "status": "approved_existing_instructional_image",
+      "role": "emotion guidance with no repeated headline"
+    }
+  ]
+}

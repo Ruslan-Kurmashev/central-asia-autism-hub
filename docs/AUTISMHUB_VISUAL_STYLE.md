@@ -27,7 +27,7 @@ These are concrete assets already stored in the project and useful for compariso
 | `public/images/editorial/emotion-three-moments-reference.png` | Emotion-support illustration reference |
 | `public/images/editorial/parent-context-home-preschool-pexels-7780915.jpg` | Stock-based article visual rather than an instructional diagram |
 
-**Canonical mother-and-child character reference:** not uniquely identified in this decision. Before producing new panels, compare with the exact owner-supplied source image. If it is not in the repository, add it only from the actual approved asset with documented origin and permission. Never guess that a nearby illustration is the canonical reference.
+**Owner-supplied mother-and-child style pair (26 October 2026):** two Project-attached PNGs, `Референсы мамы и ребенка 1.png` (table setting) and `Референсы мамы и ребенка 2.png` (dressing), each 1448 x 1086 px. Their exact SHA-256 fingerprints, practical visual characteristics and storage status are documented in `docs/visual-references/manifest.json` and `docs/visual-references/README.md`. They are the source visual comparison pair, **not** published reference files within Git. Their Russian lettering may contain errors, so never reuse embedded phrases unchecked. Existing previously approved in-repo examples are pinned by Git blob SHA, but should not be confused with the originals. If source attachments are unavailable in a subsequent session, never claim to have compared pixels.
 
 ## 3. Instructional panel specification
 
@@ -56,6 +56,10 @@ Use local site-owned image paths with the Astro/GitHub Pages base prefix via exi
 - Artwork may use its own consistent lettering, but site typography stays controlled by `src/styles/typography.css`.
 - Avoid truncated labels, midword breaks, tiny captions, illegible text, horizontal page overflow and overlapping panels.
 - Test at 360, 768 and 1440 px, plus 200% browser zoom where possible.
+
+### 5.1. Locked reference check
+
+Run `npm run check:visual-references` (also in `npm run validate`) to ensure that owner-approved example files have not been silently overwritten. A correct hash proves file identity, not that the graphic conveys the intended educational action. Continue manual frame-by-frame review.
 
 ## 6. Review before publication
 
