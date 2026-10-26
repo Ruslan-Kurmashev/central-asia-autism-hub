@@ -1042,3 +1042,10 @@ In the Russian parent guide `child-daily-independence-practical-guide.md`, the a
 | Local file | Source | Status and use |
 | --- | --- | --- |
 | `public/images/editorial/motor/motor-play-dough-ball-imprints-roll-steps.webp` | Original AI-assisted educational illustration generated in the AutismHub conversation using the owner's mother-and-child reference style | Owner explicitly selected the three-panel image for game 7, "Лепим шар, валик и отпечаток", in `src/content/pages/kz/ru/home-motor-and-fine-motor-practice.md`. Original 1916 x 821 PNG was converted into WebP. Depicts a ball of play dough, fingerprints on flattened dough, and rolling a thick log. This is not a stock photograph, diagnostic material, clinical evidence or article cover. |
+
+
+## Approved instructional illustration: moving a large block with a spoon (26 October 2026)
+
+| Local file | Source | Status and use |
+| --- | --- | --- |
+| `public/images/editorial/motor/motor-spoon-transfer-cubes-steps.webp` | Original AI-assisted illustration generated in the AutismHub conversation using the owner's mother-and-child style references | Owner approved the 1916 x 821 three-panel illustration for game 8, "Перекладываем большой предмет ложкой", in `src/content/pages/kz/ru/home-motor-and-fine-motor-practice.md`. Original PNG `пошаговая_игра_с_ложкой_и_кубиком.png` was optimized to WebP (118008 bytes, SHA-256 97864fe9c7ab7fc8eb8c0eac988b87534e3b7216e27b5245cd8a42c264f70ef6). Educational graphic only, not a stock photo, article cover, or clinical evidence. |
