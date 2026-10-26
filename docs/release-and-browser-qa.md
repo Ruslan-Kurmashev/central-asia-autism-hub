@@ -19,6 +19,7 @@ Never infer state 4 from state 2. If checks are pending, report pending. If the 
 - `scripts/check-user-journeys.mjs` checks RU/KK/EN at 360, 768 and 1440 px, with screenshots of homepage and representative articles and checks for image errors, horizontal overflow, important navigation and forced midword table wrapping.
 - `scripts/find-changed-pages.mjs` compares the PR/push base commit to HEAD, maps changed published Markdown to the actual built search-index routes and also tracks image assets referenced by article Markdown. Each resolved page is tested and screenshot at all three widths, with a fail-closed 24-route budget. Drafts are skipped explicitly, not treated as published.
 - `npm run check:type-scale` and `npm run validate` remain mandatory source-level checks.
+- `npm run check:visual-references` protects approved instructional example file identities. Source Project attachments are fingerprinted in the manifest, but are not falsely represented as uploaded repository assets. The quality of new drawings still requires manual review.
 
 The Chromium DevTools Protocol runner already exists. There is no need to introduce Playwright until its additional value, dependency cost and maintenance plan are established.
 

@@ -13,6 +13,12 @@
 - [ ] Review Chromium screenshots at 360, 768 and 1440 px for each changed route. Browser automation checks technical layout, not illustration meaning or medical accuracy.
 - [ ] Record the commit SHA, GitHub Actions status and actual public link after deployment. Do not report a commit as publication.
 
+## Visual reference approval
+
+- [ ] For new step-by-step diagrams, compare with the *actual* two owner-supplied mother-and-child references where applicable and confirm characters, sequence and accurate captions.
+- [ ] Existing protected illustration not replaced accidentally. `npm run check:visual-references` passes. If a replacement was approved, record the exact approval, provenance and reviewed new hash.
+- [ ] Do not imply the Project source PNGs are in Git unless the exact original bytes were committed.
+
 ## Other validation
 
 - [ ] Factual claims, source references, metadata, draft and translation states were reviewed for affected content.

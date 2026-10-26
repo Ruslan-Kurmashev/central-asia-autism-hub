@@ -17,6 +17,7 @@ Treat the approved documents in `docs/` as the product and policy sources of tru
 - `docs/typography-system.md` for the mandatory type scale, allowed font families, and typography QA.
 - `docs/decisions/README.md` for approved current decisions and superseded requirements;
 - `docs/AUTISMHUB_VISUAL_STYLE.md` for image references, instructional graphics, stock covers, attribution, and accessibility;
+- `docs/visual-references/README.md` and `docs/visual-references/manifest.json` for the supplied mother-and-child style pair and immutable published reference examples;
 - `docs/evidence/README.md` for the claim-to-source verification register;
 - `docs/release-and-browser-qa.md` for release status, browser checks, and branch protection limitations.
 
@@ -29,6 +30,7 @@ Read only the documents relevant to the task, but read each selected document co
 - Current owner-approved decisions in `docs/decisions/` take precedence over historical plans where they expressly supersede earlier sections. Resolve and document contradictions, rather than silently retaining obsolete policy.
 - The curated external course catalogue contains only verified free-to-learn resources. See the editorial policy and decision record. Do not silently add paid learning entries.
 - Keep image examples tied to their exact licensed or project-owned files. Do not claim an illustrative reference is owner-approved when approval cannot be substantiated.
+- Protect existing approved instructional images: do not edit a locked asset or its manifest hash without explicit approval of the exact replacement and updated provenance. Run `npm run check:visual-references`. Two source PNGs are documented as Project attachments, not falsely claimed to be in Git.
 - Distinguish work prepared locally, committed to GitHub, passed CI, and confirmed on the public site. Never claim publication from a commit alone.
 - PR validation and browser QA must be reviewed on the final commit before merging. Browser screenshots and automated assertions do not independently prove clinical accuracy, appropriate visuals, or full accessibility.
 - Commit and publication actions still require an explicit user request. Instructions to publish or put changes into the repository count as such a request for the named scope.
