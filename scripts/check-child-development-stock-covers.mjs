@@ -72,3 +72,23 @@ assert.ok(originalPng.length > 1000000 &&
   originalPng.subarray(0,8).toString('hex') === '89504e470d0a1a0a',
   'Original generated image must be a complete valid PNG file');
 console.log('Emotion stages QA PASS: user-approved full-size illustration published, old scheme removed.');
+
+
+const emotionTableSource = await readFile('src/content/pages/kz/ru/child-emotion-regulation-support-at-home.md', 'utf8');
+assert.ok(emotionTableSource.includes('class="emotion-timing-scroll"') &&
+  emotionTableSource.includes('class="emotion-timing-table"'), 'Readable timeline table markup missing');
+assert.ok(emotionHtml.includes('class="emotion-timing-table"') &&
+  emotionHtml.includes('Во время сильного напряжения'), 'Built timeline table or row label missing');
+for (const label of ['До напряжения', 'Во время сильного напряжения', 'После восстановления']) {
+  assert.ok(emotionTableSource.includes('<th scope="row">' + label + '</th>'),
+    'Full natural-word row heading missing: ' + label);
+}
+const emotionTableCss = await readFile('src/styles/article-v2.css', 'utf8');
+assert.ok(emotionTableCss.includes('.emotion-timing-table :is(th, td):first-child') &&
+  emotionTableCss.includes('min-width: 12rem;') &&
+  emotionTableCss.includes('word-break: normal;') &&
+  emotionTableCss.includes('overflow-wrap: normal;'),
+  'First-column anti-breaking styles missing');
+assert.ok(emotionTableCss.includes('.emotion-timing-table[data-mobile-cards='),
+  'Mobile layout for first-column headings missing');
+console.log('Emotion table word-wrap QA PASS: full headings and narrow-screen cards.');
