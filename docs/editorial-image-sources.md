@@ -1007,3 +1007,10 @@ In the Russian parent guide `child-daily-independence-practical-guide.md`, the a
 | Local file | Source | Status and use |
 | --- | --- | --- |
 | `public/images/editorial/motor/motor-islands-route-steps.webp` | AI-assisted original illustration generated in the AutismHub conversation from the owner's approved mother-and-child style reference | Owner expressly approved the finished three-panel illustration for `src/content/pages/kz/ru/home-motor-and-fine-motor-practice.md`, game 3, "Обходим островки". Converted from the approved 1916 x 821 PNG to WebP. Original educational sequence only, not stock photography, clinical evidence, or an article cover. |
+
+
+## Approved instructional game illustration: stepping over towel (26 October 2026)
+
+| Local file | Source | Status and use |
+| --- | --- | --- |
+| `public/images/editorial/motor/motor-step-over-towel-steps.webp` | AI-assisted original illustration generated in the AutismHub conversation from the owner's approved mother-and-child style references | Owner approved the three-panel illustration for `src/content/pages/kz/ru/home-motor-and-fine-motor-practice.md`, game 4, "Перешагиваем невысокое полотенце". Converted from the supplied 1916 x 821 PNG to WebP. Original educational sequence, not a stock photograph, clinical evidence, or article cover. |
