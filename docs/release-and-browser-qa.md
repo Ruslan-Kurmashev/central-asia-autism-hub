@@ -27,6 +27,13 @@ The Chromium DevTools Protocol runner already exists. There is no need to introd
 
 The `.github/dependabot.yml` file requests weekly npm dependency update PRs. This does not establish that security features are enabled on the hosting account or that any vulnerable installed package has already been repaired. Each dependency PR must pass the normal validation and browser tests before merge. Keep the diagnostic `audit:dependencies` check active and triage its actual advisories, not just its pass/fail indicator.
 
+## 2.2. Editorial verification and scheduled checks
+
+- `npm run check:evidence-register` validates the claim ledger's integrity and prevents an AI-only record from being automatically marked `verified`.
+- `npm run check:translation-parity` validates structural multilingual metadata, while acknowledging that it cannot judge whether medical concepts were accurately translated.
+- `.github/workflows/editorial-review-due.yml` runs weekly to produce a report of published pages whose `reviewDueAt` is overdue or within 45 days, with the report available as an Actions artifact and job summary. It does not claim that review has occurred or change any article dates.
+- The existing human article-audit tracker is separate from claim-level source records. Do not add human-reviewed status on the basis of automation.
+
 ## 3. Required review before release
 
 - Review the exact final diff. No unrelated article or schema changes.

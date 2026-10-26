@@ -1,6 +1,6 @@
 # Scientific and Kazakhstan legal claim register
 
-**Status:** register template introduced 26 October 2026. No claims have been independently validated merely by creating this directory.
+**Status:** initial scoped source cross-check records added 26 October 2026. These remain `pending` until human editorial sign-off. A valid row or passing CI is not clinical peer review.
 
 The register `claims-register.csv` supplements structured sources already stored in published Markdown frontmatter. The individual article remains the canonical location for public citations.
 
@@ -26,6 +26,14 @@ WHO: https://www.who.int/
 Kazakhstan: current authoritative documents at https://adilet.zan.kz/ and official ministry sources.
 
 A source list does not guarantee appropriate interpretation. Check study design, population, bias, publication and corrections/retractions. Do not extrapolate an international legal claim to Kazakhstan. A blank registry is not proof that existing articles are source-verified.
+
+## Initial recorded comparisons
+
+Four source-level matches in two Research Explained articles were added on 2026-10-26. See [first source comparison](2026-10-26-initial-primary-source-crosscheck.md). These are AI-assisted comparisons with original paper text. No independent medical or human editorial sign-off is claimed.
+
+### Automated integrity check
+
+Run `npm run check:evidence-register`. It checks row structure, unique IDs, dates, content path, exact quoted frontmatter claim, referenced source metadata and status guardrails. It cannot check whether an article's scientific conclusion is valid or whether a paper has been retracted. A row can only become `verified` after documented human review by the responsible editor.
 
 ## Use
 

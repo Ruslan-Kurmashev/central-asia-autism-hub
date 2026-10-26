@@ -1,0 +1,30 @@
+name: Editorial review deadlines
+
+on:
+  schedule:
+    - cron: '15 6 * * 1'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  review-due:
+    runs-on: ubuntu-latest
+    timeout-minutes: 8
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v7
+      - name: Set up Node.js
+        uses: actions/setup-node@v6
+        with:
+          node-version: 24
+      - name: Produce due-date inventory
+        run: node scripts/check-editorial-review-due.mjs
+      - name: Upload editorial review queue
+        uses: actions/upload-artifact@v4
+        with:
+          name: autismhub-editorial-review-due
+          path: docs/audit-results/editorial-review-due.json
+          if-no-files-found: error
+          retention-days: 30

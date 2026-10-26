@@ -19,5 +19,6 @@ This directory records explicit, owner-approved changes to product policy or tec
 - [Visual system and release verification](2026-10-26-visual-release-qa.md)
 - [Protected instructional character references](2026-10-26-instructional-character-guard.md)
 - [Dependency update and security alert workflow](2026-10-26-dependency-maintenance.md)
+- [Editorial evidence and multilingual QA gates](2026-10-26-evidence-editorial-qa.md)
 
 Source of decisions: project owner instructions confirmed on 26 October 2026. Current working state must still be checked in GitHub.

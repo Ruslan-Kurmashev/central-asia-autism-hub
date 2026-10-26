@@ -19,6 +19,7 @@ Treat the approved documents in `docs/` as the product and policy sources of tru
 - `docs/AUTISMHUB_VISUAL_STYLE.md` for image references, instructional graphics, stock covers, attribution, and accessibility;
 - `docs/visual-references/README.md` and `docs/visual-references/manifest.json` for the supplied mother-and-child style pair and immutable published reference examples;
 - `docs/evidence/README.md` for the claim-to-source verification register;
+- `docs/audit/article-review-procedure.md` for human article review and `docs/audit/article-review-tracker.json` for its genuine completed statuses;
 - `docs/release-and-browser-qa.md` for release status, browser checks, and branch protection limitations.
 
 Read only the documents relevant to the task, but read each selected document completely. Do not silently change an approved policy. If implementation and an approved document conflict, report the conflict before deciding which one to change.
@@ -66,6 +67,7 @@ Read only the documents relevant to the task, but read each selected document co
 - Do not provide individual diagnosis, medication advice, treatment protocols, cure claims, guaranteed outcomes, or instructions to abandon established care.
 - AI is not an author, evidence source, independent reviewer, or final medical decision-maker.
 - Record `externalReviewer` only when a real independent reviewer is documented.
+- A source-to-claim registry match or CI pass does not establish human editorial approval. Use `pending` until the responsible reviewer genuinely signs off; run `npm run check:evidence-register` and `npm run check:translation-parity` to check integrity.
 - Keep new or unapproved content at `draft: true`. Do not set `translationStatus: checked` without a real documented check.
 
 ## Change workflow

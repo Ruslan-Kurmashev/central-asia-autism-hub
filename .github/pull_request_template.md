@@ -19,6 +19,13 @@
 - [ ] Existing protected illustration not replaced accidentally. `npm run check:visual-references` passes. If a replacement was approved, record the exact approval, provenance and reviewed new hash.
 - [ ] Do not imply the Project source PNGs are in Git unless the exact original bytes were committed.
 
+## Medical source and translation review
+
+- [ ] High-impact factual statements have original sources checked in context. Claim register entries are added or updated for material changes, with actual review status and limits.
+- [ ] Source comparisons, human editorial approvals, language reviews and CI checks are reported separately. Automated checks alone never make a translation or clinical claim `checked`.
+- [ ] Preserve each locale's true `publishedAt`. Verify `translationKey`, `originalPublishedAt`, `displayPublishedAt`, risk level, sources and meaningful text parity when relevant.
+- [ ] Check `reviewDueAt` and the due-date queue without changing publication dates to simulate a review.
+
 ## Other validation
 
 - [ ] Factual claims, source references, metadata, draft and translation states were reviewed for affected content.
