@@ -1014,3 +1014,10 @@ In the Russian parent guide `child-daily-independence-practical-guide.md`, the a
 | Local file | Source | Status and use |
 | --- | --- | --- |
 | `public/images/editorial/motor/motor-step-over-towel-steps.webp` | AI-assisted original illustration generated in the AutismHub conversation from the owner's approved mother-and-child style references | Owner approved the three-panel illustration for `src/content/pages/kz/ru/home-motor-and-fine-motor-practice.md`, game 4, "Перешагиваем невысокое полотенце". Converted from the supplied 1916 x 821 PNG to WebP. Original educational sequence, not a stock photograph, clinical evidence, or article cover. |
+
+
+## Approved instructional game illustration: clothes pegs (26 October 2026)
+
+| Local file | Source | Status and use |
+| --- | --- | --- |
+| `public/images/editorial/motor/motor-clothes-pegs-steps.webp` | Original AI-assisted instructional illustration generated in the AutismHub conversation using the owner's mother-and-child character references | Owner selected the second of two proposed illustrations for the game 5 section, "Прищепки на широкий картон", in `src/content/pages/kz/ru/home-motor-and-fine-motor-practice.md`. The supplied 1942 x 809 PNG was converted to optimized WebP. Illustrates the mother demonstrating a peg, the child handling it, then adding another. Not a stock photograph, article cover, or clinical evidence. |
