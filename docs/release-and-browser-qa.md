@@ -22,6 +22,10 @@ Never infer state 4 from state 2. If checks are pending, report pending. If the 
 
 The Chromium DevTools Protocol runner already exists. There is no need to introduce Playwright until its additional value, dependency cost and maintenance plan are established.
 
+## 2.1. Dependency security upkeep
+
+The `.github/dependabot.yml` file requests weekly npm dependency update PRs. This does not establish that security features are enabled on the hosting account or that any vulnerable installed package has already been repaired. Each dependency PR must pass the normal validation and browser tests before merge. Keep the diagnostic `audit:dependencies` check active and triage its actual advisories, not just its pass/fail indicator.
+
 ## 3. Required review before release
 
 - Review the exact final diff. No unrelated article or schema changes.
