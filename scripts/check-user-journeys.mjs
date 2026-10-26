@@ -302,6 +302,7 @@ try {
     verify(state.articleCount === 55 && state.uniqueArticleCount === 55 && state.unassignedCount === 0,
       'Parent support ' + width + ': missing, duplicated or unassigned article links');
     verify(state.overflow <= 3, 'Parent support ' + width + ': horizontal overflow ' + state.overflow);
+    await evaluate(() => { document.querySelector('details#support')?.scrollIntoView({ block: 'start' }); return true; });
     await screenshot('ru', width, 'support');
   }
 
