@@ -276,6 +276,41 @@ try {
       await screenshot(locale,width,'article');
     }
   }
+  // Exercise the exact changed, published URLs rather than only smoke-test examples.
+  const changedFile = path.resolve('docs/audit-results/changed-page-routes.json');
+  const changedPages = JSON.parse(await readFile(changedFile, 'utf8')).routes;
+  for (const [index, route] of changedPages.entries()) {
+    for (const width of widths) {
+      await navigate(route.pathname, width);
+      const state = await evaluate(() => {
+        const main = document.querySelector('main');
+        const imgs = [...main?.querySelectorAll('img') || []];
+        const clipped = [...main?.querySelectorAll('h1,h2,h3,figcaption,th,td') || []]
+          .filter(el => el.clientWidth > 0 && el.scrollWidth > el.clientWidth + 3 &&
+            ['hidden','clip'].includes(getComputedStyle(el).overflowX))
+          .map(el => el.textContent.trim().slice(0, 90)).slice(0, 5);
+        return {
+          main: Boolean(main), h1: main?.querySelectorAll('h1').length || 0,
+          contentLength: main?.textContent?.trim().length || 0,
+          overflow: document.documentElement.scrollWidth - innerWidth,
+          broken: imgs.filter(img => img.complete && img.naturalWidth === 0)
+            .map(img => img.getAttribute('src')).slice(0, 5),
+          clipped,
+        };
+      });
+      const marker = 'CHANGED_PAGE ' + route.pathname + ' / ' + width;
+      verify(state.main && state.h1 === 1 && state.contentLength > 200, marker + ': missing article content/H1');
+      verify(state.overflow <= 3, marker + ': page overflows viewport by ' + state.overflow);
+      verify(state.broken.length === 0, marker + ': broken images ' + JSON.stringify(state.broken));
+      verify(state.clipped.length === 0, marker + ': clipped headings, captions or cells ' + JSON.stringify(state.clipped));
+      await evaluate(() => { scrollTo(0, 0); return true; });
+      // Screenshot filename is sanitized and intentionally limited in length.
+      const safeName = route.pathname.replace(/[^a-z0-9-]+/gi, '-').slice(-70);
+      await screenshot('changed-' + index, width, safeName);
+      console.log('USER_JOURNEY_CHANGED ' + JSON.stringify({ route:route.pathname, width, ...state }));
+    }
+  }
+
   // Verify actual browser rendering, not just Markdown source or AST nodes.
   for (const width of [360, 1440]) {
     await navigate(base+'/kz/ru/parents/kak-autichnye-deti-obshchayutsya/',width);

@@ -17,6 +17,7 @@ Never infer state 4 from state 2. If checks are pending, report pending. If the 
 - `.github/workflows/deploy.yml` builds and deploys pushes to `main`.
 - `.github/workflows/user-journey-qa.yml` runs a real Chromium browser regression test, on PRs, qualifying pushes and manual dispatches.
 - `scripts/check-user-journeys.mjs` checks RU/KK/EN at 360, 768 and 1440 px, with screenshots of homepage and representative articles and checks for image errors, horizontal overflow, important navigation and forced midword table wrapping.
+- `scripts/find-changed-pages.mjs` compares the PR/push base commit to HEAD, maps changed published Markdown to the actual built search-index routes and also tracks image assets referenced by article Markdown. Each resolved page is tested and screenshot at all three widths, with a fail-closed 24-route budget. Drafts are skipped explicitly, not treated as published.
 - `npm run check:type-scale` and `npm run validate` remain mandatory source-level checks.
 
 The Chromium DevTools Protocol runner already exists. There is no need to introduce Playwright until its additional value, dependency cost and maintenance plan are established.
@@ -40,6 +41,6 @@ Repository owner should open GitHub repository Settings, then Rules / Rulesets o
 
 ## 5. Browser test scope and limitations
 
-The user-journey script inspects representative pages, not all published articles. It catches some text clipping and pathological table breaks, but cannot reliably decide whether instructional artwork is semantically clear or determine WCAG 2.2 AA conformance alone. Screenshot inspection, cross-language copy review and scientific validation remain human responsibilities.
+The user-journey script inspects representative pages and published pages directly affected by Markdown or referenced image changes, not all published articles. Changes to shared components and dynamically selected images can affect other routes that are not automatically enumerated. It catches some text clipping and pathological table breaks, but cannot reliably decide whether instructional artwork is semantically clear or determine WCAG 2.2 AA conformance alone. Screenshot inspection, cross-language copy review and scientific validation remain human responsibilities.
 
 For future enhancements, prioritize sampled pages with dense tables, step-by-step instructional figures, and recently modified article routes. Do not disable failing checks to ship.

@@ -47,7 +47,7 @@ sources:
     note: "NICE NG127 on urgent assessment of new gait disturbance and sudden or rapidly progressive weakness of limbs or face in children."
     accessedAt: 2026-10-16
   - title: "CDC's Developmental Milestones"
-    url: "https://www.cdc.gov/milestones"
+    url: "https://www.cdc.gov/act-early/milestones/"
     organisation: "Centers for Disease Control and Prevention (CDC)"
     publicationYear: 2026
     note: "CDC advises parents to act early and discuss loss of previously attained skills, not to treat milestone checklists as diagnosis."

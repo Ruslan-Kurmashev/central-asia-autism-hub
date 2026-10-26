@@ -47,7 +47,7 @@ sources:
     note: "NICE NG127: жаңа жүріс бұзылысы немесе аяқ-қол, бет бұлшықеттерінің кенет не жылдам үдейтін әлсіздігі кезінде дереу бағалау."
     accessedAt: 2026-10-16
   - title: "CDC's Developmental Milestones"
-    url: "https://www.cdc.gov/milestones"
+    url: "https://www.cdc.gov/act-early/milestones/"
     organisation: "Centers for Disease Control and Prevention (CDC)"
     publicationYear: 2026
     note: "CDC бұрын меңгерілген дағды жоғалса күтпей дәрігермен сөйлесуге кеңес береді. Даму бағдарлары диагностика емес."
