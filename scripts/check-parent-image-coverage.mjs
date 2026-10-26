@@ -46,8 +46,7 @@ const allParentImageOwners = new Map();
 const editorialDistinctGroups = {
   communicationAAC: new Set([
     'aac',
-    'aided-language-modelling',
-      'communication-partner-training',
+    'communication-partner-training',
     'functional-communication-training',
     'pecs',
     'speech-language-therapy',
