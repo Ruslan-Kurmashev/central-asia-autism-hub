@@ -17,11 +17,18 @@ const dateFormatter = new Intl.DateTimeFormat(DATE_LOCALES[locale], {
   year: 'numeric',
 });
 
+const materialsByKey = new Map(materials.map((material) => [material.data.translationKey, material]));
 const subgroups = PARENT_SUPPORT_SUBGROUPS.map((subgroup) => {
-  const keys = new Set<string>(subgroup.translationKeys);
+  // An explicit editorial order is easier to navigate than sorting by publication date.
+  const entries = subgroup.translationKeys
+    .map((key) => materialsByKey.get(key))
+    .filter((material): material is (typeof materials)[number] => material !== undefined);
+  const primaryKeys = new Set<string>(subgroup.primaryKeys);
   return {
     ...subgroup,
-    materials: materials.filter((material) => keys.has(material.data.translationKey)),
+    materials: entries,
+    primaryMaterials: entries.filter((material) => primaryKeys.has(material.data.translationKey)),
+    supplementaryMaterials: entries.filter((material) => !primaryKeys.has(material.data.translationKey)),
   };
 });
 
@@ -37,6 +44,11 @@ const emptyLabel = locale === 'en'
   : locale === 'kk'
     ? 'Бұл тілдегі жарияланған материалдар әзірге жоқ.'
     : 'На этом языке пока нет опубликованных материалов.';
+const supplementaryLabel = locale === 'en'
+  ? 'More detailed methods and evidence'
+  : locale === 'kk'
+    ? 'Әдістер мен дәлелдемелер туралы қосымша материалдар'
+    : 'Подробные разборы методов и доказательств';
 const otherLabel = locale === 'en'
   ? 'Additional support resources'
   : locale === 'kk'
@@ -62,7 +74,7 @@ const otherLabel = locale === 'en'
       </summary>
       <div class="section-v2__article-list">
         {subgroup.materials.length > 0 ? (
-          subgroup.materials.map((material, index) => (
+          subgroup.primaryMaterials.map((material, index) => (
             <a
               class:list={[
                 'section-v2__article-row',
@@ -100,6 +112,19 @@ const otherLabel = locale === 'en'
           <p class="section-v2__empty">{emptyLabel}</p>
         )}
       </div>
+      {subgroup.supplementaryMaterials.length > 0 && (
+        <div class="section-v2__support-supplementary">
+          <h4>{supplementaryLabel}</h4>
+          <div class="section-v2__support-supplementary-links">
+            {subgroup.supplementaryMaterials.map((material) => (
+              <a class="section-v2__article-row section-v2__support-supplementary-link" href={articlePath(locale, 'parents', material.data.slug)}>
+                <span class="section-v2__article-copy"><strong>{material.data.title}</strong></span>
+                <span class="section-v2__support-link-caret" aria-hidden="true">→</span>
+              </a>
+            ))}
+          </div>
+        </div>
+      )}
     </details>
   ))}
   {unassigned.length > 0 && (
