@@ -254,7 +254,10 @@ sources:
 
 ### Задание 8. Учимся участвовать в мытье рук
 
-![Четыре действия: смочить руки, использовать мыло, потереть ладони и пальцы, высушить полотенцем.](/central-asia-autism-hub/images/editorial/selfcare-handwashing-sequence.svg)
+<figure class="independence-handwashing-figure">
+  <img src="/central-asia-autism-hub/images/editorial/diagrams/child-daily-independence-handwashing-steps.webp" alt="Четыре иллюстрированных этапа с мамой и ребёнком: смочить руки, намылить, потереть ладони и пальцы около 20 секунд, затем смыть мыло и высушить руки полотенцем." width="1448" height="1086" loading="lazy" decoding="async" style="display:block;width:100%;height:auto;border-radius:16px" />
+  <figcaption>Пошаговый пример мытья рук. Взрослый помогает по необходимости, ребёнок может участвовать в посильных этапах.</figcaption>
+</figure>
 
 Последовательность может быть такой:
 
