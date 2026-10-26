@@ -1,7 +1,7 @@
 # Editorial image sources
 
 These images are used as editorial illustrations on the Autism Hub Kazakhstan website.
-The active site uses licensed photographs and original editorial vectors. Earlier AI-generated artwork is retained below only in the historical removal log; it is not part of the published image collection. Pexels licensing applies only to Pexels-sourced photographs.
+The active site uses licensed photographs, original editorial vectors, and explicitly owner-approved generated instructional illustrations. Earlier removed AI artwork is documented in the historical removal log. Pexels licensing does not cover generated illustrations. Pexels licensing applies only to Pexels-sourced photographs.
 
 License checked: 2026-10-07  
 License: https://www.pexels.com/license/
@@ -1000,3 +1000,10 @@ In the Russian parent guide `child-daily-independence-practical-guide.md`, the a
 ## Действующая схема без дублирующего заголовка (26 октября 2026)
 
 По прямому решению владельца проекта внутри раздела 2 статьи «Развитие эмоций и саморегуляции» используется новая утверждённая иллюстрация `images/editorial/emotion-three-moments-no-duplicate-title.png` размером 2179 × 722 px. Изображение предоставлено в чате после редакции визуального референса, содержит три панели «До», «Во время», «После» с теми же персонажами и без повторения заголовка раздела. Источник: файл, утверждённый владельцем проекта, а не стоковая фотография. Предыдущий PNG с дублирующим заголовком в статье более не используется, другие элементы и дата первой публикации сохранены.
+
+
+## Approved instructional game illustration: islands (26 October 2026)
+
+| Local file | Source | Status and use |
+| --- | --- | --- |
+| `public/images/editorial/motor/motor-islands-route-steps.webp` | AI-assisted original illustration generated in the AutismHub conversation from the owner's approved mother-and-child style reference | Owner expressly approved the finished three-panel illustration for `src/content/pages/kz/ru/home-motor-and-fine-motor-practice.md`, game 3, "Обходим островки". Converted from the approved 1916 x 821 PNG to WebP. Original educational sequence only, not stock photography, clinical evidence, or an article cover. |
