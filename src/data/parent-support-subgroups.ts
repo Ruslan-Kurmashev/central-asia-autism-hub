@@ -1,6 +1,7 @@
 // Navigation taxonomy for published parent articles about support.
 // The keys are stable translationKey values, not language-specific slugs.
-// This controls listing order only. It does not change content, routes or review status.
+// primaryKeys identify the shorter parent-facing shortlist. Remaining keys stay accessible
+// as supplementary articles. This does not change content, routes or review status.
 export const PARENT_SUPPORT_SUBGROUPS = [
   {
     "id": "choosing",
@@ -19,6 +20,11 @@ export const PARENT_SUPPORT_SUBGROUPS = [
       "parents-choosing-support-by-goal",
       "parents-choosing-autism-support",
       "parents-monitoring-autism-support",
+      "parents-how-to-read-evidence"
+    ],
+    "primaryKeys": [
+      "parents-types-of-autism-support",
+      "parents-choosing-support-by-goal",
       "parents-how-to-read-evidence"
     ]
   },
@@ -42,6 +48,12 @@ export const PARENT_SUPPORT_SUBGROUPS = [
       "parents-communication-partner-training",
       "parents-pecs",
       "parents-functional-communication-training"
+    ],
+    "primaryKeys": [
+      "parents-aac",
+      "parents-speech-language-therapy",
+      "parents-pecs",
+      "parents-functional-communication-training"
     ]
   },
   {
@@ -62,6 +74,10 @@ export const PARENT_SUPPORT_SUBGROUPS = [
       "parents-antecedent-based-interventions",
       "parents-reinforcement",
       "parents-differential-reinforcement"
+    ],
+    "primaryKeys": [
+      "parents-behavior-learning",
+      "parents-functional-behavior-assessment"
     ]
   },
   {
@@ -84,6 +100,12 @@ export const PARENT_SUPPORT_SUBGROUPS = [
       "parents-joint-attention",
       "parents-imitation-reciprocal-imitation",
       "parents-peer-mediated-intervention"
+    ],
+    "primaryKeys": [
+      "parents-development-interaction-play",
+      "parents-naturalistic-intervention",
+      "parents-ndbi",
+      "parents-peer-mediated-intervention"
     ]
   },
   {
@@ -103,6 +125,11 @@ export const PARENT_SUPPORT_SUBGROUPS = [
       "parents-sensory-overload-environmental-adaptations",
       "parents-sensory-based-strategies",
       "parents-sensory-diet",
+      "parents-ayres-sensory-integration"
+    ],
+    "primaryKeys": [
+      "parents-sensory-environmental-support",
+      "parents-sensory-overload-environmental-adaptations",
       "parents-ayres-sensory-integration"
     ]
   },
@@ -128,6 +155,13 @@ export const PARENT_SUPPORT_SUBGROUPS = [
       "parents-video-modeling",
       "parents-self-management",
       "parents-special-pedagog-defectologist"
+    ],
+    "primaryKeys": [
+      "parents-daily-living-skills-training",
+      "parents-occupational-therapy",
+      "parents-toileting-interventions",
+      "parents-self-management",
+      "parents-special-pedagog-defectologist"
     ]
   },
   {
@@ -147,6 +181,11 @@ export const PARENT_SUPPORT_SUBGROUPS = [
       "parents-adaptive-physical-activity",
       "parents-physical-therapy-physiotherapy",
       "parents-therapeutic-exercise-lfk"
+    ],
+    "primaryKeys": [
+      "parents-movement-physical-activity",
+      "parents-adaptive-physical-activity",
+      "parents-physical-therapy-physiotherapy"
     ]
   },
   {
@@ -165,6 +204,10 @@ export const PARENT_SUPPORT_SUBGROUPS = [
       "parents-psychological-mental-health-support",
       "parents-cognitive-behavioral-therapy",
       "parents-adapted-cbt-autistic-people"
+    ],
+    "primaryKeys": [
+      "parents-psychological-mental-health-support",
+      "parents-cognitive-behavioral-therapy"
     ]
   },
   {
@@ -185,6 +228,13 @@ export const PARENT_SUPPORT_SUBGROUPS = [
       "parents-parent-mediated-intervention",
       "parents-who-caregiver-skills-training",
       "parents-rubi-parent-training"
+    ],
+    "primaryKeys": [
+      "parents-caregiver-wellbeing-support",
+      "parents-respite-short-breaks",
+      "parents-parent-mediated-intervention",
+      "parents-who-caregiver-skills-training",
+      "parents-rubi-parent-training"
     ]
   },
   {
@@ -200,6 +250,13 @@ export const PARENT_SUPPORT_SUBGROUPS = [
       "en": "Digital, creative and commercial approaches: possible benefits, limitations and safety."
     },
     "translationKeys": [
+      "parents-creative-approaches",
+      "parents-technology-support",
+      "parents-neuropsychological-correction",
+      "parents-auditory-integration-listening-programs",
+      "parents-weighted-items"
+    ],
+    "primaryKeys": [
       "parents-creative-approaches",
       "parents-technology-support",
       "parents-neuropsychological-correction",
