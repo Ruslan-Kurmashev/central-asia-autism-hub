@@ -310,7 +310,14 @@ try {
     verify(state.weightedInSensory && !state.weightedInOther,
       'Parent support ' + width + ': weighted aid safety article assigned to wrong category');
     verify(state.overflow <= 3, 'Parent support ' + width + ': horizontal overflow ' + state.overflow);
-    await evaluate(() => { document.querySelector('details#support')?.scrollIntoView({ block: 'start' }); return true; });
+    await evaluate(() => {
+      const target = document.querySelector('#support .section-v2__support-subgroup');
+      if (!target) return false;
+      const y = window.scrollY + target.getBoundingClientRect().top - 90;
+      window.scrollTo({ top: y, behavior: 'instant' });
+      return true;
+    });
+    await delay(200);
     await screenshot('ru', width, 'support');
   }
 
