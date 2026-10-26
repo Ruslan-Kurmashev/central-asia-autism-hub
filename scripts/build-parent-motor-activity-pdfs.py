@@ -21,6 +21,8 @@ ROOT = Path(__file__).resolve().parents[1]
 SOURCE = ROOT / "scripts" / "data" / "parent-motor-activity-pack-ru.json"
 OUT = ROOT / "public" / "downloads" / "motor"
 OUT.mkdir(parents=True, exist_ok=True)
+# Remove the retired cards PDF if it exists from an earlier local build.
+(OUT / "8-kartochek-motorika-ru.pdf").unlink(missing_ok=True)
 
 NORMAL = Path("/usr/share/fonts/truetype/dejavu/DejaVuSans.ttf")
 BOLD = Path("/usr/share/fonts/truetype/dejavu/DejaVuSans-Bold.ttf")
@@ -105,10 +107,6 @@ def book(filename,label,entries,category):
 gross,p_g=book("10-igr-krupnaya-motorika-ru.pdf","10 игр для крупной моторики",DATA["gross"],"Крупная моторика")
 fine,p_f=book("15-zadanii-melkaya-motorika-ru.pdf","15 заданий для мелкой моторики",DATA["fine"],"Мелкая моторика")
 
-lookup={a["id"]:a for a in DATA["gross"]+DATA["fine"]}
-selection=[lookup[k] for k in DATA["activityCards"]]
-cards,p_cards=book("8-kartochek-motorika-ru.pdf","8 печатных карточек с заданиями",selection,"Карточки")
-
 schedule=OUT/"nedelnyi-plan-i-dnevnik-motoriki-ru.pdf"
 c=canvas.Canvas(str(schedule),pagesize=A4,pageCompression=1)
 c.setTitle("AutismHub - Недельный план и дневник движений")
@@ -159,7 +157,7 @@ c.save()
 
 # Validate exact page counts and text layer. pypdf is already installed in the Pages workflow.
 from pypdf import PdfReader
-expected={gross:p_g,fine:p_f,cards:p_cards,schedule:2}
+expected={gross:p_g,fine:p_f,schedule:2}
 for path,pages in expected.items():
     if not path.is_file() or path.stat().st_size<12000:
         raise RuntimeError(f"Missing/truncated PDF: {path}")

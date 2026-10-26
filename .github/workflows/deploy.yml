@@ -50,7 +50,7 @@ jobs:
           python scripts/audit-child-development-external-sources.py
           python scripts/build-research-reading-worksheet.py
           python scripts/validate-research-reading-worksheet.py
-      - name: Upload 15-PDF preview and external citation QA reports
+      - name: Upload parent PDF previews and external citation QA reports
         if: always()
         uses: actions/upload-artifact@v4
         with:

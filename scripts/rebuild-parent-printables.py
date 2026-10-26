@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Rebuild the 14 AutismHub parent PDFs with the canonical 11pt print body.
+"""Rebuild the 13 AutismHub parent PDFs with the canonical 11pt print body.
 
 Runs AFTER legacy generators and replaces their outputs. Source activity facts
 stay in existing JSON/Python data. Visual sequences include source-coded diagrams
@@ -177,22 +177,8 @@ def many_activities(out,title,entries,illustrations={}):
         activity_page(story,entry,title,illustrations.get(entry["id"]))
     build(out,title,story,min_pages=len(entries),expected_illustrations=len(illustrations))
 
-figures={
- "G01":"motor/motor-diagram-walking-line.svg",
- "G02":"motor/motor-diagram-rolling-ball.svg",
- "G04":"motor/motor-diagram-step-over-towel.svg",
- "G06":"motor/motor-diagram-avoid-objects.svg",
- "F01":"motor/motor-diagram-clothes-pegs.svg",
- "F02":"motor/motor-diagram-tear-paper.svg",
- "F03":"motor/motor-diagram-play-dough.svg",
- "F04":"motor/motor-diagram-spoon-transfer.svg",
-}
 many_activities("motor/10-igr-krupnaya-motorika-ru.pdf","10 игр для крупной моторики",gross)
 many_activities("motor/15-zadanii-melkaya-motorika-ru.pdf","15 заданий для мелкой моторики",fine)
-lookup={entry["id"]:entry for entry in gross+fine}
-chosen=["G01","G02","G04","G06","F01","F02","F03","F04"]
-many_activities("motor/8-kartochek-motorika-ru.pdf","8 карточек с пошаговыми рисунками",[lookup[x] for x in chosen],figures)
-
 days=[
 ("Понедельник","Катим большой мягкий мяч или мнём бумагу."),
 ("Вторник","Обходим крупные отметки или используем крупные наклейки."),
@@ -346,6 +332,6 @@ for q in ["Новые умения и интересы ребёнка","Что �
     field(story,q,n=2)
 build("autismhub-dnevnik-nablyudeniy-za-razvitiem-rebenka.pdf","Дневник наблюдений",story,3)
 
-if len(OUTPUTS)!=14:
-    raise RuntimeError(f"Expected to upgrade 14 PDFs; upgraded {len(OUTPUTS)}")
+if len(OUTPUTS)!=13:
+    raise RuntimeError(f"Expected to upgrade 13 PDFs; upgraded {len(OUTPUTS)}")
 print(f"PDF_PRINT_QA_COMPLETE: {len(OUTPUTS)} PDFs, {sum(n for _,n in OUTPUTS)} A4 pages, canonical main text {SIZE}pt")
