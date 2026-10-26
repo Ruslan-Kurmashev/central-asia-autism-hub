@@ -85,50 +85,6 @@ def make_cards():
     c.save()
     return path,6
 
-SEQUENCES=[
-("Одевание - футболка",[
- ("1","Выбираем удобную одежду","Пусть ребёнок выберет из доступных вариантов."),
- ("2","Садимся устойчиво","При необходимости используем опору для спины."),
- ("3","Помогаем с рукавами","Взрослый делает трудные шаги, ребёнок участвует."),
- ("4","Тянем край вниз","Ребёнок может завершить только этот шаг.")]),
-("Мытьё рук",[
- ("1","Намочить руки","Проверьте комфортную температуру воды."),
- ("2","Мыло и трение","Показать обработку ладоней, пальцев, тыльной стороны."),
- ("3","Смыть мыло","Поддержать движение под краном при необходимости."),
- ("4","Высушить","Ребёнок выбирает удобное полотенце.")]),
-("Подготовка места для еды",[
- ("1","Коврик","Положить нескользкий коврик."),
- ("2","Чашка","Поставить устойчивую чашку с безопасным напитком."),
- ("3","Ложка","Положить удобную ложку рядом с тарелкой."),
- ("4","Помощь по потребности","Можно попросить помощь, паузу или выбрать прибор.")]),
-("Собираем сумку или коробку",[
- ("1","Выбрать предмет","Один большой лёгкий предмет."),
- ("2","Открыть","Взрослый держит сумку или коробку при необходимости."),
- ("3","Положить внутрь","Ребёнок делает посильную часть действия."),
- ("4","Готово","Принять завершение и не требовать продолжения.")])
-]
-def make_sequences():
-    path=OUT/"4-vizualnye-posledovatelnosti-ru.pdf"
-    c=canvas.Canvas(str(path),pagesize=A4)
-    c.setTitle("AutismHub - Четыре визуальные последовательности")
-    for k,(title,steps) in enumerate(SEQUENCES):
-        head(c,"Визуальные подсказки: "+title,k+1,len(SEQUENCES),"Можно вырезать карточки или повесить весь лист. Уберите непонятные шаги и замените своими фотографиями при необходимости.")
-        top=H-128
-        for num,caption,note in steps:
-            ht=145
-            c.setFillColor(HexColor("#FFFFFF"));c.setStrokeColor(LINE)
-            c.roundRect(L,top-ht,R-L,ht,8,stroke=1,fill=1)
-            c.setFillColor(PALE);c.circle(L+51,top-47,27,stroke=0,fill=1)
-            txt(c,L+43,top-54,num,14,True,NAVY)
-            txt(c,L+96,top-42,caption,10.4,True,NAVY)
-            y=para(c,L+96,top-66,note,width=R-L-114,size=9.0,leading=15)
-            if y<top-ht+12:raise RuntimeError(f"Sequence overflow {title}, step {num}")
-            top-=ht+14
-        txt(c,L,57,"Необязательная подсказка: помощь взрослого - нормальна. Не требуйте всех шагов сразу.",7.6,col=MUTED)
-        c.showPage()
-    c.save()
-    return path,4
-
 def form_field(c,y,label,n=2):
     txt(c,L,y,label,8.6,True,NAVY);y-=20
     for _ in range(n):
@@ -171,7 +127,7 @@ def make_plan():
     c.showPage();c.save()
     return path,2
 
-for path,n in [make_cards(),make_sequences(),make_plan()]:
+for path,n in [make_cards(),make_plan()]:
     pdf=PdfReader(str(path))
     if not path.is_file() or path.stat().st_size<13000:raise RuntimeError(f"PDF missing: {path}")
     if len(pdf.pages)!=n:raise RuntimeError(f"Page count wrong: {path}")

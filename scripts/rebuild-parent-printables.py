@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Rebuild the 15 AutismHub parent PDFs with the canonical 11pt print body.
+"""Rebuild the 14 AutismHub parent PDFs with the canonical 11pt print body.
 
 Runs AFTER legacy generators and replaces their outputs. Source activity facts
 stay in existing JSON/Python data. Visual sequences include source-coded diagrams
@@ -246,28 +246,6 @@ build("emotions/pamyatki-plan-i-dnevnik-emotsii-ru.pdf","Карточки, пл�
 
 selfcare=json_data("scripts/data/parent-daily-independence-tasks-ru.json","tasks")
 many_activities("selfcare/12-zadanii-samostoyatelnost-ru.pdf","12 домашних заданий для самостоятельности",selfcare)
-seq=literal_list("scripts/build-parent-daily-independence-pdfs.py","SEQUENCES")
-selfcare_figures=[
- None,  # page one uses licensed photographs instead of the old SVG
- "selfcare-handwashing-sequence.svg",
- "selfcare-table-sequence.svg",
- "selfcare-bag-sequence.svg"
-]
-if len(seq)!=4:raise RuntimeError("Four self-care sequences expected")
-story=[]
-for i,(name,steps) in enumerate(seq):
-    if i:newpage(story)
-    intro(story,"Визуальная последовательность",name)
-    if i == 0:
-        shirt_photo_grid(story)
-    else:
-        diagram(story,selfcare_figures[i])
-    for step,name,description in steps:
-        story.append(ptext(f"Шаг {step}. {name}",LABEL))
-        story.append(ptext(description))
-    story.append(ptext("Необязательно выполнять все шаги самостоятельно. Помощь взрослого и адаптации допустимы."))
-build("selfcare/4-vizualnye-posledovatelnosti-ru.pdf","4 визуальные последовательности",story,4,4)
-
 story=[]
 intro(story,"Самостоятельность: пример на неделю","Необязательные идеи. Помощь взрослого и отдых могут быть лучшим вариантом.")
 ideas=[
@@ -368,6 +346,6 @@ for q in ["Новые умения и интересы ребёнка","Что �
     field(story,q,n=2)
 build("autismhub-dnevnik-nablyudeniy-za-razvitiem-rebenka.pdf","Дневник наблюдений",story,3)
 
-if len(OUTPUTS)!=15:
-    raise RuntimeError(f"Expected to upgrade 15 PDFs; upgraded {len(OUTPUTS)}")
+if len(OUTPUTS)!=14:
+    raise RuntimeError(f"Expected to upgrade 14 PDFs; upgraded {len(OUTPUTS)}")
 print(f"PDF_PRINT_QA_COMPLETE: {len(OUTPUTS)} PDFs, {sum(n for _,n in OUTPUTS)} A4 pages, canonical main text {SIZE}pt")
