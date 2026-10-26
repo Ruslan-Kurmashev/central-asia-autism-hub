@@ -50,9 +50,52 @@ for(const [name,item] of reviewed){
   assert.ok(Date.parse(item.checkedAt+'T23:59:59Z') >= Date.parse(actual.published),
     'audit date predates first publication: '+name);
 }
+// Historical audit entries must not be deleted when articles are consolidated.
+// Retired originals must remain complete draft files with explicit static redirects.
+// Modified destination articles move back into the pending human-review queue.
+const previousReviewPaths = new Set(reviewed.keys());
+const config = await readFile('astro.config.mjs', 'utf8');
+const retired = tracker.retiredReviewed ?? [];
+const recheck = tracker.needsRecheck ?? [];
+const historicalPaths = new Set();
+for (const record of retired) {
+  assert.ok(!previousReviewPaths.has(record.path), 'retired audit still marked current: ' + record.path);
+  assert.ok(!historicalPaths.has(record.path), 'duplicate historical audit: ' + record.path);
+  historicalPaths.add(record.path);
+  assert.ok(['corrected', 'checked_no_change'].includes(record.status), 'invalid previous audit status: '+record.path);
+  assert.ok(Array.isArray(record.checks) && record.checks.length >= 5, 'lost retired audit checks: '+record.path);
+  assert.equal(record.retiredAt, '2026-10-26', 'unknown retirement date: '+record.path);
+  const original = await readFile(record.path, 'utf8');
+  const originalFm = original.match(/^---\s*\r?\n([\s\S]*?)\r?\n---/)?.[1];
+  assert.ok(originalFm, 'retired source missing metadata: '+record.path);
+  assert.equal(get(originalFm,'draft'), 'true', 'retired source must be draft: '+record.path);
+  assert.equal(get(originalFm,'publishedAt'), record.firstPublishedAt, 'retired source publication date lost: '+record.path);
+  assert.ok(typeof record.canonicalPath === 'string' && all.some(x=>x.path===record.canonicalPath),
+    'retired page has no published canonical target: '+record.path);
+  const canonical = await readFile(record.canonicalPath, 'utf8');
+  const canonicalFm = canonical.match(/^---\s*\r?\n([\s\S]*?)\r?\n---/)?.[1];
+  const fromSlug = get(originalFm,'slug'), toSlug = get(canonicalFm,'slug');
+  assert.ok(fromSlug && toSlug && config.includes(
+    "'/kz/ru/parents/"+fromSlug+"': '/kz/ru/parents/"+toSlug+"'"
+  ), 'retired article missing exact static redirect: '+record.path);
+}
+for (const record of recheck) {
+  assert.ok(!previousReviewPaths.has(record.path) && !historicalPaths.has(record.path),
+    'changed article must not claim unchanged previous review: '+record.path);
+  historicalPaths.add(record.path);
+  assert.ok(['corrected', 'checked_no_change'].includes(record.status), 'invalid prior review status: '+record.path);
+  assert.ok(Array.isArray(record.checks) && record.checks.length >= 5, 'lost previous checks: '+record.path);
+  const current = all.find(x => x.path === record.path);
+  assert.ok(current, 'changed canonical article no longer published: '+record.path);
+  assert.equal(current.published, record.firstPublishedAt, 'changed canonical first date altered: '+record.path);
+  assert.ok(record.reason && record.changedAt, 'missing reason for renewed human review: '+record.path);
+}
+assert.equal(retired.length, 10, 'ten explicitly retired support articles must be accounted for');
+assert.equal(recheck.length, 6, 'six modified canonical articles require renewed editorial checks');
+
 const waiting=all.filter(x=>!reviewed.has(x.path));
 waiting.sort((a,b) => (tracker.auditOrder.indexOf(a.section)-tracker.auditOrder.indexOf(b.section)) ||
  a.published.localeCompare(b.published) || a.path.localeCompare(b.path));
-console.log('Editorial audit tracker PASS: '+reviewed.size+' of '+all.length+' published articles completed, '+waiting.length+' pending.');
+console.log('Editorial audit tracker PASS: '+reviewed.size+' of '+all.length+' published articles completed, '+waiting.length+' pending, '+retired.length+' retired histories preserved, '+recheck.length+' needing re-review.');
 console.log('Published articles by section/language:',JSON.stringify(Object.fromEntries([...sections].sort())));
 console.log('Next outstanding entries:',waiting.slice(0,6).map(x=>x.path).join(', '));
