@@ -22,7 +22,7 @@ riskLevel: moderate
 disclaimerType: informational
 conflictOfInterest: "Конфликт интересов не заявлен."
 publishedAt: "2026-10-16T17:07:04.254Z"
-updatedAt: 2026-10-16
+updatedAt: 2026-10-26
 reviewDueAt: 2027-04-16
 draft: false
 keyPoints:
@@ -113,11 +113,11 @@ sources:
     note: "Рекомендации для отчётности о когортных, поперечных исследованиях и исследованиях случай-контроль. Чек-лист не заменяет оценку методологического качества."
     accessedAt: 2026-10-16
   - title: "CONSORT 2025 Statement: updated guideline for reporting randomised trials"
-    url: "https://www.equator-network.org/reporting-guidelines/consort/"
-    organisation: "EQUATOR Network"
+    url: "https://doi.org/10.1136/bmj-2024-081123"
+    organisation: "BMJ"
     publicationYear: 2025
-    note: "Рекомендации по прозрачной отчётности о рандомизированных испытаниях, не подтверждение эффективности конкретной программы."
-    accessedAt: 2026-10-16
+    note: "Первичная публикация CONSORT 2025 по прозрачной отчётности рандомизированных испытаний, не подтверждение эффективности конкретной программы."
+    accessedAt: 2026-10-26
   - title: "Artificial Intelligence for Health"
     url: "https://www.who.int/publications/m/item/artificial-intelligence-for-health"
     organisation: "Всемирная организация здравоохранения"
