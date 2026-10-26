@@ -1035,3 +1035,10 @@ In the Russian parent guide `child-daily-independence-practical-guide.md`, the a
 | Local file | Source | Status and use |
 | --- | --- | --- |
 | `public/images/editorial/motor/motor-tear-and-crumple-paper-steps.webp` | Original AI-assisted illustration generated in the AutismHub conversation using the owner's mother-and-child style reference | Owner selected the three-panel illustration for game 6, "Рвём и мнём бумагу", in `src/content/pages/kz/ru/home-motor-and-fine-motor-practice.md`. The approved 1916 x 821 PNG was optimized as WebP. This is an instructional image, not a stock photograph, clinical evidence, or an article cover. |
+
+
+## Approved instructional illustration: modeling play dough (26 October 2026)
+
+| Local file | Source | Status and use |
+| --- | --- | --- |
+| `public/images/editorial/motor/motor-play-dough-ball-imprints-roll-steps.webp` | Original AI-assisted educational illustration generated in the AutismHub conversation using the owner's mother-and-child reference style | Owner explicitly selected the three-panel image for game 7, "Лепим шар, валик и отпечаток", in `src/content/pages/kz/ru/home-motor-and-fine-motor-practice.md`. Original 1916 x 821 PNG was converted into WebP. Depicts a ball of play dough, fingerprints on flattened dough, and rolling a thick log. This is not a stock photograph, diagnostic material, clinical evidence or article cover. |
