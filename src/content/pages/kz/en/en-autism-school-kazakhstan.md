@@ -22,7 +22,7 @@ disclaimerType: informational
 conflictOfInterest: "No conflict of interest declared."
 publishedAt: 2026-10-10
 originalPublishedAt: 2026-10-09
-updatedAt: 2026-10-10
+updatedAt: 2026-10-26
 draft: false
 keyPoints:
   - "School admission and arrangements for special educational support are separate questions. An autism diagnosis does not remove a child's right to education."
@@ -56,7 +56,7 @@ sources:
   - title: "Model operating rules for education organisations of the relevant types and categories"
     url: "https://adilet.zan.kz/rus/docs/V2200029329"
     organisation: "Adilet legal information system / Ministry of Education of Kazakhstan"
-    publicationYear: 2017
+    publicationYear: 2022
     note: "The current education-organisation operating rules, including provisions on PMPK educational needs assessment."
     accessedAt: 2026-10-09
   - title: "Regulations governing the medical advisory commission"

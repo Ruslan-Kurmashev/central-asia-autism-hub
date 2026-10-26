@@ -23,7 +23,7 @@ conflictOfInterest: "No conflict of interest declared."
 versionNote: "10 October 2026: English translation based on the Russian article updated on 9 October 2026. It retains the regulatory changes to PMPK services dated 26 June 2026 and MSE rules effective from 25 August 2026."
 publishedAt: 2026-10-10
 originalPublishedAt: 2026-10-09
-updatedAt: 2026-10-10
+updatedAt: 2026-10-26
 draft: false
 keyPoints:
   - "Medical, educational and social support in Kazakhstan follow different pathways. Start by identifying the question you need to resolve."
@@ -157,6 +157,8 @@ Under the applicable rules:
 - for in-person applications, an assessment date is assigned on the day of application
 - for online applications, a date is assigned within **two working days**
 - a written conclusion is issued on the assessment day and/or delivered electronically to the applicant's portal account within **two working days**.
+
+**Important:** the 30 calendar days refer to waiting for a PMPK assessment, not to the start of sessions or every other form of support. Correction services, rehabilitation centres and other providers have separate access requirements and timelines.
 
 The rules also prohibit asking applicants to supply information that the authority can retrieve through government digital systems.
 
