@@ -141,7 +141,7 @@ The parent topic **Approaches to support** is a single top-level expandable grou
 
 Each published article is assigned to exactly one subgroup using its stable `translationKey`, not its language-specific slug. Nested groups expose published articles in their matching language only. No extra routing tier, duplicate cards across subgroups, automatically invented translations, or content rewrites are introduced by this navigation change.
 
-The complete editable allocation and editorial proposals are recorded in `docs/audit/parent-support-taxonomy-2026-10-26.md`. The source taxonomy for UI rendering is `src/data/parent-support-subgroups.ts`. Article mergers or removals are a separate editorial operation, requiring source review, translation parity, and link preservation.
+The initial allocation is recorded in `docs/audit/parent-support-taxonomy-2026-10-26.md`, superseded for current editorial priorities by `docs/audit/parent-support-consolidation-stage1-2026-10-26.md`. The 55 support pages remain available, now presented as 36 principal articles and 19 supplementary in-depth pages, with weighted aids assigned to sensory support. The source taxonomy for UI rendering is `src/data/parent-support-subgroups.ts`. Article mergers or removals are a separate editorial operation requiring source review, translation parity, and link preservation.
 
 ## 6. Research Explained
 
