@@ -6,6 +6,13 @@
 - [ ] At least one RU/KK/EN long heading or representative page was checked at narrow mobile, tablet and desktop widths and at 200% zoom where applicable.
 - [ ] The latest commit passes `npm run check:type-scale` and `npm run validate`; any token exception is documented in the central design policy.
 
+## Change-specific release checks
+
+- [ ] List the exact modified article URLs, locales, and reference assets.
+- [ ] Confirm the changed-page QA lists all published Markdown pages and direct image references affected by this PR. If there are more than 24, split the PR for meaningful review.
+- [ ] Review Chromium screenshots at 360, 768 and 1440 px for each changed route. Browser automation checks technical layout, not illustration meaning or medical accuracy.
+- [ ] Record the commit SHA, GitHub Actions status and actual public link after deployment. Do not report a commit as publication.
+
 ## Other validation
 
 - [ ] Factual claims, source references, metadata, draft and translation states were reviewed for affected content.

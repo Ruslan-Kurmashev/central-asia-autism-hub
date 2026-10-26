@@ -17,5 +17,6 @@ This directory records explicit, owner-approved changes to product policy or tec
 - [Removed research navigation categories](2026-10-26-research-navigation.md)
 - [Free-to-learn course catalogue](2026-10-26-free-learning.md)
 - [Visual system and release verification](2026-10-26-visual-release-qa.md)
+- [Dependency update and security alert workflow](2026-10-26-dependency-maintenance.md)
 
 Source of decisions: project owner instructions confirmed on 26 October 2026. Current working state must still be checked in GitHub.

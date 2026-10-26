@@ -45,7 +45,7 @@ sources:
     note: "Рекомендация 1.24.1 о немедленной оценке внезапной или быстро прогрессирующей слабости конечностей либо лица, другие неврологические симптомы требуют соответствующей оценки."
     accessedAt: 2026-10-16
   - title: "CDC's Developmental Milestones"
-    url: "https://www.cdc.gov/milestones"
+    url: "https://www.cdc.gov/act-early/milestones/"
     organisation: "Centers for Disease Control and Prevention (CDC)"
     publicationYear: 2026
     note: "Если ребёнок потерял навыки, которыми раньше пользовался, не следует ждать, необходимо обсудить развитие и оценку с врачом. Ориентиры не являются диагностическим тестом."
