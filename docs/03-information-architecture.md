@@ -135,6 +135,14 @@ During the initial launch, the six parent topics appear as sections on one landi
 
 With only 8–12 launch resources, separate category pages should not be generated merely to create empty navigation depth. Dedicated category pages may be introduced when the content volume supports them.
 
+### 5.1. Nested navigation for approaches to support (26 October 2026)
+
+The parent topic **Approaches to support** is a single top-level expandable group, containing ten nested expandable groups on the same landing page: choosing support, communication, behaviour and learning, play and development, sensory support, daily living, movement, psychological help, family support, and other methods with their limitations.
+
+Each published article is assigned to exactly one subgroup using its stable `translationKey`, not its language-specific slug. Nested groups expose published articles in their matching language only. No extra routing tier, duplicate cards across subgroups, automatically invented translations, or content rewrites are introduced by this navigation change.
+
+The complete editable allocation and editorial proposals are recorded in `docs/audit/parent-support-taxonomy-2026-10-26.md`. The source taxonomy for UI rendering is `src/data/parent-support-subgroups.ts`. Article mergers or removals are a separate editorial operation, requiring source review, translation parity, and link preservation.
+
 ## 6. Research Explained
 
 Research Explained is a separate editorial section for plain-language interpretation of scientific articles, research findings, systematic reviews, and professional guidelines.

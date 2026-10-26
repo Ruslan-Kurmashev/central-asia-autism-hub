@@ -1,0 +1,122 @@
+---
+import type { CollectionEntry } from 'astro:content';
+import { PARENT_SUPPORT_SUBGROUPS, parentSupportGroupForKey } from '../data/parent-support-subgroups';
+import { DATE_LOCALES } from '../i18n/content';
+import { articlePath } from '../lib/urls';
+import type { Locale } from '../site.config';
+
+interface Props {
+  locale: Locale;
+  materials: Array<CollectionEntry<'pages'> | CollectionEntry<'research'>>;
+}
+
+const { locale, materials } = Astro.props;
+const dateFormatter = new Intl.DateTimeFormat(DATE_LOCALES[locale], {
+  day: 'numeric',
+  month: 'short',
+  year: 'numeric',
+});
+
+const subgroups = PARENT_SUPPORT_SUBGROUPS.map((subgroup) => {
+  const keys = new Set<string>(subgroup.translationKeys);
+  return {
+    ...subgroup,
+    materials: materials.filter((material) => keys.has(material.data.translationKey)),
+  };
+});
+
+const unassigned = materials.filter((material) => !parentSupportGroupForKey(material.data.translationKey));
+const materialLabel = (count: number) =>
+  locale === 'en' ? (count === 1 ? 'article' : 'articles')
+    : locale === 'kk' ? 'материал'
+      : count % 10 === 1 && count % 100 !== 11 ? 'статья'
+        : count % 10 >= 2 && count % 10 <= 4 && (count % 100 < 12 || count % 100 > 14) ? 'статьи'
+          : 'статей';
+const emptyLabel = locale === 'en'
+  ? 'No published translation in this language yet.'
+  : locale === 'kk'
+    ? 'Бұл тілдегі жарияланған материалдар әзірге жоқ.'
+    : 'На этом языке пока нет опубликованных материалов.';
+const otherLabel = locale === 'en'
+  ? 'Additional support resources'
+  : locale === 'kk'
+    ? 'Қосымша қолдау материалдары'
+    : 'Дополнительные материалы о поддержке';
+---
+
+<div class="section-v2__support-subgroups" aria-label={locale === 'en' ? 'Support topics' : locale === 'kk' ? 'Қолдау тақырыптары' : 'Темы поддержки'}>
+  {subgroups.map((subgroup, subgroupIndex) => (
+    <details class="section-v2__support-subgroup" id={`support-${subgroup.id}`}>
+      <summary>
+        <span class="section-v2__support-number" aria-hidden="true">
+          {String(subgroupIndex + 1).padStart(2, '0')}
+        </span>
+        <span class="section-v2__support-heading">
+          <strong>{subgroup.label[locale]}</strong>
+          <span>{subgroup.description[locale]}</span>
+        </span>
+        <span class="section-v2__support-count">
+          {subgroup.materials.length} {materialLabel(subgroup.materials.length)}
+        </span>
+        <span class="section-v2__support-caret" aria-hidden="true"></span>
+      </summary>
+      <div class="section-v2__article-list">
+        {subgroup.materials.length > 0 ? (
+          subgroup.materials.map((material, index) => (
+            <a
+              class:list={[
+                'section-v2__article-row',
+                material.data.featuredImage && 'section-v2__article-row--image',
+              ]}
+              href={articlePath(locale, 'parents', material.data.slug)}
+            >
+              <span class="section-v2__article-index" aria-hidden="true">
+                {String(index + 1).padStart(2, '0')}
+              </span>
+              {material.data.featuredImage && (
+                <img
+                  class="section-v2__article-thumb"
+                  src={material.data.featuredImage}
+                  alt=""
+                  loading="lazy"
+                  decoding="async"
+                  width="96"
+                  height="72"
+                />
+              )}
+              <span class="section-v2__article-copy">
+                <strong>{material.data.title}</strong>
+                <span>{material.data.summary}</span>
+              </span>
+              <span class="section-v2__article-meta">
+                <time datetime={(material.data.displayPublishedAt ?? material.data.originalPublishedAt ?? material.data.publishedAt)!.toISOString()}>
+                  {dateFormatter.format((material.data.displayPublishedAt ?? material.data.originalPublishedAt ?? material.data.publishedAt)!)}
+                </time>
+                <span aria-hidden="true">→</span>
+              </span>
+            </a>
+          ))
+        ) : (
+          <p class="section-v2__empty">{emptyLabel}</p>
+        )}
+      </div>
+    </details>
+  ))}
+  {unassigned.length > 0 && (
+    <div class="section-v2__support-unassigned">
+      <h3>{otherLabel}</h3>
+      <p>{locale === 'ru'
+        ? 'Новые материалы, ожидающие редакционного распределения по темам.'
+        : locale === 'kk'
+          ? 'Тақырыптарға редакциялық бөлуді күтіп тұрған жаңа материалдар.'
+          : 'New resources awaiting editorial topic assignment.'}</p>
+      <div class="section-v2__article-list">
+        {unassigned.map((material) => (
+          <a class="section-v2__article-row" href={articlePath(locale, 'parents', material.data.slug)}>
+            <span class="section-v2__article-copy"><strong>{material.data.title}</strong><span>{material.data.summary}</span></span>
+          </a>
+        ))}
+      </div>
+    </div>
+  )}
+</div>

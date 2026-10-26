@@ -4,6 +4,7 @@ import ArticleCard from '../../../../components/ArticleCard.astro';
 import AboutOverview from '../../../../components/AboutOverview.astro';
 import LearningCatalog from '../../../../components/LearningCatalog.astro';
 import GlossaryListingCard from '../../../../components/GlossaryListingCard.astro';
+import ParentSupportSubgroups from '../../../../components/ParentSupportSubgroups.astro';
 import ProfessionalDirectory from '../../../../components/ProfessionalDirectory.astro';
 import ResearchTopicDirectory from '../../../../components/ResearchTopicDirectory.astro';
 import { CONTENT_UI, DATE_LOCALES } from '../../../../i18n/content';
@@ -429,6 +430,9 @@ function russianMaterialWord(count: number) {
                       ></span>
                     </summary>
 
+                    {section === 'parents' && group.id === 'support' ? (
+                      <ParentSupportSubgroups locale={locale} materials={group.materials} />
+                    ) : (
                     <div class="section-v2__article-list">
                       {group.materials.length > 0 ? (
                         group.materials.map((material, materialIndex) => (
@@ -500,6 +504,7 @@ function russianMaterialWord(count: number) {
                         <p class="section-v2__empty">{sectionV2Text.emptyGroup}</p>
                       )}
                     </div>
+                    )}
                   </details>
                 ))}
 

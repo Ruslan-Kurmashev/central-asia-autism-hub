@@ -276,6 +276,36 @@ try {
       await screenshot(locale,width,'article');
     }
   }
+  // Parent support taxonomy must open on click and expose every published RU resource exactly once.
+  for (const width of widths) {
+    await navigate(base + '/kz/ru/parents/', width);
+    const state = await evaluate(() => {
+      const support = document.querySelector('details#support');
+      support?.querySelector(':scope > summary')?.click();
+      const subgroups = [...(support?.querySelectorAll('.section-v2__support-subgroup') || [])];
+      const allLinks = subgroups.flatMap(item => [...item.querySelectorAll('.section-v2__article-row[href]')])
+        .map(a => a.getAttribute('href'));
+      subgroups[0]?.querySelector(':scope > summary')?.click();
+      return {
+        outerOpen: support?.open || false,
+        innerCount: subgroups.length,
+        firstOpen: subgroups[0]?.open || false,
+        articleCount: allLinks.length,
+        uniqueArticleCount: new Set(allLinks).size,
+        unassignedCount: support?.querySelectorAll('.section-v2__support-unassigned a').length || 0,
+        overflow: document.documentElement.scrollWidth - innerWidth,
+      };
+    });
+    console.log('USER_JOURNEY_SUPPORT ' + width + ' ' + JSON.stringify(state));
+    verify(state.outerOpen && state.firstOpen && state.innerCount === 10,
+      'Parent support ' + width + ': nested accordion did not open ten groups');
+    verify(state.articleCount === 55 && state.uniqueArticleCount === 55 && state.unassignedCount === 0,
+      'Parent support ' + width + ': missing, duplicated or unassigned article links');
+    verify(state.overflow <= 3, 'Parent support ' + width + ': horizontal overflow ' + state.overflow);
+    await evaluate(() => { document.querySelector('details#support')?.scrollIntoView({ block: 'start' }); return true; });
+    await screenshot('ru', width, 'support');
+  }
+
   // Exercise the exact changed, published URLs rather than only smoke-test examples.
   const changedFile = path.resolve('docs/audit-results/changed-page-routes.json');
   const changedPages = JSON.parse(await readFile(changedFile, 'utf8')).routes;
