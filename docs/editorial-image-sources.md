@@ -1021,3 +1021,10 @@ In the Russian parent guide `child-daily-independence-practical-guide.md`, the a
 | Local file | Source | Status and use |
 | --- | --- | --- |
 | `public/images/editorial/motor/motor-clothes-pegs-steps.webp` | Original AI-assisted instructional illustration generated in the AutismHub conversation using the owner's mother-and-child character references | Owner selected the second of two proposed illustrations for the game 5 section, "Прищепки на широкий картон", in `src/content/pages/kz/ru/home-motor-and-fine-motor-practice.md`. The supplied 1942 x 809 PNG was converted to optimized WebP. Illustrates the mother demonstrating a peg, the child handling it, then adding another. Not a stock photograph, article cover, or clinical evidence. |
+
+
+## Owner-provided instructional communication cards (26 October 2026)
+
+| Local file | Source and permission | Status and use |
+| --- | --- | --- |
+| `public/images/editorial/parent-emotions-communication-cards-approved-2026-10-26.webp` | User-supplied original image `Коммуникационные карточки_ пауза, помощь, тише, стоп(1).png`, explicitly selected by the project owner for this article on 2026-10-26 | Replaces only the illustration in section 6 of `src/content/pages/kz/ru/child-emotion-regulation-support-at-home.md`. Contains the four Russian-language cards ПАУЗА, ПОМОГИ, ТИШЕ, СТОП. Original PNG was 1956 x 804 px. Optimized WebP is 840 x 345 px, visually reviewed against the supplied image. User-supplied instructional image, not a licensed stock cover or clinical assessment instrument. |
