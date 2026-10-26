@@ -54,7 +54,9 @@ for(const [name,item] of reviewed){
 // Retired originals must remain complete draft files with explicit static redirects.
 // Modified destination articles move back into the pending human-review queue.
 const previousReviewPaths = new Set(reviewed.keys());
-const config = await readFile('astro.config.mjs', 'utf8');
+const redirectComponent = await readFile('src/components/SupportArticleRedirect.astro', 'utf8');
+assert.ok(redirectComponent.includes('name="viewport"') && redirectComponent.includes('id="main-content"'),
+  'redirect pages must preserve required accessibility landmarks');
 const retired = tracker.retiredReviewed ?? [];
 const recheck = tracker.needsRecheck ?? [];
 const historicalPaths = new Set();
@@ -75,9 +77,10 @@ for (const record of retired) {
   const canonical = await readFile(record.canonicalPath, 'utf8');
   const canonicalFm = canonical.match(/^---\s*\r?\n([\s\S]*?)\r?\n---/)?.[1];
   const fromSlug = get(originalFm,'slug'), toSlug = get(canonicalFm,'slug');
-  assert.ok(fromSlug && toSlug && config.includes(
-    "'/kz/ru/parents/"+fromSlug+"': '/central-asia-autism-hub/kz/ru/parents/"+toSlug+"/'"
-  ), 'retired article missing exact static redirect: '+record.path);
+  const redirectPath = 'src/pages/kz/ru/parents/' + fromSlug + '.astro';
+  const route = await readFile(redirectPath, 'utf8');
+  assert.ok(fromSlug && toSlug && route.includes('SupportArticleRedirect targetSlug="' + toSlug + '"'),
+    'retired article missing accessible route or points to wrong target: ' + record.path);
 }
 for (const record of recheck) {
   assert.ok(!previousReviewPaths.has(record.path) && !historicalPaths.has(record.path),
