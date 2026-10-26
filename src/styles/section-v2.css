@@ -1298,6 +1298,7 @@
   .section-v2__support-subgroup > .section-v2__article-list .section-v2__article-row--image {
     grid-template-columns: 4.2rem minmax(0, 1fr);
     gap: 0.6rem;
+    align-items: start;
     padding-inline: 0.7rem;
   }
 
