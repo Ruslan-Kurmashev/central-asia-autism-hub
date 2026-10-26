@@ -23,6 +23,7 @@ conflictOfInterest: "No conflict of interest declared."
 publishedAt: 2026-10-10
 originalPublishedAt: 2026-10-09
 updatedAt: 2026-10-20
+reviewDueAt: 2027-01-09
 draft: false
 keyPoints:
   - "Access to social support depends on the child's legally established status, medical and social expert assessment (MSE) and individually determined support needs, not only on a diagnosis."
