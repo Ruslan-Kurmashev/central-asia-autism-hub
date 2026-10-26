@@ -21,7 +21,7 @@ riskLevel: lower
 disclaimerType: informational
 conflictOfInterest: "Коммерческих интересов не заявлено. Образовательные примеры вымышлены."
 publishedAt: 2026-10-15
-updatedAt: 2026-10-15
+updatedAt: 2026-10-26
 reviewDueAt: 2027-04-15
 draft: false
 keyPoints:
@@ -33,11 +33,11 @@ keyPoints:
 evidenceLimitations: "Схемы и цифры вымышлены и предназначены для обучения, методологические преимущества зависят от корректного выполнения дизайна и конкретного научного вопроса."
 sources:
   - title: "STROBE Statement: reporting observational studies"
-    url: "https://www.equator-network.org/reporting-guidelines/strobe/"
-    organisation: "EQUATOR Network"
+    url: "https://doi.org/10.1371/journal.pmed.0040296"
+    organisation: "PLOS Medicine"
     publicationYear: 2007
     note: "Когортные, поперечные и исследования случай–контроль, прозрачность отчётности."
-    accessedAt: 2026-10-15
+    accessedAt: 2026-10-26
   - title: "CONSORT 2025 statement"
     url: "https://www.bmj.com/content/389/bmj-2024-081123"
     organisation: "The BMJ"

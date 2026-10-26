@@ -21,7 +21,7 @@ riskLevel: lower
 disclaimerType: informational
 conflictOfInterest: "Коммерческих интересов не заявлено. Случаи вымышленные и не описывают конкретных семей."
 publishedAt: 2026-10-15
-updatedAt: 2026-10-15
+updatedAt: 2026-10-26
 reviewDueAt: 2027-04-15
 draft: false
 keyPoints:
@@ -33,11 +33,11 @@ keyPoints:
 evidenceLimitations: "Схемы иллюстративные, реальные причинные механизмы по ним не устанавливаются. Условные школьные примеры не являются результатами исследований. Для причинных выводов необходим отдельный анализ дизайна, данных и альтернативных объяснений."
 sources:
   - title: "STROBE Statement: reporting observational studies"
-    url: "https://www.equator-network.org/reporting-guidelines/strobe/"
-    organisation: "EQUATOR Network"
+    url: "https://doi.org/10.1371/journal.pmed.0040296"
+    organisation: "PLOS Medicine"
     publicationYear: 2007
     note: "Контроль смешивающих факторов и прозрачность наблюдательных исследований."
-    accessedAt: 2026-10-15
+    accessedAt: 2026-10-26
   - title: "Greenland et al.: Statistical tests, P values, confidence intervals, and power"
     url: "https://doi.org/10.1007/s10654-016-0149-3"
     organisation: "European Journal of Epidemiology"
