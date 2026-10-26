@@ -292,6 +292,10 @@ try {
         firstOpen: subgroups[0]?.open || false,
         articleCount: allLinks.length,
         uniqueArticleCount: new Set(allLinks).size,
+        primaryCount: subgroups.reduce((count, group) => count + group.querySelectorAll(':scope > .section-v2__article-list > .section-v2__article-row[href]').length, 0),
+        supplementaryCount: subgroups.reduce((count, group) => count + group.querySelectorAll('.section-v2__support-supplementary-link[href]').length, 0),
+        weightedInSensory: !!support?.querySelector('#support-sensory a[href$="/weighted-items/"]'),
+        weightedInOther: !!support?.querySelector('#support-other a[href$="/weighted-items/"]'),
         unassignedCount: support?.querySelectorAll('.section-v2__support-unassigned a').length || 0,
         overflow: document.documentElement.scrollWidth - innerWidth,
       };
@@ -301,9 +305,40 @@ try {
       'Parent support ' + width + ': nested accordion did not open ten groups');
     verify(state.articleCount === 55 && state.uniqueArticleCount === 55 && state.unassignedCount === 0,
       'Parent support ' + width + ': missing, duplicated or unassigned article links');
+    verify(state.primaryCount === 36 && state.supplementaryCount === 19,
+      'Parent support ' + width + ': unexpected editorial main/detailed article split ' + JSON.stringify(state));
+    verify(state.weightedInSensory && !state.weightedInOther,
+      'Parent support ' + width + ': weighted aid safety article assigned to wrong category');
     verify(state.overflow <= 3, 'Parent support ' + width + ': horizontal overflow ' + state.overflow);
-    await evaluate(() => { document.querySelector('details#support')?.scrollIntoView({ block: 'start' }); return true; });
+    await evaluate(() => {
+      const target = document.querySelector('#support .section-v2__support-subgroup');
+      if (!target) return false;
+      const y = window.scrollY + target.getBoundingClientRect().top - (window.innerWidth <= 768 ? 150 : 90);
+      window.scrollTo({ top: y, behavior: 'instant' });
+      return true;
+    });
+    await delay(200);
     await screenshot('ru', width, 'support');
+  }
+
+  // A translated support group must never silently display resources in the wrong language.
+  for (const locale of ['kk', 'en']) {
+    await navigate(base + '/kz/' + locale + '/parents/', 360);
+    const localizedSupport = await evaluate(() => {
+      const support = document.querySelector('details#support');
+      support?.querySelector(':scope > summary')?.click();
+      const groups = [...(support?.querySelectorAll('.section-v2__support-subgroup') || [])];
+      const hrefs = groups.flatMap(group => [...group.querySelectorAll('a[href]')].map(a => a.getAttribute('href')));
+      return {
+        groupCount: groups.length,
+        links: hrefs.length,
+        allLocal: hrefs.every(href => href?.includes('/kz/' + document.documentElement.lang + '/parents/')),
+        emptyStates: groups.filter(group => group.querySelector('.section-v2__empty')).length,
+      };
+    });
+    console.log('USER_JOURNEY_SUPPORT_TRANSLATION ' + locale + ' ' + JSON.stringify(localizedSupport));
+    verify(localizedSupport.groupCount === 10 && localizedSupport.allLocal,
+      'Parent support ' + locale + ': missing group or incorrect-language article links');
   }
 
   // Exercise the exact changed, published URLs rather than only smoke-test examples.

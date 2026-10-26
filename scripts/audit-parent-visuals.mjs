@@ -62,17 +62,27 @@ const cards = [...list.matchAll(/<a\b[^>]*\bclass="[^"]*section-v2__article-row[
     const html = match[0];
     const href = html.match(/\bhref=["']([^"']+)/)?.[1] ?? '';
     const img = html.match(/<img\b[^>]*\bsrc=["']([^"']+)/)?.[1] ?? '';
+    const compact = /\bsection-v2__support-supplementary-link\b/.test(html.match(/<a\b[^>]*>/)?.[0] ?? '');
     const slug = href.replace(/\/+$/, '').split('/').at(-1);
     const before = list.slice(0, match.index);
     const start = before.lastIndexOf('class="section-v2__group"');
     const group = start === -1 ? 'ungrouped' :
       list.slice(start, start + 280).match(/\bid=["']([^"']+)/)?.[1] ?? 'ungrouped';
-    return { slug, img, group, file: lookup.get(slug)?.source ?? null };
+    return { slug, img, compact, group, file: lookup.get(slug)?.source ?? null };
   });
 const actualArticles = cards.filter(card => lookup.has(card.slug));
 for (const article of actualArticles) {
-  if (article.img !== lookup.get(article.slug).image)
+  const source = lookup.get(article.slug);
+  if (article.compact) {
+    // Compact supporting-method links intentionally have no thumbnail.
+    // Require a real published support article with a verified page hero.
+    if (source.topic !== 'approaches-to-support')
+      issues.push(article.slug + ': compact link used outside parent support');
+    if (article.img)
+      issues.push(article.slug + ': compact support link unexpectedly includes an image');
+  } else if (article.img !== source.image) {
     issues.push(article.slug + ': list thumbnail differs from article image');
+  }
 }
 if (actualArticles.length !== articles.length)
   issues.push('listing count mismatch: expected ' + articles.length + ', observed ' + actualArticles.length);
@@ -93,6 +103,8 @@ console.log('[PARENT-IMAGE-AUDIT] ' + JSON.stringify({
   imageFilesReused: repeated.length,
   articlesUsingReusedImages: repeated.reduce((n,[,v]) => n + v.length,0),
   listingCards: cards.length,
+  imageBearingCards: actualArticles.filter(card => !card.compact).length,
+  compactSupportLinks: actualArticles.filter(card => card.compact).length,
   exactAdjacentPairs: adjacent.length,
   withinTwoCardsPairs: near.length,
   zeroHeroDuplicatesWithinArticles: !issues.some(x => x.includes('same hero image redundantly')),
