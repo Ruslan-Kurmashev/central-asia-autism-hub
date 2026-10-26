@@ -32,7 +32,23 @@ for(const c of ['pages','research','learning']){
 }
 items.sort((a,b)=>a.due.localeCompare(b.due)||a.file.localeCompare(b.file));
 const report={generatedAt:now,upcomingThrough:horizon,overdue:items.filter(x=>x.status==='overdue').length,
- dueSoon:items.filter(x=>x.status==='due_soon').length,withoutReviewDate:missing.length,items,missing};
+ dueSoon:items.filter(x=>x.status==='due_soon').length,withoutReviewDate:missing.length,items,missing,missingDetails};
+const riskWeight={high:0,moderate:1,lower:2};
+const missingDetails=[];
+for(const file of missing){
+ const body=await readFile(file,'utf8'),front=body.match(/^---\r?\n([\s\S]*?)\r?\n---/)?.[1]??'';
+ const meta={file,language:get(front,'language'),section:get(front,'section'),risk:get(front,'riskLevel'),
+  publishedAt:get(front,'publishedAt'),updatedAt:get(front,'updatedAt'),title:get(front,'title')};
+ missingDetails.push(meta);
+}
+missingDetails.sort((a,b)=>(riskWeight[a.risk]??3)-(riskWeight[b.risk]??3)||
+ a.section.localeCompare(b.section)||a.file.localeCompare(b.file));
+console.log('[EDITORIAL_MISSING_DUE_SUMMARY] '+JSON.stringify(
+ Object.fromEntries(['high','moderate','lower'].map(level=>[level,missingDetails.filter(x=>x.risk===level).length]))));
+for(const item of missingDetails)console.log('[EDITORIAL_MISSING_DUE] '+
+ JSON.stringify({risk:item.risk,section:item.section,language:item.language,path:item.file,
+  publishedAt:item.publishedAt,updatedAt:item.updatedAt}));
+
 const target='docs/audit-results/editorial-review-due.json';
 await mkdir(path.dirname(target),{recursive:true});await writeFile(target,JSON.stringify(report,null,2)+'\n');
 console.log('[EDITORIAL_REVIEW_DUE] '+report.overdue+' overdue, '+report.dueSoon+' due soon, '+missing.length+' missing reviewDueAt');
