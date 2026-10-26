@@ -1483,6 +1483,75 @@
 
 
 
+/* Shared responsive treatment for dense parent-article tables.
+   Keep words intact on wide layouts, with keyboard-accessible table scrolling.
+   Narrow layouts use the existing labelled mobile cards instead. */
+.article-v2.parents-article-body .article-comparison-table-scroll {
+  max-width: 100%;
+  margin: 1.5rem 0 2rem;
+  overflow-x: auto;
+  overscroll-behavior-x: contain;
+  border: 1px solid var(--article-line);
+  border-radius: var(--radius-small);
+}
+
+.article-v2.parents-article-body .article-comparison-table-scroll:focus-visible {
+  outline: 3px solid var(--color-focus);
+  outline-offset: 3px;
+}
+
+.article-v2.parents-article-body .article-v2__body .article-comparison-table-scroll table {
+  width: 100%;
+  min-width: 44rem;
+  max-width: none;
+  margin: 0;
+  border: 0;
+  table-layout: auto;
+}
+
+.article-v2.parents-article-body .article-v2__body .article-comparison-table-scroll table:has(thead th:nth-child(4)) {
+  min-width: 56rem;
+}
+
+.article-v2.parents-article-body .article-v2__body .article-comparison-table-scroll :is(th, td) {
+  overflow-wrap: normal;
+  word-break: normal;
+  hyphens: none;
+}
+
+.article-v2.parents-article-body .article-v2__body .article-comparison-table-scroll :is(th, td):first-child {
+  min-width: 12rem;
+  width: 24%;
+}
+
+@media (max-width: 48rem) {
+  .article-v2.parents-article-body .article-comparison-table-scroll {
+    overflow-x: visible;
+  }
+
+  .article-v2.parents-article-body .article-v2__body .article-comparison-table-scroll table[data-mobile-cards='true'],
+  .article-v2.parents-article-body .article-v2__body .article-comparison-table-scroll table[data-mobile-cards='true']:has(thead th:nth-child(4)) {
+    min-width: 0;
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .article-v2.parents-article-body .article-v2__body .article-comparison-table-scroll :is(th, td),
+  .article-v2.parents-article-body .article-v2__body .article-comparison-table-scroll :is(th, td):first-child {
+    min-width: 0;
+    width: auto;
+  }
+
+  .article-v2.parents-article-body .article-v2__body .article-comparison-table-scroll td {
+    display: block;
+  }
+
+  .article-v2.parents-article-body .article-v2__body .article-comparison-table-scroll td::before {
+    display: block;
+    margin-bottom: 0.35rem;
+  }
+}
+
 /* The parent home/preschool guide contains meaningful multi-column comparisons.
    Preserve whole words; offer accessible horizontal scrolling at desktop zoom. */
 .article-v2.context-home-preschool-article-body .context-comparison-table-scroll {

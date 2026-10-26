@@ -311,6 +311,57 @@ try {
     }
   }
 
+  // Regression: multi-column parent play tables must never split Russian words.
+  for (const width of [360, 768, 900, 1440]) {
+    const route = base + '/kz/ru/parents/kak-razvivaetsya-igra-rebenka-i-uchastie-roditeley/';
+    await navigate(route, width);
+    const state = await evaluate(() => {
+      const wrappers = [...document.querySelectorAll('.article-comparison-table-scroll')];
+      const tables = wrappers.map(w => w.querySelector('table'));
+      const splitWords = [];
+      const invalidStyles = [];
+      for (const [index, table] of tables.entries()) {
+        for (const cell of table.querySelectorAll('tbody tr > :first-child')) {
+          const css = getComputedStyle(cell);
+          if (css.overflowWrap !== 'normal' || css.wordBreak !== 'normal' || css.hyphens !== 'none') {
+            invalidStyles.push(index + ': ' + cell.textContent.trim().slice(0, 50));
+          }
+          const walker = document.createTreeWalker(cell, NodeFilter.SHOW_TEXT);
+          for (let node = walker.nextNode(); node; node = walker.nextNode()) {
+            const text = node.textContent || '';
+            for (const match of text.matchAll(/[А-Яа-яЁё]{2,}/g)) {
+              const range = document.createRange();
+              range.setStart(node, match.index);
+              range.setEnd(node, match.index + match[0].length);
+              if ([...range.getClientRects()].filter(rect => rect.width > 0).length > 1) {
+                splitWords.push(match[0]);
+              }
+            }
+          }
+        }
+      }
+      return {
+        wrapperCount: wrappers.length,
+        columnCounts: tables.map(t => t.querySelectorAll('thead th').length),
+        splitWords: splitWords.slice(0, 10),
+        invalidStyles: invalidStyles.slice(0, 10),
+        overflow: document.documentElement.scrollWidth - innerWidth,
+        mobileCardCount: tables.filter(t => getComputedStyle(t).display === 'block').length,
+        scrollCount: wrappers.filter(w => w.scrollWidth > w.clientWidth + 3).length,
+      };
+    });
+    console.log('USER_JOURNEY_PLAY_TABLES ' + width + ' ' + JSON.stringify(state));
+    verify(state.wrapperCount === 2 && state.columnCounts.join(',') === '3,4',
+      'Play tables ' + width + ': expected two wrapped 3/4-column tables');
+    verify(state.invalidStyles.length === 0 && state.splitWords.length === 0,
+      'Play tables ' + width + ': broken words ' + JSON.stringify(state));
+    verify(state.overflow <= 3, 'Play tables ' + width + ': page horizontal overflow ' + state.overflow);
+    if (width <= 768) verify(state.mobileCardCount === 2 && state.scrollCount === 0,
+      'Play tables ' + width + ': expected responsive cards without horizontal scrolling');
+    if (width === 900) verify(state.scrollCount >= 1,
+      'Play tables ' + width + ': wide table should scroll inside the labelled region');
+  }
+
   // Verify actual browser rendering, not just Markdown source or AST nodes.
   for (const width of [360, 1440]) {
     await navigate(base+'/kz/ru/parents/kak-autichnye-deti-obshchayutsya/',width);

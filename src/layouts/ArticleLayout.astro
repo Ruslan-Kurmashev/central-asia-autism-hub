@@ -623,6 +623,27 @@ const researchLabel: Record<Locale, string> = {
       table.parentNode?.insertBefore(wrapper, table);
       wrapper.appendChild(table);
     }
+
+    // Dense parent-article tables need full-word columns at desktop widths.
+    // On smaller screens, the existing mobile-card layout replaces the columns.
+    if (
+      document.body.classList.contains('parents-article-body') &&
+      headers.length >= 3 &&
+      !table.closest('.context-comparison-table-scroll, .emotion-timing-scroll, .article-comparison-table-scroll')
+    ) {
+      const wrapper = document.createElement('div');
+      wrapper.className = 'article-comparison-table-scroll';
+      wrapper.tabIndex = 0;
+      wrapper.setAttribute('role', 'region');
+      const lang = document.documentElement.lang;
+      wrapper.setAttribute('aria-label', lang.startsWith('kk')
+        ? 'Кестенің басқа бағандарын көру үшін көлденең айналдырыңыз'
+        : lang.startsWith('en')
+          ? 'Scroll horizontally to see the other table columns'
+          : 'Прокрутите таблицу по горизонтали, чтобы увидеть остальные столбцы');
+      table.parentNode?.insertBefore(wrapper, table);
+      wrapper.appendChild(table);
+    }
   });
 </script>
 
