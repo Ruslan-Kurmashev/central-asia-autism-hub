@@ -10,6 +10,20 @@ export default defineConfig({
   site: siteOrigin,
   base,
   output: 'static',
+  // Retired articles remain reachable at their original addresses on GitHub Pages.
+  // Static Astro creates HTML/meta-refresh redirects. The old Markdown stays in Git as draft.
+  redirects: {
+    '/kz/ru/parents/kommunikatsiya-i-aac': '/kz/ru/parents/aac',
+    '/kz/ru/parents/aided-language-modelling': '/kz/ru/parents/aac',
+    '/kz/ru/parents/antecedent-based-interventions': '/kz/ru/parents/povedenie-i-obuchenie',
+    '/kz/ru/parents/play-based-interventions': '/kz/ru/parents/razvitie-vzaimodeystvie-i-igra',
+    '/kz/ru/parents/joint-attention': '/kz/ru/parents/razvitie-vzaimodeystvie-i-igra',
+    '/kz/ru/parents/sensory-based-strategies': '/kz/ru/parents/sensornye-osobennosti-i-adaptatsiya-sredy',
+    '/kz/ru/parents/sensory-diet': '/kz/ru/parents/sensornye-osobennosti-i-adaptatsiya-sredy',
+    '/kz/ru/parents/samostoyatelnost-i-povsednevnye-navyki': '/kz/ru/parents/obuchenie-povsednevnym-navykam',
+    '/kz/ru/parents/task-analysis': '/kz/ru/parents/obuchenie-povsednevnym-navykam',
+    '/kz/ru/parents/adapted-cbt-autistic-people': '/kz/ru/parents/cognitive-behavioral-therapy',
+  },
   markdown: {
     remarkPlugins: [[remarkBaseLinks, { base, siteOrigin }], remarkRemoveInlineStrong],
   },
