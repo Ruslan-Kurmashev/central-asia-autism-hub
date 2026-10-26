@@ -76,7 +76,7 @@ for (const record of retired) {
   const canonicalFm = canonical.match(/^---\s*\r?\n([\s\S]*?)\r?\n---/)?.[1];
   const fromSlug = get(originalFm,'slug'), toSlug = get(canonicalFm,'slug');
   assert.ok(fromSlug && toSlug && config.includes(
-    "'/kz/ru/parents/"+fromSlug+"': '/kz/ru/parents/"+toSlug+"'"
+    "'/kz/ru/parents/"+fromSlug+"': '/central-asia-autism-hub/kz/ru/parents/"+toSlug+"/'"
   ), 'retired article missing exact static redirect: '+record.path);
 }
 for (const record of recheck) {
