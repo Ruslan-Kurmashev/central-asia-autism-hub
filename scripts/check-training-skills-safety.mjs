@@ -5,7 +5,7 @@ import path from 'node:path';
 // Passing does not replace professional/clinical evaluation of individual claims.
 const checks = [
   { slug: 'video-modeling', markers: ['Согласие ребёнка и безопасность видеозаписей', 'когда будет удалено', 'без публикации записи'], refs: ['38707947'] },
-  { slug: 'task-analysis', markers: ['Право делать действие удобным способом', 'удержание рук', 'допустимые альтернативные способы'], refs: ['39540347'] },
+  { slug: 'task-analysis', canonicalSlug: 'daily-living-skills-training', markers: ['Право делать действие удобным способом', 'удержание рук', 'допустимые альтернативные способы'], refs: ['39540347'] },
   { slug: 'self-management', markers: ['Как понимать результаты для бытовых навыков', '5 из 15', '7 из 15'], refs: ['38709359'] },
   { slug: 'naturalistic-intervention', markers: ['Инициатива ребёнка и границы обучения в игре', 'независимо от выполнения задания', 'игра без учебных задач'], refs: ['pmc.ncbi.nlm.nih.gov/articles/PMC8510990'] },
   { slug: 'parent-mediated-intervention', markers: ['Что говорят исследования с дизайном единичного случая', '17 исследований', '3 исследования'], refs: ['s40489-024-00439-0'] },
@@ -14,7 +14,14 @@ const checks = [
 let checked=0;
 const errors=[];
 for(const item of checks){
-  const content=await readFile(path.join('src/content/pages/kz/ru',item.slug+'.md'),'utf8');
+  const sourcePath=path.join('src/content/pages/kz/ru',item.slug+'.md');
+  const publishedPath=path.join('src/content/pages/kz/ru',(item.canonicalSlug ?? item.slug)+'.md');
+  if (item.canonicalSlug) {
+    const archived=await readFile(sourcePath,'utf8');
+    if (!/^draft:\s*true\s*$/m.test(archived))
+      errors.push(item.slug+': historical merged article must be retained as a draft');
+  }
+  const content=await readFile(publishedPath,'utf8');
   const marker=content.indexOf('\n---',4);
   const fm=content.slice(0,marker),body=content.slice(marker+4);
   if(marker<0 || !/^draft:\s*false\s*$/m.test(fm)) errors.push(item.slug+': published frontmatter missing');
@@ -25,7 +32,7 @@ for(const item of checks){
   for(const phrase of item.markers)if(!body.toLocaleLowerCase('ru').includes(phrase.toLocaleLowerCase('ru')))errors.push(item.slug+': safety/evidence limitation absent: '+phrase);
   checked++;
 }
-console.log('Training skills medical-editorial regression: '+checked+' published materials checked.');
+console.log('Training skills medical-editorial regression: '+checked+' safety cases checked across '+new Set(checks.map(x=>x.canonicalSlug ?? x.slug)).size+' published materials.');
 for(const e of errors)console.error('TRAINING QA: '+e);
 if(errors.length)process.exitCode=1;
 else console.log('Reviewed materials retain consent, safety, evidence limits, citations and images.');
