@@ -313,7 +313,7 @@ try {
     await evaluate(() => {
       const target = document.querySelector('#support .section-v2__support-subgroup');
       if (!target) return false;
-      const y = window.scrollY + target.getBoundingClientRect().top - 90;
+      const y = window.scrollY + target.getBoundingClientRect().top - (width <= 768 ? 150 : 90);
       window.scrollTo({ top: y, behavior: 'instant' });
       return true;
     });
