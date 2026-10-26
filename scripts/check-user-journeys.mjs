@@ -260,7 +260,7 @@ try {
           if (!el.getClientRects().length || el.clientWidth === 0) continue;
           const css = getComputedStyle(el);
           const isTableCell = el.matches('th, td');
-          if (isTableCell && (css.overflowWrap === 'anywhere' || css.wordBreak === 'break-all')) {
+          if (isTableCell && css.wordBreak === 'break-all') {
             forcedBreaks.push(el.textContent.trim().slice(0, 60));
           }
           if (el.scrollWidth > el.clientWidth + 3 &&
