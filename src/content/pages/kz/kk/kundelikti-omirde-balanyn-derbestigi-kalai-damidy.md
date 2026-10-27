@@ -138,7 +138,7 @@ NHS балалар эрготерапиясы қызметтері *әрекет
 4. Біртіндеп бала көбірек кезеңге қатысуы мүмкін. Қиын немесе жағымсыз болса, бұрынғы көмек қала береді.
 
 <figure class="independence-shirt-example-figure">
-  <img src="/central-asia-autism-hub/images/editorial/diagrams/child-daily-independence-shirt-steps.webp" alt="Төрт сурет: анасы баласына футболка кигізуге көмектеседі, бала етегін түсіреді, жеңге қол өткізуді үйренеді және біртіндеп көбірек кезеңді орындайды." width="1448" height="1086" loading="lazy" decoding="async" style="display:block;width:100%;height:auto;border-radius:16px" />
+  <img src="/central-asia-autism-hub/images/editorial/diagrams/child-daily-independence-shirt-steps-kk.svg" alt="Төрт сурет: анасы баласына футболка кигізуге көмектеседі, бала етегін түсіреді, жеңге қол өткізуді үйренеді және біртіндеп көбірек кезеңді орындайды." width="1448" height="1086" loading="lazy" decoding="async" style="display:block;width:100%;height:auto;border-radius:16px" />
   <figcaption>Киінуді үйрену мысалы: бала көбірек кезеңге қатысады, қажетті ересек көмегі сақталады.</figcaption>
 </figure>
 

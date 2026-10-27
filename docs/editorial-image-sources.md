@@ -1079,3 +1079,9 @@ In the Russian parent guide `child-daily-independence-practical-guide.md`, the a
 | Asset | Provenance | Usage |
 | --- | --- | --- |
 | `public/images/editorial/parent-emotions-communication-cards-kk-2026-10-27.webp` | Owner-provided `communication-cards-kk.png` (2055 x 789 pixels), with owner approval to publish in the Kazakh-language article. Four labels: ҮЗІЛІС, КӨМЕКТЕС, ТЫНЫШЫРАҚ, ТОҚТА. Lossless WebP conversion verified to preserve pixels. SHA-256: `48e109954a5c1a36022f2abaa3e69af489cc53012d1f3d92b00422dcb62ea449`. | Illustration for section 6 of `src/content/pages/kz/kk/emotions-ozin-ozi-retteu-balany-koldau.md` only. Examples of communication options, not a standardized or validated AAC system. Russian and English articles are unchanged. |
+
+## Kazakh dressing sequence adaptation (27 October 2026)
+
+| Asset | Source and rights | Scope |
+| --- | --- | --- |
+| `public/images/editorial/diagrams/child-daily-independence-shirt-steps-kk.svg` | Adaptation of existing AutismHub instructional illustration `public/images/editorial/diagrams/child-daily-independence-shirt-steps.webp`, preserving the original four illustrated actions and characters. Russian raster artwork is embedded in the standalone SVG, with its Russian caption areas covered and Kazakh text rendered as SVG text. The project owner provided the same four-card visual reference and expressly requested a Kazakh translation and publication on 27 October 2026. | Used only in `src/content/pages/kz/kk/kundelikti-omirde-balanyn-derbestigi-kalai-damidy.md`, section 3, `«Соңғы қадамды бала жасайды» қағидасы`. The existing RU and EN illustrations, cover images and protected assets remain unchanged. Editorial instructional illustration, not a clinical protocol or stock photography. |
