@@ -1073,3 +1073,9 @@ In the Russian parent guide `child-daily-independence-practical-guide.md`, the a
 | Local file | Origin and permission | Scope |
 | --- | --- | --- |
 | `public/images/editorial/motor/motor-step-over-towel-steps-kk.webp` | Original AI-assisted three-panel illustration `a_wide_clean_flat_vector_illustration_infographi.png` (1890 x 832 px), created in the AutismHub conversation using the approved mother-and-child style. The owner explicitly selected this Kazakh-language version for publication on 27 October 2026. Converted to lossless WebP (1890 x 832 px), with pixel-for-pixel identity verified. SHA-256: `d597725fa7259025f7f735bdae053e4c8ce091092f12af6c74f85b7ae263267d`. | Replaces only the Russian-caption figure in `### 4-ойын. Аласа оралған сүлгіден аттаймыз` in `src/content/pages/kz/kk/kozgalys-pen-usak-motorika-uide-damytu.md`. The Russian and English versions are unchanged. This is educational illustration, not medical evidence, a stock photo or an article cover. |
+
+## Kazakh four-card communication illustration (27 October 2026)
+
+| Asset | Provenance | Usage |
+| --- | --- | --- |
+| `public/images/editorial/parent-emotions-communication-cards-kk-2026-10-27.webp` | Owner-provided `communication-cards-kk.png` (2055 x 789 pixels), with owner approval to publish in the Kazakh-language article. Four labels: ҮЗІЛІС, КӨМЕКТЕС, ТЫНЫШЫРАҚ, ТОҚТА. Lossless WebP conversion verified to preserve pixels. SHA-256: `48e109954a5c1a36022f2abaa3e69af489cc53012d1f3d92b00422dcb62ea449`. | Illustration for section 6 of `src/content/pages/kz/kk/emotions-ozin-ozi-retteu-balany-koldau.md` only. Examples of communication options, not a standardized or validated AAC system. Russian and English articles are unchanged. |
