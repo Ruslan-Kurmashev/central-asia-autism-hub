@@ -113,13 +113,16 @@ for (const lang of locales) {
   const expectedEvents = [
     ['2026-10-19', 'beyim.edu.kz', 'beyim-preschool-user-photo.webp'],
     ['2026-10-27', 'tamyrplatform.com', 'group-18739.png'],
-    ['2026-10-27', 'humanitix.com/autism-in-education-learn-teach-and-thrive-differently', '9f5551_ee88ccf4c3094f74bce74fae139da432'],
     ['2026-10-28', 'twinkl.co.uk/events/teachmeet/Conduit-Festival-of-Learning-Day-Three', 'teachmeet-fb-events-profile-image-1615892637.jpg'],
     ['2026-10-31', 'uchmet.ru/events/item/4197389', '680x300.png'],
     ['2026-10-30', 'conference-satr.kz', 'satr-logo.svg'],
     ['2026-11-18', 'autism.org/webinar/using-multimodal-communication', 'event-ari-gestures-sign-language.jpg'],
     ['2026-12-02', 'autism.org/webinar/2026-research-updates-gi-symptoms-behavior', 'event-ari-gi-anatomical-model.jpg'],
   ].filter(([expires]) => expires >= todayInKazakhstan);
+  // This event finished on 27 October and its ticket URL now returns 404.
+  // Keep the negative regression check, rather than lowering coverage.
+  check(!html.includes('humanitix.com/autism-in-education-learn-teach-and-thrive-differently'),
+    id + ': completed October webinar must not appear as an upcoming event');
   check(eventCards.length === expectedEvents.length,
     id + ': expected ' + expectedEvents.length + ' valid unexpired events, found ' + eventCards.length);
   for (const [, organiserDomain, imageFilename] of expectedEvents) {
