@@ -24,6 +24,7 @@ conflictOfInterest: "Мүдделер қақтығысы мәлімделмег�
 publishedAt: 2026-10-10
 originalPublishedAt: 2026-10-09
 updatedAt: 2026-10-27
+reviewDueAt: 2026-12-01
 draft: false
 keyPoints:
   - "Төлемге дейін қызмет көрсететін заңды тұлғаны немесе дара кәсіпкерді анықтап, түсінікті жазбаша талаптарды алыңыз."
