@@ -1,7 +1,7 @@
 // Navigation taxonomy for published parent articles about support.
 // The keys are stable translationKey values, not language-specific slugs.
-// primaryKeys identify the shorter parent-facing shortlist. Remaining keys stay accessible
-// as supplementary articles. This does not change content, routes or review status.
+// primaryKeys identify parent-facing core resources. Older duplicate pages are preserved
+// via Astro static redirects, not shown as standalone resources.
 export const PARENT_SUPPORT_SUBGROUPS = [
   {
     "id": "choosing",
@@ -41,10 +41,8 @@ export const PARENT_SUPPORT_SUBGROUPS = [
       "en": "Accessible communication, AAC, language support and functional communication."
     },
     "translationKeys": [
-      "parents-communication-aac-hub",
       "parents-aac",
       "parents-speech-language-therapy",
-      "parents-aided-language-modelling",
       "parents-communication-partner-training",
       "parents-pecs",
       "parents-functional-communication-training"
@@ -71,7 +69,6 @@ export const PARENT_SUPPORT_SUBGROUPS = [
     "translationKeys": [
       "parents-behavior-learning",
       "parents-functional-behavior-assessment",
-      "parents-antecedent-based-interventions",
       "parents-reinforcement",
       "parents-differential-reinforcement"
     ],
@@ -94,10 +91,8 @@ export const PARENT_SUPPORT_SUBGROUPS = [
     },
     "translationKeys": [
       "parents-development-interaction-play",
-      "parents-play-based-interventions",
       "parents-naturalistic-intervention",
       "parents-ndbi",
-      "parents-joint-attention",
       "parents-imitation-reciprocal-imitation",
       "parents-peer-mediated-intervention"
     ],
@@ -123,8 +118,6 @@ export const PARENT_SUPPORT_SUBGROUPS = [
     "translationKeys": [
       "parents-sensory-environmental-support",
       "parents-sensory-overload-environmental-adaptations",
-      "parents-sensory-based-strategies",
-      "parents-sensory-diet",
       "parents-ayres-sensory-integration",
       "parents-weighted-items"
     ],
@@ -148,12 +141,10 @@ export const PARENT_SUPPORT_SUBGROUPS = [
       "en": "Self-care, daily living skills, occupational therapy and practical teaching strategies."
     },
     "translationKeys": [
-      "parents-daily-living-participation",
       "parents-daily-living-skills-training",
       "parents-occupational-therapy",
       "parents-toileting-interventions",
       "parents-prompting-and-prompt-fading",
-      "parents-task-analysis",
       "parents-video-modeling",
       "parents-self-management",
       "parents-special-pedagog-defectologist"
@@ -204,8 +195,7 @@ export const PARENT_SUPPORT_SUBGROUPS = [
     },
     "translationKeys": [
       "parents-psychological-mental-health-support",
-      "parents-cognitive-behavioral-therapy",
-      "parents-adapted-cbt-autistic-people"
+      "parents-cognitive-behavioral-therapy"
     ],
     "primaryKeys": [
       "parents-psychological-mental-health-support",
