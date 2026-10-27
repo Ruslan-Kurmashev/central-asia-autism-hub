@@ -1055,3 +1055,9 @@ In the Russian parent guide `child-daily-independence-practical-guide.md`, the a
 | Local file | Origin and approval | Usage and limits |
 | --- | --- | --- |
 | `public/images/editorial/motor/motor-walking-line-steps-kk.webp` | AI-assisted original illustration prepared in the AutismHub conversation using the owner's mother-and-child cartoon references. The owner selected the standalone three-card Kazakh-language version for publication on 27 October 2026. Source image: `балаларға_арналған_сызықпен_жүру_ойыны.png` (1896 x 829 px). | Replaces only the Russian-caption diagram in game 1, `Едендегі сызық жолы`, in `src/content/pages/kz/kk/kozgalys-pen-usak-motorika-uide-damytu.md`. Saved as quality-99 WebP (1896 x 829 px), keeping the visual sequence and Kazakh captions. Not an article cover, real photograph, diagnostic assessment or clinical protocol. The original Russian and English article illustrations remain unchanged. |
+
+## Kazakh instructional illustration: rolling a large soft ball (27 October 2026)
+
+| Local file | Origin and approval | Usage and limitations |
+| --- | --- | --- |
+| `public/images/editorial/motor/motor-rolling-ball-steps-kk.webp` | AI-assisted project instructional illustration generated in the AutismHub conversation following the owner's mother-and-child visual reference. Owner expressly approved the three-panel Kazakh-caption version, source `доппен_ойнауға_арналған_үш_қадам.png` (2001 x 786 px). | Replaces only the Russian-caption image in game 2, `Үлкен жұмсақ допты домалату`, in `src/content/pages/kz/kk/kozgalys-pen-usak-motorika-uide-damytu.md`. Saved as quality-99 WebP (2001 x 786 px). Illustrative family play, not a clinical recommendation, stock photograph or article cover. RU and EN versions remain unchanged. |
