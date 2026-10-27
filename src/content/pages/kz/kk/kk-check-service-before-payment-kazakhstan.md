@@ -18,12 +18,12 @@ featuredImage: "/central-asia-autism-hub/images/editorial/photos/kz-help-008.jpg
 featuredImageAlt: "Қызмет ақысын төлемес бұрын шарт талаптарын оқып, құжатқа қол қоюды бейнелейтін фотосурет."
 author: Ruslan Kurmashev
 editor: Ruslan Kurmashev
-riskLevel: lower
+riskLevel: moderate
 disclaimerType: informational
 conflictOfInterest: "Мүдделер қақтығысы мәлімделмеген."
 publishedAt: 2026-10-10
 originalPublishedAt: 2026-10-09
-updatedAt: 2026-10-10
+updatedAt: 2026-10-27
 draft: false
 keyPoints:
   - "Төлемге дейін қызмет көрсететін заңды тұлғаны немесе дара кәсіпкерді анықтап, түсінікті жазбаша талаптарды алыңыз."

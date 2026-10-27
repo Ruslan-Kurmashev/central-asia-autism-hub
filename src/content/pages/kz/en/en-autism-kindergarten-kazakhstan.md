@@ -17,12 +17,12 @@ featuredImage: "/central-asia-autism-hub/images/editorial/photos/kz-help-005.jpg
 featuredImageAlt: "Early learning toys arranged on shelves in a preschool setting."
 author: Ruslan Kurmashev
 editor: Ruslan Kurmashev
-riskLevel: lower
+riskLevel: moderate
 disclaimerType: informational
 conflictOfInterest: "No conflict of interest declared."
 publishedAt: 2026-10-10
 originalPublishedAt: 2026-10-09
-updatedAt: 2026-10-10
+updatedAt: 2026-10-27
 draft: false
 keyPoints:
   - "There is no single mandatory kindergarten setting for every autistic child. Focus on what the child needs for participation, learning, communication and safety."
@@ -70,6 +70,8 @@ Depending on the child's educational needs and what is available in the region, 
 - a specialised preschool institution.
 
 The best route should **not be chosen on the basis of diagnosis alone**.
+
+Paragraphs 10, 12 and 13 of the preschool rules under Order No. 385 provide for age-based or specialised groups for children with special educational needs, taking PMPK recommendations into account. Admission to state preschools and private preschools with a state education order follows the prescribed process through a unified registration, queue and referral system. These rules do not guarantee a place in any particular kindergarten, so check local availability and support options.
 
 ## Where should a parent start?
 

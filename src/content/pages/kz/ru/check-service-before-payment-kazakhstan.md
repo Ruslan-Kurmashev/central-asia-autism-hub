@@ -18,11 +18,11 @@ featuredImage: "/central-asia-autism-hub/images/editorial/photos/kz-help-008.jpg
 featuredImageAlt: "Рука подписывает договор: изучение письменных условий перед оплатой услуг."
 author: Ruslan Kurmashev
 editor: Ruslan Kurmashev
-riskLevel: lower
+riskLevel: moderate
 disclaimerType: informational
 conflictOfInterest: "Конфликт интересов не заявлен."
 publishedAt: 2026-10-09
-updatedAt: 2026-10-09
+updatedAt: 2026-10-27
 draft: false
 keyPoints:
   - "До оплаты полезно установить точное юридическое лицо или предпринимателя, который оказывает услугу, и получить понятные письменные условия."
