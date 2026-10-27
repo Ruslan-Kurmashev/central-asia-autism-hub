@@ -1,5 +1,5 @@
 ---
-title: "Инклюзивті білім: сүйемелдеу және бейімдеу (орыс тілінде)"
+title: "Инклюзивті білім беру: сүйемелдеу және бейімдеу (орыс тілінде)"
 summary: "Оқушыларды сүйемелдеу, оқытуды бейімдеу және жетістіктерді бағалау туралы Daryn Ustaz платформасындағы тегін орыс тілді курс. Қазақша курстан бөлек нұсқа."
 description: "Оқушыларды сүйемелдеу, оқытуды бейімдеу және жетістіктерді бағалау туралы Daryn Ustaz платформасындағы тегін орыс тілді курс. Қазақша курстан бөлек нұсқа."
 country: kz
@@ -7,7 +7,7 @@ language: kk
 section: learning
 slug: daryn-russian-inclusive-education
 translationKey: learning-daryn-russian-inclusive-education
-translationStatus: pending
+translationStatus: checked
 author: "Ruslan Kurmashev"
 editor: "Ruslan Kurmashev"
 riskLevel: lower
@@ -15,8 +15,10 @@ disclaimerType: informational
 conflictOfInterest: "No paid placement or financial relationship with the course provider is claimed."
 originalPublishedAt: 2026-10-27
 displayPublishedAt: 2026-10-27
+publishedAt: 2026-10-27
+updatedAt: 2026-10-27
 reviewDueAt: 2027-01-27
-draft: true
+draft: false
 provider: "Daryn Ustaz"
 learningKind: course
 topicArea: inclusion
