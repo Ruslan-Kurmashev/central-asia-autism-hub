@@ -63,7 +63,7 @@ export const KZ_ANNOUNCEMENTS: KazakhstanAnnouncement[] = [
       en: 'Official Divergent Thinking logo, not a dedicated webinar poster.',
     },
     imageKind: 'organiser-logo',
-    isPublished: true,
+    isPublished: false,
     sourceVerified: true,
   },
   {

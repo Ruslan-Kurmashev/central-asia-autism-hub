@@ -18,12 +18,12 @@ featuredImage: "/central-asia-autism-hub/images/editorial/photos/kz-help-004.jpg
 featuredImageAlt: "A laptop and documents on a desk, representing a medical licensing search."
 author: Ruslan Kurmashev
 editor: Ruslan Kurmashev
-riskLevel: lower
+riskLevel: moderate
 disclaimerType: informational
 conflictOfInterest: "No conflict of interest declared."
 publishedAt: 2026-10-10
 originalPublishedAt: 2026-10-09
-updatedAt: 2026-10-10
+updatedAt: 2026-10-27
 draft: false
 keyPoints:
   - "If a centre advertises medical services, verify its licence yourself through the official eGov/eLicense system rather than relying on an image of a document."
@@ -78,6 +78,8 @@ A BIN is often more useful than the advertised brand name because the brand and 
 6. Open the document record. Compare the holder, document number, status and permitted activity with the contract and the service being advertised.
 
 Official eGov guidance updated **7 April 2026** states that searching issued permits and licences on eLicense **does not require an account or registration**. Different rules may apply to other transactions on government portals.
+
+Document searches on the eLicense website are available without registration. The eGov mobile app has a separate access process that requires signing in to use the service. Interfaces can change, so check the current instructions on the official portal.
 
 ### How the search works
 

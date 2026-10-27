@@ -18,12 +18,12 @@ featuredImage: "/central-asia-autism-hub/images/editorial/photos/kz-help-008.jpg
 featuredImageAlt: "A person signing a contract, illustrating the importance of checking service terms before payment."
 author: Ruslan Kurmashev
 editor: Ruslan Kurmashev
-riskLevel: lower
+riskLevel: moderate
 disclaimerType: informational
 conflictOfInterest: "No conflict of interest declared."
 publishedAt: 2026-10-10
 originalPublishedAt: 2026-10-09
-updatedAt: 2026-10-10
+updatedAt: 2026-10-27
 draft: false
 keyPoints:
   - "Before paying, identify the exact registered company or sole proprietor providing the service and obtain clear written terms."
