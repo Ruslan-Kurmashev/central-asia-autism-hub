@@ -45,6 +45,62 @@ for (const [lang, languageLabel] of Object.entries(labels)) {
   ]) {
     assert.ok(html.includes(link), 'Missing localized learning course on ' + lang + ': ' + link);
   }
+  // Ten user-approved free-to-learn providers must appear as ten separate
+  // cards on each UI language. The filter language is the teaching language.
+  const newlyApproved = [
+    [
+        "https://pedagog-course.autism.help/",
+        "ru"
+    ],
+    [
+        "https://circa.educ.ubc.ca/autism-and-neurodiversity-in-early-childcare/",
+        "en"
+    ],
+    [
+        "https://circa.educ.ubc.ca/autism-and-neurodiversity-in-primary-care/",
+        "en"
+    ],
+    [
+        "https://circa.educ.ubc.ca/autism-and-neurodiversity-in-dentistry/",
+        "en"
+    ],
+    [
+        "https://circa.educ.ubc.ca/autism-in-the-workplace/",
+        "en"
+    ],
+    [
+        "https://reframing-autism-s-school.teachable.com/p/autism-essentials",
+        "en"
+    ],
+    [
+        "https://thompsoncenter.missouri.edu/autism-training-modules/",
+        "en"
+    ],
+    [
+        "https://rehab-portal.ru/communication-in-early-intervention",
+        "ru"
+    ],
+    [
+        "https://rehab-portal.ru/social-everyday-adaptation",
+        "ru"
+    ],
+    [
+        "https://rehab-portal.ru/introduction-to-assistive-technologies",
+        "ru"
+    ]
+];
+  const newCards = [...html.matchAll(/<article\b[^>]*\bdata-course-item\b[^>]*>[\s\S]*?<\/article>/g)].map((m) => m[0]);
+  for (const [url, teachingLanguage] of newlyApproved) {
+    const matches = newCards.filter((card) => card.includes(url));
+    assert.equal(matches.length, 1, 'New course should occur once on ' + lang + ': ' + url);
+    assert.ok(matches[0].includes('data-language="' + teachingLanguage + '"'),
+      'Incorrect actual teaching language on ' + lang + ': ' + url);
+  }
+  assert.equal(newCards.length, 51,
+    'Exactly 51 unique course cards expected on ' + lang + ', after grouping bilingual Orleu versions');
+  const primaryCare = newCards.find((card) => card.includes('autism-and-neurodiversity-in-primary-care/'));
+  assert.ok(primaryCare && primaryCare.includes('2026'),
+    'Time-limited free primary-care course must disclose its 2026 deadline in ' + lang);
   const itemCount = cards.length;
   const cardBlocks = [...html.matchAll(/<article\b[^>]*\bdata-course-item\b[^>]*>[\s\S]*?<\/article>/g)].map((m) => m[0]);
   // These programmes have two provider URLs but are one catalogue card each.
