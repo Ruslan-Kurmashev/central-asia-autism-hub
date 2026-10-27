@@ -10,7 +10,7 @@ section: parents
 topic: child-development
 slug: how-everyday-independence-develops-in-children
 translationKey: parents-child-daily-independence-practical-guide
-translationStatus: pending
+translationStatus: checked
 audience:
   - parents
   - families
@@ -20,8 +20,11 @@ riskLevel: moderate
 disclaimerType: medical
 conflictOfInterest: "No conflicts of interest declared."
 originalPublishedAt: "2026-10-15T21:34:33.388Z"
+displayPublishedAt: "2026-10-15T21:34:33.388Z"
+publishedAt: "2026-10-27T12:22:19.433Z"
+updatedAt: "2026-10-27T12:22:19.433Z"
 reviewDueAt: 2027-04-15
-draft: true
+draft: false
 keyPoints:
   - "Independence means meaningful participation in daily life. Adult help, adapted clothing, AAC and visual supports may remain useful."
   - "Offer one manageable step at a time without rushing. Do not use meals, toileting or hygiene to force compliance."
@@ -105,7 +108,7 @@ It includes:
 
 These skills need not develop simultaneously. A diagnosis or the absence of speech does not automatically determine what the child can do with their hands, understand in familiar situations or choose independently.
 
-For professional support see [“Independence and daily living skills”](../samostoyatelnost-i-povsednevnye-navyki/).
+For professional support see [“Independence and daily living skills”](/central-asia-autism-hub/kz/ru/parents/samostoyatelnost-i-povsednevnye-navyki/).
 
 ## 2. Choosing an appropriate skill without overload
 
@@ -401,7 +404,7 @@ Depending on the concern, consult a paediatrician, dentist or other appropriate 
 
 **Choking, inability to breathe, sudden marked weakness or other acute emergencies** require urgent medical attention rather than home skills practice.
 
-Occupational therapists may suggest adaptations, physiotherapists can assess movement challenges, and speech-language or feeding specialists may address relevant needs. The individual situation determines which consultation is suitable. See [“When to discuss development with a specialist”](../kogda-obsudit-razvitie-rebenka-so-specialistom/) and [“Observing development at home”](../kak-nablyudat-za-razvitiem-rebenka-doma/).
+Occupational therapists may suggest adaptations, physiotherapists can assess movement challenges, and speech-language or feeding specialists may address relevant needs. The individual situation determines which consultation is suitable. See [“When to discuss development with a specialist”](/central-asia-autism-hub/kz/ru/parents/kogda-obsudit-razvitie-rebenka-so-specialistom/) and [“Observing development at home”](/central-asia-autism-hub/kz/ru/parents/kak-nablyudat-za-razvitiem-rebenka-doma/).
 
 ## 14. What sources support, and what cannot be promised
 

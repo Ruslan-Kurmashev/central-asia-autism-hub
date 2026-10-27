@@ -8,9 +8,9 @@ country: kz
 language: kk
 section: parents
 topic: child-development
-slug: kozgalys-pen-usak-motorika-uidе-damytu
+slug: kozgalys-pen-usak-motorika-uide-damytu
 translationKey: parents-gross-fine-motor-home-practice
-translationStatus: pending
+translationStatus: checked
 audience:
   - parents
   - families
@@ -20,8 +20,11 @@ riskLevel: moderate
 disclaimerType: medical
 conflictOfInterest: "Мүдделер қақтығысы мәлімделмеген."
 originalPublishedAt: "2026-10-15T19:45:58.738Z"
+displayPublishedAt: "2026-10-15T19:45:58.738Z"
+publishedAt: "2026-10-27T12:22:19.433Z"
+updatedAt: "2026-10-27T12:22:19.433Z"
 reviewDueAt: 2027-04-15
-draft: true
+draft: false
 keyPoints:
   - "Қозғалыс үшін қолжетімді ойын, күнделікті өмірге қатысу және таңдау пайдалы, қатаң кестемен күнде жаттығу міндетті емес."
   - "Мақалада ірі моторикаға 10, ұсақ моторикаға 15 идея, сегіз суретті схема және тегін PDF материалдар бар."
@@ -339,7 +342,7 @@ sources:
 
 Кәсіби көмекке педиатрдың даму бағалауы, көрсетілім бойынша медициналық тексеру, физиотерапевт не эрготерапевт кеңесі кіруі мүмкін. Үй ойыны медициналық көмекке жүгінуді кешіктірмеуі тиіс.
 
-Қосымша материалдар: [жасқа сай даму бағдарлары](../orientiry-razvitiya-rebenka/) және [дамуды маманмен қашан талқылау керек](../kogda-obsudit-razvitie-rebenka-so-specialistom/).
+Қосымша материалдар: [жасқа сай даму бағдарлары](../balanyn-damu-bagdarlary/) және [дамуды маманмен қашан талқылау керек](/central-asia-autism-hub/kz/ru/parents/kogda-obsudit-razvitie-rebenka-so-specialistom/).
 
 ## 12. Кеңестер қандай дерекке негізделген?
 

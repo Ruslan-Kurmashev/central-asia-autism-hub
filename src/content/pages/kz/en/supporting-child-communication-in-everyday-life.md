@@ -10,7 +10,7 @@ section: parents
 topic: child-development
 slug: supporting-child-communication-in-everyday-life
 translationKey: parents-everyday-communication-support
-translationStatus: pending
+translationStatus: checked
 audience:
   - parents
   - families
@@ -20,8 +20,11 @@ riskLevel: moderate
 disclaimerType: medical
 conflictOfInterest: "No conflict of interest declared."
 originalPublishedAt: "2026-10-15T17:40:42.235Z"
+displayPublishedAt: "2026-10-15T17:40:42.235Z"
+publishedAt: "2026-10-27T12:22:19.433Z"
+updatedAt: "2026-10-27T12:22:19.433Z"
 reviewDueAt: 2027-10-15
-draft: true
+draft: false
 keyPoints:
   - "Communication can be supported during ordinary family activities without turning every day into therapy."
   - "Notice what interests the child, respond to their messages and allow time for a reply."
@@ -70,7 +73,7 @@ Each moment is an opportunity to understand the child better and support their e
 
 **The central principle is not to demand one particular form of response, but to make communication accessible, understandable and reciprocal.**
 
-If you have concerns about your child's language comprehension or speech, first see [“Speech and language development: what parents should notice”](../razvitie-rechi-i-ponimaniya-u-rebenka/). This article focuses on everyday interactions, not age-based milestones.
+If you have concerns about your child's language comprehension or speech, first see [“Speech and language development: what parents should notice”](/central-asia-autism-hub/kz/ru/parents/razvitie-rechi-i-ponimaniya-u-rebenka/). This article focuses on everyday interactions, not age-based milestones.
 
 ## 1. What does supporting communication mean?
 
@@ -186,7 +189,7 @@ Practical ideas:
 - Ensure the child can communicate refusal, discomfort, the need for a break and a request for help.
 - Together with a professional, check whether the system suits the child's motor, visual, language and sensory needs.
 
-See also [“Communication and AAC”](../kommunikatsiya-i-aac/) and [“Communication partner training”](../communication-partner-training/).
+See also [“Communication and AAC”](/central-asia-autism-hub/kz/ru/parents/kommunikatsiya-i-aac/) and [“Communication partner training”](/central-asia-autism-hub/kz/ru/parents/communication-partner-training/).
 
 ## 6. Bilingual families: which language should we use?
 
@@ -196,7 +199,7 @@ An adult can use the language they speak comfortably, name objects and actions d
 
 Tell professionals about **all languages** the child hears and uses. Knowing a particular word only in one language is not, by itself, evidence of a delay.
 
-See [“Speech and language development”](../razvitie-rechi-i-ponimaniya-u-rebenka/) for more about development and languages.
+See [“Speech and language development”](/central-asia-autism-hub/kz/ru/parents/razvitie-rechi-i-ponimaniya-u-rebenka/) for more about development and languages.
 
 ## 7. Choose one helpful step for this week
 
@@ -239,7 +242,7 @@ Do not delay an assessment, particularly if:
 
 Sudden major changes in a child's condition or other acute medical symptoms require timely, and sometimes urgent, medical attention.
 
-Families in Kazakhstan can consult [“Where to seek help with concerns about a child's development”](../../help-kazakhstan/development-concerns-kazakhstan/).
+Families in Kazakhstan can consult [“Where to seek help with concerns about a child's development”](../../help-kazakhstan/child-development-concerns-kazakhstan/).
 
 ## 10. What guidelines support, and what they do not prove
 

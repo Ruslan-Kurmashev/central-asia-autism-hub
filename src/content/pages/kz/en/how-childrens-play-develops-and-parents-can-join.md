@@ -10,7 +10,7 @@ section: parents
 topic: child-development
 slug: how-childrens-play-develops-and-parents-can-join
 translationKey: parents-child-play-development-and-caregiver-participation
-translationStatus: pending
+translationStatus: checked
 audience:
   - parents
   - families
@@ -20,8 +20,11 @@ riskLevel: moderate
 disclaimerType: medical
 conflictOfInterest: "No conflict of interest declared."
 originalPublishedAt: "2026-10-15T17:44:08.521Z"
+displayPublishedAt: "2026-10-15T17:44:08.521Z"
+publishedAt: "2026-10-27T12:22:19.433Z"
+updatedAt: "2026-10-27T12:22:19.433Z"
 reviewDueAt: 2027-10-15
-draft: true
+draft: false
 keyPoints:
   - "Play can involve movement, sensory exploration, objects, construction, imagination and other people. No single kind is the only correct way to play."
   - "Notice the child’s interests and offer to join rather than judging play against a single script."
@@ -120,7 +123,7 @@ For example, the CDC includes using several toys together among the milestones a
 
 These examples are **not an exam**. Not using a particular pretend story does not explain why and cannot establish autism or developmental delay. Pretend play also does not rule out autism.
 
-For more age-related information, see [“Development from 2 months to 5 years”](../orientiry-razvitiya-rebenka/).
+For more age-related information, see [“Development from 2 months to 5 years”](../child-development-milestones/).
 
 ## 4. How an adult can join in: a simple sequence
 
@@ -195,7 +198,7 @@ Some children like playing nearby without touching other people's toys. Others e
 
 Adults can remain available without interfering constantly. If a child is content playing alone, there is no need to interrupt every time to “teach communication.”
 
-For more on special play programmes, see [“Play-based interventions”](../play-based-interventions/).
+For more on special play programmes, see [“Play-based interventions”](/central-asia-autism-hub/kz/ru/parents/play-based-interventions/).
 
 ## 7. If a child communicates without speech
 
@@ -203,7 +206,7 @@ Spoken words are not essential for shared play. Offers can be made through gestu
 
 For example, when playing with a ball, an adult offers “Roll it again” or “Finished.” The child can gesture, select a picture, pick up the ball or walk away.
 
-Accept refusal. Do not withhold a favourite toy until the child speaks. Communication support is described in [“Supporting your child's everyday communication”](../kak-pomogat-rebenku-obshchatsya-v-povsednevnoi-zhizni/).
+Accept refusal. Do not withhold a favourite toy until the child speaks. Communication support is described in [“Supporting your child's everyday communication”](../supporting-child-communication-in-everyday-life/).
 
 ## 8. What if other children do not include the child?
 
@@ -248,7 +251,7 @@ A short record might look like this:
 
 This is an example of observation, not a score of the child's “success” or proof that a strategy worked.
 
-See [“Developmental observation diary”](../kak-nablyudat-za-razvitiem-rebenka-doma/) for a structured format.
+See [“Developmental observation diary”](/central-asia-autism-hub/kz/ru/parents/kak-nablyudat-za-razvitiem-rebenka-doma/) for a structured format.
 
 ## 11. When to discuss play and development with a professional
 
@@ -263,7 +266,7 @@ Talk with a paediatrician or another appropriate professional if:
 
 Discuss loss of established skills with a medical professional without prolonged delay. If the change is sudden and accompanied by acute medical symptoms, seek urgent medical attention.
 
-Families do not have to establish a diagnosis themselves before seeking advice. In Kazakhstan, see [“Where to seek help about a child's development”](../../help-kazakhstan/development-concerns-kazakhstan/).
+Families do not have to establish a diagnosis themselves before seeking advice. In Kazakhstan, see [“Where to seek help about a child's development”](../../help-kazakhstan/child-development-concerns-kazakhstan/).
 
 ## 12. How everyday play differs from professional play-based intervention
 
@@ -273,7 +276,7 @@ Families do not have to establish a diagnosis themselves before seeking advice. 
 
 Not all play at home is therapy, and not every service called “play therapy” has demonstrated efficacy for autism. Claims depend on the particular programme, the children studied and measured outcomes.
 
-For evidence and limitations, see [“Development, interaction and play”](../razvitie-vzaimodeystvie-i-igra/) and [“Play-based interventions”](../play-based-interventions/).
+For evidence and limitations, see [“Development, interaction and play”](/central-asia-autism-hub/kz/ru/parents/razvitie-vzaimodeystvie-i-igra/) and [“Play-based interventions”](/central-asia-autism-hub/kz/ru/parents/play-based-interventions/).
 
 ## Quick checklist: something to try today
 

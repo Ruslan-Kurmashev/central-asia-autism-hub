@@ -10,7 +10,7 @@ section: parents
 topic: child-development
 slug: emotional-development-and-self-regulation-support
 translationKey: parents-emotions-coregulation-practical-guide
-translationStatus: pending
+translationStatus: checked
 audience:
   - parents
   - families
@@ -20,8 +20,11 @@ riskLevel: moderate
 disclaimerType: medical
 conflictOfInterest: "No conflicts of interest declared."
 originalPublishedAt: "2026-10-15T21:01:36.715Z"
+displayPublishedAt: "2026-10-15T21:01:36.715Z"
+publishedAt: "2026-10-27T12:22:19.433Z"
+updatedAt: "2026-10-27T12:22:19.433Z"
 reviewDueAt: 2027-04-15
-draft: true
+draft: false
 keyPoints:
   - "Young children are still developing self-regulation. During distress, accessible support from a calm adult matters."
   - "Start with safety, consider pain and bodily needs, reduce demands and help the child communicate what they need."
@@ -222,7 +225,7 @@ Seek emergency assistance if there is an immediate risk of serious harm. Do not 
 
 Outward reactions **cannot establish the cause of an episode on their own**. Intense overload in autistic children is sometimes described as a “meltdown” or “shutdown,” but these are not standalone diagnoses or explanations for all episodes. Pain, fear, changes to surroundings or ordinary disappointment may also be involved.
 
-See [“Meltdowns and shutdowns in autism”](../meltdaun-i-shatdaun-pri-autizme/). Do not assume every cry is a meltdown or every silence a shutdown.
+See [“Meltdowns and shutdowns in autism”](../meltdown-and-shutdown-in-autism/). Do not assume every cry is a meltdown or every silence a shutdown.
 
 ## 8. Supporting the child after a difficult episode
 
@@ -278,7 +281,7 @@ Consult a paediatrician or another appropriate professional if distress episodes
 
 Aggression and self-injury call for professional assessment of possible causes, surroundings, communication and health. NICE advises consideration of pain, co-occurring conditions, sensory needs, unpredictability and communication barriers rather than simply labelling the child “bad.”
 
-For families in Kazakhstan, see [“When to discuss child development with a professional”](../kogda-obsudit-razvitie-rebenka-so-specialistom/).
+For families in Kazakhstan, see [“When to discuss child development with a professional”](/central-asia-autism-hub/kz/ru/parents/kogda-obsudit-razvitie-rebenka-so-specialistom/).
 
 ## 12. Free resources for parents
 

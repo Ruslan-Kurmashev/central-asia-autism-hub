@@ -10,7 +10,7 @@ section: parents
 topic: child-development
 slug: developing-movement-and-fine-motor-skills-at-home
 translationKey: parents-gross-fine-motor-home-practice
-translationStatus: pending
+translationStatus: checked
 audience:
   - parents
   - families
@@ -20,8 +20,11 @@ riskLevel: moderate
 disclaimerType: medical
 conflictOfInterest: "No conflicts of interest declared."
 originalPublishedAt: "2026-10-15T19:45:58.738Z"
+displayPublishedAt: "2026-10-15T19:45:58.738Z"
+publishedAt: "2026-10-27T12:22:19.433Z"
+updatedAt: "2026-10-27T12:22:19.433Z"
 reviewDueAt: 2027-04-15
-draft: true
+draft: false
 keyPoints:
   - "Accessible play, daily participation and choice can support movement without a strict daily training schedule."
   - "The article describes 10 gross motor and 15 fine motor ideas, eight illustrations and printable PDFs without registration or payment."
@@ -339,7 +342,7 @@ Talk with a paediatrician or another suitable health professional if:
 
 Professional support may include developmental assessment by a paediatrician, medical investigations if indicated or consultation with a physiotherapist or occupational therapist. Home games must not delay seeking help.
 
-Related articles: [Developmental milestones](../orientiry-razvitiya-rebenka/) and [When to discuss development with a professional](../kogda-obsudit-razvitie-rebenka-so-specialistom/).
+Related articles: [Developmental milestones](../child-development-milestones/) and [When to discuss development with a professional](/central-asia-autism-hub/kz/ru/parents/kogda-obsudit-razvitie-rebenka-so-specialistom/).
 
 ## 12. Sources and limitations
 
