@@ -34,7 +34,20 @@ for (const [lang, languageLabel] of Object.entries(labels)) {
   const cards = [...html.matchAll(/<article\b[^>]*\bdata-course-item\b[^>]*>/g)].map((match) => match[0]);
   const itemCount = cards.length;
   const cardBlocks = [...html.matchAll(/<article\b[^>]*\bdata-course-item\b[^>]*>[\s\S]*?<\/article>/g)].map((m) => m[0]);
-  const priceLabel = { ru: 'Стоимость', kk: 'Құны', en: 'Price' }[lang];
+  // These programmes have two provider URLs but are one catalogue card each.
+  // Both actual teaching languages and both links must remain visible.
+  for (const [russianUrl, kazakhUrl] of [
+    ['https://mooc.orleu.edu.kz/courses/course/6/', 'https://mooc.orleu.edu.kz/courses/course/7/'],
+    ['https://mooc.orleu.edu.kz/courses/course/8/', 'https://mooc.orleu.edu.kz/courses/course/9/'],
+  ]) {
+    const group = cardBlocks.filter((card) => card.includes(russianUrl) && card.includes(kazakhUrl));
+    assert.equal(group.length, 1, 'Bilingual Orleu programme must render in one card on ' + lang);
+    assert.match(group[0], /data-course-language-pill="ru"/, 'Russian badge missing on ' + lang);
+    assert.match(group[0], /data-course-language-pill="kk"/, 'Kazakh badge missing on ' + lang);
+    assert.match(group[0], /data-language="ru kk"/, 'Combined language filter missing on ' + lang);
+    assert.ok(group[0].includes('target="_blank"'), 'Both versions must open on their official sites');
+  }
+    const priceLabel = { ru: 'Стоимость', kk: 'Құны', en: 'Price' }[lang];
   assert.equal(cardBlocks.length, itemCount, `Incomplete course cards on ${lang}`);
   for (const card of cardBlocks) {
     assert.ok(card.includes(priceLabel) && card.includes('course-catalogue__meta'), `Course cost hidden on ${lang}`);
@@ -109,7 +122,8 @@ const component = await readFile('src/components/LearningCatalog.astro', 'utf8')
 assert.ok(!component.includes('data-course-kazakh-shortcut'), 'Redundant Kazakh quick selector must be removed');
 assert.ok(component.includes('data-course-language-pill={courseLanguage}'), 'Every card must label its original teaching language visibly');
 assert.ok(component.includes('data-search-text='));
-assert.ok(component.includes('entry.data.languages.map((l) => languages[locale][l])'));
+assert.ok(component.includes('courseLanguages(entry).map((l) => languages[locale][l])'));
+assert.ok(component.includes('bilingualCoursePairs'), 'Bilingual programme grouping must be explicit');
 for (const field of ['search','audience','language','topic']) {
   const event = field === 'search' ? 'input' : 'change';
   assert.ok(component.includes(field + "?.addEventListener('" + event + "', update);"),
