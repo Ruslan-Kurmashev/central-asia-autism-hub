@@ -23,6 +23,7 @@ conflictOfInterest: "No conflict of interest declared."
 publishedAt: 2026-10-10
 originalPublishedAt: 2026-10-09
 updatedAt: 2026-10-10
+reviewDueAt: 2026-12-01
 draft: false
 keyPoints:
   - "A centre's name or list of certificates does not tell you whether it is entitled to provide the specific service advertised."
