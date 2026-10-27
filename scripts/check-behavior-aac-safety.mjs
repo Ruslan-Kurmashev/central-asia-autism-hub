@@ -8,7 +8,7 @@ const checks = [
   { name: 'functional-behavior-assessment', words: ['Согласие, конфиденциальность и безопасность', 'критерии остановки'], refs: ['nice.org.uk/guidance/cg170'], risk: 'moderate' },
   { name: 'functional-communication-training', words: ['Согласие и нежелательные эффекты', 'стандартам WWC', 'нельзя удерживать'], refs: ['41464031'], risk: 'moderate' },
   { name: 'pecs', words: ['PECS не должен ограничивать', 'Не следует забирать альтернативную систему', 'физическая подсказка'], refs: ['20181849', '41442835'], risk: 'lower' },
-  { name: 'aac', words: ['Доступная коммуникация - не награда', 'не существует обязательного порога', 'Доступ к ним'], refs: ['www.asha.org'], risk: 'lower' },
+  { name: 'aac', words: ['Доступная коммуникация - не награда', 'не существует обязательного порога', 'Доступ к ним'], refs: ['www.asha.org'], risk: 'moderate' },
   { name: 'prompting-and-prompt-fading', words: ['Прежде чем использовать подсказку', 'физическую подсказку нужно прекратить'], refs: ['27606243'], risk: 'lower' },
   { name: 'differential-reinforcement', words: ['Проверяйте возможные неблагоприятные эффекты', 'план мониторинга', 'игнорировать боль'], refs: ['29117712'], risk: 'moderate' },
 ];
