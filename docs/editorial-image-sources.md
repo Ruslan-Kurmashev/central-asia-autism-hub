@@ -1061,3 +1061,9 @@ In the Russian parent guide `child-daily-independence-practical-guide.md`, the a
 | Local file | Origin and approval | Usage and limitations |
 | --- | --- | --- |
 | `public/images/editorial/motor/motor-rolling-ball-steps-kk.webp` | AI-assisted project instructional illustration generated in the AutismHub conversation following the owner's mother-and-child visual reference. Owner expressly approved the three-panel Kazakh-caption version, source `доппен_ойнауға_арналған_үш_қадам.png` (2001 x 786 px). | Replaces only the Russian-caption image in game 2, `Үлкен жұмсақ допты домалату`, in `src/content/pages/kz/kk/kozgalys-pen-usak-motorika-uide-damytu.md`. Saved as quality-99 WebP (2001 x 786 px). Illustrative family play, not a clinical recommendation, stock photograph or article cover. RU and EN versions remain unchanged. |
+
+## Kazakh instructional illustration: walking around toy islands (27 October 2026)
+
+| Local file | Provenance and permission | Editorial use |
+| --- | --- | --- |
+| `public/images/editorial/motor/motor-islands-route-steps-kk.webp` | Owner-supplied reference image `image(20261027-154213).png` (661 x 282 px), translated into Kazakh by replacing only the caption area and preserving the illustrated scenes, panel order, characters and actions. Recreated readable captions in Inter with Kazakh glyphs, resized the original image to 1983 x 846 px, and saved quality-97 WebP. Owner explicitly requested translation and publication on 27 October 2026. | Replaces only the Russian-caption diagram for game 3, `«Аралшықтарды» айналып өтеміз`, in `src/content/pages/kz/kk/kozgalys-pen-usak-motorika-uide-damytu.md`. The original RU and EN article figures are unchanged. AI-assisted project instructional art, not a photograph, standard clinical procedure or diagnostic assessment. SHA-256 of published WebP: `c69ca29e487037e5c8752ae85392619a482e92e1fc32d153e32b572b77e6a0b2`. |
