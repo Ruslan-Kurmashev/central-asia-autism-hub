@@ -1049,3 +1049,9 @@ In the Russian parent guide `child-daily-independence-practical-guide.md`, the a
 | Local file | Source | Status and use |
 | --- | --- | --- |
 | `public/images/editorial/motor/motor-spoon-transfer-cubes-steps.webp` | Original AI-assisted illustration generated in the AutismHub conversation using the owner's mother-and-child style references | Owner approved the 1916 x 821 three-panel illustration for game 8, "Перекладываем большой предмет ложкой", in `src/content/pages/kz/ru/home-motor-and-fine-motor-practice.md`. Original PNG `пошаговая_игра_с_ложкой_и_кубиком.png` was optimized to WebP (118008 bytes, SHA-256 97864fe9c7ab7fc8eb8c0eac988b87534e3b7216e27b5245cd8a42c264f70ef6). Educational graphic only, not a stock photo, article cover, or clinical evidence. |
+
+## Kazakh instructional illustration: walking along a floor line (27 October 2026)
+
+| Local file | Origin and approval | Usage and limits |
+| --- | --- | --- |
+| `public/images/editorial/motor/motor-walking-line-steps-kk.webp` | AI-assisted original illustration prepared in the AutismHub conversation using the owner's mother-and-child cartoon references. The owner selected the standalone three-card Kazakh-language version for publication on 27 October 2026. Source image: `балаларға_арналған_сызықпен_жүру_ойыны.png` (1896 x 829 px). | Replaces only the Russian-caption diagram in game 1, `Едендегі сызық жолы`, in `src/content/pages/kz/kk/kozgalys-pen-usak-motorika-uide-damytu.md`. Saved as quality-99 WebP (1896 x 829 px), keeping the visual sequence and Kazakh captions. Not an article cover, real photograph, diagnostic assessment or clinical protocol. The original Russian and English article illustrations remain unchanged. |
