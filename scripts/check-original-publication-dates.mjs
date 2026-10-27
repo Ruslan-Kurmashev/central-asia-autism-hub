@@ -22,10 +22,26 @@ catch {
   process.exit(1);
 }
 
-function firstPublishedDate(source) {
+function field(source, name) {
   const front = source.match(/^---\s*\r?\n([\s\S]*?)\r?\n---(?:\r?\n|$)/)?.[1] ?? '';
-  const raw = front.split(/\r?\n/).find((line) => line.startsWith('publishedAt:'))?.slice('publishedAt:'.length).trim();
+  const raw = front.split(/\r?\n/).find((line) => line.startsWith(name + ':'))?.slice(name.length + 1).trim();
   return raw ? raw.replace(/^["']|["']$/g, '') : null;
+}
+
+function firstPublishedDate(source) {
+  return field(source, 'publishedAt');
+}
+
+// First publication of an existing draft is allowed exactly once. Previously
+// published material remains immutable, including when returned to draft.
+function isFirstTranslationRelease(before, after, oldDate, newDate) {
+  return oldDate === null && Boolean(newDate) &&
+    field(before, 'draft') === 'true' &&
+    field(before, 'translationStatus') === 'pending' &&
+    field(after, 'draft') === 'false' &&
+    field(after, 'translationStatus') === 'checked' &&
+    Boolean(field(before, 'originalPublishedAt')) &&
+    field(before, 'originalPublishedAt') === field(after, 'originalPublishedAt');
 }
 
 const changed = git('diff', '--name-status', '-M', base, 'HEAD', '--',
@@ -43,11 +59,12 @@ for (const row of changed) {
   try { prev = git('show', base + ':' + before); }
   catch { errors.push('Unable to read baseline for ' + before); continue; }
   const oldDate = firstPublishedDate(prev);
-  const now = firstPublishedDate(await readFile(after, 'utf8'));
+  const current = await readFile(after, 'utf8');
+  const now = firstPublishedDate(current);
   compared++;
-  if (oldDate !== now) {
+  if (oldDate !== now && !isFirstTranslationRelease(prev, current, oldDate, now)) {
     errors.push(after + ': publishedAt changed from ' + (oldDate ?? '(none)') +
-      ' to ' + (now ?? '(none)') + '. Keep the original first publication date; only updatedAt may change.');
+      ' to ' + (now ?? '(none)') + '. Keep an existing first publication date unchanged.');
   }
 }
 if (errors.length) {
