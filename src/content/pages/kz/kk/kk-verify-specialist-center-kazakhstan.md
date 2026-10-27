@@ -23,6 +23,7 @@ conflictOfInterest: "Мүдделер қақтығысы мәлімделмег�
 publishedAt: 2026-10-10
 originalPublishedAt: 2026-10-09
 updatedAt: 2026-10-10
+reviewDueAt: 2026-12-01
 draft: false
 keyPoints:
   - "Орталықтың атауы немесе көп сертификат көрсетуі оның нақты қандай қызмет атқаруға құқығы бар екенін дәлелдемейді."

@@ -21,7 +21,8 @@ disclaimerType: medical
 conflictOfInterest: "No conflict of interest declared."
 publishedAt: 2026-10-10
 originalPublishedAt: 2026-10-09
-updatedAt: 2026-10-20
+updatedAt: 2026-10-27
+reviewDueAt: 2026-12-01
 draft: false
 keyPoints:
   - "Questions about development can be discussed in primary healthcare. Kazakhstan's paediatric care standard provides for development and early intervention centres and psychophysical screening."
@@ -95,7 +96,7 @@ Before your appointment, note examples over several days:
 - how they eat and sleep
 - whether they have stopped using a skill they previously used.
 
-It helps to record **when** changes began and **in which situations** they occur. Discuss loss of acquired skills with a healthcare professional without unnecessary delay. Losing a skill alone does not allow anyone to judge the urgency of the situation remotely.
+It helps to record **when** changes began and **in which situations** they occur. Discuss loss of acquired skills with a healthcare professional without unnecessary delay. NICE guidance distinguishes regression in language or social skills in children younger than three and regression in motor skills at any age as reasons for professional referral. This UK guidance does not set Kazakhstan referral rules. Loss of a skill alone does not determine the urgency of an individual situation remotely.
 
 Saying "I think my child's development is different" is important, but concrete examples help the professional understand what you are seeing.
 
