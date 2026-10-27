@@ -84,11 +84,27 @@ for (const [lang, languageLabel] of Object.entries(labels)) {
       `Incorrect ${key} count in ${lang} language menu: expected ${counts[key]}`);
   }
 }
-assert.equal(new Set(localeCardCounts).size, 1, 'Catalogue entry counts must match across all three locales');
-assert.equal(new Set(perLanguageCounts.map((counts) => JSON.stringify(counts))).size, 1,
-  'Actual teaching-language counts must match across all site locales');
-assert.ok(perLanguageCounts[0].ru >= 5 && perLanguageCounts[0].kk >= 5 && perLanguageCounts[0].en >= 11,
-  'Expected baseline language distribution has regressed');
+// Only actual published translations appear in each catalogue. A Russian
+// source course must not be fabricated in KK/EN while its translations are drafts.
+// Every locale still validates its own course count, facet counts and badges above.
+for (const [index, counts] of perLanguageCounts.entries()) {
+  assert.ok(counts.ru >= 5 && counts.kk >= 5 && counts.en >= 11,
+    'Expected baseline language distribution has regressed in ' + Object.keys(labels)[index]);
+}
+assert.ok(localeCardCounts[0] >= localeCardCounts[1] && localeCardCounts[0] >= localeCardCounts[2],
+  'Russian source catalogue is unexpectedly smaller than its translated catalogues');
+const russianCatalogue = await readFile(path.join('dist', 'kz', 'ru', 'learning', 'index.html'), 'utf8');
+for (const newCourse of [
+  'https://rehab-portal.ru/autism',
+  'https://rehab-portal.ru/alternative-communication',
+  'https://www.abapsy.com/free-training',
+  'https://shkola-na-beregu.ru/open_kurs',
+  'https://cms.znanierussia.ru/akademiya/catalog/osobyj-rebyonok-zhizn-semi-i-sistema-soprovozhdeniya',
+  'https://daryn.ai/courses/inkliuzivnoe-obrazovanie-soprovozdenie-adaptaciia-obrazovatelnogo-processa-i-monitoring-rezultatov',
+  'https://eii.ru/proekt-yazyk-vozmozhnostej/',
+]) {
+  assert.ok(russianCatalogue.includes(newCourse), 'New free course link missing from Russian catalogue: ' + newCourse);
+}
 const component = await readFile('src/components/LearningCatalog.astro', 'utf8');
 assert.ok(!component.includes('data-course-kazakh-shortcut'), 'Redundant Kazakh quick selector must be removed');
 assert.ok(component.includes('data-course-language-pill={courseLanguage}'), 'Every card must label its original teaching language visibly');
