@@ -276,6 +276,19 @@ try {
       await screenshot(locale,width,'article');
     }
   }
+
+  // Retired support URLs must remain reachable as static, base-path-aware redirects.
+  const mergedSupportRedirects = [["kommunikatsiya-i-aac","aac"],["aided-language-modelling","aac"],["antecedent-based-interventions","povedenie-i-obuchenie"],["play-based-interventions","razvitie-vzaimodeystvie-i-igra"],["joint-attention","razvitie-vzaimodeystvie-i-igra"],["sensory-based-strategies","sensornye-osobennosti-i-adaptatsiya-sredy"],["sensory-diet","sensornye-osobennosti-i-adaptatsiya-sredy"],["samostoyatelnost-i-povsednevnye-navyki","obuchenie-povsednevnym-navykam"],["task-analysis","obuchenie-povsednevnym-navykam"],["adapted-cbt-autistic-people","cognitive-behavioral-therapy"]];
+  for (const [oldSlug, newSlug] of mergedSupportRedirects) {
+    const source = path.join(dist, 'kz', 'ru', 'parents', oldSlug, 'index.html');
+    const destination = path.join(dist, 'kz', 'ru', 'parents', newSlug, 'index.html');
+    const html = await readFile(source, 'utf8').catch(() => '');
+    verify(/http-equiv=["']refresh["']/i.test(html) && html.includes(newSlug),
+      'Merged support redirect missing or wrong: ' + oldSlug + ' -> ' + newSlug);
+    verify(await stat(destination).then(() => true).catch(() => false),
+      'Merged support target is not generated: ' + newSlug);
+  }
+
   // Parent support taxonomy must open on click and expose every published RU resource exactly once.
   for (const width of widths) {
     await navigate(base + '/kz/ru/parents/', width);
@@ -303,9 +316,9 @@ try {
     console.log('USER_JOURNEY_SUPPORT ' + width + ' ' + JSON.stringify(state));
     verify(state.outerOpen && state.firstOpen && state.innerCount === 10,
       'Parent support ' + width + ': nested accordion did not open ten groups');
-    verify(state.articleCount === 55 && state.uniqueArticleCount === 55 && state.unassignedCount === 0,
+    verify(state.articleCount === 45 && state.uniqueArticleCount === 45 && state.unassignedCount === 0,
       'Parent support ' + width + ': missing, duplicated or unassigned article links');
-    verify(state.primaryCount === 36 && state.supplementaryCount === 19,
+    verify(state.primaryCount === 36 && state.supplementaryCount === 9,
       'Parent support ' + width + ': unexpected editorial main/detailed article split ' + JSON.stringify(state));
     verify(state.weightedInSensory && !state.weightedInOther,
       'Parent support ' + width + ': weighted aid safety article assigned to wrong category');
