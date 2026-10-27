@@ -32,6 +32,19 @@ for (const [lang, languageLabel] of Object.entries(labels)) {
   assert.ok(!html.includes('data-course-kazakh-shortcut'), `Redundant Kazakh shortcut still present for ${lang}`);
   for (const link of expectedCourseLinks) assert.ok(html.includes(link), `Kazakh course link ${link} missing for ${lang}`);
   const cards = [...html.matchAll(/<article\b[^>]*\bdata-course-item\b[^>]*>/g)].map((match) => match[0]);
+  // Every newly published Russian-language programme needs a localized
+  // catalogue card, even though its actual teaching language remains Russian.
+  for (const link of [
+    'https://rehab-portal.ru/autism',
+    'https://rehab-portal.ru/alternative-communication',
+    'https://www.abapsy.com/free-training',
+    'https://shkola-na-beregu.ru/open_kurs',
+    'https://cms.znanierussia.ru/akademiya/catalog/osobyj-rebyonok-zhizn-semi-i-sistema-soprovozhdeniya',
+    'https://daryn.ai/courses/inkliuzivnoe-obrazovanie-soprovozdenie-adaptaciia-obrazovatelnogo-processa-i-monitoring-rezultatov',
+    'https://eii.ru/proekt-yazyk-vozmozhnostej/',
+  ]) {
+    assert.ok(html.includes(link), 'Missing localized learning course on ' + lang + ': ' + link);
+  }
   const itemCount = cards.length;
   const cardBlocks = [...html.matchAll(/<article\b[^>]*\bdata-course-item\b[^>]*>[\s\S]*?<\/article>/g)].map((m) => m[0]);
   // These programmes have two provider URLs but are one catalogue card each.
