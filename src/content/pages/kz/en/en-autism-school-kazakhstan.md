@@ -23,6 +23,7 @@ conflictOfInterest: "No conflict of interest declared."
 publishedAt: 2026-10-10
 originalPublishedAt: 2026-10-09
 updatedAt: 2026-10-26
+reviewDueAt: 2026-12-01
 draft: false
 keyPoints:
   - "School admission and arrangements for special educational support are separate questions. An autism diagnosis does not remove a child's right to education."

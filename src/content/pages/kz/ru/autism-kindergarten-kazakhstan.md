@@ -22,6 +22,7 @@ disclaimerType: informational
 conflictOfInterest: "Конфликт интересов не заявлен."
 publishedAt: 2026-10-09
 updatedAt: 2026-10-27
+reviewDueAt: 2026-12-01
 draft: false
 keyPoints:
   - "Диагноз аутизма сам по себе не определяет единственный формат дошкольного образования."

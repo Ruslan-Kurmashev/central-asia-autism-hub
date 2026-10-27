@@ -23,7 +23,8 @@ conflictOfInterest: "No conflict of interest declared."
 versionNote: "10 October 2026: English translation based on the Russian article updated on 9 October 2026. It retains the regulatory changes to PMPK services dated 26 June 2026 and MSE rules effective from 25 August 2026."
 publishedAt: 2026-10-10
 originalPublishedAt: 2026-10-09
-updatedAt: 2026-10-26
+updatedAt: 2026-10-27
+reviewDueAt: 2026-12-01
 draft: false
 keyPoints:
   - "Medical, educational and social support in Kazakhstan follow different pathways. Start by identifying the question you need to resolve."
@@ -77,7 +78,7 @@ sources:
     accessedAt: 2026-10-09
 ---
 
-> **Regulatory sources checked on 9 October 2026.** This guide uses Kazakhstan's official legal and government sources. If a law or online service changes, the guidance must be updated.
+> **Important:** laws and government service procedures can change. This guide explains how support pathways differ, but does not verify the current eligibility rules of every service or institution on the date you apply. Check the latest requirements against official sources before submitting documents.
 
 When a family has questions about a child's development, suspects autism, or already has a diagnosis, it can be difficult to distinguish between a polyclinic, psychiatric services, PMPK, preschool or school, a medical advisory commission, disability assessment, social protection and private centres.
 

@@ -23,6 +23,7 @@ disclaimerType: informational
 conflictOfInterest: "Конфликт интересов не заявлен."
 publishedAt: 2026-10-09
 updatedAt: 2026-10-27
+reviewDueAt: 2026-12-01
 draft: false
 keyPoints:
   - "Официальный сервис проверки разрешений и лицензий работает через eGov/eLicense и предоставляется бесплатно."

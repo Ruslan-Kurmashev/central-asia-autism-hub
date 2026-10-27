@@ -24,6 +24,7 @@ conflictOfInterest: "No conflict of interest declared."
 publishedAt: 2026-10-10
 originalPublishedAt: 2026-10-09
 updatedAt: 2026-10-27
+reviewDueAt: 2026-12-01
 draft: false
 keyPoints:
   - "If a centre advertises medical services, verify its licence yourself through the official eGov/eLicense system rather than relying on an image of a document."

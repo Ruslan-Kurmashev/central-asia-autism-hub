@@ -22,6 +22,7 @@ disclaimerType: informational
 conflictOfInterest: "Конфликт интересов не заявлен."
 publishedAt: 2026-10-09
 updatedAt: 2026-10-26
+reviewDueAt: 2026-12-01
 draft: false
 keyPoints:
   - "Зачисление в школу и организация специальных условий являются отдельными вопросами, диагноз аутизма не отменяет право ребёнка на образование."

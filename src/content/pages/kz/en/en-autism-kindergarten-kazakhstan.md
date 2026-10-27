@@ -23,6 +23,7 @@ conflictOfInterest: "No conflict of interest declared."
 publishedAt: 2026-10-10
 originalPublishedAt: 2026-10-09
 updatedAt: 2026-10-27
+reviewDueAt: 2026-12-01
 draft: false
 keyPoints:
   - "There is no single mandatory kindergarten setting for every autistic child. Focus on what the child needs for participation, learning, communication and safety."
