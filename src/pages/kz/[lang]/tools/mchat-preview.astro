@@ -1,0 +1,9 @@
+---
+import { localePath } from '../../../../lib/urls';
+import { SUPPORTED_LOCALES, type Locale } from '../../../../site.config';
+export function getStaticPaths(){return SUPPORTED_LOCALES.map(lang=>({params:{lang},props:{lang}}))}
+interface Props{lang:Locale}
+const {lang}=Astro.props;
+const target=localePath(lang,'tools/mchat-r');
+---
+<!doctype html><html lang={lang}><head><meta charset="UTF-8" /><meta http-equiv="refresh" content={`0; url=${target}`} /><link rel="canonical" href={new URL(target,Astro.site??Astro.url.origin)} /><title>M-CHAT-R</title></head><body><a href={target}>M-CHAT-R</a></body></html>

@@ -22,7 +22,7 @@ conflictOfInterest: "No conflict of interest declared."
 publishedAt: 2026-08-10
 originalPublishedAt: 2026-08-10
 displayPublishedAt: 2026-08-10
-updatedAt: 2026-10-17
+updatedAt: 2026-10-28
 reviewDueAt: 2027-08-10
 draft: false
 keyPoints:
@@ -160,6 +160,8 @@ The specific pathway depends on the healthcare system, region and professionals 
 If you live in Kazakhstan, the local routes and practical steps are explained separately in [Where to seek help if you are concerned about your child's development](../../help-kazakhstan/child-development-concerns-kazakhstan/).
 
 ## Questionnaires and online tests
+
+**M-CHAT-R developmental screening.** Parents of children aged 16–30 months can [complete the 20-question first stage in English](/kz/en/tools/mchat-r/). Some scores require a further Follow-Up interview with a professional. Screening does not diagnose or rule out autism.
 
 A questionnaire may help organise observations or prepare questions for a professional, but its result is not a diagnosis.
 
