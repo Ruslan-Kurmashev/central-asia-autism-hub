@@ -551,9 +551,9 @@ try {
           return !root.querySelector('[data-view=result]').hidden;
         };
         const ok0=fill(0);
-        const low={score:root.querySelector('[data-result-score]')?.textContent,follow:root.querySelector('[data-result-follow]')?.textContent,expected:root.dataset.moderateFollow};
+        const low={score:root.querySelector('[data-result-score]')?.textContent,follow:root.querySelector('[data-result-follow]')?.textContent};
         const ok3=fill(3);
-        const middle={score:root.querySelector('[data-result-score]')?.textContent,follow:root.querySelector('[data-result-follow]')?.textContent};
+        const middle={score:root.querySelector('[data-result-score]')?.textContent,follow:root.querySelector('[data-result-follow]')?.textContent,expected:root.dataset.moderateFollow};
         const ok20=fill(20);
         const high={score:root.querySelector('[data-result-score]')?.textContent,follow:root.querySelector('[data-result-follow]')?.textContent};
         const resultHtml=root.querySelector('.mchat__print')?.textContent||'';
