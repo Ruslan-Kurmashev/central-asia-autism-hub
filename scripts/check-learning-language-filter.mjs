@@ -144,6 +144,14 @@ for (const [lang, languageLabel] of Object.entries(labels)) {
   for (const card of thirtyDay) assert.ok(card.includes('30'),
     'SIE 30-day access must be disclosed in ' + lang);
   const itemCount = cards.length;
+  // The hero statistic and the actual rendered cards must use the same total.
+  // The two bilingual Orleu variants are intentionally grouped into one card.
+  const heroCount = html.match(/<div\\b[^>]*class="section-v2__count"[^>]*>([\\s\\S]*?)<\\/div>/)?.[1];
+  assert.ok(heroCount, 'Learning hero counter missing on ' + lang);
+  const displayedHeroCount = Number(heroCount.match(/<strong>\\s*(\\d+)\\s*<\\/strong>/)?.[1]);
+  assert.equal(displayedHeroCount, itemCount,
+    'Learning hero total must match unique course cards on ' + lang);
+
   const cardBlocks = [...html.matchAll(/<article\b[^>]*\bdata-course-item\b[^>]*>[\s\S]*?<\/article>/g)].map((m) => m[0]);
   // These programmes have two provider URLs but are one catalogue card each.
   // Both actual teaching languages and both links must remain visible.

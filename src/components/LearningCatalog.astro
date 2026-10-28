@@ -1,6 +1,7 @@
 ---
 import type { CollectionEntry } from 'astro:content';
 import type { Locale } from '../site.config';
+import { bilingualCoursePairs } from '../lib/learning-catalogue-count';
 
 interface Props {
   locale: Locale;
@@ -66,10 +67,7 @@ const languages = {
 const dateFormat = new Intl.DateTimeFormat(locale === 'ru' ? 'ru-KZ' : locale === 'kk' ? 'kk-KZ' : 'en-GB', { day:'numeric', month:'short', year:'numeric' });
 // These two Orleu programmes have separate RU and KK course pages but the
 // same curriculum. Keep both source records and links, grouping only the cards.
-const bilingualCoursePairs = [
-  ['orleu-russian-assistive-needs-sett', 'orleu-kazakh-assistive-needs-sett'],
-  ['orleu-russian-aac-assistive-technologies', 'orleu-kazakh-aac-assistive-technologies'],
-] as const;
+
 const hiddenVariantSlugs = new Set<string>();
 const bilingualVersions = new Map<string, CollectionEntry<'learning'>[]>();
 for (const [ruSlug, kkSlug] of bilingualCoursePairs) {
