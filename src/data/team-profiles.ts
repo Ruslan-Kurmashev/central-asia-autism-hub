@@ -19,7 +19,7 @@ export interface TeamMember {
 export const TEAM_MEMBERS: TeamMember[] = [
   {
     id: 'ruslan-kurmashev',
-    name: { ru: 'Руслан Курмашев', kk: 'Руслан Курмашев', en: 'Ruslan Kurmashev' },
+    name: { ru: 'Руслан Курмашев MD, MSc', kk: 'Руслан Курмашев MD, MSc', en: 'Ruslan Kurmashev MD, MSc' },
     role: {
       ru: 'Основатель AutismHub',
       kk: 'AutismHub негізін қалаушы',
@@ -59,7 +59,7 @@ export const TEAM_MEMBERS: TeamMember[] = [
     publicProfileApproved: true,
   },  {
     id: 'adina-yessimova',
-    name: { ru: 'Адина Есимова', kk: 'Адина Есимова', en: 'Adina Yessimova' },
+    name: { ru: 'Адина Есимова MD', kk: 'Адина Есимова MD', en: 'Adina Yessimova MD' },
     role: {
       ru: 'Специалист по медицине и аналитике данных',
       kk: 'Медицина және деректерді талдау маманы',
