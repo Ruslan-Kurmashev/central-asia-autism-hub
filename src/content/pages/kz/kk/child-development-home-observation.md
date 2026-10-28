@@ -10,7 +10,7 @@ section: parents
 topic: child-development
 slug: "balanyn-damuyn-uyde-bakylau"
 translationKey: parents-how-to-observe-child-development-at-home
-translationStatus: pending
+translationStatus: checked
 audience:
   - parents
   - families
@@ -24,7 +24,7 @@ originalPublishedAt: "2026-10-15T17:11:24.160Z"
 displayPublishedAt: "2026-10-15T17:11:24.160Z"
 updatedAt: "2026-10-16T20:33:22.995Z"
 reviewDueAt: 2027-10-15
-draft: true
+draft: false
 keyPoints:
   - "Дамуды бақылау - баланың күнделікті өмірде не істейтінін байқау, үйде сынақтар өткізу емес."
   - "Пайдалы жазбада жағдай, баланың әрекеті және қоршаған орта сипатталады, асығыс қорытынды жасалмайды."

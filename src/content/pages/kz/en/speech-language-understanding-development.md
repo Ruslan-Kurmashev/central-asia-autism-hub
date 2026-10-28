@@ -10,7 +10,7 @@ section: parents
 topic: child-development
 slug: "speech-language-and-understanding-development"
 translationKey: parents-speech-language-understanding-development
-translationStatus: pending
+translationStatus: checked
 audience:
   - parents
   - families
@@ -24,7 +24,7 @@ originalPublishedAt: "2026-10-15T17:29:59.740Z"
 displayPublishedAt: "2026-10-15T17:29:59.740Z"
 updatedAt: "2026-10-18"
 reviewDueAt: 2027-10-15
-draft: true
+draft: false
 keyPoints:
   - "Communication begins before the first words. A child may express interests, needs and refusals through gestures, sounds, actions or other accessible methods."
   - "Understanding spoken language and using language are related but distinct parts of development, and both matter."

@@ -10,7 +10,7 @@ section: parents
 topic: child-development
 slug: "soileu-zhane-tildi-tusinu-damuy"
 translationKey: parents-speech-language-understanding-development
-translationStatus: pending
+translationStatus: checked
 audience:
   - parents
   - families
@@ -24,7 +24,7 @@ originalPublishedAt: "2026-10-15T17:29:59.740Z"
 displayPublishedAt: "2026-10-15T17:29:59.740Z"
 updatedAt: "2026-10-18"
 reviewDueAt: 2027-10-15
-draft: true
+draft: false
 keyPoints:
   - "Коммуникация алғашқы сөздерден бұрын басталады. Бала қызығушылығын, қажеттілігін және бас тартуын ым, дыбыс, әрекет немесе өзге қолжетімді тәсілмен білдіруі мүмкін."
   - "Айтылған тілді түсіну мен тілді қолдану дамудың өзара байланысты, бірақ бөлек қырлары. Екеуіне де назар аудару маңызды."

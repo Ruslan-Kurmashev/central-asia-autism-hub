@@ -10,7 +10,7 @@ section: parents
 topic: development-concerns
 slug: "when-to-discuss-child-development"
 translationKey: parents-when-to-discuss-child-development
-translationStatus: pending
+translationStatus: checked
 audience:
   - parents
   - families
@@ -24,7 +24,7 @@ originalPublishedAt: 2026-08-10
 displayPublishedAt: 2026-08-10
 updatedAt: 2026-10-17
 reviewDueAt: 2027-08-10
-draft: true
+draft: false
 keyPoints:
   - "A parent's concern is a sufficient reason to ask questions about their child's development."
   - "Look at duration, frequency and effects on everyday life, rather than relying on a single sign."

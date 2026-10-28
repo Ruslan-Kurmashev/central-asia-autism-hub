@@ -10,7 +10,7 @@ section: parents
 topic: child-development
 slug: "how-to-observe-child-development-at-home"
 translationKey: parents-how-to-observe-child-development-at-home
-translationStatus: pending
+translationStatus: checked
 audience:
   - parents
   - families
@@ -24,7 +24,7 @@ originalPublishedAt: "2026-10-15T17:11:24.160Z"
 displayPublishedAt: "2026-10-15T17:11:24.160Z"
 updatedAt: "2026-10-16T20:33:22.995Z"
 reviewDueAt: 2027-10-15
-draft: true
+draft: false
 keyPoints:
   - "Developmental observation means noticing what a child does naturally in daily life, not giving them a series of tests at home."
   - "A useful note describes the situation, the child's actions and the surrounding conditions without jumping to conclusions."

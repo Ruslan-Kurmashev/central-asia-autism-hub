@@ -10,7 +10,7 @@ section: parents
 topic: development-concerns
 slug: "balanyn-damuyn-mamanmen-kashan-talkylau"
 translationKey: parents-when-to-discuss-child-development
-translationStatus: pending
+translationStatus: checked
 audience:
   - parents
   - families
@@ -24,7 +24,7 @@ originalPublishedAt: 2026-08-10
 displayPublishedAt: 2026-08-10
 updatedAt: 2026-10-17
 reviewDueAt: 2027-08-10
-draft: true
+draft: false
 keyPoints:
   - "Ата-ананың алаңдаушылығы баланың дамуы туралы сұрақ қоюға жеткілікті негіз."
   - "Бір ғана белгіге емес, ерекшеліктің ұзақтығына, қайталануына және күнделікті өмірге әсеріне назар аудару қажет."
