@@ -34,7 +34,8 @@ for (const [locale, strings] of Object.entries(expected)) {
   assert.ok(html.includes('src="/central-asia-autism-hub/images/team/adina-yessimova.webp"'), 'Adina portrait missing: ' + locale);
   assert.ok(/<span class="team-directory__initials"[^>]*>\s*(?:НБ|NB)\s*<\/span>/.test(html), 'Nikolai monogram placeholder missing: ' + locale);
   assert.ok(!html.includes('images/team/nikolai-belous'), 'Nikolai portrait must remain unset: ' + locale);
-  const names = locale === 'en' ? ['Ruslan Kurmashev', 'Adina Yessimova', 'Nikolai Belous'] : ['Руслан Курмашев', 'Адина Есимова', 'Николай Белоус'];
+  const names = locale === 'en' ? ['Ruslan Kurmashev MD, MSc', 'Adina Yessimova MD', 'Nikolai Belous'] : ['Руслан Курмашев MD, MSc', 'Адина Есимова MD', 'Николай Белоус'];
+  assert.ok(names.slice(0, 2).every((name) => html.includes('<h3>' + name + '</h3>')), 'Missing MD/MSc credentials in team headings: ' + locale);
   assert.ok(names.every((name) => html.includes(name)) && html.indexOf(names[0]) < html.indexOf(names[1]) && html.indexOf(names[1]) < html.indexOf(names[2]), 'Incorrect team member order: ' + locale);
   assert.ok(!html.includes('team-directory__role-card'), 'Unapproved extra team sections found: ' + locale);
   for (const s of strings) assert.ok(html.includes(s), locale + ' missing localized copy: ' + s);
