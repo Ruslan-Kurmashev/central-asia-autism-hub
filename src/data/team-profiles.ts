@@ -98,5 +98,40 @@ export const TEAM_MEMBERS: TeamMember[] = [
     confirmed: true,
     publicProfileApproved: true,
   },
+  {
+    id: 'nikolai-belous',
+    name: { ru: 'Николай Белоус', kk: 'Николай Белоус', en: 'Nikolai Belous' },
+    role: {
+      ru: 'Специалист по инженерии данных и цифровой инфраструктуре',
+      kk: 'Деректер инженериясы және цифрлық инфрақұрылым маманы',
+      en: 'Data Engineering and Digital Infrastructure Specialist',
+    },
+    profile: {
+      ru: [
+        'Инженер данных с опытом разработки аналитических систем, обработки больших массивов данных и автоматизации процессов.',
+        'Окончил Национальный исследовательский университет «МИЭТ» (Россия) по направлению «Электроника и наноэлектроника».',
+        'Имеет опыт создания хранилищ медицинских данных и работы с Python, SQL, Apache Spark и ETL/ELT-процессами.',
+        'Имеет опыт в исследовательских проектах, связанных с аутизмом и цифровой поддержкой семей.',
+        'В AutismHub будет отвечать за развитие технической инфраструктуры, автоматизацию процессов и внедрение цифровых инструментов.',
+      ],
+      kk: [
+        'Талдау жүйелерін әзірлеу, үлкен көлемдегі деректерді өңдеу және жұмыс үдерістерін автоматтандыру тәжірибесі бар деректер инженері.',
+        'Ресейдегі «МИЭТ» Ұлттық зерттеу университетін «Электроника және наноэлектроника» мамандығы бойынша бітірген.',
+        'Медициналық деректер қоймаларын құру және Python, SQL, Apache Spark, ETL/ELT үдерістерімен жұмыс істеу тәжірибесі бар.',
+        'Аутизмге және отбасыларды цифрлық қолдауға қатысты зерттеу жобаларында жұмыс істеу тәжірибесі бар.',
+        'AutismHub жобасында техникалық инфрақұрылымды дамытуға, үдерістерді автоматтандыруға және цифрлық құралдарды енгізуге жауапты болады.',
+      ],
+      en: [
+        'Data engineer experienced in developing analytical systems, processing large datasets, and automating workflows.',
+        'Graduated from the National Research University of Electronic Technology (MIET), Russia, with a degree in Electronics and Nanoelectronics.',
+        'Has experience building medical data warehouses and working with Python, SQL, Apache Spark, and ETL/ELT pipelines.',
+        'Has experience in research projects related to autism and digital support for families.',
+        'At AutismHub, will be responsible for developing technical infrastructure, automating workflows, and implementing digital tools.',
+      ],
+    },
+    initials: { ru: 'НБ', kk: 'НБ', en: 'NB' },
+    confirmed: true,
+    publicProfileApproved: true,
+  },
 
 ];
