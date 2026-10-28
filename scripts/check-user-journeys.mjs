@@ -537,48 +537,73 @@ try {
       const scenario=await evaluate(()=>{
         const root=document.querySelector('[data-mchat]');
         const age=root?.querySelector('#mchat-age');
-        const fill=(elevatedCount)=>{
+        const questions=[...root.querySelectorAll('[data-question]')];
+        const fill=(score)=>{
           root.querySelector('[data-reset]')?.click();
-          age.value='18';root.querySelector('[data-start]').click();
+          age.value='18';root.querySelector('[data-start]')?.click();
           for(let i=0;i<20;i++){
-            const risk=i<elevatedCount;
-            const yes=[2,5,12].includes(i+1)?risk:!risk;
-            const input=root.querySelector('[data-question="'+i+'"] input[value="'+(yes?'yes':'no')+'"]');
+            const elevated=i<score;
+            const yes=[2,5,12].includes(i+1)?elevated:!elevated;
+            const input=questions[i]?.querySelector('input[value="'+(yes?'yes':'no')+'"]');
             if(!input)return false;
-            input.checked=true;input.dispatchEvent(new Event('change',{bubbles:true}));
+            input.checked=true;
+            input.dispatchEvent(new Event('change',{bubbles:true}));
           }
-          for(let i=0;i<20;i++)root.querySelector('[data-next]').click();
+          for(let i=0;i<20;i++)root.querySelector('[data-next]')?.click();
           return !root.querySelector('[data-view=result]').hidden;
         };
-        const summary=()=>({
-          category:root.querySelector('[data-result-category]')?.textContent?.trim(),
-          meaning:root.querySelector('[data-result-meaning]')?.textContent?.trim(),
-          advice:root.querySelector('[data-result-advice]')?.textContent?.trim()
-        });
-        const ok0=fill(0);
-        const low={score:root.querySelector('[data-result-score]')?.textContent,follow:root.querySelector('[data-result-follow]')?.textContent,...summary()};
-        const ok3=fill(3);
-        const middle={score:root.querySelector('[data-result-score]')?.textContent,follow:root.querySelector('[data-result-follow]')?.textContent,expected:root.dataset.moderateFollow,...summary()};
-        const ok20=fill(20);
-        const high={score:root.querySelector('[data-result-score]')?.textContent,follow:root.querySelector('[data-result-follow]')?.textContent,...summary()};
-        const resultHtml=root.querySelector('.mchat__print')?.textContent||'';
-        return {ok0,ok3,ok20,low,middle,high,resultHasQuestion:resultHtml.includes(root.querySelector('[data-question] legend')?.textContent||'XXXXXXXX'),printScore:root.querySelector('[data-print-score]')?.textContent,printMeaning:root.querySelector('[data-print-meaning]')?.textContent?.trim(),printAdvice:root.querySelector('[data-print-advice]')?.textContent?.trim(),guidanceCount:root.querySelectorAll('.mchat__guidance h3').length,printGuidanceCount:root.querySelectorAll('.mchat__print-step h3').length,helpLink:root.querySelector('.mchat__guidance a')?.getAttribute('href'),complete:root.dataset.complete};
+        window.__mchatQaFill=fill;
+        const all=[];
+        for(let score=0;score<=20;score++){
+          const completed=fill(score);
+          all.push({
+            requested:score,completed,
+            score:root.querySelector('[data-result-score]')?.textContent?.trim(),
+            category:root.querySelector('[data-result-category]')?.textContent?.trim(),
+            meaning:root.querySelector('[data-result-meaning]')?.textContent?.trim(),
+            advice:root.querySelector('[data-result-advice]')?.textContent?.trim(),
+            follow:root.querySelector('[data-result-follow]')?.textContent?.trim(),
+            pdfScore:root.querySelector('[data-print-score]')?.textContent?.trim(),
+            pdfMeaning:root.querySelector('[data-print-meaning]')?.textContent?.trim(),
+            pdfAdvice:root.querySelector('[data-print-advice]')?.textContent?.trim(),
+            pdfFollow:root.querySelector('[data-print-follow]')?.textContent?.trim()
+          });
+        }
+        const printed=root.querySelector('.mchat__print')?.textContent||'';
+        const firstQuestion=questions[0]?.querySelector('legend')?.textContent?.trim()||'';
+        return {
+          all, complete:root.dataset.complete, 
+          resultHasQuestion:printed.includes(firstQuestion),
+          guidanceCount:root.querySelectorAll('.mchat__guidance h3').length,
+          printGuidanceCount:root.querySelectorAll('.mchat__print-step h3').length,
+          helpLink:root.querySelector('.mchat__guidance a')?.getAttribute('href')
+        };
       });
-      verify(scenario.ok0&&scenario.ok3&&scenario.ok20,marker+': could not complete the in-browser questionnaire');
-      verify(scenario.low.score==='0 / 20'&&scenario.middle.score==='3 / 20'&&scenario.high.score==='20 / 20',marker+': reverse scoring or category calculations failed');
-      verify(scenario.middle.follow===scenario.middle.expected&&!!scenario.middle.follow,marker+': intermediate result lacks localised Follow-Up warning');
-      verify([scenario.low,scenario.middle,scenario.high].every(x=>x.category?.length>10&&x.meaning?.length>45&&x.advice?.length>80),marker+': a score category is missing plain-language meaning or steps');
-      verify(new Set([scenario.low.category,scenario.middle.category,scenario.high.category]).size===3,marker+': results are not distinct for low, medium and high');
-      verify(scenario.guidanceCount===3&&scenario.printGuidanceCount===3&&scenario.helpLink?.includes('/help-kazakhstan/'),marker+': parent actions or local support link missing');
-      verify(scenario.printMeaning===scenario.high.meaning&&scenario.printAdvice===scenario.high.advice,marker+': PDF guidance does not match visible guidance');
-      verify(scenario.complete==='true'&&scenario.printScore==='20 / 20'&&!scenario.resultHasQuestion,marker+': results-only printable report failed');
-      console.log('USER_JOURNEY_MCHAT '+JSON.stringify({locale,width,staticCheck:{heading:staticCheck.heading,questions:staticCheck.questions,overflow:staticCheck.overflow},scenario}));
+      verify(scenario.all.length===21&&scenario.all.every(x=>x.completed),marker+': one or more of 21 complete-answer scenarios failed');
+      verify(scenario.all.every(x=>x.score===x.requested+' / 20'&&x.pdfScore===x.score),marker+': wrong score on screen or PDF');
+      verify(scenario.all.every(x=>x.category?.length>10&&x.meaning?.length>45&&x.advice?.length>80&&x.follow?.length>4),marker+': missing clear outcome, meaning, next step or follow-up status');
+      verify(scenario.all.every(x=>x.pdfMeaning===x.meaning&&x.pdfAdvice===x.advice&&x.pdfFollow===x.follow),marker+': printable report differs from displayed results');
+      const categoryOf=(score)=>score<=2?'low':score<=7?'moderate':'high';
+      for(const band of ['low','moderate','high']){
+        const entries=scenario.all.filter(x=>categoryOf(x.requested)===band);
+        verify(entries.length===(band==='low'?3:band==='moderate'?5:13),marker+': wrong number of scores in '+band+' range');
+        verify(new Set(entries.map(x=>x.category)).size===1&&new Set(entries.map(x=>x.meaning)).size===1&&new Set(entries.map(x=>x.follow)).size===1,marker+': inconsistent guidance inside '+band+' range');
+      }
+      verify(new Set([0,3,8].map(i=>scenario.all[i]?.category)).size===3,marker+': category thresholds not distinct at 0,3,8');
+      verify(scenario.all[3].follow!==scenario.all[2].follow&&scenario.all[8].follow!==scenario.all[7].follow,marker+': incorrect Follow-Up transition at 2/3 or 7/8');
+      verify(scenario.guidanceCount===3&&scenario.printGuidanceCount===3&&scenario.helpLink?.includes('/help-kazakhstan/'),marker+': parent guidance or Kazakhstan link is missing');
+      verify(scenario.complete==='true'&&!scenario.resultHasQuestion,marker+': private answer/question leakage to PDF');
+      console.log('USER_JOURNEY_MCHAT_ALL_SCORES '+JSON.stringify({locale,width,checked:scenario.all.length,low:scenario.all.slice(0,3).map(x=>x.score),moderate:scenario.all.slice(3,8).map(x=>x.score),high:scenario.all.slice(8).map(x=>x.score),overflow:staticCheck.overflow,failures:errors.filter(x=>x.startsWith(marker))}));
       if(width===1440){
-        const printed=await send('Page.printToPDF',{printBackground:true,preferCSSPageSize:true});
-        verify(Boolean(printed?.data),marker+': Chromium PDF export returned no data');
-        if(printed?.data){
-          await mkdir(outDir,{recursive:true});
-          await writeFile(path.join(outDir,locale+'-mchat-results-only.pdf'),Buffer.from(printed.data,'base64'));
+        for(const score of [0,2,3,7,8,20]){
+          const ok=await evaluate('()=>window.__mchatQaFill('+score+')');
+          verify(ok,marker+': could not prepare PDF for score '+score);
+          const printed=await send('Page.printToPDF',{printBackground:true,preferCSSPageSize:true});
+          verify(Boolean(printed?.data),marker+': Chromium PDF export failed for score '+score);
+          if(printed?.data){
+            await mkdir(outDir,{recursive:true});
+            await writeFile(path.join(outDir,locale+'-mchat-score-'+score+'.pdf'),Buffer.from(printed.data,'base64'));
+          }
         }
       }
       if(width===360||width===1440)await screenshot(locale,width,'mchat');
