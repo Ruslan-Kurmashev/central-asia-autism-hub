@@ -169,9 +169,9 @@ for day, idea in ideas:
     story.append(KeepTogether([
         p(day + "  -  " + idea, LABEL),
         p("Біздің нұсқамыз немесе не көмектесті:"),
-        Spacer(1, 9),
+        Spacer(1, 3),
         HRFlowable(width="100%", thickness=0.7, color=RULE),
-        Spacer(1, 15),
+        Spacer(1, 5),
     ]))
 story.extend([
     PageBreak(),
