@@ -214,7 +214,7 @@ NHS балалар эрготерапиясы қызметтері *әрекет
 **Материалдар:** сырғанамайтын төсеніш, орнықты кесе, қауіпсіз қасық.
 
 <figure class="independence-table-setting-figure">
-  <img src="/central-asia-autism-hub/images/editorial/diagrams/child-daily-independence-table-setting-user-approved-v3.webp" alt="Төрт суретті қадам: анасы мен баласы төсеніш қояды, кесе мен қасық орналастырады, бала біртіндеп көбірек әрекет жасайды." width="1448" height="1086" loading="lazy" decoding="async" style="display:block;width:100%;height:auto;border-radius:16px" />
+  <img src="/central-asia-autism-hub/images/editorial/diagrams/child-daily-independence-table-setting-kk.svg" alt="Қазақша жазуы бар төрт суретті қадам: бала анасымен бірге үстелге төсеніш қояды, кесені орналастырады, қасықты қосады және орнын дайындап аяқтайды." width="1448" height="1086" loading="lazy" decoding="async" style="display:block;width:100%;height:auto;border-radius:16px" />
   <figcaption>Үстел дайындау мысалы. Бала бір не бірнеше қадамды орындай алады, ересек көмегі қажет болса беріледі.</figcaption>
 </figure>
 
