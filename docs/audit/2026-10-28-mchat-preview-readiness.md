@@ -27,3 +27,7 @@ The exact approved Kazakh edition and Russian edition, translations of explanato
 
 M-CHAT-R/F initial scoring source: https://www.mchatscreen.com/mchat-rf/scoring/
 Kazakhstan referral context: https://old.adilet.zan.kz/rus/docs/V2500035745
+
+## Release-candidate reproducible QA results
+
+Chromium user-journey run 40784109538 passed across RU/KK/EN and 360/768/1440 px; all 21 score values were exercised per language and viewport. Its artifact contains 18 PDFs at scores 0, 2, 3, 7, 8, and 20 in each of three languages. Independently inspected with PyMuPDF: all 18 are one A4 page, their numeric totals match the intended score, and they include no item question text or per-item responses. Rendered a nine-sample contact sheet to inspect legibility, page breaks and Kazakh Cyrillic. This is **technical QA**, not independent medical or rights review. Latest final-commit CI and deployment verification must be recorded separately.
