@@ -34,6 +34,7 @@ jobs:
           python scripts/validate-professional-practice-tools.py
           python scripts/build-child-development-diary.py
           python scripts/build-parent-motor-activity-pdfs.py
+          python scripts/build-parent-motor-activity-pdfs-kk.py
           python scripts/build-parent-emotion-resources.py
           python scripts/build-parent-emotion-resources-kk.py
           python scripts/build-parent-daily-independence-pdfs.py
@@ -44,6 +45,15 @@ jobs:
           python scripts/build-parent-development-translated-pdfs.py
           python scripts/build-research-reading-worksheet.py
           python scripts/validate-research-reading-worksheet.py
+
+      - name: Upload Kazakh motor PDF files for layout review
+        uses: actions/upload-artifact@v4
+        with:
+          name: kazakh-motor-parent-pdfs
+          path: |
+            public/downloads/motor/*-kk.pdf
+          if-no-files-found: error
+          retention-days: 14
 
       - name: Set up Node.js
         uses: actions/setup-node@v6
