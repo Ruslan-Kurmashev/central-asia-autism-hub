@@ -13,6 +13,7 @@ import BaseLayout from '../../../../layouts/BaseLayout.astro';
 import { countVisibleLearningCourses } from '../../../../lib/learning-catalogue-count';
 import { articlePath, localePath, sitePath } from '../../../../lib/urls';
 import { getResearchCardVisual } from '../../../../data/research-card-visuals';
+import { compareParentAutismBasics } from '../../../../data/parent-autism-basics-reading-order.mjs';
 import {
   SECTIONS,
   SITE,
@@ -285,25 +286,10 @@ const sectionGroups = groupDefinitions.map((group) => ({
   materials: materials.filter((material) =>
     group.topics.includes(material.data.topic),
   ).sort((left, right) => {
-    // Keep the approved introductory sequence ahead of newer resources.
+    // Parent-first reading sequence, stable across RU / KK / EN.
+    // Publication dates remain visible metadata but never determine this group's rank.
     if (!showLocalizedGlossary || group.id !== 'autism-basics') return 0;
-    const editorialOrder = [
-      'chto-takoe-autizm',
-      'pochemu-voznikaet-autizm',
-      'mify-i-fakty-ob-autizme',
-      'sensornye-osobennosti-pri-autizme',
-      'autizm-u-devochek',
-      'soputstvuyushchie-sostoyaniya-pri-autizme',
-      'neyro-raznoobrazie-i-autizm',
-      'stimming-i-povtoryayushchiesya-deystviya-pri-autizme',
-      'meltdaun-i-shatdaun-pri-autizme',
-      'kak-autichnye-deti-obshchayutsya',
-    ];
-    const position = (slug: string) => {
-      const index = editorialOrder.indexOf(slug);
-      return index < 0 ? editorialOrder.length : index;
-    };
-    return position(left.data.slug) - position(right.data.slug);
+    return compareParentAutismBasics(left.data.translationKey, right.data.translationKey);
   }),
   glossaryCount: showLocalizedGlossary && group.id === 'autism-basics' ? 1 : 0,
 }));
