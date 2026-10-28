@@ -13,3 +13,7 @@ Before activating the real questionnaire: (1) obtain a written electronic licenc
 Official rights guidance: https://www.mchatscreen.com/mchat-rf/ (contact: mchatscreen2009@gmail.com). No assumption is made that non-profit status permits reposting the instrument.
 
 Current output: design prototype ONLY. Save as PDF uses the browser print dialog, not one-click binary file download.
+
+## Implementation update
+
+The project owner reports having obtained permission for M-CHAT-R/F, but the permission text and its precise scope have not yet been independently inspected. The electronic first-stage questionnaire now uses the author-published RU/KK/EN texts, requires all 20 answers and applies original scoring with reversed items 2, 5 and 12. It does not automate the second-stage Follow-Up. Initial results of 3-7 are pending a proper Follow-Up interview. The report-only PDF contains no items or individual answers. Activation is conditional on permission scope, bilingual and clinical review, approved privacy changes and the final tests. No diagnostic claims are made.
