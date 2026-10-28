@@ -10,6 +10,7 @@ import ResearchTopicDirectory from '../../../../components/ResearchTopicDirector
 import { CONTENT_UI, DATE_LOCALES } from '../../../../i18n/content';
 import { UI } from '../../../../i18n/ui';
 import BaseLayout from '../../../../layouts/BaseLayout.astro';
+import { countVisibleLearningCourses } from '../../../../lib/learning-catalogue-count';
 import { articlePath, localePath, sitePath } from '../../../../lib/urls';
 import { getResearchCardVisual } from '../../../../data/research-card-visuals';
 import {
@@ -133,7 +134,9 @@ const materials = [...pageMaterials, ...researchMaterials].sort((left, right) =>
 });
 
 const showLocalizedGlossary = section === 'parents';
-const displayCount = materials.length + learningMaterials.length + (showLocalizedGlossary ? 1 : 0);
+const displayCount = materials.length
+  + (section === 'learning' ? countVisibleLearningCourses(learningMaterials) : learningMaterials.length)
+  + (showLocalizedGlossary ? 1 : 0);
 const displayCountLabel = section === 'learning'
   ? locale === 'ru' ? 'учебных материалов'
     : locale === 'kk' ? 'оқу материалы'
