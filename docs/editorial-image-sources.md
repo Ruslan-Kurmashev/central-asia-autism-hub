@@ -1122,3 +1122,9 @@ In the Russian parent guide `child-daily-independence-practical-guide.md`, the a
 | Файл | Негізі және өзгеріс | Қайда қолданылады |
 | --- | --- | --- |
 | `public/images/editorial/emotion-three-moments-kk.svg` | Жобада бұрын бекітілген `public/images/editorial/emotion-three-moments-no-duplicate-title.png` (2179 x 722 px) суреті сақталған. `scripts/generate-kazakh-emotion-three-moments.mjs` түпнұсқа PNG-ді SVG-ге енгізіп, тек үш орысша тақырыпты дәл қазақша мәтінмен жабады: `1. ДЕЙІН`, `2. КЕЗІНДЕ`, `3. КЕЙІН`. Жаңа кейіпкерлер мен әрекеттер жасалмаған. Мақаланың басқа тілдеріндегі сурет өзгермеген. | Тек `src/content/pages/kz/kk/emotions-ozin-ozi-retteu-balany-koldau.md` мақаласындағы `2. Қолдау әртүрлі болатын үш кезең` бөлімі. Бұл білім беру суреті, клиникалық хаттама емес. |
+
+## Фото Николая Белоуса для страницы команды (28 October 2026)
+
+| Asset | Origin and edits | Publication scope |
+| --- | --- | --- |
+| `public/images/team/nikolai-belous.webp` | Portrait provided by the project owner in this conversation as `photo_5409198674807561861_x.jpg` for the explicitly requested team-profile replacement. The supplied 560 x 560 JPEG was centre-cropped to 4:5 and resized to 320 x 400 px in WebP format (quality 72) without AI generation or changing facial appearance. SHA-256: `4d4a1e01f37d6e74ae19594dcf7c82a03bd8c23495f7ed1a803700e86a908064`. | Image for Nikolai Belous on the public team page in RU, KK and EN. Replaces the initials avatar only. Existing participant portraits, profile text, credentials, roles, and other site pages remain unchanged. |

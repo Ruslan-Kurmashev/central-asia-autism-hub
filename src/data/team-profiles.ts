@@ -130,6 +130,12 @@ export const TEAM_MEMBERS: TeamMember[] = [
       ],
     },
     initials: { ru: 'НБ', kk: 'НБ', en: 'NB' },
+    photo: '/central-asia-autism-hub/images/team/nikolai-belous.webp',
+    photoAlt: {
+      ru: 'Портрет Николая Белоуса',
+      kk: 'Николай Белоустың портреті',
+      en: 'Portrait of Nikolai Belous',
+    },
     confirmed: true,
     publicProfileApproved: true,
   },

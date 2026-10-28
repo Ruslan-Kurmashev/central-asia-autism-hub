@@ -32,8 +32,10 @@ for (const [locale, strings] of Object.entries(expected)) {
   assert.equal((html.match(/class="team-directory__bio"/g) || []).length, 15, 'Each of the three team profiles must have 5 paragraphs: ' + locale);
   assert.ok(html.includes('src="/central-asia-autism-hub/images/team/ruslan-kurmashev.webp"'), 'Ruslan portrait missing: ' + locale);
   assert.ok(html.includes('src="/central-asia-autism-hub/images/team/adina-yessimova.webp"'), 'Adina portrait missing: ' + locale);
-  assert.ok(/<span class="team-directory__initials"[^>]*>\s*(?:НБ|NB)\s*<\/span>/.test(html), 'Nikolai monogram placeholder missing: ' + locale);
-  assert.ok(!html.includes('images/team/nikolai-belous'), 'Nikolai portrait must remain unset: ' + locale);
+  assert.ok(html.includes('src="/central-asia-autism-hub/images/team/nikolai-belous.webp"'), 'Nikolai portrait missing: ' + locale);
+  assert.ok(!/<span class="team-directory__initials"[^>]*>\s*(?:НБ|NB)\s*<\/span>/.test(html), 'Nikolai placeholder must be replaced: ' + locale);
+  const expectedNikolaiAlt = locale === 'ru' ? 'Портрет Николая Белоуса' : locale === 'kk' ? 'Николай Белоустың портреті' : 'Portrait of Nikolai Belous';
+  assert.ok(html.includes('alt="' + expectedNikolaiAlt + '"'), 'Nikolai portrait missing localized alt: ' + locale);
   const names = locale === 'en' ? ['Ruslan Kurmashev MD, MSc', 'Adina Yessimova MD', 'Nikolai Belous'] : ['Руслан Курмашев MD, MSc', 'Адина Есимова MD', 'Николай Белоус'];
   assert.ok(names.slice(0, 2).every((name) => html.includes('<h3>' + name + '</h3>')), 'Missing MD/MSc credentials in team headings: ' + locale);
   assert.ok(names.every((name) => html.includes(name)) && html.indexOf(names[0]) < html.indexOf(names[1]) && html.indexOf(names[1]) < html.indexOf(names[2]), 'Incorrect team member order: ' + locale);
@@ -44,8 +46,8 @@ for (const [locale, strings] of Object.entries(expected)) {
   }
   assert.ok(!html.includes('src="undefined"'), locale + ': broken portrait source');
 }
-for (const filename of ['ruslan-kurmashev.webp', 'adina-yessimova.webp']) {
+for (const filename of ['ruslan-kurmashev.webp', 'adina-yessimova.webp', 'nikolai-belous.webp']) {
   const portrait = await readFile('public/images/team/' + filename);
   assert.ok(portrait.length > 1000 && portrait.toString('ascii', 0, 4) === 'RIFF' && portrait.toString('ascii', 8, 12) === 'WEBP', 'Team portrait must be a valid WebP file: ' + filename);
 }
-console.log('Team page QA PASS: 3 localized pages, 3 confirmed team profiles, 2 portraits and Nikolai initials fallback, responsive layout, expert/contact links.');
+console.log('Team page QA PASS: 3 localized pages, 3 confirmed team profiles, 3 portraits, responsive layout, expert/contact links.');
