@@ -10,7 +10,7 @@ section: parents
 topic: autism-diagnosis-kazakhstan
 slug: "kazakstanda-autizm-diagnozy-kalai-koiylady"
 translationKey: parents-autism-diagnosis-kazakhstan
-translationStatus: pending
+translationStatus: checked
 audience:
   - parents
   - families
@@ -19,12 +19,13 @@ editor: Ruslan Kurmashev
 riskLevel: moderate
 disclaimerType: medical
 conflictOfInterest: "Мүдделер қақтығысы мәлімделмеген."
-publishedAt: 2026-09-14
+publishedAt: "2026-10-28T22:48:55Z"
 originalPublishedAt: 2026-09-14
 displayPublishedAt: 2026-09-14
-updatedAt: 2026-10-17
+updatedAt: "2026-10-28T22:48:55Z"
 reviewDueAt: 2026-12-01
-draft: true
+versionNote: "Бұл аударма жасанды интеллект көмегімен дайындалған. Тәуелсіз клиникалық немесе кәсіби тілдік рецензия жүргізілген жоқ."
+draft: false
 keyPoints:
   - "Қазақстанда АСБ-ның медициналық диагностикасы психиатр дәрігердің құзыретіне жатады, ал МСАК дәрігерлері жекелеген шекаралық психикалық және мінез-құлық бұзылыстарымен шектеледі."
   - "M-CHAT-R тәуекелді анықтауға және қосымша бағалау қажеттігін бағалауға көмектеседі, бірақ диагноз қоймайды."

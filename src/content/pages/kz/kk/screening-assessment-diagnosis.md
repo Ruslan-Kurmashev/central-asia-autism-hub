@@ -10,7 +10,7 @@ section: parents
 topic: assessment-and-diagnosis
 slug: "autizm-skriningi-bagalau-zhane-diagnoz"
 translationKey: parents-screening-assessment-autism-diagnosis
-translationStatus: pending
+translationStatus: checked
 audience:
   - parents
   - families
@@ -19,12 +19,13 @@ editor: Ruslan Kurmashev
 riskLevel: moderate
 disclaimerType: medical
 conflictOfInterest: "Мүдделер қақтығысы мәлімделмеген."
-publishedAt: 2026-08-12
+publishedAt: "2026-10-28T22:48:55Z"
 originalPublishedAt: 2026-08-12
 displayPublishedAt: 2026-08-12
-updatedAt: 2026-08-12
+updatedAt: "2026-10-28T22:48:55Z"
 reviewDueAt: 2027-08-12
-draft: true
+versionNote: "Бұл аударма жасанды интеллект көмегімен дайындалған. Тәуелсіз клиникалық немесе кәсіби тілдік рецензия жүргізілген жоқ."
+draft: false
 keyPoints:
   - "Скрининг егжей-тегжейлі бағалау қажеттігін анықтауға көмектеседі, бірақ өздігінен диагноз қоймайды."
   - "Скринингтің оң нәтижесі аутизмді растамайды, ал теріс нәтиже оны жоққа шығармайды."

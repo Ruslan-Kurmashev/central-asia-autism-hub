@@ -10,7 +10,7 @@ section: parents
 topic: autism-assessments-kazakhstan
 slug: "tests-and-assessments-for-suspected-autism-in-kazakhstan"
 translationKey: parents-autism-assessments-kazakhstan
-translationStatus: pending
+translationStatus: checked
 audience:
   - parents
   - families
@@ -19,12 +19,13 @@ editor: Ruslan Kurmashev
 riskLevel: moderate
 disclaimerType: medical
 conflictOfInterest: "No conflict of interest declared."
-publishedAt: 2026-09-14
+publishedAt: "2026-10-28T22:48:55Z"
 originalPublishedAt: 2026-09-14
 displayPublishedAt: 2026-09-14
-updatedAt: 2026-10-17
+updatedAt: "2026-10-28T22:48:55Z"
 reviewDueAt: 2026-12-01
-draft: true
+versionNote: "This translation was prepared with AI assistance. No independent clinical or professional language review was conducted."
+draft: false
 keyPoints:
   - "No single laboratory test, brain image or assessment tool independently confirms or rules out autism."
   - "ADOS-2 and ADI-R can contribute additional diagnostic information but do not replace the psychiatrist's clinical decision."

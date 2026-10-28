@@ -10,7 +10,7 @@ section: parents
 topic: autism-diagnosis-kazakhstan
 slug: "how-autism-is-diagnosed-in-kazakhstan"
 translationKey: parents-autism-diagnosis-kazakhstan
-translationStatus: pending
+translationStatus: checked
 audience:
   - parents
   - families
@@ -19,12 +19,13 @@ editor: Ruslan Kurmashev
 riskLevel: moderate
 disclaimerType: medical
 conflictOfInterest: "No conflict of interest declared."
-publishedAt: 2026-09-14
+publishedAt: "2026-10-28T22:48:55Z"
 originalPublishedAt: 2026-09-14
 displayPublishedAt: 2026-09-14
-updatedAt: 2026-10-17
+updatedAt: "2026-10-28T22:48:55Z"
 reviewDueAt: 2026-12-01
-draft: true
+versionNote: "This translation was prepared with AI assistance. No independent clinical or professional language review was conducted."
+draft: false
 keyPoints:
   - "Medical diagnosis of ASD in Kazakhstan falls within the authority of a psychiatrist. Primary care has limited authority for specific borderline mental and behavioural disorders."
   - "M-CHAT-R helps identify an increased likelihood and the need for further assessment but does not diagnose autism."

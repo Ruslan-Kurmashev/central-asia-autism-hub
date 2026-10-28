@@ -10,7 +10,7 @@ section: parents
 topic: autism-assessments-kazakhstan
 slug: "kazakstanda-autizmge-kudik-bolganda-kandai-tekseruler-kerek"
 translationKey: parents-autism-assessments-kazakhstan
-translationStatus: pending
+translationStatus: checked
 audience:
   - parents
   - families
@@ -19,12 +19,13 @@ editor: Ruslan Kurmashev
 riskLevel: moderate
 disclaimerType: medical
 conflictOfInterest: "Мүдделер қақтығысы мәлімделмеген."
-publishedAt: 2026-09-14
+publishedAt: "2026-10-28T22:48:55Z"
 originalPublishedAt: 2026-09-14
 displayPublishedAt: 2026-09-14
-updatedAt: 2026-10-17
+updatedAt: "2026-10-28T22:48:55Z"
 reviewDueAt: 2026-12-01
-draft: true
+versionNote: "Бұл аударма жасанды интеллект көмегімен дайындалған. Тәуелсіз клиникалық немесе кәсіби тілдік рецензия жүргізілген жоқ."
+draft: false
 keyPoints:
   - "Аутизмді өздігінен растайтын немесе жоққа шығаратын жалғыз талдау, сурет немесе тест жоқ."
   - "ADOS-2 мен ADI-R қосымша диагностикалық ақпарат бере алады, бірақ психиатрдың клиникалық шешімін алмастырмайды."

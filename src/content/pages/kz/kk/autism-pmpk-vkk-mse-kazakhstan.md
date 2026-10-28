@@ -10,21 +10,22 @@ section: parents
 topic: autism-pmpk-vkk-mse-kazakhstan
 slug: "kazakstanda-psihiatr-pmpk-vkk-mse-mindetteri"
 translationKey: parents-autism-pmpk-vkk-mse-kazakhstan
-translationStatus: pending
+translationStatus: checked
 audience:
   - parents
   - families
 author: Ruslan Kurmashev
 editor: Ruslan Kurmashev
-publishedAt: 2026-09-14
+publishedAt: "2026-10-28T22:48:55Z"
 originalPublishedAt: 2026-09-14
 displayPublishedAt: 2026-09-14
-updatedAt: 2026-10-17
+updatedAt: "2026-10-28T22:48:55Z"
 reviewDueAt: 2027-03-14
 riskLevel: moderate
 disclaimerType: medical
 conflictOfInterest: "Мүдделер қақтығысы мәлімделмеген."
-draft: true
+versionNote: "Бұл аударма жасанды интеллект көмегімен дайындалған. Тәуелсіз клиникалық немесе кәсіби тілдік рецензия жүргізілген жоқ."
+draft: false
 keyPoints:
   - "Психиатр, ПМПК, ДКК және МӘС әртүрлі міндет атқарады, сондықтан олардың қорытындыларын бірін-бірі алмастырады деп қарастыруға болмайды."
   - "АСБ-ның медициналық диагностикасы психиатриялық маршрутқа жатады, ал ПМПК ең алдымен баланың ерекше білім беру қажеттіліктерін бағалайды."

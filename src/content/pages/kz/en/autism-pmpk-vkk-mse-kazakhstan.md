@@ -10,21 +10,22 @@ section: parents
 topic: autism-pmpk-vkk-mse-kazakhstan
 slug: "psychiatrist-pmpk-vkk-mse-kazakhstan"
 translationKey: parents-autism-pmpk-vkk-mse-kazakhstan
-translationStatus: pending
+translationStatus: checked
 audience:
   - parents
   - families
 author: Ruslan Kurmashev
 editor: Ruslan Kurmashev
-publishedAt: 2026-09-14
+publishedAt: "2026-10-28T22:48:55Z"
 originalPublishedAt: 2026-09-14
 displayPublishedAt: 2026-09-14
-updatedAt: 2026-10-17
+updatedAt: "2026-10-28T22:48:55Z"
 reviewDueAt: 2027-03-14
 riskLevel: moderate
 disclaimerType: medical
 conflictOfInterest: "No conflict of interest declared."
-draft: true
+versionNote: "This translation was prepared with AI assistance. No independent clinical or professional language review was conducted."
+draft: false
 keyPoints:
   - "A psychiatrist, PMPK, VKK and MSE have different responsibilities. Their documents should not be treated as interchangeable."
   - "ASD medical diagnosis belongs to the psychiatric pathway, whereas PMPK primarily assesses the child's special educational needs."

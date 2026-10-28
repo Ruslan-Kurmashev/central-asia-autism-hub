@@ -10,7 +10,7 @@ section: parents
 topic: assessment-and-diagnosis
 slug: "screening-assessment-and-autism-diagnosis"
 translationKey: parents-screening-assessment-autism-diagnosis
-translationStatus: pending
+translationStatus: checked
 audience:
   - parents
   - families
@@ -19,12 +19,13 @@ editor: Ruslan Kurmashev
 riskLevel: moderate
 disclaimerType: medical
 conflictOfInterest: "No conflict of interest declared."
-publishedAt: 2026-08-12
+publishedAt: "2026-10-28T22:48:55Z"
 originalPublishedAt: 2026-08-12
 displayPublishedAt: 2026-08-12
-updatedAt: 2026-08-12
+updatedAt: "2026-10-28T22:48:55Z"
 reviewDueAt: 2027-08-12
-draft: true
+versionNote: "This translation was prepared with AI assistance. No independent clinical or professional language review was conducted."
+draft: false
 keyPoints:
   - "Screening helps identify whether a more detailed assessment is needed but does not itself establish a diagnosis."
   - "A positive screening result does not confirm autism, and a negative result does not rule it out."
