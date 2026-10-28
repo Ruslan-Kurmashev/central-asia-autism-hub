@@ -21,6 +21,8 @@ The architecture must:
 - keep scientific interpretation, education, professional content, and organisational information distinct;
 - remain simple enough for a static Astro website without accounts, a database, or a backend.
 
+Owner-approved scoped extension (2026-10-28): under the parent-development article, a standalone three-language first-stage M-CHAT-R route at `/kz/{language}/tools/mchat-r/` may operate only when licensed for website and source redistribution and medically checked. The initial questionnaire's 20 answers remain in browser memory only. The only printable output is the initial score, whether Follow-Up is needed, and general next steps. The initial form must never be labelled a completed two-stage M-CHAT-R/F when Follow-Up is required.
+
 ## 2. Primary navigation
 
 The approved primary navigation contains six sections.

@@ -222,7 +222,7 @@ The website does not:
 
 Home-support materials are limited to general, low-risk educational information with clear limitations.
 
-Screening and assessment tools may be explained, but must not be presented as standalone diagnostic instruments. The MVP does not administer screening questionnaires.
+Screening and assessment tools must never be presented as standalone diagnostic instruments. A narrowly scoped, owner-approved extension (2026-10-28) permits an authorised browser-only first-stage M-CHAT-R after actual electronic and source-publication rights are confirmed, its multilingual wording is checked, and original scoring and limitations are validated. A score of 3-7 requires the original Follow-Up interview; the first-stage screen alone cannot be called a completed M-CHAT-R/F. For all outcomes, concerns about the child's development justify professional assessment regardless of the score. No individual diagnosis, therapy choice or clinical interpretation is provided by AutismHub.
 
 ## 9. External courses and learning resources
 
