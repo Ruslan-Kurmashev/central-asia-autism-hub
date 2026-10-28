@@ -517,6 +517,56 @@ try {
     else verify(layout.scrollWidth<=layout.insideWidth+3,
       'Context article '+width+': stacked mobile comparison cards should not scroll horizontally');
   }
+  // M-CHAT-R first-stage checks: all three languages, three viewport sizes,
+  // both reversed items and risk branches, and results-only print content.
+  for(const locale of locales){
+    for(const width of widths){
+      await navigate(base+'/kz/'+locale+'/tools/mchat-r/',width);
+      const marker='MCHAT '+locale+'/'+width;
+      const staticCheck=await evaluate(()=>({
+        heading:document.querySelectorAll('main h1').length,
+        questions:document.querySelectorAll('[data-question]').length,
+        answerGroups:document.querySelectorAll('[data-question] input[type=radio]').length,
+        overflow:document.documentElement.scrollWidth-innerWidth,
+        printText:document.querySelector('.mchat__print')?.textContent||'',
+        firstQuestion:document.querySelector('[data-question] legend')?.textContent||''
+      }));
+      verify(staticCheck.heading===1&&staticCheck.questions===20&&staticCheck.answerGroups===40,marker+': missing official questions or answer options');
+      verify(staticCheck.overflow<=3,marker+': horizontal overflow');
+      verify(!staticCheck.printText.includes(staticCheck.firstQuestion.trim()),marker+': question leaked into printable report');
+      const scenario=await evaluate(()=>{
+        const root=document.querySelector('[data-mchat]');
+        const age=root?.querySelector('#mchat-age');
+        const fill=(elevatedCount)=>{
+          root.querySelector('[data-reset]')?.click();
+          age.value='18';root.querySelector('[data-start]').click();
+          for(let i=0;i<20;i++){
+            const risk=i<elevatedCount;
+            const yes=[2,5,12].includes(i+1)?risk:!risk;
+            const input=root.querySelector('[data-question="'+i+'"] input[value="'+(yes?'yes':'no')+'"]');
+            if(!input)return false;
+            input.checked=true;input.dispatchEvent(new Event('change',{bubbles:true}));
+          }
+          for(let i=0;i<20;i++)root.querySelector('[data-next]').click();
+          return !root.querySelector('[data-view=result]').hidden;
+        };
+        const ok0=fill(0);
+        const low={score:root.querySelector('[data-result-score]')?.textContent,follow:root.querySelector('[data-result-follow]')?.textContent};
+        const ok3=fill(3);
+        const middle={score:root.querySelector('[data-result-score]')?.textContent,follow:root.querySelector('[data-result-follow]')?.textContent};
+        const ok20=fill(20);
+        const high={score:root.querySelector('[data-result-score]')?.textContent,follow:root.querySelector('[data-result-follow]')?.textContent};
+        const resultHtml=root.querySelector('.mchat__print')?.textContent||'';
+        return {ok0,ok3,ok20,low,middle,high,resultHasQuestion:resultHtml.includes(root.querySelector('[data-question] legend')?.textContent||'XXXXXXXX'),printScore:root.querySelector('[data-print-score]')?.textContent,complete:root.dataset.complete};
+      });
+      verify(scenario.ok0&&scenario.ok3&&scenario.ok20,marker+': could not complete the in-browser questionnaire');
+      verify(scenario.low.score==='0 / 20'&&scenario.middle.score==='3 / 20'&&scenario.high.score==='20 / 20',marker+': reverse scoring or category calculations failed');
+      verify(scenario.middle.follow&&/Follow-Up/i.test(scenario.middle.follow),marker+': intermediate result lacks Follow-Up warning');
+      verify(scenario.complete==='true'&&scenario.printScore==='20 / 20'&&!scenario.resultHasQuestion,marker+': results-only printable report failed');
+      console.log('USER_JOURNEY_MCHAT '+JSON.stringify({locale,width,staticCheck:{heading:staticCheck.heading,questions:staticCheck.questions,overflow:staticCheck.overflow},scenario}));
+      if(width===360||width===1440)await screenshot(locale,width,'mchat');
+    }
+  }
   console.log('USER_JOURNEY_SUMMARY '+checks+' assertions; '+errors.length+' problems; '+(locales.length*widths.length*3)+' route visits.');
   for(const message of errors)console.log('USER_JOURNEY_FAIL '+message);
   if(errors.length)process.exitCode=1;
