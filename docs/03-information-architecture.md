@@ -143,6 +143,24 @@ Each published article is assigned to exactly one subgroup using its stable `tra
 
 The initial allocation and curation are recorded in `docs/audit/parent-support-taxonomy-2026-10-26.md` and `docs/audit/parent-support-consolidation-stage1-2026-10-26.md`. The subsequent ten-article consolidation is documented in `docs/audit/parent-support-merges-2026-10-26.md`. The proposed current structure retains 45 parent support articles (36 primary, 9 supplementary) in ten subgroups. Ten source articles are preserved in Git as drafts; ten accessible static HTML route pages retain their historical URLs and point to the six destination articles. The source taxonomy for UI rendering remains `src/data/parent-support-subgroups.ts`. Before release, medical source-to-claim review, translation parity, link and redirect QA, and human editorial sign-off are required.
 
+### 5.2. Editorial order for the autism-basics parent articles (28 October 2026)
+
+The parent subgroup **Understanding autism: the basics** is a sequenced reading guide, not a chronological news feed. Its ten published articles are ordered by stable `translationKey`, identically in Russian, Kazakh and English, regardless of language-specific slug, `publishedAt`, `originalPublishedAt`, `displayPublishedAt` or `updatedAt`. Keep the existing multilingual glossary immediately after the opening article as an optional reference, not an eleventh substantive article.
+
+The parent-first sequence is:
+1. What is autism? (`parents-what-is-autism`).
+2. Autism myths and facts (`parents-autism-myths-facts`).
+3. How autistic children communicate (`parents-autism-communication-speech-gestures-echolalia`).
+4. Sensory differences in autism (`parents-autism-sensory-differences`).
+5. Co-occurring conditions and health (`parents-autism-co-occurring-conditions`).
+6. Stimming and repetitive actions (`parents-autism-stimming-repetitive-actions`).
+7. Meltdown and shutdown (`parents-autism-meltdown-shutdown`).
+8. Neurodiversity and respectful language (`parents-autism-neurodiversity-language`).
+9. Autism in girls (`parents-autism-in-girls`).
+10. Why autism develops (`parents-autism-causes`).
+
+Rationale: start with definition and misconception prevention, then everyday communication and sensory experience, separate medical concerns, self-regulation and overload, before advanced social, subgroup-specific and causal explanations. A reading sequence does not replace urgent professional assessment, and links to medical red flags remain in their articles. The list and comparator are implemented in `src/data/parent-autism-basics-reading-order.mjs` and verified against the rendered three-language parent lists by `npm run check:parent-basics-order`. Article dates and metadata do not change.
+
 ## 6. Research Explained
 
 Research Explained is a separate editorial section for plain-language interpretation of scientific articles, research findings, systematic reviews, and professional guidelines.
