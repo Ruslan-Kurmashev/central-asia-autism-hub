@@ -256,7 +256,7 @@ NHS балалар эрготерапиясы қызметтері *әрекет
 ### 8-тапсырма. Қол жууға қатысуды үйренеміз
 
 <figure class="independence-handwashing-figure">
-  <img src="/central-asia-autism-hub/images/editorial/diagrams/child-daily-independence-handwashing-steps.webp" alt="Ана мен бала бейнеленген төрт сурет: қолды сулау, сабындау, алақан мен саусақты шамамен 20 секунд ысқылау, сабынды шайып, сүлгімен құрғату." width="1448" height="1086" loading="lazy" decoding="async" style="display:block;width:100%;height:auto;border-radius:16px" />
+  <img src="/central-asia-autism-hub/images/editorial/diagrams/child-daily-independence-handwashing-steps-kk.svg" alt="Ана мен бала бейнеленген төрт сурет: қолды сулау, сабындау, алақан мен саусақты шамамен 20 секунд ысқылау, сабынды шайып, сүлгімен құрғату." width="1448" height="1086" loading="lazy" decoding="async" style="display:block;width:100%;height:auto;border-radius:16px" />
   <figcaption>Қол жуудың қадамдық мысалы. Бала шамасы келетін кезеңдерге қатысады, ересек қажет жерде көмектеседі.</figcaption>
 </figure>
 
