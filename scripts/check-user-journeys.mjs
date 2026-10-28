@@ -564,6 +564,14 @@ try {
       verify(scenario.middle.follow===scenario.middle.expected&&!!scenario.middle.follow,marker+': intermediate result lacks localised Follow-Up warning');
       verify(scenario.complete==='true'&&scenario.printScore==='20 / 20'&&!scenario.resultHasQuestion,marker+': results-only printable report failed');
       console.log('USER_JOURNEY_MCHAT '+JSON.stringify({locale,width,staticCheck:{heading:staticCheck.heading,questions:staticCheck.questions,overflow:staticCheck.overflow},scenario}));
+      if(width===1440){
+        const printed=await send('Page.printToPDF',{printBackground:true,preferCSSPageSize:true});
+        verify(Boolean(printed?.data),marker+': Chromium PDF export returned no data');
+        if(printed?.data){
+          await mkdir(outDir,{recursive:true});
+          await writeFile(path.join(outDir,locale+'-mchat-results-only.pdf'),Buffer.from(printed.data,'base64'));
+        }
+      }
       if(width===360||width===1440)await screenshot(locale,width,'mchat');
     }
   }
