@@ -550,18 +550,27 @@ try {
           for(let i=0;i<20;i++)root.querySelector('[data-next]').click();
           return !root.querySelector('[data-view=result]').hidden;
         };
+        const summary=()=>({
+          category:root.querySelector('[data-result-category]')?.textContent?.trim(),
+          meaning:root.querySelector('[data-result-meaning]')?.textContent?.trim(),
+          advice:root.querySelector('[data-result-advice]')?.textContent?.trim()
+        });
         const ok0=fill(0);
-        const low={score:root.querySelector('[data-result-score]')?.textContent,follow:root.querySelector('[data-result-follow]')?.textContent};
+        const low={score:root.querySelector('[data-result-score]')?.textContent,follow:root.querySelector('[data-result-follow]')?.textContent,...summary()};
         const ok3=fill(3);
-        const middle={score:root.querySelector('[data-result-score]')?.textContent,follow:root.querySelector('[data-result-follow]')?.textContent,expected:root.dataset.moderateFollow};
+        const middle={score:root.querySelector('[data-result-score]')?.textContent,follow:root.querySelector('[data-result-follow]')?.textContent,expected:root.dataset.moderateFollow,...summary()};
         const ok20=fill(20);
-        const high={score:root.querySelector('[data-result-score]')?.textContent,follow:root.querySelector('[data-result-follow]')?.textContent};
+        const high={score:root.querySelector('[data-result-score]')?.textContent,follow:root.querySelector('[data-result-follow]')?.textContent,...summary()};
         const resultHtml=root.querySelector('.mchat__print')?.textContent||'';
-        return {ok0,ok3,ok20,low,middle,high,resultHasQuestion:resultHtml.includes(root.querySelector('[data-question] legend')?.textContent||'XXXXXXXX'),printScore:root.querySelector('[data-print-score]')?.textContent,complete:root.dataset.complete};
+        return {ok0,ok3,ok20,low,middle,high,resultHasQuestion:resultHtml.includes(root.querySelector('[data-question] legend')?.textContent||'XXXXXXXX'),printScore:root.querySelector('[data-print-score]')?.textContent,printMeaning:root.querySelector('[data-print-meaning]')?.textContent?.trim(),printAdvice:root.querySelector('[data-print-advice]')?.textContent?.trim(),guidanceCount:root.querySelectorAll('.mchat__guidance h3').length,printGuidanceCount:root.querySelectorAll('.mchat__print-step h3').length,helpLink:root.querySelector('.mchat__guidance a')?.getAttribute('href'),complete:root.dataset.complete};
       });
       verify(scenario.ok0&&scenario.ok3&&scenario.ok20,marker+': could not complete the in-browser questionnaire');
       verify(scenario.low.score==='0 / 20'&&scenario.middle.score==='3 / 20'&&scenario.high.score==='20 / 20',marker+': reverse scoring or category calculations failed');
       verify(scenario.middle.follow===scenario.middle.expected&&!!scenario.middle.follow,marker+': intermediate result lacks localised Follow-Up warning');
+      verify([scenario.low,scenario.middle,scenario.high].every(x=>x.category?.length>10&&x.meaning?.length>45&&x.advice?.length>80),marker+': a score category is missing plain-language meaning or steps');
+      verify(new Set([scenario.low.category,scenario.middle.category,scenario.high.category]).size===3,marker+': results are not distinct for low, medium and high');
+      verify(scenario.guidanceCount===3&&scenario.printGuidanceCount===3&&scenario.helpLink?.includes('/help-kazakhstan/'),marker+': parent actions or local support link missing');
+      verify(scenario.printMeaning===scenario.high.meaning&&scenario.printAdvice===scenario.high.advice,marker+': PDF guidance does not match visible guidance');
       verify(scenario.complete==='true'&&scenario.printScore==='20 / 20'&&!scenario.resultHasQuestion,marker+': results-only printable report failed');
       console.log('USER_JOURNEY_MCHAT '+JSON.stringify({locale,width,staticCheck:{heading:staticCheck.heading,questions:staticCheck.questions,overflow:staticCheck.overflow},scenario}));
       if(width===1440){
