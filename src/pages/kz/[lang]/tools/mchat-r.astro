@@ -248,7 +248,9 @@ if (root) {
     const label=root.dataset[key]??'';
     const advice=root.dataset[key+'Advice']??'';
     const follow=root.dataset[key+'Follow']??'';
-    const date=new Intl.DateTimeFormat(root.dataset.locale==='kk'?'kk-KZ':root.dataset.locale==='en'?'en-GB':'ru-RU',{day:'numeric',month:'long',year:'numeric'}).format(new Date());
+    const now=new Date();
+    const isoDate=[now.getFullYear(),String(now.getMonth()+1).padStart(2,'0'),String(now.getDate()).padStart(2,'0')].join('-');
+    const date=root.dataset.locale==='kk'?isoDate:new Intl.DateTimeFormat(root.dataset.locale==='en'?'en-GB':'ru-RU',{day:'numeric',month:'long',year:'numeric'}).format(now);
     text('[data-result-score],[data-print-score]',String(result.score)+' / 20');
     text('[data-result-category],[data-print-category]',label);
     text('[data-result-advice],[data-print-advice]',advice);
