@@ -551,7 +551,7 @@ try {
           return !root.querySelector('[data-view=result]').hidden;
         };
         const ok0=fill(0);
-        const low={score:root.querySelector('[data-result-score]')?.textContent,follow:root.querySelector('[data-result-follow]')?.textContent};
+        const low={score:root.querySelector('[data-result-score]')?.textContent,follow:root.querySelector('[data-result-follow]')?.textContent,expected:root.dataset.moderateFollow};
         const ok3=fill(3);
         const middle={score:root.querySelector('[data-result-score]')?.textContent,follow:root.querySelector('[data-result-follow]')?.textContent};
         const ok20=fill(20);
@@ -561,7 +561,7 @@ try {
       });
       verify(scenario.ok0&&scenario.ok3&&scenario.ok20,marker+': could not complete the in-browser questionnaire');
       verify(scenario.low.score==='0 / 20'&&scenario.middle.score==='3 / 20'&&scenario.high.score==='20 / 20',marker+': reverse scoring or category calculations failed');
-      verify(scenario.middle.follow&&/Follow-Up/i.test(scenario.middle.follow),marker+': intermediate result lacks Follow-Up warning');
+      verify(scenario.middle.follow===scenario.middle.expected&&!!scenario.middle.follow,marker+': intermediate result lacks localised Follow-Up warning');
       verify(scenario.complete==='true'&&scenario.printScore==='20 / 20'&&!scenario.resultHasQuestion,marker+': results-only printable report failed');
       console.log('USER_JOURNEY_MCHAT '+JSON.stringify({locale,width,staticCheck:{heading:staticCheck.heading,questions:staticCheck.questions,overflow:staticCheck.overflow},scenario}));
       if(width===360||width===1440)await screenshot(locale,width,'mchat');
