@@ -96,11 +96,53 @@ for (const [lang, languageLabel] of Object.entries(labels)) {
     assert.ok(matches[0].includes('data-language="' + teachingLanguage + '"'),
       'Incorrect actual teaching language on ' + lang + ': ' + url);
   }
-  assert.equal(newCards.length, 51,
-    'Exactly 51 unique course cards expected on ' + lang + ', after grouping bilingual Orleu versions');
+  assert.equal(newCards.length, 56,
+    'Exactly 56 unique course cards expected on ' + lang + ', after grouping bilingual Orleu versions');
   const primaryCare = newCards.find((card) => card.includes('autism-and-neurodiversity-in-primary-care/'));
   assert.ok(primaryCare && primaryCare.includes('2026'),
     'Time-limited free primary-care course must disclose its 2026 deadline in ' + lang);
+  // Check all five newly approved sensory programmes in every catalogue
+  // locale, while keeping teaching language independent from UI language.
+  for (const [url, actualTeachingLanguage] of [
+  [
+    "https://www.sensoryintegrationeducation.com/courses/transform-your-practice-with-sensory-integration",
+    "en"
+  ],
+  [
+    "https://register.tealearn.com/browse/tea/network/tslat/courses/evidence-based-practice-ayres-sensory-integration",
+    "en"
+  ],
+  [
+    "https://www.sensoryintegrationeducation.com/products/courses/discover-sensory-processing-integration",
+    "en"
+  ],
+  [
+    "https://carelearning.org.uk/courses/sensory-processing-training-course/",
+    "en"
+  ],
+  [
+    "https://www.art-talant.org/kursy/tehnologii-raboty-s-detmi-s-ovz/sensornaja-integracija-kak-metod-raboty-s-detmi-s-narushenijami-razvitija",
+    "ru"
+  ]
+]) {
+    const found = newCards.filter((card) => card.includes(url));
+    assert.equal(found.length, 1, 'Sensory course must appear exactly once in ' + lang + ': ' + url);
+    assert.ok(found[0].includes('data-language="' + actualTeachingLanguage + '"'),
+      'Sensory course teaching-language badge is incorrect in ' + lang + ': ' + url);
+    assert.ok(found[0].includes('course-catalogue__outcome') && found[0].includes('course-catalogue__access'),
+      'Sensory course missing registration or completion conditions in ' + lang + ': ' + url);
+  }
+  const paidDocuments = newCards.find((card) =>
+    card.includes('sensornaja-integracija-kak-metod-raboty-s-detmi-s-narushenijami-razvitija'));
+  assert.ok(paidDocuments && paidDocuments.includes('380'),
+    'Optional RUB 380 document fee must be disclosed in ' + lang);
+  const thirtyDay = newCards.filter((card) =>
+    card.includes('sensoryintegrationeducation.com/') &&
+    (card.includes('transform-your-practice-with-sensory-integration') ||
+     card.includes('discover-sensory-processing-integration')));
+  assert.equal(thirtyDay.length, 2, 'Expected two SIE courses in ' + lang);
+  for (const card of thirtyDay) assert.ok(card.includes('30'),
+    'SIE 30-day access must be disclosed in ' + lang);
   const itemCount = cards.length;
   const cardBlocks = [...html.matchAll(/<article\b[^>]*\bdata-course-item\b[^>]*>[\s\S]*?<\/article>/g)].map((m) => m[0]);
   // These programmes have two provider URLs but are one catalogue card each.
