@@ -14,6 +14,7 @@ import { countVisibleLearningCourses } from '../../../../lib/learning-catalogue-
 import { articlePath, localePath, sitePath } from '../../../../lib/urls';
 import { getResearchCardVisual } from '../../../../data/research-card-visuals';
 import { compareParentAutismBasics } from '../../../../data/parent-autism-basics-reading-order.mjs';
+import { compareParentDevelopment } from '../../../../data/parent-development-reading-order.mjs';
 import {
   SECTIONS,
   SITE,
@@ -286,10 +287,15 @@ const sectionGroups = groupDefinitions.map((group) => ({
   materials: materials.filter((material) =>
     group.topics.includes(material.data.topic),
   ).sort((left, right) => {
-    // Parent-first reading sequence, stable across RU / KK / EN.
-    // Publication dates remain visible metadata but never determine this group's rank.
-    if (!showLocalizedGlossary || group.id !== 'autism-basics') return 0;
-    return compareParentAutismBasics(left.data.translationKey, right.data.translationKey);
+    // Curated parent reading paths, independent of dates and translated slugs.
+    if (section !== 'parents') return 0;
+    if (group.id === 'autism-basics') {
+      return compareParentAutismBasics(left.data.translationKey, right.data.translationKey);
+    }
+    if (group.id === 'development') {
+      return compareParentDevelopment(left.data.translationKey, right.data.translationKey);
+    }
+    return 0;
   }),
   glossaryCount: showLocalizedGlossary && group.id === 'autism-basics' ? 1 : 0,
 }));

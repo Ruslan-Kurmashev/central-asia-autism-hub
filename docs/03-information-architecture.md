@@ -161,6 +161,25 @@ The parent-first sequence is:
 
 Rationale: start with definition and misconception prevention, then everyday communication and sensory experience, separate medical concerns, self-regulation and overload, before advanced social, subgroup-specific and causal explanations. A reading sequence does not replace urgent professional assessment, and links to medical red flags remain in their articles. The list and comparator are implemented in `src/data/parent-autism-basics-reading-order.mjs` and verified against the rendered three-language parent lists by `npm run check:parent-basics-order`. Article dates and metadata do not change.
 
+### 5.3. Editorial reading order for child development (28 October 2026)
+
+The **Child development** parent group has 12 published materials, 11 in `child-development` and one in `development-concerns`. All three languages use one editor-curated order based on stable `translationKey` instead of dates or locale-specific slugs.
+
+1. Developmental milestones (2 months to 5 years) (`parents-development-milestones`).
+2. When to discuss development with a professional (`parents-when-to-discuss-child-development`).
+3. Loss of acquired skills and urgent warning signs (`parents-child-developmental-skill-loss`).
+4. Observing development at home (`parents-how-to-observe-child-development-at-home`).
+5. Speech, language and understanding (`parents-speech-language-understanding-development`).
+6. Supporting communication in daily life (`parents-everyday-communication-support`).
+7. Play development and caregiver participation (`parents-child-play-development-and-caregiver-participation`).
+8. Emotions and co-regulation (`parents-emotions-coregulation-practical-guide`).
+9. Different behaviour at home and preschool (`parents-child-context-dependent-behaviour-home-preschool`).
+10. Everyday independence and self-care (`parents-child-daily-independence-practical-guide`).
+11. Gross and fine motor activities at home (`parents-gross-fine-motor-home-practice`).
+12. Speech development in a bilingual family (`parents-bilingual-family-speech-development`).
+
+Rationale: present developmental milestones, when to request professional assessment, and loss of acquired skills as a warning sign before routine home observation or activity ideas. Then explain language and communication, play and emotion regulation, differences across settings, self-care and motor skills, and finish with bilingual-specific considerations. This sequence is educational and must never delay referral for concerning symptoms. The order is implemented in `src/data/parent-development-reading-order.mjs` and verified for actual RU, KK and EN listing cards by `npm run check:parent-development-order`. Keep article content, dates, translation status, URLs, other group sorting and visual design unchanged.
+
 ## 6. Research Explained
 
 Research Explained is a separate editorial section for plain-language interpretation of scientific articles, research findings, systematic reviews, and professional guidelines.
