@@ -112,8 +112,9 @@ def build(filename, title, story, expected_pages, expected_tokens):
     if len(reader.pages) != expected_pages:
         raise RuntimeError(f"{filename}: expected {expected_pages} pages, got {len(reader.pages)}")
     fulltext = "\n".join(page.extract_text() or "" for page in reader.pages)
+    normalized_text = " ".join(fulltext.split())
     for needle in expected_tokens:
-        if needle not in fulltext:
+        if " ".join(needle.split()) not in normalized_text:
             raise RuntimeError(f"{filename}: missing content {needle}")
     if "�" in fulltext:
         raise RuntimeError(f"{filename}: broken font glyphs")
