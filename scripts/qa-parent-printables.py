@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Inspect all 17 parent PDFs for printable text, clipping, and visible figures.
+"""Inspect all 20 parent PDFs for printable text, clipping, and visible figures.
 
 Also renders low-resolution previews for mandatory manual visual QA.
 This is not a substitute for viewing the artifact images.
@@ -16,6 +16,9 @@ FILES=[
 "motor/10-igr-krupnaya-motorika-ru.pdf",
 "motor/15-zadanii-melkaya-motorika-ru.pdf",
 "motor/nedelnyi-plan-i-dnevnik-motoriki-ru.pdf",
+"motor/iri-motorikaga-10-oiyn-kk.pdf",
+"motor/usak-motorikaga-15-tapsyrma-kk.pdf",
+"motor/aptalyk-zhospar-zhane-kimyl-kundeligi-kk.pdf",
 "emotions/12-situatsiy-emotsii-rebenka-ru.pdf",
 "emotions/12-zhagday-emotsiyalar-bala-kk.pdf",
 "emotions/pamyatki-plan-i-dnevnik-emotsii-ru.pdf",
@@ -63,7 +66,7 @@ for relative in FILES:
             image.save(str(PREV/f"{safe}__p{idx+1}.png"))
     print(f"PDF VISUAL PREFLIGHT: {relative}; pages={document.page_count}; first page rendered")
     count+=1
-if count!=17:errors.append(f"Expected 17 PDFs, found {count}")
+if count!=20:errors.append(f"Expected 20 PDFs, found {count}")
 if errors:
     for err in errors[:35]:print("PDF_QA_ERROR",err)
     raise RuntimeError(f"Parent PDF preflight found {len(errors)} issues")
