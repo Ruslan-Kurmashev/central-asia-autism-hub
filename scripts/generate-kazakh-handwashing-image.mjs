@@ -7,7 +7,7 @@ import { fileURLToPath } from "node:url";
 
 const root = resolve(dirname(fileURLToPath(import.meta.url)), "..");
 const source = resolve(root, "public/images/editorial/diagrams/child-daily-independence-handwashing-steps.webp");
-const output = resolve(root, "public/images/editorial/diagrams/child-daily-independence-handwashing-steps-kk.svg");
+const output = resolve(root, "public/images/editorial/diagrams/child-daily-independence-handwashing-steps-kk-v2.svg");
 const base64 = readFileSync(source).toString("base64");
 
 const cards = [
