@@ -517,6 +517,98 @@ try {
     else verify(layout.scrollWidth<=layout.insideWidth+3,
       'Context article '+width+': stacked mobile comparison cards should not scroll horizontally');
   }
+  // M-CHAT-R first-stage checks: all three languages, three viewport sizes,
+  // both reversed items and risk branches, and results-only print content.
+  for(const locale of locales){
+    for(const width of widths){
+      await navigate(base+'/kz/'+locale+'/tools/mchat-r/',width);
+      const marker='MCHAT '+locale+'/'+width;
+      const staticCheck=await evaluate(()=>({
+        heading:document.querySelectorAll('main h1').length,
+        questions:document.querySelectorAll('[data-question]').length,
+        answerGroups:document.querySelectorAll('[data-question] input[type=radio]').length,
+        overflow:document.documentElement.scrollWidth-innerWidth,
+        printText:document.querySelector('.mchat__print')?.textContent||'',
+        firstQuestion:document.querySelector('[data-question] legend')?.textContent||''
+      }));
+      verify(staticCheck.heading===1&&staticCheck.questions===20&&staticCheck.answerGroups===40,marker+': missing official questions or answer options');
+      verify(staticCheck.overflow<=3,marker+': horizontal overflow');
+      verify(!staticCheck.printText.includes(staticCheck.firstQuestion.trim()),marker+': question leaked into printable report');
+      const scenario=await evaluate(()=>{
+        const root=document.querySelector('[data-mchat]');
+        const age=root?.querySelector('#mchat-age');
+        const questions=[...root.querySelectorAll('[data-question]')];
+        const fill=(score)=>{
+          root.querySelector('[data-reset]')?.click();
+          age.value='18';root.querySelector('[data-start]')?.click();
+          for(let i=0;i<20;i++){
+            const elevated=i<score;
+            const yes=[2,5,12].includes(i+1)?elevated:!elevated;
+            const input=questions[i]?.querySelector('input[value="'+(yes?'yes':'no')+'"]');
+            if(!input)return false;
+            input.checked=true;
+            input.dispatchEvent(new Event('change',{bubbles:true}));
+          }
+          for(let i=0;i<20;i++)root.querySelector('[data-next]')?.click();
+          return !root.querySelector('[data-view=result]').hidden;
+        };
+        window.__mchatQaFill=fill;
+        const all=[];
+        for(let score=0;score<=20;score++){
+          const completed=fill(score);
+          all.push({
+            requested:score,completed,
+            score:root.querySelector('[data-result-score]')?.textContent?.trim(),
+            category:root.querySelector('[data-result-category]')?.textContent?.trim(),
+            meaning:root.querySelector('[data-result-meaning]')?.textContent?.trim(),
+            advice:root.querySelector('[data-result-advice]')?.textContent?.trim(),
+            follow:root.querySelector('[data-result-follow]')?.textContent?.trim(),
+            pdfScore:root.querySelector('[data-print-score]')?.textContent?.trim(),
+            pdfMeaning:root.querySelector('[data-print-meaning]')?.textContent?.trim(),
+            pdfAdvice:root.querySelector('[data-print-advice]')?.textContent?.trim(),
+            pdfFollow:root.querySelector('[data-print-follow]')?.textContent?.trim()
+          });
+        }
+        const printed=root.querySelector('.mchat__print')?.textContent||'';
+        const firstQuestion=questions[0]?.querySelector('legend')?.textContent?.trim()||'';
+        return {
+          all, complete:root.dataset.complete, 
+          resultHasQuestion:printed.includes(firstQuestion),
+          guidanceCount:root.querySelectorAll('.mchat__guidance h3').length,
+          printGuidanceCount:root.querySelectorAll('.mchat__print-step h3').length,
+          helpLink:root.querySelector('.mchat__guidance a')?.getAttribute('href')
+        };
+      });
+      verify(scenario.all.length===21&&scenario.all.every(x=>x.completed),marker+': one or more of 21 complete-answer scenarios failed');
+      verify(scenario.all.every(x=>x.score===x.requested+' / 20'&&x.pdfScore===x.score),marker+': wrong score on screen or PDF');
+      verify(scenario.all.every(x=>x.category?.length>10&&x.meaning?.length>45&&x.advice?.length>80&&x.follow?.length>4),marker+': missing clear outcome, meaning, next step or follow-up status');
+      verify(scenario.all.every(x=>x.pdfMeaning===x.meaning&&x.pdfAdvice===x.advice&&x.pdfFollow===x.follow),marker+': printable report differs from displayed results');
+      const categoryOf=(score)=>score<=2?'low':score<=7?'moderate':'high';
+      for(const band of ['low','moderate','high']){
+        const entries=scenario.all.filter(x=>categoryOf(x.requested)===band);
+        verify(entries.length===(band==='low'?3:band==='moderate'?5:13),marker+': wrong number of scores in '+band+' range');
+        verify(new Set(entries.map(x=>x.category)).size===1&&new Set(entries.map(x=>x.meaning)).size===1&&new Set(entries.map(x=>x.follow)).size===1,marker+': inconsistent guidance inside '+band+' range');
+      }
+      verify(new Set([0,3,8].map(i=>scenario.all[i]?.category)).size===3,marker+': category thresholds not distinct at 0,3,8');
+      verify(scenario.all[3].follow!==scenario.all[2].follow&&scenario.all[8].follow!==scenario.all[7].follow,marker+': incorrect Follow-Up transition at 2/3 or 7/8');
+      verify(scenario.guidanceCount===3&&scenario.printGuidanceCount===3&&scenario.helpLink?.includes('/help-kazakhstan/'),marker+': parent guidance or Kazakhstan link is missing');
+      verify(scenario.complete==='true'&&!scenario.resultHasQuestion,marker+': private answer/question leakage to PDF');
+      console.log('USER_JOURNEY_MCHAT_ALL_SCORES '+JSON.stringify({locale,width,checked:scenario.all.length,low:scenario.all.slice(0,3).map(x=>x.score),moderate:scenario.all.slice(3,8).map(x=>x.score),high:scenario.all.slice(8).map(x=>x.score),overflow:staticCheck.overflow,failures:errors.filter(x=>x.startsWith(marker))}));
+      if(width===1440){
+        for(const score of [0,2,3,7,8,20]){
+          const ok=await evaluate('()=>window.__mchatQaFill('+score+')');
+          verify(ok,marker+': could not prepare PDF for score '+score);
+          const printed=await send('Page.printToPDF',{printBackground:true,preferCSSPageSize:true});
+          verify(Boolean(printed?.data),marker+': Chromium PDF export failed for score '+score);
+          if(printed?.data){
+            await mkdir(outDir,{recursive:true});
+            await writeFile(path.join(outDir,locale+'-mchat-score-'+score+'.pdf'),Buffer.from(printed.data,'base64'));
+          }
+        }
+      }
+      if(width===360||width===1440)await screenshot(locale,width,'mchat');
+    }
+  }
   console.log('USER_JOURNEY_SUMMARY '+checks+' assertions; '+errors.length+' problems; '+(locales.length*widths.length*3)+' route visits.');
   for(const message of errors)console.log('USER_JOURNEY_FAIL '+message);
   if(errors.length)process.exitCode=1;

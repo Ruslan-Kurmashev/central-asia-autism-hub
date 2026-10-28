@@ -1,0 +1,370 @@
+---
+import BaseLayout from '../../../../layouts/BaseLayout.astro';
+import { MCHAT_ITEMS } from '../../../../data/mchat-licensed-items';
+import { articlePath, localePath } from '../../../../lib/urls';
+import { SITE, SUPPORTED_LOCALES, type Locale } from '../../../../site.config';
+
+export function getStaticPaths() {
+  return SUPPORTED_LOCALES.map((lang) => ({ params: { lang }, props: { lang } }));
+}
+interface Props { lang: Locale }
+const { lang } = Astro.props;
+const t = {
+  ru: {
+    title: 'M-CHAT-R: скрининг развития ребёнка',
+    intro: 'Первый этап скрининга M-CHAT-R для родителей детей 16–30 месяцев. Опросник не устанавливает и не исключает диагноз аутизма.',
+    start: 'Начать скрининг',
+    ageLabel: 'Возраст ребёнка в полных месяцах',
+    agePrompt: 'Выберите возраст',
+    ageError: 'Для этой версии опросника допускается возраст от 16 до 30 месяцев. При вопросах о развитии ребёнка обратитесь к специалисту независимо от возраста.',
+    directions: 'Отвечайте исходя из обычного поведения ребёнка. Если вы видели действие несколько раз, но оно не является обычным, выберите «Нет». Ответьте на все 20 вопросов.',
+    privacy: 'Ответы обрабатываются только в вашем браузере. Они не отправляются на сервер, не сохраняются в учетной записи и не включаются в PDF.',
+    stages: ['Начало','20 вопросов','Результат'],
+    questionWord:'Вопрос', of:'из', yes:'Да', no:'Нет', back:'Назад', next:'Далее', finish:'Узнать результат', print:'Скачать PDF / распечатать',
+    resultTitle:'Результат первого этапа M-CHAT-R', scoreLabel:"Количество баллов (для врача)", ageResult:'Возраст ребёнка (месяцев)',
+    low:"По этому опроснику дополнительных вопросов пока не требуется", moderate:"Нужно уточнить ответы со специалистом", high:"Обратитесь к врачу для оценки развития ребёнка",
+    lowAdvice:"Если развитие ребёнка не вызывает вопросов, специальное направление только по этому результату обычно не требуется. Если ребёнку меньше двух лет, повторите скрининг после второго дня рождения. Если вас что-либо беспокоит, обсудите это с врачом независимо от баллов.",
+    moderateAdvice:"Запишитесь на приём в ближайшее время. Покажите результат и попросите провести второй этап M-CHAT-R/F: беседу, в которой специалист уточняет отдельные ответы (Follow-Up). Без этой беседы результат первого этапа нельзя считать окончательным.",
+    highAdvice:"Не откладывайте обращение к врачу. Попросите оценить развитие ребёнка и определить, нужна ли более подробная диагностика и ранняя поддержка. По правилам этого опросника второй этап уточняющей беседы можно пропустить и перейти к оценке.",
+    diagnosis:"Важно: этот скрининг не ставит диагноз и не исключает аутизм. При утрате ранее освоенных навыков или других опасениях обращайтесь к врачу независимо от баллов.",
+    followLabel:"Нужен ли второй этап опросника", followNotNeeded:"По полученным ответам не требуется", followRequired:"Да. Уточняющая беседа ещё не проводилась", followBypass:"Можно сразу обратиться для профессиональной оценки",
+    reportTitle: "Результат скрининга: что делать дальше",
+    reportLead: "Памятка для родителей после первого этапа M-CHAT-R. Её можно сохранить и показать врачу.",
+    outcomeTitle: "Главное о результате",
+    lowMeaning: "По вашим ответам этот опросник не выявил повышенной вероятности аутизма. Но один опросник не может исключить особенности развития.",
+    moderateMeaning: "Некоторые ответы требуют уточнения. Первый этап пока не даёт окончательного результата. Это не означает, что у ребёнка аутизм.",
+    highMeaning: "По ответам ребёнку рекомендована дополнительная оценка развития. Это не диагноз аутизма. У высокого балла могут быть разные причины, которые важно обсудить с врачом.",
+    nextTitle: "Что сделать сейчас",
+    whereTitle: "Куда обратиться в Казахстане",
+    whereText: "Обратитесь в поликлинику, к которой прикреплён ребёнок. Запишитесь к педиатру или врачу общей практики. Врач поможет определить, нужна ли дополнительная оценка развития и поддержка.",
+    prepareTitle: "Как подготовиться к приёму",
+    prepareText: "Сохраните эту памятку и покажите её врачу. Запишите два-три примера того, что вас беспокоит: общение, игра, речь или изменения навыков. Не нужно заранее ставить диагноз.",
+    helpLink: "Как получить помощь в Казахстане",
+    detailsTitle: "Данные опросника",
+    detailLead: "Баллы нужны специалисту для понимания результата. Они не означают степень аутизма.",
+    footer:'© 2009 Diana Robins, Deborah Fein, & Marianne Barton. Русский перевод: Antonina Steinberg & Igor Shpitsberg. Источник: mchatscreen.com. Версия первого этапа, не заключение врача.',
+    printNotice:'Для сохранения PDF выберите «Сохранить как PDF» в системном окне печати. В PDF только балл и рекомендации, без вопросов и ответов.',
+    dateLabel:'Дата прохождения', introArticle:'К статье о развитии ребёнка', restart:'Начать заново'
+  },
+  kk: {
+    title:'M-CHAT-R: баланың даму скринингі',
+    intro:'16–30 айлық балалардың ата-аналарына арналған M-CHAT-R скринингінің бірінші кезеңі. Сауалнама аутизм диагнозын растамайды және жоққа шығармайды.',
+    start:'Скринингті бастау',ageLabel:'Баланың толық аймен есептелген жасы',agePrompt:'Жасын таңдаңыз',
+    ageError:'Бұл нұсқа 16–30 ай аралығына арналған. Баланың дамуына қатысты сұрақтарыңыз болса, жасына қарамастан маманға жүгініңіз.',
+    directions:'Баланың әдеттегі мінез-құлқына сүйеніп жауап беріңіз. Егер әрекет кейде ғана байқалса, бірақ әдеттегі болмаса, «Жоқ» деп жауап беріңіз. 20 сұрақтың бәріне жауап беріңіз.',
+    privacy:'Жауаптар тек браузерде өңделеді. Серверге жіберілмейді, есептік жазбада сақталмайды және PDF-ке енгізілмейді.',
+    stages:['Бастау','20 сұрақ','Нәтиже'],questionWord:'Сұрақ',of:'/',yes:'Ия',no:'Жоқ',back:'Артқа',next:'Келесі',finish:'Нәтижені көру',print:'PDF сақтау / басып шығару',
+    resultTitle:'M-CHAT-R бірінші кезеңінің нәтижесі',scoreLabel:"Ұпай саны (дәрігер үшін)",ageResult:'Баланың жасы (ай)',
+    low:"Осы сауалнама бойынша қосымша сұрақтар әзірге қажет емес",moderate:"Жауаптарды маманмен нақтылау қажет",high:"Баланың дамуын бағалау үшін дәрігерге жүгініңіз",
+    lowAdvice:"Егер баланың дамуына қатысты алаңдаушылық болмаса, осы нәтижеге байланысты арнайы жолдама әдетте қажет емес. Бала екі жасқа толмаса, екіге толғаннан кейін скринингті қайталаңыз. Күдігіңіз болса, ұпайға қарамастан дәрігермен кеңесіңіз.",
+    moderateAdvice:"Жақын уақытта дәрігерге жазылыңыз. Нәтижені көрсетіп, M-CHAT-R/F екінші кезеңін, яғни маман кейбір жауаптарды нақтылайтын Follow-Up сұхбатын өткізуді сұраңыз. Бұл сұхбатсыз бірінші кезеңнің нәтижесі түпкілікті болып саналмайды.",
+    highAdvice:"Дәрігерге жүгінуді кейінге қалдырмаңыз. Баланың дамуын бағалауды және қосымша диагностика мен ерте қолдау қажет пе, соны анықтауды сұраңыз. Сауалнама ережесіне сай, нақтылау сұхбатын өткізбей-ақ кәсіби бағалауға көшуге болады.",
+    diagnosis:"Маңызды: бұл скрининг диагноз қоймайды және аутизмді жоққа шығармайды. Бұрын меңгерген дағдылары жоғалса немесе басқа алаңдаушылық болса, ұпайға қарамастан дәрігерге жүгініңіз.",
+    followLabel:"Сауалнаманың екінші кезеңі қажет пе?",followNotNeeded:"Осы жауаптар бойынша қажет емес",followRequired:"Иә. Нақтылау сұхбаты әлі өткізілген жоқ",followBypass:"Бірден кәсіби бағалауға жүгінуге болады",
+    reportTitle: "Скрининг нәтижесі: енді не істеу керек?",
+    reportLead: "M-CHAT-R бірінші кезеңінен кейінгі ата-аналарға арналған қысқа жадынама. Оны сақтап, дәрігерге көрсетуге болады.",
+    outcomeTitle: "Нәтиженің негізгі мәні",
+    lowMeaning: "Жауаптарыңызға сәйкес бұл сауалнама аутизм ықтималдығының жоғары екенін көрсетпеді. Бірақ бір сауалнама баланың даму ерекшеліктерін толық жоққа шығара алмайды.",
+    moderateMeaning: "Кейбір жауаптарды нақтылау қажет. Бірінші кезеңнен кейін түпкілікті қорытынды жасалмайды. Бұл балада аутизм бар дегенді білдірмейді.",
+    highMeaning: "Жауаптарға сәйкес баланың дамуын маманның қосымша бағалауы ұсынылады. Бұл аутизм диагнозы емес. Жоғары ұпайдың әртүрлі себептері болуы мүмкін, оларды дәрігермен талқылау маңызды.",
+    nextTitle: "Қазір не істеу керек?",
+    whereTitle: "Қазақстанда қайда жүгінуге болады?",
+    whereText: "Бала тіркелген емханаға жүгініңіз. Педиатрға немесе жалпы практика дәрігеріне жазылыңыз. Дәрігер баланың дамуын қосымша бағалау және қолдау қажет пе, соны анықтауға көмектеседі.",
+    prepareTitle: "Қабылдауға қалай дайындалуға болады?",
+    prepareText: "Осы жадынаманы сақтап, дәрігерге көрсетіңіз. Сізді алаңдататын қарым-қатынас, ойын, сөйлеу немесе дағдылардағы өзгерістер туралы екі-үш мысал жазып алыңыз. Алдын ала диагноз қоюдың қажеті жоқ.",
+    helpLink: "Қазақстанда көмек алу жолдары",
+    detailsTitle: "Сауалнама мәліметтері",
+    detailLead: "Ұпайлар дәрігерге нәтижені түсіндіруге көмектеседі. Олар аутизмнің дәрежесін білдірмейді.",
+    footer:'© 2009 Diana Robins, Deborah Fein, & Marianne Barton. Дереккөз: mchatscreen.com. Бірінші кезең, дәрігер қорытындысы емес.',
+    printNotice:'Басып шығару терезесінде PDF ретінде сақтауды таңдаңыз. PDF файлында тек ұпай мен ұсыныстар бар, сұрақтар мен жауаптар жоқ.',
+    dateLabel:'Өткен күні',introArticle:'Баланың дамуы туралы мақала',restart:'Қайта бастау'
+  },
+  en: {
+    title:'M-CHAT-R: developmental screening',
+    intro:'First-stage M-CHAT-R screening for parents of children aged 16–30 months. This questionnaire neither diagnoses nor rules out autism.',
+    start:'Start screening',ageLabel:'Child’s age in completed months',agePrompt:'Select age',
+    ageError:'This version is intended for children aged 16–30 months. Discuss developmental concerns with a qualified professional regardless of age.',
+    directions:'Answer based on how your child usually behaves. If the behaviour occurred a few times but is not usual, answer “No”. Answer all 20 questions.',
+    privacy:'Answers stay in the browser. They are not sent to a server, saved to an account or included in the PDF.',
+    stages:['Start','20 questions','Result'],questionWord:'Question',of:'of',yes:'Yes',no:'No',back:'Back',next:'Next',finish:'View result',print:'Save PDF / print',
+    resultTitle:'M-CHAT-R first-stage result',scoreLabel:"Score (for your clinician)",ageResult:'Child’s age (months)',
+    low:"No further screening questions are needed based on these answers",moderate:"Discuss and clarify the answers with a professional",high:"Contact a clinician for a developmental evaluation",
+    lowAdvice:"If you have no developmental concerns, this result alone does not usually call for referral. If your child is younger than two, repeat screening after the second birthday. If you are concerned, talk to a doctor regardless of the score.",
+    moderateAdvice:"Arrange an appointment soon. Show the result and ask for the second stage of M-CHAT-R/F: a Follow-Up interview where a trained professional clarifies certain answers. The first stage alone is not a completed two-stage result.",
+    highAdvice:"Do not delay contacting a clinician. Ask for a developmental evaluation and advice on whether further diagnostic assessment or early support is needed. Under this questionnaire's instructions, the Follow-Up interview may be bypassed in favour of evaluation.",
+    diagnosis:"Important: this screening neither diagnoses nor excludes autism. Seek advice regardless of the score if your child has lost skills or you have other developmental concerns.",
+    followLabel:"Is a second screening stage needed?",followNotNeeded:"Not needed for this score",followRequired:"Yes. The clarification interview has not been done",followBypass:"You may proceed directly to professional evaluation",
+    reportTitle: "Screening result: what to do next",
+    reportLead: "A plain-language summary for parents after the first stage of M-CHAT-R. Save it and bring it to your child's doctor.",
+    outcomeTitle: "What this result means",
+    lowMeaning: "Based on your answers, this questionnaire did not indicate an increased likelihood of autism. However, a single questionnaire cannot rule out developmental differences.",
+    moderateMeaning: "Some answers need clarification. The first stage alone does not give a final screening outcome. This does not mean your child has autism.",
+    highMeaning: "Based on these answers, further assessment of your child's development is recommended. This is not an autism diagnosis. A higher score can have different explanations that a clinician should explore.",
+    nextTitle: "What to do now",
+    whereTitle: "Where to go in Kazakhstan",
+    whereText: "Contact the polyclinic where your child is registered. Make an appointment with a paediatrician or general practitioner. They can help determine whether further developmental assessment or support is needed.",
+    prepareTitle: "How to prepare for the appointment",
+    prepareText: "Save this summary and show it to the clinician. Write down two or three examples of what concerns you, such as communication, play, speech or loss of skills. You do not need to identify a diagnosis beforehand.",
+    helpLink: "How to seek support in Kazakhstan",
+    detailsTitle: "Questionnaire details",
+    detailLead: "The score helps a professional understand the screening outcome. It is not a measure of autism severity.",
+    footer:'© 2009 Diana Robins, Deborah Fein, & Marianne Barton. Source: mchatscreen.com. First-stage screen, not a clinical diagnosis.',
+    printNotice:'Choose Save as PDF in your browser’s print dialog. The PDF includes only the score and next steps, never questions or answers.',
+    dateLabel:'Completion date',introArticle:'Read the child development article',restart:'Start again'
+  }
+} as const;
+const c=t[lang];
+const articleSlugs: Record<Locale,string> = {ru:'kogda-obsudit-razvitie-rebenka-so-specialistom',kk:'balanyn-damuyn-mamanmen-kashan-talkylau',en:'when-to-discuss-child-development'};
+const alternatePaths=Object.fromEntries(SUPPORTED_LOCALES.map((locale)=>[locale,'tools/mchat-r'])) as Record<Locale,string>;
+const items=MCHAT_ITEMS[lang];
+const helpSlugs:Record<Locale,string>={ru:'development-concerns-kazakhstan',kk:'bala-damuy-boyynsha-komek-kazakstan',en:'child-development-concerns-kazakhstan'};
+---
+<BaseLayout title={c.title+' | '+SITE.name} description={c.intro} locale={lang} currentSection="parents" alternatePath="tools/mchat-r" alternatePaths={alternatePaths} bodyClass="mchat-screening-page">
+  <div class="mchat" data-mchat data-locale={lang}
+    data-low={c.low} data-moderate={c.moderate} data-high={c.high}
+    data-low-advice={c.lowAdvice} data-moderate-advice={c.moderateAdvice} data-high-advice={c.highAdvice}
+    data-low-meaning={c.lowMeaning} data-moderate-meaning={c.moderateMeaning} data-high-meaning={c.highMeaning}
+    data-low-follow={c.followNotNeeded} data-moderate-follow={c.followRequired} data-high-follow={c.followBypass}
+    data-next={c.next} data-finish={c.finish}>
+    <header class="mchat__hero"><div class="mchat__wrap">
+      <a href={articlePath(lang,'parents',articleSlugs[lang])}>{c.introArticle}</a>
+      <p class="mchat__eyebrow">AUTISM HUB KAZAKHSTAN · M-CHAT-R</p>
+      <h1>{c.title}</h1><p class="mchat__lead">{c.intro}</p>
+      <p class="mchat__copyright">© 2009 Diana Robins, Deborah Fein, & Marianne Barton</p>
+    </div></header>
+    <div class="mchat__wrap mchat__layout">
+      <aside class="mchat__sidebar">
+        <nav class="mchat__language" aria-label="Language">
+          {SUPPORTED_LOCALES.map((code)=><a href={localePath(code,'tools/mchat-r')} aria-current={code===lang?'page':undefined}>{code.toUpperCase()}</a>)}
+        </nav>
+        <ol class="mchat__steps">{c.stages.map((step,i)=><li data-step={i} class={i===0?'active':''}><span>{i+1}</span>{step}</li>)}</ol>
+        <a href="https://www.mchatscreen.com/mchat-rf/" target="_blank" rel="noopener noreferrer">mchatscreen.com</a>
+      </aside>
+      <div class="mchat__main">
+        <section class="mchat__card" data-view="intro" aria-labelledby="mchat-start-title">
+          <h2 id="mchat-start-title">{c.start}</h2>
+          <p>{c.directions}</p>
+          <label for="mchat-age">{c.ageLabel}</label>
+          <select id="mchat-age" required>
+            <option value="">{c.agePrompt}</option>
+            {Array.from({length:15},(_,i)=>i+16).map(age=><option value={age}>{age}</option>)}
+          </select>
+          <p class="mchat__hint" data-age-warning hidden>{c.ageError}</p>
+          <div class="mchat__info">{c.privacy}</div>
+          <button class="mchat__primary" type="button" data-start>{c.start}</button>
+        </section>
+        <section class="mchat__card" data-view="questions" hidden aria-labelledby="mchat-questions-title">
+          <p class="mchat__muted" data-counter aria-live="polite">1 / 20</p>
+          <div class="mchat__progress" aria-hidden="true"><span data-progress></span></div>
+          <h2 id="mchat-questions-title">{c.questionWord} <span data-number>1</span> {c.of} 20</h2>
+          {items.map((question,i)=><fieldset class="mchat__question" data-question={i} hidden={i!==0}>
+            <legend><span class="mchat__sr">{c.questionWord} {i+1}.</span> {question}</legend>
+            <div class="mchat__answers">
+              <label><input type="radio" name={'mchat-q-'+i} value="yes" />{c.yes}</label>
+              <label><input type="radio" name={'mchat-q-'+i} value="no" />{c.no}</label>
+            </div>
+          </fieldset>)}
+          <div class="mchat__actions"><button type="button" class="mchat__secondary" data-back>{c.back}</button><button type="button" class="mchat__primary" data-next disabled>{c.next}</button></div>
+        </section>
+        <section class="mchat__card mchat__result-card" data-view="result" hidden aria-labelledby="mchat-result-title">
+          <p class="mchat__muted">M-CHAT-R · 1 / 2</p>
+          <h2 id="mchat-result-title" tabindex="-1">{c.reportTitle}</h2>
+          <p>{c.reportLead}</p>
+          <div class="mchat__outcome" aria-live="polite">
+            <p class="mchat__section-label">{c.outcomeTitle}</p>
+            <h3 data-result-category></h3>
+            <p data-result-meaning></p>
+          </div>
+          <section class="mchat__guidance" aria-label={c.nextTitle}>
+            <h3>{c.nextTitle}</h3><p data-result-advice></p>
+            <h3>{c.whereTitle}</h3><p>{c.whereText}</p>
+            <a href={articlePath(lang,'help-kazakhstan',helpSlugs[lang])}>{c.helpLink}</a>
+            <h3>{c.prepareTitle}</h3><p>{c.prepareText}</p>
+          </section>
+          <p class="mchat__caution">{c.diagnosis}</p>
+          <div class="mchat__technical">
+            <h3>{c.detailsTitle}</h3><p>{c.detailLead}</p>
+            <dl>
+              <div><dt>{c.ageResult}</dt><dd data-result-age></dd></div>
+              <div><dt>{c.scoreLabel}</dt><dd data-result-score></dd></div>
+              <div><dt>{c.followLabel}</dt><dd data-result-follow></dd></div>
+            </dl>
+          </div>
+          <div class="mchat__actions"><button type="button" class="mchat__secondary" data-edit>{c.back}</button><button type="button" class="mchat__primary" data-print>{c.print}</button></div>
+          <button type="button" class="mchat__reset" data-reset>{c.restart}</button>
+          <p class="mchat__muted">{c.printNotice}</p>
+        </section>
+      </div>
+    </div>
+    <section class="mchat__print" aria-label={c.reportTitle}>
+      <p class="mchat__print-brand">AUTISM HUB KAZAKHSTAN · M-CHAT-R</p>
+      <h2 class="mchat__print-heading">{c.reportTitle}</h2>
+      <p class="mchat__print-intro">{c.reportLead}</p>
+      <div class="mchat__print-outcome">
+        <p class="mchat__section-label">{c.outcomeTitle}</p>
+        <h3 data-print-category></h3>
+        <p data-print-meaning></p>
+      </div>
+      <section class="mchat__print-step">
+        <h3>{c.nextTitle}</h3><p data-print-advice></p>
+        <h3>{c.whereTitle}</h3><p>{c.whereText}</p>
+        <h3>{c.prepareTitle}</h3><p>{c.prepareText}</p>
+        <p class="mchat__print-link"><a href={articlePath(lang,'help-kazakhstan',helpSlugs[lang])}>{c.helpLink}</a></p>
+      </section>
+      <p class="mchat__print-warning">{c.diagnosis}</p>
+      <div class="mchat__print-facts">
+        <h3>{c.detailsTitle}</h3>
+        <dl>
+          <div><dt>{c.dateLabel}</dt><dd data-print-date></dd></div>
+          <div><dt>{c.ageResult}</dt><dd data-print-age></dd></div>
+          <div><dt>{c.scoreLabel}</dt><dd data-print-score></dd></div>
+          <div><dt>{c.followLabel}</dt><dd data-print-follow></dd></div>
+        </dl>
+      </div>
+      <p class="mchat__print-attribution">{c.footer}</p>
+    </section>
+  </div>
+</BaseLayout>
+<style>
+.mchat{background:var(--color-background);min-width:0}.mchat__wrap{width:min(calc(100% - 2rem),var(--content-width));margin:auto}
+.mchat__hero{background:linear-gradient(110deg,#102d51,#28628d);color:#fff;padding:1.9rem 0 2.5rem}
+.mchat__hero a{color:#e0edfc;font-size:var(--type-small)}
+.mchat__eyebrow{font-size:var(--type-small);font-weight:700;color:#c4e0f3;letter-spacing:.07em;margin:1rem 0}
+.mchat__hero h1{color:#fff;max-width:25ch}.mchat__lead{max-width:65ch;font-size:var(--type-lead);margin-top:.75rem;color:#e4f0fc}
+.mchat__copyright{font-size:var(--type-caption);color:#d4e8fa;margin-top:1.1rem}
+.mchat__layout{display:grid;grid-template-columns:minmax(12rem,16rem) minmax(0,1fr);gap:2rem;align-items:start;padding:2rem 0 4rem}
+.mchat__sidebar{display:grid;gap:1.25rem;font-size:var(--type-small)}
+.mchat__language{display:flex;gap:.45rem;flex-wrap:wrap}.mchat__language a{padding:.4rem .7rem;border:1px solid var(--color-border);border-radius:.4rem;background:#fff;text-decoration:none;font-weight:700}
+.mchat__language [aria-current=page]{background:#225c95;color:#fff}
+.mchat__steps{padding:0;margin:0;list-style:none;display:grid;gap:.3rem}
+.mchat__steps li{display:flex;align-items:center;gap:.7rem;padding:.7rem;border-left:3px solid transparent}
+.mchat__steps li.active{background:#e7f0fa;color:#1e4d80;border-left-color:#225c95;border-radius:.3rem;font-weight:700}
+.mchat__steps li span{display:grid;place-items:center;width:2rem;height:2rem;border:1px solid #c6d6e5;border-radius:50%;flex:none}
+.mchat__card{background:white;border:1px solid var(--color-border);border-radius:1rem;box-shadow:var(--shadow-soft);padding:clamp(1rem,3vw,2.3rem);display:grid;gap:1.15rem}
+.mchat__card[hidden],.mchat__question[hidden],.mchat__hint[hidden]{display:none!important}
+.mchat__card h2{max-width:none}.mchat__card h3{font-size:var(--type-subhead)}
+.mchat__card select{font-size:var(--type-control);padding:.75rem;border-radius:.55rem;border:1px solid #8aaac7;background:#fff;max-width:20rem}
+.mchat__info,.mchat__result{background:#edf5fc;padding:1.2rem;border-radius:.75rem;border:1px solid #c9daeb}
+.mchat__hint{color:#8b390e}.mchat__muted{color:var(--color-muted);font-size:var(--type-small)}
+.mchat__progress{height:.4rem;background:#d8e6f2;border-radius:3rem;overflow:hidden}.mchat__progress span{height:100%;width:5%;background:#24619a;display:block;transition:width .2s}
+.mchat__question{border:0;padding:0;margin:0;min-width:0}.mchat__question legend{font-size:var(--type-subhead);font-weight:700;line-height:1.55}
+.mchat__answers{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:.8rem;margin-top:1.2rem}
+.mchat__answers label{display:flex;gap:.8rem;align-items:center;padding:1.1rem;border:2px solid #c8d9e9;border-radius:.6rem;min-height:3.2rem;cursor:pointer}
+.mchat__answers label:has(input:checked){border-color:#245d99;background:#e8f2fc}
+.mchat__answers input{width:1.25rem;height:1.25rem;accent-color:#245d99}
+.mchat__actions{display:flex;gap:.7rem;justify-content:space-between;flex-wrap:wrap}
+.mchat__primary,.mchat__secondary{padding:.8rem 1.1rem;border-radius:.5rem;border:1px solid #225d96;font-size:var(--type-control);font-weight:700;min-height:2.9rem;cursor:pointer}
+.mchat__primary{background:#225d96;color:#fff}.mchat__secondary{background:#fff;color:#225d96}
+.mchat__primary:disabled{cursor:not-allowed;background:#748ba2;border-color:#748ba2}
+.mchat__result{display:grid;gap:.7rem}.mchat__score{font-size:var(--type-h2);font-weight:800}
+.mchat__result dl,.mchat__print dl{margin:0;display:grid;gap:.45rem}.mchat__result dl div,.mchat__print dl div{display:grid;grid-template-columns:minmax(8rem,35%) minmax(0,1fr);gap:1rem;border-top:1px solid #cadaea;padding:.6rem 0}
+.mchat__result dd,.mchat__print dd{margin:0;font-weight:700}.mchat__reset{border:0;background:transparent;color:#174c88;text-decoration:underline;cursor:pointer;justify-self:start;font-size:var(--type-control)}
+.mchat__outcome{border:1px solid #c5d9ed;border-left:.3rem solid #225d96;background:#eff6fd;padding:1.1rem 1.2rem;border-radius:.65rem;display:grid;gap:.55rem}
+.mchat__outcome h3{font-family:var(--font-body);font-size:var(--type-h3);line-height:1.4;color:#173f68}
+.mchat__section-label{font-size:var(--type-small);font-weight:750;color:#345b81}
+.mchat__guidance{display:grid;gap:.6rem}.mchat__guidance h3{font-family:var(--font-body);font-size:var(--type-subhead);margin-top:.55rem;color:var(--color-ink)}
+.mchat__caution{border-top:1px solid var(--color-border);padding-top:1rem;color:#37495e}
+.mchat__technical{border:1px solid var(--color-border);border-radius:.65rem;padding:1rem;background:#f8fafc;display:grid;gap:.45rem}
+.mchat__technical h3{font-family:var(--font-body);font-size:var(--type-subhead)}.mchat__technical p{font-size:var(--type-small)}
+.mchat__technical dl{display:grid;gap:.15rem;margin:.35rem 0 0}
+.mchat__technical dl div{display:grid;grid-template-columns:minmax(8rem,38%) minmax(0,1fr);border-top:1px solid var(--color-border);gap:.8rem;padding:.5rem 0}
+.mchat__technical dd{margin:0;font-weight:700}
+.mchat__print{display:none}.mchat__sr{position:absolute;width:1px;height:1px;overflow:hidden;clip-path:inset(50%);white-space:nowrap}
+@media(max-width:52rem){.mchat__layout{grid-template-columns:1fr}.mchat__steps{grid-template-columns:repeat(3,minmax(0,1fr))}.mchat__steps li{flex-direction:column;align-items:start;border-left:0;border-bottom:3px solid transparent}.mchat__steps li.active{border-left:0;border-bottom-color:#225c95}}
+@media(max-width:32rem){.mchat__answers{grid-template-columns:1fr}.mchat__result dl div,.mchat__technical dl div{grid-template-columns:1fr;gap:.1rem}.mchat__actions{flex-direction:column-reverse}.mchat__actions button{width:100%}}
+@media print{
+  @page{size:A4;margin:14mm}
+  :global(.mchat-screening-page .site-header),:global(.mchat-screening-page .site-footer),:global(.mchat-screening-page .skip-link){display:none!important}
+  .mchat__hero,.mchat__layout{display:none!important}
+  .mchat[data-complete=true] .mchat__print{display:block!important}
+  .mchat__print{background:#fff!important;color:#17243a;font-size:var(--type-print-body);line-height:1.4}
+  .mchat__print-brand{font-size:var(--type-caption);color:#475b70;font-weight:700}
+  .mchat__print-heading{font-family:var(--font-editorial);font-size:var(--type-print-h1);margin:.35rem 0}
+  .mchat__print-intro{font-size:var(--type-print-body);color:#475b70}
+  .mchat__print-outcome{border-left:3px solid #245d96;background:#f1f6fa!important;padding:.6rem .8rem;margin:.7rem 0}
+  .mchat__print-outcome h3{font-family:var(--font-body);font-size:var(--type-print-h2);line-height:1.3;margin:.2rem 0}
+  .mchat__print-step h3{font-family:var(--font-body);font-size:var(--type-print-h3);margin:.75rem 0 .2rem;page-break-after:avoid}
+  .mchat__print-step p,.mchat__print-outcome p{margin:0}
+  .mchat__print-link{margin-top:.35rem!important}
+  .mchat__print-warning{border-top:1px solid #b8c6d3;padding-top:.55rem;margin-top:.65rem}
+  .mchat__print-facts{border-top:1px solid #b8c6d3;margin-top:.6rem;padding-top:.45rem}
+  .mchat__print-facts h3{font-family:var(--font-body);font-size:var(--type-print-h3);margin-bottom:.2rem}
+  .mchat__print-facts dl{display:grid;grid-template-columns:1fr;gap:0;margin:0}
+  .mchat__print-facts dl div{display:grid;grid-template-columns:minmax(10rem,36%) minmax(0,1fr);gap:.6rem;border-top:1px solid #dde5ed;padding:.28rem 0;break-inside:avoid}
+  .mchat__print-facts dt{font-weight:400;color:#516074}.mchat__print-facts dd{margin:0;font-weight:700}
+  .mchat__print-attribution{font-size:var(--type-caption);color:#596b7e;border-top:1px solid #c7d4df;margin-top:.65rem;padding-top:.35rem}
+  .mchat__print-step,.mchat__print-outcome,.mchat__print-facts{break-inside:avoid}
+}
+</style>
+<script>
+import { scoreMchatInitial, type MchatAnswer } from '../../../../lib/mchat-initial-scoring';
+const root = document.querySelector<HTMLElement>('[data-mchat]');
+if (root) {
+  const intro=root.querySelector<HTMLElement>('[data-view=intro]')!;
+  const questionScreen=root.querySelector<HTMLElement>('[data-view=questions]')!;
+  const resultScreen=root.querySelector<HTMLElement>('[data-view=result]')!;
+  const questions=[...root.querySelectorAll<HTMLFieldSetElement>('[data-question]')];
+  const age=root.querySelector<HTMLSelectElement>('#mchat-age')!;
+  const warning=root.querySelector<HTMLElement>('[data-age-warning]')!;
+  const back=root.querySelector<HTMLButtonElement>('[data-back]')!;
+  const next=root.querySelector<HTMLButtonElement>('[data-next]')!;
+  const progress=root.querySelector<HTMLElement>('[data-progress]')!;
+  const steps=[...root.querySelectorAll<HTMLElement>('[data-step]')];
+  let index=0;
+  const text=(selector:string,value:string)=>{root.querySelectorAll<HTMLElement>(selector).forEach(el=>{el.textContent=value})};
+  const show=(view:0|1|2)=>{
+    intro.hidden=view!==0;questionScreen.hidden=view!==1;resultScreen.hidden=view!==2;
+    steps.forEach((el,i)=>el.classList.toggle('active',i===view));
+  };
+  const values=():MchatAnswer[]=>(questions.map(q=>q.querySelector<HTMLInputElement>('input:checked')?.value??null) as MchatAnswer[]);
+  const showQuestion=()=>{
+    questions.forEach((q,i)=>{q.hidden=i!==index});
+    const answered=values()[index]!==null;
+    next.disabled=!answered;
+    next.textContent=index===19?root.dataset.finish??'Finish':root.dataset.next??'Next';
+    back.disabled=false;
+    text('[data-number]',String(index+1));
+    text('[data-counter]',String(index+1)+' / 20');
+    progress.style.width=(5*(index+1))+'%';
+    show(1);
+  };
+  root.querySelector<HTMLButtonElement>('[data-start]')?.addEventListener('click',()=>{
+    const n=Number(age.value);
+    if(!Number.isInteger(n)||n<16||n>30){warning.hidden=false;age.focus();return;}
+    warning.hidden=true;showQuestion();
+  });
+  questions.forEach(q=>q.querySelectorAll<HTMLInputElement>('input').forEach(input=>input.addEventListener('change',showQuestion)));
+  back.addEventListener('click',()=>{if(index>0){index--;showQuestion()}else{show(0)}});
+  next.addEventListener('click',()=>{
+    if(values()[index]===null)return;
+    if(index<19){index++;showQuestion();return;}
+    const answers=values();
+    if(answers.some(v=>v===null))return;
+    const result=scoreMchatInitial(answers);
+    const key=result.category==='low'?'low':result.category==='high'?'high':'moderate';
+    const label=root.dataset[key]??'';
+    const advice=root.dataset[key+'Advice']??'';
+    const meaning=root.dataset[key+'Meaning']??'';
+    const follow=root.dataset[key+'Follow']??'';
+    const now=new Date();
+    const isoDate=[now.getFullYear(),String(now.getMonth()+1).padStart(2,'0'),String(now.getDate()).padStart(2,'0')].join('-');
+    const date=root.dataset.locale==='kk'?isoDate:new Intl.DateTimeFormat(root.dataset.locale==='en'?'en-GB':'ru-RU',{day:'numeric',month:'long',year:'numeric'}).format(now);
+    text('[data-result-score],[data-print-score]',String(result.score)+' / 20');
+    text('[data-result-category],[data-print-category]',label);
+    text('[data-result-advice],[data-print-advice]',advice);
+    text('[data-result-meaning],[data-print-meaning]',meaning);
+    text('[data-result-follow],[data-print-follow]',follow);
+    text('[data-result-age],[data-print-age]',age.value);
+    text('[data-print-date]',date);
+    root.dataset.complete='true';
+    show(2);
+    resultScreen.querySelector<HTMLElement>('h2')?.focus({preventScroll:true});
+  });
+  root.querySelector<HTMLButtonElement>('[data-edit]')?.addEventListener('click',()=>{index=19;showQuestion()});
+  root.querySelector<HTMLButtonElement>('[data-print]')?.addEventListener('click',()=>{if(root.dataset.complete==='true')window.print()});
+  root.querySelector<HTMLButtonElement>('[data-reset]')?.addEventListener('click',()=>{
+    questions.forEach(q=>q.querySelectorAll<HTMLInputElement>('input').forEach(input=>{input.checked=false}));
+    age.value='';index=0;delete root.dataset.complete;show(0);
+  });
+}
+</script>

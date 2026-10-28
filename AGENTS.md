@@ -42,6 +42,7 @@ Read only the documents relevant to the task, but read each selected document co
 - Keep static output and GitHub Pages base-path compatibility.
 - Use the installed versions and existing patterns in `package.json`, `astro.config.mjs`, `src/content.config.ts`, and `src/lib/urls.ts` as the implementation baseline.
 - Do not add a backend, database, authentication, accounts, forms, payments, screening tools, diagnostic tools, personal-data collection, or new production dependencies without explicit approval.
+- Owner-approved exception dated 2026-10-28: a statically hosted, browser-only first-stage M-CHAT-R may be prepared. Activation requires actual permission scope for website and source repository, original RU/KK/EN instrument integrity, medical and native-language review, privacy QA and verified pages. An initial score of 3-7 is not a completed M-CHAT-R/F result; do not simulate Follow-Up without its full authorised clinical process.
 - Do not change routes, schemas, translation keys, slugs, publication filtering, or evaluation logic incidentally.
 
 ## Mandatory typography and publication law (all changes)

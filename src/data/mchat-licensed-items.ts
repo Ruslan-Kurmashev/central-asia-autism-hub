@@ -1,0 +1,72 @@
+// Exact initial questionnaire wording from the rightsholders' published EN/RU/KK editions.
+// Language editions are not synchronized in year. Preserve wording pending human licence/language QA.
+// RU edition: Antonina Steinberg & Igor Shpitsberg, official author-hosted v2 PDF.
+// © 2009 Diana Robins, Deborah Fein, & Marianne Barton. Licence scope must be confirmed before public deployment.
+export const MCHAT_ITEMS = {
+  "en": [
+    "If you point at something across the room, does your child look at it? (FOR EXAMPLE, if you point at a toy or an animal, does your child look at the toy or animal?)",
+    "Have you ever wondered if your child might be deaf?",
+    "Does your child play pretend or make-believe? (FOR EXAMPLE, pretend to drink from an empty cup, pretend to talk on a phone, or pretend to feed a doll or stuffed animal?)",
+    "Does your child like climbing on things? (FOR EXAMPLE, furniture, playground equipment, or stairs)",
+    "Does your child make unusual finger movements near his or her eyes? (FOR EXAMPLE, does your child wiggle his or her fingers close to his or her eyes?)",
+    "Does your child point with one finger to ask for something or to get help? (FOR EXAMPLE, pointing to a snack or toy that is out of reach)",
+    "Does your child point with one finger to show you something interesting? (FOR EXAMPLE, pointing to an airplane in the sky or a big truck in the road)",
+    "Is your child interested in other children? (FOR EXAMPLE, does your child watch other children, smile at them, or go to them?)",
+    "Does your child show you things by bringing them to you or holding them up for you to see – not to get help, but just to share? (FOR EXAMPLE, showing you a flower, a stuffed animal, or a toy truck)",
+    "Does your child respond when you call his or her name? (FOR EXAMPLE, does he or she look up, talk or babble, or stop what he or she is doing when you call his or her name?)",
+    "When you smile at your child, does he or she smile back at you?",
+    "Does your child get upset by everyday noises? (FOR EXAMPLE, does your child scream or cry to noise such as a vacuum cleaner or loud music?)",
+    "Does your child walk?",
+    "Does your child look you in the eye when you are talking to him or her, playing with him or her, or dressing him or her?",
+    "Does your child try to copy what you do? (FOR EXAMPLE, wave bye-bye, clap, or make a funny noise when you do)",
+    "If you turn your head to look at something, does your child look around to see what you are looking at?",
+    "Does your child try to get you to watch him or her? (FOR EXAMPLE, does your child look at you for praise, or say “look” or “watch me”?)",
+    "Does your child understand when you tell him or her to do something? (FOR EXAMPLE, if you don’t point, can your child understand “put the book on the chair” or “bring me the blanket”?)",
+    "If something new happens, does your child look at your face to see how you feel about it? (FOR EXAMPLE, if he or she hears a strange or funny noise, or sees a new toy, will he or she look at your face?)",
+    "Does your child like movement activities? (FOR EXAMPLE, being swung or bounced on your knee)"
+  ],
+  "ru": [
+    "Если Вы показываете на что-то на другом конце комнаты, Ваш ребёнок смотрит на это? (Пример: если Вы показываете на игрушку или животное, ребёнок смотрит на игрушку или животное?)",
+    "Вы когда-либо предполагали, что Ваш ребёнок может быть глухим?",
+    "Ваш ребёнок играет в воображаемые или сюжетно-ролевые игры? (Пример: притворяется, что пьёт из пустой чашки, изображает, что говорит по телефону, понарошку кормит куклу или плюшевую игрушку?)",
+    "Вашему ребёнку нравится забираться на предметы? (Пример: мебель, строения на игровой площадке, лестницы)",
+    "Ваш ребёнок делает необычные движения пальцами перед его/eё глазами? (Пример: Ваш ребёнок шевелит его/eё пальцами около его/её глаз?)",
+    "Ваш ребёнок указывает пальцем, чтобы попросить что-то или получить помощь? (Пример: указывает пальцем на лакомство или игрушку, до которой не может дотянуться)",
+    "Ваш ребёнок указывает пальцем на что-то интересное, чтобы обратить на это Ваше внимание? (Пример: указывает пальцем на самолёт в небе или на большой грузовик на дороге)",
+    "Ваш ребёнок интересуется другими детьми? (Пример: Ваш ребёнок наблюдает за другими детьми, улыбается им, идёт к ним?)",
+    "Ваш ребёнок показывает Вам предметы, принося их Вам или держа их около Вас, просто чтобы поделиться, а не попросить помощь? (Пример: показывает Вам цветок, мягкую игрушку или игрушечный грузовик)",
+    "Ваш ребёнок отзывается, когда Вы зовёте его/её по имени? (Пример: ребёнок оглядывается на Вас, говорит или лепечет, прекращает то, что он/она делает, когда Вы зовёте его/её по имени?)",
+    "Когда Вы улыбаетесь Вашему ребёнку, он/она улыбается Вам в ответ?",
+    "Ваш ребёнок расстраивается от бытовых звуков? (Пример: Ваш ребёнок кричит или плачет от таких звуков как шум пылесоса или громкая музыка?)",
+    "Ваш ребёнок умеет ходить?",
+    "Ваш ребёнок смотрит Вам в глаза, когда Вы говорите с ним/ней, играете с ним/ней или одеваете его/её?",
+    "Ваш ребёнок пытается копировать то, что Вы делаете? (Пример: машет рукой при прощании, хлопает в ладоши, издаёт смешные звуки Вам в ответ)",
+    "Если Вы оборачиваетесь, чтобы на что-то взглянуть, то Ваш ребёнок оглядывается вокруг, чтобы увидеть то, на что Вы смотрите?",
+    "Ваш ребёнок пытается обратить на себя Ваш взгляд? (Пример: Ваш ребёнок смотрит на Вас, ожидая похвалу, или говорит «смотри», или «посмотри на меня»)",
+    "Ваш ребёнок понимает, когда Вы говорите ему/ей что-то сделать? (Пример: если Вы не сделаете указательных движений, то ребёнок сможет понять «положи книгу на стул» или «принеси мне одеяло»?)",
+    "Если происходит что-то необычное, то ребёнок смотрит на Ваше лицо, чтобы понять, как Вы к этому относитесь? (Пример: если он/она услышит странный или забавный звук или увидит новую игрушку, то он/она посмотрит на Ваше лицо?)",
+    "Вашему ребёнку нравится двигательная активность? (Пример: когда кружат или подбрасывают на коленях)"
+  ],
+  "kk": [
+    "Егер Сіз бөлмедегі қандай да бір затты нұсқасаңыз, балаңыз оған қарай ма? (МЫСАЛЫ, ойыншықты немесе жануарды нұсқасаңыз, балаңыз ойыншыққа немесе жануарға қарай ма?)",
+    "Бұрын-соңды балаңыздың құлағы естімеуі мүмкін деген келді ме?",
+    "Балаңыз болғансуды ұната ма? (МЫСАЛЫ, бос ыдыстан ішіп жатқан, телефонмен сөйлескен, қуыршақты немесе ойыншық жануарды тамақтандырған бола ма?)",
+    "Балаңыз заттардың үстіне мініп алғанды ұната ма? (МЫСАЛЫ, жихазға, ойын алаңына, баспалдаққа?)",
+    "Балаңыз басы мен көздерінің маңында саусақтарымен әдеттен тыс қимылдар жасай ма? (МЫСАЛЫ, көздерінің жанында саусақтарын шайқау ма?)",
+    "Әлдебірдене сұрағысы келсе немесе көмек сұрап жүгінсе, балаңыз саусағымен нұсқайды ма? (МЫСАЛЫ, қолы жетпей тұрған дәмтатым немесе ойыншықты нұсқап көрсете ме?)",
+    "Балаңыз Сізге көрсеткісі келетін қызықты бірдеңені бір саусағымен көрсете ме? (МЫСАЛЫ, аспандағы ұшақ немесе жолдағы үлкен жүк көлігі?)",
+    "Балаңыз басқа балаларға қызығушылық таныта ма? (МЫСАЛЫ, басқа балаларға қарай ма, күле ме немесе оларға жақындай ма?)",
+    "Балаңыз Сізге жай көрін деп заттарды әкеле ме, оларды Сізге көмектессін деп емес, жай ғана Сізбен бөлісу үшін көрсете ме? (МЫСАЛЫ, Сізге гүлді, ойыншық жануарды, ойыншық жүк көлікті көрсете ме?)",
+    "Балаңыз Сіз оны атын атағанда жауап бере ме? (МЫСАЛЫ, Сізге қарай ма, сөйлей ме немесе былдырлай ма, өз атын естігенде өз ісін қоя тұра ма?)",
+    "Балаңызға күлімсіреп қарасаңыз, ол да Сізге қарап күлімсірей ме?",
+    "Балаңызды күнделікті шуылар абыржыта ма? (Мысалы, шаңсорғыштың шуына немесе қатты музыка қосылғанда айқайлай ма немесе жылай ма?)",
+    "Балаңыз жүре ме?",
+    "Балаңызбен сөйлескенде, ойнағанда немесе киіндіріп жатқанда, көзіңізге қарай ма?",
+    "Балаңыз Сіздің әрекеттеріңізді қайталауға талпына ма? (МЫСАЛЫ, қол бұлғау, алақан соғу, Сізден қайталап көңілді шулау)",
+    "Әлдебірденеге қарай үшін басыңызды бұрсаңыз, балаңыз Сіздің қайда қарағаныңызды көру үшін басын бұра ма?",
+    "Балаңыз Сізді өзіне қаратуға тырыса ма? (МЫСАЛЫ, балаңыз Сізге мақтау сөз есту, «қарашы» немесе маған қарашы» деп айту үшін қарай ма?)",
+    "Балаңызға бірдеңені істеуді айтқанда, ол Сіздің түсіне ме? (МЫСАЛЫ, егер Сіз затты нұсқамасаңыз, балаңыз «кітапты орындыққа қой» немесе «маған көрпе әкеліп берші» деген сөздерді түсіне ме?)",
+    "Қандай да бір жаңа бірдеңе болып жатса, Сіздің бұған қатысты не сезінгеніңізді түсіну үшін балаңыз Сіздің жүзіңізге қарай ма? (МЫСАЛЫ, егер ол ағаш немесе қызықты шу естісе, немесе жаңа ойыншықты көрсе, ол Сіздің жүзіңізге қарай ма?)",
+    "Балаңыз қозғалмалы қимылдарды ұната ма? (МЫСАЛЫ, көтеріп лақтырғанда немесе тізеге салып тербеткенде)"
+  ]
+} as const;

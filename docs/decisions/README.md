@@ -13,6 +13,8 @@ This directory records explicit, owner-approved changes to product policy or tec
 
 ## Current records
 
+- [2026-10-28: M-CHAT-R first-stage screening exception](2026-10-28-mchat-r-browser-screening.md). Owner approved preparation and requested publication. Electronic licence scope, human language checks and final medical/privacy gates are not assumed completed.
+
 - [Decap CMS accurately documented](2026-10-26-decap-cms.md)
 - [Removed research navigation categories](2026-10-26-research-navigation.md)
 - [Free-to-learn course catalogue](2026-10-26-free-learning.md)

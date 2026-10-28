@@ -46,7 +46,7 @@ The first website version will not contain:
 - personal profiles;
 - contact or intake forms;
 - medical questionnaires;
-- screening forms;
+- screening forms, except an owner-approved client-only M-CHAT-R first-stage module subject to a separate release privacy review;
 - comments;
 - discussion forums;
 - file uploads;
@@ -57,6 +57,8 @@ The first website version will not contain:
 - surveys collecting information about parents, children, or professionals.
 
 The website has no backend database for visitor records.
+
+The M-CHAT-R first-stage exception (2026-10-28) processes a selected age in completed months and 20 answer choices transiently on the visitor's device. No names, dates of birth, user accounts, uploads, URLs carrying answer data, server-side calculations, background storage, localStorage, or analytics events containing questionnaire responses are authorised. The report is assembled only on the device and printed or saved using the browser's system print dialog. This policy does not claim that GitHub Pages itself retains zero technical access logs. The public privacy statement must describe this processing before the clinical tool goes live.
 
 ## 4. Permitted aggregate analytics
 

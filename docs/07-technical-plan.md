@@ -443,7 +443,7 @@ The MVP will not use client-side JavaScript for:
 - visitor profiling;
 - form collection;
 - medical calculations;
-- screening;
+- screening, except the explicit static in-browser first-stage M-CHAT-R extension (2026-10-28), conditional on rights, clinical integrity, privacy and QA sign-off;
 - course-progress tracking;
 - animated page transitions;
 - decorative effects that reduce accessibility.

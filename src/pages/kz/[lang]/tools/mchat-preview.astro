@@ -1,0 +1,37 @@
+---
+import { localePath } from '../../../../lib/urls';
+import { SUPPORTED_LOCALES, type Locale } from '../../../../site.config';
+
+export function getStaticPaths() {
+  return SUPPORTED_LOCALES.map(lang => ({ params: { lang }, props: { lang } }));
+}
+interface Props { lang: Locale }
+const { lang } = Astro.props;
+const target = localePath(lang, 'tools/mchat-r');
+const canonical = new URL(target, Astro.site ?? Astro.url.origin).toString();
+const copy = {
+  ru: { title: 'Опросник перенесён', description: 'Перейдите к первой части M-CHAT-R на AutismHub.', link: 'Открыть опросник M-CHAT-R', skip: 'Перейти к содержанию' },
+  kk: { title: 'Сауалнама жаңа мекенжайға көшірілді', description: 'AutismHub сайтындағы M-CHAT-R бірінші кезеңіне өтіңіз.', link: 'M-CHAT-R сауалнамасын ашу', skip: 'Мазмұнға өту' },
+  en: { title: 'Questionnaire moved', description: 'Open the first-stage M-CHAT-R on AutismHub.', link: 'Open M-CHAT-R', skip: 'Skip to main content' }
+} as const;
+const t = copy[lang];
+---
+<!doctype html>
+<html lang={lang}>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="robots" content="noindex,follow" />
+    <meta http-equiv="refresh" content={`0; url=${target}`} />
+    <link rel="canonical" href={canonical} />
+    <title>{t.title} | Autism Hub Kazakhstan</title>
+  </head>
+  <body>
+    <a href="#main-content">{t.skip}</a>
+    <main id="main-content">
+      <h1>{t.title}</h1>
+      <p>{t.description}</p>
+      <p><a href={target}>{t.link}</a></p>
+    </main>
+  </body>
+</html>
