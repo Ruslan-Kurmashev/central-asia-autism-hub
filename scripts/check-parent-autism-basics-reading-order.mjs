@@ -17,9 +17,9 @@ for (const locale of locales) {
   const source = path.resolve('src/content/pages/kz', locale);
   const found = new Map();
   for (const name of await readdir(source)) {
-    if (!/\\.mdx?$/.test(name)) continue;
+    if (!/\.mdx?$/.test(name)) continue;
     const content = await readFile(path.join(source, name), 'utf8');
-    const match = content.match(/^---\\r?\\n([\\s\\S]*?)\\r?\\n---/);
+    const match = content.match(/^---\r?\n([\s\S]*?)\r?\n---/);
     assert.ok(match, name + ': frontmatter not found');
     const fm = match[1];
     if (field(fm, 'section') !== 'parents' || field(fm, 'topic') !== 'autism-basics'
@@ -38,12 +38,12 @@ for (const locale of locales) {
   const end = html.indexOf('</div>', anchor);
   assert.ok(end > anchor, file + ': basics card list has no closing div');
   const basics = html.slice(anchor, end);
-  const shown = [...basics.matchAll(/<a\\b[^>]*\\bhref="([^"]+)"[^>]*>/g)].map(m => m[1]);
+  const shown = [...basics.matchAll(/<a\b[^>]*\bhref="([^"]+)"[^>]*>/g)].map(m => m[1]);
   const expected = order.map(key => base + '/kz/' + locale + '/parents/' + found.get(key) + '/');
   expected.splice(1, 0, base + '/kz/' + locale + '/parents/glossary/');
   assert.deepEqual(shown, expected,
     locale + ': rendered autism-basics order must follow translationKeys, with glossary after introduction');
-  const displayedIndices = [...basics.matchAll(/class="section-v2__article-index"[^>]*>\\s*(\\d+)\\s*<\\/span>/g)]
+  const displayedIndices = [...basics.matchAll(/class="section-v2__article-index"[^>]*>\s*(\d+)\s*<\/span>/g)]
     .map(m => Number(m[1]));
   assert.deepEqual(displayedIndices, Array.from({ length: 11 }, (_, i) => i + 1),
     locale + ': glossary and ten articles must be numbered sequentially');
