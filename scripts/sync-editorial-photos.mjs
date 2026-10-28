@@ -44,6 +44,7 @@ const photos = [
   ['parent-child-pretend-kitchen-play.jpg', '5093655'],
   ['parent-child-speech-shared-reading.jpg', '12788608'],
   ['parent-child-speech-joint-drawing-pexels-5094676.jpg', '5094676'],
+  ['parent-child-speech-reading-family-pexels-5692247.jpg', '5692247'],
   ['parent-development-observation-notes.jpg', '7428213'],
   ['parent-daily-skills-folding-clothes.jpg', '4440571'],
   ['parent-daily-participation-setting-table.jpg', '5990733'],

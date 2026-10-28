@@ -2,8 +2,8 @@
 title: "Развитие речи и понимания: что важно замечать родителям"
 summary: "Как развивается общение от первых звуков и жестов до слов и предложений, чем понимание речи отличается от её использования и какие наблюдения помогут вовремя обратиться за поддержкой."
 description: "Практическое руководство для родителей о развитии речи, понимании языка, жестах, двуязычии, проверке слуха и ситуациях, которые стоит обсудить со специалистом."
-featuredImage: "/central-asia-autism-hub/images/editorial/photos/parent-child-speech-joint-drawing-pexels-5094676.jpg"
-featuredImageAlt: "Мама и дочь вместе рисуют за столом дома, пример совместного внимания к рисунку и общения во время повседневного занятия."
+featuredImage: "/central-asia-autism-hub/images/editorial/photos/parent-child-speech-reading-family-pexels-5692247.jpg"
+featuredImageAlt: "Мама читает книгу двум детям дома, дети рассматривают страницы и слушают историю, пример совместного чтения и общения."
 country: kz
 language: ru
 section: parents
