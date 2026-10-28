@@ -97,8 +97,8 @@ AAP бірлескен реттеуді баланың белгісіне жау
 ## 2. Қолдау әртүрлі болатын үш кезең
 
 <figure class="emotion-reference-figure">
-  <a href="/central-asia-autism-hub/images/editorial/emotion-three-moments-no-duplicate-title.png" target="_blank" rel="noopener noreferrer" aria-label="Балаға қолдаудың үш кезеңін көрсететін үлкейтілген суретті ашу">
-    <img src="/central-asia-autism-hub/images/editorial/emotion-three-moments-no-duplicate-title.png" width="2179" height="722" alt="Үш кезең: қиындыққа дейін анасы таңдау ұсынады, күйзеліс кезінде сабырмен жанында қалады, кейін баланың қалпына келуіне уақыт береді." loading="lazy" decoding="async" />
+  <a href="/central-asia-autism-hub/images/editorial/emotion-three-moments-kk.svg" target="_blank" rel="noopener noreferrer" aria-label="Балаға қолдаудың үш кезеңін көрсететін үлкейтілген суретті ашу">
+    <img src="/central-asia-autism-hub/images/editorial/emotion-three-moments-kk.svg" width="2179" height="722" alt="Үш кезең: қиындыққа дейін анасы таңдау ұсынады, күйзеліс кезінде сабырмен жанында қалады, кейін баланың қалпына келуіне уақыт береді." loading="lazy" decoding="async" />
   </a>
   <figcaption>Суретті үлкейтіп көру үшін басыңыз.</figcaption>
 </figure>
