@@ -108,6 +108,8 @@ Before using a questionnaire, consider:
 
 For example, its developers describe the official M-CHAT-R/F as a two-stage parent-report screening tool for assessing likelihood of autism in children of specified ages. It has its own procedures and decision rules, but it is not a standalone diagnosis.
 
+For children aged 16–30 months, [the first stage of M-CHAT-R is available on AutismHub](/kz/en/tools/mchat-r/). It contains 20 questions. An initial score of 3–7 requires a separate Follow-Up interview before the two-stage M-CHAT-R/F procedure is complete.
+
 ## What may be included in a diagnostic assessment?
 
 The specific process depends on the child's age, the clinical situation and the healthcare system. It may include:
