@@ -289,6 +289,43 @@ try {
       'Merged support target is not generated: ' + newSlug);
   }
 
+  // The assessment and post-diagnosis parent groups form one reading path.
+  // Keep article URLs intact and show only actual locale-specific publications.
+  for (const locale of locales) {
+    for (const width of widths) {
+      await navigate(base + '/kz/' + locale + '/parents/', width);
+      const state = await evaluate(() => {
+        const groups = [...document.querySelectorAll('.section-v2__accordion > details.section-v2__group')];
+        const assessment = document.querySelector('details#assessment');
+        assessment?.querySelector(':scope > summary')?.click();
+        const articles = [...(assessment?.querySelectorAll(':scope > .section-v2__article-list > a.section-v2__article-row') || [])];
+        const allLinks = groups.flatMap(group => [...group.querySelectorAll('a.section-v2__article-row[href]')]
+          .map(link => link.getAttribute('href')));
+        return {
+          ids: groups.map(group => group.id),
+          count: articles.length,
+          links: articles.map(link => link.getAttribute('href')),
+          assessmentOpen: Boolean(assessment?.open),
+          uniqueLinks: new Set(allLinks).size === allLinks.length,
+          overflow: document.documentElement.scrollWidth - innerWidth,
+        };
+      });
+      console.log('USER_JOURNEY_ASSESSMENT_MERGE ' + locale + ' ' + width + ' ' + JSON.stringify(state));
+      verify(JSON.stringify(state.ids) === JSON.stringify(['autism-basics','development','assessment','support','feeding']),
+        'Parent assessment ' + locale + ' ' + width + ': unexpected group structure ' + JSON.stringify(state.ids));
+      verify(state.assessmentOpen && state.count === (locale === 'ru' ? 6 : 3),
+        'Parent assessment ' + locale + ' ' + width + ': missing/misassigned articles');
+      verify(state.uniqueLinks, 'Parent assessment ' + locale + ' ' + width + ': duplicate article links');
+      verify(state.overflow <= 3, 'Parent assessment ' + locale + ' ' + width + ': horizontal overflow');
+      if (locale === 'ru') {
+        verify(state.links[4]?.endsWith('/posle-otsenki-na-autizm-v-kazakhstane/') &&
+          state.links[5]?.endsWith('/pervye-30-dney-posle-diagnoza-autizma-v-kazakhstane/'),
+          'Parent assessment ' + width + ': post-diagnosis reading order or canonical links changed');
+        await screenshot('ru', width, 'assessment-merged');
+      }
+    }
+  }
+
   // Parent support taxonomy must open on click and expose every published RU resource exactly once.
   for (const width of widths) {
     await navigate(base + '/kz/ru/parents/', width);
