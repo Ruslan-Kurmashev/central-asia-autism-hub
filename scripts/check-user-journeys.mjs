@@ -389,6 +389,43 @@ try {
     }
   }
 
+  // A Markdown task checklist must have checkbox squares without extra bullet markers.
+  for (const width of widths) {
+    const route = base + '/kz/ru/parents/pervye-30-dney-posle-diagnoza-avtizma-v-kazakhstane/';
+    await navigate(route.replace('diagnoza-avtizma', 'diagnoza-autizma'), width);
+    const state = await evaluate(() => {
+      const heading = [...document.querySelectorAll('.article-v2__body h2')]
+        .find(h => h.textContent?.trim() === 'Короткий чек-лист');
+      const list = heading?.nextElementSibling;
+      const items = list?.matches('ul') ? [...list.querySelectorAll(':scope > li')] : [];
+      const other = document.querySelector('.article-v2__body ul:not(:has(input[type="checkbox"])) li');
+      return {
+        heading: Boolean(heading),
+        items: items.length,
+        checkboxes: items.filter(item => Boolean(item.querySelector('input[type="checkbox"]'))).length,
+        markers: items.map(item => getComputedStyle(item).listStyleType),
+        regularMarker: other ? getComputedStyle(other).listStyleType : null,
+        overflow: document.documentElement.scrollWidth - innerWidth,
+      };
+    });
+    console.log('USER_JOURNEY_CHECKLIST ' + width + ' ' + JSON.stringify(state));
+    verify(state.heading && state.items === 8 && state.checkboxes === 8,
+      'Parent checklist ' + width + ': missing heading, items or checkboxes');
+    verify(state.markers.length === 8 && state.markers.every(marker => marker === 'none'),
+      'Parent checklist ' + width + ': extra bullet markers ' + JSON.stringify(state.markers));
+    verify(state.regularMarker === 'disc',
+      'Parent checklist ' + width + ': ordinary list markers unexpectedly changed');
+    verify(state.overflow <= 3, 'Parent checklist ' + width + ': horizontal overflow');
+    await evaluate(() => {
+      const heading = [...document.querySelectorAll('.article-v2__body h2')]
+        .find(h => h.textContent?.trim() === 'Короткий чек-лист');
+      heading?.scrollIntoView({ block: 'start' });
+      return true;
+    });
+    await delay(150);
+    await screenshot('ru', width, 'diagnosis-checklist');
+  }
+
   // Regression: multi-column parent play tables must never split Russian words.
   for (const width of [360, 768, 900, 1440]) {
     const route = base + '/kz/ru/parents/kak-razvivaetsya-igra-rebenka-i-uchastie-roditeley/';
