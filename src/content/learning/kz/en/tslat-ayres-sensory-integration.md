@@ -30,7 +30,7 @@ costLabel: "Free"
 externalUrl: "https://register.tealearn.com/browse/tea/network/tslat/courses/evidence-based-practice-ayres-sensory-integration"
 lastVerifiedAt: 2026-10-28
 projectOwned: false
-registrationStatus: "The official TEA Learn listing marks the course Free. Select Enroll and register. The displayed cohort may say 2025–2026 or 2026–2027, so confirm the active version before enrolling."
+registrationStatus: "The official TEA Learn listing marks the course Free. Select Enroll and register. The displayed cohort may say 2025-2026 or 2026-2027, so confirm the active version before enrolling."
 completionOutcome: "Completion requires visiting every section, watching all videos and completing reflections and knowledge checks. The public page does not confirm a specific completion certificate."
 resourceDisclaimerType: external
 sources:

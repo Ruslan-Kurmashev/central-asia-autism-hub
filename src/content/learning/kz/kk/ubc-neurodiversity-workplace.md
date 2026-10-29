@@ -33,7 +33,7 @@ externalUrl: "https://circa.educ.ubc.ca/autism-in-the-workplace/"
 lastVerifiedAt: 2026-10-27
 projectOwned: false
 registrationStatus: "UBC Canvas Catalog жүйесінде тегін тіркеліп, модульдерді ашыңыз. Бірінші модуль қалғандарынан бұрын өтілуі тиіс. Қатысуға ел бойынша шектеу жоқ."
-completionOutcome: "1–5 модуль мен сауалнамалардан соң сертификат беріледі, 6-модуль қосымша. Канадалық CPD сағаттары сертификаттың Қазақстанда танылуын білдірмейді."
+completionOutcome: "1-5 модуль мен сауалнамалардан соң сертификат беріледі, 6-модуль қосымша. Канадалық CPD сағаттары сертификаттың Қазақстанда танылуын білдірмейді."
 resourceDisclaimerType: external
 sources:
   - title: "Official programme description and access conditions"

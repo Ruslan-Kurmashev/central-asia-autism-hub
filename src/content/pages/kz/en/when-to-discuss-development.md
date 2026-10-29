@@ -161,7 +161,7 @@ If you live in Kazakhstan, the local routes and practical steps are explained se
 
 ## Questionnaires and online tests
 
-**M-CHAT-R developmental screening.** Parents of children aged 16–30 months can [complete the 20-question first stage in English](/kz/en/tools/mchat-r/). Some scores require a further Follow-Up interview with a professional. Screening does not diagnose or rule out autism.
+**M-CHAT-R developmental screening.** Parents of children aged 16-30 months can [complete the 20-question first stage in English](/kz/en/tools/mchat-r/). Some scores require a further Follow-Up interview with a professional. Screening does not diagnose or rule out autism.
 
 A questionnaire may help organise observations or prepare questions for a professional, but its result is not a diagnosis.
 
