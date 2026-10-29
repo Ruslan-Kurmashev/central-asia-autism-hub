@@ -318,9 +318,16 @@ try {
       verify(state.uniqueLinks, 'Parent assessment ' + locale + ' ' + width + ': duplicate article links');
       verify(state.overflow <= 3, 'Parent assessment ' + locale + ' ' + width + ': horizontal overflow');
       if (locale === 'ru') {
-        verify(state.links[4]?.endsWith('/posle-otsenki-na-autizm-v-kazakhstane/') &&
-          state.links[5]?.endsWith('/pervye-30-dney-posle-diagnoza-autizma-v-kazakhstane/'),
-          'Parent assessment ' + width + ': post-diagnosis reading order or canonical links changed');
+        const expectedRuSuffixes = [
+          '/skrining-otsenka-i-diagnoz-autizma/',
+          '/kak-stavyat-diagnoz-autizma-v-kazakhstane/',
+          '/obsledovaniya-pri-podozrenii-na-autizm/',
+          '/psihiatr-pmpk-vkk-mse-kazakhstan/',
+          '/posle-otsenki-na-autizm-v-kazakhstane/',
+          '/pervye-30-dney-posle-diagnoza-autizma-v-kazakhstane/',
+        ];
+        verify(expectedRuSuffixes.every((suffix, index) => state.links[index]?.endsWith(suffix)),
+          'Parent assessment ' + width + ': curated reading order or canonical links changed: ' + JSON.stringify(state.links));
         await screenshot('ru', width, 'assessment-merged');
       }
     }
