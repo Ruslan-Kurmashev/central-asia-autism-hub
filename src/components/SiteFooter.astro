@@ -1,7 +1,7 @@
 ---
 import { UI } from '../i18n/ui';
 import { CONTACT_CHANNELS } from '../data/contact-channels';
-import { localePath } from '../lib/urls';
+import { localePath, sitePath } from '../lib/urls';
 import { SITE, type Locale } from '../site.config';
 
 interface Props {
@@ -12,6 +12,13 @@ const { locale = 'en' } = Astro.props;
 const copy = UI[locale];
 const year = new Date().getUTCFullYear();
 const policiesPath = localePath(locale, 'about/policies');
+const counterScript = sitePath() + 'scripts/site-visit-counter.js';
+const isNotFound = /\/404(?:\/|\.html)$/.test(Astro.url.pathname);
+const visitCopy = {
+  ru: { label: 'Посещения платформы', since: 'С начала учёта, приблизительное число визитов' },
+  kk: { label: 'Платформаға кіру саны', since: 'Есеп басталғалы бергі шамамен алынған кіру саны' },
+  en: { label: 'Platform visits', since: 'Since tracking began, approximate visit count' },
+}[locale];
 ---
 
 <footer class="site-footer">
@@ -38,7 +45,17 @@ const policiesPath = localePath(locale, 'about/policies');
       </a>
     </div>
   </div>
+  {!isNotFound && (
+    <div class="container site-footer__visits" data-site-visit-counter data-counter-locale={locale} hidden>
+      <span class="site-footer__visits-number" data-visit-count></span>
+      <div>
+        <p class="site-footer__visits-title">{visitCopy.label}</p>
+        <p class="site-footer__visits-note">{visitCopy.since}</p>
+      </div>
+    </div>
+  )}
   <div class="container site-footer__legal">
     <p>© {year} {SITE.umbrellaName}</p>
   </div>
+  {!isNotFound && <script is:inline src={counterScript} defer></script>}
 </footer>
