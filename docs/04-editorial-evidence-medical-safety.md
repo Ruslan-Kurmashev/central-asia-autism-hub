@@ -224,6 +224,12 @@ Home-support materials are limited to general, low-risk educational information 
 
 Screening and assessment tools must never be presented as standalone diagnostic instruments. A narrowly scoped, owner-approved extension (2026-10-28) permits an authorised browser-only first-stage M-CHAT-R after actual electronic and source-publication rights are confirmed, its multilingual wording is checked, and original scoring and limitations are validated. A score of 3-7 requires the original Follow-Up interview; the first-stage screen alone cannot be called a completed M-CHAT-R/F. For all outcomes, concerns about the child's development justify professional assessment regardless of the score. No individual diagnosis, therapy choice or clinical interpretation is provided by AutismHub.
 
+### 8.1. Editorial dash punctuation (29 October 2026)
+
+Every user-facing article, translation, section label, card, site navigation caption and informational description uses the ASCII hyphen-minus (`-`) rather than the U+2013 en dash or U+2014 em dash, including in numeric ranges (for example, `1-3` and `2025-2030`). Keep appropriate spaces for parenthetical separators. This owner-approved style choice is not a medical or legal assertion and does not change the original publication date of a material when applied as a punctuation-only correction.
+
+Do not alter URLs, identifiers, program code, original licensed instrument questions or protected externally authored source text just to enforce punctuation. The controlled M-CHAT-R item bank remains identical to the approved source. Run `npm run check:article-punctuation` together with regular validation. See `docs/decisions/2026-10-29-editorial-hyphen-rule.md`.
+
 ## 9. External courses and learning resources
 
 Autism Hub Kazakhstan does not claim to conduct a full independent audit of every external course.

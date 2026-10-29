@@ -13,6 +13,8 @@ This directory records explicit, owner-approved changes to product policy or tec
 
 ## Current records
 
+- [2026-10-29: ASCII hyphen for all article and section copy](2026-10-29-editorial-hyphen-rule.md). Replaces typographic long dashes in user-facing RU, KK and EN content while preserving licensed instrument wording and protected source code.
+
 - [Combined parent assessment and post-diagnosis navigation](2026-10-29-parent-assessment-merge.md). The separate after-diagnosis topic is retired from the parent landing page, with canonical article URLs retained.
 
 - [2026-10-28: M-CHAT-R first-stage screening exception](2026-10-28-mchat-r-browser-screening.md). Owner approved preparation and requested publication. Electronic licence scope, human language checks and final medical/privacy gates are not assumed completed.
