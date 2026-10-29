@@ -333,8 +333,14 @@ try {
       const support = document.querySelector('details#support');
       support?.querySelector(':scope > summary')?.click();
       const subgroups = [...(support?.querySelectorAll('.section-v2__support-subgroup') || [])];
-      const allLinks = subgroups.flatMap(item => [...item.querySelectorAll('.section-v2__article-row[href]')])
-        .map(a => a.getAttribute('href'));
+      const rows = subgroups.flatMap(item => [...item.querySelectorAll(':scope > .section-v2__article-list > a.section-v2__article-row[href]')]);
+      const allLinks = rows.map(a => a.getAttribute('href'));
+      const images = rows.map(a => a.querySelector('img.section-v2__article-thumb[src]')?.getAttribute('src'));
+      const uniformRows = rows.every(a =>
+        a.classList.contains('section-v2__article-row--image') &&
+        a.querySelector('.section-v2__article-copy > strong') &&
+        a.querySelector('.section-v2__article-copy > span') &&
+        a.querySelector('.section-v2__article-meta time[datetime]'));
       subgroups[0]?.querySelector(':scope > summary')?.click();
       return {
         outerOpen: support?.open || false,
@@ -342,8 +348,11 @@ try {
         firstOpen: subgroups[0]?.open || false,
         articleCount: allLinks.length,
         uniqueArticleCount: new Set(allLinks).size,
-        primaryCount: subgroups.reduce((count, group) => count + group.querySelectorAll(':scope > .section-v2__article-list > .section-v2__article-row[href]').length, 0),
-        supplementaryCount: subgroups.reduce((count, group) => count + group.querySelectorAll('.section-v2__support-supplementary-link[href]').length, 0),
+        unifiedRowCount: rows.length,
+        allRowsUniform: Boolean(uniformRows),
+        imageCount: images.filter(Boolean).length,
+        uniqueImageCount: new Set(images.filter(Boolean)).size,
+        supplementaryBlockCount: support?.querySelectorAll('.section-v2__support-supplementary').length || 0,
         weightedInSensory: !!support?.querySelector('#support-sensory a[href$="/weighted-items/"]'),
         weightedInOther: !!support?.querySelector('#support-other a[href$="/weighted-items/"]'),
         unassignedCount: support?.querySelectorAll('.section-v2__support-unassigned a').length || 0,
@@ -355,8 +364,10 @@ try {
       'Parent support ' + width + ': nested accordion did not open ten groups');
     verify(state.articleCount === 45 && state.uniqueArticleCount === 45 && state.unassignedCount === 0,
       'Parent support ' + width + ': missing, duplicated or unassigned article links');
-    verify(state.primaryCount === 36 && state.supplementaryCount === 9,
-      'Parent support ' + width + ': unexpected editorial main/detailed article split ' + JSON.stringify(state));
+    verify(state.unifiedRowCount === 45 && state.allRowsUniform && state.supplementaryBlockCount === 0,
+      'Parent support ' + width + ': article rows do not have the same layout ' + JSON.stringify(state));
+    verify(state.imageCount === 45 && state.uniqueImageCount === 45,
+      'Parent support ' + width + ': missing or reused article thumbnail ' + JSON.stringify(state));
     verify(state.weightedInSensory && !state.weightedInOther,
       'Parent support ' + width + ': weighted aid safety article assigned to wrong category');
     verify(state.overflow <= 3, 'Parent support ' + width + ': horizontal overflow ' + state.overflow);
@@ -384,11 +395,16 @@ try {
         links: hrefs.length,
         allLocal: hrefs.every(href => href?.includes('/kz/' + document.documentElement.lang + '/parents/')),
         emptyStates: groups.filter(group => group.querySelector('.section-v2__empty')).length,
+        allRowsWithImages: groups.every(group =>
+          [...group.querySelectorAll(':scope > .section-v2__article-list > a.section-v2__article-row[href]')]
+            .every(row => Boolean(row.querySelector('img.section-v2__article-thumb[src]')))),
+        supplementaryBlocks: support?.querySelectorAll('.section-v2__support-supplementary').length || 0,
       };
     });
     console.log('USER_JOURNEY_SUPPORT_TRANSLATION ' + locale + ' ' + JSON.stringify(localizedSupport));
-    verify(localizedSupport.groupCount === 10 && localizedSupport.allLocal,
-      'Parent support ' + locale + ': missing group or incorrect-language article links');
+    verify(localizedSupport.groupCount === 10 && localizedSupport.allLocal &&
+      localizedSupport.allRowsWithImages && localizedSupport.supplementaryBlocks === 0,
+      'Parent support ' + locale + ': missing group, image, or incorrect-language article links');
   }
 
   // Exercise the exact changed, published URLs rather than only smoke-test examples.
