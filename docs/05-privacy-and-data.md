@@ -128,6 +128,22 @@ This selection must be rechecked against the provider's current documentation be
 
 Google Analytics, Meta Pixel, advertising pixels, remarketing tags, and comparable profiling tools are not approved for the MVP.
 
+### 6.1. Interim public visit counter (29 October 2026)
+
+At the owner's request, a no-cost public visit counter is prepared separately from the later Cloudflare Web Analytics project. The proposed provider is CounterAPI at https://counterapi.com/. The counter shares a fixed project-wide namespace and counts approximate browser-tab visits, rather than unique people. A visit is newly counted after at least 30 minutes without activity in the same browser tab. Multiple tabs, different browsers and blocked JavaScript make it an estimate, not a verified number of humans.
+
+Minimum processing:
+- The browser requests the public CounterAPI endpoint directly and receives an aggregate numeric count.
+- A per-tab sessionStorage item holds only the numeric timestamp of the last tracked activity. It is not a user identifier and is cleared by the browser when the tab session ends.
+- The counter does not transmit page paths, query parameters, referrals, browser storage contents, health information, instrument answers, names, emails, custom user IDs or cookies.
+- Requests are made with credentials omitted and no HTTP referrer. Standard network connection information, including the visitor's IP address and browser headers, is nevertheless available to the third-party operator.
+- The provider says it converts IP addresses and browser details to hashes and does not sell visitor data or support advertisers. This is the provider's claim, not independently verified data protection assurance. Its technical-log and hash-retention periods, data location and contractual terms are not established by the currently available documentation.
+- Browser code hides the public metric when the provider cannot return a valid number. It does not invent historical traffic, increment during local development, or count 404 pages.
+- The counter is public and unauthenticated. Abuse, bots and network filtering can influence its value. It must not be represented as an exact unique-person, family, or clinical outcome measure.
+- The public RU, KK and EN privacy notices must state this processing before activation. Cloudflare analytics remains deferred until a separate rollout.
+
+**Review status:** the minimal-data design is documented, but the vendor's retention periods, hosting location, current terms, live API behaviour and final browser QA still require verification before release approval. Do not describe this pending review as complete GDPR compliance or a verified production deployment.
+
 ## 7. Cookies and device storage
 
 The MVP must not set non-essential cookies for:
@@ -138,7 +154,7 @@ The MVP must not set non-essential cookies for:
 - remarketing;
 - persistent visitor identification.
 
-The website must not store visitor profiles in browser local storage.
+The website must not store visitor profiles in browser local storage. The interim counter may keep a temporary, non-identifying last-activity timestamp in per-tab sessionStorage only after its separate privacy review is completed.
 
 If a future function requires cookies or device storage, its purpose, stored values, duration, and consent requirements must be reviewed before implementation. It must not be added merely because a third-party tool enables it by default.
 
