@@ -68,7 +68,7 @@ sources:
     publicationYear: 2011
     note: "Voineagu et al.: анализ экспрессии генов в посмертных образцах, включая иммунно- и глиально-связанные модули, не диагноз по одному гену."
     accessedAt: 2026-10-15
-  - title: "Single-cell genomics identifies cell type–specific molecular changes in autism"
+  - title: "Single-cell genomics identifies cell type-specific molecular changes in autism"
     url: "https://pmc.ncbi.nlm.nih.gov/articles/PMC7678724/"
     organisation: "Science"
     publicationYear: 2019
