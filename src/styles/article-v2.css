@@ -819,6 +819,16 @@
   margin-top: 0.28rem;
 }
 
+/* Markdown task lists already include checkboxes: suppress list bullets only there. */
+.article-v2.parents-article-body .article-v2__body ul:has(> li input[type='checkbox']) {
+  list-style: none;
+  padding-inline-start: 0;
+}
+
+.article-v2.parents-article-body .article-v2__body li:has(input[type='checkbox']) {
+  list-style: none;
+}
+
 .article-v2.parents-article-body .article-v2__body blockquote {
   font-size: var(--type-reading);
   line-height: var(--leading-reading);
