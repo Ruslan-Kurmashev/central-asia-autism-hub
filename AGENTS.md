@@ -61,7 +61,8 @@ Read only the documents relevant to the task, but read each selected document co
 
 ## Editorial and medical safety
 
-- Never use the U+2014 em dash in repository text, interface copy, content, metadata, templates, or documentation. Use the ordinary hyphen-minus (`-`) instead.
+- Never use the U+2014 em dash in repository text, interface copy, content, metadata, templates or documentation. Use the ordinary ASCII hyphen-minus (`-`) instead.
+- Also prohibit U+2013 en dash in user-facing article text, headings, section labels, metadata descriptions, cards, navigation and other editorial copy, including numeric ranges like `1-3`. Preserve URL syntax, source code, exact licensed screening instruments and immutable third-party text. The article punctuation checker enforces the user-facing rule across content and site copy.
 - Never use the semicolon (`;`) as prose punctuation in articles, translations, metadata descriptions, research explainers or learning listings. Use a comma or rewrite the sentence for clarity. Preserve semicolons required by URLs, HTML entities and code. `npm run check:article-punctuation` enforces this rule across all content languages and collections.
 - Do not invent medical, scientific, legal, service, organisation, address, price, prevalence, or Kazakhstan-specific claims.
 - Use traceable sources for factual, medical, scientific, and Kazakhstan-specific claims. Distinguish confirmed facts, inferences, assumptions, and unknowns.

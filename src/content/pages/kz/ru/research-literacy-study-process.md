@@ -48,7 +48,7 @@ sources:
     url: "https://doi.org/10.1371/journal.pmed.0040296"
     organisation: "PLOS Medicine"
     publicationYear: 2007
-    note: "Полная отчётность когортных, поперечных и исследований случай–контроль."
+    note: "Полная отчётность когортных, поперечных и исследований случай-контроль."
     accessedAt: 2026-10-26
   - title: "Cochrane Handbook, Chapter 14: certainty of evidence"
     url: "https://www.cochrane.org/authors/handbooks-and-manuals/handbook/current/chapter-14"

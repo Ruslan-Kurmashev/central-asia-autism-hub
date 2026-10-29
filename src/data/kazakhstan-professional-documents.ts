@@ -135,7 +135,7 @@ export const kazakhstanDocumentGroups: KazakhstanDocumentGroup[] = [
       document('children-rights-law-345','P0','Закон РК «О правах ребенка» № 345-II','ҚР «Қазақстан Республикасындағы баланың құқықтары туралы» заңы № 345-II','Law on the Rights of the Child No. 345-II'),
       document('personal-data-law-94','P0','Закон РК «О персональных данных и их защите» № 94-V','ҚР «Дербес деректер және оларды қорғау туралы» заңы № 94-V','Law on Personal Data and Its Protection No. 94-V'),
       document('disability-convention-ratification-288','P1','Закон № 288-V: ратификация Конвенции о правах инвалидов','№ 288-V заң: Мүгедектердің құқықтары туралы конвенцияны ратификациялау','Law No. 288-V: ratification of the Convention on the Rights of Persons with Disabilities'),
-      document('inclusion-policy-2025-2030','P2','Концепция инклюзивной политики Казахстана на 2025–2030 годы','Қазақстанның 2025–2030 жылдарға арналған инклюзивті саясат тұжырымдамасы','Kazakhstan Inclusive Policy Concept 2025–2030'),
+      document('inclusion-policy-2025-2030','P2','Концепция инклюзивной политики Казахстана на 2025-2030 годы','Қазақстанның 2025-2030 жылдарға арналған инклюзивті саясат тұжырымдамасы','Kazakhstan Inclusive Policy Concept 2025-2030'),
     ],
   },
 ];
