@@ -80,7 +80,7 @@ sources:
     publicationYear: 2013
     note: "Поддержка адаптивных повседневных навыков, визуальные опоры, адаптация среды, оценка проблем с кормлением и физиологическим здоровьем."
     accessedAt: 2026-10-15
-  - title: "Positive Parenting Tips: Preschoolers (3–5 years old)"
+  - title: "Positive Parenting Tips: Preschoolers (3-5 years old)"
     url: "https://www.cdc.gov/child-development/positive-parenting-tips/preschooler-3-5-years.html"
     organisation: "Centers for Disease Control and Prevention (CDC)"
     publicationYear: 2026
