@@ -6,7 +6,7 @@
 
 The parent landing page must contain one combined `Assessment and diagnosis` topic instead of separate `Assessment and diagnosis` and `After assessment and diagnosis` groups.
 
-The two Russian articles previously under the latter group remain individually published and appear after the existing four Russian assessment/diagnosis articles. The combined group has six entries in RU. Other languages list only their actual published translations and never show a Russian article as an available translated version.
+The two Russian articles previously under the latter group remain individually published and appear after the existing four Russian assessment/diagnosis articles. The combined group has six entries in RU. Kazakh and English each list four genuinely published articles (without the two untranslated post-diagnosis guides) and never show a Russian article as an available translated version.
 
 ## Rationale and scope
 
