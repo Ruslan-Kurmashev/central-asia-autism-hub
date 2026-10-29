@@ -170,20 +170,12 @@ const parentGroupDefinitions = [
     id: 'assessment',
     title: 'Оценка и диагностика',
     description:
-      'Скрининг, диагностическая оценка, обследования и роли специалистов в Казахстане.',
+      'Скрининг, диагностика, обследования, роли специалистов и дальнейшие шаги после оценки в Казахстане.',
     topics: [
       'assessment-and-diagnosis',
       'autism-assessments-kazakhstan',
       'autism-diagnosis-kazakhstan',
       'autism-pmpk-vkk-mse-kazakhstan',
-    ],
-  },
-  {
-    id: 'after-diagnosis',
-    title: 'После оценки и диагноза',
-    description:
-      'Как понять результат оценки и какие практические шаги могут быть следующими.',
-    topics: [
       'after-autism-assessment-kazakhstan',
       'first-30-days-after-autism-diagnosis-kazakhstan',
     ],
@@ -215,11 +207,7 @@ const englishParentGroups: Record<string, { title: string; description: string }
   },
   assessment: {
     title: 'Assessment and diagnosis',
-    description: 'Screening, diagnostic assessment and professional roles in Kazakhstan.',
-  },
-  'after-diagnosis': {
-    title: 'After assessment and diagnosis',
-    description: 'Understanding assessment results and possible next steps.',
+    description: 'Screening, diagnosis, professional roles and next steps after assessment in Kazakhstan.',
   },
   support: {
     title: 'Approaches to support',
@@ -242,11 +230,7 @@ const kazakhParentGroups: Record<string, { title: string; description: string }>
   },
   assessment: {
     title: 'Бағалау және диагностика',
-    description: 'Скрининг, кешенді бағалау, диагностика және Қазақстандағы мамандардың рөлі.',
-  },
-  'after-diagnosis': {
-    title: 'Бағалау мен диагноздан кейін',
-    description: 'Бағалау нәтижесін түсіну және келесі қадамдарды жоспарлау.',
+    description: 'Скрининг, кешенді бағалау, диагностика, мамандардың рөлі және бағалаудан кейінгі қадамдар.',
   },
   support: {
     title: 'Қолдау тәсілдері',
@@ -294,6 +278,9 @@ const sectionGroups = groupDefinitions.map((group) => ({
     }
     if (group.id === 'development') {
       return compareParentDevelopment(left.data.translationKey, right.data.translationKey);
+    }
+    if (group.id === 'assessment') {
+      return group.topics.indexOf(left.data.topic) - group.topics.indexOf(right.data.topic);
     }
     return 0;
   }),
