@@ -313,7 +313,7 @@ try {
       console.log('USER_JOURNEY_ASSESSMENT_MERGE ' + locale + ' ' + width + ' ' + JSON.stringify(state));
       verify(JSON.stringify(state.ids) === JSON.stringify(['autism-basics','development','assessment','support','feeding']),
         'Parent assessment ' + locale + ' ' + width + ': unexpected group structure ' + JSON.stringify(state.ids));
-      verify(state.assessmentOpen && state.count === (locale === 'ru' ? 6 : 3),
+      verify(state.assessmentOpen && state.count === (locale === 'ru' ? 6 : 4),
         'Parent assessment ' + locale + ' ' + width + ': missing/misassigned articles');
       verify(state.uniqueLinks, 'Parent assessment ' + locale + ' ' + width + ': duplicate article links');
       verify(state.overflow <= 3, 'Parent assessment ' + locale + ' ' + width + ': horizontal overflow');
