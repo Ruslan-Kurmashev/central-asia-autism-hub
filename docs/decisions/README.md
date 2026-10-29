@@ -13,6 +13,8 @@ This directory records explicit, owner-approved changes to product policy or tec
 
 ## Current records
 
+- [Combined parent assessment and post-diagnosis navigation](2026-10-29-parent-assessment-merge.md). The separate after-diagnosis topic is retired from the parent landing page, with canonical article URLs retained.
+
 - [2026-10-28: M-CHAT-R first-stage screening exception](2026-10-28-mchat-r-browser-screening.md). Owner approved preparation and requested publication. Electronic licence scope, human language checks and final medical/privacy gates are not assumed completed.
 
 - [Decap CMS accurately documented](2026-10-26-decap-cms.md)
