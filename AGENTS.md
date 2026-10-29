@@ -29,6 +29,7 @@ Read only the documents relevant to the task, but read each selected document co
 - At the start of a new site task, inspect the current repository and the relevant decision records. A previous session's tool limitations do not establish access limitations in the current session.
 - Check GitHub read and write tools before declaring publication impossible. Distinguish missing local files from unavailable repository write permissions.
 - Current owner-approved decisions in `docs/decisions/` take precedence over historical plans where they expressly supersede earlier sections. Resolve and document contradictions, rather than silently retaining obsolete policy.
+- The parent landing page has one combined `assessment` group. Do not recreate the retired `after-diagnosis` group, duplicate its articles, or change article URLs. See `docs/decisions/2026-10-29-parent-assessment-merge.md`.
 - The curated external course catalogue contains only verified free-to-learn resources. See the editorial policy and decision record. Do not silently add paid learning entries.
 - Keep image examples tied to their exact licensed or project-owned files. Do not claim an illustrative reference is owner-approved when approval cannot be substantiated.
 - Protect existing approved instructional images: do not edit a locked asset or its manifest hash without explicit approval of the exact replacement and updated provenance. Run `npm run check:visual-references`. Two source PNGs are documented as Project attachments, not falsely claimed to be in Git.
