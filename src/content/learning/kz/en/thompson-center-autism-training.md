@@ -20,7 +20,7 @@ draft: false
 provider: "Thompson Center for Autism & Neurodevelopment, University of Missouri"
 learningKind: course
 topicArea: autism
-durationLabel: "5 modules, recorded in 2015–2016"
+durationLabel: "5 modules, recorded in 2015-2016"
 audience:
   - parents
   - professionals
@@ -41,6 +41,6 @@ sources:
     accessedAt: 2026-10-27
 ---
 
-Recorded in 2015–2016. Statistics, screening measures and guidance may be out of date. Do not treat them as current clinical or Kazakhstan-specific guidance.
+Recorded in 2015-2016. Statistics, screening measures and guidance may be out of date. Do not treat them as current clinical or Kazakhstan-specific guidance.
 
 External education resource. AutismHub does not deliver this training or award qualifications.

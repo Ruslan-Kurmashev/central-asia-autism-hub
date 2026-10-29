@@ -32,7 +32,7 @@ costLabel: "Тегін"
 externalUrl: "https://register.tealearn.com/browse/tea/network/tslat/courses/evidence-based-practice-ayres-sensory-integration"
 lastVerifiedAt: 2026-10-28
 projectOwned: false
-registrationStatus: "Ресми TEA Learn платформасында курс Free деп белгіленген. Enroll батырмасын басып, тіркеліңіз. Курс нұсқасында 2025–2026 не 2026–2027 деп көрсетілуі мүмкін, жазылар алдында қолжетімді нұсқаны тексеріңіз."
+registrationStatus: "Ресми TEA Learn платформасында курс Free деп белгіленген. Enroll батырмасын басып, тіркеліңіз. Курс нұсқасында 2025-2026 не 2026-2027 деп көрсетілуі мүмкін, жазылар алдында қолжетімді нұсқаны тексеріңіз."
 completionOutcome: "Курсты аяқтау үшін барлық бөлімді қарап, бейнелерді толық көріп, рефлексия тапсырмалары мен білімді тексеруді орындау қажет. Ашық бетте сертификаттың түрі мен берілу шарттары расталмаған."
 resourceDisclaimerType: external
 sources:

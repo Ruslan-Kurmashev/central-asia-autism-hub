@@ -43,6 +43,6 @@ sources:
     accessedAt: 2026-10-27
 ---
 
-This is a 2026–2027 project with some activities restricted to selected families and professionals. Free online lessons should not be confused with enrolment in its practical component.
+This is a 2026-2027 project with some activities restricted to selected families and professionals. Free online lessons should not be confused with enrolment in its practical component.
 
 External learning resource. AutismHub does not deliver this training, issue certificates or certify learner qualifications.

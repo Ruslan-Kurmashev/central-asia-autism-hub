@@ -100,7 +100,7 @@ No single characteristic automatically means autism. Delayed speech, not respond
 
 The published version of Kazakhstan's Standard for the Organisation of Paediatric Care provides for the modified screening questionnaire M-CHAT-R. Its appendix states that the first screening is conducted between **16 and 30 months**.
 
-Parents of children aged 16–30 months can [complete the first stage of M-CHAT-R on AutismHub](/kz/en/tools/mchat-r/). A score of 3–7 requires a separate Follow-Up interview with a professional. The questionnaire does not replace diagnostic assessment.
+Parents of children aged 16-30 months can [complete the first stage of M-CHAT-R on AutismHub](/kz/en/tools/mchat-r/). A score of 3-7 requires a separate Follow-Up interview with a professional. The questionnaire does not replace diagnostic assessment.
 
 The standard's algorithm distinguishes three score ranges:
 
