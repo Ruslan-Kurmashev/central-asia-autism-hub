@@ -141,7 +141,7 @@ With only 8–12 launch resources, separate category pages should not be generat
 
 The former separate parent group `After assessment and diagnosis` is merged into `Assessment and diagnosis` on the same landing page. This is an information-architecture change, not a change to medical, educational, or social-care pathways.
 
-The combined group contains the original four Russian assessment articles followed by two post-assessment articles: `after-autism-assessment-kazakhstan` and `first-30-days-after-autism-diagnosis-kazakhstan`. It now shows six Russian articles, while Kazakh and English show only their three genuinely published assessment/diagnosis articles. The order is controlled by the existing topic IDs, not publication dates. Original article URLs, metadata, translation status, publication dates, and content remain unchanged.
+The combined group contains the original four Russian assessment articles followed by two post-assessment articles: `after-autism-assessment-kazakhstan` and `first-30-days-after-autism-diagnosis-kazakhstan`. It now shows six Russian articles, while Kazakh and English show only their four genuinely published assessment/diagnosis articles. The order is controlled by the existing topic IDs, not publication dates. Original article URLs, metadata, translation status, publication dates, and content remain unchanged.
 
 No empty after-diagnosis accordion should remain in RU, KK, or EN. The implementation is in `src/pages/kz/[lang]/[section]/index.astro` and the rendered group/count/order assertions are in `scripts/check-user-journeys.mjs`. See `docs/decisions/2026-10-29-parent-assessment-merge.md`.
 
