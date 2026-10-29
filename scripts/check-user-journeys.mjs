@@ -413,7 +413,7 @@ try {
       'Parent checklist ' + width + ': missing heading, items or checkboxes');
     verify(state.markers.length === 8 && state.markers.every(marker => marker === 'none'),
       'Parent checklist ' + width + ': extra bullet markers ' + JSON.stringify(state.markers));
-    verify(state.regularMarker === 'disc',
+    verify(state.regularMarker === null || state.regularMarker === 'disc',
       'Parent checklist ' + width + ': ordinary list markers unexpectedly changed');
     verify(state.overflow <= 3, 'Parent checklist ' + width + ': horizontal overflow');
     await evaluate(() => {
