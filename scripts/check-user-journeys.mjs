@@ -391,8 +391,8 @@ try {
 
   // A Markdown task checklist must have checkbox squares without extra bullet markers.
   for (const width of widths) {
-    const route = base + '/kz/ru/parents/pervye-30-dney-posle-diagnoza-avtizma-v-kazakhstane/';
-    await navigate(route.replace('diagnoza-avtizma', 'diagnoza-autizma'), width);
+    const route = base + '/kz/ru/parents/pervye-30-dney-posle-diagnoza-autizma-v-kazakhstane/';
+    await navigate(route, width);
     const state = await evaluate(() => {
       const heading = [...document.querySelectorAll('.article-v2__body h2')]
         .find(h => h.textContent?.trim() === 'Короткий чек-лист');
