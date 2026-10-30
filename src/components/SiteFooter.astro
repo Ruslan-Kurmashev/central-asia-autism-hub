@@ -14,9 +14,9 @@ const year = new Date().getUTCFullYear();
 const policiesPath = localePath(locale, 'about/policies');
 const isNotFound = /\/404(?:\/|\.html)$/.test(Astro.url.pathname);
 const viewCopy = {
-  ru: { badge: 'Просмотры', title: 'Просмотры страниц', note: 'С начала учёта. Считаются загрузки счётчика, не люди.' },
-  kk: { badge: 'Қаралым', title: 'Бет қаралымдары', note: 'Есеп басталғалы. Бұл адамдар саны емес, есептегіш жүктелген саны.' },
-  en: { badge: 'Views', title: 'Page views', note: 'Since tracking began. Badge loads are counted, not individual people.' },
+  ru: { badge: 'Посещения сайта', title: 'Посещения сайта (приблизительный счётчик просмотров)' },
+  kk: { badge: 'Сайтқа кіру саны', title: 'Сайтқа кіру саны (шамамен есептелген қаралымдар)' },
+  en: { badge: 'Site visits', title: 'Site visits (approximate page-view count)' },
 }[locale];
 const badgeUrl = 'https://hits.sh/ruslan-kurmashev.github.io/central-asia-autism-hub.svg'
   + '?view=total&style=flat-square&color=315f94&labelColor=253d50&label='
@@ -55,10 +55,6 @@ const badgeUrl = 'https://hits.sh/ruslan-kurmashev.github.io/central-asia-autism
       data-badge-alt={viewCopy.title}
       hidden
     >
-      <div>
-        <p class="site-footer__visits-title">{viewCopy.title}</p>
-        <p class="site-footer__visits-note">{viewCopy.note}</p>
-      </div>
     </div>
   )}
   <div class="container site-footer__legal">
