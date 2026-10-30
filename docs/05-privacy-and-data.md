@@ -128,21 +128,22 @@ This selection must be rechecked against the provider's current documentation be
 
 Google Analytics, Meta Pixel, advertising pixels, remarketing tags, and comparable profiling tools are not approved for the MVP.
 
-### 6.1. Interim public visit counter (29 October 2026)
+### 6.1. Public page-view badge (30 October 2026)
 
-At the owner's request, a no-cost public visit counter is prepared separately from the later Cloudflare Web Analytics project. The proposed provider is CounterAPI at https://counterapi.com/. The counter shares a fixed project-wide namespace and counts approximate browser-tab visits, rather than unique people. A visit is newly counted after at least 30 minutes without activity in the same browser tab. Multiple tabs, different browsers and blocked JavaScript make it an estimate, not a verified number of humans.
+Owner-approved implementation for the interim public counter uses Hits (https://hits.sh/) instead of the failed CounterAPI service. Hits is an open-source image badge service that requires no account and can be embedded on a static GitHub Pages site. The project displays one counter in the shared footer of the RU, KK and EN site. The URL key is constant across these languages and independent of a future custom domain.
 
-Minimum processing:
-- The browser requests the public CounterAPI endpoint directly and receives an aggregate numeric count.
-- A per-tab sessionStorage item holds only the numeric timestamp of the last tracked activity. It is not a user identifier and is cleared by the browser when the tab session ends.
-- The counter does not transmit page paths, query parameters, referrals, browser storage contents, health information, instrument answers, names, emails, custom user IDs or cookies.
-- Requests are made with credentials omitted and no HTTP referrer. Standard network connection information, including the visitor's IP address and browser headers, is nevertheless available to the third-party operator.
-- The provider says it converts IP addresses and browser details to hashes and does not sell visitor data or support advertisers. This is the provider's claim, not independently verified data protection assurance. Its technical-log and hash-retention periods, data location and contractual terms are not established by the currently available documentation.
-- Browser code hides the public metric when the provider cannot return a valid number. It does not invent historical traffic, increment during local development, or count 404 pages.
-- The counter is public and unauthenticated. Abuse, bots and network filtering can influence its value. It must not be represented as an exact unique-person, family, or clinical outcome measure.
-- The public RU, KK and EN privacy notices must state this processing before activation. Cloudflare analytics remains deferred until a separate rollout.
+The counter is a **page-view badge, not a unique-person or visit counter**. Every browser request for the SVG may increment the same public count. Reopening pages, bots, reloading and network caching affect its accuracy. It is not a count of people, families, individual readers, diagnoses, clinical use or educational results. Counts begin when the public image is first requested. Do not backfill historic visits or invent a starting number.
 
-**Review status:** the minimal-data design is documented, but the vendor's retention periods, hosting location, current terms, live API behaviour and final browser QA still require verification before release approval. Do not describe this pending review as complete GDPR compliance or a verified production deployment.
+Privacy controls:
+- The page loads one SVG image from hits.sh without executing provider JavaScript.
+- The image uses `referrerpolicy="no-referrer"`, so the browser does not send the visited article URL or query parameters via Referer.
+- The site sends no unique identifier, medical data, form values, localStorage state, or browser session history to the counter.
+- The widget uses no cookies, localStorage, or sessionStorage. It is simply an image reference.
+- Technical connection information such as IP and browser request headers is necessarily available to the remote server during delivery. Hits states in its badge-specific policy that it does not collect IP addresses, user agent strings or personal information and does not set cookies. This is a published vendor statement, not independent legal certification. See https://hits.sh/privacy/ and https://hits.sh/terms/.
+- The hits.sh website itself uses Google Analytics, but its badge endpoint is described as separate from that website analytics. Do not load the provider's homepage, analytics code or tracking pixels in the AutismHub page.
+- If the third-party endpoint is unavailable or blocked, the badge may not display. It must not prevent other page content from rendering.
+
+The public privacy notices in Russian, Kazakh and English disclose the badge and limitations. Cloudflare Web Analytics is deferred until a later explicit project decision.
 
 ## 7. Cookies and device storage
 
@@ -154,7 +155,7 @@ The MVP must not set non-essential cookies for:
 - remarketing;
 - persistent visitor identification.
 
-The website must not store visitor profiles in browser local storage. The interim counter may keep a temporary, non-identifying last-activity timestamp in per-tab sessionStorage only after its separate privacy review is completed.
+The website must not store visitor profiles in browser local storage. The page-view image counter does not require browser storage.
 
 If a future function requires cookies or device storage, its purpose, stored values, duration, and consent requirements must be reviewed before implementation. It must not be added merely because a third-party tool enables it by default.
 
