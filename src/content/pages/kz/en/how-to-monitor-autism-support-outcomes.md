@@ -12,17 +12,19 @@ slug: how-to-monitor-autism-support-outcomes
 translationKey: parents-monitoring-autism-support
 author: Ruslan Kurmashev
 editor: Ruslan Kurmashev
-translationStatus: pending
+translationStatus: checked
 audience:
   - parents
   - families
 riskLevel: moderate
 disclaimerType: medical
 conflictOfInterest: "Конфликт интересов не заявлен."
+publishedAt: "2026-10-30T15:45:38Z"
+updatedAt: "2026-10-30T15:45:38Z"
 originalPublishedAt: 2026-09-17
 displayPublishedAt: 2026-09-17
 reviewDueAt: 2027-03-17
-draft: true
+draft: false
 keyPoints:
   - "Record a baseline and choose 1-3 concrete outcomes before beginning support."
   - "Success in a professional's room does not necessarily mean that a skill transfers to daily life."
@@ -41,7 +43,7 @@ sources:
     publicationYear: 2013
     note: "Used to evaluate behavioural factors, co-occurring conditions and monitoring benefits and adverse effects."
     accessedAt: 2026-09-17
-versionNote: "AI-assisted translation draft pending qualified language and medical review."
+versionNote: "This translation was prepared with AI assistance. On 30 October 2026 the project editor confirmed its review against the Russian original. No independent external linguistic or medical review was conducted."
 ---
 
 To tell whether chosen support is helping, do not rely only on a general impression after sessions or on one assessment scale.

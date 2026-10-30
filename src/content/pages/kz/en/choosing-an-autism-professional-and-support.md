@@ -10,7 +10,7 @@ section: parents
 topic: approaches-to-support
 slug: choosing-an-autism-professional-and-support
 translationKey: parents-choosing-autism-support
-translationStatus: pending
+translationStatus: checked
 audience:
   - parents
   - families
@@ -19,10 +19,12 @@ editor: Ruslan Kurmashev
 riskLevel: moderate
 disclaimerType: medical
 conflictOfInterest: "Конфликт интересов не заявлен."
+publishedAt: "2026-10-30T15:45:36Z"
+updatedAt: "2026-10-30T15:45:36Z"
 originalPublishedAt: 2026-09-14
 displayPublishedAt: 2026-09-14
 reviewDueAt: 2027-03-14
-draft: true
+draft: false
 keyPoints:
   - "Start with the child's specific need, then select a competent professional and appropriate support."
   - "Check the professional's education and qualifications, goals, measurement and review date before starting."
@@ -69,7 +71,7 @@ sources:
     publicationYear: 2022
     note: "Used for the general principle of supporting communication, engagement, positive behaviour and daily living skills through ordinary activities at home."
     accessedAt: 2026-09-14
-versionNote: "AI-assisted draft requiring linguistic, medical and Kazakhstan legal review before publication."
+versionNote: "This translation was prepared with AI assistance. On 30 October 2026 the project editor confirmed its review against the Russian original. No independent external linguistic or medical review was conducted."
 ---
 
 After an autism diagnosis or developmental assessment, parents may be offered many kinds of support: speech and language therapy, a psychologist, a special educator, medical appointments, communication programmes, behaviour-related support, sensory activities, diets and other approaches.

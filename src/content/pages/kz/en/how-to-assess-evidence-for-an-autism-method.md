@@ -12,17 +12,19 @@ slug: how-to-assess-evidence-for-an-autism-method
 translationKey: parents-how-to-read-evidence
 author: Ruslan Kurmashev
 editor: Ruslan Kurmashev
-translationStatus: pending
+translationStatus: checked
 audience:
   - parents
   - families
 riskLevel: moderate
 disclaimerType: medical
 conflictOfInterest: "Конфликт интересов не заявлен."
+publishedAt: "2026-10-30T15:45:39Z"
+updatedAt: "2026-10-30T15:45:39Z"
 originalPublishedAt: 2026-09-17
 displayPublishedAt: 2026-09-17
 reviewDueAt: 2027-03-17
-draft: true
+draft: false
 keyPoints:
   - "Clarify the precise goal of a method and which children were studied."
   - "Ask for research or clinical guidance, not only testimonials and certificates."
@@ -47,7 +49,7 @@ sources:
     publicationYear: 2013
     note: "Used for specific goals, shared planning, outcome monitoring and NICE recommendations against certain interventions for specified purposes."
     accessedAt: 2026-10-30
-versionNote: "AI-assisted translation draft. Linguistic and medical review pending."
+versionNote: "This translation was prepared with AI assistance. On 30 October 2026 the project editor confirmed its review against the Russian original. No independent external linguistic or medical review was conducted."
 ---
 
 Parents of autistic children often face dozens of offers: speech and communication sessions, sensory programmes, device-based procedures and proprietary methods. Almost all are advertised as effective.

@@ -12,17 +12,19 @@ slug: adistin-gylymi-dalelderin-bagalau
 translationKey: parents-how-to-read-evidence
 author: Ruslan Kurmashev
 editor: Ruslan Kurmashev
-translationStatus: pending
+translationStatus: checked
 audience:
   - parents
   - families
 riskLevel: moderate
 disclaimerType: medical
 conflictOfInterest: "Конфликт интересов не заявлен."
+publishedAt: "2026-10-30T15:45:45Z"
+updatedAt: "2026-10-30T15:45:45Z"
 originalPublishedAt: 2026-09-17
 displayPublishedAt: 2026-09-17
 reviewDueAt: 2027-03-17
-draft: true
+draft: false
 keyPoints:
   - "Әдістің нақты мақсаты мен зерттеуге қандай балалар қатысқанын анықтаңыз."
   - "Тек пікірлер мен сертификаттарды емес, зерттеулерді немесе клиникалық ұсынымдарды сұраңыз."
@@ -47,7 +49,7 @@ sources:
     publicationYear: 2013
     note: "Нақты мақсат қою, бірлескен жоспарлау, нәтижелерді бақылау және NICE белгілі бір мақсаттарға ұсынбайтын араласулар жөніндегі қағидалар үшін қолданылған."
     accessedAt: 2026-10-30
-versionNote: "AI көмегімен дайындалған аударма жобасы. Тілдік және медициналық сараптамадан өтпеген."
+versionNote: "Аударма жасанды интеллект көмегімен дайындалды. 2026 жылғы 30 қазанда жоба редакторы оның орыс тіліндегі түпнұсқамен сәйкестігін тексергенін растады. Тәуелсіз сыртқы тілдік немесе медициналық рецензия жүргізілген жоқ."
 ---
 
 Аутист балалардың ата-аналарына түрлі ұсыныстар жиі жасалады: сөйлеуді дамыту сабақтары, сенсорлық бағдарламалар, аппараттық рәсімдер, авторлық әдістер. Олардың дерлік бәрі тиімді деп жарнамаланады.
@@ -209,6 +211,6 @@ versionNote: "AI көмегімен дайындалған аударма жоб
 
 ## Келесі материалдар
 
-- Алдыңғы мақала: [Нақты мақсатқа сай қолдауды таңдау](/kz/ru/parents/kak-vybirat-pomoshch-pod-konkretnuyu-tsel/)
-- Келесі мақала: [Таңдалған қолдаудың пайдасын қалай бағалау керек](/kz/ru/parents/kak-ponyat-pomogaet-li-podderzhka/)
-- Шолу картасына оралу: [Аутизм кезіндегі көмек пен қолдау түрлері](/kz/ru/parents/vidy-pomoshchi-i-podderzhki-pri-autizme/)
+- Алдыңғы мақала: [Нақты мақсатқа сай қолдауды таңдау](/kz/kk/parents/nakty-maksatka-sai-koldaudy-tandau/)
+- Келесі мақала: [Таңдалған қолдаудың пайдасын қалай бағалау керек](/kz/kk/parents/koldaudyn-paiydasyn-bagalau/)
+- Шолу картасына оралу: [Аутизм кезіндегі көмек пен қолдау түрлері](/kz/kk/parents/autizm-kezindegi-koldau-turleri/)

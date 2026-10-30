@@ -19,3 +19,11 @@ Read-only checks on current `main` found:
 **Publication remains gated.** Do not change `translationStatus: pending` to `checked`, add `publishedAt`, or set `draft: false` without a genuine documented editorial review of each translated article. In particular, the high-risk methods guide requires clinical claim checks. The content schema deliberately rejects public pending translations. The prior successful CI checked repository integrity, not the visual layout of draft pages.
 
 Upon documented approval, assign each translation its own actual ISO 8601 publication timestamp, keep `originalPublishedAt` and `displayPublishedAt` intact, verify all translated routes and localized link destinations at mobile/desktop widths, and confirm GitHub Pages deployment.
+
+## Owner editorial approval for publication (2026-10-30)
+
+After the twelve drafts and their outstanding review requirements were presented, the project owner explicitly confirmed that all twelve Kazakh and English translations had been reviewed and authorised their immediate publication. This records the responsible editor's attestation, not independent external medical, legal or native-language peer review.
+
+Release all twelve translations of the six Choosing and evaluating support articles by changing `translationStatus: pending` to `checked` and `draft: true` to `false`. Give each translation its first publication timestamp of 2026-10-30 and retain `originalPublishedAt`, `displayPublishedAt`, the source records, risk classification, translation key and image. The `versionNote` states that AI-assisted translations were reviewed by the project editor, without claiming independent review.
+
+After this approval, verify publication by CI, three-width Chromium visual checks and a successful GitHub Pages deployment. Claim-level evidence ledger records marked `pending` must not be changed simply because translations were approved.

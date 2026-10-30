@@ -12,17 +12,19 @@ slug: koldaudyn-paiydasyn-bagalau
 translationKey: parents-monitoring-autism-support
 author: Ruslan Kurmashev
 editor: Ruslan Kurmashev
-translationStatus: pending
+translationStatus: checked
 audience:
   - parents
   - families
 riskLevel: moderate
 disclaimerType: medical
 conflictOfInterest: "Конфликт интересов не заявлен."
+publishedAt: "2026-10-30T15:45:44Z"
+updatedAt: "2026-10-30T15:45:44Z"
 originalPublishedAt: 2026-09-17
 displayPublishedAt: 2026-09-17
 reviewDueAt: 2027-03-17
-draft: true
+draft: false
 keyPoints:
   - "Қолдау басталғанға дейін бастапқы деңгейді тіркеп, 1-3 нақты көрсеткішті таңдаңыз."
   - "Маман кабинетінде байқалған нәтиже дағдының күнделікті өмірге ауысқанын білдірмейді."
@@ -41,7 +43,7 @@ sources:
     publicationYear: 2013
     note: "Мінез-құлық факторларын, қатар жүретін жағдайларды, пайда мен жағымсыз әсерлерді бақылауды бағалау үшін қолданылған."
     accessedAt: 2026-09-17
-versionNote: "AI көмегімен дайындалған аударма жобасы. Қазақ тіліндегі медициналық терминдерді тексеру қажет."
+versionNote: "Аударма жасанды интеллект көмегімен дайындалды. 2026 жылғы 30 қазанда жоба редакторы оның орыс тіліндегі түпнұсқамен сәйкестігін тексергенін растады. Тәуелсіз сыртқы тілдік немесе медициналық рецензия жүргізілген жоқ."
 ---
 
 Таңдалған қолдаудың пайдасын сабақтан кейінгі жалпы әсерге немесе бір ғана шкаланың нәтижесіне қарап бағалау жеткіліксіз.

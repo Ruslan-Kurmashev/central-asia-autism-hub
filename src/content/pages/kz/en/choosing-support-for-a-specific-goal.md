@@ -10,7 +10,7 @@ section: parents
 topic: approaches-to-support
 slug: choosing-support-for-a-specific-goal
 translationKey: parents-choosing-support-by-goal
-translationStatus: pending
+translationStatus: checked
 audience:
   - parents
   - families
@@ -19,10 +19,12 @@ editor: Ruslan Kurmashev
 riskLevel: moderate
 disclaimerType: medical
 conflictOfInterest: "Конфликт интересов не заявлен."
+publishedAt: "2026-10-30T15:45:35Z"
+updatedAt: "2026-10-30T15:45:35Z"
 originalPublishedAt: 2026-09-17
 displayPublishedAt: 2026-09-17
 reviewDueAt: 2027-03-17
-draft: true
+draft: false
 keyPoints:
   - "Start with a specific functional goal, not the name of a method."
   - "Consider medical causes and changes to the environment before choosing a programme."
@@ -52,7 +54,7 @@ sources:
     organisation: "Электронное правительство Республики Казахстан"
     note: "Official permit and licence verification service."
     accessedAt: 2026-09-17
-versionNote: "AI-assisted translation draft. Medical terminology and legal details require qualified review."
+versionNote: "This translation was prepared with AI assistance. On 30 October 2026 the project editor confirmed its review against the Russian original. No independent external linguistic or medical review was conducted."
 ---
 
 Choosing autism support works better when decisions are based on a specific need, rather than the popularity of a method, a centre's name or promises of "comprehensive therapy".

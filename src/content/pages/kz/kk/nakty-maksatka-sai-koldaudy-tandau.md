@@ -10,7 +10,7 @@ section: parents
 topic: approaches-to-support
 slug: nakty-maksatka-sai-koldaudy-tandau
 translationKey: parents-choosing-support-by-goal
-translationStatus: pending
+translationStatus: checked
 audience:
   - parents
   - families
@@ -19,10 +19,12 @@ editor: Ruslan Kurmashev
 riskLevel: moderate
 disclaimerType: medical
 conflictOfInterest: "Конфликт интересов не заявлен."
+publishedAt: "2026-10-30T15:45:41Z"
+updatedAt: "2026-10-30T15:45:41Z"
 originalPublishedAt: 2026-09-17
 displayPublishedAt: 2026-09-17
 reviewDueAt: 2027-03-17
-draft: true
+draft: false
 keyPoints:
   - "Әдістің атауынан емес, күнделікті өмірге пайдалы нақты мақсаттан бастаңыз."
   - "Бағдарламаны таңдамас бұрын медициналық себептер мен ортаны бейімдеу мүмкіндігін қарастырыңыз."
@@ -52,7 +54,7 @@ sources:
     organisation: "Электронное правительство Республики Казахстан"
     note: "Рұқсаттар мен лицензияларды тексеруге арналған ресми сервис."
     accessedAt: 2026-09-17
-versionNote: "AI көмегімен дайындалған аударма жобасы. Қазақ тіліндегі медициналық және құқықтық терминдерді маман тексеруі қажет."
+versionNote: "Аударма жасанды интеллект көмегімен дайындалды. 2026 жылғы 30 қазанда жоба редакторы оның орыс тіліндегі түпнұсқамен сәйкестігін тексергенін растады. Тәуелсіз сыртқы тілдік немесе медициналық рецензия жүргізілген жоқ."
 ---
 
 Аутизм кезінде қолдау түрін әдістің танымалдығына, орталықтың атауына немесе «кешенді терапия» туралы уәдесіне қарап емес, нақты міндетке сай таңдаған дұрыс.
