@@ -91,6 +91,7 @@ const photos = [
   ['parent-after-assessment-clinician-notes.jpg', '8413085'],
   ['parent-speech-language-picture-book.jpg', '6034059'],
   ['parent-specialist-selection-checklist.jpg', '35719571'],
+  ['parent-unproven-methods-evidence-review.jpg', '8112194'],
   ['parent-support-goals-planner.jpg', '6892906'],
   ['parent-support-types-toy-blocks.jpg', '7269678'],
   ['parent-mediated-shared-puzzle-hands.jpg', '8653705'],
