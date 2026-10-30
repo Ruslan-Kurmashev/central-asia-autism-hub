@@ -34,18 +34,18 @@ sources:
     url: "https://www.cochrane.org/authors/handbooks-and-manuals/handbook/current/chapter-14"
     organisation: "Cochrane"
     publicationYear: 2024
-    note: "Объясняет оценку качества совокупности исследований, значимых результатов, пользы и нежелательных эффектов."
+    note: "Explains how to appraise an overall body of research, meaningful outcomes, benefits and adverse effects."
     accessedAt: 2026-10-30
   - title: "National Guideline for supporting the learning, participation, and wellbeing of autistic children and their families in Australia"
     url: "https://www.autismcrc.com.au/best-practice/supporting-children/guideline"
     organisation: "Autism CRC"
-    note: "Использовано для принципов выбора безопасной, приемлемой и значимой для семьи поддержки. Разделы рекомендаций на сайте могут требовать регистрации."
+    note: "Used for principles of safe, acceptable, family-relevant support. Some detailed guideline sections may require registration."
     accessedAt: 2026-10-30
   - title: "Autism spectrum disorder in under 19s: support and management - Recommendations"
     url: "https://www.nice.org.uk/guidance/cg170/chapter/recommendations"
     organisation: "National Institute for Health and Care Excellence"
     publicationYear: 2013
-    note: "Использовано для принципов постановки конкретных целей, совместного планирования, мониторинга результатов и перечня вмешательств, которые NICE не рекомендует для определённых целей."
+    note: "Used for specific goals, shared planning, outcome monitoring and NICE recommendations against certain interventions for specified purposes."
     accessedAt: 2026-10-30
 versionNote: "AI-assisted translation draft. Linguistic and medical review pending."
 ---
