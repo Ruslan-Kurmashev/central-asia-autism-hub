@@ -1,7 +1,7 @@
 ---
 import { UI } from '../i18n/ui';
 import { CONTACT_CHANNELS } from '../data/contact-channels';
-import { localePath, sitePath } from '../lib/urls';
+import { localePath } from '../lib/urls';
 import { SITE, type Locale } from '../site.config';
 
 interface Props {
@@ -12,13 +12,15 @@ const { locale = 'en' } = Astro.props;
 const copy = UI[locale];
 const year = new Date().getUTCFullYear();
 const policiesPath = localePath(locale, 'about/policies');
-const counterScript = sitePath() + 'scripts/site-visit-counter.js';
 const isNotFound = /\/404(?:\/|\.html)$/.test(Astro.url.pathname);
-const visitCopy = {
-  ru: { label: 'Посещения платформы', since: 'С начала учёта, приблизительное число визитов' },
-  kk: { label: 'Платформаға кіру саны', since: 'Есеп басталғалы бергі шамамен алынған кіру саны' },
-  en: { label: 'Platform visits', since: 'Since tracking began, approximate visit count' },
+const viewCopy = {
+  ru: { badge: 'Просмотры', title: 'Просмотры страниц', note: 'С начала учёта. Считаются загрузки счётчика, не люди.' },
+  kk: { badge: 'Қаралым', title: 'Бет қаралымдары', note: 'Есеп басталғалы. Бұл адамдар саны емес, есептегіш жүктелген саны.' },
+  en: { badge: 'Views', title: 'Page views', note: 'Since tracking began. Badge loads are counted, not individual people.' },
 }[locale];
+const badgeUrl = 'https://hits.sh/ruslan-kurmashev.github.io/central-asia-autism-hub.svg'
+  + '?view=total&style=flat-square&color=315f94&labelColor=253d50&label='
+  + encodeURIComponent(viewCopy.badge);
 ---
 
 <footer class="site-footer">
@@ -46,16 +48,22 @@ const visitCopy = {
     </div>
   </div>
   {!isNotFound && (
-    <div class="container site-footer__visits" data-site-visit-counter data-counter-locale={locale} hidden>
-      <span class="site-footer__visits-number" data-visit-count></span>
+    <div class="container site-footer__visits">
+      <img
+        class="site-footer__visits-badge"
+        src={badgeUrl}
+        alt={viewCopy.title}
+        loading="eager"
+        decoding="async"
+        referrerpolicy="no-referrer"
+      />
       <div>
-        <p class="site-footer__visits-title">{visitCopy.label}</p>
-        <p class="site-footer__visits-note">{visitCopy.since}</p>
+        <p class="site-footer__visits-title">{viewCopy.title}</p>
+        <p class="site-footer__visits-note">{viewCopy.note}</p>
       </div>
     </div>
   )}
   <div class="container site-footer__legal">
     <p>© {year} {SITE.umbrellaName}</p>
   </div>
-  {!isNotFound && <script is:inline src={counterScript} defer></script>}
 </footer>
