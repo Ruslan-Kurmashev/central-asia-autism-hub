@@ -16,7 +16,8 @@ function validFile(name, data) {
   if (name.endsWith('.png')) return data.subarray(0, 8).equals(Buffer.from([137,80,78,71,13,10,26,10]));
   if (name.endsWith('.svg')) {
     const xml = data.toString('utf8');
-    return /<svg[\s>]/i.test(xml) && !/<script\b|<foreignObject\b|javascript:|onload\s*=|onerror\s*=/i.test(xml);
+    return /<svg[\s>]/i.test(xml) && /<title\b/i.test(xml) && /<desc\b/i.test(xml) &&
+      !/<script\b|<foreignObject\b|javascript:|onload\s*=|onerror\s*=/i.test(xml);
   }
   return false;
 }
@@ -46,7 +47,19 @@ async function downloadOne(asset) {
     try {
       const response = await fetch(info.url, {headers, signal: AbortSignal.timeout(35000)});
       if (!response.ok) throw Error(asset.filename + ': image download HTTP ' + response.status);
-      const bytes = Buffer.from(await response.arrayBuffer());
+      let bytes = Buffer.from(await response.arrayBuffer());
+      if (asset.filename.endsWith('.svg')) {
+        let xml = bytes.toString('utf8');
+        const root = xml.match(/<svg\b[^>]*>/i);
+        if (!root) throw Error(asset.filename + ': SVG root missing');
+        const escapeXml = text => text.replaceAll('&', '&amp;').replaceAll('<', '&lt;')
+          .replaceAll('>', '&gt;').replaceAll('"', '&quot;');
+        let accessible = '';
+        if (!/<title\b/i.test(xml)) accessible += '<title>' + escapeXml(asset.caption) + '</title>';
+        if (!/<desc\b/i.test(xml)) accessible += '<desc>' + escapeXml(asset.alt) + '</desc>';
+        if (accessible) xml = xml.replace(root[0], root[0] + '\n' + accessible + '\n');
+        bytes = Buffer.from(xml, 'utf8');
+      }
       if (!validFile(asset.filename, bytes)) throw Error(asset.filename + ': invalid or unsafe image bytes');
       await writeFile(output, bytes);
       console.log('Verified Wikimedia original:', asset.filename, bytes.length, 'bytes');
