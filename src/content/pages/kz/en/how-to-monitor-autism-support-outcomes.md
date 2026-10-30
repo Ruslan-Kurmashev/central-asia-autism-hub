@@ -300,6 +300,6 @@ Prepare a short summary: the main difficulty, when it started, whether skills we
 
 ## Continue reading
 
-- Previous: [How to assess the evidence behind a method](/kz/ru/parents/kak-ponyat-dokazatelnost-metoda/)
+- Previous: [How to assess the evidence behind a method](/kz/en/parents/how-to-assess-evidence-for-an-autism-method/)
 - Next: [Communication and AAC](/kz/ru/parents/kommunikatsiya-i-aac/)
-- Return to the overview: [Types of autism support](/kz/ru/parents/vidy-pomoshchi-i-podderzhki-pri-autizme/)
+- Return to the overview: [Types of autism support](/kz/en/parents/types-of-autism-support/)
