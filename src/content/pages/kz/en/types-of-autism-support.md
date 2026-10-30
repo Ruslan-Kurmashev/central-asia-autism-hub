@@ -82,9 +82,9 @@ A better starting question than "Which therapy is best?" is:
 
 ## Quick choices
 
-- [Not sure where to begin? Choose support for a specific goal](/kz/ru/parents/kak-vybirat-pomoshch-pod-konkretnuyu-tsel/)
-- [Been offered a particular method? Learn how to examine the evidence](/kz/ru/parents/kak-ponyat-dokazatelnost-metoda/)
-- [Support has already begun? Check whether it is helping](/kz/ru/parents/kak-ponyat-pomogaet-li-podderzhka/)
+- [Not sure where to begin? Choose support for a specific goal](/kz/en/parents/choosing-support-for-a-specific-goal/)
+- [Been offered a particular method? Learn how to examine the evidence](/kz/en/parents/how-to-assess-evidence-for-an-autism-method/)
+- [Support has already begun? Check whether it is helping](/kz/en/parents/how-to-monitor-autism-support-outcomes/)
 
 ## Where to start
 
@@ -304,7 +304,7 @@ Record a baseline before starting and decide in advance when to review outcomes.
 
 If meaningful benefit does not occur, unwanted effects arise, the child experiences persistent severe distress, demands become excessive or the goal is no longer relevant, the plan may need changing or stopping.
 
-[Step-by-step: choosing support for a specific goal](/kz/ru/parents/kak-vybirat-pomoshch-pod-konkretnuyu-tsel/)
+[Step-by-step: choosing support for a specific goal](/kz/en/parents/choosing-support-for-a-specific-goal/)
 
 ## What matters in Kazakhstan
 
@@ -342,11 +342,11 @@ If you already know a particular method, check five things:
 
 **its intended goal, what research reports, how reliable the evidence is, what risks are known, and what is known about its use and regulation in Kazakhstan.**
 
-- [Choosing support for a specific goal](/kz/ru/parents/kak-vybirat-pomoshch-pod-konkretnuyu-tsel/)
-- [Assessing the evidence behind a method](/kz/ru/parents/kak-ponyat-dokazatelnost-metoda/)
-- [Monitoring whether support is helping](/kz/ru/parents/kak-ponyat-pomogaet-li-podderzhka/)
+- [Choosing support for a specific goal](/kz/en/parents/choosing-support-for-a-specific-goal/)
+- [Assessing the evidence behind a method](/kz/en/parents/how-to-assess-evidence-for-an-autism-method/)
+- [Monitoring whether support is helping](/kz/en/parents/how-to-monitor-autism-support-outcomes/)
 
 ## Continue reading
 
-- Previous: [Choosing a professional and support for an autistic child](/kz/ru/parents/kak-vybrat-spetsialista-i-pomoshch-pri-autizme/)
-- Next: [Choosing support for a specific goal](/kz/ru/parents/kak-vybirat-pomoshch-pod-konkretnuyu-tsel/)
+- Previous: [Choosing a professional and support for an autistic child](/kz/en/parents/choosing-an-autism-professional-and-support/)
+- Next: [Choosing support for a specific goal](/kz/en/parents/choosing-support-for-a-specific-goal/)
