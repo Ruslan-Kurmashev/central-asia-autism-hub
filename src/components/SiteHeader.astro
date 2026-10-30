@@ -13,7 +13,8 @@ interface Props {
 
 const { locale, currentSection, alternatePath = '', alternatePaths } = Astro.props;
 const homeHref = locale ? localePath(locale) : sitePath();
-const isHomePage = Astro.url.pathname.replace(/\/+$/, '') === homeHref.replace(/\/+$/, '');
+const isHomePage = Astro.url.pathname.replace(/\/+$/, '') === homeHref.replace(/\/+$/, '')
+  || (locale === 'ru' && Astro.url.pathname.replace(/\/+$/, '') === sitePath().replace(/\/+$/, ''));
 const aboutLinks: Record<Locale, { label: string; path: string }[]> = {
   ru: [
     { label: 'О проекте', path: 'about' },
