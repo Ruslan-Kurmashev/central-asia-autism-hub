@@ -41,17 +41,32 @@ async function downloadOne(asset) {
   const expectedMime = asset.filename.endsWith('.jpg') ? 'image/jpeg' :
     asset.filename.endsWith('.png') ? 'image/png' : 'image/svg+xml';
   if (info.mime !== expectedMime) throw Error(asset.filename + ': unexpected Commons MIME ' + info.mime);
-  const response = await fetch(info.url, {headers, signal: AbortSignal.timeout(35000)});
-  if (!response.ok) throw Error(asset.filename + ': image download HTTP ' + response.status);
-  const bytes = Buffer.from(await response.arrayBuffer());
-  if (!validFile(asset.filename, bytes)) throw Error(asset.filename + ': invalid or unsafe image bytes');
-  await writeFile(output, bytes);
-  console.log('Verified Wikimedia original:', asset.filename, bytes.length, 'bytes');
+  let lastError;
+  for (let attempt=1; attempt<=5; attempt++) {
+    try {
+      const response = await fetch(info.url, {headers, signal: AbortSignal.timeout(35000)});
+      if (!response.ok) throw Error(asset.filename + ': image download HTTP ' + response.status);
+      const bytes = Buffer.from(await response.arrayBuffer());
+      if (!validFile(asset.filename, bytes)) throw Error(asset.filename + ': invalid or unsafe image bytes');
+      await writeFile(output, bytes);
+      console.log('Verified Wikimedia original:', asset.filename, bytes.length, 'bytes');
+      return;
+    } catch (e) {
+      lastError=e;
+      if (attempt===5) break;
+      const waitMs = attempt * 5500;
+      console.warn(asset.filename + ': retry ' + attempt + ' after ' + waitMs + 'ms: ' + e.message);
+      await new Promise(resolve=>setTimeout(resolve,waitMs));
+    }
+  }
+  throw lastError;
 }
 const errors=[];
-for (let i=0; i<assets.length; i+=3) {
-  const jobs=await Promise.allSettled(assets.slice(i,i+3).map(downloadOne));
-  for (const task of jobs) if (task.status === 'rejected') errors.push(task.reason?.message);
+for (const asset of assets) {
+  try { await downloadOne(asset); }
+  catch (error) { errors.push(error?.message || 'Unknown download failure'); }
+  // Protect the Commons API and upload servers from burst traffic.
+  await new Promise(resolve=>setTimeout(resolve,1500));
 }
 if (errors.length) throw Error('Research covers cannot be published:\n'+errors.join('\n'));
 console.log('Verified',assets.length,'licensed original research covers.');
