@@ -15,6 +15,25 @@ jobs:
     runs-on: ubuntu-latest
     timeout-minutes: 5
     steps:
+      - name: Check root opens the homepage without a language selection screen
+        shell: bash
+        run: |
+          set -euo pipefail
+          url="https://ruslan-kurmashev.github.io/central-asia-autism-hub/?root_verify=${GITHUB_RUN_ID}"
+          passed=0
+          for attempt in $(seq 1 10); do
+            html="$(curl -fsSL --max-time 12 -H 'Cache-Control: no-cache' "${url}" || true)"
+            if [[ "${html}" == *'id="home-v2-title"'* && "${html}" == *'home-v2__hero'* && "${html}" == *'language-switcher'* && "${html}" != *'Choose your language'* ]]; then
+              printf 'PASS root: full platform homepage and language switcher displayed directly\n'
+              passed=1
+              break
+            fi
+            sleep 4
+          done
+          if [[ "${passed}" -ne 1 ]]; then
+            printf 'FAIL root: homepage missing or old language screen present\n' >&2
+            exit 1
+          fi
       - name: Check public RU KK EN pages serve the counter
         shell: bash
         run: |

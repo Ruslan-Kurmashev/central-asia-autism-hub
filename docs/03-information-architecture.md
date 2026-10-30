@@ -97,6 +97,10 @@ Home
     └── Project policies (editorial, medical boundaries, privacy, accessibility, corrections)
 ```
 
+## 3.1. Root entry behavior (owner decision 30 October 2026)
+
+The public project root `/central-asia-autism-hub/` presents the same complete Russian-language Autism Hub Kazakhstan homepage as `/kz/ru/`, without an intermediate language-selection screen or automatic language-detection prompt. The shared header provides the existing Kazakh, Russian, and English navigation to their own locale-specific homepages. All existing localized routes remain available. The root alias uses the Russian homepage as canonical for search engines.
+
 ## 4. Homepage structure
 
 The current homepage presents the platform in the following order:
