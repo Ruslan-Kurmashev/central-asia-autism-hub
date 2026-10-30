@@ -35,7 +35,8 @@ const {
 
 const pageLocale = locale ?? 'en';
 const origin = Astro.site ?? Astro.url.origin;
-const canonicalUrl = new URL(Astro.url.pathname, origin);
+const canonicalPath = Astro.url.pathname === sitePath() ? localePath('ru') : Astro.url.pathname;
+const canonicalUrl = new URL(canonicalPath, origin);
 const isNotFoundPage = /\/404(?:\/|\.html)$/.test(Astro.url.pathname);
 ---
 
