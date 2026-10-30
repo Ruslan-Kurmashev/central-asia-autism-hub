@@ -1618,6 +1618,10 @@ details.nav-disclosure:not([open]) > .primary-nav {
   border-top: 1px solid rgb(255 255 255 / 18%);
 }
 
+.site-footer__visits[hidden] {
+  display: none;
+}
+
 .site-footer__visits-badge {
   display: block;
   width: auto;
