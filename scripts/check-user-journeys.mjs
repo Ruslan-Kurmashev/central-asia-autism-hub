@@ -362,6 +362,7 @@ try {
         supplementaryBlockCount: support?.querySelectorAll('.section-v2__support-supplementary').length || 0,
         weightedInSensory: !!support?.querySelector('#support-sensory a[href$="/weighted-items/"]'),
         weightedInOther: !!support?.querySelector('#support-other a[href$="/weighted-items/"]'),
+        riskyMethodInChoosing: !!support?.querySelector('#support-choosing a[href$="/opasnye-i-nedokazannye-metody-pri-autizme/"]'),
         unassignedCount: support?.querySelectorAll('.section-v2__support-unassigned a').length || 0,
         overflow: document.documentElement.scrollWidth - innerWidth,
       };
@@ -369,12 +370,14 @@ try {
     console.log('USER_JOURNEY_SUPPORT ' + width + ' ' + JSON.stringify(state));
     verify(state.outerOpen && state.firstOpen && state.innerCount === 10,
       'Parent support ' + width + ': nested accordion did not open ten groups');
-    verify(state.articleCount === 45 && state.uniqueArticleCount === 45 && state.unassignedCount === 0,
+    verify(state.articleCount === 46 && state.uniqueArticleCount === 46 && state.unassignedCount === 0,
       'Parent support ' + width + ': missing, duplicated or unassigned article links');
-    verify(state.unifiedRowCount === 45 && state.allRowsUniform && state.supplementaryBlockCount === 0,
+    verify(state.unifiedRowCount === 46 && state.allRowsUniform && state.supplementaryBlockCount === 0,
       'Parent support ' + width + ': article rows do not have the same layout ' + JSON.stringify(state));
-    verify(state.imageCount === 45 && state.uniqueImageCount === 45,
+    verify(state.imageCount === 46 && state.uniqueImageCount === 46,
       'Parent support ' + width + ': missing or reused article thumbnail ' + JSON.stringify(state));
+    verify(state.riskyMethodInChoosing,
+      'Parent support ' + width + ': risk and evidence article missing from choosing subgroup');
     verify(state.weightedInSensory && !state.weightedInOther,
       'Parent support ' + width + ': weighted aid safety article assigned to wrong category');
     verify(state.overflow <= 3, 'Parent support ' + width + ': horizontal overflow ' + state.overflow);

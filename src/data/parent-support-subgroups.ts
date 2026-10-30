@@ -19,6 +19,7 @@ export const PARENT_SUPPORT_SUBGROUPS = [
       "parents-types-of-autism-support",
       "parents-choosing-support-by-goal",
       "parents-choosing-autism-support",
+      "parents-risky-unproven-autism-methods",
       "parents-monitoring-autism-support",
       "parents-how-to-read-evidence"
     ],
