@@ -182,7 +182,7 @@ Requirements for psychological and educational services depend on the legal stat
 
 A course completion certificate by itself does not establish professional authorisation or effectiveness.
 
-[More: Choosing a professional and support for an autistic child](/kz/ru/parents/kak-vybrat-spetsialista-i-pomoshch-pri-autizme/).
+[More: Choosing a professional and support for an autistic child](/kz/en/parents/choosing-an-autism-professional-and-support/).
 
 ## Step 10. Record the baseline before starting
 
@@ -218,7 +218,7 @@ At the review, ask:
 - are the demands acceptable?
 - is the goal still relevant?
 
-[How to tell whether chosen support is helping](/kz/ru/parents/kak-ponyat-pomogaet-li-podderzhka/)
+[How to tell whether chosen support is helping](/kz/en/parents/how-to-monitor-autism-support-outcomes/)
 
 ## When to continue
 
@@ -301,6 +301,6 @@ These questions should not be confused.
 
 ## Continue reading
 
-- Previous article: [Types of autism support and assistance](/kz/ru/parents/vidy-pomoshchi-i-podderzhki-pri-autizme/)
+- Previous article: [Types of autism support and assistance](/kz/en/parents/types-of-autism-support/)
 - Next article: [Understanding the evidence behind a method](/kz/en/parents/how-to-assess-evidence-for-an-autism-method/)
-- Related: [How to tell whether support is helping](/kz/ru/parents/kak-ponyat-pomogaet-li-podderzhka/)
+- Related: [How to tell whether support is helping](/kz/en/parents/how-to-monitor-autism-support-outcomes/)
