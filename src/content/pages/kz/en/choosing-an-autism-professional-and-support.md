@@ -428,4 +428,4 @@ This helps families choose support based on the child's needs rather than market
 - [What to do after an autism assessment in Kazakhstan](/kz/ru/parents/posle-otsenki-na-autizm-v-kazakhstane/)
 - [The first 30 days after an autism diagnosis in Kazakhstan](/kz/ru/parents/pervye-30-dney-posle-diagnoza-autizma-v-kazakhstane/)
 - [Developmental milestones from 2 months to 5 years](/kz/ru/parents/orientiry-razvitiya-rebenka/)
-- [Types of autism support](/kz/ru/parents/vidy-pomoshchi-i-podderzhki-pri-autizme/)
+- [Types of autism support](/kz/en/parents/types-of-autism-support/)
