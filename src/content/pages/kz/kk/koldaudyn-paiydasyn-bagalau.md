@@ -302,6 +302,6 @@ versionNote: "AI көмегімен дайындалған аударма жоб
 
 ## Келесі материалдар
 
-- Алдыңғы мақала: [Әдістің ғылыми дәлелдерін бағалау](/kz/ru/parents/kak-ponyat-dokazatelnost-metoda/)
+- Алдыңғы мақала: [Әдістің ғылыми дәлелдерін бағалау](/kz/kk/parents/adistin-gylymi-dalelderin-bagalau/)
 - Келесі мақала: [Коммуникация және AAC](/kz/ru/parents/kommunikatsiya-i-aac/)
-- Шолу картасына оралу: [Аутизм кезіндегі көмек пен қолдау түрлері](/kz/ru/parents/vidy-pomoshchi-i-podderzhki-pri-autizme/)
+- Шолу картасына оралу: [Аутизм кезіндегі көмек пен қолдау түрлері](/kz/kk/parents/autizm-kezindegi-koldau-turleri/)
