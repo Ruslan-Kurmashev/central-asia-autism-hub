@@ -34,18 +34,18 @@ sources:
     url: "https://www.cochrane.org/authors/handbooks-and-manuals/handbook/current/chapter-14"
     organisation: "Cochrane"
     publicationYear: 2024
-    note: "Объясняет оценку качества совокупности исследований, значимых результатов, пользы и нежелательных эффектов."
+    note: "Зерттеулер жиынтығының сапасын, маңызды нәтижелерді, пайда мен жағымсыз әсерлерді бағалауды түсіндіреді."
     accessedAt: 2026-10-30
   - title: "National Guideline for supporting the learning, participation, and wellbeing of autistic children and their families in Australia"
     url: "https://www.autismcrc.com.au/best-practice/supporting-children/guideline"
     organisation: "Autism CRC"
-    note: "Использовано для принципов выбора безопасной, приемлемой и значимой для семьи поддержки. Разделы рекомендаций на сайте могут требовать регистрации."
+    note: "Отбасыға маңызды, қауіпсіз әрі қолайлы қолдау таңдау қағидалары үшін қолданылған. Нұсқаулықтың кейбір егжей-тегжейлі бөлімдерін көру үшін тіркелу қажет болуы мүмкін."
     accessedAt: 2026-10-30
   - title: "Autism spectrum disorder in under 19s: support and management - Recommendations"
     url: "https://www.nice.org.uk/guidance/cg170/chapter/recommendations"
     organisation: "National Institute for Health and Care Excellence"
     publicationYear: 2013
-    note: "Использовано для принципов постановки конкретных целей, совместного планирования, мониторинга результатов и перечня вмешательств, которые NICE не рекомендует для определённых целей."
+    note: "Нақты мақсат қою, бірлескен жоспарлау, нәтижелерді бақылау және NICE белгілі бір мақсаттарға ұсынбайтын араласулар жөніндегі қағидалар үшін қолданылған."
     accessedAt: 2026-10-30
 versionNote: "AI көмегімен дайындалған аударма жобасы. Тілдік және медициналық сараптамадан өтпеген."
 ---
