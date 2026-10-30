@@ -290,6 +290,20 @@ if (homeMuted) {
       'Homepage secondary text has less than 4.5:1 contrast on ' + background);
   }
 }
+const rootHomepageHtml = await readFile(path.join(dist, 'index.html'), 'utf8');
+checkLocalizedHeader(rootHomepageHtml, 'ru', 'homepage ru');
+check(rootHomepageHtml.includes('<html lang="ru"'),
+  'root URL must open the Russian-language website');
+check(rootHomepageHtml.includes('id="home-v2-title"') &&
+  rootHomepageHtml.includes('home-v2__hero') &&
+  rootHomepageHtml.includes('home-v2__masonry'),
+  'root URL must render the full platform homepage and latest content');
+check(!rootHomepageHtml.includes('Choose your language') &&
+  !rootHomepageHtml.includes('language-landing'),
+  'root URL must not display the old language-selection gate');
+check(rootHomepageHtml.includes('rel="canonical" href="https://ruslan-kurmashev.github.io/central-asia-autism-hub/kz/ru/"'),
+  'root URL must use the original Russian homepage as its canonical URL');
+
 if (errors.length) {
   console.error('Prelaunch navigation and homepage audit FAILED:\n' + errors.map(x => ' - ' + x).join('\n'));
   process.exitCode = 1;
