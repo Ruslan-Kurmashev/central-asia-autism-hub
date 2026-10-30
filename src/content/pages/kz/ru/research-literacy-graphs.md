@@ -2,8 +2,8 @@
 title: "Как читать научные графики и таблицы?"
 summary: "Понимаем оси, масштабы, проценты, интервалы, forest plot и таблицы результатов. Учимся замечать графики, которые создают ложное впечатление."
 description: "Графики исследований простыми словами: шкалы осей, выборка, интервалы, forest plot, скаттерплот, проценты и ошибки визуализации данных."
-featuredImage: "/central-asia-autism-hub/images/research/research-literacy-graphs-cover.svg"
-featuredImageAlt: "Авторская геометрическая иллюстрация научной визуализации: столбцы, линии неопределённости и простые условные точки данных."
+featuredImage: "/central-asia-autism-hub/images/editorial/photos/research-literacy-graphs-paper-report.jpg"
+featuredImageAlt: "Крупный план печатных столбчатых и линейных графиков, которые анализируют с ручкой. Данные не относятся к аутизму."
 country: kz
 language: ru
 section: research
@@ -21,7 +21,7 @@ riskLevel: lower
 disclaimerType: informational
 conflictOfInterest: "Коммерческих интересов не заявлено. Учебные графики имеют полностью синтетические данные."
 publishedAt: 2026-10-15
-updatedAt: 2026-10-19
+updatedAt: 2026-10-30
 reviewDueAt: 2027-04-15
 draft: false
 keyPoints:

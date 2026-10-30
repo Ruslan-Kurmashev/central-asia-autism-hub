@@ -2,8 +2,8 @@
 title: "Какие существуют типы научных исследований?"
 summary: "Наглядно сравниваем наблюдательные, когортные, исследования случай-контроль, рандомизированные испытания, систематические обзоры и метаанализы."
 description: "Типы научных исследований простыми словами: поперечные, когортные, случай-контроль, RCT, систематические обзоры и их ограничения."
-featuredImage: "/central-asia-autism-hub/images/research/research-literacy-study-designs-cover.svg"
-featuredImageAlt: "Оригинальная схематическая иллюстрация: наблюдение в один момент, изучение группы во времени, случайное распределение и объединение исследований."
+featuredImage: "/central-asia-autism-hub/images/editorial/photos/research-literacy-study-designs-research-team.jpg"
+featuredImageAlt: "Два исследователя используют микроскоп и записи в лаборатории. Фото не иллюстрирует конкретный экспериментальный дизайн."
 country: kz
 language: ru
 section: research
@@ -21,7 +21,7 @@ riskLevel: lower
 disclaimerType: informational
 conflictOfInterest: "Коммерческих интересов не заявлено. Образовательные примеры вымышлены."
 publishedAt: 2026-10-15
-updatedAt: 2026-10-26
+updatedAt: 2026-10-30
 reviewDueAt: 2027-04-15
 draft: false
 keyPoints:
