@@ -1,0 +1,39 @@
+name: Verify published page-view counter
+
+on:
+  workflow_run:
+    workflows: ["Deploy to GitHub Pages"]
+    types: [completed]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  verify:
+    if: ${{ github.event_name == 'workflow_dispatch' || github.event.workflow_run.conclusion == 'success' }}
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - name: Check public RU KK EN pages serve the counter
+        shell: bash
+        run: |
+          set -euo pipefail
+          base='https://ruslan-kurmashev.github.io/central-asia-autism-hub'
+          for lang in ru kk en; do
+            url="${base}/kz/${lang}/?counter_verify=${GITHUB_RUN_ID}"
+            success=0
+            for attempt in $(seq 1 10); do
+              html="$(curl -fsSL --max-time 12 -H 'Cache-Control: no-cache' "${url}" || true)"
+              if [[ "${html}" == *'data-public-counter'* && "${html}" == *'https://hits.sh/'* && "${html}" == *'data-badge-url'* ]]; then
+                printf 'PASS %s: public HTML contains shared SVG counter\n' "${lang}"
+                success=1
+                break
+              fi
+              sleep 4
+            done
+            if [[ "${success}" -ne 1 ]]; then
+              printf 'FAIL %s: public HTML does not yet contain the counter\n' "${lang}" >&2
+              exit 1
+            fi
+          done
