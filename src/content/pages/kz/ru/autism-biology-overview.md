@@ -2,8 +2,8 @@
 title: "Биология аутизма: что наука знает сегодня?"
 summary: "От генов до нервных сетей: понятное объяснение биологии аутизма, подтверждённых научных выводов и вопросов, на которые пока нет ответа."
 description: "Научные основы аутизма для родителей: генетические варианты, развитие мозга, нейроны, синапсы, факторы среды, биологические исследования и границы доказательств."
-featuredImage: "/central-asia-autism-hub/images/research/autism-biology-overview-cover.svg"
-featuredImageAlt: "Оригинальная научная векторная иллюстрация: условные нервные клетки и связи на светло-голубом фоне. Не изображение реального мозга и не диагностический признак аутизма."
+featuredImage: "/central-asia-autism-hub/images/research/verified/biology-connectivity-network.jpg"
+featuredImageAlt: "Научная визуализация структурных связей между областями коры мозга человека из работы Hagmann и соавторов. Это не специфическая карта мозга при аутизме."
 country: kz
 language: ru
 section: research
@@ -21,7 +21,7 @@ riskLevel: moderate
 disclaimerType: medical
 conflictOfInterest: "Конфликт интересов не заявлен."
 publishedAt: 2026-10-15
-updatedAt: 2026-10-16
+updatedAt: 2026-10-30
 reviewDueAt: 2027-04-15
 draft: false
 keyPoints:
@@ -345,3 +345,5 @@ sources:
 - [Биология и механизмы аутизма](../topics/causes-and-biology/) - остальные фундаментальные материалы данного направления.
 
 *Материал подготовлен для научно-популярного обучения и не предназначен для определения причин аутизма или назначения обследования конкретному человеку. Схема в статье является оригинальной редакционной иллюстрацией AutismHub, а не изображением результатов научного эксперимента.*
+
+Источник иллюстрации обложки: [Hagmann et al. (2008), PLOS Biology, «Сеть связей областей головного мозга»](https://commons.wikimedia.org/wiki/File:Network_representation_of_brain_connectivity.JPG), [CC BY 3.0](https://creativecommons.org/licenses/by/3.0/). Исходное изображение без графических изменений.
