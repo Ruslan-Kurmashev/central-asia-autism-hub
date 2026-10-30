@@ -13,6 +13,7 @@ The owner requested a free public counter on Autism Hub Kazakhstan, while postpo
 - Render with an ordinary `<img>` tag. Do not execute any vendor script or embed provider tracking code.
 - Set `referrerpolicy="no-referrer"`. Do not send page URL, medical responses, query parameters, custom visitor IDs or cookies.
 - Do not use browser storage or user profiles. Hide the badge on 404 pages to avoid recording those views.
+- The counter image is requested only on published website hostnames. First-party JavaScript creates the image after verifying the hostname, preventing local development and browser QA from inflating the public statistic.
 - If the badge fails, the rest of the page still renders.
 
 ## Provider verification and limitations
