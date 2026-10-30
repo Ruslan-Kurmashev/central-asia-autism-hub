@@ -1618,15 +1618,11 @@ details.nav-disclosure:not([open]) > .primary-nav {
   border-top: 1px solid rgb(255 255 255 / 18%);
 }
 
-.site-footer__visits[hidden] {
-  display: none;
-}
-
-.site-footer__visits-number {
-  color: #fff;
-  font-size: var(--type-lead);
-  font-weight: 760;
-  font-variant-numeric: tabular-nums;
+.site-footer__visits-badge {
+  display: block;
+  width: auto;
+  max-width: 100%;
+  height: 2rem;
 }
 
 .site-footer__visits-title,
