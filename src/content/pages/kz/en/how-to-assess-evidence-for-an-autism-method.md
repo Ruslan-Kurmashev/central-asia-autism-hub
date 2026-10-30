@@ -209,6 +209,6 @@ You do not have to agree immediately. You can request the research, discuss othe
 
 ## Continue reading
 
-- Previous: [Choosing support for a specific goal](/kz/ru/parents/kak-vybirat-pomoshch-pod-konkretnuyu-tsel/)
-- Next: [How to tell whether selected support is helping](/kz/ru/parents/kak-ponyat-pomogaet-li-podderzhka/)
-- Return to the overview: [Types of autism support](/kz/ru/parents/vidy-pomoshchi-i-podderzhki-pri-autizme/)
+- Previous: [Choosing support for a specific goal](/kz/en/parents/choosing-support-for-a-specific-goal/)
+- Next: [How to tell whether selected support is helping](/kz/en/parents/how-to-monitor-autism-support-outcomes/)
+- Return to the overview: [Types of autism support](/kz/en/parents/types-of-autism-support/)
