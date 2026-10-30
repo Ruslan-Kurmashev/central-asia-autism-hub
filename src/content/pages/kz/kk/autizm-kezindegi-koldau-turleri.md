@@ -82,9 +82,9 @@ sources:
 
 ## Жылдам таңдау
 
-- [Неден бастарыңызды білмейсіз бе? Нақты мақсатқа сай қолдау таңдаңыз](/kz/ru/parents/kak-vybirat-pomoshch-pod-konkretnuyu-tsel/)
-- [Нақты әдіс ұсынды ма? Ғылыми дәлелдерді бағалауды үйреніңіз](/kz/ru/parents/kak-ponyat-dokazatelnost-metoda/)
-- [Қолдау басталып кетті ме? Оның көмектесетінін тексеріңіз](/kz/ru/parents/kak-ponyat-pomogaet-li-podderzhka/)
+- [Неден бастарыңызды білмейсіз бе? Нақты мақсатқа сай қолдау таңдаңыз](/kz/kk/parents/nakty-maksatka-sai-koldaudy-tandau/)
+- [Нақты әдіс ұсынды ма? Ғылыми дәлелдерді бағалауды үйреніңіз](/kz/kk/parents/adistin-gylymi-dalelderin-bagalau/)
+- [Қолдау басталып кетті ме? Оның көмектесетінін тексеріңіз](/kz/kk/parents/koldaudyn-paiydasyn-bagalau/)
 
 ## Неден бастау керек?
 
@@ -304,7 +304,7 @@ AAC қарапайым суретті карточкалар, таңбалар �
 
 Маңызды пайда болмаса, жағымсыз әсерлер пайда болса, бала тұрақты қатты жайсыздық сезінсе, жүктеме шамадан тыс артса немесе мақсат өзектілігін жоғалтса, жоспарды өзгертуге не тоқтатуға болады.
 
-[Қадамдық нұсқаулық: нақты мақсатқа сай қолдау таңдау](/kz/ru/parents/kak-vybirat-pomoshch-pod-konkretnuyu-tsel/)
+[Қадамдық нұсқаулық: нақты мақсатқа сай қолдау таңдау](/kz/kk/parents/nakty-maksatka-sai-koldaudy-tandau/)
 
 ## Қазақстанда нені білу маңызды?
 
@@ -342,11 +342,11 @@ AAC қарапайым суретті карточкалар, таңбалар �
 
 **ол қандай мақсатта қолданылады, зерттеулер не көрсетеді, деректер қаншалықты сенімді, қандай қауіптер бар және оның Қазақстанда қолданылуы мен реттелуі туралы не белгілі.**
 
-- [Нақты мақсатқа сай қолдау таңдау](/kz/ru/parents/kak-vybirat-pomoshch-pod-konkretnuyu-tsel/)
-- [Әдістің ғылыми дәлелдерін бағалау](/kz/ru/parents/kak-ponyat-dokazatelnost-metoda/)
-- [Таңдалған қолдаудың көмектесетінін бақылау](/kz/ru/parents/kak-ponyat-pomogaet-li-podderzhka/)
+- [Нақты мақсатқа сай қолдау таңдау](/kz/kk/parents/nakty-maksatka-sai-koldaudy-tandau/)
+- [Әдістің ғылыми дәлелдерін бағалау](/kz/kk/parents/adistin-gylymi-dalelderin-bagalau/)
+- [Таңдалған қолдаудың көмектесетінін бақылау](/kz/kk/parents/koldaudyn-paiydasyn-bagalau/)
 
 ## Келесі материалдар
 
-- Алдыңғы мақала: [Аутист балаға маман мен қолдауды таңдау](/kz/ru/parents/kak-vybrat-spetsialista-i-pomoshch-pri-autizme/)
-- Келесі мақала: [Нақты мақсатқа сай қолдауды таңдау](/kz/ru/parents/kak-vybirat-pomoshch-pod-konkretnuyu-tsel/)
+- Алдыңғы мақала: [Аутист балаға маман мен қолдауды таңдау](/kz/kk/parents/autizm-kezinde-maman-men-koldau-tandau/)
+- Келесі мақала: [Нақты мақсатқа сай қолдауды таңдау](/kz/kk/parents/nakty-maksatka-sai-koldaudy-tandau/)
