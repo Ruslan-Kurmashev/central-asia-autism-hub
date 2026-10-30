@@ -140,7 +140,7 @@ Instead of asking **"Does this method work for autism?"**, ask:
 
 One method may have been studied for communication but not sleep. Another may help treat a particular co-occurring illness without changing the core characteristics of autism.
 
-[Understanding the evidence behind a method](/kz/ru/parents/kak-ponyat-dokazatelnost-metoda/)
+[Understanding the evidence behind a method](/kz/en/parents/how-to-assess-evidence-for-an-autism-method/)
 
 ## Step 7. Distinguish research findings from confidence in those findings
 
@@ -302,5 +302,5 @@ These questions should not be confused.
 ## Continue reading
 
 - Previous article: [Types of autism support and assistance](/kz/ru/parents/vidy-pomoshchi-i-podderzhki-pri-autizme/)
-- Next article: [Understanding the evidence behind a method](/kz/ru/parents/kak-ponyat-dokazatelnost-metoda/)
+- Next article: [Understanding the evidence behind a method](/kz/en/parents/how-to-assess-evidence-for-an-autism-method/)
 - Related: [How to tell whether support is helping](/kz/ru/parents/kak-ponyat-pomogaet-li-podderzhka/)
