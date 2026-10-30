@@ -1608,6 +1608,48 @@ details.nav-disclosure:not([open]) > .primary-nav {
   color: white;
 }
 
+.site-footer__visits {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: var(--space-4);
+  margin-top: var(--space-6);
+  padding-block: var(--space-4);
+  border-top: 1px solid rgb(255 255 255 / 18%);
+}
+
+.site-footer__visits[hidden] {
+  display: none;
+}
+
+.site-footer__visits-badge {
+  display: block;
+  width: auto;
+  max-width: 100%;
+  height: 2rem;
+}
+
+.site-footer__visits-title,
+.site-footer__visits-note {
+  margin: 0;
+}
+
+.site-footer__visits-title {
+  color: #fff;
+  font-weight: 680;
+}
+
+.site-footer__visits-note {
+  color: #c9d6d5;
+  font-size: var(--type-small);
+}
+
+@media print {
+  .site-footer__visits {
+    display: none !important;
+  }
+}
+
 .site-footer__legal {
   margin-top: var(--space-6);
   padding-block: var(--space-4);

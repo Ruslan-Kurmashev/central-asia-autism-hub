@@ -128,6 +128,23 @@ This selection must be rechecked against the provider's current documentation be
 
 Google Analytics, Meta Pixel, advertising pixels, remarketing tags, and comparable profiling tools are not approved for the MVP.
 
+### 6.1. Public page-view badge (30 October 2026)
+
+Owner-approved implementation for the interim public counter uses Hits (https://hits.sh/) instead of the failed CounterAPI service. Hits is an open-source image badge service that requires no account and can be embedded on a static GitHub Pages site. The project displays one counter in the shared footer of the RU, KK and EN site. The URL key is constant across these languages and independent of a future custom domain.
+
+The counter is a **page-view badge, not a unique-person or visit counter**. Every browser request for the SVG may increment the same public count. Reopening pages, bots, reloading and network caching affect its accuracy. It is not a count of people, families, individual readers, diagnoses, clinical use or educational results. Counts begin when the public image is first requested. Do not backfill historic visits or invent a starting number.
+
+Privacy controls:
+- The page loads one SVG image from hits.sh without executing provider JavaScript.
+- The image uses `referrerpolicy="no-referrer"`, so the browser does not send the visited article URL or query parameters via Referer.
+- The site sends no unique identifier, medical data, form values, localStorage state, or browser session history to the counter.
+- The widget uses no cookies, localStorage, or sessionStorage. It is simply an image reference.
+- Technical connection information such as IP and browser request headers is necessarily available to the remote server during delivery. Hits states in its badge-specific policy that it does not collect IP addresses, user agent strings or personal information and does not set cookies. This is a published vendor statement, not independent legal certification. See https://hits.sh/privacy/ and https://hits.sh/terms/.
+- The hits.sh website itself uses Google Analytics, but its badge endpoint is described as separate from that website analytics. Do not load the provider's homepage, analytics code or tracking pixels in the AutismHub page.
+- If the third-party endpoint is unavailable or blocked, the badge may not display. It must not prevent other page content from rendering.
+
+The public privacy notices in Russian, Kazakh and English disclose the badge and limitations. Cloudflare Web Analytics is deferred until a later explicit project decision.
+
 ## 7. Cookies and device storage
 
 The MVP must not set non-essential cookies for:
@@ -138,7 +155,7 @@ The MVP must not set non-essential cookies for:
 - remarketing;
 - persistent visitor identification.
 
-The website must not store visitor profiles in browser local storage.
+The website must not store visitor profiles in browser local storage. The page-view image counter does not require browser storage.
 
 If a future function requires cookies or device storage, its purpose, stored values, duration, and consent requirements must be reviewed before implementation. It must not be added merely because a third-party tool enables it by default.
 

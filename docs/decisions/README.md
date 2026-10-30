@@ -13,6 +13,8 @@ This directory records explicit, owner-approved changes to product policy or tec
 
 ## Current records
 
+- [2026-10-29: Multilingual public page-view badge](2026-10-29-public-visit-counter.md). Owner-approved static Hits counter replacing failed CounterAPI, subject to final CI and public deploy verification.
+
 - [2026-10-29: Curated parent assessment reading order](2026-10-29-parent-assessment-reading-order.md). Reorders the original four assessment articles within the combined six-item topic without changing article content or URLs.
 
 - [2026-10-29: ASCII hyphen for all article and section copy](2026-10-29-editorial-hyphen-rule.md). Replaces typographic long dashes in user-facing RU, KK and EN content while preserving licensed instrument wording and protected source code.
