@@ -2,8 +2,8 @@
 title: "Почему научные исследования иногда противоречат друг другу?"
 summary: "Почему одна работа показывает результат, а другая нет: разные участники, способы измерения, малые выборки, случайные колебания, публикационные смещения и повторяемость."
 description: "Почему исследования противоречат друг другу: гетерогенность, случайная ошибка, неполные данные, публикационный уклон, воспроизводимость и GRADE."
-featuredImage: "/central-asia-autism-hub/images/research/research-literacy-contradictions-cover.svg"
-featuredImageAlt: "Оригинальная абстрактная иллюстрация двух научных исследований, получивших разные условные результаты, и единой области неопределённости."
+featuredImage: "/central-asia-autism-hub/images/editorial/photos/research-literacy-contradictions-review-team.jpg"
+featuredImageAlt: "Два исследователя обсуждают документы с результатами в лаборатории. Не реальные противоречащие исследования."
 country: kz
 language: ru
 section: research
@@ -21,7 +21,7 @@ riskLevel: lower
 disclaimerType: informational
 conflictOfInterest: "Коммерческих интересов не заявлено. Примеры вымышлены, а числовые оценки не отражают реальные исследования вмешательств."
 publishedAt: 2026-10-15
-updatedAt: 2026-10-19
+updatedAt: 2026-10-30
 reviewDueAt: 2027-04-15
 draft: false
 keyPoints:

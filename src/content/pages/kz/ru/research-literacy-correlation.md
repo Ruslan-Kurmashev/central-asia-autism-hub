@@ -2,8 +2,8 @@
 title: "Почему корреляция не означает причинность?"
 summary: "Почему два признака могут меняться вместе без причинной связи: третьи факторы, обратная причинность, выборка и ошибки интерпретации. Разбор на примерах аутизма."
 description: "Корреляция и причинность простыми словами для родителей: объясняющие схемы, переменные, смешение, обратная причинность и научные ошибки."
-featuredImage: "/central-asia-autism-hub/images/research/research-literacy-correlation-cover.svg"
-featuredImageAlt: "Абстрактная схема взаимосвязи двух признаков и третьего скрытого фактора, учебная причинная модель, не реальные данные."
+featuredImage: "/central-asia-autism-hub/images/editorial/photos/research-literacy-correlation-chart-review.jpg"
+featuredImageAlt: "Печатные графики и таблицы рассматривают через увеличительное стекло. Это не доказательство причинной связи и не данные исследований аутизма."
 country: kz
 language: ru
 section: research
@@ -21,7 +21,7 @@ riskLevel: lower
 disclaimerType: informational
 conflictOfInterest: "Коммерческих интересов не заявлено. Случаи вымышленные и не описывают конкретных семей."
 publishedAt: 2026-10-15
-updatedAt: 2026-10-26
+updatedAt: 2026-10-30
 reviewDueAt: 2027-04-15
 draft: false
 keyPoints:

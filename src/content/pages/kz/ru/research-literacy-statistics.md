@@ -2,8 +2,8 @@
 title: "Как понимать научную статистику и результаты?"
 summary: "Что значат выборка, проценты, абсолютный и относительный риск, размер эффекта, доверительный интервал и p-value. Понятные расчёты на полностью вымышленных данных."
 description: "Научная статистика простыми словами: знаменатель, проценты, риск, размер эффекта, p-value, доверительный интервал, неопределённость и клиническая значимость."
-featuredImage: "/central-asia-autism-hub/images/research/research-literacy-statistics-cover.svg"
-featuredImageAlt: "Оригинальная иллюстрация статистической неопределённости: две группы условных значений, оценка эффекта и диапазон возможных значений."
+featuredImage: "/central-asia-autism-hub/images/editorial/photos/research-literacy-statistics-textbook.jpg"
+featuredImageAlt: "Рука с ручкой указывает на данные в открытом академическом учебнике. Не результаты исследований аутизма."
 country: kz
 language: ru
 section: research
@@ -21,7 +21,7 @@ riskLevel: lower
 disclaimerType: informational
 conflictOfInterest: "Коммерческих интересов не заявлено. Примеры и расчёты синтетические."
 publishedAt: 2026-10-15
-updatedAt: 2026-10-15
+updatedAt: 2026-10-30
 reviewDueAt: 2027-04-15
 draft: false
 keyPoints:

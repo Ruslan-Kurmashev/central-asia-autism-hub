@@ -2,8 +2,8 @@
 title: "Как самостоятельно прочитать и оценить научную статью?"
 summary: "Читаем реальное исследование по шагам: вопрос, авторы, участники, дизайн, результаты, доверительные интервалы, ограничения и выводы. Скачиваемый рабочий лист PDF/DOCX."
 description: "Как прочитать научную статью родителю без профильного образования: пошаговый разбор исследования Hviid 2019, критическая оценка и бесплатный шаблон."
-featuredImage: "/central-asia-autism-hub/images/research/research-literacy-critical-reading-cover.svg"
-featuredImageAlt: "Оригинальная иллюстрация открытой научной статьи с условными выделенными разделами методологии, данных, результатов и ограничений."
+featuredImage: "/central-asia-autism-hub/images/editorial/photos/research-literacy-critical-reading-highlighter.jpg"
+featuredImageAlt: "Человек выделяет фрагменты документа маркером во время внимательного чтения. Это не конкретная научная публикация."
 country: kz
 language: ru
 section: research
@@ -21,7 +21,7 @@ riskLevel: lower
 disclaimerType: informational
 conflictOfInterest: "Коммерческих интересов не заявлено. Инструмент AutismHub оригинальный и не является валидированной шкалой."
 publishedAt: 2026-10-15
-updatedAt: 2026-10-26
+updatedAt: 2026-10-30
 reviewDueAt: 2027-04-15
 draft: false
 keyPoints:

@@ -2,8 +2,8 @@
 title: "Как начинается и проводится научное исследование?"
 summary: "Пошаговая история научного исследования: от вопроса и гипотезы до протокола, этики, набора участников, измерений и публикации. С понятным примером из школьной жизни."
 description: "Научный метод простыми словами для родителей: гипотеза, PICO, выборка, контрольная группа, протокол, согласие, результаты и рецензирование."
-featuredImage: "/central-asia-autism-hub/images/research/research-literacy-study-process-cover.svg"
-featuredImageAlt: "Оригинальная научная схема последовательных этапов исследования от вопроса до анализа результатов, вымышленные условные элементы."
+featuredImage: "/central-asia-autism-hub/images/editorial/photos/research-literacy-study-process-lab-notes.jpg"
+featuredImageAlt: "Учёный записывает наблюдения в лабораторный журнал рядом с микроскопом и образцами. Это стоковая фотография, а не документация конкретного исследования."
 country: kz
 language: ru
 section: research
@@ -21,7 +21,7 @@ riskLevel: lower
 disclaimerType: informational
 conflictOfInterest: "Коммерческих интересов не заявлено. Все учебные примеры вымышлены."
 publishedAt: 2026-10-15
-updatedAt: 2026-10-26
+updatedAt: 2026-10-30
 reviewDueAt: 2027-04-15
 draft: false
 keyPoints:

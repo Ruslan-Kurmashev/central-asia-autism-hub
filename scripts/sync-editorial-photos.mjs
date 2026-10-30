@@ -9,6 +9,14 @@ import process from 'node:process';
 
 const folder = path.join(process.cwd(), 'public/images/editorial/photos');
 const photos = [
+  // Licensed research-literacy photographs, see editorial-image-sources.md
+  ['research-literacy-study-process-lab-notes.jpg', '8770721'],
+  ['research-literacy-study-designs-research-team.jpg', '8770730'],
+  ['research-literacy-statistics-textbook.jpg', '5527516'],
+  ['research-literacy-graphs-paper-report.jpg', '590022'],
+  ['research-literacy-critical-reading-highlighter.jpg', '7681073'],
+  ['research-literacy-correlation-chart-review.jpg', '7947663'],
+  ['research-literacy-contradictions-review-team.jpg', '8532854'],
 
   ['professional-ados-adi-cars-clinical-observation.jpg', '8653951'],
   ['event-ari-gestures-sign-language.jpg', '10029356'],
