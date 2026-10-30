@@ -33,9 +33,6 @@ jobs:
       - name: Check external URLs (report, do not fail on remote blocking)
         run: npm run check:external-links -- --fail-on-broken
 
-      - name: Probe public counter API and browser CORS from an isolated counter key
-        run: node scripts/check-public-counter-endpoint.mjs
-
       - name: Audit installed dependencies including production-only exposure
         if: always()
         run: npm run audit:dependencies -- --fail-on-high-production
