@@ -1,0 +1,57 @@
+/**
+ * Download third-party Commons images used as research-biology article covers.
+ * Entries are verified individually in docs/editorial-image-sources.md.
+ * Fail closed if a file is missing, has an unexpected media type, or has unsafe SVG markup.
+ */
+import { readFile, mkdir, writeFile } from 'node:fs/promises';
+import path from 'node:path';
+const assets = JSON.parse(await readFile('scripts/research-biology-cover-sources.json', 'utf8'));
+const folder = path.resolve('public/images/research/verified');
+await mkdir(folder, { recursive: true });
+const userAgent = 'AutismHub-educational-images/1.0 (https://github.com/Ruslan-Kurmashev/central-asia-autism-hub; Wikimedia Commons attribution)';
+const headers = { 'User-Agent': userAgent, Accept: 'application/json,image/*;q=0.9,*/*;q=0.1' };
+function validFile(name, data) {
+  if (data.length < 900 || data.length > 12000000) return false;
+  if (name.endsWith('.jpg')) return data[0] === 255 && data[1] === 216 && data.at(-2) === 255 && data.at(-1) === 217;
+  if (name.endsWith('.png')) return data.subarray(0, 8).equals(Buffer.from([137,80,78,71,13,10,26,10]));
+  if (name.endsWith('.svg')) {
+    const xml = data.toString('utf8');
+    return /<svg[\s>]/i.test(xml) && !/<script\b|<foreignObject\b|javascript:|onload\s*=|onerror\s*=/i.test(xml);
+  }
+  return false;
+}
+async function downloadOne(asset) {
+  const output = path.join(folder, asset.filename);
+  try {
+    if (validFile(asset.filename, await readFile(output))) return;
+  } catch {}
+  const api = new URL('https://commons.wikimedia.org/w/api.php');
+  api.searchParams.set('action', 'query');
+  api.searchParams.set('format', 'json');
+  api.searchParams.set('prop', 'imageinfo');
+  api.searchParams.set('iiprop', 'url|size|mime');
+  api.searchParams.set('titles', 'File:' + asset.commonsFile);
+  const lookup = await fetch(api, {headers, signal: AbortSignal.timeout(25000)});
+  if (!lookup.ok) throw Error(asset.filename + ': Wikimedia API HTTP ' + lookup.status);
+  const pages = Object.values((await lookup.json()).query?.pages ?? {});
+  const info = pages[0]?.imageinfo?.[0];
+  if (!info?.url || !info.url.startsWith('https://upload.wikimedia.org/')) {
+    throw Error(asset.filename + ': no approved Wikimedia Commons original URL');
+  }
+  const expectedMime = asset.filename.endsWith('.jpg') ? 'image/jpeg' :
+    asset.filename.endsWith('.png') ? 'image/png' : 'image/svg+xml';
+  if (info.mime !== expectedMime) throw Error(asset.filename + ': unexpected Commons MIME ' + info.mime);
+  const response = await fetch(info.url, {headers, signal: AbortSignal.timeout(35000)});
+  if (!response.ok) throw Error(asset.filename + ': image download HTTP ' + response.status);
+  const bytes = Buffer.from(await response.arrayBuffer());
+  if (!validFile(asset.filename, bytes)) throw Error(asset.filename + ': invalid or unsafe image bytes');
+  await writeFile(output, bytes);
+  console.log('Verified Wikimedia original:', asset.filename, bytes.length, 'bytes');
+}
+const errors=[];
+for (let i=0; i<assets.length; i+=3) {
+  const jobs=await Promise.allSettled(assets.slice(i,i+3).map(downloadOne));
+  for (const task of jobs) if (task.status === 'rejected') errors.push(task.reason?.message);
+}
+if (errors.length) throw Error('Research covers cannot be published:\n'+errors.join('\n'));
+console.log('Verified',assets.length,'licensed original research covers.');

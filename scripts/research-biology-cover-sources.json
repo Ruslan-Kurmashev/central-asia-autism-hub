@@ -1,0 +1,134 @@
+[
+  {
+    "article": "autism-biology-overview",
+    "filename": "biology-connectivity-network.jpg",
+    "commonsFile": "Network representation of brain connectivity.JPG",
+    "author": "Hagmann et al. (2008), PLOS Biology",
+    "license": "CC BY 3.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by/3.0/",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Network_representation_of_brain_connectivity.JPG",
+    "alt": "Научная визуализация структурных связей между областями коры мозга человека из работы Hagmann и соавторов. Это не специфическая карта мозга при аутизме.",
+    "caption": "Сеть связей областей головного мозга"
+  },
+  {
+    "article": "autism-genetics-inheritance",
+    "filename": "genetics-dna-double-helix.jpg",
+    "commonsFile": "Dna-163466.jpg",
+    "author": "PublicDomainPictures",
+    "license": "CC0",
+    "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Dna-163466.jpg",
+    "alt": "Фотография модели двойной спирали ДНК, иллюстрирующая генетический материал. Не показывает наследование аутизма в конкретной семье.",
+    "caption": "Модель двойной спирали ДНК"
+  },
+  {
+    "article": "autism-sensory-sound-light-touch",
+    "filename": "sensory-auditory-pathway.png",
+    "commonsFile": "Auditory Pathway.png",
+    "author": "Jonathan E. Peelle",
+    "license": "CC BY 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Auditory_Pathway.png",
+    "alt": "Опубликованная схема слухового пути от уха до мозговых областей. Описывает обработку звука, но не определяет индивидуальную сенсорную чувствительность или диагноз.",
+    "caption": "Путь слухового сигнала к мозгу"
+  },
+  {
+    "article": "can-mri-blood-genetics-diagnose-autism",
+    "filename": "testing-brain-mri.png",
+    "commonsFile": "IMAGE BRAIN 2.png",
+    "author": "TheBrain",
+    "license": "CC BY 3.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by/3.0/",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:IMAGE_BRAIN_2.png",
+    "alt": "Изображение реального МРТ головного мозга. МРТ не является самостоятельным диагностическим тестом на аутизм.",
+    "caption": "МРТ головного мозга"
+  },
+  {
+    "article": "genes-control-brain-development",
+    "filename": "gene-dna-transcription.svg",
+    "commonsFile": "DNA transcription.svg",
+    "author": "Sulai / National Human Genome Research Institute",
+    "license": "Public domain",
+    "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:DNA_transcription.svg",
+    "alt": "Подлинная учебная схема транскрипции ДНК в РНК, одного из этапов работы генов. Не изображает данные пациента.",
+    "caption": "Транскрипция ДНК и образование РНК"
+  },
+  {
+    "article": "genetics-environment-autism-risk-evidence",
+    "filename": "genetics-environment-genotype-phenotype.svg",
+    "commonsFile": "Genotype to phenotype.svg",
+    "author": "Thomas Shafee (2023), Threshold Concepts in Biochemistry",
+    "license": "CC BY 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Genotype_to_phenotype.svg",
+    "alt": "Учебная фигура из пособия по биохимии: как генетическая информация и среда связаны с признаками организма. Не доказывает причинность аутизма.",
+    "caption": "От генотипа и среды к признакам"
+  },
+  {
+    "article": "gut-microbiome-and-autism-evidence",
+    "filename": "gut-brain-axis.svg",
+    "commonsFile": "Gut-Brain Axis.svg",
+    "author": "Suganya, Kanmani, Byung-Soo Koo, Thinkpins, Mister Pommeroy, Mrmw",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Gut-Brain_Axis.svg",
+    "alt": "Схема двусторонней связи кишечника и головного мозга, адаптированная из публикации об оси кишечник-мозг. Не является доказательством того, что микробиом вызывает аутизм.",
+    "caption": "Ось кишечник-мозг"
+  },
+  {
+    "article": "how-brain-processes-information-neural-networks",
+    "filename": "neural-connectome.jpg",
+    "commonsFile": "Connectome.jpg",
+    "author": "jgmarcelino",
+    "license": "CC BY 2.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by/2.0/",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Connectome.jpg",
+    "alt": "Визуализация трактографии связей головного мозга по диффузионной МРТ. Это не функциональная сеть, не диагноз и не результаты исследования аутизма.",
+    "caption": "Трактография нервных путей головного мозга"
+  },
+  {
+    "article": "microglia-immune-system-and-autism",
+    "filename": "microglial-cell.svg",
+    "commonsFile": "Microglia.svg",
+    "author": "Microsome",
+    "license": "CC BY 3.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by/3.0/",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Microglia.svg",
+    "alt": "Готовая научная иллюстрация микроглиальной клетки с отростками, не фотография ткани и не маркер нейровоспаления при аутизме.",
+    "caption": "Строение клетки микроглии"
+  },
+  {
+    "article": "neurons-synapses-how-brain-cells-connect",
+    "filename": "chemical-synapse.jpg",
+    "commonsFile": "Chemical synapse schema.jpg",
+    "author": "Christy Krames, U.S. National Institute on Aging",
+    "license": "Public domain",
+    "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Chemical_synapse_schema.jpg",
+    "alt": "Учебная схема химического синапса, показывающая передачу сигнала между нервными клетками. Не изображает патологию или специфическое изменение при аутизме.",
+    "caption": "Передача сигнала в химическом синапсе"
+  },
+  {
+    "article": "prenatal-brain-development-and-autism",
+    "filename": "prenatal-developing-cortex.jpg",
+    "commonsFile": "The developing cerebral cortex.jpg",
+    "author": "Akula, Exposito-Alonso, Walsh (2023), Developmental Cell",
+    "license": "CC BY 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:The_developing_cerebral_cortex.jpg",
+    "alt": "Фигура из открытой научной публикации с этапами формирования коры головного мозга плода. Изображение не показывает признак аутизма.",
+    "caption": "Стадии развития коры головного мозга до рождения"
+  },
+  {
+    "article": "why-autism-differs-between-people",
+    "filename": "spectrum-nautilus.svg",
+    "commonsFile": "Autism Spectrum Nautilus Symbol.svg",
+    "author": "Intervex",
+    "license": "CC0",
+    "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Autism_Spectrum_Nautilus_Symbol.svg",
+    "alt": "Радужный символ наутилуса, отражающий многомерное разнообразие аутистического спектра. Это символ, а не научная шкала тяжести или типология.",
+    "caption": "Разнообразие аутистического спектра"
+  }
+]
