@@ -33,13 +33,13 @@ sources:
   - title: "National Guideline for supporting the learning, participation, and wellbeing of autistic children and their families in Australia"
     url: "https://www.autismcrc.com.au/best-practice/supporting-children/guideline"
     organisation: "Autism CRC, ныне Sylvia Rodger Institute"
-    note: "Использован для принципов значимые результаты, участия, семейных приоритетов и пересмотра поддержки."
+    note: "Used for the principles of meaningful outcomes, participation, family priorities and reviewing support."
     accessedAt: 2026-09-17
   - title: "Autism spectrum disorder in under 19s: support and management - Recommendations"
     url: "https://www.nice.org.uk/guidance/cg170/chapter/recommendations"
     organisation: "National Institute for Health and Care Excellence"
     publicationYear: 2013
-    note: "Использован для оценки факторов поведения, сопутствующих состояний и мониторинга пользы и нежелательных эффектов."
+    note: "Used to evaluate behavioural factors, co-occurring conditions and monitoring benefits and adverse effects."
     accessedAt: 2026-09-17
 versionNote: "AI-assisted translation draft pending qualified language and medical review."
 ---
