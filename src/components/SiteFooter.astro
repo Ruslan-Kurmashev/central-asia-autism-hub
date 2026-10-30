@@ -48,15 +48,13 @@ const badgeUrl = 'https://hits.sh/ruslan-kurmashev.github.io/central-asia-autism
     </div>
   </div>
   {!isNotFound && (
-    <div class="container site-footer__visits">
-      <img
-        class="site-footer__visits-badge"
-        src={badgeUrl}
-        alt={viewCopy.title}
-        loading="eager"
-        decoding="async"
-        referrerpolicy="no-referrer"
-      />
+    <div
+      class="container site-footer__visits"
+      data-public-counter
+      data-badge-url={badgeUrl}
+      data-badge-alt={viewCopy.title}
+      hidden
+    >
       <div>
         <p class="site-footer__visits-title">{viewCopy.title}</p>
         <p class="site-footer__visits-note">{viewCopy.note}</p>
@@ -66,4 +64,25 @@ const badgeUrl = 'https://hits.sh/ruslan-kurmashev.github.io/central-asia-autism
   <div class="container site-footer__legal">
     <p>© {year} {SITE.umbrellaName}</p>
   </div>
+  {!isNotFound && (
+    <script is:inline>
+      (() => {
+        const host = window.location.hostname.toLowerCase();
+        if (!['ruslan-kurmashev.github.io', 'autismkz.com', 'www.autismkz.com'].includes(host)) return;
+
+        const widget = document.querySelector('[data-public-counter]');
+        if (!widget) return;
+
+        const image = document.createElement('img');
+        image.className = 'site-footer__visits-badge';
+        image.alt = widget.getAttribute('data-badge-alt') || '';
+        image.referrerPolicy = 'no-referrer';
+        image.decoding = 'async';
+        image.loading = 'eager';
+        image.addEventListener('load', () => { widget.hidden = false; }, { once: true });
+        image.src = widget.getAttribute('data-badge-url') || '';
+        widget.prepend(image);
+      })();
+    </script>
+  )}
 </footer>
