@@ -430,4 +430,4 @@ WHO Caregiver Skills Training бір ықтимал тәсілді көрсет�
 - [Қазақстанда аутизмге бағалаудан кейін не істеу керек?](/kz/ru/parents/posle-otsenki-na-autizm-v-kazakhstane/)
 - [Қазақстанда аутизм диагнозынан кейінгі алғашқы 30 күн](/kz/ru/parents/pervye-30-dney-posle-diagnoza-autizma-v-kazakhstane/)
 - [2 айдан 5 жасқа дейінгі даму бағдарлары](/kz/ru/parents/orientiry-razvitiya-rebenka/)
-- [Аутизм кезінде көмек пен қолдаудың түрлері](/kz/ru/parents/vidy-pomoshchi-i-podderzhki-pri-autizme/)
+- [Аутизм кезінде көмек пен қолдаудың түрлері](/kz/kk/parents/autizm-kezindegi-koldau-turleri/)
