@@ -34,41 +34,41 @@ sources:
   - title: "National Guideline for supporting the learning, participation, and wellbeing of autistic children and their families in Australia"
     url: "https://www.autismcrc.com.au/best-practice/supporting-children/guideline"
     organisation: "Autism CRC, ныне Sylvia Rodger Institute"
-    note: "Использован как рамка для индивидуализированной, ориентированной на цели и участие поддержки."
+    note: "Жеке қажеттілікке, мақсатқа және өмірге қатысуға бағытталған қолдау қағидалары үшін қолданылған."
     accessedAt: 2026-09-17
   - title: "National Guidance for best practice in inclusive education for autistic students"
     url: "https://www.autismcrc.com.au/our-work/general/national-guidance-best-practice-inclusive-education-autistic-students"
     organisation: "Autism CRC, ныне Sylvia Rodger Institute"
     publicationYear: 2026
-    note: "Использовано как дополнительный источник для раздела об инклюзивной образовательной среде, участии, благополучии и поддержке аутичных учащихся."
+    note: "Инклюзивті білім беру ортасы, аутист оқушылардың қатысуы, әл-ауқаты және қолдауы туралы бөлімге қосымша дереккөз."
     accessedAt: 2026-09-23
   - title: "Autism spectrum disorder in under 19s: support and management - Recommendations"
     url: "https://www.nice.org.uk/guidance/cg170/chapter/recommendations"
     organisation: "National Institute for Health and Care Excellence"
     publicationYear: 2013
-    note: "Использованы рекомендации по поддержке, сопутствующим состояниям, поведению, сну и вмешательствам, которые не следует использовать."
+    note: "Қолдау, қатар жүретін жағдайлар, мінез-құлық, ұйқы және белгілі бір мақсатқа ұсынылмайтын араласулар жөніндегі ұсынымдар қолданылған."
     accessedAt: 2026-09-17
   - title: "Autism spectrum disorder in under 19s: recognition, referral and diagnosis - Recommendations"
     url: "https://www.nice.org.uk/guidance/cg128/chapter/Recommendations"
     organisation: "National Institute for Health and Care Excellence"
     publicationYear: 2011
-    note: "Использовано для границ диагностики, регрессии и медицинской оценки."
+    note: "Диагноз, дағдылардың кері кетуі және медициналық бағалау шекараларын түсіндіру үшін қолданылған."
     accessedAt: 2026-09-17
   - title: "Autism"
     url: "https://www.who.int/news-room/fact-sheets/detail/autism-spectrum-disorders"
     organisation: "World Health Organization"
-    note: "Использован общий принцип различающихся потребностей и поддержки участия и благополучия."
+    note: "Қажеттіліктердің әртүрлілігі, қатысу мен әл-ауқатты қолдау қағидасы қолданылған."
     accessedAt: 2026-09-17
   - title: "Закон Республики Казахстан «О психологической деятельности»"
     url: "https://adilet.zan.kz/rus/docs/Z2600000332"
     organisation: "ИПС «Әділет»"
     publicationYear: 2026
-    note: "Использован для общего правового разграничения психологической деятельности и специализированной медицинской помощи. Закон датирован 2 июля 2026 года, порядок введения в действие установлен статьёй 22."
+    note: "Психологиялық қызмет пен мамандандырылған медициналық көмектің құқықтық айырмашылығын түсіндіру үшін қолданылған. Заң 2026 жылғы 2 шілдеде қабылданған, күшіне ену тәртібі 22-бапта көрсетілген."
     accessedAt: 2026-09-17
   - title: "Проверка разрешений и лицензий"
     url: "https://egov.kz/cms/ru/services/proverka-razresheniy-i-licenziy"
     organisation: "Электронное правительство Республики Казахстан"
-    note: "Официальный сервис проверки разрешений и лицензий."
+    note: "Рұқсаттар мен лицензияларды тексеруге арналған ресми сервис."
     accessedAt: 2026-09-17
 ---
 
