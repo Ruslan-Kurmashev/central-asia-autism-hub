@@ -13,7 +13,7 @@ This directory records explicit, owner-approved changes to product policy or tec
 
 ## Current records
 
-- [2026-10-29: Public visit counter proposal](2026-10-29-public-visit-counter.md). Prepares the multilingual counter but holds live activation pending provider privacy and API checks.
+- [2026-10-29: Multilingual public page-view badge](2026-10-29-public-visit-counter.md). Owner-approved static Hits counter replacing failed CounterAPI, subject to final CI and public deploy verification.
 
 - [2026-10-29: Curated parent assessment reading order](2026-10-29-parent-assessment-reading-order.md). Reorders the original four assessment articles within the combined six-item topic without changing article content or URLs.
 
