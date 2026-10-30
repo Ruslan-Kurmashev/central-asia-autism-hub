@@ -10,7 +10,7 @@ section: parents
 topic: approaches-to-support
 slug: types-of-autism-support
 translationKey: parents-types-of-autism-support
-translationStatus: pending
+translationStatus: checked
 audience:
   - parents
   - families
@@ -19,11 +19,13 @@ editor: Ruslan Kurmashev
 riskLevel: moderate
 disclaimerType: medical
 conflictOfInterest: "Конфликт интересов не заявлен."
+publishedAt: "2026-10-30T15:45:34Z"
+updatedAt: "2026-10-30T15:45:34Z"
 originalPublishedAt: 2026-09-17
 displayPublishedAt: 2026-09-17
 reviewDueAt: 2027-03-17
-draft: true
-versionNote: "AI-assisted translation draft pending qualified review. Includes the source article's 1 October 2026 additions."
+draft: false
+versionNote: "This translation was prepared with AI assistance. On 30 October 2026 the project editor confirmed its review against the Russian original. No independent external linguistic or medical review was conducted."
 keyPoints:
   - "There is no universal autism intervention. Choose support for a specific functional goal."
   - "Support can involve skills, environmental changes, medical care, psychological support and assessment or planning tools."

@@ -10,7 +10,7 @@ section: parents
 topic: approaches-to-support
 slug: autizm-kezindegi-kauipti-daleldenbegen-adister
 translationKey: parents-risky-unproven-autism-methods
-translationStatus: pending
+translationStatus: checked
 audience:
   - parents
   - families
@@ -19,9 +19,11 @@ editor: Ruslan Kurmashev
 riskLevel: high
 disclaimerType: medical
 conflictOfInterest: "Конфликт интересов не заявлен."
+publishedAt: "2026-10-30T15:45:43Z"
+updatedAt: "2026-10-30T15:45:43Z"
 originalPublishedAt: 2026-10-30
 displayPublishedAt: 2026-10-30
-draft: true
+draft: false
 reviewDueAt: 2027-04-30
 keyPoints:
   - "Пайданың дәлелденбеуі дәлелденген зиянмен бірдей емес. Уытты, тиімсіз және эксперименттік әдістер әртүрлі бағалауды қажет етеді."
@@ -158,7 +160,7 @@ sources:
     organisation: "American Academy of Pediatrics"
     publicationYear: 2007
     accessedAt: 2026-10-30
-versionNote: "AI көмегімен дайындалған қазақша аударма жобасы. Жариялау алдында медициналық және тілдік тексеру қажет."
+versionNote: "Аударма жасанды интеллект көмегімен дайындалды. 2026 жылғы 30 қазанда жоба редакторы оның орыс тіліндегі түпнұсқамен сәйкестігін тексергенін растады. Тәуелсіз сыртқы тілдік немесе медициналық рецензия жүргізілген жоқ."
 ---
 
 Аутист баланың ата-анасына сабақтар, дәрілер, «ағзаны тазарту», аппараттар, диеталар немесе «мидың жұмысын қалпына келтіреді» делінетін рәсімдер ұсынылуы мүмкін. Кейде бұл жарнамасы асыра айтылған кәдімгі қызметтер. Кейде елеулі зиян келтіруі мүмкін араласулар. Шын мәнінде зерттеліп жатқанымен, әзірге стандартты көмекке айналмаған әдістер де бар.

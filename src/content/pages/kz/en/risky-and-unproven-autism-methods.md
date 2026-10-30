@@ -10,7 +10,7 @@ section: parents
 topic: approaches-to-support
 slug: risky-and-unproven-autism-methods
 translationKey: parents-risky-unproven-autism-methods
-translationStatus: pending
+translationStatus: checked
 audience:
   - parents
   - families
@@ -19,9 +19,11 @@ editor: Ruslan Kurmashev
 riskLevel: high
 disclaimerType: medical
 conflictOfInterest: "Конфликт интересов не заявлен."
+publishedAt: "2026-10-30T15:45:37Z"
+updatedAt: "2026-10-30T15:45:37Z"
 originalPublishedAt: 2026-10-30
 displayPublishedAt: 2026-10-30
-draft: true
+draft: false
 reviewDueAt: 2027-04-30
 keyPoints:
   - "Lack of evidence of benefit is not the same as established harm. Toxic, ineffective and experimental approaches need different assessments."
@@ -158,7 +160,7 @@ sources:
     organisation: "American Academy of Pediatrics"
     publicationYear: 2007
     accessedAt: 2026-10-30
-versionNote: "AI-assisted English translation. Requires medical and language review before public release."
+versionNote: "This translation was prepared with AI assistance. On 30 October 2026 the project editor confirmed its review against the Russian original. No independent external linguistic or medical review was conducted."
 ---
 
 Families of autistic children may be offered sessions, medicines, "body cleanses", devices, diets or procedures claimed to "repair brain function". Some are ordinary services promoted with exaggerated advertising. Others are interventions capable of causing serious harm. Still others are genuinely being investigated but have not become accepted standards of care.
