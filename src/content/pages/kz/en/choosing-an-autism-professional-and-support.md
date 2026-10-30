@@ -34,40 +34,40 @@ sources:
     url: "https://adilet.zan.kz/rus/docs/Z2600000332"
     organisation: "ИПС «Әділет»"
     publicationYear: 2026
-    note: "Использованы положения об образовании и квалификации психолога, информировании о целях и методах помощи, профессиональной компетентности, договоре при частной практике, ограничениях, государственном реестре, переходном периоде и сертификации."
+    note: "The legal provisions on psychologists' education and qualifications, disclosure of goals and methods, professional competence, contracts in private practice, restrictions, the state register, transition period and certification were used."
     accessedAt: 2026-09-14
   - title: "Об утверждении Типовых квалификационных характеристик должностей педагогов"
     url: "https://adilet.zan.kz/rus/docs/V090005750_"
     organisation: "ИПС «Әділет»"
     publicationYear: 2009
-    note: "Использованы актуальные квалификационные требования к должностям специальных педагогов и логопедов в организациях образования, учтены изменения 2026 года."
+    note: "Current qualification requirements for special educators and speech therapists employed in educational organisations, including changes from 2026, were considered."
     accessedAt: 2026-09-14
   - title: "Выдача лицензии на медицинскую деятельность"
     url: "https://egov.kz/cms/ru/online-services/for_busunesses/2F487pass_mz"
     organisation: "Электронное правительство Республики Казахстан"
-    note: "Официальная информация о лицензировании медицинской деятельности."
+    note: "Official information on licensing medical activity."
     accessedAt: 2026-09-14
   - title: "Проверка разрешений и лицензий"
     url: "https://egov.kz/cms/ru/services/proverka-razresheniy-i-licenziy"
     organisation: "Электронное правительство Республики Казахстан"
-    note: "Официальный сервис проверки разрешений и лицензий."
+    note: "Official permit and licence verification service."
     accessedAt: 2026-09-14
   - title: "Выдача сертификата специалиста для допуска к клинической практике"
     url: "https://egov.kz/cms/ru/services/approval_documents/475pass_mz"
     organisation: "Электронное правительство Республики Казахстан"
-    note: "Официальная информация о сертификате специалиста для допуска к клинической практике."
+    note: "Official information about clinical-practice certificates for health professionals."
     accessedAt: 2026-09-14
   - title: "Autism spectrum disorder in under 19s: support and management - Recommendations"
     url: "https://www.nice.org.uk/guidance/cg170/chapter/recommendations"
     organisation: "National Institute for Health and Care Excellence"
     publicationYear: 2013
-    note: "Использованы рекомендации по индивидуализации помощи, факторам, связанным с поведением, функциональной оценке, измерению результата и вмешательствам, которые не следует использовать. Руководство обновлено в 2021 году и повторно рассмотрено NICE в 2025 году."
+    note: "Guidance on individualising support, behaviour-related factors, functional assessment, measuring outcomes and interventions not recommended for particular purposes. Updated in 2021 and reviewed by NICE again in 2025."
     accessedAt: 2026-09-14
   - title: "Caregiver skills training for families of children with developmental delays or disabilities - Introduction"
     url: "https://www.who.int/publications/i/item/9789240048836"
     organisation: "World Health Organization"
     publicationYear: 2022
-    note: "Использован для общего принципа поддержки коммуникации, вовлечённости, позитивного поведения и навыков повседневной жизни через обычные домашние ситуации."
+    note: "Used for the general principle of supporting communication, engagement, positive behaviour and daily living skills through ordinary activities at home."
     accessedAt: 2026-09-14
 versionNote: "AI-assisted draft requiring linguistic, medical and Kazakhstan legal review before publication."
 ---
