@@ -118,6 +118,9 @@ for (const lang of locales) {
     ['2026-10-30', 'conference-satr.kz', 'satr-logo.svg'],
     ['2026-11-08', 'aba-kurs.com/services/course/106268', 'parent-task-analysis-notes.jpg'],
     ['2026-11-15', 'umai-center.kz/services/training/sensory-integration-almaty-november-2026', 'parent-sensory-headphones.jpg'],
+    ['2026-11-02', 'iro18.ru/announce-events/view.php', 'parent-development-shape-sorter.jpg'],
+    ['2026-11-10', 'mgppu.ru/project/305/news/18234', 'kz-help-005.jpg'],
+    ['2026-12-05', 'uchmet.ru/events/item/4216544', 'parent-communication-cards.jpg'],
     ['2026-11-18', 'autism.org/webinar/using-multimodal-communication', 'event-ari-gestures-sign-language.jpg'],
     ['2026-12-02', 'autism.org/webinar/2026-research-updates-gi-symptoms-behavior', 'event-ari-gi-anatomical-model.jpg'],
   ].filter(([expires]) => expires >= todayInKazakhstan);
