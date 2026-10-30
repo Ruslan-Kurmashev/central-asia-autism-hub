@@ -1,5 +1,5 @@
 /**
- * Download third-party Commons images used as research-biology article covers.
+ * Download licensed Commons images and one Pexels photo for research-biology covers.
  * Entries are verified individually in docs/editorial-image-sources.md.
  * Fail closed if a file is missing, has an unexpected media type, or has unsafe SVG markup.
  */
@@ -26,27 +26,40 @@ async function downloadOne(asset) {
   try {
     if (validFile(asset.filename, await readFile(output))) return;
   } catch {}
-  const api = new URL('https://commons.wikimedia.org/w/api.php');
-  api.searchParams.set('action', 'query');
-  api.searchParams.set('format', 'json');
-  api.searchParams.set('prop', 'imageinfo');
-  api.searchParams.set('iiprop', 'url|size|mime');
-  api.searchParams.set('titles', 'File:' + asset.commonsFile);
-  const lookup = await fetch(api, {headers, signal: AbortSignal.timeout(25000)});
-  if (!lookup.ok) throw Error(asset.filename + ': Wikimedia API HTTP ' + lookup.status);
-  const pages = Object.values((await lookup.json()).query?.pages ?? {});
-  const info = pages[0]?.imageinfo?.[0];
-  if (!info?.url || !info.url.startsWith('https://upload.wikimedia.org/')) {
-    throw Error(asset.filename + ': no approved Wikimedia Commons original URL');
+  let imageUrl;
+  if (asset.pexelsId) {
+    if (!/^\d+$/.test(asset.pexelsId) || !asset.filename.endsWith('.jpg')) {
+      throw Error(asset.filename + ': invalid Pexels identifier or image format');
+    }
+    imageUrl = 'https://images.pexels.com/photos/' + asset.pexelsId +
+      '/pexels-photo-' + asset.pexelsId + '.jpeg?fm=jpg&w=1280&q=82';
+  } else {
+    const api = new URL('https://commons.wikimedia.org/w/api.php');
+    api.searchParams.set('action', 'query');
+    api.searchParams.set('format', 'json');
+    api.searchParams.set('prop', 'imageinfo');
+    api.searchParams.set('iiprop', 'url|size|mime');
+    api.searchParams.set('titles', 'File:' + asset.commonsFile);
+    const lookup = await fetch(api, {headers, signal: AbortSignal.timeout(25000)});
+    if (!lookup.ok) throw Error(asset.filename + ': Wikimedia API HTTP ' + lookup.status);
+    const pages = Object.values((await lookup.json()).query?.pages ?? {});
+    const info = pages[0]?.imageinfo?.[0];
+    if (!info?.url || !info.url.startsWith('https://upload.wikimedia.org/')) {
+      throw Error(asset.filename + ': no approved Wikimedia Commons original URL');
+    }
+    const expectedMime = asset.filename.endsWith('.jpg') ? 'image/jpeg' :
+      asset.filename.endsWith('.png') ? 'image/png' : 'image/svg+xml';
+    if (info.mime !== expectedMime) throw Error(asset.filename + ': unexpected Commons MIME ' + info.mime);
+    imageUrl = info.url;
   }
-  const expectedMime = asset.filename.endsWith('.jpg') ? 'image/jpeg' :
-    asset.filename.endsWith('.png') ? 'image/png' : 'image/svg+xml';
-  if (info.mime !== expectedMime) throw Error(asset.filename + ': unexpected Commons MIME ' + info.mime);
   let lastError;
   for (let attempt=1; attempt<=5; attempt++) {
     try {
-      const response = await fetch(info.url, {headers, signal: AbortSignal.timeout(35000)});
+      const response = await fetch(imageUrl, {headers, signal: AbortSignal.timeout(35000)});
       if (!response.ok) throw Error(asset.filename + ': image download HTTP ' + response.status);
+      if (asset.pexelsId && !(response.headers.get('content-type') ?? '').includes('image/jpeg')) {
+        throw Error(asset.filename + ': Pexels did not provide JPEG');
+      }
       let bytes = Buffer.from(await response.arrayBuffer());
       if (asset.filename.endsWith('.svg')) {
         let xml = bytes.toString('utf8');

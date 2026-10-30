@@ -23,25 +23,25 @@
   },
   {
     "article": "autism-sensory-sound-light-touch",
-    "filename": "sensory-auditory-pathway.png",
-    "commonsFile": "Auditory Pathway.png",
-    "author": "Jonathan E. Peelle",
-    "license": "CC BY 4.0",
-    "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
-    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Auditory_Pathway.png",
-    "alt": "Опубликованная схема слухового пути от уха до мозговых областей. Описывает обработку звука, но не определяет индивидуальную сенсорную чувствительность или диагноз.",
-    "caption": "Путь слухового сигнала к мозгу"
+    "filename": "sensory-light-table-tactile-exploration.jpg",
+    "author": "Vladimir Srajber",
+    "license": "Pexels License",
+    "licenseUrl": "https://www.pexels.com/license/",
+    "sourceUrl": "https://www.pexels.com/photo/children-making-bricks-and-painting-on-sand-17260649/",
+    "alt": "Дети исследуют песок и предметы на подсвеченном столе: пример зрительных и тактильных ощущений. Фотография не показывает диагноз или сенсорные особенности участников.",
+    "caption": "Свет и прикосновения во время игры с песком",
+    "pexelsId": "17260649"
   },
   {
     "article": "can-mri-blood-genetics-diagnose-autism",
-    "filename": "testing-brain-mri.png",
-    "commonsFile": "IMAGE BRAIN 2.png",
-    "author": "TheBrain",
-    "license": "CC BY 3.0",
-    "licenseUrl": "https://creativecommons.org/licenses/by/3.0/",
-    "sourceUrl": "https://commons.wikimedia.org/wiki/File:IMAGE_BRAIN_2.png",
-    "alt": "Изображение реального МРТ головного мозга. МРТ не является самостоятельным диагностическим тестом на аутизм.",
-    "caption": "МРТ головного мозга"
+    "filename": "testing-brain-mri-clean-high-resolution.jpg",
+    "commonsFile": "MRI of Human Brain.jpg",
+    "author": "Asnaebsa",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:MRI_of_Human_Brain.jpg",
+    "alt": "Аксиальный Т1-взвешенный МРТ-срез мозга человека при исследовании на томографе 7 Тл, без надписей. МРТ не является самостоятельным тестом на аутизм.",
+    "caption": "Аксиальный МРТ-срез головного мозга человека"
   },
   {
     "article": "genes-control-brain-development",
@@ -89,14 +89,14 @@
   },
   {
     "article": "microglia-immune-system-and-autism",
-    "filename": "microglial-cell.svg",
-    "commonsFile": "Microglia.svg",
-    "author": "Microsome",
-    "license": "CC BY 3.0",
-    "licenseUrl": "https://creativecommons.org/licenses/by/3.0/",
-    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Microglia.svg",
-    "alt": "Готовая научная иллюстрация микроглиальной клетки с отростками, не фотография ткани и не маркер нейровоспаления при аутизме.",
-    "caption": "Строение клетки микроглии"
+    "filename": "microglia-neurons-fluorescence-microscopy.jpg",
+    "commonsFile": "Microglia and neurons.jpg",
+    "author": "GerryShaw / EnCor Biotechnology",
+    "license": "CC BY-SA 3.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Microglia_and_neurons.jpg",
+    "alt": "Флуоресцентная микрофотография культуры клеток мозга крысы: микроглия показана зелёным, нейронные отростки красным. Не исследование мозга аутичных людей.",
+    "caption": "Микроглия и нейроны в лабораторной клеточной культуре"
   },
   {
     "article": "neurons-synapses-how-brain-cells-connect",
