@@ -33,24 +33,24 @@ sources:
   - title: "National Guideline for supporting the learning, participation, and wellbeing of autistic children and their families in Australia"
     url: "https://www.autismcrc.com.au/best-practice/supporting-children/guideline"
     organisation: "Autism CRC, ныне Sylvia Rodger Institute"
-    note: "Использован для подхода, в котором выбор начинается с цели, учитывает семью и участие человека в повседневной жизни."
+    note: "Қолдауды мақсаттан бастап таңдауға, отбасы басымдықтары мен күнделікті өмірге қатысуды ескеруге арналған қағидалар қолданылған."
     accessedAt: 2026-09-17
   - title: "Autism spectrum disorder in under 19s: support and management - Recommendations"
     url: "https://www.nice.org.uk/guidance/cg170/chapter/recommendations"
     organisation: "National Institute for Health and Care Excellence"
     publicationYear: 2013
-    note: "Использованы рекомендации по факторам поведения, сопутствующим состояниям, функциональной оценке и индивидуализации помощи."
+    note: "Мінез-құлық факторлары, қатар жүретін жағдайлар, функционалдық бағалау және жеке қолдау бойынша ұсынымдар қолданылған."
     accessedAt: 2026-09-17
   - title: "Закон Республики Казахстан «О психологической деятельности»"
     url: "https://adilet.zan.kz/rus/docs/Z2600000332"
     organisation: "ИПС «Әділет»"
     publicationYear: 2026
-    note: "Использован для правового разграничения психологической деятельности и специализированной медицинской помощи."
+    note: "Психологиялық қызмет пен мамандандырылған медициналық көмектің құқықтық айырмашылығын түсіндіру үшін қолданылған."
     accessedAt: 2026-09-17
   - title: "Проверка разрешений и лицензий"
     url: "https://egov.kz/cms/ru/services/proverka-razresheniy-i-licenziy"
     organisation: "Электронное правительство Республики Казахстан"
-    note: "Официальный сервис проверки разрешений и лицензий."
+    note: "Рұқсаттар мен лицензияларды тексеруге арналған ресми сервис."
     accessedAt: 2026-09-17
 versionNote: "AI көмегімен дайындалған аударма жобасы. Қазақ тіліндегі медициналық және құқықтық терминдерді маман тексеруі қажет."
 ---
