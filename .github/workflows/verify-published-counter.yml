@@ -56,3 +56,32 @@ jobs:
               exit 1
             fi
           done
+
+      - name: Verify public regional research photographs
+        shell: bash
+        run: |
+          set -euo pipefail
+          base='https://ruslan-kurmashev.github.io/central-asia-autism-hub'
+          records=(
+            'autizm-v-centralnoy-azii-statistika-pyati-stran research-literacy-critical-reading-highlighter.jpg central-asia-autism-five-countries-evidence-map.svg'
+            'budushchee-issledovaniy-autizma-v-centralnoy-azii research-literacy-study-designs-research-team.jpg central-asia-autism-future-research-roadmap.svg'
+            'issledovaniya-autizma-kazahstan-centralnaya-aziya research-literacy-study-process-lab-notes.jpg central-asia-autism-research-timeline-cover.svg'
+            'pochemu-rastet-chislo-diagnozov-autizma-v-kazahstane research-literacy-correlation-chart-review.jpg kazakhstan-autism-registration-pathway.svg'
+            'psihologicheskoe-blagopoluchie-roditeley-autizm-kazahstan research-literacy-contradictions-review-team.jpg kazakhstan-autism-caregiver-mental-health-2018.svg'
+            'rannee-vyyavlenie-autizma-v-kazahstane parent-development-observation-notes.jpg kazakhstan-autism-early-detection-pathway.svg'
+            'regiony-kazahstana-registraciya-autizma research-literacy-statistics-textbook.jpg kazakhstan-regional-autism-registration-2025.svg'
+            'statistika-autizma-kazahstan-2020-2026 research-literacy-graphs-paper-report.jpg autism-kazakhstan-registered-2020-2024.svg'
+            'trudnosti-semey-detey-s-autizmom-v-kazahstane kz-help-007.jpg kazakhstan-asd-family-support-survey-2025.svg'
+          )
+          listing="$(curl -fsSL --retry 3 --max-time 20 "${base}/kz/ru/research/topics/kazakhstan-research/?image_check=${GITHUB_RUN_ID}")"
+          for item in "${records[@]}"; do
+            read -r slug photo chart <<< "${item}"
+            image_path="${base}/images/editorial/photos/${photo}"
+            html="$(curl -fsSL --retry 3 --max-time 20 "${base}/kz/ru/research/${slug}/?image_check=${GITHUB_RUN_ID}")"
+            [[ "${html}" == *"/images/editorial/photos/${photo}"* ]] || { echo "FAIL article cover: ${slug}"; exit 1; }
+            [[ "${html}" == *"/images/research/${chart}"* ]] || { echo "FAIL original figure missing: ${slug}"; exit 1; }
+            [[ "${listing}" == *"/images/editorial/photos/${photo}"* ]] || { echo "FAIL catalogue thumb: ${slug}"; exit 1; }
+            image_status="$(curl -Ls -o /dev/null --max-time 20 -w '%{http_code}' "${image_path}")"
+            [[ "${image_status}" == '200' ]] || { echo "FAIL image HTTP ${image_status}: ${photo}"; exit 1; }
+            echo "PASS regional science cover: ${slug}"
+          done
