@@ -86,9 +86,22 @@ for (const card of cards) {
 console.log('Research visual QA passed: ' + published.length + ' unique documented research covers; ' + featuredPhotos.size + ' research-collection cards in the chronological homepage feed.');
 
 
-// Regression check for three regional science explainers: distinct real stock photographs
-// on listing cards and article heroes, retaining scientific figures in the body.
-const regionalCovers = [{"name":"probely-issledovaniy-autizma-v-centralnoy-azii.md","slug":"probely-issledovaniy-autizma-v-centralnoy-azii","file":"research-kz-evidence-gaps-team-meeting.jpg","old":"central-asia-autism-research-gaps-roadmap.svg","id":"7698802"},{"name":"tehnologii-podderzhki-autizma-v-kazahstane-nauchnye-dannye.md","slug":"tehnologii-podderzhki-autizma-v-kazahstane-nauchnye-dannye","file":"research-kz-technology-child-tablet.jpg","old":"kazakhstan-autism-support-technologies-map.svg","id":"9345618"},{"name":"inklyuzivnoe-obrazovanie-autizm-kazahstan-issledovaniya.md","slug":"inklyuzivnoe-obrazovanie-autizm-kazahstan-issledovaniya","file":"research-kz-inclusive-classroom-teacher-support.jpg","old":"kazakhstan-inclusive-education-participation-path.svg","id":"5212354"}];
+// Regional science regression: 12 unique licensed real stock photographs on
+// topic cards and article heroes; retain academic SVG figures in article bodies.
+const regionalCovers = [
+  {"name":"autizm-v-centralnoy-azii-statistika-pyati-stran.md","slug":"autizm-v-centralnoy-azii-statistika-pyati-stran","file":"research-literacy-critical-reading-highlighter.jpg","old":"central-asia-autism-five-countries-evidence-map.svg","id":"7681073"},
+  {"name":"budushchee-issledovaniy-autizma-v-centralnoy-azii.md","slug":"budushchee-issledovaniy-autizma-v-centralnoy-azii","file":"research-literacy-study-designs-research-team.jpg","old":"central-asia-autism-future-research-roadmap.svg","id":"8770730"},
+  {"name":"inklyuzivnoe-obrazovanie-autizm-kazahstan-issledovaniya.md","slug":"inklyuzivnoe-obrazovanie-autizm-kazahstan-issledovaniya","file":"research-kz-inclusive-classroom-teacher-support.jpg","old":"kazakhstan-inclusive-education-participation-path.svg","id":"5212354"},
+  {"name":"issledovaniya-autizma-kazahstan-centralnaya-aziya.md","slug":"issledovaniya-autizma-kazahstan-centralnaya-aziya","file":"research-literacy-study-process-lab-notes.jpg","old":"central-asia-autism-research-timeline-cover.svg","id":"8770721"},
+  {"name":"pochemu-rastet-chislo-diagnozov-autizma-v-kazahstane.md","slug":"pochemu-rastet-chislo-diagnozov-autizma-v-kazahstane","file":"research-literacy-correlation-chart-review.jpg","old":"kazakhstan-autism-registration-pathway.svg","id":"7947663"},
+  {"name":"probely-issledovaniy-autizma-v-centralnoy-azii.md","slug":"probely-issledovaniy-autizma-v-centralnoy-azii","file":"research-kz-evidence-gaps-team-meeting.jpg","old":"central-asia-autism-research-gaps-roadmap.svg","id":"7698802"},
+  {"name":"psihologicheskoe-blagopoluchie-roditeley-autizm-kazahstan.md","slug":"psihologicheskoe-blagopoluchie-roditeley-autizm-kazahstan","file":"research-literacy-contradictions-review-team.jpg","old":"kazakhstan-autism-caregiver-mental-health-2018.svg","id":"8532854"},
+  {"name":"rannee-vyyavlenie-autizma-v-kazahstane.md","slug":"rannee-vyyavlenie-autizma-v-kazahstane","file":"parent-development-observation-notes.jpg","old":"kazakhstan-autism-early-detection-pathway.svg","id":"7428213"},
+  {"name":"regiony-kazahstana-registraciya-autizma.md","slug":"regiony-kazahstana-registraciya-autizma","file":"research-literacy-statistics-textbook.jpg","old":"kazakhstan-regional-autism-registration-2025.svg","id":"5527516"},
+  {"name":"statistika-autizma-kazahstan-2020-2026.md","slug":"statistika-autizma-kazahstan-2020-2026","file":"research-literacy-graphs-paper-report.jpg","old":"autism-kazakhstan-registered-2020-2024.svg","id":"590022"},
+  {"name":"tehnologii-podderzhki-autizma-v-kazahstane-nauchnye-dannye.md","slug":"tehnologii-podderzhki-autizma-v-kazahstane-nauchnye-dannye","file":"research-kz-technology-child-tablet.jpg","old":"kazakhstan-autism-support-technologies-map.svg","id":"9345618"},
+  {"name":"trudnosti-semey-detey-s-autizmom-v-kazahstane.md","slug":"trudnosti-semey-detey-s-autizmom-v-kazahstane","file":"kz-help-007.jpg","old":"kazakhstan-asd-family-support-survey-2025.svg","id":"5668469"},
+];
 const regionalListing = await readFile(path.join(root, 'dist/kz/ru/research/topics/kazakhstan-research/index.html'), 'utf8');
 for (const cover of regionalCovers) {
   const articleSource = await readFile(path.join(root, 'src/content/pages/kz/ru', cover.name), 'utf8');
@@ -104,5 +117,6 @@ for (const cover of regionalCovers) {
   assert.ok(html.includes(photoUrl), cover.slug + ': hero image does not show photo');
   assert.ok(regionalListing.includes(photoUrl), cover.slug + ': topic card does not show photo');
 }
-assert.equal(new Set(regionalCovers.map(c => c.file)).size, 3, 'Regional science covers must be distinct');
-console.log('Regional Kazakhstan research covers PASS: three unique Pexels photos on article and catalogue pages.');
+assert.equal(regionalCovers.length, 12, 'All regional science articles must be checked');
+assert.equal(new Set(regionalCovers.map(c => c.file)).size, 12, 'Regional science covers must be distinct');
+console.log('Regional Kazakhstan research covers PASS: 12 unique documented Pexels photos on article and catalogue pages, original SVG figures retained in bodies.');
