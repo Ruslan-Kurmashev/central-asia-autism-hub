@@ -21,7 +21,7 @@ disclaimerType: medical
 conflictOfInterest: "No conflict of interest declared."
 publishedAt: 2026-10-23
 originalPublishedAt: 2026-10-12
-updatedAt: 2026-10-23
+updatedAt: 2026-11-02
 reviewDueAt: 2027-04-12
 versionNote: "AI-assisted translation from the Russian original. No independent professional language review has been conducted."
 draft: false
@@ -32,6 +32,12 @@ keyPoints:
   - "Sensory differences should be considered alongside health, communication and the situation in which they occur."
 evidenceLimitations: "Sensory experiences are individual and may change from one situation to another. These characteristics also occur in people who are not autistic and cannot establish a diagnosis. Understanding the cause of a specific behaviour requires considering the context and possible medical conditions."
 sources:
+  - title: "Toward an Interdisciplinary Understanding of Sensory Dysfunction in Autism Spectrum Disorder: An Integration of the Neural and Symptom Literatures"
+    url: "https://doi.org/10.3389/fnins.2016.00268"
+    organisation: "Frontiers in Neuroscience"
+    publicationYear: 2016
+    note: "Original Figure 1 discusses complementary levels of analysis of auditory hyper-responsiveness. It does not demonstrate a single causal mechanism for all autistic individuals."
+    accessedAt: 2026-11-02
   - title: "Autism: questions and answers"
     url: "https://www.who.int/news-room/questions-and-answers/item/autism-spectrum-disorders-%28asd%29"
     organisation: "World Health Organization"
@@ -61,6 +67,10 @@ sources:
 Our brains receive and process information from our senses. We hear sounds, see light, and experience smells, tastes, touch, body position and movement. Autistic people may process this information differently. For example, a sound that one person barely notices may be highly distracting or uncomfortable for someone else (WHO, 2025, National Autistic Society).
 
 These differences do not mean a sensation is "imaginary" or that a child is deliberately exaggerating their response. At the same time, there is no single sensory profile that applies to every autistic person.
+
+![Published conceptual map of sensory processing in autism using auditory hyper-responsiveness, with three columns for levels of analysis, research methods and possible findings. Original labels are in English.](/central-asia-autism-hub/images/research/verified/schauder-bennetto-2016-sensory-processing-figure-1.webp)
+
+*Figure 1. Conceptual map of sensory processing in autism, using auditory hyper-responsiveness as an example. The columns show levels of analysis, corresponding research methods, and possible findings. This is a conceptual model, not a diagnostic test or a proven universal sequence. In reality, multiple pathways and bidirectional relationships may be involved. [Schauder and Bennetto, 2016, original Figure 1](https://www.frontiersin.org/journals/neuroscience/articles/10.3389/fnins.2016.00268/full), [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/). Reproduced unchanged.*
 
 ## Heightened and reduced sensitivity
 
