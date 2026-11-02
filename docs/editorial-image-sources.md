@@ -1198,3 +1198,14 @@ The other three regional science articles already had distinct real Pexels cover
 The local photographs are pulled into `public/images/editorial/photos/` by `scripts/sync-editorial-photos.mjs` during the existing build. Their original photo IDs are already in that manifest, so no new dependency, external hotlink or image acquisition process is introduced.
 
 The original SVG figures remain the scientifically informative visuals in the articles. They represent either accurately attributed summaries or explicitly labelled editorial proposals, **not** claims that the illustrations were copied from original publications. Reusing actual research figures later would require a separate publication-specific licence check, accurate scientific context, and figure-level attribution. Article publication dates and body evidence were not changed.
+
+
+## Schauder and Bennetto (2016): shared sensory processing Figure 1 (2026-11-02)
+
+- Site asset: `public/images/research/verified/schauder-bennetto-2016-sensory-processing-figure-1.webp` (downloaded as an unchanged original image by `scripts/sync-sensory-scientific-figure.mjs` during build, not hotlinked).
+- Exact publisher asset: https://www.frontiersin.org/files/Articles/195879/xml-images/fnins-10-00268-g0001.webp
+- Original scientific publication: [Schauder KB, Bennetto L (2016), Frontiers in Neuroscience, 10:268, Figure 1](https://www.frontiersin.org/journals/neuroscience/articles/10.3389/fnins.2016.00268/full), DOI https://doi.org/10.3389/fnins.2016.00268 .
+- Rights: [Creative Commons Attribution 4.0 International](https://creativecommons.org/licenses/by/4.0/) (copyright Schauder and Bennetto, original article and figure). Figure reproduced unchanged, retaining English labels. Source and license appear in captions.
+- Editorial use: one scientific conceptual figure in the RU research article `autism-sensory-sound-light-touch.md`, and related but distinct KK/EN parent articles `autizm-kezindegi-sensorlyk-erekshelikter.md` and `sensory-differences-in-autism.md`. These KK/EN articles have a different translationKey and are **not** translations of the longer RU research article. Do not mislabel them.
+- Scientific limitation: the original Figure 1 models auditory hyper-responsiveness at different levels of investigation. It does not represent a single empirically validated or strictly linear mechanism of all sensory experiences, and must not be presented as a diagnostic test or definitive mechanism of autism.
+- Existing educational diagrams other than the replaced RU `sensory-signal-processing-path.svg` remain untouched.
