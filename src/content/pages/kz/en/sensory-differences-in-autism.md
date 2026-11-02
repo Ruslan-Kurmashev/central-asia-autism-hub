@@ -68,9 +68,14 @@ Our brains receive and process information from our senses. We hear sounds, see 
 
 These differences do not mean a sensation is "imaginary" or that a child is deliberately exaggerating their response. At the same time, there is no single sensory profile that applies to every autistic person.
 
-![Published conceptual map of sensory processing in autism using auditory hyper-responsiveness, with three columns for levels of analysis, research methods and possible findings. Original labels are in English.](/central-asia-autism-hub/images/research/verified/schauder-bennetto-2016-sensory-processing-figure-1.webp)
+This figure distinguishes several levels at which the same sensory response can be studied. Parent reports, observed behaviour, heart-rate measurements, perception tests and MRI answer different questions. None of these methods alone establishes why a child experiences a particular sensation.
 
-*Figure 1. Conceptual map of sensory processing in autism, using auditory hyper-responsiveness as an example. The columns show levels of analysis, corresponding research methods, and possible findings. This is a conceptual model, not a diagnostic test or a proven universal sequence. In reality, multiple pathways and bidirectional relationships may be involved. [Schauder and Bennetto, 2016, original Figure 1](https://www.frontiersin.org/journals/neuroscience/articles/10.3389/fnins.2016.00268/full), [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/). Reproduced unchanged.*
+<picture>
+  <source media="(max-width: 650px)" srcset="/central-asia-autism-hub/images/research/verified/schauder-bennetto-2016-figure-1-en-mobile.svg">
+  <img src="/central-asia-autism-hub/images/research/verified/schauder-bennetto-2016-figure-1-en-desktop.svg" alt="Academic chart of six levels of sensory-response analysis, from clinical symptoms to brain structure, each compared with example research methods and possible findings for auditory hyper-responsiveness." loading="lazy" decoding="async">
+</picture>
+
+*Figure 1. Six levels for studying sensory responses, from everyday symptoms to brain structure. Each level is paired with a method and an example possible finding. Translated and re-typeset as a vector graphic based on Figure 1 from Schauder and Bennetto (2016). This is neither a validated causal chain nor a diagnostic test. [Source: Schauder and Bennetto, 2016, Figure 1](https://www.frontiersin.org/journals/neuroscience/articles/10.3389/fnins.2016.00268/full), [CC BY 4.0 license](https://creativecommons.org/licenses/by/4.0/). [ Open at full size ](/central-asia-autism-hub/images/research/verified/schauder-bennetto-2016-figure-1-en-desktop.svg), [ Mobile version ](/central-asia-autism-hub/images/research/verified/schauder-bennetto-2016-figure-1-en-mobile.svg).*
 
 ## Heightened and reduced sensitivity
 
