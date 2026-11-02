@@ -1211,3 +1211,19 @@ The original SVG figures remain the scientifically informative visuals in the ar
 - Editorial use: one scientific conceptual figure in the RU research article `autism-sensory-sound-light-touch.md`, and related but distinct KK/EN parent articles `autizm-kezindegi-sensorlyk-erekshelikter.md` and `sensory-differences-in-autism.md`. These KK/EN articles have a different translationKey and are **not** translations of the longer RU research article. Do not mislabel them.
 - Scientific limitation: the original Figure 1 models auditory hyper-responsiveness at different levels of investigation. It does not represent a single empirically validated or strictly linear mechanism of all sensory experiences, and must not be presented as a diagnostic test or definitive mechanism of autism.
 - Existing educational diagrams other than the replaced RU `sensory-signal-processing-path.svg` remain untouched.
+
+
+### High-resolution localized adaptations of Figure 1 (2 November 2026)
+
+The former shared English-only publisher WebP is superseded by six self-hosted, translated SVGs. Three source-aligned versions are presented through responsive desktop and mobile layouts:
+
+- `public/images/research/verified/schauder-bennetto-2016-figure-1-ru-desktop.svg`
+- `public/images/research/verified/schauder-bennetto-2016-figure-1-ru-mobile.svg`
+- `public/images/research/verified/schauder-bennetto-2016-figure-1-kk-desktop.svg`
+- `public/images/research/verified/schauder-bennetto-2016-figure-1-kk-mobile.svg`
+- `public/images/research/verified/schauder-bennetto-2016-figure-1-en-desktop.svg`
+- `public/images/research/verified/schauder-bennetto-2016-figure-1-en-mobile.svg`
+
+Source: Schauder KB, Bennetto L (2016), *Frontiers in Neuroscience* 10:268, [Figure 1](https://www.frontiersin.org/journals/neuroscience/articles/10.3389/fnins.2016.00268/full), DOI:10.3389/fnins.2016.00268. Original copyright Schauder and Bennetto, [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/). **Modification disclosed:** educational language translation, new vector typography, responsive reflow and visual styling by AutismHub. These are NOT the unmodified publisher's graphics. Reviewed against the original Figure 1 in the publisher PDF (page 5): preserves all six levels (clinical symptom, observable reaction, physiological response, perception, brain functional response, brain structure), corresponding study methods and illustrative findings for auditory hyper-responsiveness. These are possible examples, NOT actual diagnostic observations, universal autism mechanisms or demonstrated causal effects. No numerical measurements were invented. Every version includes embedded locale text, a `title`, `desc` and external attribution in its accompanying article. The Kazakh text has not undergone documented independent language review. Article published dates and translation review metadata are unchanged.
+
+The old publisher bitmap downloader remains in the repository for historical reference but is no longer a build dependency. The original SVG `sensory-signal-processing-path.svg` is not reused or modified.
