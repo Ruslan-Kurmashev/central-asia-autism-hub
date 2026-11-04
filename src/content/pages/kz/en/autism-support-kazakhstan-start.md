@@ -20,10 +20,10 @@ editor: Ruslan Kurmashev
 riskLevel: moderate
 disclaimerType: informational
 conflictOfInterest: "No conflict of interest declared."
-versionNote: "10 October 2026: English translation based on the Russian article updated on 9 October 2026. It retains the regulatory changes to PMPK services dated 26 June 2026 and MSE rules effective from 25 August 2026."
+versionNote: "4 November 2026: updated to reflect the Russian source's clarification of educational support without an automatic PMPK prerequisite, practical PMPK application requirements, and the different legal grounds for social services. AI-assisted semantic comparison, no independent native-language or legal review claimed."
 publishedAt: 2026-10-10
 originalPublishedAt: 2026-10-09
-updatedAt: 2026-10-27
+updatedAt: 2026-11-04
 reviewDueAt: 2026-12-01
 draft: false
 keyPoints:
@@ -31,9 +31,11 @@ keyPoints:
   - "For developmental concerns, families can begin with primary healthcare. Kazakhstan's paediatric standard provides for child development and early intervention centres."
   - "A medical autism diagnosis is made through healthcare. PMPK assesses special educational needs and does not replace medical diagnosis."
   - "The state PMPK service is free and may be requested in person or through the government portal. The rules specify a wait of up to 30 calendar days for assessment."
+  - "Psychological and educational support within a school or preschool does not always require a prior PMPK conclusion. Separately regulated specialist support has its own eligibility rules."
   - "Medical and social expert assessment (MSE) generally follows a referral from a medical organisation's medical advisory commission (VKK). Disability is not established automatically on the basis of an autism diagnosis."
+  - "Special social services may be available on several legally defined grounds of assessed need, not only when disability status has been established."
   - "A licence, qualification or course certificate does not by itself prove that a particular autism intervention is safe or effective."
-evidenceLimitations: "This article provides a general overview of Kazakhstan's system as of 9 October 2026. It is not individual medical, educational or legal advice. Access to specialists, centres and services varies by region. Laws, public services and administrative requirements may change, check the current official source before applying."
+evidenceLimitations: "Key official regulations were rechecked against the Russian source on 4 November 2026. This remains a general information guide, not an independent legal or clinical review or individual advice. Availability and application procedures vary by region. Check the relevant current official service requirements before applying."
 sources:
   - title: "Standard for the organisation of paediatric care in the Republic of Kazakhstan"
     url: "https://adilet.zan.kz/rus/docs/V2200027182"
@@ -58,6 +60,12 @@ sources:
     organisation: "gov.kz / Ministry of Education of Kazakhstan"
     note: "Official government service page listing application channels, timeframes and document requirements."
     accessedAt: 2026-10-09
+  - title: "Rules for psychological and pedagogical support services within educational organisations"
+    url: "https://adilet.zan.kz/rus/docs/V2500036047"
+    organisation: "Adilet legal information system / Ministry of Education of Kazakhstan"
+    publicationYear: 2025
+    note: "Order No. 92, amended by Order No. 144-NQ of 29 May 2026. Support within a school or preschool is distinct from regulated special support requiring a PMPK conclusion."
+    accessedAt: 2026-11-04
   - title: "Standard for specialised psychological and educational support for children with disabilities"
     url: "https://adilet.zan.kz/rus/docs/V2500036137"
     organisation: "Adilet legal information system / Ministry of Education of Kazakhstan"
@@ -91,7 +99,8 @@ You do not need to navigate all these systems at once. **They serve different pu
 | Questions about development, speech, behaviour, movement, sleep or other health concerns | The child's registered primary healthcare provider | Medical assessment, developmental monitoring, early intervention and referral when indicated |
 | A medical assessment for autism spectrum disorder (ASD) | The healthcare system and, when appropriate, mental health services | Clinical assessment and medical diagnosis |
 | Identification of special educational needs | PMPK | Psychological, medical and pedagogical assessment, with recommendations for educational support |
-| Specialised psychological and educational support | PMPK, followed by an appropriate education or specialist organisation | Multidisciplinary assessment, an individual development programme, developmental sessions and consultation |
+| Adjustments and day-to-day support at a preschool or school | A teacher or the institution's psychological and pedagogical support service | Assessment of difficulties and available support measures, with PMPK involvement where needed |
+| Specialised psychological and educational support under the relevant standard | PMPK, followed by an appropriate specialist organisation | Multidisciplinary assessment, an individual development programme, developmental sessions and consultation based on a PMPK conclusion |
 | Consideration of disability status | Healthcare provider / VKK, followed by MSE | Assessment of disability criteria and possible social protection measures |
 | Social services or other support measures | Social protection services and relevant government portals | Eligibility-based services, benefits and provisions in an individual programme |
 | A private specialist or centre | Check the precise service being offered | Licensing if required, qualifications, contract terms, costs, safety and evidence |
@@ -145,6 +154,8 @@ This is a different pathway involving **PMPK**, Kazakhstan's *psychological, med
 
 PMPK carries out psychological, medical and pedagogical assessments and offers guidance related to special educational needs and support. **It should not be treated as an alternative to a medical autism diagnosis.**
 
+If a child already attends preschool or school, families can first discuss difficulties with the teacher and the institution's psychological and pedagogical support service (SPPS). Under [Order No. 92](https://adilet.zan.kz/rus/docs/V2500036047), this service assesses educational needs and helps arrange appropriate conditions, involving PMPK where indicated. **A PMPK conclusion is not a universal prerequisite for every educational adjustment.** Separately regulated specialist support has its own eligibility conditions, including a PMPK conclusion.
+
 ### What changed in 2026?
 
 Rules for the PMPK state service were amended by Order No. **180-NҚ dated 26 June 2026**. The changes took effect in July 2026.
@@ -162,6 +173,16 @@ Under the applicable rules:
 **Important:** the 30 calendar days refer to waiting for a PMPK assessment, not to the start of sessions or every other form of support. Correction services, rehabilitation centres and other providers have separate access requirements and timelines.
 
 The rules also prohibit asking applicants to supply information that the authority can retrieve through government digital systems.
+
+### How to apply and obtain a PMPK decision
+
+Consult the [official service page on gov.kz](https://www.gov.kz/services/4292?lang=ru), selecting the **PMPK assessment and consultation** service. The page combines different services: up to 30 calendar days is the waiting period for PMPK assessment. The separate 90-365-day period applies to another service and is not the time taken to issue the PMPK conclusion.
+
+1. Ask which PMPK accepts applications in your area, or use the government portal to submit an online request. The 2026 rules also mention submission from a mobile device registered with the portal. Confirm the currently supported channel on the official service page.
+2. For identification, prepare the child's birth certificate or the applicable digital identity document. Proof of disability and a medical advisory commission (VKK) statement about education at home apply **only when available and relevant**. For an in-depth assessment, PMPK may additionally request a medical record, a report from the child's educational institution, or examples of the child's work. These are not universally required documents for every family.
+3. Keep the appointment confirmation and the conclusion issued. If the application is refused, request the reason and use the official service page to check the applicable complaints procedure.
+
+This process is for a PMPK assessment. Access to specialist sessions, educational adjustments and other services follows separate eligibility conditions and timelines.
 
 Check the current service information on gov.kz before applying. For the distinction between a psychiatrist, PMPK, VKK and MSE, see the [Russian-language explanation of their respective roles](/central-asia-autism-hub/kz/ru/parents/psihiatr-pmpk-vkk-mse-kazakhstan/).
 
@@ -204,7 +225,7 @@ MSE evaluates functioning and the need for support, not only the name of a diagn
 
 ## 6. If you need social services or other support
 
-After the relevant status and eligibility have been established, a family may qualify for measures under Kazakhstan's Social Code.
+Eligibility for social support depends on the **particular measure**, not simply on an autism diagnosis or disability status. Some benefits and services specifically intended for people with disabilities require that status and other statutory conditions. However, Articles 133 and 140 of [Kazakhstan's Social Code](https://adilet.zan.kz/rus/docs/K2300000224) also provide for assessment of needs for special social services on grounds other than established disability. Families can ask about social service needs before a decision by MSE, without assuming entitlement to a benefit.
 
 The Social Code covers, among other matters:
 
@@ -269,6 +290,8 @@ Requirements vary by organisation, but it is useful to keep together:
 - relevant preschool or school documentation
 - a current medication list and significant medical information
 - contact information for professionals already supporting the child.
+
+This is a practical list for different appointments, **not a list of documents that every applicant must bring to PMPK**.
 
 Do not arrange extensive testing "just in case". PMPK rules specifically restrict the repeated collection of data available to authorities through government digital systems.
 
