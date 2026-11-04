@@ -1252,3 +1252,9 @@ Protocol description checked against the publisher's informational page [Picture
 - Safety: this is not a diagnostic test or classification of people; one person can experience all three patterns depending on the sense, specific stimulus, context and fatigue. A late response to a name is not diagnostic of any condition and may have multiple explanations.
 - Accessibility: HTML table headers, real selectable text, and a vertically grouped equivalent for narrow viewports / zoom, without midword truncation or horizontal scrolling.
 - License: original editorial comparison text and website-native layout by AutismHub. There is no externally sourced figure requiring a separate stock/research license.
+
+## PECS exchange illustration, owner-approved 2026-11-04
+
+| Local file | Author/source | Type | Editorial meaning |
+| --- | --- | --- | --- |
+| `public/images/editorial/pecs/pecs-example-exchange-user-approved.avif` | User-supplied artwork approved in this conversation, 2026-11-04 | Optimized AVIF rendering (320 x 731) of the supplied 897 x 2048 PNG | Three scenes: the child shows a picture card with a ball, passes the card to the mother, and the mother responds with the ball. Illustrative example of a communication exchange, not an official PECS protocol diagram. No third-party stock licence is claimed. |
