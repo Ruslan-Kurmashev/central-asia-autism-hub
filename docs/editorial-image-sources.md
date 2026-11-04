@@ -1257,4 +1257,4 @@ Protocol description checked against the publisher's informational page [Picture
 
 | Local file | Author/source | Type | Editorial meaning |
 | --- | --- | --- | --- |
-| `public/images/editorial/pecs/pecs-example-exchange-user-approved.avif` | User-supplied artwork approved in this conversation, 2026-11-04 | Optimized AVIF rendering (320 x 731) of the supplied 897 x 2048 PNG | Three scenes: the child shows a picture card with a ball, passes the card to the mother, and the mother responds with the ball. Illustrative example of a communication exchange, not an official PECS protocol diagram. No third-party stock licence is claimed. |
+| `public/images/editorial/pecs/pecs-example-exchange-original.png` | User-supplied artwork approved in this conversation, 2026-11-04 | Original PNG, 897 x 2048, uncompressed and unresized | Three scenes: the child shows a picture card with a ball, passes the card to the mother, and the mother responds with the ball. Illustrative example of a communication exchange, not an official PECS protocol diagram. No third-party stock licence is claimed. |
