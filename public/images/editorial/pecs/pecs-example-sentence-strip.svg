@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="510" viewBox="0 0 1000 510" role="img" aria-labelledby="title desc">
+<title id="title">Пример полоски предложения</title>
+<desc id="desc">Иллюстрация двух графических элементов: Я хочу и МЯЧ. Не официальный бланк PECS.</desc>
+<rect width="1000" height="510" fill="#f4f9fa"/>
+<text x="490" y="65" font-family="Arial, 'Noto Sans', sans-serif" text-anchor="middle" font-size="41" font-weight="700" fill="#174b69">ПРИМЕР ФРАЗЫ</text>
+<rect x="46" y="112" width="898" height="280" rx="35" fill="#dfecf4" stroke="#8bb5cb" stroke-width="6"/>
+<g transform="translate(92 140)"><rect width="335" height="215" rx="22" fill="#fff" stroke="#bed5e4" stroke-width="4"/><path d="M125 45 H210 Q242 45 242 77 V104 Q242 129 215 129 H175 L145 148 L149 129 H125 Q96 129 96 104 V76 Q96 45 125 45" fill="#b4d8e9"/><path d="M154 75 q15 -16 30 0 q14 -16 30 0 q0 16 -30 39 q-30 -23 -30 -39" fill="#ec9089"/><text x="168" y="190" text-anchor="middle" font-family="Arial, 'Noto Sans', sans-serif" font-size="37" font-weight="700" fill="#174b69">Я ХОЧУ</text></g>
+<text x="485" y="272" font-family="Arial, sans-serif" font-size="65" font-weight="700" fill="#4c839a" text-anchor="middle">+</text>
+<g transform="translate(549 140)"><rect width="335" height="215" rx="22" fill="#fff" stroke="#bed5e4" stroke-width="4"/><g transform="translate(-60 -15) scale(.85)"><g stroke-linecap="round" stroke-linejoin="round"><circle cx="225" cy="135" r="76" fill="#f5bd61" stroke="#bd7c45" stroke-width="8"/><path d="M154 110 Q225 72 297 111 M157 160 Q225 202 294 164" fill="none" stroke="#fff1d3" stroke-width="17"/><path d="M220 60 Q195 130 224 209" fill="none" stroke="#e98c67" stroke-width="14"/></g></g><text x="168" y="190" text-anchor="middle" font-family="Arial, 'Noto Sans', sans-serif" font-size="37" font-weight="700" fill="#174b69">МЯЧ</text></g>
+<text x="500" y="452" text-anchor="middle" font-family="Arial, 'Noto Sans', sans-serif" font-size="25" fill="#456b80">Смысл: «Я хочу мяч»</text>
+</svg>
