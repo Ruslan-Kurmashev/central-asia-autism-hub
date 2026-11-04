@@ -21,19 +21,20 @@ disclaimerType: medical
 conflictOfInterest: "No conflict of interest declared."
 publishedAt: 2026-10-10
 originalPublishedAt: 2026-10-09
-updatedAt: 2026-10-27
+updatedAt: 2026-11-04
 reviewDueAt: 2026-12-01
 draft: false
 keyPoints:
   - "Questions about development can be discussed in primary healthcare. Kazakhstan's paediatric care standard provides for development and early intervention centres and psychophysical screening."
+  - "When screening identifies specified developmental risk signs, primary healthcare may arrange a multidisciplinary team assessment and an individual early intervention programme."
   - "PMPK focuses on educational needs and psychological and educational support, it does not replace medical assessment."
   - "Specific examples of what your child does, has difficulty doing or has stopped doing help professionals understand your concerns."
   - "You can discuss support for everyday difficulties even before a final diagnosis is established, although particular state services have their own eligibility rules."
   - "A sudden deterioration or new medical symptoms require an appropriate medical response, not waiting for a routine PMPK appointment."
-evidenceLimitations: "The availability of services, professionals and referral arrangements differs by region and organisation. This guide cannot determine the appropriate clinical pathway for an individual child. Check current referral rules and document requirements with the relevant official service before applying."
+evidenceLimitations: "The screening, multidisciplinary team, PMPK and school support provisions were rechecked against official Kazakhstan sources on 4 November 2026. Access and referral procedures vary by region. This guide cannot determine an individual clinical pathway, replace an in-person assessment or guarantee a particular government service. The updated English wording has not received independent professional language or legal review."
 sources:
   - title: "Rules on screening, including early childhood developmental screening"
-    url: "https://old.adilet.zan.kz/rus/docs/V1000006490"
+    url: "https://adilet.zan.kz/rus/docs/V1000006490"
     organisation: "ИПС «Әділет» / Министерство здравоохранения Республики Казахстан"
     publicationYear: 2010
     note: "Sections 80-89 as amended by Ministry of Health Order No. 82 dated 21 August 2025, developmental screening from birth to age six."
@@ -50,6 +51,12 @@ sources:
     publicationYear: 2020
     note: "PMPK state service rules with amendments under Order No. 180-NQ of 26 June 2026."
     accessedAt: 2026-10-09
+  - title: "Rules governing psychological and pedagogical support services within educational organisations"
+    url: "https://adilet.zan.kz/rus/docs/V2500036047"
+    organisation: "Adilet legal information system / Ministry of Education of Kazakhstan"
+    publicationYear: 2025
+    note: "Order No. 92 as amended on 29 May 2026. Initial institution-based support and conditions for PMPK referral."
+    accessedAt: 2026-11-04
   - title: "Standard for medical and social care in mental health"
     url: "https://adilet.zan.kz/rus/docs/V2000021712"
     organisation: "Adilet legal information system / Ministry of Health of Kazakhstan"
@@ -57,7 +64,7 @@ sources:
     note: "Referral from primary healthcare to specialist mental health services when indicated."
     accessedAt: 2026-10-09
   - title: "Emergency numbers 112 and 103"
-    url: "https://egov.kz/cms/en/articles/emergency_number_112"
+    url: "https://www.gov.kz/situations/55/199?lang=ru"
     organisation: "eGov.kz"
     note: "Official emergency contact numbers: 112 for emergency services and 103 for ambulance services."
     accessedAt: 2026-10-09
@@ -82,7 +89,8 @@ In Kazakhstan, medical developmental assessment and PMPK assessment have **diffe
 | Speech, communication, movement or general development | The primary healthcare organisation where your child is registered |
 | A further medical assessment | Primary healthcare, with referral when clinically indicated |
 | Possible autism and a medical diagnosis | Healthcare, including specialist services where appropriate |
-| Adjustments for learning and psychological and educational support | PMPK |
+| Everyday adjustments in preschool or school | The teacher or the institution's psychological and pedagogical support service |
+| Formal assessment of special educational needs through PMPK | PMPK |
 | An acute condition posing a threat to life or health | Emergency medical services: **103** or **112** |
 
 ## Step 1. Record specific observations
@@ -106,7 +114,13 @@ Kazakhstan's current paediatric care standard provides for child development and
 
 This makes the child's polyclinic a reasonable first contact for questions about health, development and medical referrals.
 
-Under the [Kazakh screening rules amended by Order No. 82 of 21 August 2025](https://old.adilet.zan.kz/rus/docs/V1000006490), developmental screening is provided for children **from birth to six years of age**. The process includes information from parents and a health professional's age-appropriate developmental checks. Screening identifies possible developmental concerns, it does not itself diagnose autism.
+Under the [Kazakhstan's screening rules amended by Order No. 82 of 21 August 2025](https://adilet.zan.kz/rus/docs/V1000006490), developmental screening is provided for children **from birth to six years of age**. The process includes a questionnaire for parents or other legal representatives and age-specific developmental observations by a child development room nurse. Screening identifies possible developmental concerns, it does not itself diagnose autism.
+
+### What happens if screening suggests a developmental concern?
+
+[Sections 82, 85 and 86 of the screening rules](https://adilet.zan.kz/rus/docs/V1000006490) set out further assessment and support. When the specified combination of developmental risk signs is identified, a multidisciplinary team (MDT) consultation is carried out and an individual early intervention programme is developed. The [paediatric care standard](https://adilet.zan.kz/rus/docs/V2200027182) describes the team's role and monitoring of that programme.
+
+Ask the clinician **what was observed, whether an MDT consultation is appropriate, how to access it, and how the family will receive the next steps**. Not meeting a specific screening referral criterion does not mean future developmental concerns should be ignored. This age-specific screening programme does not prevent parents of older children from discussing developmental concerns with a clinician.
 
 A practical question to ask is:
 
@@ -118,11 +132,11 @@ The staff available and the process of accessing them can differ across regions.
 
 ## Step 3. Consider educational assessment separately
 
-If your question concerns special educational conditions, psychological and educational support or a suitable learning pathway, an assessment by **PMPK** may be relevant.
+If your child attends preschool or school, start by discussing difficulties with the teacher and the institution's psychological and pedagogical support service. Under [Order No. 92](https://adilet.zan.kz/rus/docs/V2500036047), educational organisations can assess needs and provide support within their remit. **A PMPK conclusion is not a universal prerequisite for every educational adjustment.** PMPK consultation may be appropriate when specialised conditions are needed or difficulties persist. Separately regulated specialist services have their own eligibility requirements.
 
 PMPK is Kazakhstan's psychological, medical and pedagogical consultation service. PMPK and medical assessment **are not interchangeable**. A PMPK referral or conclusion should not be understood as proof of a particular medical diagnosis.
 
-Use the current PMPK state service rules, including the 2026 amendments. Older leaflets may contain outdated lists of required documents or service timeframes.
+Use the [current PMPK state service rules](https://adilet.zan.kz/rus/docs/V2000020744), including the 2026 amendments, and the [official service page](https://www.gov.kz/services/4292?lang=ru). Older leaflets may contain outdated document requirements or timeframes. The [main Kazakhstan help guide](/central-asia-autism-hub/kz/en/help-kazakhstan/autism-support-kazakhstan-start/) explains the application process.
 
 ## If a diagnosis has not yet been established
 
@@ -138,7 +152,7 @@ In Kazakhstan, call **103** for an ambulance or **112** for emergency services.
 
 ## What to bring to the first appointment
 
-Bring a short timeline of your observations, any available medical reports, previous test results and a list of medicines your child takes, if applicable.
+Bring a short timeline of observations, existing medical reports, earlier test results and a list of medicines your child takes, if applicable. You may also write down three questions: **what should be assessed, whether referral is indicated, and where the family will receive the findings and follow-up plan**. These are conversation prompts, not a mandatory extra document set.
 
 There is no need to pay for a broad set of tests before a clinician has identified a specific reason for them.
 
