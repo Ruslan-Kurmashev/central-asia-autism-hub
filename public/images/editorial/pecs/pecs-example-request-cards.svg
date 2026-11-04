@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="1235" viewBox="0 0 1000 1235" role="img" aria-labelledby="title desc">
+<title id="title">ПРИМЕРЫ КАРТОЧЕК</title>
+<desc id="desc">Для просьб и повседневного выбора</desc>
+<rect width="1000" height="1235" fill="#f4f9fa"/>
+<text x="500" y="63" text-anchor="middle" font-family="Arial, 'Noto Sans', sans-serif" font-size="42" font-weight="700" fill="#174b69">ПРИМЕРЫ КАРТОЧЕК</text><text x="500" y="103" text-anchor="middle" font-family="Arial, 'Noto Sans', sans-serif" font-size="25" fill="#456b80">Для просьб и повседневного выбора</text><g transform="translate(34 124)">
+<rect x="0" y="0" width="455" height="342" rx="28" fill="#ffffff" stroke="#cbdfe9" stroke-width="4"/>
+<g stroke-linecap="round" stroke-linejoin="round"><path d="M174 62 L280 62 L266 203 Q225 221 186 203 Z" fill="#d4eefa" stroke="#367493" stroke-width="8"/><path d="M185 135 Q224 122 271 137 L264 200 Q225 214 190 201 Z" fill="#65b6d8" opacity=".85"/><path d="M200 78 L250 78" stroke="#fff" stroke-width="7"/></g>
+<text x="225" y="292" text-anchor="middle" font-family="Arial, 'Noto Sans', sans-serif" font-size="39" font-weight="700" fill="#174b69">ВОДА</text>
+</g>
+<g transform="translate(509 124)">
+<rect x="0" y="0" width="455" height="342" rx="28" fill="#ffffff" stroke="#cbdfe9" stroke-width="4"/>
+<g stroke-linecap="round" stroke-linejoin="round"><path d="M226 82 C195 57 155 81 163 127 C168 174 196 207 220 204 C232 199 241 199 254 203 C282 206 310 168 303 126 C295 76 254 57 226 82 Z" fill="#e96e66" stroke="#ad464c" stroke-width="7"/><path d="M225 82 Q224 62 232 44" fill="none" stroke="#6a583d" stroke-width="8"/><path d="M232 64 Q258 30 281 45 Q274 71 241 73 Z" fill="#66ad84"/><ellipse cx="191" cy="119" rx="10" ry="25" fill="#fff" opacity=".34" transform="rotate(22 191 119)"/></g>
+<text x="225" y="292" text-anchor="middle" font-family="Arial, 'Noto Sans', sans-serif" font-size="39" font-weight="700" fill="#174b69">ЯБЛОКО</text>
+</g>
+<g transform="translate(34 489)">
+<rect x="0" y="0" width="455" height="342" rx="28" fill="#ffffff" stroke="#cbdfe9" stroke-width="4"/>
+<g stroke-linecap="round" stroke-linejoin="round"><circle cx="225" cy="135" r="76" fill="#f5bd61" stroke="#bd7c45" stroke-width="8"/><path d="M154 110 Q225 72 297 111 M157 160 Q225 202 294 164" fill="none" stroke="#fff1d3" stroke-width="17"/><path d="M220 60 Q195 130 224 209" fill="none" stroke="#e98c67" stroke-width="14"/></g>
+<text x="225" y="292" text-anchor="middle" font-family="Arial, 'Noto Sans', sans-serif" font-size="39" font-weight="700" fill="#174b69">МЯЧ</text>
+</g>
+<g transform="translate(509 489)">
+<rect x="0" y="0" width="455" height="342" rx="28" fill="#ffffff" stroke="#cbdfe9" stroke-width="4"/>
+<g stroke-linecap="round" stroke-linejoin="round"><path d="M225 79 Q180 60 145 76 L145 199 Q189 190 225 215 Z" fill="#b7ddeb" stroke="#316b8d" stroke-width="7"/><path d="M225 79 Q267 59 307 75 L307 198 Q261 192 225 215 Z" fill="#f5d1a8" stroke="#316b8d" stroke-width="7"/><path d="M225 86 L225 212 M162 115 Q187 109 210 118 M162 146 Q190 139 209 149 M244 118 Q273 108 289 118 M242 149 Q269 141 288 149" fill="none" stroke="#5a89a7" stroke-width="6"/></g>
+<text x="225" y="292" text-anchor="middle" font-family="Arial, 'Noto Sans', sans-serif" font-size="39" font-weight="700" fill="#174b69">КНИГА</text>
+</g>
+<g transform="translate(34 854)">
+<rect x="0" y="0" width="455" height="342" rx="28" fill="#ffffff" stroke="#cbdfe9" stroke-width="4"/>
+<g stroke-linecap="round" stroke-linejoin="round"><rect x="215" y="131" width="13" height="83" fill="#816948"/><circle cx="218" cy="106" r="58" fill="#7ec3a0" stroke="#448c70" stroke-width="6"/><path d="M135 216 Q215 188 312 216" fill="none" stroke="#c4a781" stroke-width="14"/><circle cx="137" cy="84" r="24" fill="#f6c85e"/><path d="M164 207 L178 196 L200 199 L208 210 L195 217 L163 216 Z" fill="#547caa"/></g>
+<text x="225" y="292" text-anchor="middle" font-family="Arial, 'Noto Sans', sans-serif" font-size="39" font-weight="700" fill="#174b69">ГУЛЯТЬ</text>
+</g>
+<g transform="translate(509 854)">
+<rect x="0" y="0" width="455" height="342" rx="28" fill="#ffffff" stroke="#cbdfe9" stroke-width="4"/>
+<g stroke-linecap="round" stroke-linejoin="round"><rect x="164" y="140" width="117" height="51" rx="13" fill="#e6b46e" stroke="#bd8149" stroke-width="6"/><circle cx="183" cy="132" r="29" fill="#e99a67" stroke="#b56b46" stroke-width="5"/><circle cx="252" cy="116" r="29" fill="#e99a67" stroke="#b56b46" stroke-width="5"/><path d="M305 115 v66 M271 148 h66" stroke="#4f90a8" stroke-width="12"/></g>
+<text x="225" y="292" text-anchor="middle" font-family="Arial, 'Noto Sans', sans-serif" font-size="39" font-weight="700" fill="#174b69">ЕЩЁ</text>
+</g>
+</svg>
