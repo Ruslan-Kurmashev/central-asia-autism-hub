@@ -2013,3 +2013,122 @@
     margin-bottom: 0.3rem;
   }
 }
+
+/* Research sensory response comparison: semantic academic table using site
+   typography tokens. At smaller viewport/200% zoom use a linear text alternative,
+   rather than a horizontally cropped table or miniaturized bitmap. */
+.article-v2.research-article-body .article-v2__body .sensory-comparison {
+  margin: 2rem 0 2.5rem;
+  max-width: 100%;
+  min-width: 0;
+  padding: 0;
+  color: var(--article-ink);
+  font-family: var(--font-body);
+}
+.article-v2__body .sensory-comparison__title {
+  margin: 0 0 0.25rem;
+  font-family: var(--font-editorial);
+  font-size: var(--type-h3);
+  font-weight: 700;
+  line-height: var(--leading-heading);
+}
+.article-v2__body .sensory-comparison__subtitle {
+  margin: 0 0 1.25rem;
+  color: var(--article-muted);
+  font-family: var(--font-body);
+  font-size: var(--type-small);
+}
+.article-v2.research-article-body .article-v2__body table.sensory-comparison__table {
+  width: 100%;
+  margin: 0 0 1.5rem;
+  border-collapse: collapse;
+  border: 1px solid #aebcc8;
+  table-layout: fixed;
+  color: var(--article-text);
+  background: white;
+  font-family: var(--font-body);
+  font-size: var(--type-body);
+  line-height: 1.55;
+}
+.article-v2.research-article-body .article-v2__body .sensory-comparison__table th,
+.article-v2.research-article-body .article-v2__body .sensory-comparison__table td {
+  padding: 0.75rem 0.7rem;
+  border: 1px solid #aebcc8;
+  background: white;
+  text-align: left;
+  vertical-align: top;
+  overflow-wrap: normal;
+  word-break: normal;
+  hyphens: none;
+}
+.article-v2__body .sensory-comparison__table thead th {
+  color: var(--article-ink);
+  font-weight: 700;
+}
+.article-v2__body .sensory-comparison__table thead th:first-child {
+  width: 17%;
+}
+.article-v2__body .sensory-comparison__table tbody th {
+  color: var(--article-ink);
+  font-weight: 700;
+}
+.article-v2__body .sensory-comparison__mobile {
+  display: none;
+}
+.article-v2.research-article-body .article-v2__body .sensory-comparison__note {
+  max-width: none;
+  margin: 0;
+  padding: 0.9rem 1rem;
+  border: 1px solid #cbd5dd;
+  background: #f1f4f6;
+  font-size: var(--type-body);
+  line-height: 1.6;
+}
+.article-v2__body .sensory-comparison__note strong {
+  font-weight: 700;
+}
+.article-v2__body .sensory-comparison figcaption {
+  margin: 1rem 0 0;
+  color: var(--article-muted);
+  font-size: var(--type-small);
+  line-height: 1.6;
+  font-style: italic;
+}
+@media (max-width: 62rem) {
+  .article-v2.research-article-body .article-v2__body .sensory-comparison__table {
+    display: none;
+  }
+  .article-v2__body .sensory-comparison__mobile {
+    display: block;
+    margin: 0 0 1.25rem;
+    border-top: 1px solid #aebcc8;
+    font-size: var(--type-body);
+    line-height: 1.6;
+  }
+  .article-v2__body .sensory-comparison__group {
+    padding: 0.85rem 0;
+    border-bottom: 1px solid #aebcc8;
+  }
+  .article-v2__body .sensory-comparison__group-title {
+    max-width: none;
+    margin: 0 0 0.7rem;
+    color: var(--article-ink);
+    font-size: var(--type-subhead);
+    font-weight: 700;
+    line-height: 1.4;
+  }
+  .article-v2__body .sensory-comparison__group dl {
+    margin: 0;
+  }
+  .article-v2__body .sensory-comparison__group dt {
+    color: var(--article-ink);
+    font-weight: 700;
+  }
+  .article-v2__body .sensory-comparison__group dd {
+    margin: 0 0 0.65rem;
+    overflow-wrap: break-word;
+  }
+  .article-v2__body .sensory-comparison__group dd:last-child {
+    margin-bottom: 0;
+  }
+}
