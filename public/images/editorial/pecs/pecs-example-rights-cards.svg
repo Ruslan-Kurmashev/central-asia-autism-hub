@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="1235" viewBox="0 0 1000 1235" role="img" aria-labelledby="title desc">
+<title id="title">ДРУГИЕ СООБЩЕНИЯ</title>
+<desc id="desc">Отказ, поддержка и самочувствие</desc>
+<rect width="1000" height="1235" fill="#f4f9fa"/>
+<text x="500" y="63" text-anchor="middle" font-family="Arial, 'Noto Sans', sans-serif" font-size="42" font-weight="700" fill="#174b69">ДРУГИЕ СООБЩЕНИЯ</text><text x="500" y="103" text-anchor="middle" font-family="Arial, 'Noto Sans', sans-serif" font-size="25" fill="#456b80">Отказ, поддержка и самочувствие</text><g transform="translate(34 124)">
+<rect x="0" y="0" width="455" height="342" rx="28" fill="#ffffff" stroke="#cbdfe9" stroke-width="4"/>
+<g stroke-linecap="round" stroke-linejoin="round"><circle cx="225" cy="135" r="81" fill="#fff2ef" stroke="#d77e78" stroke-width="13"/><path d="M170 192 L280 81" stroke="#d77e78" stroke-width="16"/><circle cx="225" cy="135" r="51" fill="none" stroke="#d77e78" stroke-width="6" opacity=".45"/></g>
+<text x="225" y="292" text-anchor="middle" font-family="Arial, 'Noto Sans', sans-serif" font-size="39" font-weight="700" fill="#174b69">НЕТ</text>
+</g>
+<g transform="translate(509 124)">
+<rect x="0" y="0" width="455" height="342" rx="28" fill="#ffffff" stroke="#cbdfe9" stroke-width="4"/>
+<g stroke-linecap="round" stroke-linejoin="round"><path d="M185 192 C177 181 164 156 163 141 Q160 127 175 125 Q181 126 193 148 L189 77 Q190 62 204 63 Q215 63 216 80 L217 118 L225 65 Q229 52 242 58 Q251 61 248 76 L243 118 L257 79 Q267 65 278 71 Q289 77 281 92 L266 127 L279 110 Q289 101 301 109 Q309 119 297 134 L277 183 Q262 209 229 214 L204 210 Z" fill="#e9b690" stroke="#a87558" stroke-width="7"/></g>
+<text x="225" y="292" text-anchor="middle" font-family="Arial, 'Noto Sans', sans-serif" font-size="39" font-weight="700" fill="#174b69">СТОП</text>
+</g>
+<g transform="translate(34 489)">
+<rect x="0" y="0" width="455" height="342" rx="28" fill="#ffffff" stroke="#cbdfe9" stroke-width="4"/>
+<g stroke-linecap="round" stroke-linejoin="round"><path d="M153 165 L216 121 Q228 114 237 125 L245 136 Q253 148 238 159 L200 186 L180 207" fill="#f4c7a2" stroke="#aa795f" stroke-width="7"/><path d="M295 165 L243 118 Q233 109 225 117 L216 126 Q207 138 219 147 L255 178 L276 211" fill="#e5ac83" stroke="#a87558" stroke-width="7"/><path d="M192 193 Q224 211 262 193" fill="none" stroke="#5f9c92" stroke-width="13"/></g>
+<text x="225" y="292" text-anchor="middle" font-family="Arial, 'Noto Sans', sans-serif" font-size="39" font-weight="700" fill="#174b69">ПОМОГИ</text>
+</g>
+<g transform="translate(509 489)">
+<rect x="0" y="0" width="455" height="342" rx="28" fill="#ffffff" stroke="#cbdfe9" stroke-width="4"/>
+<g stroke-linecap="round" stroke-linejoin="round"><path d="M150 183 Q225 213 300 183" fill="none" stroke="#bddedb" stroke-width="17"/><rect x="189" y="73" width="24" height="101" rx="9" fill="#5f9eaf"/><rect x="238" y="73" width="24" height="101" rx="9" fill="#5f9eaf"/><path d="M175 215 h104" stroke="#668b8b" stroke-width="7"/></g>
+<text x="225" y="292" text-anchor="middle" font-family="Arial, 'Noto Sans', sans-serif" font-size="39" font-weight="700" fill="#174b69">ПЕРЕРЫВ</text>
+</g>
+<g transform="translate(34 854)">
+<rect x="0" y="0" width="455" height="342" rx="28" fill="#ffffff" stroke="#cbdfe9" stroke-width="4"/>
+<g stroke-linecap="round" stroke-linejoin="round"><path d="M161 151 L257 55 Q268 44 280 55 L307 82 Q319 94 307 106 L210 202 Q198 214 185 202 L161 177 Q149 163 161 151 Z" fill="#ffdeb5" stroke="#bb8967" stroke-width="7"/><rect x="192" y="101" width="78" height="48" rx="10" transform="rotate(-45 231 125)" fill="#fff2db" stroke="#cf9f83" stroke-width="4"/><path d="M215 132 L244 102 M229 145 L258 116" stroke="#cb7c70" stroke-width="6"/></g>
+<text x="225" y="292" text-anchor="middle" font-family="Arial, 'Noto Sans', sans-serif" font-size="39" font-weight="700" fill="#174b69">БОЛЬНО</text>
+</g>
+<g transform="translate(509 854)">
+<rect x="0" y="0" width="455" height="342" rx="28" fill="#ffffff" stroke="#cbdfe9" stroke-width="4"/>
+<g stroke-linecap="round" stroke-linejoin="round"><path d="M181 81 h104 v49 Q284 172 234 177 L232 195 H201 L199 176 Q179 163 181 130 Z" fill="#d7eaf2" stroke="#4f869d" stroke-width="7"/><rect x="168" y="64" width="130" height="25" rx="9" fill="#a6d0e1"/><path d="M197 197 h61" stroke="#4f869d" stroke-width="10"/><path d="M300 68 q15 8 0 20" fill="none" stroke="#4f869d" stroke-width="6"/></g>
+<text x="225" y="292" text-anchor="middle" font-family="Arial, 'Noto Sans', sans-serif" font-size="39" font-weight="700" fill="#174b69">ТУАЛЕТ</text>
+</g>
+</svg>
