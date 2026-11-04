@@ -29,6 +29,7 @@ keyPoints:
   - "Questions about development can be discussed in primary healthcare. Kazakhstan's paediatric care standard provides for development and early intervention centres and psychophysical screening."
   - "When screening identifies specified developmental risk signs, primary healthcare may arrange a multidisciplinary team assessment and an individual early intervention programme."
   - "PMPK focuses on educational needs and psychological and educational support, it does not replace medical assessment."
+  - "A PMPK conclusion is not a universal prerequisite for every educational adjustment."
   - "Specific examples of what your child does, has difficulty doing or has stopped doing help professionals understand your concerns."
   - "You can discuss support for everyday difficulties even before a final diagnosis is established, although particular state services have their own eligibility rules."
   - "A sudden deterioration or new medical symptoms require an appropriate medical response, not waiting for a routine PMPK appointment."
