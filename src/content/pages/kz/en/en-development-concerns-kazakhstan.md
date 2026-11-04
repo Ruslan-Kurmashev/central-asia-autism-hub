@@ -22,6 +22,7 @@ conflictOfInterest: "No conflict of interest declared."
 publishedAt: 2026-10-10
 originalPublishedAt: 2026-10-09
 updatedAt: 2026-11-04
+versionNote: "4 November 2026: screening follow-up, multidisciplinary assessment, institution-based educational support and official links updated to match the Russian source. AI-assisted comparison only, no independent legal or native-language review claimed."
 reviewDueAt: 2026-12-01
 draft: false
 keyPoints:
