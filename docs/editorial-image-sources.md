@@ -1268,3 +1268,9 @@ Protocol description checked against the publisher's informational page [Picture
 ## PECS request-choice cards, owner resubmission and cache-safe URL (2026-11-05)
 
 The owner supplied `image(20261105-163040).png` for the same six-card figure. Its SHA-256 `195ea8c561aafc4cb0e139e426133d2ec24c612e952c334813c953f3f3e3ee2f` matches the original source already approved earlier on 2026-11-05, so no visual redesign was introduced. The publication now references `public/images/editorial/pecs/pecs-example-request-cards-user-supplied-2026-11-05.webp` (existing approved optimized WebP bytes, Git blob SHA `60d8f0fc02646add6cf6eb931fe4cba2ded40ef1`) under a new URL to avoid browsers retaining the older figure. Previous asset remains available for cache compatibility. The six cards are editorial examples, not official PECS symbols.
+
+## PECS rights and help cards, owner-approved image (2026-11-05)
+
+| Local file | Author/source | Type | Editorial meaning |
+| --- | --- | --- | --- |
+| `public/images/editorial/pecs/pecs-example-rights-cards-owner-approved-2026-11-05.webp` | User-supplied image `Карточки жестов AutismHub_ помощь и общение.png`, directly approved for publication 2026-11-05. Original SHA-256: `c22c72890d1694479ef836ecc31e7c37064cc60be190e4185bdcdc04479cfd06`. No external stock licence is claimed. | Optimized project-owned WebP, 1230 x 1279 px, Git blob SHA-1 `dd9060c294292460c5961c08728d0902c35ee573` | Six simple communication cards: no, stop, help, break, pain, toilet. Editorial examples, not official PECS symbols. |
