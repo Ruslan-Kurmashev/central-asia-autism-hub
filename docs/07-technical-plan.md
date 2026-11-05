@@ -603,7 +603,7 @@ Automated accessibility or link tools must not be treated as proof that all requ
 
 ## 25. Git workflow
 
-The local project directory is the authoritative working copy. GitHub is the remote source-control and publication platform.
+The live GitHub repository and its current branch are the source of truth for publishing. A local checkout is useful but optional when authorised GitHub API tools can read and write the exact files. Do not block a requested small publication solely because no local clone is available.
 
 The initial workflow is:
 
@@ -616,6 +616,8 @@ edit locally
 → GitHub Actions builds the site
 → GitHub Pages deploys only when publication has been enabled
 ```
+
+For an explicit owner instruction to publish an approved small change, follow the direct-publication fast path documented in `docs/decisions/2026-11-05-direct-publish-fast-path.md`: inspect the exact target, make a minimal change, commit promptly, and let the existing GitHub Actions build and fail-closed checks run. Do not wait for unrelated audits or prolonged Pages polling. If the deployment cannot be confirmed promptly, report its actual status and link instead of falsely claiming publication. Higher-risk content retains required human approval and review.
 
 Commits should describe one coherent change. Generated build output and unrelated local files must not be staged.
 

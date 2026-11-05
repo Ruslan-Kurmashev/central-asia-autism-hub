@@ -34,12 +34,24 @@ The `.github/dependabot.yml` file requests weekly npm dependency update PRs. Thi
 - `.github/workflows/editorial-review-due.yml` runs weekly to produce a report of published pages whose `reviewDueAt` is overdue or within 45 days, with the report available as an Actions artifact and job summary. It does not claim that review has occurred or change any article dates.
 - The existing human article-audit tracker is separate from claim-level source records. Do not add human-reviewed status on the basis of automation.
 
+## 2.3. Direct owner-requested publication: fast path (5 November 2026)
+
+For an already approved, narrow change such as replacing one instructional image, the instruction "publish on the site" authorises the necessary GitHub commit and the existing automatic Pages deployment immediately. Do not turn this into a multi-hour inspection or repeatedly ask for consent.
+
+1. Make a minimal edit after checking the exact image, target and provenance.
+2. Commit without waiting for broad manual audits, repeated screenshots or unrelated workflows. Push to `main` triggers the unchanged deployment pipeline and its required fail-closed checks.
+3. Read the resulting commit and relevant CI/Pages status once it is available. If the service is delayed, provide an accurate short status and Actions link rather than staying in a long polling loop.
+4. If a required check fails, report the actual blocker and make a targeted correction when within scope. Do not disable checks, bypass protection, or disguise a pending deployment as a public release.
+5. For medically sensitive, copyright-unclear, privacy-sensitive or otherwise risky changes, keep the necessary additional review and approval requirements. Speed does not supersede safety.
+
+The public page may appear later than the Git commit because GitHub Pages is operated by an external service. Only a verified successful deployment and live page count as "Published".
+
 ## 3. Required review before release
 
 - Review the exact final diff. No unrelated article or schema changes.
 - Confirm evidence sources and rights to any images added or replaced.
 - Run `npm run check:type-scale` and `npm run validate` or verify the matching CI run.
-- Review browser QA status and the saved screenshots at all three widths.
+- Keep browser QA enabled at all three widths. Review its result for affected pages, and inspect saved screenshots when the visual change is high-risk or an automated check flags an issue. Do not hold an ordinary approved single-image commit for a repeat full-site manual screenshot audit.
 - Inspect article tables, long RU/KK/EN titles, images and accessibility at 200% zoom when relevant.
 - Confirm published dates and the translation status remain correct.
 - For publishing tasks, inspect the live GitHub Pages URL after deployment completes.

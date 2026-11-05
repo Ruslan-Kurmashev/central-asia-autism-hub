@@ -13,6 +13,8 @@ This directory records explicit, owner-approved changes to product policy or tec
 
 ## Current records
 
+- [2026-11-05: Fast path for direct publication requests](2026-11-05-direct-publish-fast-path.md). A direct publication instruction triggers a prompt minimal commit and existing CI/Pages workflow without lengthy duplicate checks or polling. Mandatory safety and CI gates remain in force.
+
 - [2026-10-30: Root opens full homepage](2026-10-30-root-homepage.md). Replaces the mandatory English-language selection screen with the existing Russian homepage, retaining RU/KK/EN switching.
 
 - [2026-10-29: Multilingual public page-view badge](2026-10-29-public-visit-counter.md). Owner-approved static Hits counter replacing failed CounterAPI, subject to final CI and public deploy verification.

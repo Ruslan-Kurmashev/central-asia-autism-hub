@@ -37,6 +37,7 @@ Read only the documents relevant to the task, but read each selected document co
 - Distinguish work prepared locally, committed to GitHub, passed CI, and confirmed on the public site. Never claim publication from a commit alone.
 - PR validation and browser QA must be reviewed on the final commit before merging. Browser screenshots and automated assertions do not independently prove clinical accuracy, appropriate visuals, or full accessibility.
 - Commit and publication actions still require an explicit user request. Instructions to publish or put changes into the repository count as such a request for the named scope.
+- A direct owner request to publish an already approved, limited change activates the fast publication path in `docs/decisions/2026-11-05-direct-publish-fast-path.md`. Commit and trigger deployment promptly without prolonged manual audits, excessive polling or repeated retries.
 
 ## Technical boundaries
 
@@ -57,7 +58,7 @@ Read only the documents relevant to the task, but read each selected document co
 - The rule applies to every new and existing page, parent/professional/research article, glossary entry, course listing, card, translation, page template, interactive component, responsive view, print/PDF layout and CMS preview.
 - All content must use the shared layouts and semantic Markdown headings: page titles are rendered by the layout; article body starts at H2 and uses H3 for nested subsections. Do not insert manually styled headings, inline font CSS, HTML `<font>` tags or custom per-article typography.
 - Changing typography tokens requires a documented design-system decision; never silently shrink text for RU/KK/EN translations or patch a single page.
-- No publication, pull request merge or deployment is ready until `npm run check:type-scale` and `npm run validate` succeed plus responsive and zoom QA is reviewed. The automated check is a mandatory fail-closed gate, not a claim of full visual accessibility.
+- Production deployment must still pass `npm run check:type-scale` and `npm run validate` in the existing CI pipeline. Required browser checks stay enabled. A routine approved image or copy replacement need not wait for another broad manual responsive/zoom audit before the commit; use existing automated browser QA and risk-based manual review. A CI pass is not a claim of full accessibility.
 - The identical CMS font token stylesheet must be kept in sync with the source. See `docs/typography-system.md` for the binding policy, checklist and exception process.
 - Run `npm run check:type-scale` after any CSS, layout, component, Markdown, CMS or content-style change.
 
@@ -93,6 +94,18 @@ After editing:
 4. report files changed, what changed, what was not changed, checks run, and remaining risks.
 
 Do not commit, push, deploy, publish content, enable GitHub Pages, or set a draft live unless the user explicitly requests that action.
+
+### Direct publication fast path
+
+When the owner says "publish", "publish now", "put it on the site" or an equivalent direct instruction for a specified approved change:
+
+1. Locate the exact source file and asset, check that the requested replacement and usage rights are clear, and make only the requested edit. Do not re-audit unrelated content.
+2. Commit promptly to the authorised publishing branch (normally `main`) through available GitHub tools. A local clone and an extra confirmation are not prerequisites. The existing push workflow initiates build, validation and Pages deployment.
+3. Leave CI, clinical/licensing safeguards and branch protection intact. Never skip a failing gate or publish an unapproved draft, instrument or high-risk medical claim solely to save time.
+4. Check the relevant deployment result and public URL when immediately available. Do not spend an extended session repeatedly polling a stalled GitHub Pages service, rerunning the same checks, or waiting for unrelated workflows.
+5. If hosting remains pending or fails for an external reason, give a short factual status with the commit and Actions links. State "committed, deploy pending/failed", not "published". Do not claim an external service can be forced to deploy instantly.
+
+Do not promise further off-session monitoring or action without a separately requested scheduled task.
 
 ## Multi-agent workflow
 
