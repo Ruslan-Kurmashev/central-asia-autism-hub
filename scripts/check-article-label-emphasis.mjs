@@ -52,7 +52,7 @@ assert.equal(example.children[7].children[1].type, 'text', 'Mid-sentence bold sh
 assert.equal(example.children[14].children[0].type, 'text', 'Full isolated claim should be plain');
 annotated(example.children[15].children[0].children[0].children[0]);
 annotated(example.children[15].children[1].children[0].children[0]);
-annotated(example.children[16].children[0].children[0]);
+annotated(example.children[16].children[0].children[0].children[0]);
 assert.equal(example.children[16].children[0].children[1].children[0].type, 'text', 'Only first-column terms should be bold');
 annotated(example.children[17].children[0].children[0]);
 
