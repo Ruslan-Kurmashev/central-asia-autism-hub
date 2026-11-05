@@ -2014,6 +2014,56 @@
   }
 }
 
+/* Scientific comparisons need room for whole words, not arbitrary splitting
+   inside narrow columns. Standard tables use labelled cards on small screens. */
+.article-v2.research-article-body .research-table-scroll {
+  max-width: 100%;
+  margin: 1.5rem 0 2rem;
+  overflow-x: auto;
+  overscroll-behavior-inline: contain;
+  border: 1px solid var(--article-line);
+  border-radius: var(--radius-small);
+}
+.article-v2.research-article-body .research-table-scroll:focus-visible {
+  outline: 3px solid var(--color-focus);
+  outline-offset: 3px;
+}
+.article-v2.research-article-body .article-v2__body .research-table-scroll table {
+  width: 100%;
+  min-width: 52rem;
+  max-width: none;
+  margin: 0;
+  border: 0;
+  table-layout: auto;
+}
+.article-v2.research-article-body .article-v2__body .research-table-scroll :is(th, td) {
+  overflow-wrap: normal;
+  word-break: normal;
+  hyphens: none;
+  white-space: normal;
+}
+.article-v2.research-article-body .article-v2__body .research-table-scroll :is(th, td):first-child {
+  min-width: 10rem;
+}
+@media (max-width: 48rem) {
+  .article-v2.research-article-body .research-table-scroll {
+    overflow-x: visible;
+  }
+  .article-v2.research-article-body .article-v2__body .research-table-scroll table[data-mobile-cards='true'] {
+    min-width: 0;
+    width: 100%;
+  }
+  .article-v2.research-article-body .article-v2__body .research-table-scroll td {
+    min-width: 0;
+    width: auto;
+    display: block;
+  }
+  .article-v2.research-article-body .article-v2__body .research-table-scroll td::before {
+    display: block;
+    margin-bottom: 0.35rem;
+  }
+}
+
 /* Research sensory response comparison: semantic academic table using site
    typography tokens. At smaller viewport/200% zoom use a linear text alternative,
    rather than a horizontally cropped table or miniaturized bitmap. */
@@ -2043,7 +2093,7 @@
   margin: 0 0 1.5rem;
   border-collapse: collapse;
   border: 1px solid #aebcc8;
-  table-layout: fixed;
+  table-layout: auto;
   color: var(--article-text);
   background: white;
   font-family: var(--font-body);
@@ -2094,7 +2144,7 @@
   line-height: 1.6;
   font-style: italic;
 }
-@media (max-width: 62rem) {
+@media (max-width: 80rem) {
   .article-v2.research-article-body .article-v2__body .sensory-comparison__table {
     display: none;
   }
