@@ -22,7 +22,9 @@ assert.equal((md.match(/<section class="sensory-comparison__group"/g)||[]).lengt
 assert.equal((md.match(/<td>/g)||[]).length,9,'Expected a three-by-three comparison matrix');
 assert.ok(html.includes('sensory-comparison__table') && html.includes('sensory-comparison__mobile'),'Neither rendering may be omitted');
 assert.ok(!html.includes('images/research/sensory-responses-three-patterns.svg'),'Old illustration still in output');
-assert.ok(css.includes('@media (max-width: 62rem)')&&css.includes('.sensory-comparison__mobile'),'Missing narrow screen reflow');
+assert.ok(css.includes('@media (max-width: 48rem)') && css.includes('.sensory-comparison__mobile'), 'Missing mobile-only reflow');
+assert.ok(css.includes('.sensory-comparison__scroll') && css.includes('min-width: 58rem'), 'Desktop comparison must retain full-width, scrollable table');
+assert.ok(!css.includes('@container (max-width: 55rem)'), 'Desktop reading column must not trigger mobile cards');
 for(const v of ['--font-body','--font-editorial','--type-body','--type-h3','--type-small']){
  assert.ok(token.includes(v),'Site token not defined: '+v);
  assert.ok(css.includes('var('+v+')'),'Comparison fails to use site token: '+v);
