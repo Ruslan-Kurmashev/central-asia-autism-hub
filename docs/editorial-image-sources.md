@@ -1258,3 +1258,9 @@ Protocol description checked against the publisher's informational page [Picture
 | Local file | Author/source | Type | Editorial meaning |
 | --- | --- | --- | --- |
 | `public/images/editorial/pecs/pecs-example-exchange-original.png` | User-supplied artwork approved in this conversation, 2026-11-04 | Original PNG, 897 x 2048, uncompressed and unresized | Three scenes: the child shows a picture card with a ball, passes the card to the mother, and the mother responds with the ball. Illustrative example of a communication exchange, not an official PECS protocol diagram. No third-party stock licence is claimed. |
+
+## PECS request-choice card illustration, owner-approved 2026-11-05
+
+| Local file | Author/source | Type | Editorial meaning |
+| --- | --- | --- | --- |
+| `public/images/editorial/pecs/pecs-example-request-cards-owner-approved-2026-11-05.webp` | Owner-supplied illustration uploaded in the project conversation and expressly approved for replacing this article figure on 2026-11-05. Source attachment: `Изображение ChatGPT 5 нояб. 2026 г., 15_32_55.png`, original SHA-256 `195ea8c561aafc4cb0e139e426133d2ec24c612e952c334813c953f3f3e3ee2f`. No external stock license is claimed. | Optimized WebP at original dimensions 1122 x 1402 px (quality 90); Git blob SHA-1 `60d8f0fc02646add6cf6eb931fe4cba2ded40ef1` | Six illustrated example cards for everyday requests or choice: water, apple, ball, book, going for a walk, and more. They are editorial examples, not official PECS symbols. |
