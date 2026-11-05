@@ -624,6 +624,27 @@ const researchLabel: Record<Locale, string> = {
       wrapper.appendChild(table);
     }
 
+    // Scientific tables can contain long method names and multi-word headings.
+    // Keep complete words at reading widths with a keyboard-accessible region.
+    if (
+      document.body.classList.contains('research-article-body') &&
+      !table.classList.contains('sensory-comparison__table') &&
+      !table.closest('.research-table-scroll')
+    ) {
+      const wrapper = document.createElement('div');
+      wrapper.className = 'research-table-scroll';
+      wrapper.tabIndex = 0;
+      wrapper.setAttribute('role', 'region');
+      const lang = document.documentElement.lang;
+      wrapper.setAttribute('aria-label', lang.startsWith('kk')
+        ? 'Кестенің барлық бағандарын көру үшін көлденең айналдырыңыз'
+        : lang.startsWith('en')
+          ? 'Scroll horizontally to read all table columns'
+          : 'Прокрутите таблицу по горизонтали, чтобы прочитать все столбцы');
+      table.parentNode?.insertBefore(wrapper, table);
+      wrapper.appendChild(table);
+    }
+
     // Dense parent-article tables need full-word columns at desktop widths.
     // On smaller screens, the existing mobile-card layout replaces the columns.
     if (
