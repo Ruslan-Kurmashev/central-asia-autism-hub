@@ -31,7 +31,7 @@
 <text x="1094" y="969.5" fill="#1F394A" font-family="Arial, DejaVu Sans, sans-serif" font-size="29" font-weight="400"><tspan x="1094" dy="0">Более низкий порог</tspan><tspan x="1094" dy="39">обнаружения звука</tspan></text>
 <rect x="51" y="1076" width="1698" height="190" fill="#F5F9FB"/>
 <line x1="50" y1="1076" x2="1750" y2="1076" stroke="#C6D2DB" stroke-width="2"/>
-<text x="74" y="1179" fill="#123956" font-family="Arial, DejaVu Sans, sans-serif" font-size="30" font-weight="700"><tspan x="74" dy="0">Функциональный ответ мозга</tspan></text>
+<text x="74" y="1160" fill="#123956" font-family="Arial, DejaVu Sans, sans-serif" font-size="30" font-weight="700"><tspan x="74" dy="0">Функциональный ответ</tspan><tspan x="74" dy="39">мозга</tspan></text>
 <text x="494" y="1179" fill="#1F394A" font-family="Arial, DejaVu Sans, sans-serif" font-size="29" font-weight="400"><tspan x="494" dy="0">Функциональная МРТ (фМРТ)</tspan></text>
 <text x="1094" y="1140" fill="#1F394A" font-family="Arial, DejaVu Sans, sans-serif" font-size="29" font-weight="400"><tspan x="1094" dy="0">Более выраженный ответ</tspan><tspan x="1094" dy="39">в мозговых сетях</tspan><tspan x="1094" dy="39">обработки звука</tspan></text>
 <rect x="51" y="1266" width="1698" height="190" fill="#FFFFFF"/>
