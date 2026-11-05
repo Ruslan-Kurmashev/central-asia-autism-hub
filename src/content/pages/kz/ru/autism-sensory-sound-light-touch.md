@@ -157,7 +157,7 @@ sources:
   <img src="/central-asia-autism-hub/images/research/verified/schauder-bennetto-2016-figure-1-ru-desktop.svg" alt="Переведённая научная таблица из шести уровней анализа сенсорной реакции. Клинические проявления, поведение, физиология, восприятие, функции и структура мозга сопоставлены с методами исследования и возможными результатами на примере звука." loading="lazy" decoding="async">
 </picture>
 
-*Рисунок 1. Шесть уровней изучения сенсорной реакции, от повседневных проявлений до структуры мозга. На каждом уровне показан метод и пример возможного результата. Перевод и новая векторная верстка по Figure 1 Schauder и Bennetto (2016). Схема не является доказанной причинной цепочкой или диагностическим тестом. [Источник: Schauder и Bennetto, 2016, Figure 1](https://www.frontiersin.org/journals/neuroscience/articles/10.3389/fnins.2016.00268/full), [лицензия CC BY 4.0](https://creativecommons.org/licenses/by/4.0/). [ Открыть полный размер ](/central-asia-autism-hub/images/research/verified/schauder-bennetto-2016-figure-1-ru-desktop.svg), [ Версия для телефона ](/central-asia-autism-hub/images/research/verified/schauder-bennetto-2016-figure-1-ru-mobile.svg).*
+*Таблица 1. Шесть уровней изучения сенсорной реакции, от повседневных проявлений до структуры мозга. На каждом уровне показан метод и пример возможного результата. Перевод и новая векторная верстка по Figure 1 Schauder и Bennetto (2016). Таблица не является доказанной причинной цепочкой или диагностическим тестом. [Источник: Schauder и Bennetto, 2016, Figure 1](https://www.frontiersin.org/journals/neuroscience/articles/10.3389/fnins.2016.00268/full), [лицензия CC BY 4.0](https://creativecommons.org/licenses/by/4.0/). [ Открыть полный размер ](/central-asia-autism-hub/images/research/verified/schauder-bennetto-2016-figure-1-ru-desktop.svg), [ Версия для телефона ](/central-asia-autism-hub/images/research/verified/schauder-bennetto-2016-figure-1-ru-mobile.svg).*
 
 ### Почему интенсивность ощущения не равна громкости звука
 
@@ -181,7 +181,6 @@ sources:
 
 <figure class="sensory-comparison" aria-labelledby="sensory-comparison-title">
   <p class="sensory-comparison__title" id="sensory-comparison-title">Сенсорные реакции могут быть разными</p>
-  <p class="sensory-comparison__subtitle">Описания поведения, а не постоянные типы людей</p>
   <table class="sensory-comparison__table">
     <thead>
       <tr>
@@ -248,7 +247,7 @@ sources:
     </section>
   </div>
   <p class="sensory-comparison__note"><strong>Важно:</strong> это не три диагностических типа и не три категории людей. Один и тот же человек может проявлять разные сенсорные реакции в зависимости от ситуации, усталости, среды и конкретного сигнала.</p>
-  <figcaption>Схема 2. Три способа описывать сенсорные реакции: гиперреактивность, гипореактивность и поиск ощущений. Это не типы людей, не шкала тяжести и не измерение активности мозга, а описания наблюдаемого поведения и переживаний.</figcaption>
+  <figcaption>Таблица 2. Три способа описывать сенсорные реакции: гиперреактивность, гипореактивность и поиск ощущений. Это не типы людей, не шкала тяжести и не измерение активности мозга, а описания наблюдаемого поведения и переживаний.</figcaption>
 </figure>
 
 ### Почему эти проявления могут сочетаться
