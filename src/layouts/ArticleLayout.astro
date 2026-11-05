@@ -624,6 +624,18 @@ const researchLabel: Record<Locale, string> = {
       wrapper.appendChild(table);
     }
 
+    // The four-column sensory comparison stays a table on desktop, with
+    // focusable horizontal scrolling when the article reading column is narrow.
+    if (table.classList.contains('sensory-comparison__table') && !table.closest('.sensory-comparison__scroll')) {
+      const wrapper = document.createElement('div');
+      wrapper.className = 'sensory-comparison__scroll';
+      wrapper.tabIndex = 0;
+      wrapper.setAttribute('role', 'region');
+      wrapper.setAttribute('aria-label', 'Таблица сенсорных реакций: прокрутите по горизонтали для просмотра столбцов');
+      table.parentNode?.insertBefore(wrapper, table);
+      wrapper.appendChild(table);
+    }
+
     // Scientific tables can contain long method names and multi-word headings.
     // Keep complete words at reading widths with a keyboard-accessible region.
     if (
