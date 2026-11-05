@@ -2064,6 +2064,17 @@
   }
 }
 
+/* Preserve the four-column scientific comparison on desktop. The table
+   scrolls inside its own accessible region instead of overflowing cells. */
+.article-v2.research-article-body .sensory-comparison__scroll {
+  max-width: 100%;
+  overflow-x: auto;
+  overscroll-behavior-inline: contain;
+}
+.article-v2.research-article-body .sensory-comparison__scroll:focus-visible {
+  outline: 3px solid var(--color-focus);
+  outline-offset: 3px;
+}
 /* Research sensory response comparison: semantic academic table using site
    typography tokens. At smaller viewport/200% zoom use a linear text alternative,
    rather than a horizontally cropped table or miniaturized bitmap. */
@@ -2074,7 +2085,6 @@
   padding: 0;
   color: var(--article-ink);
   font-family: var(--font-body);
-  container-type: inline-size;
 }
 .article-v2__body .sensory-comparison__title {
   margin: 0 0 0.25rem;
@@ -2094,6 +2104,8 @@
   margin: 0 0 1.5rem;
   border-collapse: collapse;
   border: 1px solid #aebcc8;
+  min-width: 58rem;
+  max-width: none;
   table-layout: auto;
   color: var(--article-text);
   background: white;
@@ -2146,48 +2158,7 @@
   line-height: 1.6;
   font-style: italic;
 }
-@media (max-width: 62rem) {
-  .article-v2.research-article-body .article-v2__body .sensory-comparison__table {
-    display: none;
-  }
-  .article-v2__body .sensory-comparison__mobile {
-    display: block;
-    margin: 0 0 1.25rem;
-    border-top: 1px solid #aebcc8;
-    font-size: var(--type-body);
-    line-height: 1.6;
-  }
-  .article-v2__body .sensory-comparison__group {
-    padding: 0.85rem 0;
-    border-bottom: 1px solid #aebcc8;
-  }
-  .article-v2__body .sensory-comparison__group-title {
-    max-width: none;
-    margin: 0 0 0.7rem;
-    color: var(--article-ink);
-    font-size: var(--type-subhead);
-    font-weight: 700;
-    line-height: 1.4;
-  }
-  .article-v2__body .sensory-comparison__group dl {
-    margin: 0;
-  }
-  .article-v2__body .sensory-comparison__group dt {
-    color: var(--article-ink);
-    font-weight: 700;
-  }
-  .article-v2__body .sensory-comparison__group dd {
-    margin: 0 0 0.65rem;
-    overflow-wrap: break-word;
-  }
-  .article-v2__body .sensory-comparison__group dd:last-child {
-    margin-bottom: 0;
-  }
-}
-
-/* The article reading column is narrower than the browser viewport on desktop.
-   Reflow the scientific table based on its actual available column width. */
-@container (max-width: 55rem) {
+@media (max-width: 48rem) {
   .article-v2.research-article-body .article-v2__body .sensory-comparison__table {
     display: none;
   }
