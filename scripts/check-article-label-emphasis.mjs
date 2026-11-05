@@ -27,6 +27,7 @@ const example = {
     ] },
     paragraph('Саморегуляция', ' означает способность адаптироваться.'),
     paragraph('Совместная регуляция', ' помогает ребёнку справляться с нагрузкой.'),
+    paragraph('Вестибулярная система', ' участвует в обработке информации о положении тела.'),
     paragraph('Entire claim that should not be bold.', ' This is an unsupported emphasis.'),
     { type: 'list', children: [
       { type: 'listItem', children: [paragraph('Устойчивые интересы', ' отражают предпочтения.')] },
@@ -45,15 +46,15 @@ const annotated = child => {
   assert.equal(child.type, 'strong', 'Expected a retained label');
   assert.ok(child.data?.hProperties?.className?.includes('article-key-label'), 'Expected semantic label class');
 };
-for (const i of [1, 2, 3, 4, 8, 9, 10, 11, 12]) annotated(example.children[i].children[0]);
+for (const i of [1, 2, 3, 4, 8, 9, 10, 11, 12, 13]) annotated(example.children[i].children[0]);
 assert.equal(example.children[6].children[0].type, 'text', 'Isolated sentence should be plain');
 assert.equal(example.children[7].children[1].type, 'text', 'Mid-sentence bold should be plain');
-assert.equal(example.children[13].children[0].type, 'text', 'Full isolated claim should be plain');
-annotated(example.children[14].children[0].children[0].children[0]);
-annotated(example.children[14].children[1].children[0].children[0]);
+assert.equal(example.children[14].children[0].type, 'text', 'Full isolated claim should be plain');
 annotated(example.children[15].children[0].children[0].children[0]);
-assert.equal(example.children[15].children[0].children[1].children[0].type, 'text', 'Only first-column terms should be bold');
+annotated(example.children[15].children[1].children[0].children[0]);
 annotated(example.children[16].children[0].children[0]);
+assert.equal(example.children[16].children[0].children[1].children[0].type, 'text', 'Only first-column terms should be bold');
+annotated(example.children[17].children[0].children[0]);
 
 const css = readFileSync('src/styles/article-v2.css', 'utf8');
 assert.match(css, /\.article-v2__body :is\(p, li, blockquote, td, dd\) strong\.article-key-label\s*\{\s*font-weight:\s*700\s*;/);
