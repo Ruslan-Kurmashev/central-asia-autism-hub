@@ -1282,3 +1282,9 @@ The owner supplied `image(20261105-163040).png` for the same six-card figure. It
 - Purpose: explain that clinical assessment uses developmental history, observation, medical context and recommendations, with additional medical tests only as individually indicated. It is an illustrative pathway, not a mandatory national clinical protocol or diagnostic test.
 - Rights: project-created educational graphic. No third-party stock or diagnostic image rights are claimed.
 - Accessibility: Russian title and description are embedded in the SVG; the adjacent article lists the assessment elements as selectable text.
+
+## PECS sentence-strip example, owner-approved illustration (2026-11-06)
+
+| Local file | Author/source | Type | Editorial meaning |
+| --- | --- | --- | --- |
+| `public/images/editorial/pecs/pecs-example-sentence-strip-approved-2026-11-06.webp` | Owner-supplied image `ПРИМЕР ФРАЗЫ_ Я ХОЧУ МЯЧ.png`, explicitly requested for publication in the PECS article; original SHA-256 `7d31b54e0f0502f2e76ce4bb1174cef56c19ba1a667eb2e2a2652e712a42cb9f`. No third-party image license is claimed. | Optimized WebP, 1672 x 941 px, 62,706 bytes; Git blob SHA `9065549c96fa77a118882ffc434c1920f95d128b` | Illustration of two example picture cards, "Я ХОЧУ" + "МЯЧ". Editorial example only, not official PECS training material. |
