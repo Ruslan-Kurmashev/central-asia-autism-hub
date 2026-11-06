@@ -1274,3 +1274,11 @@ The owner supplied `image(20261105-163040).png` for the same six-card figure. It
 | Local file | Author/source | Type | Editorial meaning |
 | --- | --- | --- | --- |
 | `public/images/editorial/pecs/pecs-example-rights-cards-owner-approved-2026-11-05.webp` | User-supplied image `Карточки жестов AutismHub_ помощь и общение.png`, directly approved for publication 2026-11-05. Original SHA-256: `c22c72890d1694479ef836ecc31e7c37064cc60be190e4185bdcdc04479cfd06`. No external stock licence is claimed. | Optimized project-owned WebP, 1230 x 1279 px, Git blob SHA-1 `dd9060c294292460c5961c08728d0902c35ee573` | Six simple communication cards: no, stop, help, break, pain, toilet. Editorial examples, not official PECS symbols. |
+
+## Clinical assessment pathway diagram, owner-approved revision (2026-11-06)
+
+- Path: `public/images/research/autism-diagnostic-pathway-evidence.svg`.
+- Source: AutismHub original educational diagram, updated following the owner's explicit approval of a neutral academic flowchart on 2026-11-06. The on-site asset is a site-native SVG rendering of the approved four-stage wording and layout, rather than a direct upload of the generated PNG.
+- Purpose: explain that clinical assessment uses developmental history, observation, medical context and recommendations, with additional medical tests only as individually indicated. It is an illustrative pathway, not a mandatory national clinical protocol or diagnostic test.
+- Rights: project-created educational graphic. No third-party stock or diagnostic image rights are claimed.
+- Accessibility: Russian title and description are embedded in the SVG; the adjacent article lists the assessment elements as selectable text.
