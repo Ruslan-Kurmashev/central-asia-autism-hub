@@ -1288,3 +1288,9 @@ The owner supplied `image(20261105-163040).png` for the same six-card figure. It
 | Local file | Author/source | Type | Editorial meaning |
 | --- | --- | --- | --- |
 | `public/images/editorial/pecs/pecs-example-sentence-strip-approved-2026-11-06.webp` | Owner-supplied image `ПРИМЕР ФРАЗЫ_ Я ХОЧУ МЯЧ.png`, explicitly requested for publication in the PECS article; original SHA-256 `7d31b54e0f0502f2e76ce4bb1174cef56c19ba1a667eb2e2a2652e712a42cb9f`. No third-party image license is claimed. | Optimized WebP, 1672 x 941 px, 62,706 bytes; Git blob SHA `9065549c96fa77a118882ffc434c1920f95d128b` | Illustration of two example picture cards, "Я ХОЧУ" + "МЯЧ". Editorial example only, not official PECS training material. |
+
+## PECS Kazakh request cards, owner-approved localization (2026-11-06)
+
+| Local file | Author/source | Type | Editorial meaning |
+| --- | --- | --- | --- |
+| `public/images/editorial/pecs/pecs-example-request-cards-kazakh-owner-approved-2026-11-06.webp` | Adaptation of the six-card AutismHub reference approved in the current conversation. Kazakh-language version generated with AI assistance and explicitly approved by the project owner on 2026-11-06 for the KK PECS article. The approved original PNG is `казахская_коммуникационная_доска_pecs.png`. No external stock licence or official PECS endorsement is claimed. | Optimized WebP, 1122 x 1402 px, 75,552 bytes, SHA-256 `1b56cc215fa760c2e3627ff5ca44d70e52e0f6ec8fa7f62c58b6d9c09420fce4`, Git blob SHA `4cc5f4b39ab6faf1458e28018aa73a290247a485` | Six example request and choice cards with Kazakh labels: СУ, АЛМА, ДОП, КІТАП, СЕРУЕНДЕУ, ТАҒЫ. Editorial examples, not official PECS symbols. The Russian and English versions retain their existing images. |
