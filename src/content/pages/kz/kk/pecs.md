@@ -8,7 +8,7 @@ country: kz
 language: kk
 section: parents
 topic: approaches-to-support
-slug: pecs
+slug: pecs-suret-almasu-kommunikatsiya
 translationKey: parents-pecs
 translationStatus: checked
 audience:
@@ -76,7 +76,7 @@ sources:
     accessedAt: 2026-09-18
 ---
 
-[Коммуникация және AAC (орыс тілінде)](/kz/ru/parents/kommunikatsiya-i-aac/) · [AAC-тің басқа тәсілдері](/kz/kk/parents/aac/)
+[Коммуникация және AAC (орыс тілінде)](/kz/ru/parents/kommunikatsiya-i-aac/) · [AAC-тің басқа тәсілдері](/kz/kk/parents/aac-balamaly-kosymsha-kommunikatsiya/)
 
 PECS (Picture Exchange Communication System, сурет алмасу арқылы қарым-қатынас жасау жүйесі) - баламалы және қосымша коммуникацияның (AAC) құрылымдалған тәсілі. Онда адам заттың немесе әрекеттің суретін әңгімелесушіге беріп, қарым-қатынасты өзі бастауға үйренеді.
 
@@ -164,7 +164,7 @@ PECS кейде «баланы сөйлететін» әдіс ретінде ж
 
 Физикалық нұсқау бергенде ерекше сақтық қажет. Қорқыныш, қарсылық немесе айқын жайсыздық белгілері байқалса, мәжбүрлеуді тоқтатып, қысым аз тәсілді қарастырған жөн.
 
-[AAC туралы толығырақ](/kz/kk/parents/aac/)
+[AAC туралы толығырақ](/kz/kk/parents/aac-balamaly-kosymsha-kommunikatsiya/)
 
 ## Алты кезеңнің бәрін аяқтау керек пе?
 
@@ -220,4 +220,4 @@ PECS - кез келген суретті карточка емес, AAC-тің 
 
 ## Оқуды жалғастыру
 
-Алдыңғы материал: [Коммуникация серіктестерін оқыту](/kz/kk/parents/communication-partner-training/). Келесі материал: [Функционалдық коммуникацияны үйрету](/kz/kk/parents/functional-communication-training/). Сондай-ақ: [AAC: баламалы және қосымша коммуникация](/kz/kk/parents/aac/).
+Алдыңғы материал: [Коммуникация серіктестерін оқыту](/kz/kk/parents/kommunikatsiya-seriktesterin-okytu/). Келесі материал: [Функционалдық коммуникацияны үйрету](/kz/kk/parents/fct-funktsionaldyk-kommunikatsiya/). Сондай-ақ: [AAC: баламалы және қосымша коммуникация](/kz/kk/parents/aac-balamaly-kosymsha-kommunikatsiya/).

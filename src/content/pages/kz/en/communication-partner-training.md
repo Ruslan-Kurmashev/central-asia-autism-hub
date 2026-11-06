@@ -8,7 +8,7 @@ country: kz
 language: en
 section: parents
 topic: approaches-to-support
-slug: communication-partner-training
+slug: communication-partners-training
 translationKey: parents-communication-partner-training
 translationStatus: checked
 audience:
@@ -195,4 +195,4 @@ Research supports some approaches, but an adult learning a strategy does not gua
 
 ## Continue reading
 
-Previous: [Aided language modelling (Russian-language article)](/kz/ru/parents/aided-language-modelling/). Next: [PECS: the Picture Exchange Communication System](/kz/en/parents/pecs/).
+Previous: [Aided language modelling (Russian-language article)](/kz/ru/parents/aided-language-modelling/). Next: [PECS: the Picture Exchange Communication System](/kz/en/parents/pecs-picture-exchange-system/).

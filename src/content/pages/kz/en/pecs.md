@@ -8,7 +8,7 @@ country: kz
 language: en
 section: parents
 topic: approaches-to-support
-slug: pecs
+slug: pecs-picture-exchange-system
 translationKey: parents-pecs
 translationStatus: checked
 audience:
@@ -76,7 +76,7 @@ sources:
     accessedAt: 2026-09-18
 ---
 
-[Communication and AAC (in Russian)](/kz/ru/parents/kommunikatsiya-i-aac/) · [Other AAC approaches](/kz/en/parents/aac/)
+[Communication and AAC (in Russian)](/kz/ru/parents/kommunikatsiya-i-aac/) · [Other AAC approaches](/kz/en/parents/aac-communication-guide/)
 
 PECS (Picture Exchange Communication System) is a structured form of augmentative and alternative communication (AAC) that teaches a person to initiate communication independently by handing another person a picture representing an object or activity.
 
@@ -164,7 +164,7 @@ If a child communicates through speech, gesture or another device, that message 
 
 Physical prompting requires particular caution. If the child shows fear, resistance or substantial discomfort, stop coercive prompting and consider a less intrusive support approach.
 
-[Read more about AAC](/kz/en/parents/aac/)
+[Read more about AAC](/kz/en/parents/aac-communication-guide/)
 
 ## Must someone complete all six phases?
 
@@ -220,4 +220,4 @@ Evaluation should focus on accessible and independent communication, a range of 
 
 ## Continue reading
 
-Previous: [Communication partner training](/kz/en/parents/communication-partner-training/). Next: [Functional communication training](/kz/en/parents/functional-communication-training/). Also: [AAC: augmentative and alternative communication](/kz/en/parents/aac/).
+Previous: [Communication partner training](/kz/en/parents/communication-partners-training/). Next: [Functional communication training](/kz/en/parents/fct-functional-communication-training/). Also: [AAC: augmentative and alternative communication](/kz/en/parents/aac-communication-guide/).

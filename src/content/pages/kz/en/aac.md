@@ -8,7 +8,7 @@ country: kz
 language: en
 section: parents
 topic: approaches-to-support
-slug: aac
+slug: aac-communication-guide
 translationKey: parents-aac
 translationStatus: checked
 audience:
@@ -151,7 +151,7 @@ People may combine approaches according to the situation and the communication p
 
 The right system is not necessarily the most expensive or popular. It is the one that supports a particular person in the situations that matter to them.
 
-[Read more about PECS](/kz/en/parents/pecs/)
+[Read more about PECS](/kz/en/parents/pecs-picture-exchange-system/)
 
 ## How is an AAC system selected?
 
@@ -178,7 +178,7 @@ AAC outcomes depend on more than the user. Parents, educators and professionals 
 
 Create opportunities for **self-initiated communication**, not only repetition after an adult. If a system works only with one professional in a clinic, the skill may not carry over into everyday life.
 
-[Read more about communication partner training](/kz/en/parents/communication-partner-training/)
+[Read more about communication partner training](/kz/en/parents/communication-partners-training/)
 
 ## Generalisation matters
 
@@ -246,7 +246,7 @@ Difficulties can involve starting a conversation, staying on topic, taking turns
 
 The goal should not be to compel someone to mask autistic characteristics to appear more typical.
 
-[Speech and language support in autism](/kz/en/parents/speech-language-therapy/)
+[Speech and language support in autism](/kz/en/parents/speech-language-therapy-autism/)
 
 ### Echolalia and repeated speech
 
@@ -318,4 +318,4 @@ The number of symbols demonstrated by adults does not, on its own, prove communi
 
 ## Further reading
 
-For a closer look at everyday interactions, see [communication partner training](/kz/en/parents/communication-partner-training/). A broader overview is available in the [Russian-language guide to autism support approaches](/kz/ru/parents/vidy-pomoshchi-i-podderzhki-pri-autizme/).
+For a closer look at everyday interactions, see [communication partner training](/kz/en/parents/communication-partners-training/). A broader overview is available in the [Russian-language guide to autism support approaches](/kz/ru/parents/vidy-pomoshchi-i-podderzhki-pri-autizme/).

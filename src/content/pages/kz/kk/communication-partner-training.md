@@ -8,7 +8,7 @@ country: kz
 language: kk
 section: parents
 topic: approaches-to-support
-slug: communication-partner-training
+slug: kommunikatsiya-seriktesterin-okytu
 translationKey: parents-communication-partner-training
 translationStatus: checked
 audience:
@@ -195,4 +195,4 @@ Zhao және әріптестерінің жүйелі шолуына үш жа
 
 ## Оқуды жалғастыру
 
-Алдыңғы материал: [AAC қолдануды үлгілеу (орыс тілінде)](/kz/ru/parents/aided-language-modelling/). Келесі материал: [PECS: сурет алмасу арқылы коммуникация жүйесі](/kz/kk/parents/pecs/).
+Алдыңғы материал: [AAC қолдануды үлгілеу (орыс тілінде)](/kz/ru/parents/aided-language-modelling/). Келесі материал: [PECS: сурет алмасу арқылы коммуникация жүйесі](/kz/kk/parents/pecs-suret-almasu-kommunikatsiya/).

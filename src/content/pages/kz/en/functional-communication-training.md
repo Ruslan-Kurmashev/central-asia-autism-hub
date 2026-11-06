@@ -8,7 +8,7 @@ country: kz
 language: en
 section: parents
 topic: approaches-to-support
-slug: functional-communication-training
+slug: fct-functional-communication-training
 translationKey: parents-functional-communication-training
 translationStatus: checked
 audience:
@@ -93,7 +93,7 @@ The new communication method must be available when it is needed. If every reque
 
 FCT does not require spoken language. A short word, gesture, picture, communication board or speech-generating device might work. The choice depends on what the person understands, can use independently and can access at home, school and elsewhere.
 
-FCT and [augmentative and alternative communication (AAC)](/kz/en/parents/aac/) are compatible. AAC may provide the means for expressing the new message. [PECS](/kz/en/parents/pecs/) is one particular picture-exchange approach, but completing PECS is not a prerequisite for other types of AAC.
+FCT and [augmentative and alternative communication (AAC)](/kz/en/parents/aac-communication-guide/) are compatible. AAC may provide the means for expressing the new message. [PECS](/kz/en/parents/pecs-picture-exchange-system/) is one particular picture-exchange approach, but completing PECS is not a prerequisite for other types of AAC.
 
 Existing communication must also be recognised. If someone clearly communicates pain, refusal or a need through a gesture, word or behaviour, adults should not ignore it and insist on a particular card. The goal is accessible, independent communication rather than a prescribed response format.
 
@@ -156,4 +156,4 @@ FCT may be helpful when assessment identifies a need for a more accessible way t
 
 ## Continue reading
 
-Previous: [PECS: the Picture Exchange Communication System](/kz/en/parents/pecs/). Next: [Speech and language support in autism](/kz/en/parents/speech-language-therapy/). Related Russian-language guides: [Behaviour and learning](/kz/ru/parents/povedenie-i-obuchenie/) and [Communication and AAC](/kz/ru/parents/kommunikatsiya-i-aac/).
+Previous: [PECS: the Picture Exchange Communication System](/kz/en/parents/pecs-picture-exchange-system/). Next: [Speech and language support in autism](/kz/en/parents/speech-language-therapy-autism/). Related Russian-language guides: [Behaviour and learning](/kz/ru/parents/povedenie-i-obuchenie/) and [Communication and AAC](/kz/ru/parents/kommunikatsiya-i-aac/).

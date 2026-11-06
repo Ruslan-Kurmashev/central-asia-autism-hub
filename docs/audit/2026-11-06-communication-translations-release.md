@@ -14,7 +14,7 @@ Project owner explicitly requested publication in the conversation on 2026-11-06
 - Cross-checks against PubMed abstracts confirmed the numbers cited in the 2025 FCT meta-analysis (PMID 41464031), 2026 PECS meta-analysis (PMID 41442835) and parent-mediated intervention meta-analysis (PMID 40358871).
 - Frontmatter for each locale was checked for language, translationKey, stable source display date, release date, source list, draft status and translation status.
 - One Kazakh wording error was corrected before first release in the speech-language support article.
-- No cover files, approved PECS diagrams, article slugs, Russian originals, shared components, schemas or citation URLs were changed.
+- No cover files, approved PECS diagrams, Russian originals, shared components, schemas or citation URLs were changed. After the initial commit, localized slugs and cross-article links were adjusted to prevent Astro content collection ID collisions with the Russian source slugs. No previously published Russian URLs were modified.
 - PECS examples include existing image artwork with Russian wording. English and Kazakh captions explain this limitation. The artwork was retained instead of altering previously approved source images.
 
 ## Translation release inventory
@@ -35,3 +35,20 @@ Project owner explicitly requested publication in the conversation on 2026-11-06
 This is an AI-assisted comparative editorial check with direct owner publication authorization, not independent clinical peer review or native-speaker linguistic certification. The published article should not imply either. The project editor remains responsible for ongoing corrections. CI validates structural, metadata, accessibility and linking requirements but does not establish linguistic or clinical accuracy.
 
 First publication dates for translations are 2026-11-06. Original displayed dates remain 2026-09-18.
+
+## Route collision correction
+
+The first release commit reused source-language `slug` values in all three locales. Astro did not generate the ten translated routes, and Chromium QA failed when mapping changed source files to search-index entries. The following new locale-specific slugs correct this without changing the Astro collection loader or existing Russian routes:
+
+- `src/content/pages/kz/en/aac.md` -> `aac-communication-guide`
+- `src/content/pages/kz/en/speech-language-therapy.md` -> `speech-language-therapy-autism`
+- `src/content/pages/kz/en/communication-partner-training.md` -> `communication-partners-training`
+- `src/content/pages/kz/en/pecs.md` -> `pecs-picture-exchange-system`
+- `src/content/pages/kz/en/functional-communication-training.md` -> `fct-functional-communication-training`
+- `src/content/pages/kz/kk/aac.md` -> `aac-balamaly-kosymsha-kommunikatsiya`
+- `src/content/pages/kz/kk/speech-language-therapy.md` -> `autizm-soileu-tiline-koldau`
+- `src/content/pages/kz/kk/communication-partner-training.md` -> `kommunikatsiya-seriktesterin-okytu`
+- `src/content/pages/kz/kk/pecs.md` -> `pecs-suret-almasu-kommunikatsiya`
+- `src/content/pages/kz/kk/functional-communication-training.md` -> `fct-funktsionaldyk-kommunikatsiya`
+
+Re-run source validation, generated-page checks and browser QA on the corrective commit. The initial release commit alone does not establish publication.

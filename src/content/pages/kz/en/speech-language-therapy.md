@@ -8,7 +8,7 @@ country: kz
 language: en
 section: parents
 topic: approaches-to-support
-slug: speech-language-therapy
+slug: speech-language-therapy-autism
 translationKey: parents-speech-language-therapy
 translationStatus: checked
 audience:
@@ -102,7 +102,7 @@ If a child cannot reliably ask for help or a break, refuse, choose or report pai
 
 According to the individual's needs, communication may involve speech, gestures, pictures, boards, electronic AAC systems or a combination of methods. AAC can be explored alongside speech development, without waiting for other sessions to fail.
 
-[Read more about AAC](/kz/en/parents/aac/)
+[Read more about AAC](/kz/en/parents/aac-communication-guide/)
 
 ## When understanding spoken language is difficult
 
@@ -148,7 +148,7 @@ AAC is within the scope of speech-language support. A professional may help asse
 
 Contemporary AAC practice does not require a particular age, intelligence score or spoken language ability in advance. If current methods are not sufficient, AAC can be considered now.
 
-[How to choose and use AAC](/kz/en/parents/aac/)
+[How to choose and use AAC](/kz/en/parents/aac-communication-guide/)
 
 ## How parents, educators and other partners can help
 
@@ -229,4 +229,4 @@ Research supports some language and social-communication interventions, but it d
 - [Communication and AAC (Russian-language overview)](/kz/ru/parents/kommunikatsiya-i-aac/)
 - [Development, interaction and play (Russian-language article)](/kz/ru/parents/razvitie-vzaimodeystvie-i-igra/)
 - [Evaluating support (Russian-language article)](/kz/ru/parents/kak-ponyat-pomogaet-li-podderzhka/)
-- [AAC: augmentative and alternative communication](/kz/en/parents/aac/) and [PECS](/kz/en/parents/pecs/)
+- [AAC: augmentative and alternative communication](/kz/en/parents/aac-communication-guide/) and [PECS](/kz/en/parents/pecs-picture-exchange-system/)

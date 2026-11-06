@@ -8,7 +8,7 @@ country: kz
 language: kk
 section: parents
 topic: approaches-to-support
-slug: speech-language-therapy
+slug: autizm-soileu-tiline-koldau
 translationKey: parents-speech-language-therapy
 translationStatus: checked
 audience:
@@ -102,7 +102,7 @@ sources:
 
 Адамның мүмкіндігіне қарай ауызша сөйлеу, ишара, сурет, коммуникациялық тақта, электрондық AAC құралдары немесе бірнеше тәсіл бірге қолданылады. AAC-ті басқа сабақтар нәтиже бермегенше күтпей, сөйлеу дамуына қатар қарастыруға болады.
 
-[AAC туралы толығырақ](/kz/kk/parents/aac/)
+[AAC туралы толығырақ](/kz/kk/parents/aac-balamaly-kosymsha-kommunikatsiya/)
 
 ## Айтылған сөзді түсіну қиын болса
 
@@ -148,7 +148,7 @@ AAC сөйлеу мен тіл маманының қызметінен тыс с
 
 Қазіргі AAC тәсілдері белгілі жасқа, зият деңгейіне немесе ауызша сөйлеуге алдын ала жетуді талап етпейді. Қазіргі амалдар жеткіліксіз болса, жүйені қазірден қарастыруға болады.
 
-[AAC-ті қалай таңдап, қолдануға болады?](/kz/kk/parents/aac/)
+[AAC-ті қалай таңдап, қолдануға болады?](/kz/kk/parents/aac-balamaly-kosymsha-kommunikatsiya/)
 
 ## Ата-аналар, педагогтер және басқа адамдар қалай көмектеседі?
 
@@ -229,4 +229,4 @@ PECS, AAC, оральды-моторлық терапия немесе жеке 
 - [Коммуникация және AAC (орыс тіліндегі шолу)](/kz/ru/parents/kommunikatsiya-i-aac/)
 - [Даму, өзара әрекет және ойын (орыс тілінде)](/kz/ru/parents/razvitie-vzaimodeystvie-i-igra/)
 - [Қолдаудың нәтижесін бағалау (орыс тілінде)](/kz/ru/parents/kak-ponyat-pomogaet-li-podderzhka/)
-- [AAC: баламалы және қосымша коммуникация](/kz/kk/parents/aac/) және [PECS](/kz/kk/parents/pecs/)
+- [AAC: баламалы және қосымша коммуникация](/kz/kk/parents/aac-balamaly-kosymsha-kommunikatsiya/) және [PECS](/kz/kk/parents/pecs-suret-almasu-kommunikatsiya/)
