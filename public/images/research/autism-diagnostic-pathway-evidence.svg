@@ -1,1 +1,41 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1120 900" role="img" aria-labelledby="t d"><title id="t">Как проводится клиническая оценка аутизма</title><desc id="d">Концептуальная схема: обеспокоенность развитием, сбор истории, наблюдение и оценка общения, рассмотрение сопутствующих состояний, клиническое заключение и план поддержки. Дополнительные генетические исследования, ЭЭГ или МРТ возможны по медицинским показаниям, но сами по себе не являются тестами аутизма.</desc><rect width="1120" height="900" rx="22" fill="#f0f7fc"/><text x="48" y="63" font-family="Arial,sans-serif" font-size="29" font-weight="700" fill="#19486c">Клинический путь: от вопросов семьи к поддержке</text><g stroke="#a6c8dd" stroke-width="2" fill="#fff"><rect x="91" y="120" width="940" height="117" rx="17"/><rect x="91" y="289" width="940" height="117" rx="17"/><rect x="91" y="458" width="940" height="117" rx="17"/><rect x="91" y="627" width="940" height="117" rx="17"/></g><g fill="#307eac" stroke="#fff" stroke-width="4"><circle cx="158" cy="178" r="27"/><circle cx="158" cy="347" r="27"/><circle cx="158" cy="516" r="27"/><circle cx="158" cy="685" r="27"/></g><g font-family="Arial,sans-serif" text-anchor="middle" font-size="22" font-weight="700" fill="#fff"><text x="158" y="186">1</text><text x="158" y="355">2</text><text x="158" y="524">3</text><text x="158" y="693">4</text></g><g font-family="Arial,sans-serif" fill="#1e547a" font-weight="700" font-size="22"><text x="223" y="170">Поводы для оценки и история развития</text><text x="223" y="340">Общение, взаимодействие, сенсорика, поведение</text><text x="223" y="509">Медицинский контекст и сопутствующие состояния</text><text x="223" y="678">Совместное клиническое заключение и рекомендации</text></g><g font-family="Arial,sans-serif" fill="#50738b" font-size="17"><text x="223" y="206">Наблюдения семьи, условия и ранние этапы развития</text><text x="223" y="375">Оценка специалиста по установленным диагностическим критериям</text><text x="223" y="545">Генетика, слух, ЭЭГ, МРТ только по индивидуальным показаниям</text><text x="223" y="715">Профиль сильных сторон, потребностей и доступной поддержки</text></g><g stroke="#4b88b1" stroke-width="5" fill="none" stroke-linecap="round"><path d="M552 244 V278 l-10 -12 M552 278 l10 -12"/><path d="M552 413 V447 l-10 -12 M552 447 l10 -12"/><path d="M552 582 V616 l-10 -12 M552 616 l10 -12"/></g><rect x="90" y="785" width="940" height="78" rx="15" fill="#deedf7"/><text x="113" y="820" font-family="Arial,sans-serif" font-size="18" font-weight="700" fill="#2a5b7d">Важно:</text><text x="206" y="820" font-family="Arial,sans-serif" font-size="18" fill="#3c6884">схема ориентировочная, порядок может отличаться.</text><text x="113" y="845" font-family="Arial,sans-serif" font-size="17" fill="#3c6884">Никакое отдельное исследование не заменяет комплексную оценку.</text></svg>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1448 1086" width="1448" height="1086" lang="ru" role="img" aria-labelledby="figure-title figure-desc">
+<title id="figure-title">Клиническая оценка при подозрении на аутизм</title>
+<desc id="figure-desc">Четыре ориентировочных компонента клинической оценки: обращение и история развития, оценка коммуникации и поведения, медицинский контекст с дополнительными обследованиями по показаниям, клиническое заключение и рекомендации по поддержке. Последовательность может различаться.</desc>
+<style>
+  .heading {font:700 43px Arial,"DejaVu Sans",sans-serif;fill:#172b47}
+  .step-title {font:700 28px Arial,"DejaVu Sans",sans-serif;fill:#172b47}
+  .step-text {font:400 24px Arial,"DejaVu Sans",sans-serif;fill:#414e61}
+  .number {font:700 37px Arial,"DejaVu Sans",sans-serif;fill:#fff}
+  .note-label {font:700 28px Arial,"DejaVu Sans",sans-serif;fill:#172b47}
+  .note {font:400 22px Arial,"DejaVu Sans",sans-serif;fill:#36485d}
+</style>
+<rect width="1448" height="1086" fill="#f7f9fc"/>
+<text x="75" y="77" class="heading">Клиническая оценка при подозрении на аутизм</text>
+<rect x="67" y="128" width="1314" height="147" rx="17" fill="#fff" stroke="#a0bdd4" stroke-width="2"/>
+<circle cx="161" cy="201" r="36" fill="#367da6"/>
+<text x="161" y="212" text-anchor="middle" class="number">1</text>
+<text x="241" y="183" class="step-title"><tspan x="241" dy="0">Повод для обращения и анамнез развития</tspan></text>
+<text x="241" y="227" class="step-text"><tspan x="241" dy="0">Вопросы семьи, история развития ребёнка, повседневное функционирование</tspan><tspan x="241" dy="30">и ранние этапы развития</tspan></text>
+<rect x="67" y="328" width="1314" height="147" rx="17" fill="#fff" stroke="#a0bdd4" stroke-width="2"/>
+<circle cx="161" cy="401" r="36" fill="#367da6"/>
+<text x="161" y="412" text-anchor="middle" class="number">2</text>
+<text x="241" y="374" class="step-title"><tspan x="241" dy="0">Коммуникация, социальное взаимодействие, сенсорные особенности</tspan><tspan x="241" dy="35">и поведение</tspan></text>
+<text x="241" y="440" class="step-text"><tspan x="241" dy="0">Клиническое наблюдение и оценка по установленным диагностическим критериям</tspan></text>
+<rect x="67" y="528" width="1314" height="147" rx="17" fill="#fff" stroke="#a0bdd4" stroke-width="2"/>
+<circle cx="161" cy="601" r="36" fill="#367da6"/>
+<text x="161" y="612" text-anchor="middle" class="number">3</text>
+<text x="241" y="583" class="step-title"><tspan x="241" dy="0">Медицинский контекст и сопутствующие состояния</tspan></text>
+<text x="241" y="627" class="step-text"><tspan x="241" dy="0">По индивидуальным показаниям могут рассматриваться генетическое обследование,</tspan><tspan x="241" dy="30">оценка слуха, ЭЭГ, МРТ и другие исследования</tspan></text>
+<rect x="67" y="728" width="1314" height="147" rx="17" fill="#fff" stroke="#a0bdd4" stroke-width="2"/>
+<circle cx="161" cy="801" r="36" fill="#367da6"/>
+<text x="161" y="812" text-anchor="middle" class="number">4</text>
+<text x="241" y="783" class="step-title"><tspan x="241" dy="0">Клиническое заключение и рекомендации по поддержке</tspan></text>
+<text x="241" y="827" class="step-text"><tspan x="241" dy="0">Обсуждение сильных сторон, потребностей и доступных форм поддержки</tspan></text>
+<path d="M724 281 v26 m-12 -12 l12 12 12 -12" fill="none" stroke="#568ba9" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M724 481 v26 m-12 -12 l12 12 12 -12" fill="none" stroke="#568ba9" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M724 681 v26 m-12 -12 l12 12 12 -12" fill="none" stroke="#568ba9" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+<rect x="52" y="927" width="1344" height="115" rx="20" fill="#e5edf5"/>
+<text x="92" y="979" class="note-label">Важно:</text>
+<line x1="239" x2="239" y1="952" y2="1016" stroke="#a2bdce" stroke-width="2"/>
+<text x="264" y="970" class="note"><tspan x="264">Схема носит ориентировочный характер. Последовательность и набор этапов</tspan><tspan x="264" dy="32">могут различаться. Ни одно исследование не заменяет комплексную клиническую оценку.</tspan></text>
+</svg>
