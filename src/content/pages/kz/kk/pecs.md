@@ -10,7 +10,7 @@ section: parents
 topic: approaches-to-support
 slug: pecs
 translationKey: parents-pecs
-translationStatus: pending
+translationStatus: checked
 audience:
   - parents
   - families
@@ -19,10 +19,12 @@ editor: Ruslan Kurmashev
 riskLevel: lower
 disclaimerType: informational
 conflictOfInterest: "Мүдделер қақтығысы мәлімделмеген."
+publishedAt: "2026-11-06"
+updatedAt: "2026-11-06"
 originalPublishedAt: "2026-09-18"
 displayPublishedAt: "2026-09-18"
 reviewDueAt: 2027-03-18
-draft: true
+draft: false
 keyPoints:
   - "PECS - баламалы және қосымша коммуникацияның (AAC) бір нақты тәсілі, бүкіл AAC ұғымының баламасы емес."
   - "Зерттеулер кейбір коммуникациялық нәтижелерді, әсіресе өздігінен қатынас бастау мен өтініш жасауды қолдайды, бірақ ауызша сөйлеудің дамуына кепіл болмайды."

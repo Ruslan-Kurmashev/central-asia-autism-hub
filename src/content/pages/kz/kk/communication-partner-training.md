@@ -10,7 +10,7 @@ section: parents
 topic: approaches-to-support
 slug: communication-partner-training
 translationKey: parents-communication-partner-training
-translationStatus: pending
+translationStatus: checked
 audience:
   - parents
   - families
@@ -19,10 +19,12 @@ editor: Ruslan Kurmashev
 riskLevel: lower
 disclaimerType: informational
 conflictOfInterest: "Мүдделер қақтығысы мәлімделмеген."
+publishedAt: "2026-11-06"
+updatedAt: "2026-11-06"
 originalPublishedAt: "2026-09-18"
 displayPublishedAt: "2026-09-18"
 reviewDueAt: 2027-03-18
-draft: true
+draft: false
 keyPoints:
   - "Қарым-қатынас баланың дағдыларына ғана емес, әңгімелесушілердің әрекетіне де байланысты."
   - "Серіктестерді оқыту олардың жауап беруін, AAC қолдануын және баланың кейбір коммуникациялық нәтижелерін жақсарта алады."

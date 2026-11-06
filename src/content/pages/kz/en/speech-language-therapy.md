@@ -10,7 +10,7 @@ section: parents
 topic: approaches-to-support
 slug: speech-language-therapy
 translationKey: parents-speech-language-therapy
-translationStatus: pending
+translationStatus: checked
 audience:
   - parents
   - families
@@ -19,10 +19,12 @@ editor: Ruslan Kurmashev
 riskLevel: moderate
 disclaimerType: informational
 conflictOfInterest: "No conflicts of interest declared."
+publishedAt: "2026-11-06"
+updatedAt: "2026-11-06"
 originalPublishedAt: "2026-09-18"
 displayPublishedAt: "2026-09-18"
 reviewDueAt: 2027-03-18
-draft: true
+draft: false
 keyPoints:
   - "Speech and language support is a professional field, not one specific intervention."
   - "Evaluate evidence for the specific goal, such as comprehension, language use, functional or social communication, speech sounds, motor speech or AAC."

@@ -10,7 +10,7 @@ section: parents
 topic: approaches-to-support
 slug: functional-communication-training
 translationKey: parents-functional-communication-training
-translationStatus: pending
+translationStatus: checked
 audience:
   - parents
   - families
@@ -19,10 +19,12 @@ editor: Ruslan Kurmashev
 riskLevel: moderate
 disclaimerType: medical
 conflictOfInterest: "No conflicts of interest declared."
+publishedAt: "2026-11-06"
+updatedAt: "2026-11-06"
 originalPublishedAt: "2026-09-18"
 displayPublishedAt: "2026-09-18"
 reviewDueAt: 2027-03-18
-draft: true
+draft: false
 keyPoints:
   - "FCT starts with a functional assessment and consideration of medical, sensory and environmental causes, not with suppressing behaviour."
   - "The alternative communication method must be accessible and lead to a meaningful response from others."

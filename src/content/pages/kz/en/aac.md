@@ -10,7 +10,7 @@ section: parents
 topic: approaches-to-support
 slug: aac
 translationKey: parents-aac
-translationStatus: pending
+translationStatus: checked
 audience:
   - parents
   - families
@@ -19,10 +19,12 @@ editor: Ruslan Kurmashev
 riskLevel: moderate
 disclaimerType: informational
 conflictOfInterest: "No conflicts of interest declared."
+publishedAt: "2026-11-06"
+updatedAt: "2026-11-06"
 originalPublishedAt: "2026-09-18"
 displayPublishedAt: "2026-09-18"
 reviewDueAt: 2027-03-18
-draft: true
+draft: false
 keyPoints:
   - "AAC can be considered early, without age, cognitive or language prerequisites."
   - "Research does not indicate that AAC prevents speech development."

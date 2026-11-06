@@ -10,7 +10,7 @@ section: parents
 topic: approaches-to-support
 slug: communication-partner-training
 translationKey: parents-communication-partner-training
-translationStatus: pending
+translationStatus: checked
 audience:
   - parents
   - families
@@ -19,10 +19,12 @@ editor: Ruslan Kurmashev
 riskLevel: lower
 disclaimerType: informational
 conflictOfInterest: "No conflicts of interest declared."
+publishedAt: "2026-11-06"
+updatedAt: "2026-11-06"
 originalPublishedAt: "2026-09-18"
 displayPublishedAt: "2026-09-18"
 reviewDueAt: 2027-03-18
-draft: true
+draft: false
 keyPoints:
   - "Communication depends on the responses of communication partners as well as the child's skills."
   - "Training can improve partners' responsiveness, AAC use and some child communication outcomes."

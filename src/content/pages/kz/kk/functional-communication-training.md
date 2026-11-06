@@ -10,7 +10,7 @@ section: parents
 topic: approaches-to-support
 slug: functional-communication-training
 translationKey: parents-functional-communication-training
-translationStatus: pending
+translationStatus: checked
 audience:
   - parents
   - families
@@ -19,10 +19,12 @@ editor: Ruslan Kurmashev
 riskLevel: moderate
 disclaimerType: medical
 conflictOfInterest: "Мүдделер қақтығысы мәлімделмеген."
+publishedAt: "2026-11-06"
+updatedAt: "2026-11-06"
 originalPublishedAt: "2026-09-18"
 displayPublishedAt: "2026-09-18"
 reviewDueAt: 2027-03-18
-draft: true
+draft: false
 keyPoints:
   - "FCT мінез-құлықты басудан емес, функционалдық бағалаудан және медициналық, сенсорлық, орта факторларын тексеруден басталады."
   - "Баламалы қарым-қатынас тәсілі қолжетімді болып, адамның хабарын басқалар түсініп, оған жауап беруі керек."
