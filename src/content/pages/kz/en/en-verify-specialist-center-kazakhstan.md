@@ -31,7 +31,7 @@ keyPoints:
   - "Where a medical licence is required, verify the licensee, status and permitted activity through the official eGov/eLicense search."
   - "The 2026 Law on Psychological Activity contains phased provisions, including a registration transition, absence from a developing registry alone is not proof of a breach."
   - "Ask for written fees, goals, qualifications, cancellation terms and evidence for any claimed benefits before paying."
-  - "Before psychological help begins, ask how informed consent by the client or a child's legal representative is obtained, including separate permission for audio or video recordings."
+  - "Before psychological help begins, ask how informed consent by the client or a child's legal representative is obtained, including permission for audio or video recordings."
   - "Consumers are entitled to information about the provider and service, and service prices must be stated in writing in tenge."
 versionNote: "7 November 2026: aligned with updated Russian guidance on the psychology law commencement, psychologist professional standards, consent requirements, the register implementation report as of 30 October and consumer information rights. AI-assisted comparison, no independent legal or native-language review claimed."
 evidenceLimitations: "Legal information checked against Kazakhstan official sources on 7 November 2026. Psychologist registry implementation is described from a ministry report dated 30 October 2026 and may have changed since then. Requirements depend on the service, role and legal entity. This guide is not individual legal advice and does not certify any provider. The updated English text has not undergone independent professional language or legal review."
@@ -141,7 +141,7 @@ According to the [Ministry of Labour report as of 30 October 2026](https://www.g
 
 Therefore, **absence from a developing registry alone does not establish a violation** without checking the transition and current procedure. Equally, the law must not be described as entirely inoperative. Specialist medical care is regulated separately.
 
-Before psychological assistance begins, the psychologist should explain the goals and methods and obtain informed consent from the client or the legal representative when required. Under the law, audio or video recording and third-party access to those recordings require separate informed consent. See [Articles 8 and 11 of the law](https://adilet.zan.kz/rus/docs/Z2600000332) and the [official consent form](https://adilet.zan.kz/rus/docs/V2600039918). Ask how recordings are retained and who can access them.
+Before psychological assistance begins, the psychologist should explain the goals and methods and obtain informed consent from the client or the legal representative when required. Under the law, audio or video recording and third-party access to recordings require informed consent. Ask exactly which uses the consent covers. See [Articles 8 and 11 of the law](https://adilet.zan.kz/rus/docs/Z2600000332) and the [official consent form](https://adilet.zan.kz/rus/docs/V2600039918). Ask how recordings are retained and who can access them.
 
 You can review the [Law on Psychological Activity on Adilet (official Russian text)](https://adilet.zan.kz/rus/docs/Z2600000332). Adilet also provides an [unofficial English translation of this law](https://www.adilet.zan.kz/eng/docs/Z2600000332), which should be read alongside the official legal text.
 
@@ -192,6 +192,8 @@ If a centre claims measurable outcomes, ask **which goal** will be assessed, **u
 Checking documents can reduce risk but **does not guarantee quality or results**.
 
 ## Warning signs
+
+[Article 18 of the Law on Psychological Activity](https://adilet.zan.kz/rus/docs/Z2600000332) explicitly prohibits psychologists from guaranteeing a particular outcome, including in advertising. Different types of services may have additional rules.
 
 Be cautious when a provider:
 
