@@ -1300,3 +1300,12 @@ The owner supplied `image(20261105-163040).png` for the same six-card figure. It
 | Local file | Author/source | Type | Editorial meaning |
 | --- | --- | --- | --- |
 | `public/images/editorial/pecs/pecs-example-rights-cards-kazakh-owner-approved-2026-11-07.webp` | Kazakh-language image `қазақша_коммуникация_тақталары.png`, generated with AI assistance and expressly approved by the project owner for replacing the six Russian-labelled rights-and-help cards in the KK PECS article on 2026-11-07. Original source SHA-256 `1b894545869b5d97abe04dcd4e18c8a62b004ab525475b39dfae636d47d5c9f0`. Site derivative SHA-256 `9a1efb507d8c85b17dba5c3cb784f4b0a41c57fdccba439e7edd1a8edcf86e1f`. No third-party stock licence or official PECS affiliation is claimed. | Optimised WebP, 1402 x 1122 px, 91,848 bytes, Git blob `8b0b589489fbc90a8a22089b6291b85f73d0a75e` | Six cards with labels ЖОҚ, ТОҚТА, КӨМЕКТЕС, ҮЗІЛІС, АУЫРАДЫ, ДӘРЕТХАНА. Communication rights, safety and help examples, not official PECS symbols. Only the KK article image reference changes. Russian and English articles retain existing illustration. |
+
+## Clinical testing comparison, owner-approved academic redesign (2026-11-07)
+
+- File: `public/images/research/autism-test-purpose-matrix.svg`.
+- Provenance: Original AutismHub explanatory SVG updated using the owner's approved academic 2-by-2 design reference. The publication asset is a separately typeset site-native vector adaptation, not the generated PNG.
+- Design: Four labeled panels (MRI, EEG, genetic investigations, laboratory tests), white surfaces, pale blue-gray header bands, restrained navy lettering and thin borders. No duplicate title or note is embedded in the illustration, because these are supplied by the article.
+- Editorial purpose: Each method addresses a different medical question and may be considered only when clinically indicated. The graphic is educational, not a diagnostic test or an indication to order all listed studies.
+- Rights: Project-owned original SVG and owner-approved redesign, with no external stock artwork.
+- Accessibility: Embedded SVG title/description and nearby selectable text comparison in the article. The original image path is retained to preserve existing article links.
