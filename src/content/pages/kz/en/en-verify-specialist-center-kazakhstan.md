@@ -78,8 +78,8 @@ sources:
     note: "Official government service for medical activity licensing."
     accessedAt: 2026-10-09
   - title: "Check permits and licences"
-    url: "https://egov.kz/cms/ru/services/proverka-razresheniy-i-licenziy"
-    organisation: "eGov.kz"
+    url: "https://www.gov.kz/services/3173?lang=ru"
+    organisation: "gov.kz / eLicense"
     note: "Free state service for searching permits and checking their current status."
     accessedAt: 2026-10-09
   - title: "How to verify the validity of a licence or permit"
@@ -118,7 +118,7 @@ It would be misleading to apply exactly the same legal test to every professiona
 
 Healthcare activities are subject to specific licensing rules. Do not rely solely on a screenshot of a licence supplied by the centre.
 
-The official [eGov service for checking permits and licences](https://egov.kz/cms/ru/services/proverka-razresheniy-i-licenziy) links to **eLicense**, Kazakhstan's electronic licensing portal. The state lookup is free and offers quick and advanced searches, including by business identification number (BIN), individual identification number (IIN), document number and status.
+The [official gov.kz permits and licences service page](https://www.gov.kz/services/3173?lang=ru) links to **eLicense**, Kazakhstan's electronic licensing portal. The [direct eLicense permit search](https://elicense.kz/LicensingContent/SimpleSearchLicense) is also available without registration. The state lookup is free and offers quick and advanced searches, including by business identification number (BIN), individual identification number (IIN), document number and status.
 
 Check **more than whether a document exists**. Compare:
 
@@ -207,14 +207,14 @@ Be cautious when a provider:
 
 ## Next steps
 
-To check the legal status of healthcare services, use Kazakhstan's [official licence and permit search](https://egov.kz/cms/ru/services/proverka-razresheniy-i-licenziy) and our [step-by-step guide](/central-asia-autism-hub/kz/en/help-kazakhstan/verify-medical-licence-kazakhstan/).
+To check the legal status of healthcare services, use Kazakhstan's [official licence and permit search](https://www.gov.kz/services/3173?lang=ru) and our [step-by-step guide](/central-asia-autism-hub/kz/en/help-kazakhstan/verify-medical-licence-kazakhstan/).
 
 For further questions about interventions themselves, the [Russian-language guide to choosing autism support](/central-asia-autism-hub/kz/ru/parents/kak-vybrat-spetsialista-i-pomoshch-pri-autizme/) explains how to consider evidence and fit.
 
 ## Official resources to verify
 
 1. [Law No. 332-VIII on Psychological Activity, 2 July 2026 (Russian text)](https://adilet.zan.kz/rus/docs/Z2600000332).
-2. [eGov: check licences and permits](https://egov.kz/cms/ru/services/proverka-razresheniy-i-licenziy).
+2. [eGov: check licences and permits](https://www.gov.kz/services/3173?lang=ru).
 3. [eGov: how to verify the validity of a licence](https://egov.kz/cms/ru/articles/bus_lic_akk/license-checking).
 4. [eGov: medical activity licence service](https://egov.kz/cms/ru/online-services/for_busunesses/2F487pass_mz).
 5. [Standard qualification characteristics for teachers, Order No. 338](https://adilet.zan.kz/rus/docs/V090005750_).
