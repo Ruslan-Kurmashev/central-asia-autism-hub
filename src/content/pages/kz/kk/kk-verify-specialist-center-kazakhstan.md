@@ -78,8 +78,8 @@ sources:
     note: "Медициналық қызметті лицензиялаудың мемлекеттік рәсімі."
     accessedAt: 2026-10-09
   - title: "Рұқсаттар мен лицензияларды тексеру"
-    url: "https://egov.kz/cms/ru/services/proverka-razresheniy-i-licenziy"
-    organisation: "eGov.kz"
+    url: "https://www.gov.kz/services/3173?lang=ru"
+    organisation: "gov.kz / eLicense"
     note: "Лицензиялар мен рұқсаттардың қолданыстағы мәртебесін тексеретін тегін қызмет."
     accessedAt: 2026-10-09
   - title: "Берілген лицензияның немесе рұқсаттың заңдылығын тексеру"
@@ -118,7 +118,7 @@ sources:
 
 Медициналық қызмет түрлеріне арнайы лицензиялау қолданылады. Орталық сайтындағы лицензия фотосына ғана сенбеңіз.
 
-[eGov порталындағы рұқсаттар мен лицензияларды тексеру қызметі](https://egov.kz/cms/ru/services/proverka-razresheniy-i-licenziy) арқылы **eLicense** жүйесіне өтуге болады. Мемлекеттік іздеу **тегін**, жылдам және кеңейтілген іздеу мүмкіндіктері бар. Бизнес-сәйкестендіру нөмірі (**БСН**), жеке сәйкестендіру нөмірі (**ЖСН**), құжат нөмірі және мәртебесі арқылы іздеуге болады.
+[gov.kz сайтындағы рұқсаттар мен лицензияларды тексеру қызметі](https://www.gov.kz/services/3173?lang=ru) арқылы **eLicense** жүйесіне өтуге болады. [eLicense сайтындағы рұқсат құжаттарын тікелей іздеу](https://elicense.kz/LicensingContent/SimpleSearchLicense) де тіркелусіз қолжетімді. Мемлекеттік іздеу **тегін**, жылдам және кеңейтілген іздеу мүмкіндіктері бар. Бизнес-сәйкестендіру нөмірі (**БСН**), жеке сәйкестендіру нөмірі (**ЖСН**), құжат нөмірі және мәртебесі арқылы іздеуге болады.
 
 Тексеру кезінде мыналарды салыстырыңыз:
 
@@ -207,14 +207,14 @@ sources:
 
 ## Келесі қадам
 
-Медициналық лицензияны тексеру үшін [ресми eGov сервисін](https://egov.kz/cms/ru/services/proverka-razresheniy-i-licenziy) пайдаланыңыз. [Медициналық лицензияны тексеру жөніндегі қазақша нұсқаулық](/central-asia-autism-hub/kz/kk/help-kazakhstan/meditsinalyk-litsenziya-tekseru-kazakstan/) қадамдарды түсіндіреді.
+Медициналық лицензияны тексеру үшін [ресми eGov сервисін](https://www.gov.kz/services/3173?lang=ru) пайдаланыңыз. [Медициналық лицензияны тексеру жөніндегі қазақша нұсқаулық](/central-asia-autism-hub/kz/kk/help-kazakhstan/meditsinalyk-litsenziya-tekseru-kazakstan/) қадамдарды түсіндіреді.
 
 Ұсынылған әдістің дәлелділігі туралы [аутизмі бар балаға маман таңдаудың орыс тіліндегі нұсқаулығын](/central-asia-autism-hub/kz/ru/parents/kak-vybrat-spetsialista-i-pomoshch-pri-autizme/) қарауға болады.
 
 ## Өзіңіз тексере алатын ресми дереккөздер
 
 1. [2026 жылғы «Психологиялық қызмет туралы» заң (қазақша)](https://adilet.zan.kz/kaz/docs/Z2600000332).
-2. [eGov: рұқсаттар мен лицензияларды тексеру](https://egov.kz/cms/ru/services/proverka-razresheniy-i-licenziy).
+2. [eGov: рұқсаттар мен лицензияларды тексеру](https://www.gov.kz/services/3173?lang=ru).
 3. [eGov: лицензияның заңдылығын тексеру жөніндегі нұсқаулық](https://egov.kz/cms/ru/articles/bus_lic_akk/license-checking).
 4. [eGov: медициналық қызметке лицензия беру](https://egov.kz/cms/ru/online-services/for_busunesses/2F487pass_mz).
 5. [Педагог лауазымдарына қойылатын біліктілік талаптары, № 338 бұйрық](https://adilet.zan.kz/rus/docs/V090005750_).
