@@ -1309,3 +1309,9 @@ The owner supplied `image(20261105-163040).png` for the same six-card figure. It
 - Editorial purpose: Each method addresses a different medical question and may be considered only when clinically indicated. The graphic is educational, not a diagnostic test or an indication to order all listed studies.
 - Rights: Project-owned original SVG and owner-approved redesign, with no external stock artwork.
 - Accessibility: Embedded SVG title/description and nearby selectable text comparison in the article. The original image path is retained to preserve existing article links.
+
+## Kazakh PECS sentence-strip illustration, owner-approved (2026-11-07)
+
+| Local file | Creator and approval | Format and provenance | Editorial role |
+| --- | --- | --- | --- |
+| `public/images/editorial/pecs/pecs-example-sentence-strip-kazakh-owner-approved-2026-11-07.webp` | Owner-supplied Kazakh image `autismhub_phrase_kk(1).png`, explicitly requested for replacement in the Kazakh PECS article on 2026-11-07. Owner-approved localisation, not an official PECS training image. | Original PNG 1600 x 700, 65,240 bytes, SHA-256 `8c841257aa99a9a24fec8724869b63752a6312f71771911b8ab35a1485a811a0`. Optimised WebP 1600 x 700, 35,466 bytes, SHA-256 `e6139673552efe702bc37e5709a262b1a2c58d3214259aa679d083a5761c0637`, Git blob `171871fc5927566e7180a5e7cd13e227b0a2a72f`. No external stock licence claimed. | Demonstrates combining pictorial "ДОП" and written "АЛҒЫМ КЕЛЕДІ" to convey a request. Replaces the Russian-labelled sentence-strip illustration in the Kazakh article only. Original Russian and English article artwork is unchanged. |
