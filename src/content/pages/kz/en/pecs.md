@@ -110,7 +110,7 @@ Pictures can show particular objects, activities or needs. The symbol should mak
 
 **Communication must not be limited to requesting objects.** People need ways to say no or stop, report pain, ask for help, request a break and say that they need the toilet.
 
-![Six example cards for no, stop, help, break, pain and toilet. The original illustration contains Russian labels.](/central-asia-autism-hub/images/editorial/pecs/pecs-example-rights-cards-owner-approved-2026-11-05.webp)
+![Six illustrated communication cards with English labels: NO, STOP, HELP, BREAK, IT HURTS and TOILET.](/central-asia-autism-hub/images/editorial/pecs/pecs-example-rights-cards-english-owner-approved-2026-11-08.webp)
 
 *AutismHub examples for different communication functions. If a person already expresses a message clearly by gesture, speech or a device, do not require them to use a card before responding.*
 
