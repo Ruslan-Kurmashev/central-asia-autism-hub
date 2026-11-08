@@ -254,8 +254,8 @@ export const KZ_ANNOUNCEMENTS: KazakhstanAnnouncement[] = [
       en: 'Pexels stock photo of stationery on a green surface, illustrating learning and not the actual Astana course.',
     },
     imageKind: 'stock-photo',
-    isPublished: true,
-    sourceVerified: true,
+    isPublished: false,
+    sourceVerified: false,
   },
   {
     id: 'almaty-sensory-integration-training-2026-11-14',
