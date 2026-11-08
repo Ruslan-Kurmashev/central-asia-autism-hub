@@ -10,7 +10,7 @@ section: parents
 topic: approaches-to-support
 slug: minez-kulykty-funktsionaldyk-bagalau
 translationKey: parents-functional-behavior-assessment
-translationStatus: pending
+translationStatus: checked
 audience:
   - parents
   - families
@@ -19,12 +19,13 @@ editor: Ruslan Kurmashev
 riskLevel: moderate
 disclaimerType: medical
 conflictOfInterest: "Мүдделер қақтығысы мәлімделмеген."
+publishedAt: "2026-11-08"
 originalPublishedAt: "2026-09-26T19:56:00Z"
 displayPublishedAt: "2026-09-26T19:56:00Z"
 updatedAt: "2026-11-08"
 reviewDueAt: 2027-03-26
-versionNote: "2026 жылғы 8 қарашадағы орысша түпнұсқа негізінде AI көмегімен дайындалған қазақша аударма. Жауапты редактордың тілдік және медициналық мазмұнды тексеруі күтілуде. Алғашқы жарияланым күні сақталған."
-draft: true
+versionNote: "Орысша түпнұсқадан AI көмегімен аударылды. Жоба редакторы мәтінді 2026 жылғы 8 қарашада тексеріп, жариялауды мақұлдады. Бастапқы материалдың жарияланған күні барлық тілдік нұсқада бірдей көрсетіледі. Аударма алғаш рет 2026 жылғы 8 қарашада жарияланды. Тәуелсіз сыртқы рецензия жүргізілді деп көрсетілмейді."
+draft: false
 keyPoints:
   - "Мінез-құлықты функционалдық бағалау (FBA) - емдеу тәсілі емес, жағдайды зерттеп, қолдауды жоспарлау үдерісі."
   - "Мінез-құлықтың функциясы туралы қорытынды жасамас бұрын ауырсынуды, денсаулықты, коммуникацияны, сенсорлық және әлеуметтік ортаны, күн тәртібіндегі өзгерістерді және қауіпсіздікті ескеру қажет."

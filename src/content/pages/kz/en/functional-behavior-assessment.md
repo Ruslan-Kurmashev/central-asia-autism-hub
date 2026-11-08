@@ -10,7 +10,7 @@ section: parents
 topic: approaches-to-support
 slug: functional-behavior-assessment
 translationKey: parents-functional-behavior-assessment
-translationStatus: pending
+translationStatus: checked
 audience:
   - parents
   - families
@@ -19,12 +19,13 @@ editor: Ruslan Kurmashev
 riskLevel: moderate
 disclaimerType: medical
 conflictOfInterest: "No conflicts of interest declared."
+publishedAt: "2026-11-08"
 originalPublishedAt: "2026-09-26T19:56:00Z"
 displayPublishedAt: "2026-09-26T19:56:00Z"
 updatedAt: "2026-11-08"
 reviewDueAt: 2027-03-26
-versionNote: "AI-assisted English translation of the Russian source revision dated 8 November 2026. Pending the responsible editor's language and medical-content review. The original publication date is retained."
-draft: true
+versionNote: "AI-assisted translation of the Russian original, reviewed and approved by the project editor on 8 November 2026. The original publication date is displayed consistently across language versions. The translation was first published on 8 November 2026. No independent external review is claimed."
+draft: false
 keyPoints:
   - "Functional behavior assessment (FBA) is an assessment and planning process, not a therapy."
   - "Before attributing behavior to a function, consider pain, physical and mental health, communication, sensory and social environments, changes in routine and safety."
