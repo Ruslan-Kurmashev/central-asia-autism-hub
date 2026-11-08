@@ -118,7 +118,7 @@ Pictures can show particular objects, activities or needs. The symbol should mak
 
 Later PECS phases combine pictures. For example, the images for "I want" and "ball" can form a meaningful request.
 
-![An example sentence strip combining "I want" with a separate picture of a ball. The artwork contains Russian text.](/central-asia-autism-hub/images/editorial/pecs/pecs-example-sentence-strip-approved-2026-11-06.webp)
+![English-language example phrase, combining a card labelled I WANT with an illustrated ball card labelled A BALL, connected by a plus symbol.](/central-asia-autism-hub/images/editorial/pecs/pecs-example-sentence-strip-english-owner-approved-2026-11-08.webp)
 
 *An illustrative AutismHub example, not an official PECS template. It explains the idea of combining pictures, not a protocol for independently conducting a session.*
 
