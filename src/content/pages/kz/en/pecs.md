@@ -104,9 +104,9 @@ A **visual schedule** shows the order of events, a **choice board** helps someon
 
 Pictures can show particular objects, activities or needs. The symbol should make sense to the individual and be easy to access. Some children understand drawings best, while others prefer photographs of familiar things.
 
-![Six example cards depicting water, an apple, a ball, a book, going outside and more. The images contain Russian labels.](/central-asia-autism-hub/images/editorial/pecs/pecs-example-request-cards-user-supplied-2026-11-05.webp)
+![Six illustrated communication cards with English labels: WATER, APPLE, BALL, BOOK, WALK and MORE.](/central-asia-autism-hub/images/editorial/pecs/pecs-example-request-cards-english-owner-approved-2026-11-08.webp)
 
-*Editorial examples of cards for requests and choices, not official PECS symbols. Labels in this existing illustration are in Russian.*
+*English-language examples of cards for requests and choices, not official PECS symbols.*
 
 **Communication must not be limited to requesting objects.** People need ways to say no or stop, report pain, ask for help, request a break and say that they need the toilet.
 
