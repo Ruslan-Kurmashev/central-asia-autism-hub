@@ -8,7 +8,7 @@ country: kz
 language: en
 section: parents
 topic: approaches-to-support
-slug: functional-behavior-assessment
+slug: functional-behavior-assessment-guide
 translationKey: parents-functional-behavior-assessment
 translationStatus: checked
 audience:
