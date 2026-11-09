@@ -61,6 +61,17 @@ for (const locale of locales) {
       coversBySlug.set(slug, picture);
       if (!picture.startsWith('/central-asia-autism-hub/images/editorial/photos/')) {
         errors.push(id + ': nonlocal or noneditorial help cover: ' + picture);
+      } else {
+        // A URL rendered into HTML is not evidence that its JPEG exists on disk.
+        const assetPath = path.join('public', picture.replace('/central-asia-autism-hub/', ''));
+        try {
+          const bytes = await readFile(assetPath);
+          if (bytes.length < 1000 || bytes[0] !== 0xff || bytes[1] !== 0xd8 || bytes[2] !== 0xff) {
+            errors.push(id + ': cover is missing valid JPEG content: ' + assetPath);
+          }
+        } catch {
+          errors.push(id + ': missing featured JPEG asset: ' + assetPath);
+        }
       }
       const other = translationCovers.get(key);
       if (other && other !== picture) {
