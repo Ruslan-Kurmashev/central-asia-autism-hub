@@ -13,7 +13,7 @@ audience:
   - parents
   - families
   - general
-versionNote: "10 October 2026: English translation checked against the Russian guide dated 9 October 2026, including consumer protection rules, the written complaint process and official eGov licensing checks."
+versionNote: "9 November 2026: clarified consumer rights, licence status, fiscal receipts, psychological informed consent and complaint procedures. Original publication date preserved. Updated translation is not independently legally reviewed."
 featuredImage: "/central-asia-autism-hub/images/editorial/photos/kz-help-008.jpg"
 featuredImageAlt: "A person signing a contract, illustrating the importance of checking service terms before payment."
 author: Ruslan Kurmashev
@@ -23,7 +23,7 @@ disclaimerType: informational
 conflictOfInterest: "No conflict of interest declared."
 publishedAt: 2026-10-10
 originalPublishedAt: 2026-10-09
-updatedAt: 2026-10-27
+updatedAt: 2026-11-09
 reviewDueAt: 2026-12-01
 draft: false
 keyPoints:
@@ -90,6 +90,9 @@ Check that the name on the agreement and payment documents matches the provider 
 
 ## 2. Obtain a clear description of the service before paying
 
+Kazakhstan's Consumer Protection Law requires work and service prices to be provided **in writing in tenge**. Check the total price, advance payments, extra charges and the terms for ending an agreement. A contract term that unlawfully restricts consumer rights does not become lawful merely because a parent signs it.
+
+
 Make sure the written terms explain at least:
 
 - the name and nature of the service
@@ -111,6 +114,9 @@ Medical, psychological and educational services are governed by different profes
 
 ## 4. Check licences through the official service where required
 
+Use the [official eLicense check](https://egov.kz/cms/ru/articles/bus_lic_akk/license-checking) to compare the licensee's registered name or BIN/IIN, the covered activity, document number, current status and restrictions. An advertising screenshot is not proof that a licence remains valid. Not every educational, psychological or developmental support service requires a **medical** licence.
+
+
 For activities that require a licence, use Kazakhstan's **eGov/eLicense** system.
 
 Licence checks establish the legal status of a regulated activity. They **do not establish the scientific effectiveness** of a proposed autism intervention.
@@ -118,6 +124,9 @@ Licence checks establish the legal status of a regulated activity. They **do not
 See [How to verify a medical licence through eGov and eLicense](/central-asia-autism-hub/kz/en/help-kazakhstan/verify-medical-licence-kazakhstan/) for the practical process.
 
 ## 5. Ask for proof of payment
+
+Where a transaction legally requires a cash register (KKM), the provider must issue a fiscal receipt. An ordinary sales receipt or bank-transfer message does not replace it. [State Revenue Committee guidance](https://www.gov.kz/org/kgd-karaganda/press/news/details/1263490?lang=ru) explains the distinction. However, under Article 18 of the Consumer Protection Law, a missing receipt or contract does **not** remove the right to prove a purchase using other admissible evidence, including messages, photographs, video and witness testimony.
+
 
 Official consumer protection guidance stresses the importance of retaining documents showing that goods, work or services have been purchased.
 
@@ -132,6 +141,9 @@ Keep, as applicable:
 The format of legally required receipt documents depends on the transaction and applicable rules.
 
 ## 6. Separate promises from measurable goals
+
+Where the service is psychological assistance, [Kazakhstan's Law on Psychological Activity](https://adilet.zan.kz/rus/docs/Z2600000332) requires written informed consent from the recipient or a child's legal representative, subject to statutory exceptions. The purpose and methods of assistance should be explained. Informed consent is also required for audio/video recording and third-party access to recordings. Permission for sessions does not automatically authorise public release of a child's video. Certification under Article 17 of this law takes effect on **1 January 2028**, not in 2026.
+
 
 Be cautious about statements such as:
 
@@ -154,6 +166,9 @@ For a longer programme, agree beforehand on **when progress will be reviewed** a
 
 ## If a dispute arises
 
+Under Article 42-4, the complaint can be delivered in person with proof of receipt, sent by registered mail with delivery confirmation, or emailed to an address previously provided by the service provider. The **ten calendar days** run from the provider receiving the complaint, not from the date it was drafted. This response period does not guarantee an automatic refund.
+
+
 1. Keep the agreement, receipts, service description, correspondence, booking records and any evidence of sessions actually provided.
 2. Send a **written complaint to the service provider**. Identify the service promised, what happened, the problem and the remedy requested. Retain proof that the complaint was sent and received.
 3. Under **Article 42-4 of Kazakhstan's Law on Consumer Protection**, the provider must consider the complaint. If it disagrees with the consumer's demands, it must provide a **reasoned, documented written response within 10 calendar days** of receiving the complaint.
@@ -171,7 +186,8 @@ See the [official guidance on submitting a complaint (Russian)](https://www.gov.
 - [ ] An applicable licence has been verified **if the activity is licensed**.
 - [ ] The specialist's education and professional role have been checked.
 - [ ] Goals are realistic and the approach to measuring progress is described.
-- [ ] It is clear what proof of payment will be issued.
+- [ ] It is clear whether a fiscal receipt is required and what proof of payment will be issued.
+- [ ] For psychological services, informed consent, confidentiality and recording arrangements have been explained.
 - [ ] The written offer, contract terms and correspondence have been saved.
 
 ## Your next step
