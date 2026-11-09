@@ -21,7 +21,7 @@ riskLevel: moderate
 disclaimerType: informational
 conflictOfInterest: "Конфликт интересов не заявлен."
 publishedAt: 2026-10-09
-updatedAt: 2026-10-27
+updatedAt: 2026-11-09
 reviewDueAt: 2026-12-01
 draft: false
 keyPoints:
@@ -144,3 +144,5 @@ sources:
 ## Следующий шаг
 
 Перед выбором детского сада выпишите 3-5 конкретных условий, без которых ребёнку будет трудно участвовать в обычном дне. Затем сравнивайте организации именно по этим условиям, а не только по названию программы.
+
+Если пока неясно, куда обращаться за образовательной или медицинской оценкой, начните со статьи [«Помощь при аутизме в Казахстане: с чего начать»](/central-asia-autism-hub/kz/ru/help-kazakhstan/help-kazakhstan-start/). О дальнейшем переходе в школу читайте в материале [об инклюзивном обучении и поддержке](/central-asia-autism-hub/kz/ru/help-kazakhstan/autism-school-kazakhstan/).
