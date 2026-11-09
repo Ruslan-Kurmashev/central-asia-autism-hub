@@ -819,13 +819,14 @@
   margin-top: 0.28rem;
 }
 
-/* Markdown task lists already include checkboxes: suppress list bullets only there. */
-.article-v2.parents-article-body .article-v2__body ul:has(> li input[type='checkbox']) {
+/* Markdown task lists render a checkbox per item, so suppress list bullets
+   in every article section, including Kazakhstan guides. */
+.article-v2__body ul:has(> li input[type='checkbox']) {
   list-style: none;
   padding-inline-start: 0;
 }
 
-.article-v2.parents-article-body .article-v2__body li:has(input[type='checkbox']) {
+.article-v2__body li:has(input[type='checkbox']) {
   list-style: none;
 }
 
