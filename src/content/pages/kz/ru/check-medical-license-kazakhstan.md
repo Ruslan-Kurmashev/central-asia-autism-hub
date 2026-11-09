@@ -22,7 +22,7 @@ riskLevel: moderate
 disclaimerType: informational
 conflictOfInterest: "Конфликт интересов не заявлен."
 publishedAt: 2026-10-09
-updatedAt: 2026-10-27
+updatedAt: 2026-11-09
 reviewDueAt: 2026-12-01
 draft: false
 keyPoints:
@@ -140,3 +140,5 @@ sources:
 ## Следующий шаг
 
 После проверки лицензии отдельно оцените квалификацию конкретного специалиста, содержание услуги, доказательность заявленного метода, стоимость и правила прекращения программы.
+
+Для этого воспользуйтесь материалом [«Как проверить специалиста или центр в Казахстане»](/central-asia-autism-hub/kz/ru/help-kazakhstan/verify-specialist-center-kazakhstan/). Перед оплатой дополнительно пройдите [проверку условий услуги и договора](/central-asia-autism-hub/kz/ru/help-kazakhstan/check-service-before-payment-kazakhstan/).

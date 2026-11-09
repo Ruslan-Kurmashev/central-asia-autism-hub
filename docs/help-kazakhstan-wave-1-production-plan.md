@@ -1,6 +1,6 @@
 # Help in Kazakhstan - Wave 1 production plan
 
-Status: production preparation complete; all eight content files remain `draft: true`.
+Status: all eight Wave 1 guides published in RU/KK/EN as of 9 November 2026. This document preserves the original production plan and launch requirements; it does not certify independent legal or native-language review. Original article publication dates remain as recorded in frontmatter.
 
 ## Editorial principles
 
@@ -50,7 +50,7 @@ Likewise, the existing Parent-section article on choosing a specialist remains t
 9. Assign a unique free, non-AI featured visual following the Kazakhstan visual policy.
 10. Add publication, update and review dates only at release.
 
-## Recommended publication order
+## Historical publication order
 
 1. KZ-HLP-001 - Help in Kazakhstan: where to start
 2. KZ-HLP-002 - Development concerns: where to go
@@ -61,4 +61,4 @@ Likewise, the existing Parent-section article on choosing a specialist remains t
 7. KZ-HLP-007 - Rights and social support
 8. KZ-HLP-008 - Check a service before payment
 
-This order gives the section a usable route before adding the later organisation directory, detailed benefit pages and complaint-specific pages.
+The eight articles are now available as a published navigation series. Later organisation directory, detailed benefit pages and complaint-specific pages remain separate potential follow-up work, not included in Wave 1.

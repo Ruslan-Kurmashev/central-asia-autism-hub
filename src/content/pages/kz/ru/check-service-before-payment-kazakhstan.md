@@ -193,4 +193,4 @@ sources:
 2. Квалификация конкретного специалиста.
 3. Доказательность и безопасность конкретного метода.
 
-Только сочетание этих трёх проверок даёт семье полноценную картину.
+Только сочетание этих трёх проверок даёт семье более полную картину. Подробный маршрут: [как проверить специалиста или центр](/central-asia-autism-hub/kz/ru/help-kazakhstan/verify-specialist-center-kazakhstan/) и [как проверить медицинскую лицензию через eGov/eLicense](/central-asia-autism-hub/kz/ru/help-kazakhstan/check-medical-license-kazakhstan/).
