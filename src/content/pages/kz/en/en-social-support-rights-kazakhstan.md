@@ -30,7 +30,7 @@ keyPoints:
   - "Kazakhstan's Social Code provides for disability-related social protection measures, including state benefits and specialised social services."
   - "MSE is a separate procedure for disability determination and identifying necessary social protection measures. PMPK educational assessment does not replace it."
   - "Benefit amounts and individual service rules can change, so figures must be checked against up-to-date government sources."
-  - "Eligibility for particular specialised social services depends on the applicable criteria, individual rehabilitation and habilitation plan (IPAR), local availability and service delivery arrangements."
+  - "Eligibility for specialised social services depends on applicable grounds for need and an individual assessment, disability status and IPAR are not universal requirements for every form of service."
 evidenceLimitations: "Benefit amounts, eligibility rules, online procedures and the availability of services vary over time and by location. This article provides a durable overview, not individual legal advice or a guarantee of entitlement. Verify current benefit rates and application requirements through official sources before acting."
 sources:
   - title: "Social Code of the Republic of Kazakhstan"
