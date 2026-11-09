@@ -48,7 +48,7 @@ sources:
     url: "https://www.gov.kz/services/3000?lang=ru"
     organisation: "gov.kz"
     note: "Официальная государственная услуга."
-    accessedAt: 2026-10-09
+    accessedAt: 2026-11-09
   - title: "Пособие матери или отцу, воспитывающему ребёнка с инвалидностью"
     url: "https://www.gov.kz/services/3030?lang=ru"
     organisation: "gov.kz / Министерство труда и социальной защиты населения РК"
@@ -64,13 +64,7 @@ sources:
     url: "https://www.gov.kz/situations/234/intro?lang=ru"
     organisation: "gov.kz"
     note: "Официальная информация о получателях и видах специальных социальных услуг на дому."
-    accessedAt: 2026-10-09
-  - title: "О повышении социальных выплат с 1 января 2026 года"
-    url: "https://www.gov.kz/memleket/entities/enbek-kostanay/press/news/details/1140014?lang=ru"
-    organisation: "Министерство труда и социальной защиты населения Республики Казахстан"
-    publicationYear: 2026
-    note: "Используется только для проверки актуальных размеров выплат на дату публикации, суммы не должны становиться вечнозелёным текстом."
-    accessedAt: 2026-10-09
+    accessedAt: 2026-11-09
 ---
 
 ## Коротко
