@@ -156,6 +156,8 @@ PMPK carries out psychological, medical and pedagogical assessments and offers g
 
 If a child already attends preschool or school, families can first discuss difficulties with the teacher and the institution's psychological and pedagogical support service (SPPS). Under [Order No. 92](https://adilet.zan.kz/rus/docs/V2500036047), this service assesses educational needs and helps arrange appropriate conditions, involving PMPK where indicated. **A PMPK conclusion is not a universal prerequisite for every educational adjustment.** Separately regulated specialist support has its own eligibility conditions, including a PMPK conclusion.
 
+See the practical guides on [preschool and educational support](/central-asia-autism-hub/kz/en/help-kazakhstan/autism-kindergarten-support-kazakhstan/) and [school enrolment, PMPK and ongoing support](/central-asia-autism-hub/kz/en/help-kazakhstan/autism-school-enrolment-support-kazakhstan/).
+
 ### What changed in 2026?
 
 Rules for the PMPK state service were amended by Order No. **180-NҚ dated 26 June 2026**. The changes took effect in July 2026.
