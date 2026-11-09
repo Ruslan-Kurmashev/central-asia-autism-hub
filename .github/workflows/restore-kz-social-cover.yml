@@ -28,7 +28,7 @@ jobs:
           test "$(stat -c %s public/images/editorial/photos/kz-help-007.jpg)" -gt 30000
           git config user.name 'github-actions[bot]'
           git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
-          git add public/images/editorial/photos/kz-help-007.jpg
+          git add -f public/images/editorial/photos/kz-help-007.jpg
           git rm .github/workflows/restore-kz-social-cover.yml
           git commit -m 'Restore licensed Pexels cover for Kazakhstan social support guide'
           git push origin HEAD:audit/social-support-rights-kz-20261109
