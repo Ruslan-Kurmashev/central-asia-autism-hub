@@ -52,7 +52,7 @@ sources:
     publicationYear: 2026
     accessedAt: 2026-10-10
   - title: "Admission to a general education school"
-    url: "https://www.gov.kz/situations/15/80?lang=ru"
+    url: "https://www.gov.kz/situations/16/80"
     organisation: "gov.kz"
     note: "National first-grade admission window in 2026, region-specific staggered opening dates were announced separately."
     accessedAt: 2026-10-09
