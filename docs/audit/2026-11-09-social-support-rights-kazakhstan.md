@@ -28,7 +28,7 @@ RU является исходной версией. KK и EN синхрониз
 
 Исходные `publishedAt` и `originalPublishedAt`, `translationKey`, slugs, раздел, автор, обложка и alt-текст не изменены, `updatedAt` заменено на `2026-11-09` во всех трёх языках.
 
-Обложка в метаданных RU/KK/EN: `public/images/editorial/photos/kz-help-007.jpg`, фотограф **Sora Shimazaki**, исходная страница Pexels https://www.pexels.com/photo/notebook-and-clipboard-with-papers-placed-on-desk-with-folders-and-pens-5668469/ . Лицензионная запись присутствует в `docs/editorial-image-sources.md`, но **самого JPG-файла в дереве GitHub `main` на момент аудита нет**. Этот дефект существовал до PR. Нельзя считать проверку физического существования обложки пройденной. Не заменять ранее выбранное изображение произвольной фотографией или AI-картинкой. Нужна исходная копия того же лицензированного фото, добавленная отдельно с реальной визуальной проверкой.
+Обложка RU/KK/EN: `public/images/editorial/photos/kz-help-007.jpg`, фотограф **Sora Shimazaki**, оригинальный фотоснимок Pexels № 5668469 https://www.pexels.com/photo/notebook-and-clipboard-with-papers-placed-on-desk-with-folders-and-pens-5668469/ . Лицензионная запись уже существует в `docs/editorial-image-sources.md`. JPG ранее отсутствовал в GitHub, поэтому был восстановлен из источника Pexels без замены композиции или генерации. Новый файл проверен на формат `image/jpeg`, размер 240147 байт. Git blob SHA `672ad50ea9b97cd7d75bf09a9ede1663270d4464`. Факт публикации изображения в GitHub Pages проверяется отдельно после деплоя.
 
 Новые положения добавлены в реестр доказательств как ASD-0034 и ASD-0035 со статусом `pending`, без фиктивной пометки `verified`.
 
