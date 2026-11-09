@@ -23,7 +23,7 @@ conflictOfInterest: "No conflict of interest declared."
 versionNote: "4 November 2026: updated to reflect the Russian source's clarification of educational support without an automatic PMPK prerequisite, practical PMPK application requirements, and the different legal grounds for social services. AI-assisted semantic comparison, no independent native-language or legal review claimed."
 publishedAt: 2026-10-10
 originalPublishedAt: 2026-10-09
-updatedAt: 2026-11-04
+updatedAt: 2026-11-09
 reviewDueAt: 2026-12-01
 draft: false
 keyPoints:
@@ -226,6 +226,8 @@ MSE evaluates functioning and the need for support, not only the name of a diagn
 ## 6. If you need social services or other support
 
 Eligibility for social support depends on the **particular measure**, not simply on an autism diagnosis or disability status. Some benefits and services specifically intended for people with disabilities require that status and other statutory conditions. However, Articles 133 and 140 of [Kazakhstan's Social Code](https://adilet.zan.kz/rus/docs/K2300000224) also provide for assessment of needs for special social services on grounds other than established disability. Families can ask about social service needs before a decision by MSE, without assuming entitlement to a benefit.
+
+For the practical route through MSE, individual support plans and benefit applications, see [Rights and social support for families in Kazakhstan](/central-asia-autism-hub/kz/en/help-kazakhstan/family-rights-social-support-kazakhstan/).
 
 The Social Code covers, among other matters:
 
