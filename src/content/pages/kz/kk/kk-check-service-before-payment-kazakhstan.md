@@ -34,6 +34,18 @@ keyPoints:
   - "Даулы жағдайға дайын болу үшін шартты, чекті, хабарламаларды және жарнамадағы уәделерді сақтаңыз."
 evidenceLimitations: "Ақшаны қайтару және дауды шешу құқықтары шартқа, көрсетілген қызметтің көлеміне, дәлелдерге және қолданылатын заңға байланысты. Бұл жалпы тексеру тізімі жеке заң кеңесі емес және әр жағдайда ақшаның толық қайтарылатынына кепіл бермейді."
 sources:
+  - title: "Лицензияның мәртебесін тексеру"
+    url: "https://egov.kz/cms/ru/articles/bus_lic_akk/license-checking"
+    organisation: "eGov.kz"
+    publicationYear: 2026
+    note: "Official 2026 explanation of licensed activities, licence status search and search fields."
+    accessedAt: 2026-11-09
+  - title: "Фискалдық және тауарлық чектің айырмашылығы"
+    url: "https://www.gov.kz/org/kgd-karaganda/press/news/details/1263490?lang=ru"
+    organisation: "Комитет государственных доходов Республики Казахстан"
+    publicationYear: 2026
+    note: "Official guidance distinguishing the fiscal receipt from an ordinary sales receipt."
+    accessedAt: 2026-11-09
   - title: "Тұтынушылардың құқықтарын қорғау туралы Қазақстан Республикасының Заңы"
     url: "https://adilet.zan.kz/rus/docs/Z100000274_"
     organisation: "«Әділет» құқықтық ақпарат жүйесі"
