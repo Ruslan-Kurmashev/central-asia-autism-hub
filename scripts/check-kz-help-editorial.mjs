@@ -20,12 +20,18 @@ let tableRows = 0;
 // Key contextual routes make the eight country guides usable as one pathway.
 // The generic internal-link checker also verifies that these targets resolve.
 const requiredCountryGuidanceLinks = {
+  'ru/help-kazakhstan-start': ['autism-kindergarten-kazakhstan', 'autism-school-kazakhstan'],
+  'kk/autizm-komek-kazakstan-bastau': ['autizm-balabaksha-kazakstan', 'autizm-mektep-kazakstan'],
+  'en/autism-support-kazakhstan-start': [
+    'autism-kindergarten-support-kazakhstan',
+    'autism-school-enrolment-support-kazakhstan',
+    'family-rights-social-support-kazakhstan',
+  ],
   'ru/check-medical-license-kazakhstan': ['verify-specialist-center-kazakhstan', 'check-service-before-payment-kazakhstan'],
   'ru/autism-kindergarten-kazakhstan': ['help-kazakhstan-start', 'autism-school-kazakhstan'],
   'ru/autism-school-kazakhstan': ['autism-kindergarten-kazakhstan', 'help-kazakhstan-start'],
   'ru/social-support-rights-kazakhstan': ['help-kazakhstan-start'],
   'ru/check-service-before-payment-kazakhstan': ['verify-specialist-center-kazakhstan', 'check-medical-license-kazakhstan'],
-  'en/autism-support-kazakhstan-start': ['family-rights-social-support-kazakhstan'],
 };
 
 const field = (fm, name) => {
