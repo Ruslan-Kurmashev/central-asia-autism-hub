@@ -33,6 +33,18 @@ keyPoints:
   - "Чеки, договор, переписку и рекламные обещания стоит сохранять на случай спора или жалобы."
 evidenceLimitations: "Конкретные права при возврате денег и порядок разрешения спора зависят от договора, вида услуги, фактически оказанных услуг и обстоятельств случая. Статья должна давать общий чек-лист и официальные каналы, но не индивидуальную юридическую консультацию."
 sources:
+  - title: "Проверка актуального статуса лицензии"
+    url: "https://egov.kz/cms/ru/articles/bus_lic_akk/license-checking"
+    organisation: "eGov.kz"
+    publicationYear: 2026
+    note: "Official 2026 explanation of licensed activities, licence status search and search fields."
+    accessedAt: 2026-11-09
+  - title: "Отличие фискального и товарного чека"
+    url: "https://www.gov.kz/org/kgd-karaganda/press/news/details/1263490?lang=ru"
+    organisation: "Комитет государственных доходов Республики Казахстан"
+    publicationYear: 2026
+    note: "Official guidance distinguishing the fiscal receipt from an ordinary sales receipt."
+    accessedAt: 2026-11-09
   - title: "О защите прав потребителей"
     url: "https://adilet.zan.kz/rus/docs/Z100000274_"
     organisation: "ИПС «Әділет»"
