@@ -22,7 +22,7 @@ disclaimerType: informational
 conflictOfInterest: "No conflict of interest declared."
 publishedAt: 2026-10-10
 originalPublishedAt: 2026-10-09
-updatedAt: 2026-10-20
+updatedAt: 2026-11-09
 reviewDueAt: 2027-01-09
 draft: false
 keyPoints:
@@ -134,6 +134,8 @@ Benefit amounts may change when statutory calculation indices or the law change.
 This is a distinct part of the social protection system. Not every private autism intervention programme is a "specialised social service" within the legal meaning of that term.
 
 Eligibility, assessed needs, the service provider and regional availability matter when considering a particular form of support.
+
+Specialised social services are not restricted solely to people who have an established disability status. Kazakhstan's Social Code recognises different circumstances in which an individual or family may be assessed as needing specialised social services. Eligibility and the extent of support depend on an individual needs assessment under the applicable rules. If a child has not been determined to have a disability, the family can still ask the local social protection authority whether another recognised basis for assessment applies. This does not guarantee entitlement to a particular service or a free place.
 
 ## Where to find reliable information
 
