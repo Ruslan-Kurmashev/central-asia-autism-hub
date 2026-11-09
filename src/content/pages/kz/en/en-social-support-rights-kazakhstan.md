@@ -38,18 +38,18 @@ sources:
     organisation: "Adilet legal information system"
     publicationYear: 2023
     note: "Reviewed Articles 131-133, 140, 154-157, 170, 175-177 and 183-184 in the version accessible on 9 November 2026. Amendments effective from 2027 require a separate commencement check."
-    accessedAt: 2026-10-09
+    accessedAt: 2026-11-09
   - title: "Rules for medical and social expert assessment"
     url: "https://adilet.zan.kz/rus/docs/V2300032922"
     organisation: "Adilet legal information system / Ministry of Labour and Social Protection of Kazakhstan"
     publicationYear: 2023
     note: "MSE Order No. 260 amended by Order No. 329 of 11 August 2026 (effective 25 August). Reviewed points 4-9, 21, 51 and 54-55."
-    accessedAt: 2026-10-09
+    accessedAt: 2026-11-09
   - title: "Application for the state social disability benefit"
     url: "https://www.gov.kz/services/3000?lang=ru"
     organisation: "gov.kz"
     note: "Official government application service for a state social benefit relating to disability."
-    accessedAt: 2026-10-09
+    accessedAt: 2026-11-09
   - title: "Allowance for a parent or guardian raising a child with a disability"
     url: "https://www.gov.kz/services/3030?lang=ru"
     organisation: "gov.kz / Ministry of Labour and Social Protection of Kazakhstan"
@@ -65,13 +65,7 @@ sources:
     url: "https://www.gov.kz/situations/234/intro?lang=ru"
     organisation: "gov.kz"
     note: "Official information about eligibility and specialised social support delivered at home."
-    accessedAt: 2026-10-09
-  - title: "Increase in social payments from 1 January 2026"
-    url: "https://www.gov.kz/memleket/entities/enbek-kostanay/press/news/details/1140014?lang=ru"
-    organisation: "Ministry of Labour and Social Protection of Kazakhstan"
-    publicationYear: 2026
-    note: "Used solely to check benefit amounts on the specified date. Payment figures should not be treated as permanently applicable."
-    accessedAt: 2026-10-09
+    accessedAt: 2026-11-09
 ---
 
 ## In brief
