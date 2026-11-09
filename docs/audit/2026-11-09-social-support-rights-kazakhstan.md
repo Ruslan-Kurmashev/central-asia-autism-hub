@@ -28,7 +28,7 @@ RU является исходной версией. KK и EN синхрониз
 
 Исходные `publishedAt` и `originalPublishedAt`, `translationKey`, slugs, раздел, автор, обложка и alt-текст не изменены, `updatedAt` заменено на `2026-11-09` во всех трёх языках.
 
-Изображение: `public/images/editorial/photos/kz-help-007.jpg`, фотограф **Sora Shimazaki**, источник Pexels https://www.pexels.com/photo/notebook-and-clipboard-with-papers-placed-on-desk-with-folders-and-pens-5668469/ . Запись о происхождении имеется в `docs/editorial-image-sources.md`. Фотография носит исключительно иллюстративный характер.
+Обложка в метаданных RU/KK/EN: `public/images/editorial/photos/kz-help-007.jpg`, фотограф **Sora Shimazaki**, исходная страница Pexels https://www.pexels.com/photo/notebook-and-clipboard-with-papers-placed-on-desk-with-folders-and-pens-5668469/ . Лицензионная запись присутствует в `docs/editorial-image-sources.md`, но **самого JPG-файла в дереве GitHub `main` на момент аудита нет**. Этот дефект существовал до PR. Нельзя считать проверку физического существования обложки пройденной. Не заменять ранее выбранное изображение произвольной фотографией или AI-картинкой. Нужна исходная копия того же лицензированного фото, добавленная отдельно с реальной визуальной проверкой.
 
 Новые положения добавлены в реестр доказательств как ASD-0034 и ASD-0035 со статусом `pending`, без фиктивной пометки `verified`.
 
