@@ -1,0 +1,58 @@
+name: Restore approved KZ help editorial photos
+on:
+  push:
+    branches:
+      - audit/kz-help-wave1-cover-integrity-20261109
+    paths:
+      - .github/workflows/restore-kz-help-wave1-photos.yml
+permissions:
+  contents: write
+jobs:
+  restore:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: audit/kz-help-wave1-cover-integrity-20261109
+          persist-credentials: true
+      - name: Restore originals and remove temporary workflow
+        shell: bash
+        run: |
+          set -euo pipefail
+          mkdir -p public/images/editorial/photos
+          curl --fail --location --retry 3 --connect-timeout 20 --max-time 120 \
+            'https://images.pexels.com/photos/10341112/pexels-photo-10341112.jpeg?auto=compress&cs=tinysrgb&w=1200' \
+            --output public/images/editorial/photos/kz-help-001.jpg
+          test "$(file --brief --mime-type public/images/editorial/photos/kz-help-001.jpg)" = 'image/jpeg'
+          test "$(stat -c %s public/images/editorial/photos/kz-help-001.jpg)" -gt 30000
+          curl --fail --location --retry 3 --connect-timeout 20 --max-time 120 \
+            'https://images.pexels.com/photos/6692939/pexels-photo-6692939.jpeg?auto=compress&cs=tinysrgb&w=1200' \
+            --output public/images/editorial/photos/kz-help-002.jpg
+          test "$(file --brief --mime-type public/images/editorial/photos/kz-help-002.jpg)" = 'image/jpeg'
+          test "$(stat -c %s public/images/editorial/photos/kz-help-002.jpg)" -gt 30000
+          curl --fail --location --retry 3 --connect-timeout 20 --max-time 120 \
+            'https://images.pexels.com/photos/4101416/pexels-photo-4101416.jpeg?auto=compress&cs=tinysrgb&w=1200' \
+            --output public/images/editorial/photos/kz-help-003.jpg
+          test "$(file --brief --mime-type public/images/editorial/photos/kz-help-003.jpg)" = 'image/jpeg'
+          test "$(stat -c %s public/images/editorial/photos/kz-help-003.jpg)" -gt 30000
+          curl --fail --location --retry 3 --connect-timeout 20 --max-time 120 \
+            'https://images.pexels.com/photos/8970647/pexels-photo-8970647.jpeg?auto=compress&cs=tinysrgb&w=1200' \
+            --output public/images/editorial/photos/kz-help-004.jpg
+          test "$(file --brief --mime-type public/images/editorial/photos/kz-help-004.jpg)" = 'image/jpeg'
+          test "$(stat -c %s public/images/editorial/photos/kz-help-004.jpg)" -gt 30000
+          curl --fail --location --retry 3 --connect-timeout 20 --max-time 120 \
+            'https://images.pexels.com/photos/8923952/pexels-photo-8923952.jpeg?auto=compress&cs=tinysrgb&w=1200' \
+            --output public/images/editorial/photos/kz-help-005.jpg
+          test "$(file --brief --mime-type public/images/editorial/photos/kz-help-005.jpg)" = 'image/jpeg'
+          test "$(stat -c %s public/images/editorial/photos/kz-help-005.jpg)" -gt 30000
+          curl --fail --location --retry 3 --connect-timeout 20 --max-time 120 \
+            'https://images.pexels.com/photos/5905445/pexels-photo-5905445.jpeg?auto=compress&cs=tinysrgb&w=1200' \
+            --output public/images/editorial/photos/kz-help-006.jpg
+          test "$(file --brief --mime-type public/images/editorial/photos/kz-help-006.jpg)" = 'image/jpeg'
+          test "$(stat -c %s public/images/editorial/photos/kz-help-006.jpg)" -gt 30000
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add -f public/images/editorial/photos/kz-help-00{1..6}.jpg
+          git rm .github/workflows/restore-kz-help-wave1-photos.yml
+          git commit -m 'Restore registered original KZ Help Wave 1 photographs'
+          git push origin HEAD:audit/kz-help-wave1-cover-integrity-20261109
