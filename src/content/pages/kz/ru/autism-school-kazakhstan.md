@@ -51,7 +51,7 @@ sources:
     publicationYear: 2026
     accessedAt: 2026-10-10
   - title: "Зачисление в общеобразовательное учреждение"
-    url: "https://www.gov.kz/situations/15/80?lang=ru"
+    url: "https://www.gov.kz/situations/16/80"
     organisation: "gov.kz"
     note: "По состоянию на 2026 год: приём в 1 класс на 2026-2027 учебный год с 27 мая по 31 августа 2026 года, порядок подачи и условия приёма."
     accessedAt: 2026-10-09
