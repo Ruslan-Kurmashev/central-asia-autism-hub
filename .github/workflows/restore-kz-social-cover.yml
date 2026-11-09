@@ -1,0 +1,34 @@
+name: Restore original registered social-support cover
+on:
+  push:
+    branches:
+      - audit/social-support-rights-kz-20261109
+    paths:
+      - .github/workflows/restore-kz-social-cover.yml
+permissions:
+  contents: write
+jobs:
+  restore:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out the target branch
+        uses: actions/checkout@v4
+        with:
+          ref: audit/social-support-rights-kz-20261109
+          persist-credentials: true
+      - name: Restore verified original Pexels photo and remove temporary workflow
+        shell: bash
+        run: |
+          set -euo pipefail
+          mkdir -p public/images/editorial/photos
+          curl --fail --location --retry 3 --connect-timeout 20 --max-time 120 \
+            'https://images.pexels.com/photos/5668469/pexels-photo-5668469.jpeg?auto=compress&cs=tinysrgb&w=1200' \
+            --output public/images/editorial/photos/kz-help-007.jpg
+          test "$(file --brief --mime-type public/images/editorial/photos/kz-help-007.jpg)" = 'image/jpeg'
+          test "$(stat -c %s public/images/editorial/photos/kz-help-007.jpg)" -gt 30000
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add public/images/editorial/photos/kz-help-007.jpg
+          git rm .github/workflows/restore-kz-social-cover.yml
+          git commit -m 'Restore licensed Pexels cover for Kazakhstan social support guide'
+          git push origin HEAD:audit/social-support-rights-kz-20261109
