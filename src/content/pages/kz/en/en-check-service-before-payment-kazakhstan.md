@@ -32,6 +32,8 @@ keyPoints:
   - "If the activity requires a licence, verify its current status through the official government service, not just a promotional screenshot."
   - "Check professional qualifications separately from evidence that a proposed intervention is effective, these are different questions."
   - "Keep contracts, receipts, correspondence and advertising claims in case a dispute or complaint arises."
+  - "A missing fiscal receipt does not remove the right to establish payment using other admissible evidence."
+  - "Psychological assistance generally requires informed consent from the child’s legal representative, subject to statutory exceptions, and consent to audio/video recording."
 evidenceLimitations: "Refund rights and dispute resolution depend on the agreement, the actual service delivered, the evidence and the applicable law. This general checklist is not individual legal advice and does not guarantee a refund in any particular case."
 sources:
   - title: "Official licence status verification"
