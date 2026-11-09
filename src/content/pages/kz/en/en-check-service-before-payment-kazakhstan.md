@@ -34,6 +34,18 @@ keyPoints:
   - "Keep contracts, receipts, correspondence and advertising claims in case a dispute or complaint arises."
 evidenceLimitations: "Refund rights and dispute resolution depend on the agreement, the actual service delivered, the evidence and the applicable law. This general checklist is not individual legal advice and does not guarantee a refund in any particular case."
 sources:
+  - title: "Official licence status verification"
+    url: "https://egov.kz/cms/ru/articles/bus_lic_akk/license-checking"
+    organisation: "eGov.kz"
+    publicationYear: 2026
+    note: "Official 2026 explanation of licensed activities, licence status search and search fields."
+    accessedAt: 2026-11-09
+  - title: "Fiscal and ordinary sales receipts"
+    url: "https://www.gov.kz/org/kgd-karaganda/press/news/details/1263490?lang=ru"
+    organisation: "Комитет государственных доходов Республики Казахстан"
+    publicationYear: 2026
+    note: "Official guidance distinguishing the fiscal receipt from an ordinary sales receipt."
+    accessedAt: 2026-11-09
   - title: "Law on Consumer Protection"
     url: "https://adilet.zan.kz/rus/docs/Z100000274_"
     organisation: "Adilet legal information system"
