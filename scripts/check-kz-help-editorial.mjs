@@ -17,6 +17,17 @@ let checkedHomepageCards = 0;
 let checkedHeadings = 0;
 let tableRows = 0;
 
+// Key contextual routes make the eight country guides usable as one pathway.
+// The generic internal-link checker also verifies that these targets resolve.
+const requiredCountryGuidanceLinks = {
+  'ru/check-medical-license-kazakhstan': ['verify-specialist-center-kazakhstan', 'check-service-before-payment-kazakhstan'],
+  'ru/autism-kindergarten-kazakhstan': ['help-kazakhstan-start', 'autism-school-kazakhstan'],
+  'ru/autism-school-kazakhstan': ['autism-kindergarten-kazakhstan', 'help-kazakhstan-start'],
+  'ru/social-support-rights-kazakhstan': ['help-kazakhstan-start'],
+  'ru/check-service-before-payment-kazakhstan': ['verify-specialist-center-kazakhstan', 'check-medical-license-kazakhstan'],
+  'en/autism-support-kazakhstan-start': ['family-rights-social-support-kazakhstan'],
+};
+
 const field = (fm, name) => {
   const match = fm.match(new RegExp('^' + name + ':\\s*(.+)$', 'm'));
   return match?.[1]?.trim().replace(/^["']|["']$/g, '') ?? '';
@@ -50,6 +61,12 @@ for (const locale of locales) {
     const picture = field(fm, 'featuredImage');
     const alt = field(fm, 'featuredImageAlt');
     const status = field(fm, 'translationStatus');
+    for (const targetSlug of requiredCountryGuidanceLinks[locale + '/' + slug] ?? []) {
+      const target = '/central-asia-autism-hub/kz/' + locale + '/help-kazakhstan/' + targetSlug + '/';
+      if (!body.includes('](' + target + ')')) {
+        errors.push(id + ': missing important context navigation link to ' + target);
+      }
+    }
     if (field(fm, 'language') !== locale || !slug || !key) errors.push(id + ': invalid route or translation metadata');
     if (locale !== 'ru' && status !== 'checked') errors.push(id + ': unchecked published translation');
     if (!picture || alt.length < 25) errors.push(id + ': image or descriptive alternative missing');
