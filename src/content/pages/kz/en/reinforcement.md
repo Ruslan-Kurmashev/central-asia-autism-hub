@@ -10,7 +10,7 @@ section: parents
 topic: approaches-to-support
 slug: reinforcement
 translationKey: parents-reinforcement
-translationStatus: pending
+translationStatus: checked
 audience:
   - parents
   - families
@@ -24,8 +24,8 @@ updatedAt: 2026-11-10
 originalPublishedAt: 2026-09-26
 displayPublishedAt: 2026-09-26
 reviewDueAt: 2027-03-26
-draft: true
-versionNote: "Translated from the Russian edition updated on 10 November 2026, including two educational illustrations. The translation requires editorial language review before publication."
+draft: false
+versionNote: "Translated from the Russian edition on 10 November 2026 with AI assistance. Sections, citations, numerical claims, safety warnings and two figures were compared with the source. The project owner authorised publication on 10 November 2026. No independent language or clinical review was conducted."
 keyPoints:
   - "Reinforcement is a principle of learning, not a separate autism therapy."
   - "Positive reinforcement adds a consequence, while negative reinforcement removes or reduces an unpleasant condition. Negative reinforcement is not punishment."
