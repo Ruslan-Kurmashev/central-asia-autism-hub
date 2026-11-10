@@ -1361,3 +1361,15 @@ Both drawings are hypothetical educational examples, not documented treatment ou
 | --- | --- | --- |
 | `public/images/research/autism-biology-levels-diagram.svg` | AutismHub original educational diagram. The owner explicitly approved the more restrained, grayscale and blue-gray version in the project conversation on 2026-11-10. | Vector adaptation of the approved generated reference `как_биология_связана_с_аутизмом.png` (1672 x 941 px), preserving the Russian labels, four-part structure, research caveat, and academic palette. Replaces the earlier colorful version at the same asset URL in `src/content/pages/kz/ru/autism-biology-overview.md`. This is a conceptual illustration, not a confirmed biological causal pathway or clinical diagnostic test. No stock-photo license is claimed. |
 
+## Reinforcement: educational images translated to Kazakh and English (2026-11-10)
+
+The four language adaptations derive from the owner-approved Russian reinforcement illustrations. Their characters, sequencing, original visual style and scientific caveats were retained while all visible instructional text was translated. The translations were prepared in this conversation. They are **not** third-party photographs or independently clinically reviewed figures. The target-language article drafts require responsible editorial language review before publication.
+
+| Local project file | Source PNG, SHA-256 | Optimized WebP, SHA-256 | Git blob |
+| --- | --- | --- | --- |
+| `public/images/editorial/diagrams/reinforcement-positive-play-2026-11-10-en.webp` | `autismhub_reinforcement_positive_en.png`, `515cf803e49d75766072baddb75d2d9182eefc0f13f480a089d1516c937858e7` | `3c90674e28fa8087ef0f3a0437a73545547e41e689a0f03e9dbcd69bff0bba15` | `b266075010e536bf73bea441acb793ba36a531f2` |
+| `public/images/editorial/diagrams/reinforcement-negative-noise-2026-11-10-en.webp` | `autismhub_reinforcement_negative_en.png`, `b432616dc5294e9afb76a9dbc21b74ae32096b6f5e86d48d62bb3c636fb9bbd9` | `53ea0f0cbb86db6d3b54618fd6d20d2f39bbdfd1ea39c6e8ce4fc7a1a7e9f936` | `e4597e6bd0b4f8f5ef57e6440933d25dd477af08` |
+| `public/images/editorial/diagrams/reinforcement-positive-play-2026-11-10-kk.webp` | `autismhub_reinforcement_positive_kk.png`, `eb811b27bc897a3e05adbb9a6b52a81b46d3dd9809bd8e6b9cfc962378fd9012` | `22e88ea7f6e34f5e3a7a83de55471bf585610ed9573fd0cb0d7e4a6281abddb5` | `4f741d9ccab873fdaf745fb25252417e022169c8` |
+| `public/images/editorial/diagrams/reinforcement-negative-noise-2026-11-10-kk.webp` | `autismhub_reinforcement_negative_kk.png`, `cfaabed6f6e0a6bcf61163defad284be4d472c116f3b4fe31a123bb1612af238` | `07f1c550480d5e42e46d381aad0983f8dc40ab3967d3b760c865be9f7a7516cd` | `3c9771c65f8a88c8cc7325d9563849754530ff6e` |
+
+Each image retains three illustrated actions and a short explanatory note. The existing licensed article cover is reused without modification. Original PNGs are conversation files, not falsely represented as repository-hosted originals.
