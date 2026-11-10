@@ -1,0 +1,33 @@
+name: Restore first-month article registered stock cover
+on:
+  push:
+    branches:
+      - audit/first-30-days-after-diagnosis-20261110
+    paths:
+      - .github/workflows/restore-first-month-cover.yml
+permissions:
+  contents: write
+jobs:
+  restore:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: audit/first-30-days-after-diagnosis-20261110
+          persist-credentials: true
+      - name: Restore registered Pexels photograph and delete temporary workflow
+        shell: bash
+        run: |
+          set -euo pipefail
+          mkdir -p public/images/editorial/photos
+          curl --fail --location --retry 3 --connect-timeout 20 --max-time 120 \
+            'https://images.pexels.com/photos/5239918/pexels-photo-5239918.jpeg?auto=compress&cs=tinysrgb&w=1200' \
+            --output public/images/editorial/photos/parent-first-month-written-plan.jpg
+          test "$(file --brief --mime-type public/images/editorial/photos/parent-first-month-written-plan.jpg)" = 'image/jpeg'
+          test "$(stat -c %s public/images/editorial/photos/parent-first-month-written-plan.jpg)" -gt 30000
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add -f public/images/editorial/photos/parent-first-month-written-plan.jpg
+          git rm .github/workflows/restore-first-month-cover.yml
+          git commit -m 'Restore registered Pexels first-month article cover'
+          git push origin HEAD:audit/first-30-days-after-diagnosis-20261110
