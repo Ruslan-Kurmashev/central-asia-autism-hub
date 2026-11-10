@@ -19,7 +19,7 @@ editor: Ruslan Kurmashev
 publishedAt: "2026-10-28T22:48:55Z"
 originalPublishedAt: 2026-09-14
 displayPublishedAt: 2026-09-14
-updatedAt: "2026-10-28T22:48:55Z"
+updatedAt: 2026-11-10
 reviewDueAt: 2027-03-14
 riskLevel: moderate
 disclaimerType: medical
@@ -31,8 +31,26 @@ keyPoints:
   - "ASD medical diagnosis belongs to the psychiatric pathway, whereas PMPK primarily assesses the child's special educational needs."
   - "VKK makes formal medical decisions and, where justified, refers patients for MSE."
   - "An ASD diagnosis does not automatically confer disability status. MSE examines persistent functional impairments and limitations in daily activities."
-evidenceLimitations: "This article explains the general arrangements in Kazakhstan but cannot determine which decisions or documents a particular child needs. PMPK, VKK and MSE rules can change, and required documents depend on the reason for referral and the family's circumstances. Confirm current requirements with the relevant organisation before applying. The current legal status and latest editions of all cited acts could not be independently confirmed from the open text of Adilet in October 2026. Deadlines and document lists must therefore be checked against the primary legal sources."
+evidenceLimitations: "Provisions concerning PMPK, school support services, VKK and MSE have been compared with official texts accessible on 10 November 2026. This is general information, not individual legal or medical advice. Required documents, eligibility, deadlines and exceptions depend on the child's circumstances and the law in force when the family applies. These additions have not undergone independent legal or native-language review."
 sources:
+  - title: "Правила деятельности службы психолого-педагогического сопровождения в организациях образования"
+    url: "https://adilet.zan.kz/rus/docs/V2500036047"
+    organisation: "ИПС «Әділет» / государственный портал Казахстана"
+    publicationYear: 2025
+    note: "Приказ № 92, проверены основания сопровождения, работа СППС и случаи участия ПМПК."
+    accessedAt: 2026-11-10
+  - title: "Правила оказания государственных услуг в сфере психолого-педагогической поддержки"
+    url: "https://adilet.zan.kz/rus/docs/V2000020744"
+    organisation: "ИПС «Әділет» / государственный портал Казахстана"
+    publicationYear: 2020
+    note: "Учтены изменения приказа № 180-НҚ от 26 июня 2026 года, действующие с 12 июля 2026 года. Проверены способы обращения, бесплатность и сроки ПМПК."
+    accessedAt: 2026-11-10
+  - title: "Карточка государственной услуги ПМПК"
+    url: "https://www.gov.kz/services/4292?lang=ru"
+    organisation: "ИПС «Әділет» / государственный портал Казахстана"
+    publicationYear: 2025
+    note: "Ссылка для проверки актуального маршрута обращения и сроков обследования."
+    accessedAt: 2026-11-10
   - title: "Кодекс Республики Казахстан «О здоровье народа и системе здравоохранения»"
     url: "https://adilet.zan.kz/rus/docs/K2000000360"
     organisation: "ИПС «Әділет»"
@@ -166,6 +184,10 @@ Medical and educational pathways can operate in parallel:
 
 There is no universal rule requiring every family to complete the full medical pathway before contacting PMPK.
 
+If the child already attends preschool or school, **not every educational adjustment requires a prior PMPK conclusion**. Under [Order No. 92 governing school psychological and educational support services](https://adilet.zan.kz/rus/docs/V2500036047), educators and support staff may identify difficulties, assess needs, consult parents and arrange support within their remit. Certain specialised services for children with disabilities have additional requirements, including PMPK recommendations. This does not permit a school to refuse every form of assistance pending PMPK.
+
+**How to apply to PMPK.** The [state-service rules amended on 26 June 2026](https://adilet.zan.kz/rus/docs/V2000020744) allow applications directly to PMPK, through the digital government portal or via a mobile device registered with the portal. The state service is free. The waiting period for assessment is **up to 30 calendar days**. An in-person application receives an assessment date on the day of application, while a portal application receives a date **within two working days**. These time frames relate to PMPK assessment scheduling, not the start of support sessions or determination of disability. Verify the current procedure on the [official service page](https://www.gov.kz/services/4292?lang=ru).
+
 ## What is VKK?
 
 VKK is a *medical advisory commission* within a healthcare organisation.
@@ -175,6 +197,8 @@ It makes formal medical decisions within its assigned authority. VKK is not a sp
 The published rules include timely, justified referral to medical-social expertise among VKK functions, alongside oversight of the timing and quality of medical documentation for such referrals.
 
 VKK becomes relevant when there is a separate medical or administrative question that requires a commission decision.
+
+VKK also has a distinct role in deciding whether a child's medical condition meets the specified grounds for **education at home**. An autism diagnosis alone does not automatically require home education. Educational arrangements and support should also be discussed with the school or preschool.
 
 ## Is VKK required to confirm autism?
 
@@ -228,6 +252,8 @@ The basis for MSE is a VKK referral in the presence of persistent functional imp
 
 The VKK chair of the referring healthcare organisation oversees the completeness of examination, justification for referral, timing and quality of medical documents.
 
+The MSE Rules provide not only for in-person assessment but also, in specified cases, **proactive assessment without an in-person examination** and other prescribed procedures. Eligibility depends on the listed diagnoses, form No. 031/u and other regulatory conditions. The healthcare organisation can clarify which assessment format is applicable.
+
 ## What is form No. 031/u?
 
 When referring a patient to MSE, the healthcare organisation completes **form No. 031/u, "Conclusion for medical-social expertise"**.
@@ -261,6 +287,8 @@ A practical question for the healthcare organisation:
 > **Which documents are required in our specific case to refer our child to MSE?**
 
 This is more useful than gathering as many certificates as possible without knowing their purpose.
+
+**If the family disagrees with the MSE expert conclusion.** Point 54 of the [MSE Rules](https://adilet.zan.kz/rus/docs/V2300032922) provides for an administrative appeal **no later than three months after the conclusion is received**. Challenging the expert conclusion and complaining about delivery of the government service are different procedures. Ask the responsible authority to explain the applicable route.
 
 ## Does MSE diagnose autism?
 
