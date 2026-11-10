@@ -394,6 +394,9 @@ If you are unsure which service to approach, identify the specific question firs
 
 ## Related resources
 
+- [Getting autism-related help in Kazakhstan: where to begin](/central-asia-autism-hub/kz/en/help-kazakhstan/autism-support-kazakhstan-start/)
+- [Rights and social support for families in Kazakhstan](/central-asia-autism-hub/kz/en/help-kazakhstan/family-rights-social-support-kazakhstan/)
+
 - [How is autism diagnosed in a child in Kazakhstan?](../how-autism-is-diagnosed-in-kazakhstan/)
 - [What investigations may be needed when autism is suspected in Kazakhstan?](../tests-and-assessments-for-suspected-autism-in-kazakhstan/)
 - [Screening, assessment and autism diagnosis: what is the difference?](../screening-assessment-and-autism-diagnosis/)
