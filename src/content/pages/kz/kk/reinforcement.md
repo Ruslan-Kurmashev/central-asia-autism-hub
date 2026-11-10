@@ -8,7 +8,7 @@ country: kz
 language: kk
 section: parents
 topic: approaches-to-support
-slug: reinforcement
+slug: kusheitu-ata-analarga
 translationKey: parents-reinforcement
 translationStatus: checked
 audience:

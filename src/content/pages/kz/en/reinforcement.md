@@ -8,7 +8,7 @@ country: kz
 language: en
 section: parents
 topic: approaches-to-support
-slug: reinforcement
+slug: reinforcement-parent-guide
 translationKey: parents-reinforcement
 translationStatus: checked
 audience:
