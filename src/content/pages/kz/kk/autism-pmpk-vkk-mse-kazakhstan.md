@@ -396,6 +396,9 @@ sources:
 
 ## Қатысты материалдар
 
+- [Қазақстандағы аутизмге байланысты көмек: неден бастау керек?](/central-asia-autism-hub/kz/kk/help-kazakhstan/autizm-komek-kazakstan-bastau/)
+- [Қазақстандағы отбасының құқықтары мен әлеуметтік қолдау](/central-asia-autism-hub/kz/kk/help-kazakhstan/otbasy-aleumettik-koldau-kazakstan/)
+
 - [«Қазақстанда балаға аутизм диагнозы қалай қойылады?»](../kazakstanda-autizm-diagnozy-kalai-koiylady/)
 - [«Қазақстанда аутизмге күдік болғанда қандай тексерулер қажет?»](../kazakstanda-autizmge-kudik-bolganda-kandai-tekseruler-kerek/)
 - [«Аутизм скринингі, бағалау және диагноз: айырмашылығы неде?»](../autizm-skriningi-bagalau-zhane-diagnoz/)
