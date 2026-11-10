@@ -31,6 +31,8 @@ keyPoints:
   - "ASD medical diagnosis belongs to the psychiatric pathway, whereas PMPK primarily assesses the child's special educational needs."
   - "VKK makes formal medical decisions and, where justified, refers patients for MSE."
   - "An ASD diagnosis does not automatically confer disability status. MSE examines persistent functional impairments and limitations in daily activities."
+  - "Teachers and school support staff can begin addressing certain educational difficulties without a prior PMPK conclusion, while specialised support has separate eligibility rules."
+  - "The stated waiting time for a PMPK assessment is up to 30 calendar days, not the time by which support sessions must begin."
 evidenceLimitations: "Provisions concerning PMPK, school support services, VKK and MSE have been compared with official texts accessible on 10 November 2026. This is general information, not individual legal or medical advice. Required documents, eligibility, deadlines and exceptions depend on the child's circumstances and the law in force when the family applies. These additions have not undergone independent legal or native-language review."
 sources:
   - title: "Правила деятельности службы психолого-педагогического сопровождения в организациях образования"
