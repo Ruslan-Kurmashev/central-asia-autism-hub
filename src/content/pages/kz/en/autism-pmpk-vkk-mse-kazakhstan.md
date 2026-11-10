@@ -35,6 +35,12 @@ keyPoints:
   - "The stated waiting time for a PMPK assessment is up to 30 calendar days, not the time by which support sessions must begin."
 evidenceLimitations: "Provisions concerning PMPK, school support services, VKK and MSE have been compared with official texts accessible on 10 November 2026. This is general information, not individual legal or medical advice. Required documents, eligibility, deadlines and exceptions depend on the child's circumstances and the law in force when the family applies. These additions have not undergone independent legal or native-language review."
 sources:
+  - title: "Поправки к Правилам МСЭ от 15 октября 2026 года, приказ № 406"
+    url: "https://adilet.zan.kz/rus/docs/V2600040183"
+    organisation: "ИПС «Әділет» / Министерство труда и социальной защиты населения Республики Казахстан"
+    publicationYear: 2026
+    note: "Учтены изменения к пунктам 4 и 5 Правил МСЭ и разделу обжалования заочного проактивного освидетельствования, приказ вступил в силу 2 ноября 2026 года."
+    accessedAt: 2026-11-10
   - title: "Правила деятельности службы психолого-педагогического сопровождения в организациях образования"
     url: "https://adilet.zan.kz/rus/docs/V2500036047"
     organisation: "ИПС «Әділет» / государственный портал Казахстана"
@@ -244,6 +250,8 @@ Two children with the same diagnostic code may differ substantially in communica
 
 ## How is a child referred to MSE?
 
+MSE also requires consent for the collection and processing of personal and confidential medical information in accordance with the relevant law. [Order No. 406](https://adilet.zan.kz/rus/docs/V2600040183) clarifies that requirement alongside the referral from the healthcare organisation's VKK. A diagnosis alone does not replace the referral or other required conditions.
+
 The version of the MSE rules described here provides for assessment following a referral from the VKK of a healthcare organisation at the place of permanent registration.
 
 In simplified terms:
@@ -290,7 +298,7 @@ A practical question for the healthcare organisation:
 
 This is more useful than gathering as many certificates as possible without knowing their purpose.
 
-**If the family disagrees with the MSE expert conclusion.** Point 54 of the [MSE Rules](https://adilet.zan.kz/rus/docs/V2300032922) provides for an administrative appeal **no later than three months after the conclusion is received**. Challenging the expert conclusion and complaining about delivery of the government service are different procedures. Ask the responsible authority to explain the applicable route.
+**If the family disagrees with an MSE expert conclusion.** The [MSE Rules](https://adilet.zan.kz/rus/docs/V2300032922) distinguish appeals against in-person assessments (point 54) from appeals against proactive assessments conducted without an in-person examination (point 56). An appeal must be submitted **within three months of receiving the expert conclusion**. [Order No. 406 of 15 October 2026](https://adilet.zan.kz/rus/docs/V2600040183), effective 2 November 2026, clarifies that appeals against proactive remote MSE conclusions go to the territorial office for the person's permanent registration. The [ministry's guidance](https://www.gov.kz/org/enbek-mangystau/press/news/details/1320999?lang=ru) describes paper applications and submission through [e-Otinish](https://eotinish.kz/). An appeal against the expert conclusion differs from a complaint about delivery of a government service.
 
 ## Does MSE diagnose autism?
 
