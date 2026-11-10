@@ -1,0 +1,33 @@
+name: Restore registered PMPK and MSE article cover
+on:
+  push:
+    branches:
+      - audit/parents-pmpk-vkk-mse-20261110
+    paths:
+      - .github/workflows/restore-parents-pmpk-cover.yml
+permissions:
+  contents: write
+jobs:
+  restore:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: audit/parents-pmpk-vkk-mse-20261110
+          persist-credentials: true
+      - name: Restore exact registered stock photograph and remove temporary workflow
+        shell: bash
+        run: |
+          set -euo pipefail
+          mkdir -p public/images/editorial/photos
+          curl --fail --location --retry 3 --connect-timeout 20 --max-time 120 \
+            'https://images.pexels.com/photos/7800551/pexels-photo-7800551.jpeg?auto=compress&cs=tinysrgb&w=1200' \
+            --output public/images/editorial/photos/parent-kz-referral-multidisciplinary-team.jpg
+          test "$(file --brief --mime-type public/images/editorial/photos/parent-kz-referral-multidisciplinary-team.jpg)" = 'image/jpeg'
+          test "$(stat -c %s public/images/editorial/photos/parent-kz-referral-multidisciplinary-team.jpg)" -gt 30000
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add -f public/images/editorial/photos/parent-kz-referral-multidisciplinary-team.jpg
+          git rm .github/workflows/restore-parents-pmpk-cover.yml
+          git commit -m 'Restore registered Pexels cover for psychiatrist PMPK VKK MSE guides'
+          git push origin HEAD:audit/parents-pmpk-vkk-mse-20261110
