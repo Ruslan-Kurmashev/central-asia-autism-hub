@@ -1354,3 +1354,10 @@ The owner supplied `image(20261105-163040).png` for the same six-card figure. It
 | `public/images/editorial/diagrams/reinforcement-negative-noise-2026-11-10.webp` | AutismHub original project-generated instructional illustration. User-approved 2026-11-10 after revisions to character style and background. Not stock photography. | Original PNG `подкрепление_отрицательное_фон_v2.png`, 1448 x 1086, SHA-256 `6142648e685cbb80212a8a78ab9725ff656398457ddebd7da8aaf47c88372627`. Optimized WebP, 132568 bytes, SHA-256 `357b75e8d177901909a400c6ce2f448b3e5bab4909d85f2d0153147712a283aa`, Git blob `0c3ff2e6d5df2d7a14e4a4580e1b526ed4fa4194`. | Negative reinforcement explanation, sensory relief and observation over time. Needed rest or noise protection is never conditional on requesting correctly. |
 
 Both drawings are hypothetical educational examples, not documented treatment outcomes. Source PNGs are conversation attachments. Article stock cover remains unchanged.
+
+## Autism biology levels: academic-style diagram (2026-11-10)
+
+| Local file | Creator and approval | Provenance and editorial role |
+| --- | --- | --- |
+| `public/images/research/autism-biology-levels-diagram.svg` | AutismHub original educational diagram. The owner explicitly approved the more restrained, grayscale and blue-gray version in the project conversation on 2026-11-10. | Vector adaptation of the approved generated reference `как_биология_связана_с_аутизмом.png` (1672 x 941 px), preserving the Russian labels, four-part structure, research caveat, and academic palette. Replaces the earlier colorful version at the same asset URL in `src/content/pages/kz/ru/autism-biology-overview.md`. This is a conceptual illustration, not a confirmed biological causal pathway or clinical diagnostic test. No stock-photo license is claimed. |
+
