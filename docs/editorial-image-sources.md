@@ -1389,7 +1389,7 @@ Both WebP files were encoded from the approved PNGs at quality 98 without resizi
 
 | Article | Local site asset | Creator | Original source | License | Intended use |
 | --- | --- | --- | --- | --- | --- |
-| `src/content/pages/kz/ru/development-interaction-play.md` | `photos/parent-development-interaction-wooden-blocks.jpg` | Ksenia Chernaya | https://www.pexels.com/photo/a-father-playing-wooden-blocks-with-his-son-7301363/ | https://www.pexels.com/license/ (page checked 2026-11-12) | Father and child building with blocks as an example of shared play. Does not establish an autism diagnosis or demonstrate a therapeutic intervention. |
+| `src/content/pages/kz/ru/development-interaction-play.md` | `photos/parent-development-interaction-grandmother-block-play.jpg` | Alex Green | https://www.pexels.com/photo/grandmother-playing-with-asian-grandchildren-with-tower-game-5692642/ | https://www.pexels.com/license/ (page checked 2026-11-12) | Grandmother and two children building a block tower in a living room. Pexels describes Asian family context. No implication of an autism diagnosis or specific intervention. |
 
 The image is downloaded through `scripts/sync-editorial-photos.mjs`, and the same site-owned featured image is used for the article and its card. The previous `article-rubi-asian.jpg` remains available for other articles.
 
