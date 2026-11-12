@@ -10,7 +10,7 @@ section: parents
 topic: after-autism-assessment-kazakhstan
 slug: understanding-autism-assessment-results-in-kazakhstan
 translationKey: parents-after-autism-assessment-kazakhstan
-translationStatus: pending
+translationStatus: checked
 audience:
   - parents
   - families
@@ -19,13 +19,13 @@ editor: Ruslan Kurmashev
 riskLevel: moderate
 disclaimerType: medical
 conflictOfInterest: "No conflict of interest declared."
-versionNote: "English translation of the Russian version updated 29 October 2026. Translation requires a separate editorial and linguistic check before public release."
+versionNote: "Editorial source-to-translation comparison completed 12 November 2026 for medical claims, timelines, structure and sources. No independent external professional language review was conducted."
 publishedAt: 2026-11-12
 originalPublishedAt: 2026-09-14
 displayPublishedAt: 2026-09-14
 updatedAt: 2026-11-12
 reviewDueAt: 2027-03-14
-draft: true
+draft: false
 keyPoints:
   - "After assessment, clarify whether ASD has been diagnosed, further assessment is needed, or the diagnosis has not been established at this time."
   - "ADOS-2 and ADI-R results do not independently establish or rule out ASD without a comprehensive assessment."
