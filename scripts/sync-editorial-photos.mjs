@@ -80,7 +80,7 @@ const photos = [
   ['parent-fba-clipboard-notes.jpg', '8036881'],
   ['parent-rubi-parent-reading.jpg', '7677771'],
   ['parent-ndbi-floor-play.jpg', '7780883'],
-  ['parent-development-interaction-wooden-blocks.jpg', '7301363'],
+  ['parent-development-interaction-grandmother-block-play.jpg', '5692642'],
   ['parent-imitation-stacking-together.jpg', '7296470'],
   ['parent-communication-gestures-classroom.jpg', '13181131'],
   ['parent-aac-aided-pointing-pictures.jpg', '7269497'],
