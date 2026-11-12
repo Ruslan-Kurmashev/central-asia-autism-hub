@@ -10,7 +10,7 @@ section: parents
 topic: approaches-to-support
 slug: differential-reinforcement-guide
 translationKey: parents-differential-reinforcement
-translationStatus: pending
+translationStatus: checked
 audience:
   - parents
   - families
@@ -19,12 +19,13 @@ editor: Ruslan Kurmashev
 riskLevel: moderate
 disclaimerType: informational
 conflictOfInterest: "No conflicts of interest declared."
+publishedAt: 2026-11-12
 originalPublishedAt: 2026-09-26
 displayPublishedAt: 2026-09-26
 updatedAt: 2026-11-12
 reviewDueAt: 2027-03-26
-draft: true
-versionNote: "AI-assisted English translation prepared on 12 November 2026 from the Russian article updated on the same date. Source and safety parity reviewed structurally, but responsible editorial language and medical review remain pending. Not yet published."
+draft: false
+versionNote: "12 November 2026: AI-assisted translation compared with the Russian revision for eight sections, four DRA/DRI/DRO/DRL subsections, six references, research figures, AAC safeguards, essential needs and criteria to stop a potentially harmful intervention. The project owner authorised publication on 12 November 2026. No independent clinical or professional language review was conducted."
 keyPoints:
   - "DRA, DRI, DRO and DRL are different differential-reinforcement procedures with different evidence bases."
   - "Before choosing one, understand the possible function of behaviour and consider medical, sensory, communication and environmental causes."

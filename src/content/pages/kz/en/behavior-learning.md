@@ -10,7 +10,7 @@ section: parents
 topic: approaches-to-support
 slug: behavior-and-learning-guide
 translationKey: parents-behavior-learning
-translationStatus: pending
+translationStatus: checked
 audience:
   - parents
   - families
@@ -19,12 +19,13 @@ editor: Ruslan Kurmashev
 riskLevel: moderate
 disclaimerType: informational
 conflictOfInterest: "No conflicts of interest declared."
+publishedAt: 2026-11-12
 originalPublishedAt: "2026-09-26T19:36:00Z"
 displayPublishedAt: "2026-09-26T19:36:00Z"
 updatedAt: 2026-11-12
 reviewDueAt: 2027-03-26
-draft: true
-versionNote: "AI-assisted English translation prepared on 12 November 2026 from the Russian text updated on 8 November 2026. Meaning, sources, figures and safety language require responsible editorial review. A user-approved English five-step illustration was added on 12 November 2026. Text translation still requires responsible editorial review before publication."
+draft: false
+versionNote: "12 November 2026: AI-assisted translation compared with the Russian original for section structure, seven scientific references, research figures, safety precautions, internal navigation and the owner-approved English five-step diagram. The project owner authorised publication on 12 November 2026. No independent clinical or professional language review was conducted."
 keyPoints:
   - "Behaviour that causes difficulties should first be understood, not simply suppressed."
   - "Pain, sleep, anxiety, communication, sensory and social environments, changes in routine and unpredictability may matter more than the choice of a behavioural procedure."

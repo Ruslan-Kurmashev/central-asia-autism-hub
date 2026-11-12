@@ -10,7 +10,7 @@ section: parents
 topic: approaches-to-support
 slug: saralangan-kusheitu
 translationKey: parents-differential-reinforcement
-translationStatus: pending
+translationStatus: checked
 audience:
   - parents
   - families
@@ -19,12 +19,13 @@ editor: Ruslan Kurmashev
 riskLevel: moderate
 disclaimerType: informational
 conflictOfInterest: "Мүдделер қақтығысы мәлімделмеген."
+publishedAt: 2026-11-12
 originalPublishedAt: 2026-09-26
 displayPublishedAt: 2026-09-26
 updatedAt: 2026-11-12
 reviewDueAt: 2027-03-26
-draft: true
-versionNote: "2026 жылғы 12 қарашада сол күні жаңартылған орысша түпнұсқадан AI көмегімен аударылды. Құрылым, дереккөздер мен қауіпсіздік шарттары салыстырылды, бірақ жауапты редактордың тілдік және медициналық тексеруі әлі қажет. Жарияланбаған."
+draft: false
+versionNote: "2026 жылғы 12 қараша: AI көмегімен аударылған мәтін орысша түпнұсқамен сегіз бөлім, DRA/DRI/DRO/DRL туралы төрт бөлімше, алты дереккөз, зерттеу көрсеткіштері, AAC қолжетімділігі, негізгі қажеттіліктерді қорғау және ықтимал зиянды араласуды тоқтату өлшемдері бойынша салыстырылды. Жоба иесі 2026 жылғы 12 қарашада жариялауға рұқсат берді. Тәуелсіз клиникалық немесе кәсіби тілдік рецензия жүргізілген жоқ."
 keyPoints:
   - "DRA, DRI, DRO және DRL - мақсаттары мен дәлелдік негізі әртүрлі сараланған күшейту рәсімдері."
   - "Тәсілді таңдамас бұрын әрекеттің ықтимал функциясын түсініп, медициналық, сенсорлық, коммуникациялық және орта факторларын қарастыру қажет."
