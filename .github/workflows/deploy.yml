@@ -72,6 +72,12 @@ jobs:
           node-version: 24
           cache: 'false'
           build-cmd: npm run validate
+      - name: Verify approved gene infographic is included in published build
+        run: |
+          test -s dist/images/research/gene-expression-brain-development-approved.webp
+          article="dist/kz/ru/research/kak-geny-upravlyayut-razvitiem-mozga/index.html"
+          test -s "$article"
+          grep -Fq '/central-asia-autism-hub/images/research/gene-expression-brain-development-approved.webp' "$article"
       - name: Final regional research article browser and external URL audit
         run: node scripts/check-regional-research-final.mjs
 
