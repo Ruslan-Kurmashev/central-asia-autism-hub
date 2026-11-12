@@ -24,7 +24,7 @@ displayPublishedAt: "2026-09-26T19:36:00Z"
 updatedAt: 2026-11-12
 reviewDueAt: 2027-03-26
 draft: true
-versionNote: "AI-assisted English translation prepared on 12 November 2026 from the Russian text updated on 8 November 2026. Meaning, sources, figures and safety language require responsible editorial review. The five-step image contains embedded Russian text and is intentionally not reproduced as a translated diagram. Not yet published."
+versionNote: "AI-assisted English translation prepared on 12 November 2026 from the Russian text updated on 8 November 2026. Meaning, sources, figures and safety language require responsible editorial review. A user-approved English five-step illustration was added on 12 November 2026. Text translation still requires responsible editorial review before publication."
 keyPoints:
   - "Behaviour that causes difficulties should first be understood, not simply suppressed."
   - "Pain, sleep, anxiety, communication, sensory and social environments, changes in routine and unpredictability may matter more than the choice of a behavioural procedure."
@@ -195,6 +195,10 @@ Imagine a group session. Music starts, an adult hands out pencils and invites th
 If lowering the noise helps the child return to the activity, it is worth investigating the sensory environment. One event does not prove that noise was the only cause or that the same change will always work.
 
 **Do not:** deliberately increase the noise, keep a child in a distressing situation, ignore a clear refusal or restrict communication to obtain the "correct response". Dangerous behaviour requires a professional safety plan, not experiments at home.
+
+![Five illustrated steps for supporting a child in a noisy group activity: notice sensory overload, reduce stress, help the child express their needs, choose headphones, a quiet space or a break together, and check whether the child feels more comfortable. Do not restrain the child, increase noise or ignore refusal.](/central-asia-autism-hub/images/editorial/diagrams/behavior-learning-noisy-class-support-step5-en-2026-11-12.webp)
+
+*Illustrative sequence of support, not a substitute for assessing the reasons behind behaviour or an individually agreed support plan.*
 
 *Five-step overview: notice the difficulty, reduce the burden, accept communication, choose suitable support together and review what changed. Do not restrain the child, intensify the noise or ignore refusal.*
 
