@@ -1392,3 +1392,9 @@ Both WebP files were encoded from the approved PNGs at quality 98 without resizi
 | `src/content/pages/kz/ru/development-interaction-play.md` | `photos/parent-development-interaction-wooden-blocks.jpg` | Ksenia Chernaya | https://www.pexels.com/photo/a-father-playing-wooden-blocks-with-his-son-7301363/ | https://www.pexels.com/license/ (page checked 2026-11-12) | Father and child building with blocks as an example of shared play. Does not establish an autism diagnosis or demonstrate a therapeutic intervention. |
 
 The image is downloaded through `scripts/sync-editorial-photos.mjs`, and the same site-owned featured image is used for the article and its card. The previous `article-rubi-asian.jpg` remains available for other articles.
+
+## Owner-approved parent-friendly gene expression infographic (12 November 2026)
+
+| Asset | Provenance | Notes |
+| --- | --- | --- |
+| `public/images/research/gene-expression-brain-development-approved.webp` | Owner-approved AI-generated original educational diagram, 12 November 2026. Optimized from the approved 2172 x 724 PNG to 1200 x 400 WebP. | Four stages: DNA, RNA, protein and neuron. Light-blue neutral design, colored scientific illustrations, explanatory caveat. Not a diagnostic mechanism for autism. Displayed within `src/content/pages/kz/ru/genes-control-brain-development.md` only. |
