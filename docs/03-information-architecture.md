@@ -145,7 +145,7 @@ With only 8–12 launch resources, separate category pages should not be generat
 
 The former separate parent group `After assessment and diagnosis` is merged into `Assessment and diagnosis` on the same landing page. This is an information-architecture change, not a change to medical, educational, or social-care pathways.
 
-The combined group contains the original four Russian assessment articles followed by two post-assessment articles: `after-autism-assessment-kazakhstan` and `first-30-days-after-autism-diagnosis-kazakhstan`. It now shows six Russian articles, while Kazakh and English show only their four genuinely published assessment/diagnosis articles. The order is controlled by the existing topic IDs, not publication dates. The current curated Russian reading path is:
+The combined group contains the original four Russian assessment articles followed by two post-assessment articles: `after-autism-assessment-kazakhstan` and `first-30-days-after-autism-diagnosis-kazakhstan`. With the 12 November 2026 translation release, the combined group shows six genuinely published articles in each of RU, KK and EN. The order is controlled by the existing topic IDs, not publication dates. The current curated Russian reading path is:
 1. Screening, assessment and diagnosis: understanding the difference (`assessment-and-diagnosis`).
 2. How autism is diagnosed in Kazakhstan (`autism-diagnosis-kazakhstan`).
 3. Which examinations are needed (`autism-assessments-kazakhstan`).
@@ -153,7 +153,7 @@ The combined group contains the original four Russian assessment articles follow
 5. Understanding the assessment results (`after-autism-assessment-kazakhstan`).
 6. The first 30 days after diagnosis (`first-30-days-after-autism-diagnosis-kazakhstan`).
 
-The first four topics retain the same curated sequence in RU, KK and EN. The final two appear only in Russian until corresponding translations are genuinely published. Original article URLs, metadata, translation status, publication dates, and content remain unchanged. See `docs/decisions/2026-10-29-parent-assessment-reading-order.md`.
+All six topics follow the same curated sequence in RU, KK and EN. The two translations were newly published on 12 November 2026, with their true first-publication dates and the Russian originals' historical dates retained. The source Russian article URLs and original content are unchanged. See `docs/decisions/2026-10-29-parent-assessment-reading-order.md`.
 
 No empty after-diagnosis accordion should remain in RU, KK, or EN. The implementation is in `src/pages/kz/[lang]/[section]/index.astro` and the rendered group/count/order assertions are in `scripts/check-user-journeys.mjs`. See `docs/decisions/2026-10-29-parent-assessment-merge.md`.
 

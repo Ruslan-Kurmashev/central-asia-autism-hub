@@ -313,7 +313,7 @@ try {
       console.log('USER_JOURNEY_ASSESSMENT_MERGE ' + locale + ' ' + width + ' ' + JSON.stringify(state));
       verify(JSON.stringify(state.ids) === JSON.stringify(['autism-basics','development','assessment','support','feeding']),
         'Parent assessment ' + locale + ' ' + width + ': unexpected group structure ' + JSON.stringify(state.ids));
-      verify(state.assessmentOpen && state.count === (locale === 'ru' ? 6 : 4),
+      verify(state.assessmentOpen && state.count === 6,
         'Parent assessment ' + locale + ' ' + width + ': missing/misassigned articles');
       verify(state.uniqueLinks, 'Parent assessment ' + locale + ' ' + width + ': duplicate article links');
       verify(state.overflow <= 3, 'Parent assessment ' + locale + ' ' + width + ': horizontal overflow');
@@ -329,6 +329,21 @@ try {
         verify(expectedRuSuffixes.every((suffix, index) => state.links[index]?.endsWith(suffix)),
           'Parent assessment ' + width + ': curated reading order or canonical links changed: ' + JSON.stringify(state.links));
         await screenshot('ru', width, 'assessment-merged');
+      } else {
+        const expectedSuffixes = locale === 'kk'
+          ? ['/autizm-skriningi-bagalau-zhane-diagnoz/', '/kazakstanda-autizm-diagnozy-kalai-koiylady/',
+             '/kazakstanda-autizmge-kudik-bolganda-kandai-tekseruler-kerek/',
+             '/kazakstanda-psihiatr-pmpk-vkk-mse-mindetteri/',
+             '/kazakstanda-autizm-bagalau-natizheleri-zhane-kelesi-kadam/',
+             '/kazakstanda-autizm-diagnozynan-keiingi-algashky-30-kun/']
+          : ['/screening-assessment-and-autism-diagnosis/',
+             '/how-autism-is-diagnosed-in-kazakhstan/',
+             '/tests-and-assessments-for-suspected-autism-in-kazakhstan/',
+             '/psychiatrist-pmpk-vkk-mse-kazakhstan/',
+             '/understanding-autism-assessment-results-in-kazakhstan/',
+             '/first-30-days-after-autism-diagnosis-in-kazakhstan/'];
+        verify(expectedSuffixes.every((suffix, index) => state.links[index]?.endsWith(suffix)),
+          'Parent assessment ' + locale + ' ' + width + ': translated reading order changed ' + JSON.stringify(state.links));
       }
     }
   }

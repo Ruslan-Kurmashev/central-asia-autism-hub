@@ -13,7 +13,7 @@ Keep the six published Russian parent articles in the existing combined `assessm
 5. `after-autism-assessment-kazakhstan`: understand assessment outcomes and next actions.
 6. `first-30-days-after-autism-diagnosis-kazakhstan`: plan the first month after diagnosis.
 
-The initial four topics use the same order in RU, KK and EN. Do not invent KK or EN versions of the two Russian-only post-assessment articles. The article list is a navigation aid rather than a mandatory medical sequence.
+At the time of this decision, the initial four topics had translations. The 12 November 2026 owner-approved release adds actual KK and EN content for the final two, so all six are now shown in the same order. The article list is a navigation aid rather than a mandatory medical sequence.
 
 ## Implementation and limits
 
