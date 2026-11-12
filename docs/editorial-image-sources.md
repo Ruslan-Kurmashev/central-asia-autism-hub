@@ -1384,3 +1384,11 @@ These two supplied diagrams were approved by the project owner in the conversati
 | `public/images/editorial/diagrams/behavior-learning-noisy-class-support-step5-kk-2026-11-12.webp` | `Егер балаға шуылдайтын ортада қиын болса` diagram, 1055 x 1491 px, SHA-256 `1c2100a1ddb10b70162303b2918f8f3aa5b37467cc837ab19a24a49c90be5e1b` | 444468 bytes, SHA-256 `763f763a47f434638ddb4796b9b4993ffd504fb04ecbaf9d816dea3893c4df39`, Git blob `d82ca3edba4a845b497b6a410fb4ace7390856ed` | Kazakh five-step support and safety reminders. Owner approved the supplied graphic, which is not an independent clinical or professional linguistic review. |
 
 Both WebP files were encoded from the approved PNGs at quality 98 without resizing, redesign or text replacement. The original Russian asset and existing covers remain unchanged. New KK/EN article drafts in PR #254 will reference the corresponding localized files after their editorial review.
+
+## Development, interaction and play: replacement cover (2026-11-12)
+
+| Article | Local site asset | Creator | Original source | License | Intended use |
+| --- | --- | --- | --- | --- | --- |
+| `src/content/pages/kz/ru/development-interaction-play.md` | `photos/parent-development-interaction-wooden-blocks.jpg` | Ksenia Chernaya | https://www.pexels.com/photo/a-father-playing-wooden-blocks-with-his-son-7301363/ | https://www.pexels.com/license/ (page checked 2026-11-12) | Father and child building with blocks as an example of shared play. Does not establish an autism diagnosis or demonstrate a therapeutic intervention. |
+
+The image is downloaded through `scripts/sync-editorial-photos.mjs`, and the same site-owned featured image is used for the article and its card. The previous `article-rubi-asian.jpg` remains available for other articles.
