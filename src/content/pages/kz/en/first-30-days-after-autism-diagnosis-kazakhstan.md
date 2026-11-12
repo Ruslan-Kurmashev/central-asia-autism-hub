@@ -10,7 +10,7 @@ section: parents
 topic: first-30-days-after-autism-diagnosis-kazakhstan
 slug: first-30-days-after-autism-diagnosis-in-kazakhstan
 translationKey: parents-first-30-days-after-autism-diagnosis-kazakhstan
-translationStatus: pending
+translationStatus: checked
 audience:
   - parents
   - families
@@ -19,13 +19,13 @@ editor: Ruslan Kurmashev
 riskLevel: moderate
 disclaimerType: medical
 conflictOfInterest: "No conflict of interest declared."
-versionNote: "English translation based on the Russian revision of 10 November 2026. Separate language and editorial verification required before publication."
+versionNote: "Editorial source-to-translation comparison completed 12 November 2026 for medical claims, timelines, structure and sources. No independent external professional language review was conducted."
 publishedAt: 2026-11-12
 originalPublishedAt: 2026-09-14
 displayPublishedAt: 2026-09-14
 updatedAt: 2026-11-12
 reviewDueAt: 2026-12-01
-draft: true
+draft: false
 keyPoints:
   - "Thirty days is a planning period, not a compulsory medical or administrative deadline."
   - "After diagnosis, clarify recommendations and choose one or two of the child's immediate needs."
