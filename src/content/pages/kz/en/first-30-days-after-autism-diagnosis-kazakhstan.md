@@ -40,60 +40,60 @@ sources:
     url: "https://adilet.zan.kz/rus/docs/K2000000360"
     organisation: "ИПС «Әділет»"
     publicationYear: 2020
-    note: "Право пациента и законного представителя на доступную информацию о диагнозе и плане медицинской помощи."
+    note: "Patient and legal-representative rights to understandable information about the diagnosis and medical-care plan."
     accessedAt: 2026-10-29
   - title: "Стандарт организации оказания педиатрической помощи в Республике Казахстан"
     url: "https://adilet.zan.kz/rus/docs/V2200027182"
     organisation: "Министерство здравоохранения Республики Казахстан"
     publicationYear: 2022
-    note: "ПМСП и центры развития и раннего вмешательства, с учётом редакции после изменений 2025 года."
+    note: "Primary healthcare, child development and early intervention centres, taking the 2025 amendments into account."
     accessedAt: 2026-10-29
   - title: "Стандарт организации оказания медико-социальной помощи в области психического здоровья населению Республики Казахстан"
     url: "https://adilet.zan.kz/rus/docs/V2000021712"
     organisation: "Министерство здравоохранения Республики Казахстан"
     publicationYear: 2020
-    note: "Организация специализированной медицинской помощи и последующего сопровождения."
+    note: "Organisation of specialist healthcare and subsequent follow-up."
     accessedAt: 2026-09-14
   - title: "Правила деятельности службы психолого-педагогического сопровождения в организациях образования"
     url: "https://adilet.zan.kz/rus/docs/V2500036047"
     organisation: "Министерство просвещения Республики Казахстан"
     publicationYear: 2025
-    note: "Психолого-педагогическое сопровождение детей в детских садах и школах, редакция после изменений от 29 мая 2026 года."
+    note: "Psychological and educational support at preschool and school, including amendments dated 29 May 2026."
     accessedAt: 2026-10-29
   - title: "Правила оказания государственных услуг в сфере психолого-педагогической поддержки"
     url: "https://adilet.zan.kz/rus/docs/V2000020744"
     organisation: "Министерство просвещения Республики Казахстан"
     publicationYear: 2020
-    note: "Порядок обращения в ПМПК и выдачи заключения, редакция после изменений от 26 июня 2026 года."
+    note: "Procedure for applying to PMPK and obtaining a conclusion after the 26 June 2026 amendments."
     accessedAt: 2026-10-29
   - title: "Приём документов для предоставления психолого-педагогической поддержки детям в организациях образования"
     url: "https://www.gov.kz/services/4292?lang=ru"
     organisation: "gov.kz / Министерство просвещения Республики Казахстан"
-    note: "Официальная карточка государственной услуги: каналы подачи, документы, стоимость и сроки."
+    note: "Official service information: application channels, documents, fees and timing."
     accessedAt: 2026-10-29
   - title: "Стандарт специальной психолого-педагогической поддержки детей с ограниченными возможностями"
     url: "https://adilet.zan.kz/rus/docs/V2500036137"
     organisation: "Министерство просвещения Республики Казахстан"
     publicationYear: 2025
-    note: "Специальная поддержка по заключению ПМПК, в том числе для детей с РАС."
+    note: "Special support based on PMPK recommendations, including for children with ASD."
     accessedAt: 2026-10-29
   - title: "Правила проведения медико-социальной экспертизы"
     url: "https://adilet.zan.kz/rus/docs/V2300032922"
     organisation: "Министерство труда и социальной защиты населения Республики Казахстан"
     publicationYear: 2023
-    note: "Направление на МСЭ и оценка стойких ограничений жизнедеятельности. Учтены поправки приказа № 406 от 15 октября 2026 года, вступившие в силу 2 ноября 2026 года."
+    note: "MSE referral and assessment of persistent functional limitations. Includes Order No. 406 of 15 October 2026, in force from 2 November 2026."
     accessedAt: 2026-10-29
   - title: "Изменения правил медико-социальной экспертизы, приказ № 406 от 15 октября 2026 года"
     url: "https://adilet.zan.kz/rus/docs/V2600040183"
     organisation: "Министерство труда и социальной защиты населения Республики Казахстан / ИПС «Әділет»"
     publicationYear: 2026
-    note: "Пункт 4 о направлении ВКК и согласии на обработку персональных и медицинских данных, пункт 5 о сроках направления, включая исключения. Действует со 2 ноября 2026 года."
+    note: "Clause 4 on VKK referral and consent to process personal and medical information, and clause 5 on timing and exceptions. In force from 2 November 2026."
     accessedAt: 2026-11-10
   - title: "NICE CG170. Autism spectrum disorder in under 19s: support and management"
     url: "https://www.nice.org.uk/guidance/cg170/chapter/recommendations"
     organisation: "National Institute for Health and Care Excellence"
     publicationYear: 2013
-    note: "Общие принципы поддержки коммуникации, адаптации среды и оценки сопутствующих проблем, не нормативные требования Казахстана."
+    note: "General principles of communication support, environmental adaptations and assessment of co-occurring problems, not Kazakhstan legal requirements."
     accessedAt: 2026-10-29
 ---
 
