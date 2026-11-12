@@ -36,37 +36,37 @@ sources:
     url: "https://adilet.zan.kz/rus/docs/K2000000360"
     organisation: "ИПС «Әділет»"
     publicationYear: 2020
-    note: "Использованы положения о праве получать информацию о состоянии здоровья в доступной форме, диагностике психических и поведенческих расстройств, правах несовершеннолетних и службе поддержки пациента и внутренней экспертизы."
+    note: "Patient and legal-representative rights to accessible information about health, diagnosis, mental health conditions and patient-support services."
     accessedAt: 2026-09-14
   - title: "Стандарт организации оказания медико-социальной помощи в области психического здоровья населению Республики Казахстан"
     url: "https://adilet.zan.kz/rus/docs/V2000021712"
     organisation: "Министерство здравоохранения Республики Казахстан"
     publicationYear: 2020
-    note: "Использован для описания психиатрического диагностического маршрута, дополнительных консультаций и дальнейшей медицинской тактики после установления психического или поведенческого расстройства."
+    note: "Describes the psychiatric diagnostic pathway, additional consultations and medical follow-up after diagnosis of a mental or behavioural condition."
     accessedAt: 2026-09-14
   - title: "Об утверждении форм учетной документации в области здравоохранения, а также инструкций по их заполнению"
     url: "https://adilet.zan.kz/rus/docs/V2000021761"
     organisation: "Министерство здравоохранения Республики Казахстан"
     publicationYear: 2020
-    note: "Использованы положения медицинской документации о предварительном и заключительном диагнозе и правила фиксации результатов обследования и медицинских заключений."
+    note: "Rules for recording provisional and final diagnoses, examination findings and medical conclusions."
     accessedAt: 2026-09-14
   - title: "Клинический протокол диагностики и лечения «Общие расстройства психологического (психического) развития (расстройства аутистического спектра)», протокол №145"
     url: "https://nrchd.kz/storage/documents/%D0%9A%D0%BB%D0%B8%D0%BD%D0%B8%D1%87%D0%B5%D1%81%D0%BA%D0%B8%D0%B5%20%D0%BF%D1%80%D0%BE%D1%82%D0%BE%D0%BA%D0%BE%D0%BB%D1%8B/%D0%9F%D0%BE%D1%82%D0%BE%D0%BA%20%D0%BA%D0%BB%D0%B8%D0%BD%D0%B8%D1%87%D0%B5%D1%81%D0%BA%D0%B8%D0%B5%20%D0%BF%D1%80%D0%BE%D1%82%D0%BE%D0%BA%D0%BE%D0%BB%D1%8B/%D0%9E%D0%B1%D1%89%D0%B8%D0%B5%20%D1%80%D0%B0%D1%81%D1%81%D1%82%D1%80%D0%BE%D0%B9%D1%81%D1%82%D0%B2%D0%B0%20%D0%BF%D1%81%D0%B8%D1%85%D0%BE%D0%BB%D0%BE%D0%B3%D0%B8%D1%87%D0%B5%D1%81%D0%BA%D0%BE%D0%B3%D0%BE%20%28%D0%BF%D1%81%D0%B8%D1%85%D0%B8%D1%87%D0%B5%D1%81%D0%BA%D0%BE%D0%B3%D0%BE%29%20%D1%80%D0%B0%D0%B7%D0%B2%D0%B8%D1%82%D0%B8%D1%8F.%20%D0%A0%D0%B0%D1%81%D1%81%D1%82%D1%80%D0%BE%D0%B9%D1%81%D1%82%D0%B2%D0%B0%20%D0%B0%D1%83%D1%82%D0%B8%D1%81%D1%82%D0%B8%D1%87%D0%B5%D1%81%D0%BA%D0%BE%D0%B3%D0%BE%20%D1%81%D0%BF%D0%B5%D0%BA%D1%82%D1%80%D0%B0.pdf"
     organisation: "Министерство здравоохранения Республики Казахстан / ННЦРЗ"
     publicationYear: 2021
-    note: "Использован для описания клинической диагностики РАС и роли ADOS-2 и ADI-R как дополнительных диагностических методов."
+    note: "Clinical ASD diagnostic framework and use of ADOS-2 and ADI-R as additional diagnostic methods."
     accessedAt: 2026-09-14
   - title: "NICE CG128. Autism spectrum disorder in under 19s: recognition, referral and diagnosis"
     url: "https://www.nice.org.uk/guidance/cg128/chapter/Recommendations"
     organisation: "National Institute for Health and Care Excellence"
     publicationYear: 2011
-    note: "Разделы 1.5, 1.6 и 1.8: оценка разных источников информации, ограничение отдельных тестов, действия при неопределённом выводе, обсуждение результата с семьёй. Не является правовой нормой Казахстана."
+    note: "Sections 1.5, 1.6 and 1.8: combined information, limitations of single tests, uncertain outcomes and discussion with families. This is not Kazakhstan law."
     accessedAt: 2026-10-29
   - title: "Правила организации и проведения внутренней и внешней экспертиз качества медицинских услуг (помощи)"
     url: "https://adilet.zan.kz/rus/docs/V2000021727"
     organisation: "Министерство здравоохранения Республики Казахстан"
     publicationYear: 2020
-    note: "Общие положения о службе поддержки пациента и внутренней экспертизы медицинской организации."
+    note: "General provisions on patient support and internal review of healthcare quality."
     accessedAt: 2026-10-29
 ---
 
