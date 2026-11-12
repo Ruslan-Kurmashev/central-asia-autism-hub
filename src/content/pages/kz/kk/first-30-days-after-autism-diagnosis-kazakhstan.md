@@ -10,7 +10,7 @@ section: parents
 topic: first-30-days-after-autism-diagnosis-kazakhstan
 slug: kazakstanda-autizm-diagnozynan-keiingi-algashky-30-kun
 translationKey: parents-first-30-days-after-autism-diagnosis-kazakhstan
-translationStatus: pending
+translationStatus: checked
 audience:
   - parents
   - families
@@ -19,13 +19,13 @@ editor: Ruslan Kurmashev
 riskLevel: moderate
 disclaimerType: medical
 conflictOfInterest: "Мүдделер қақтығысы мәлімделген жоқ."
-versionNote: "2026 жылғы 10 қарашада жаңартылған орысша түпнұсқаға негізделген қазақша аударма. Жариялау алдында редакциялық және тілдік тексеру қажет."
+versionNote: "2026 жылғы 12 қарашада түпнұсқамен медициналық тұжырымдар, мерзімдер, құрылым және дереккөздер бойынша редакциялық салыстыру жасалды. Тәуелсіз кәсіби тілдік рецензия жүргізілген жоқ."
 publishedAt: 2026-11-12
 originalPublishedAt: 2026-09-14
 displayPublishedAt: 2026-09-14
 updatedAt: 2026-11-12
 reviewDueAt: 2026-12-01
-draft: true
+draft: false
 keyPoints:
   - "30 күн - алғашқы қадамдарды жоспарлауға ыңғайлы мерзім, мемлекеттік медициналық немесе әкімшілік талап емес."
   - "Диагноздан кейін дәрігер ұсыныстарын нақтылап, баланың бір-екі маңызды қажеттілігін таңдаңыз."
