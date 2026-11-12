@@ -210,7 +210,7 @@ sources:
 
 **Ай нәтижесі:** барлық қызмет басталмаса да, келесі қадамдар белгілі, өтініштер тіркелген және отбасы әр маңызды сұрақ бойынша кімге хабарласатынын біледі.
 
-Жалпы маршрут үшін [Қазақстанда көмекті неден бастау керек](/central-asia-autism-hub/kz/kk/help-kazakhstan/help-kazakhstan-start/) материалын қараңыз. Сонымен бірге [балабақша](/central-asia-autism-hub/kz/kk/help-kazakhstan/autism-kindergarten-kazakhstan/), [мектеп](/central-asia-autism-hub/kz/kk/help-kazakhstan/autism-school-kazakhstan/) және [әлеуметтік қолдау](/central-asia-autism-hub/kz/kk/help-kazakhstan/social-support-rights-kazakhstan/) туралы мақалалар бар.
+Жалпы маршрут үшін [Қазақстанда көмекті неден бастау керек](/central-asia-autism-hub/kz/kk/help-kazakhstan/autizm-komek-kazakstan-bastau/) материалын қараңыз. Сонымен бірге [балабақша](/central-asia-autism-hub/kz/kk/help-kazakhstan/autizm-balabaksha-kazakstan/), [мектеп](/central-asia-autism-hub/kz/kk/help-kazakhstan/autizm-mektep-kazakstan/) және [әлеуметтік қолдау](/central-asia-autism-hub/kz/kk/help-kazakhstan/otbasy-aleumettik-koldau-kazakstan/) туралы мақалалар бар.
 
 ## Қысқаша тексеру тізімі
 
