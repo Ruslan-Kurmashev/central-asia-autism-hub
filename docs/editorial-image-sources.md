@@ -1373,3 +1373,14 @@ The four language adaptations derive from the owner-approved Russian reinforceme
 | `public/images/editorial/diagrams/reinforcement-negative-noise-2026-11-10-kk.webp` | `autismhub_reinforcement_negative_kk.png`, `cfaabed6f6e0a6bcf61163defad284be4d472c116f3b4fe31a123bb1612af238` | `07f1c550480d5e42e46d381aad0983f8dc40ab3967d3b760c865be9f7a7516cd` | `3c9771c65f8a88c8cc7325d9563849754530ff6e` |
 
 Each image retains three illustrated actions and a short explanatory note. The existing licensed article cover is reused without modification. Original PNGs are conversation files, not falsely represented as repository-hosted originals.
+
+## Behaviour and learning: owner-approved EN/KK five-step diagrams (2026-11-12)
+
+These two supplied diagrams were approved by the project owner in the conversation on 2026-11-12 for the corresponding English and Kazakh article versions. They are localized adaptations of the existing Russian five-step support example, not stock photographs or illustrations of measured treatment outcomes. The mother, child, five action panels and safety reminder band correspond to the approved project artwork. Artwork and lettering were not changed by this repository update. The owner-supplied PNGs are retained as chat attachments and are not falsely identified as original repository files.
+
+| Public asset | Owner-supplied PNG source (SHA-256) | Published WebP (SHA-256) | Meaning / review status |
+| --- | --- | --- | --- |
+| `public/images/editorial/diagrams/behavior-learning-noisy-class-support-step5-en-2026-11-12.webp` | `If a Child Finds It Hard to Cope in a Noisy Activity` diagram, 1055 x 1491 px, SHA-256 `a11f8ffb890f7fd5d4b02d014af68cd6b1cb4c332194ed8a43107313b0abce9e` | 433498 bytes, SHA-256 `d657fe95cf6d625f46043c355d65ffb254ddf1d38c43ff0b66636644e3b6ce82`, Git blob `c911b05c7ec3b2e1d7a690b2130bd73cb0f8da3e` | English five steps: noticing sensory load, reducing stress, supporting communication, choosing an accessible support, evaluating comfort. Review of translated article text remains pending. |
+| `public/images/editorial/diagrams/behavior-learning-noisy-class-support-step5-kk-2026-11-12.webp` | `Егер балаға шуылдайтын ортада қиын болса` diagram, 1055 x 1491 px, SHA-256 `1c2100a1ddb10b70162303b2918f8f3aa5b37467cc837ab19a24a49c90be5e1b` | 444468 bytes, SHA-256 `763f763a47f434638ddb4796b9b4993ffd504fb04ecbaf9d816dea3893c4df39`, Git blob `d82ca3edba4a845b497b6a410fb4ace7390856ed` | Kazakh five-step support and safety reminders. Owner approved the supplied graphic, which is not an independent clinical or professional linguistic review. |
+
+Both WebP files were encoded from the approved PNGs at quality 98 without resizing, redesign or text replacement. The original Russian asset and existing covers remain unchanged. New KK/EN article drafts in PR #254 will reference the corresponding localized files after their editorial review.
