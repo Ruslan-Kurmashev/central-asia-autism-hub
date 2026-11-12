@@ -210,7 +210,7 @@ These are examples, not compulsory tasks for every child.
 
 **End-of-month outcome:** not every service has necessarily started, but the next steps and contacts are clear, applications are recorded and the family knows whom to contact.
 
-For the overall pathway see [Starting autism support in Kazakhstan](/central-asia-autism-hub/kz/en/help-kazakhstan/help-kazakhstan-start/). There are also resources on [preschool](/central-asia-autism-hub/kz/en/help-kazakhstan/autism-kindergarten-kazakhstan/), [school](/central-asia-autism-hub/kz/en/help-kazakhstan/autism-school-kazakhstan/) and [social support](/central-asia-autism-hub/kz/en/help-kazakhstan/social-support-rights-kazakhstan/).
+For the overall pathway see [Starting autism support in Kazakhstan (Russian-language source)](/central-asia-autism-hub/kz/ru/help-kazakhstan/help-kazakhstan-start/). There are also resources on [preschool](/central-asia-autism-hub/kz/en/help-kazakhstan/autism-kindergarten-support-kazakhstan/), [school](/central-asia-autism-hub/kz/en/help-kazakhstan/autism-school-enrolment-support-kazakhstan/) and [social support](/central-asia-autism-hub/kz/en/help-kazakhstan/family-rights-social-support-kazakhstan/).
 
 ## Short checklist
 
