@@ -10,7 +10,7 @@ section: parents
 topic: after-autism-assessment-kazakhstan
 slug: kazakstanda-autizm-bagalau-natizheleri-zhane-kelesi-kadam
 translationKey: parents-after-autism-assessment-kazakhstan
-translationStatus: pending
+translationStatus: checked
 audience:
   - parents
   - families
@@ -19,13 +19,13 @@ editor: Ruslan Kurmashev
 riskLevel: moderate
 disclaimerType: medical
 conflictOfInterest: "Мүдделер қақтығысы мәлімделген жоқ."
-versionNote: "2026 жылғы 29 қазандағы орысша нұсқаға сүйенген қазақша аударма. Жариялау алдында тілдік және редакциялық тексеру қажет."
+versionNote: "2026 жылғы 12 қарашада түпнұсқамен медициналық тұжырымдар, мерзімдер, құрылым және дереккөздер бойынша редакциялық салыстыру жасалды. Тәуелсіз кәсіби тілдік рецензия жүргізілген жоқ."
 publishedAt: 2026-11-12
 originalPublishedAt: 2026-09-14
 displayPublishedAt: 2026-09-14
 updatedAt: 2026-11-12
 reviewDueAt: 2027-03-14
-draft: true
+draft: false
 keyPoints:
   - "Бағалаудан кейін АСБ диагнозы қойылғанын, қосымша диагностика қажет екенін немесе осы кезеңде диагноз анықталмағанын нақтылаңыз."
   - "ADOS-2 және ADI-R нәтижелері кешенді бағалаусыз өздігінен АСБ диагнозын қоймайды және жоққа шығармайды."
