@@ -2,8 +2,8 @@
 title: "Развитие, взаимодействие и игра"
 summary: "Как ориентироваться в развивающей и игровой поддержке: совместное внимание, вовлечённость, игра, обучение в естественных ситуациях, NDBI и участие родителей."
 description: "Навигационный раздел для родителей о развивающих и игровых вмешательствах при аутизме: совместное внимание, вовлечённость, игра, обучение в естественных ситуациях, NDBI, поддержка с участием родителей и сверстников."
-featuredImage: "/central-asia-autism-hub/images/editorial/photos/parent-development-interaction-wooden-blocks.jpg"
-featuredImageAlt: "Отец и ребёнок вместе играют с деревянными строительными кубиками на полу."
+featuredImage: "/central-asia-autism-hub/images/editorial/photos/parent-development-interaction-grandmother-block-play.jpg"
+featuredImageAlt: "Бабушка и двое детей вместе строят башню из деревянных кубиков в гостиной."
 country: kz
 language: ru
 section: parents
