@@ -1398,3 +1398,9 @@ The image is downloaded through `scripts/sync-editorial-photos.mjs`, and the sam
 | Asset | Provenance | Notes |
 | --- | --- | --- |
 | `public/images/research/gene-expression-brain-development-approved.webp` | Owner-approved AI-generated original educational diagram, 12 November 2026. Optimized from the approved 2172 x 724 PNG to 1200 x 400 WebP. | Four stages: DNA, RNA, protein and neuron. Light-blue neutral design, colored scientific illustrations, explanatory caveat. Not a diagnostic mechanism for autism. Displayed within `src/content/pages/kz/ru/genes-control-brain-development.md` only. |
+
+## Owner-approved prenatal brain development infographic (13 November 2026)
+
+| Asset | Provenance | Editorial limits |
+| --- | --- | --- |
+| `public/images/research/prenatal-brain-development-approved.avif` | Original AI-generated educational infographic specifically approved by project owner, 13 November 2026. Source: owner-approved 1920 x 819 PNG created for this article. Optimized to 1000 x 427 AVIF for website delivery, Git blob `edc90eef2842aeed0a72df01824264eecaa5e44c`. | Four illustrative processes: nervous system foundation, neuronal production, neuronal migration, and connections. The pictured week ranges are approximate and may mix embryonic and obstetric dating, therefore they must not be used as a precise pregnancy timeline or to infer when autism begins. Article caption explicitly states the limitation. Only for the approved Russian article, not an article cover. |

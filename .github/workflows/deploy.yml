@@ -78,6 +78,12 @@ jobs:
           article="dist/kz/ru/research/kak-geny-upravlyayut-razvitiem-mozga/index.html"
           test -s "$article"
           grep -Fq '/central-asia-autism-hub/images/research/gene-expression-brain-development-approved.webp' "$article"
+      - name: Verify approved prenatal infographic in built article
+        run: |
+          test -s dist/images/research/prenatal-brain-development-approved.avif
+          article="dist/kz/ru/research/kak-razvivaetsya-mozg-do-rozhdeniya-autizm/index.html"
+          test -s "$article"
+          grep -Fq '/central-asia-autism-hub/images/research/prenatal-brain-development-approved.avif' "$article"
       - name: Final regional research article browser and external URL audit
         run: node scripts/check-regional-research-final.mjs
 
