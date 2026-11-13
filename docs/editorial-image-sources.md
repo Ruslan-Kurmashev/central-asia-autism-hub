@@ -1404,3 +1404,9 @@ The image is downloaded through `scripts/sync-editorial-photos.mjs`, and the sam
 | Asset | Provenance | Editorial limits |
 | --- | --- | --- |
 | `public/images/research/prenatal-brain-development-approved.avif` | Original AI-generated educational infographic specifically approved by project owner, 13 November 2026. Source: owner-approved 1920 x 819 PNG created for this article. Optimized to 1000 x 427 AVIF for website delivery, Git blob `edc90eef2842aeed0a72df01824264eecaa5e44c`. | Four illustrative processes: nervous system foundation, neuronal production, neuronal migration, and connections. The pictured week ranges are approximate and may mix embryonic and obstetric dating, therefore they must not be used as a precise pregnancy timeline or to infer when autism begins. Article caption explicitly states the limitation. Only for the approved Russian article, not an article cover. |
+
+## Project-created neuron and synapse signal diagram (13 November 2026)
+
+| Asset | Provenance | Scope and limitations |
+| --- | --- | --- |
+| `public/images/research/neuron-synapse-signal.svg` | Original educational SVG created specifically for AutismHub on 2026-11-13 at owner's request to replace complicated diagrams in the Russian neuron/synapse explainer. No third-party artwork or AI cover used. | Four illustrated stages of chemical synaptic communication. Not anatomical scale, cellular microscopy or evidence of any universal autism-specific synaptic change. In-article explanatory diagram only. Original licensed Public Domain cover remains unchanged. |

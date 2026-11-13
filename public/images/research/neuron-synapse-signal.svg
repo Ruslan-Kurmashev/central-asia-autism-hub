@@ -1,0 +1,51 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="1240" viewBox="0 0 1000 1240" role="img" aria-labelledby="diagramTitle diagramDescription">
+<title id="diagramTitle">Как нейроны передают сигнал</title>
+<desc id="diagramDescription">Четыре шага передачи сигнала в типичном химическом синапсе: дендриты получают сигналы, электрический импульс проходит по аксону, окончание аксона выделяет нейромедиаторы, рецепторы следующей клетки воспринимают химическое сообщение. Схема условная, не отражает особенности аутизма.</desc>
+<rect width="1000" height="1240" rx="30" fill="#eaf5fb"/>
+<g font-family="Arial,DejaVu Sans,sans-serif">
+<text x="52" y="78" font-size="44" font-weight="700" fill="#173d5d">Как нейроны передают сигнал</text>
+<text x="54" y="117" font-size="23" fill="#4d718a">Один из основных способов связи нервных клеток</text>
+</g>
+<g fill="#ffffff" stroke="#cbdfea" stroke-width="2">
+<rect x="42" y="153" width="916" height="237" rx="22"/>
+<rect x="42" y="412" width="916" height="237" rx="22"/>
+<rect x="42" y="671" width="916" height="237" rx="22"/>
+<rect x="42" y="930" width="916" height="237" rx="22"/>
+</g>
+<g font-family="Arial,DejaVu Sans,sans-serif" font-weight="700" fill="#ffffff" text-anchor="middle" font-size="33">
+<circle cx="94" cy="197" r="28" fill="#245d86"/><text x="94" y="208">1</text>
+<circle cx="94" cy="456" r="28" fill="#245d86"/><text x="94" y="467">2</text>
+<circle cx="94" cy="715" r="28" fill="#245d86"/><text x="94" y="726">3</text>
+<circle cx="94" cy="974" r="28" fill="#245d86"/><text x="94" y="985">4</text>
+</g>
+<g fill="none" stroke="#b46b50" stroke-linecap="round" stroke-linejoin="round">
+<path d="M175 325 C207 305 220 281 243 267 M205 307 L190 280 M219 292 L221 256 M243 267 L236 239 M243 267 L269 239 M175 325 L154 311 M175 325 L148 348 M175 325 L188 354 M243 267 C272 276 291 292 314 307" stroke-width="8"/>
+<path d="M314 307 C348 311 352 338 390 335" stroke-width="8"/>
+</g>
+<ellipse cx="320" cy="320" rx="31" ry="29" fill="#d98b6c" stroke="#a65a46" stroke-width="4"/>
+<ellipse cx="322" cy="319" rx="13" ry="12" fill="#f4c2a7"/>
+<g fill="none" stroke="#317da2" stroke-width="6" stroke-linecap="round"><path d="M148 240 L195 268"/><path d="M187 256 l10 12 -16 -1"/></g>
+<g font-family="Arial,DejaVu Sans,sans-serif" fill="#17405f"><text x="455" y="269" font-size="33" font-weight="700">Нейрон получает сигнал</text><text x="455" y="313" font-size="27">Дендриты принимают</text><text x="455" y="348" font-size="27">сообщения от других клеток</text></g>
+<g fill="none" stroke="#b56c50" stroke-linecap="round"><path d="M144 538 H396" stroke-width="10"/></g>
+<ellipse cx="143" cy="537" rx="31" ry="30" fill="#d98b6c" stroke="#a65a46" stroke-width="4"/>
+<ellipse cx="144" cy="536" rx="12" ry="12" fill="#f4c2a7"/>
+<g fill="#e7bd68" stroke="#ba8b39" stroke-width="2">
+<rect x="202" y="518" width="44" height="39" rx="12"/><rect x="266" y="518" width="44" height="39" rx="12"/><rect x="330" y="518" width="44" height="39" rx="12"/>
+</g>
+<path d="M222 491 H362 M362 491 l-15 -12 M362 491 l-15 12" fill="none" stroke="#307fa4" stroke-width="6" stroke-linecap="round"/>
+<g font-family="Arial,DejaVu Sans,sans-serif" fill="#17405f"><text x="455" y="520" font-size="33" font-weight="700">Сигнал идёт по аксону</text><text x="455" y="564" font-size="27">По нервному отростку</text><text x="455" y="599" font-size="27">проходит электрический импульс</text></g>
+<path d="M158 719 V789 Q158 818 198 821 H284 Q318 821 318 791 V719" fill="#eab18e" stroke="#a96b54" stroke-width="4"/>
+<path d="M158 853 Q217 826 318 853 V881 H158 Z" fill="#93b8a0" stroke="#558467" stroke-width="4"/>
+<g fill="#f6d9ad" stroke="#bc8652" stroke-width="2"><circle cx="207" cy="782" r="14"/><circle cx="270" cy="781" r="14"/></g>
+<g fill="#297db0"><circle cx="199" cy="837" r="6"/><circle cx="238" cy="831" r="6"/><circle cx="275" cy="840" r="6"/></g>
+<g stroke="#4a806b" stroke-width="5" fill="none" stroke-linejoin="round"><path d="M194 856 v-12 h12 v12 M230 852 v-12 h12 v12 M268 856 v-12 h12 v12"/></g>
+<path d="M338 761 V850 M338 850 l-10 -12 M338 850 l10 -12" fill="none" stroke="#307fa4" stroke-width="5" stroke-linecap="round"/>
+<g font-family="Arial,DejaVu Sans,sans-serif" fill="#17405f"><text x="455" y="776" font-size="33" font-weight="700">Синапс передаёт сообщение</text><text x="455" y="820" font-size="27">Выделяются нейромедиаторы</text><text x="455" y="855" font-size="27">в узкую щель между клетками</text></g>
+<g fill="none" stroke="#608f79" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"><path d="M196 1048 L252 1094 L322 1100 L386 1111 M252 1094 L227 1133 M252 1094 L266 1051 M322 1100 L322 1061 M322 1100 L351 1150"/></g>
+<ellipse cx="324" cy="1100" rx="32" ry="29" fill="#86b8a0" stroke="#54816b" stroke-width="4"/>
+<ellipse cx="323" cy="1099" rx="13" ry="12" fill="#d6eadc"/>
+<g fill="#297db0"><circle cx="170" cy="1044" r="7"/><circle cx="189" cy="1044" r="7"/></g>
+<path d="M193 1017 L225 1031 M225 1031 l-15 -14 M225 1031 l-18 5" fill="none" stroke="#307fa4" stroke-width="5" stroke-linecap="round"/>
+<g font-family="Arial,DejaVu Sans,sans-serif" fill="#17405f"><text x="455" y="1037" font-size="33" font-weight="700">Вторая клетка отвечает</text><text x="455" y="1081" font-size="27">Её рецепторы реагируют</text><text x="455" y="1116" font-size="27">на химический сигнал</text></g>
+<text x="54" y="1214" font-family="Arial,DejaVu Sans,sans-serif" font-size="18" fill="#496a81">Образовательная схема. Размеры и расположение частей условны.</text>
+</svg>

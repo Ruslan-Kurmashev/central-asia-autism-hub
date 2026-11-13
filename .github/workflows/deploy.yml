@@ -84,6 +84,12 @@ jobs:
           article="dist/kz/ru/research/kak-razvivaetsya-mozg-do-rozhdeniya-autizm/index.html"
           test -s "$article"
           grep -Fq '/central-asia-autism-hub/images/research/prenatal-brain-development-approved.avif' "$article"
+      - name: Verify neuron and synapse diagram in built article
+        run: |
+          test -s dist/images/research/neuron-synapse-signal.svg
+          article="dist/kz/ru/research/neyrony-i-sinapsy-kak-kletki-mozga-soedinyayutsya/index.html"
+          test -s "$article"
+          grep -Fq '/central-asia-autism-hub/images/research/neuron-synapse-signal.svg' "$article"
       - name: Final regional research article browser and external URL audit
         run: node scripts/check-regional-research-final.mjs
 
