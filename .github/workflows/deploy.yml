@@ -90,6 +90,7 @@ jobs:
           article="dist/kz/ru/research/neyrony-i-sinapsy-kak-kletki-mozga-soedinyayutsya/index.html"
           test -s "$article"
           grep -Fq '/central-asia-autism-hub/images/research/neuron-synapse-signal-v3-approved.avif' "$article"
+          ! grep -Fq '/central-asia-autism-hub/images/research/verified/chemical-synapse.jpg' "$article"
       - name: Final regional research article browser and external URL audit
         run: node scripts/check-regional-research-final.mjs
 
