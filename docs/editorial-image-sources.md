@@ -1410,3 +1410,9 @@ The image is downloaded through `scripts/sync-editorial-photos.mjs`, and the sam
 | Asset | Provenance | Scope and limitations |
 | --- | --- | --- |
 | `public/images/research/neuron-synapse-signal.svg` | Original educational SVG created specifically for AutismHub on 2026-11-13 at owner's request to replace complicated diagrams in the Russian neuron/synapse explainer. No third-party artwork or AI cover used. | Four illustrated stages of chemical synaptic communication. Not anatomical scale, cellular microscopy or evidence of any universal autism-specific synaptic change. In-article explanatory diagram only. Original licensed Public Domain cover remains unchanged. |
+
+## Updated neuron signal illustration (14 November 2026)
+
+| Asset | Provenance | Editorial limits |
+| --- | --- | --- |
+| `public/images/research/neuron-synapse-signal-v2.avif` | Newly generated original AI educational illustration for AutismHub, produced 14 November 2026 after the owner requested an urgent redesign of the previous schematic. Optimized to 1200 x 512 AVIF (Git blob `e1a0c5627daa446800851b832e0cde442c6d24ef`). | Shows four visually clear stages of chemical synaptic communication using illustrative neurons, direction arrows and an enlarged synapse. Not microscopy, not to anatomical scale, not a universal autism mechanism. In-article visual only. The pre-existing Public Domain cover is not changed. The image can be opened full-size from the article. |
