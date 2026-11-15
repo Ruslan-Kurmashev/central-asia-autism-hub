@@ -91,12 +91,13 @@ jobs:
           test -s "$article"
           grep -Fq '/central-asia-autism-hub/images/research/neuron-synapse-signal-v3-approved.avif' "$article"
           ! grep -Fq '/central-asia-autism-hub/images/research/verified/chemical-synapse.jpg' "$article"
-      - name: Verify sound-processing infographic replaces both older figures
+      - name: Verify owner-approved auditory-path scheme is shown in article
         run: |
-          test -s dist/images/research/brain-doorbell-sound-processing.avif
+          test -s dist/images/research/brain-auditory-path-owner-approved-2026-11-15.avif
           article="dist/kz/ru/research/kak-mozg-obrabatyvaet-informatsiyu-neyronnye-seti/index.html"
           test -s "$article"
-          grep -Fq '/central-asia-autism-hub/images/research/brain-doorbell-sound-processing.avif' "$article"
+          grep -Fq '/central-asia-autism-hub/images/research/brain-auditory-path-owner-approved-2026-11-15.avif' "$article"
+          ! grep -Fq '/central-asia-autism-hub/images/research/brain-doorbell-sound-processing.avif' "$article"
           ! grep -Fq '/central-asia-autism-hub/images/research/neurons-circuits-networks-levels.svg' "$article"
           ! grep -Fq '/central-asia-autism-hub/images/research/structural-vs-functional-connectivity.svg' "$article"
       - name: Final regional research article browser and external URL audit
