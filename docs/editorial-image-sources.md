@@ -791,6 +791,12 @@ Three original editable SVGs written for AutismHub, without generated images, me
 | `gut-microbiome-confounding-direction.svg` | Original AutismHub causal-inference diagram (15 October 2026) | Illustrative influence of selective eating, family environment, age, medications and GI symptoms on gut microbial measurements; not a quantified causal model and does not exclude all biological microbiome effects. |
 
 
+## Gut microbiome and autism: owner-approved research infographic (15 November 2026)
+
+| Image file | Provenance, authorisation and scientific limits |
+| --- | --- |
+| `public/images/research/gut-brain-microbiome-owner-approved-2026-11-15.avif` | Original image generated with OpenAI image generation and specifically approved by the owner in this conversation on 15 November 2026. Converted from the approved 1536 x 1024 PNG into an AVIF web delivery asset without changing layout or wording. Illustrates gut-brain communication through neural, immune and metabolic signalling alongside dietary, medication, age and environmental influences. Conceptual and not to scale, does not establish microbial causality, biomarker validity, or diagnosis/treatment of autism. Used inside the RU article `gut-microbiome-and-autism-evidence.md`, replacing both older in-article SVG diagrams. The cover and its Commons licence are unchanged. |
+
 ## Kazakhstan family challenges survey infographic (15 October 2026)
 
 | File | Authorship, numerical source and limitations |
