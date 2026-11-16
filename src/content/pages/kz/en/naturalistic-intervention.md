@@ -8,7 +8,7 @@ country: kz
 language: en
 section: parents
 topic: approaches-to-support
-slug: "naturalistic-intervention"
+slug: "learning-in-everyday-situations"
 translationKey: parents-naturalistic-intervention
 translationStatus: checked
 audience:
