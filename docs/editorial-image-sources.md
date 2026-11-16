@@ -1465,3 +1465,16 @@ The image is downloaded through `scripts/sync-editorial-photos.mjs`, and the sam
 | Asset | Origin and verification | Intended use and limitations |
 | --- | --- | --- |
 | `public/images/editorial/diagrams/peer-mediated-children-train-play-approved.webp` | Original AI-generated educational illustration explicitly approved by the project owner for the peer-mediated support article on 16 November 2026. Source conversation attachment: `дети_строят_игрушечную_железную_дорогу.png` (1448 x 1086 pixels). Converted without cropping to 1448 x 1086 WebP, quality 88, 93,888 bytes. SHA-256 `ae88dd8e4dfd55d237498048803a65d59d7ce992995dd1eea25a6fb1690220b9`, Git blob `22bf6c303f64c50b7454595ffd7997cc7c9d3848`. No third-party material copied. | Within `src/content/pages/kz/ru/peer-mediated-intervention.md` only, illustrating three children cooperating over a wooden toy railway. Accompanying caption and alt text are external text, not embedded in artwork. This is an imagined example of voluntary peer play, not a depiction of a clinical protocol or an outcome demonstrated by a research study. Original article stock photo cover is retained. |
+
+## Localised biology overview diagrams (2026-11-16)
+
+The Russian vector image `public/images/research/autism-biology-levels-diagram.svg` remains unchanged.
+
+Owner-provided approved reference PNGs received 16 November 2026:
+
+- English: `autism-biology-diagram-en-approved.png`, 2040 x 1125, SHA-256 `872461e72e55682f20c046bf1109f0ba4f40109ab4dff2378c0b839c231972cd`
+- Kazakh: `autism-biology-diagram-kk-approved.png`, 2040 x 1125, SHA-256 `3512dd5056527fcb987ca32414fe19f496df157b7d94b34cdaca3c6fb8964c48`
+
+The uploaded PNG originals are conversation attachments, not Git-tracked binary assets. The two public site SVG diagrams `public/images/research/autism-biology-levels-diagram-en.svg` and `public/images/research/autism-biology-levels-diagram-kk.svg` are separately typeset translations of the same existing AutismHub vector with wording matching the owner's approved reference diagrams. They are not pixel-identical copies of the supplied PNGs. The visual distinction must be reported accurately.
+
+The four boxes illustrate genetic factors, brain cell development, neural networks and individual profiles. Prenatal, immune and metabolic factors are separate areas of investigation. Arrows describe a conceptual research framework, not a causal pathway proven for any individual. Each published article provides an adjacent caption and language-specific alt text. No third-party artwork was copied.
