@@ -2,8 +2,8 @@ import {readFile, stat} from 'node:fs/promises';
 import assert from 'node:assert/strict';
 import path from 'node:path';
 const list=JSON.parse(await readFile('scripts/research-biology-cover-sources.json','utf8'));
-assert.equal(list.length,12,'Expected 12 research biology article covers');
-assert.equal(new Set(list.map(x=>x.filename)).size,12,'Image filenames must be unique');
+assert.equal(list.length,13,'Expected 12 research biology article covers');
+assert.equal(new Set(list.map(x=>x.filename)).size,13,'Image filenames must be unique');
 const approvedNeuronCover = {
   article: 'neurons-synapses-how-brain-cells-connect',
   url: '/central-asia-autism-hub/images/research/neuron-synapse-signal-v3-approved.avif',
@@ -26,7 +26,7 @@ for (const item of list) {
   assert.ok(front.includes('featuredImage: "'+url+'"'),item.article+': wrong cover');
   assert.ok(front.includes(alt),item.article+': missing meaningful alternative text');
   assert.ok(front.includes('topic: causes-and-biology'),item.article+': changed topic');
-  assert.ok(front.includes('publishedAt: 2026-10-15')||front.includes('publishedAt: 2026-10-16'),item.article+': original date changed');
+  assert.ok(front.includes('publishedAt: 2026-10-15')||front.includes('publishedAt: 2026-10-16')||(item.article==='neuroplasticity-how-brain-learns'&&front.includes('publishedAt: 2026-11-16')),item.article+': original date changed');
   if (!isApprovedNeuronCover) {
     assert.ok(raw.includes(item.sourceUrl) && raw.includes(item.licenseUrl),item.article+': missing licensing credit');
   } else {
@@ -43,4 +43,4 @@ for (const item of list) {
   const hero=await readFile('dist/kz/ru/research/'+slug+'/index.html','utf8');
   assert.ok(hero.includes(url),item.article+': image missing from article');
 }
-console.log('Research biology covers PASS: 11 source images, 1 owner-approved cover, hero/list placements, dates and provenance.');
+console.log('Research biology covers PASS: 12 source images, 1 owner-approved cover, hero/list placements, dates and provenance.');
