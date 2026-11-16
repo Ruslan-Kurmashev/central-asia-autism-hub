@@ -21,7 +21,7 @@ disclaimerType: informational
 conflictOfInterest: "No conflicts of interest declared."
 originalPublishedAt: "2026-09-18T17:36:00Z"
 displayPublishedAt: "2026-09-18T17:36:00Z"
-updatedAt: 2026-11-15
+updatedAt: 2026-11-16
 reviewDueAt: 2027-03-18
 draft: true
 versionNote: "English draft prepared 16 November 2026 from the Russian article, preserving Project AIM and other effect estimates, source limitations and original cover. Editorial language review pending."
