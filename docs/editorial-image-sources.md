@@ -1489,3 +1489,14 @@ The owner supplied final reference PNGs for the English and Kazakh versions of t
 The two Git-tracked accessible SVG recreations public/images/research/sensory-response-study-en-2026-11-16.svg and public/images/research/sensory-response-study-kk-2026-11-16.svg use the owner's reference wording, six-row layout and colour palette. They are not pixel-identical PNGs. The owner-uploaded PNGs remain conversation attachments, not Git-tracked assets.
 
 Source: Schauder KB and Bennetto L (2016), Toward an Interdisciplinary Understanding of Sensory Dysfunction in Autism Spectrum Disorder, Figure 1, DOI:10.3389/fnins.2016.00268, [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/). Modifications: language translation, adapted graphic layout by AutismHub. These are hypothetical examples of investigation methods and findings, not a confirmed diagnostic pathway or universally causal mechanism. The Russian source and other owner-approved assets remain unchanged.
+
+## Approved localised naturalistic-learning five-step diagrams (16 November 2026)
+
+The owner provided two final 1448 x 1086 PNG illustrations in this conversation, each retaining the approved mother, child, clothing, setting, five numbered scenes and visual composition. The embedded step captions were translated directly into English and Kazakh. Both files are owner-approved educational illustrations, not visual depictions of a clinical protocol. No third-party artwork was copied.
+
+| Language / published asset | Owner-provided original | Conversion and provenance | Page |
+| --- | --- | --- | --- |
+| English: `public/images/editorial/diagrams/naturalistic-help-five-steps-en-approved.webp` | `Изображение ChatGPT 16 нояб. 2026 г., 22_46_46.png` | WebP, no cropping, 1448 x 1086, 170376 bytes, SHA-256 `211cba31c496c1b1eb5b4072b57a6bf938c5c2eb7ac14cdf259ca58e4ab3e5be`, Git blob `35af668867bfc888f7a683fecfe92ad331861b85` | `src/content/pages/kz/en/naturalistic-intervention.md` |
+| Kazakh: `public/images/editorial/diagrams/naturalistic-help-five-steps-kk-approved.webp` | `Изображение ChatGPT 16 нояб. 2026 г., 22_46_41.png` | WebP, no cropping, 1448 x 1086, 177446 bytes, SHA-256 `16ecc5d5763be8312adb0b20b8cbbbe414659cd03b4bac7e4ef7da2f234e2578`, Git blob `d6c049465a3e8bafc260d62973997d02d661b3dc` | `src/content/pages/kz/kk/naturalistic-intervention.md` |
+
+English embedded labels: A Situation Arises; We Notice the Need; The Child Asks for Help; We Provide Help; We Use the Skill in Another Situation. Kazakh: Жағдай туындайды; Қажеттілікті байқаймыз; Бала көмек сұрайды; Көмек көрсетеміз; Дағдыны басқа жағдайда қолданамыз. The original Russian image remains in the Russian article. Both localised articles include translated alt text and step explanations outside the images.
