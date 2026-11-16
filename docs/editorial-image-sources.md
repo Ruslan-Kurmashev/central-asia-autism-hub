@@ -1478,3 +1478,14 @@ Owner-provided approved reference PNGs received 16 November 2026:
 The uploaded PNG originals are conversation attachments, not Git-tracked binary assets. The two public site SVG diagrams `public/images/research/autism-biology-levels-diagram-en.svg` and `public/images/research/autism-biology-levels-diagram-kk.svg` are separately typeset translations of the same existing AutismHub vector with wording matching the owner's approved reference diagrams. They are not pixel-identical copies of the supplied PNGs. The visual distinction must be reported accurately.
 
 The four boxes illustrate genetic factors, brain cell development, neural networks and individual profiles. Prenatal, immune and metabolic factors are separate areas of investigation. Arrows describe a conceptual research framework, not a causal pathway proven for any individual. Each published article provides an adjacent caption and language-specific alt text. No third-party artwork was copied.
+
+## Owner-approved sensory-response tables (2026-11-16)
+
+The owner supplied final reference PNGs for the English and Kazakh versions of the article "Почему звуки, свет и прикосновения могут восприниматься иначе?" on 2026-11-16:
+
+- EN: AutismHub_sensory_responses_en(1).png (1494 x 1282), SHA-256 3d65a49b2c757464a9459960b9d0884954ca25b9934c43de8fe7ace3b10d00d3.
+- KK: AutismHub_sensory_responses_kk(1).png (1494 x 1282), SHA-256 7c7c57a606d0a8f9888ea4be9d3b78d1962750c6d715b68d6d75e4f447fe2808.
+
+The two Git-tracked accessible SVG recreations public/images/research/sensory-response-study-en-2026-11-16.svg and public/images/research/sensory-response-study-kk-2026-11-16.svg use the owner's reference wording, six-row layout and colour palette. They are not pixel-identical PNGs. The owner-uploaded PNGs remain conversation attachments, not Git-tracked assets.
+
+Source: Schauder KB and Bennetto L (2016), Toward an Interdisciplinary Understanding of Sensory Dysfunction in Autism Spectrum Disorder, Figure 1, DOI:10.3389/fnins.2016.00268, [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/). Modifications: language translation, adapted graphic layout by AutismHub. These are hypothetical examples of investigation methods and findings, not a confirmed diagnostic pathway or universally causal mechanism. The Russian source and other owner-approved assets remain unchanged.
