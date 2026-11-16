@@ -26,7 +26,7 @@ for (const item of list) {
   assert.ok(front.includes('featuredImage: "'+url+'"'),item.article+': wrong cover');
   assert.ok(front.includes(alt),item.article+': missing meaningful alternative text');
   assert.ok(front.includes('topic: causes-and-biology'),item.article+': changed topic');
-  assert.ok(front.includes('publishedAt: 2026-10-15')||front.includes('publishedAt: 2026-10-16')||(item.article==='neuroplasticity-how-brain-learns'&&front.includes('publishedAt: 2026-11-16')),item.article+': original date changed');
+  assert.ok(front.includes('publishedAt: 2026-10-15')||front.includes('publishedAt: 2026-10-16')||(item.article==='neuroplasticity-how-brain-learns'&&front.includes('publishedAt: "2026-11-16')),item.article+': original date changed');
   if (!isApprovedNeuronCover) {
     assert.ok(raw.includes(item.sourceUrl) && raw.includes(item.licenseUrl),item.article+': missing licensing credit');
   } else {
