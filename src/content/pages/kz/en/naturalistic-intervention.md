@@ -21,7 +21,7 @@ disclaimerType: informational
 conflictOfInterest: "No conflicts of interest declared."
 originalPublishedAt: "2026-09-18T16:33:14Z"
 displayPublishedAt: "2026-09-18T16:33:14Z"
-updatedAt: 2026-11-15
+updatedAt: 2026-11-16
 reviewDueAt: 2027-03-18
 draft: true
 versionNote: "English draft translated from the Russian version on 16 November 2026. The five-panel approved illustration, original evidence and limitations are retained. Language review pending."
