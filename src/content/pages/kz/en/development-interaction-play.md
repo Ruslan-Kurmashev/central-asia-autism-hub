@@ -21,7 +21,7 @@ disclaimerType: informational
 conflictOfInterest: "No conflicts of interest declared."
 originalPublishedAt: "2026-09-18T15:14:40Z"
 displayPublishedAt: "2026-09-18T15:14:40Z"
-updatedAt: 2026-11-12
+updatedAt: 2026-11-16
 reviewDueAt: 2027-03-18
 draft: true
 versionNote: "English draft translated from the current Russian article on 16 November 2026, preserving all 11 scientific sources, numerical estimates and the existing cover. Language review pending."
