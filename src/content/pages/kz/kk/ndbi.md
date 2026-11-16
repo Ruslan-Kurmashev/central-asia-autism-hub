@@ -21,7 +21,7 @@ disclaimerType: informational
 conflictOfInterest: "Мүдделер қақтығысы мәлімделмеген."
 originalPublishedAt: "2026-09-18T17:36:00Z"
 displayPublishedAt: "2026-09-18T17:36:00Z"
-updatedAt: 2026-11-15
+updatedAt: 2026-11-16
 reviewDueAt: 2027-03-18
 draft: true
 versionNote: "2026 жылғы 16 қарашадағы қазақша аударма жобасы. Project AIM нәтижелері, әсер мөлшерлері, ғылыми шектеулер және түпнұсқа мұқабасы сақталды. Тілдік тексеру күтілуде."
