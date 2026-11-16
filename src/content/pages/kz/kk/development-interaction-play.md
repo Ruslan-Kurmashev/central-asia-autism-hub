@@ -21,7 +21,7 @@ disclaimerType: informational
 conflictOfInterest: "Мүдделер қақтығысы мәлімделмеген."
 originalPublishedAt: "2026-09-18T15:14:40Z"
 displayPublishedAt: "2026-09-18T15:14:40Z"
-updatedAt: 2026-11-12
+updatedAt: 2026-11-16
 reviewDueAt: 2027-03-18
 draft: true
 versionNote: "Орысша түпнұсқадан 2026 жылғы 16 қарашада дайындалған қазақша аударма. 11 ғылыми дереккөз, сандық нәтижелер мен мұқаба сақталды. Тілдік тексеру күтілуде."
