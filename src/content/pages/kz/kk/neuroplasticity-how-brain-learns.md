@@ -20,8 +20,8 @@ editor: Ruslan Kurmashev
 riskLevel: moderate
 disclaimerType: medical
 conflictOfInterest: "Мүдделер қақтығысы мәлімделмеген."
-originalPublishedAt: 2026-11-16
-displayPublishedAt: 2026-11-16
+originalPublishedAt: "2026-11-16T14:38:48.337Z"
+displayPublishedAt: "2026-11-16T14:38:48.337Z"
 reviewDueAt: 2027-11-16
 versionNote: "Жасанды интеллект көмегімен дайындалған аударма орысша түпнұсқаның құрылымы, сандары, дереккөздері және медициналық ескертулері бойынша салыстырылды. Жоба иесі 2026-11-19 күні жариялауды сұрады. Тәуелсіз клиникалық не кәсіби тілдік сараптама жүргізілген жоқ."
 publishedAt: "2026-11-19T17:10:20.750Z"
