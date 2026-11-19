@@ -23,7 +23,7 @@ conflictOfInterest: "No conflicts of interest declared."
 originalPublishedAt: 2026-11-16
 displayPublishedAt: 2026-11-16
 reviewDueAt: 2027-11-16
-versionNote: "AI-assisted translation; structure, numerical claims, citations and medical caveats compared with the Russian original. The owner instructed publication on 2026-11-19. No independent clinical or professional language review was conducted."
+versionNote: "AI-assisted translation, structure, numerical claims, citations and medical caveats compared with the Russian original. The owner instructed publication on 2026-11-19. No independent clinical or professional language review was conducted."
 publishedAt: "2026-11-19T17:10:20.750Z"
 updatedAt: "2026-11-19T17:10:20.750Z"
 draft: false
