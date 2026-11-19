@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1448 1086" width="1448" height="1086" lang="kk" role="img" aria-labelledby="figure-title figure-desc">
+<title id="figure-title">Аутизмге күдік болғандағы клиникалық бағалау</title>
+<desc id="figure-desc">Аутизмді клиникалық бағалаудың төрт ықтимал құрамдасы: жүгіну және даму тарихы, қарым-қатынас пен мінез-құлықты бағалау, медициналық жағдай мен көрсетілім бойынша тексеру, қорытынды және қолдау туралы ұсыныстар. Реттілігі өзгеруі мүмкін.</desc>
+<style>
+  .heading {font:700 43px Arial,"DejaVu Sans",sans-serif;fill:#172b47}
+  .step-title {font:700 28px Arial,"DejaVu Sans",sans-serif;fill:#172b47}
+  .step-text {font:400 24px Arial,"DejaVu Sans",sans-serif;fill:#414e61}
+  .number {font:700 37px Arial,"DejaVu Sans",sans-serif;fill:#fff}
+  .note-label {font:700 28px Arial,"DejaVu Sans",sans-serif;fill:#172b47}
+  .note {font:400 22px Arial,"DejaVu Sans",sans-serif;fill:#36485d}
+</style>
+<rect width="1448" height="1086" fill="#f7f9fc"/>
+<text x="75" y="77" class="heading">Аутизмге күдік болғандағы клиникалық бағалау</text>
+<rect x="67" y="128" width="1314" height="147" rx="17" fill="#fff" stroke="#a0bdd4" stroke-width="2"/>
+<circle cx="161" cy="201" r="36" fill="#367da6"/>
+<text x="161" y="212" text-anchor="middle" class="number">1</text>
+<text x="241" y="183" class="step-title"><tspan x="241" dy="0">Жүгіну себебі және баланың даму тарихы</tspan></text>
+<text x="241" y="227" class="step-text"><tspan x="241" dy="0">Отбасының сұрақтары, баланың даму тарихы, күнделікті мүмкіндіктері</tspan><tspan x="241" dy="30">және дамудың алғашқы кезеңдері</tspan></text>
+<rect x="67" y="328" width="1314" height="147" rx="17" fill="#fff" stroke="#a0bdd4" stroke-width="2"/>
+<circle cx="161" cy="401" r="36" fill="#367da6"/>
+<text x="161" y="412" text-anchor="middle" class="number">2</text>
+<text x="241" y="374" class="step-title"><tspan x="241" dy="0">Қарым-қатынас, әлеуметтік өзара әрекет, сенсорлық</tspan><tspan x="241" dy="35">ерекшеліктер және мінез-құлық</tspan></text>
+<text x="241" y="440" class="step-text"><tspan x="241" dy="0">Клиникалық бақылау және белгіленген диагностикалық</tspan><tspan x="241" dy="27">критерийлерге сай бағалау</tspan></text>
+<rect x="67" y="528" width="1314" height="147" rx="17" fill="#fff" stroke="#a0bdd4" stroke-width="2"/>
+<circle cx="161" cy="601" r="36" fill="#367da6"/>
+<text x="161" y="612" text-anchor="middle" class="number">3</text>
+<text x="241" y="583" class="step-title"><tspan x="241" dy="0">Медициналық жағдай және қатар жүретін аурулар</tspan></text>
+<text x="241" y="627" class="step-text"><tspan x="241" dy="0">Жеке көрсетілім бойынша генетикалық тексеру, естуді бағалау,</tspan><tspan x="241" dy="30">ЭЭГ, МРТ және басқа зерттеулер қарастырылуы мүмкін</tspan></text>
+<rect x="67" y="728" width="1314" height="147" rx="17" fill="#fff" stroke="#a0bdd4" stroke-width="2"/>
+<circle cx="161" cy="801" r="36" fill="#367da6"/>
+<text x="161" y="812" text-anchor="middle" class="number">4</text>
+<text x="241" y="783" class="step-title"><tspan x="241" dy="0">Клиникалық қорытынды және қолдау бойынша ұсыныстар</tspan></text>
+<text x="241" y="827" class="step-text"><tspan x="241" dy="0">Баланың мықты тұстарын, қажеттіліктерін және қолдау жолдарын</tspan><tspan x="241" dy="27">талқылау</tspan></text>
+<path d="M724 281 v26 m-12 -12 l12 12 12 -12" fill="none" stroke="#568ba9" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M724 481 v26 m-12 -12 l12 12 12 -12" fill="none" stroke="#568ba9" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M724 681 v26 m-12 -12 l12 12 12 -12" fill="none" stroke="#568ba9" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+<rect x="52" y="927" width="1344" height="115" rx="20" fill="#e5edf5"/>
+<text x="92" y="979" class="note-label">Маңызды:</text>
+<line x1="239" x2="239" y1="952" y2="1016" stroke="#a2bdce" stroke-width="2"/>
+<text x="264" y="970" class="note"><tspan x="264" dy="0">Бұл жалпы оқу схемасы. Кезеңдердің реті мен құрамы өзгеруі</tspan><tspan x="264" dy="32">мүмкін. Ешбір жеке тексеру кешенді клиникалық бағалауды алмастырмайды.</tspan></text>
+</svg>

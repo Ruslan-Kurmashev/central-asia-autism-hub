@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1448 1086" width="1448" height="1086" lang="en" role="img" aria-labelledby="figure-title figure-desc">
+<title id="figure-title">Clinical assessment when autism is suspected</title>
+<desc id="figure-desc">Four illustrative components of clinical autism assessment: referral and developmental history, assessment of communication and behaviour, health context with tests as clinically indicated, and clinical conclusions with support options. The sequence can vary.</desc>
+<style>
+  .heading {font:700 43px Arial,"DejaVu Sans",sans-serif;fill:#172b47}
+  .step-title {font:700 28px Arial,"DejaVu Sans",sans-serif;fill:#172b47}
+  .step-text {font:400 24px Arial,"DejaVu Sans",sans-serif;fill:#414e61}
+  .number {font:700 37px Arial,"DejaVu Sans",sans-serif;fill:#fff}
+  .note-label {font:700 28px Arial,"DejaVu Sans",sans-serif;fill:#172b47}
+  .note {font:400 22px Arial,"DejaVu Sans",sans-serif;fill:#36485d}
+</style>
+<rect width="1448" height="1086" fill="#f7f9fc"/>
+<text x="75" y="77" class="heading">Clinical assessment when autism is suspected</text>
+<rect x="67" y="128" width="1314" height="147" rx="17" fill="#fff" stroke="#a0bdd4" stroke-width="2"/>
+<circle cx="161" cy="201" r="36" fill="#367da6"/>
+<text x="161" y="212" text-anchor="middle" class="number">1</text>
+<text x="241" y="183" class="step-title"><tspan x="241" dy="0">Reason for referral and developmental history</tspan></text>
+<text x="241" y="227" class="step-text"><tspan x="241" dy="0">Family questions, the child's developmental history and everyday functioning,</tspan><tspan x="241" dy="30">including early developmental milestones</tspan></text>
+<rect x="67" y="328" width="1314" height="147" rx="17" fill="#fff" stroke="#a0bdd4" stroke-width="2"/>
+<circle cx="161" cy="401" r="36" fill="#367da6"/>
+<text x="161" y="412" text-anchor="middle" class="number">2</text>
+<text x="241" y="374" class="step-title"><tspan x="241" dy="0">Communication, social interaction, sensory differences</tspan><tspan x="241" dy="35">and behaviour</tspan></text>
+<text x="241" y="440" class="step-text"><tspan x="241" dy="0">Clinical observation and evaluation using established diagnostic criteria</tspan></text>
+<rect x="67" y="528" width="1314" height="147" rx="17" fill="#fff" stroke="#a0bdd4" stroke-width="2"/>
+<circle cx="161" cy="601" r="36" fill="#367da6"/>
+<text x="161" y="612" text-anchor="middle" class="number">3</text>
+<text x="241" y="583" class="step-title"><tspan x="241" dy="0">Medical context and co-occurring conditions</tspan></text>
+<text x="241" y="627" class="step-text"><tspan x="241" dy="0">Depending on individual needs, genetic assessment, hearing evaluation, EEG,</tspan><tspan x="241" dy="30">MRI or other tests may be considered</tspan></text>
+<rect x="67" y="728" width="1314" height="147" rx="17" fill="#fff" stroke="#a0bdd4" stroke-width="2"/>
+<circle cx="161" cy="801" r="36" fill="#367da6"/>
+<text x="161" y="812" text-anchor="middle" class="number">4</text>
+<text x="241" y="783" class="step-title"><tspan x="241" dy="0">Clinical conclusions and recommendations for support</tspan></text>
+<text x="241" y="827" class="step-text"><tspan x="241" dy="0">Discussing strengths, support needs and accessible forms of assistance</tspan></text>
+<path d="M724 281 v26 m-12 -12 l12 12 12 -12" fill="none" stroke="#568ba9" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M724 481 v26 m-12 -12 l12 12 12 -12" fill="none" stroke="#568ba9" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M724 681 v26 m-12 -12 l12 12 12 -12" fill="none" stroke="#568ba9" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+<rect x="52" y="927" width="1344" height="115" rx="20" fill="#e5edf5"/>
+<text x="92" y="979" class="note-label">Important:</text>
+<line x1="239" x2="239" y1="952" y2="1016" stroke="#a2bdce" stroke-width="2"/>
+<text x="264" y="970" class="note"><tspan x="264" dy="0">This is a general educational outline. The order and number of stages may</tspan><tspan x="264" dy="32">differ. No single test can replace a comprehensive clinical assessment.</tspan></text>
+</svg>

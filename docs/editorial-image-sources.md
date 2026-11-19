@@ -1500,3 +1500,14 @@ The owner provided two final 1448 x 1086 PNG illustrations in this conversation,
 | Kazakh: `public/images/editorial/diagrams/naturalistic-help-five-steps-kk-approved.webp` | `Изображение ChatGPT 16 нояб. 2026 г., 22_46_41.png` | WebP, no cropping, 1448 x 1086, 177446 bytes, SHA-256 `16ecc5d5763be8312adb0b20b8cbbbe414659cd03b4bac7e4ef7da2f234e2578`, Git blob `d6c049465a3e8bafc260d62973997d02d661b3dc` | `src/content/pages/kz/kk/naturalistic-intervention.md` |
 
 English embedded labels: A Situation Arises; We Notice the Need; The Child Asks for Help; We Provide Help; We Use the Skill in Another Situation. Kazakh: Жағдай туындайды; Қажеттілікті байқаймыз; Бала көмек сұрайды; Көмек көрсетеміз; Дағдыны басқа жағдайда қолданамыз. The original Russian image remains in the Russian article. Both localised articles include translated alt text and step explanations outside the images.
+
+## Science EN/KK localised SVGs for research biology articles (19 November 2026)
+
+Owner-requested language localisation of two original AutismHub diagrams. Source graphics in the Russian pages remain unchanged.
+
+| Original SVG | Added language-specific SVG variants | Origin and editorial constraint |
+| --- | --- | --- |
+| `public/images/research/autism-diagnostic-pathway-evidence.svg` | `autism-diagnostic-pathway-evidence-en.svg`, `autism-diagnostic-pathway-evidence-kk.svg` | Same paths and four-step layout. Translated heading, stage descriptions and caution statement. Educational model, not a fixed diagnostic route or independently validated instrument. |
+| `public/images/research/autism-risk-evidence-levels.svg` | `autism-risk-evidence-levels-en.svg`, `autism-risk-evidence-levels-kk.svg` | Same three evidence-level cards, source concept and caution. Associations are not presented as proven causes or as an individual risk calculator. |
+
+The new SVG variants use inline text and include language-specific title and description. Their translations are AI-assisted and remain subject to responsible-editor language and scientific review. Existing owner-approved raster schemes `gene-expression-brain-development-approved.webp` and `brain-auditory-path-owner-approved-2026-11-15.avif` have not been altered or replaced. Their EN/KK image-text localisation and visual comparison are still pending. Draft article files are kept unpublished until that work and editorial sign-off are complete.
