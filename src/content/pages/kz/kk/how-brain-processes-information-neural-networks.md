@@ -10,7 +10,7 @@ section: research
 topic: causes-and-biology
 slug: mi-akparatty-kalai-ondeidi-neirondyk-zheliler
 translationKey: research-brain-information-processing-neural-networks
-translationStatus: pending
+translationStatus: checked
 audience:
   - parents
   - families
@@ -23,8 +23,10 @@ conflictOfInterest: "Мүдделер қақтығысы мәлімделмег�
 originalPublishedAt: 2026-10-15
 displayPublishedAt: 2026-10-15
 reviewDueAt: 2027-04-15
-draft: true
-versionNote: "Аударма жасанды интеллект көмегімен дайындалып, негізгі бөлімдер, сандар және дереккөздер бойынша түпнұсқамен салыстырылды. Жауапты редактордың қорытынды тексеруі мен жергілікті сурет нұсқасын бекітуі қажет, сондықтан мақала жарияланбаған."
+publishedAt: "2026-11-19T22:15:00.000Z"
+updatedAt: "2026-11-19T22:15:00.000Z"
+draft: false
+versionNote: "Жасанды интеллект көмегімен дайындалған аударма орысша түпнұсқамен бөлімдері, дереккөздері, сандары және медициналық шектеулері бойынша салыстырылды. Жоба иесі 2026-11-19 күні жариялауға рұқсат берді. Тәуелсіз клиникалық немесе кәсіби тілдік сараптама жүргізілген жоқ."
 keyPoints:
   - "Ми көптеген жүйке жасушалары мен желілерінің үйлескен жұмысы арқылы ақпаратты өңдейді."
   - "Бір дыбысты қабылдау зейінге, тәжірибеге, адамның жағдайына және ортаға байланысты өзгеруі мүмкін."

@@ -10,7 +10,7 @@ section: research
 topic: causes-and-biology
 slug: how-genes-guide-brain-development
 translationKey: research-gene-regulation-brain-development
-translationStatus: pending
+translationStatus: checked
 audience:
   - parents
   - families
@@ -23,8 +23,10 @@ conflictOfInterest: "No conflicts of interest declared."
 originalPublishedAt: 2026-10-15
 displayPublishedAt: 2026-10-15
 reviewDueAt: 2027-04-15
-draft: true
-versionNote: "AI-assisted translation prepared against the Russian source. Responsible editor's scientific, medical and language sign-off is pending. No independent professional review is claimed."
+publishedAt: "2026-11-19T22:15:00.000Z"
+updatedAt: "2026-11-19T22:15:00.000Z"
+draft: false
+versionNote: "AI-assisted translation compared with the Russian original for sections, references, numbers and medical caveats. The project owner authorised publication on 2026-11-19. No independent clinical or professional language review was conducted."
 keyPoints:
   - "Genes contain instructions, but brain development also depends on which genes are active, in which cells, when and to what degree."
   - "For many genes, information is transcribed from DNA into RNA and then used to produce proteins involved in cell development and signalling."

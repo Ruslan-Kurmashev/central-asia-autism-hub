@@ -10,7 +10,7 @@ section: research
 topic: causes-and-biology
 slug: how-the-brain-processes-information-neural-networks
 translationKey: research-brain-information-processing-neural-networks
-translationStatus: pending
+translationStatus: checked
 audience:
   - parents
   - families
@@ -23,8 +23,10 @@ conflictOfInterest: "No conflicts of interest declared."
 originalPublishedAt: 2026-10-15
 displayPublishedAt: 2026-10-15
 reviewDueAt: 2027-04-15
-draft: true
-versionNote: "AI-assisted translation checked for major sections, references and numerical claims. Final responsible-editor review and language-specific figure approval are pending, so this version is not published."
+publishedAt: "2026-11-19T22:15:00.000Z"
+updatedAt: "2026-11-19T22:15:00.000Z"
+draft: false
+versionNote: "AI-assisted translation compared with the Russian original for sections, references, numbers and medical caveats. The project owner authorised publication on 2026-11-19. No independent clinical or professional language review was conducted."
 keyPoints:
   - "The brain processes information through the coordinated activity of many nerve cells and networks."
   - "The same sound can feel different depending on attention, experience, wellbeing and the surroundings."

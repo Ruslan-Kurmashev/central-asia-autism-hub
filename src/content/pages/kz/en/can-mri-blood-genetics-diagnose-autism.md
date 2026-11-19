@@ -10,7 +10,7 @@ section: research
 topic: causes-and-biology
 slug: can-mri-blood-genetic-tests-diagnose-autism
 translationKey: research-autism-biological-testing-diagnosis
-translationStatus: pending
+translationStatus: checked
 audience:
   - parents
   - families
@@ -23,8 +23,10 @@ conflictOfInterest: "No conflicts of interest declared."
 originalPublishedAt: 2026-10-16
 displayPublishedAt: 2026-10-16
 reviewDueAt: 2027-04-15
-draft: true
-versionNote: "AI-assisted translation compared with the Russian source for sections, statistics, citations and safety limits. Final clinical and language review by the responsible editor remains pending, and no independent professional review is claimed."
+publishedAt: "2026-11-19T22:15:00.000Z"
+updatedAt: "2026-11-19T22:15:00.000Z"
+draft: false
+versionNote: "AI-assisted translation compared with the Russian original for sections, references, numbers and medical caveats. The project owner authorised publication on 2026-11-19. No independent clinical or professional language review was conducted."
 keyPoints:
   - "No universal blood test, conventional MRI, EEG or genetic test can independently confirm or rule out autism in one person."
   - "Clinical assessment relies on developmental history, observation, established neurodevelopmental criteria and consideration of other explanations and circumstances."
@@ -431,7 +433,7 @@ The important issue is not the number of tests ordered. It is whether each test 
 - [Autism biology: what science knows today](../autism-biology-what-science-knows/) - general scientific overview.
 - [Autism and genetics: what role does heredity play?](../autism-genetics-and-inheritance/) - inherited and new variants.
 - **Why does autism differ between people?** - currently available in the Russian-language science section.
-- [How the brain processes information: neural networks and signals](../how-the-brain-processes-information-neural-networks/) - functional connectivity and MRI limitations, pending editorial approval.
+- [How the brain processes information: neural networks and signals](../how-the-brain-processes-information-neural-networks/) - functional connectivity and MRI limitations.
 - **Gut microbiome and autism** - example of research biomarkers without clinical validation, currently available in Russian.
 - [Biology and mechanisms of autism](../topics/causes-and-biology/) - the full topic collection.
 

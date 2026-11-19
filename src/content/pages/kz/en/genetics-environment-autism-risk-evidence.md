@@ -10,7 +10,7 @@ section: research
 topic: causes-and-biology
 slug: genetics-environment-factors-linked-to-autism
 translationKey: research-genetics-environment-autism-risk
-translationStatus: pending
+translationStatus: checked
 audience:
   - parents
   - families
@@ -23,8 +23,10 @@ conflictOfInterest: "No conflicts of interest declared."
 originalPublishedAt: 2026-10-15
 displayPublishedAt: 2026-10-15
 reviewDueAt: 2027-04-15
-draft: true
-versionNote: "AI-assisted translation compared with the Russian source for structure and numerical findings. Final responsible-editor medical and language review is pending. No independent review is claimed."
+publishedAt: "2026-11-19T22:15:00.000Z"
+updatedAt: "2026-11-19T22:15:00.000Z"
+draft: false
+versionNote: "AI-assisted translation compared with the Russian original for sections, references, numbers and medical caveats. The project owner authorised publication on 2026-11-19. No independent clinical or professional language review was conducted."
 keyPoints:
   - "Genetic factors contribute substantially to autism but do not reduce to one gene. An approximately 80% population heritability estimate is not 80% genetic causation for one child."
   - "Studies of pregnancy, parental age, preterm birth, diabetes and air pollution find some statistical associations. Associations need not be causal and do not assign blame to parents."
@@ -510,7 +512,7 @@ In certain situations a clinician may recommend genetic counselling or testing t
 
 - [Autism biology: what science knows today](../autism-biology-what-science-knows/) - overview of biological research.
 - [Autism and genetics: what role does heredity play?](../autism-genetics-and-inheritance/) - genetic variants and heritability.
-- **How genes guide brain development** - translated draft awaiting editorial review.
+- [How genes guide brain development](../how-genes-guide-brain-development/) - how gene regulation contributes to brain development.
 - **How the brain develops before birth** - developmental biology article available in the Russian science section.
 
 *This educational article does not replace consultation with a healthcare professional. It is not intended to calculate individual autism risk, recommend starting or stopping medication during pregnancy, or select diagnostic tests for a particular person.*
