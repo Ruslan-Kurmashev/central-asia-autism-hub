@@ -116,7 +116,7 @@ How do cells acquire different properties and carry out their tasks? Genes are i
 
 The illustration below shows a simplified way that genetic information can be used by nerve cells.
 
-![Simplified educational diagram: information in DNA is transcribed into RNA and, for many genes, used to produce proteins that support cellular functions. Not all genes encode proteins.](/central-asia-autism-hub/images/research/gene-expression-brain-development-approved.webp)
+![Simplified educational diagram: information in DNA is transcribed into RNA and, for many genes, used to produce proteins that support cellular functions. Not all genes encode proteins.](/central-asia-autism-hub/images/research/gene-expression-brain-development-en-2026-11-19.svg)
 
 *This illustrates one major pathway of genetic information use. Some genes produce functional RNA without subsequent protein production.*
 

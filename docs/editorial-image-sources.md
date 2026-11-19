@@ -1511,3 +1511,12 @@ Owner-requested language localisation of two original AutismHub diagrams. Source
 | `public/images/research/autism-risk-evidence-levels.svg` | `autism-risk-evidence-levels-en.svg`, `autism-risk-evidence-levels-kk.svg` | Same three evidence-level cards, source concept and caution. Associations are not presented as proven causes or as an individual risk calculator. |
 
 The new SVG variants use inline text and include language-specific title and description. Their translations are AI-assisted and remain subject to responsible-editor language and scientific review. Existing owner-approved raster schemes `gene-expression-brain-development-approved.webp` and `brain-auditory-path-owner-approved-2026-11-15.avif` have not been altered or replaced. Their EN/KK image-text localisation and visual comparison are still pending. Draft article files are kept unpublished until that work and editorial sign-off are complete.
+
+## Localised DNA-to-cell figure derivatives (19 November 2026)
+
+The project-owner-approved Russian WebP remains intact at `public/images/research/gene-expression-brain-development-approved.webp` (blob `54ce78c47bcf4b1dffc61e629c4e8ea6589adef8`, original 1200 x 400). Two language-specific SVG derivatives embed **that same original raster** and clip only its four scientific illustrations (DNA, RNA, protein, neuron) into the educational layout. All Russian lettering is replaced by separate EN or KK labels, captions and scientific caveats. The design does not claim to be a new scientific finding, an autism diagnostic pathway, or an independently reviewed image.
+
+- English: `public/images/research/gene-expression-brain-development-en-2026-11-19.svg`, used by `src/content/pages/kz/en/genes-control-brain-development.md`.
+- Kazakh: `public/images/research/gene-expression-brain-development-kk-2026-11-19.svg`, used by `src/content/pages/kz/kk/genes-control-brain-development.md`.
+
+The English and Kazakh source articles are still `draft: true` and `translationStatus: pending` until the responsible editor reviews and approves them. The original Russian raster and Russian article remain unchanged.
