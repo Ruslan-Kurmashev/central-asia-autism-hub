@@ -1520,3 +1520,12 @@ The project-owner-approved Russian WebP remains intact at `public/images/researc
 - Kazakh: `public/images/research/gene-expression-brain-development-kk-2026-11-19.svg`, used by `src/content/pages/kz/kk/genes-control-brain-development.md`.
 
 The English and Kazakh source articles are still `draft: true` and `translationStatus: pending` until the responsible editor reviews and approves them. The original Russian raster and Russian article remain unchanged.
+
+## Localised auditory-path infographic derivatives (19 November 2026)
+
+The project-owner-approved Russian raster `public/images/research/brain-auditory-path-owner-approved-2026-11-15.avif` (blob `e1eb96e5a5462128f22f3435a768246560a3f50f`, 1448 x 1086) remains unchanged. The EN and KK variants embed the original AVIF without cropping, redrawing or altering the ear, cochlea, brain, arrows, child or door. They overlay only the explanatory title, label boxes, process captions and caution with translated text. The scientific content remains a simplified educational pathway, not a patient image, MRI, precise anatomical localisation or evidence of a universal autism-related circuit.
+
+- English derivative: `public/images/research/brain-auditory-path-en-2026-11-19.svg`, used in `src/content/pages/kz/en/how-brain-processes-information-neural-networks.md`.
+- Kazakh derivative: `public/images/research/brain-auditory-path-kk-2026-11-19.svg`, used in `src/content/pages/kz/kk/how-brain-processes-information-neural-networks.md`.
+
+Both translations remain drafts pending responsible-editor review. These derivatives are not presented as independently professionally reviewed or as separately approved replacement artwork. The Russian page and original asset remain unchanged.

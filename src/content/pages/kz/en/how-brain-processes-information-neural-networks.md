@@ -148,7 +148,7 @@ In reality these processes do not happen in a single rigid sequence. Brain regio
 
 This is one example of information processing by the brain.
 
-[![Educational illustration of a doorbell signal reaching the ear and cochlea, travelling through auditory pathways via brainstem and thalamus to the auditory cortex and interacting with attention and action-planning systems. The image is illustrative, not a patient's brain scan.](/central-asia-autism-hub/images/research/brain-auditory-path-owner-approved-2026-11-15.avif)](/central-asia-autism-hub/images/research/brain-auditory-path-owner-approved-2026-11-15.avif)
+[![Educational illustration of a doorbell signal reaching the ear and cochlea, travelling through auditory pathways via brainstem and thalamus to the auditory cortex and interacting with attention and action-planning systems. The image is illustrative, not a patient's brain scan.](/central-asia-autism-hub/images/research/brain-auditory-path-en-2026-11-19.svg)](/central-asia-autism-hub/images/research/brain-auditory-path-en-2026-11-19.svg)
 
 *An educational diagram: signals travel from the inner ear through auditory pathways towards the cerebral cortex. Recognition, attention and preparation of a response involve several interacting systems, and some processing occurs in parallel. The coloured areas are schematic, not a precise anatomical map, an MRI finding or an autism model. Open the image to enlarge it.*
 
