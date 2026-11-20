@@ -24,7 +24,7 @@ originalPublishedAt: 2026-10-15
 displayPublishedAt: 2026-10-15
 reviewDueAt: 2027-04-15
 publishedAt: "2026-11-19T22:15:00.000Z"
-updatedAt: "2026-11-19T22:15:00.000Z"
+updatedAt: "2026-11-20T23:13:02.200Z"
 draft: false
 versionNote: "AI-assisted translation compared with the Russian original for sections, references, numbers and medical caveats. The project owner authorised publication on 2026-11-19. No independent clinical or professional language review was conducted."
 keyPoints:
