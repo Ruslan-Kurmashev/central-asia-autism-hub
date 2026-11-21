@@ -57,8 +57,9 @@ for (const name of await readdir(directory)) {
       errors.push(name + ':' + current.line + ': skipped H' + headings[i - 1].level + ' to H' + current.level);
     }
   }
-  if (field(header, 'language') === 'ru' &&
-      (!headings.length || headings[headings.length - 1].text !== 'Оригинальное научное исследование')) {
+  const language = field(header, 'language');
+  const sourceHeading = { ru: 'Оригинальное научное исследование', en: 'Original scientific study', kk: 'Түпнұсқа ғылыми зерттеу' }[language];
+  if (!sourceHeading || !headings.length || headings[headings.length - 1].level !== 2 || headings[headings.length - 1].text !== sourceHeading) {
     errors.push(name + ': original scientific study must be the final section heading');
   }
   if (/<(?:h1|font)\b/i.test(body) || /font-(?:size|family)\s*:/i.test(body)) {
@@ -83,11 +84,12 @@ for (const name of await readdir(directory)) {
     errors.push(name + ': original source link missing from article body');
   }
 
-  if (!body.includes('## Оригинальное научное исследование')) {
+  if (!sourceHeading || !body.split(/\r?\n/).includes('## ' + sourceHeading)) {
     errors.push(name + ': final primary-study reference missing');
   }
 
-  if (!/\*Материал .*не (?:предназначен|заменяет)/i.test(body)) {
+  const boundary = { ru: /\*Материал [\s\S]*?не (?:предназначен|заменяет)/i, en: /\*This article [\s\S]*?not intended for self-diagnosis/i, kk: /\*Бұл материал [\s\S]*?өз бетінше диагноз қоюға[\s\S]*?арналмаған/i }[language];
+  if (!boundary || !boundary.test(body.trim().split('\n').at(-1))) {
     errors.push(name + ': research explainer boundary notice missing');
   }
 
@@ -109,7 +111,8 @@ for (const name of await readdir(directory)) {
     if (licenseUrl.hostname !== 'creativecommons.org') {
       errors.push(name + ': missing independently identifiable Creative Commons rights link');
     }
-    if (!/без изменений|не изменено/i.test(credit)) {
+    const creditPattern = { ru: /без изменений|не изменено/i, en: /\bunchanged\b/i, kk: /өзгеріссіз қолданылған/i }[language];
+    if (!creditPattern || !creditPattern.test(credit)) {
       errors.push(name + ': image attribution must disclose whether image changed');
     }
 

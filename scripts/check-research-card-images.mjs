@@ -120,3 +120,30 @@ for (const cover of regionalCovers) {
 assert.equal(regionalCovers.length, 12, 'All regional science articles must be checked');
 assert.equal(new Set(regionalCovers.map(c => c.file)).size, 12, 'Regional science covers must be distinct');
 console.log('Regional Kazakhstan research covers PASS: 12 unique documented Pexels photos on article and catalogue pages, original SVG figures retained in bodies.');
+
+// Verify translated cards reuse the matching source's licensed photo rather than
+// weakening the original uniqueness requirement for distinct studies.
+const translatedVisuals = new Map([...visualSource.matchAll(/'([a-z0-9-]+)':\s*\{\s*sourceSlug:\s*'([^']+)',\s*alt:\s*'([^']+)'\s*\}/g)].map(m => [m[1], { sourceSlug: m[2], alt: m[3] }]));
+const sourceSlugs = new Map();
+const translatedArticles = [];
+for (const name of files) {
+  const raw = await readFile(path.join(researchDir, name), 'utf8');
+  const fm = raw.match(/^---\r?\n([\s\S]*?)\r?\n---/)?.[1] ?? '';
+  const value = key => fm.match(new RegExp('^' + key + ':[ \\t]*(.*)$', 'm'))?.[1]?.trim().replace(/^["']|["']$/g, '') ?? '';
+  if (value('draft') !== 'false') continue;
+  const item = { slug: value('slug'), key: value('translationKey'), language: value('language') };
+  if (item.language === 'ru') sourceSlugs.set(item.key, item.slug);
+  else translatedArticles.push(item);
+}
+for (const item of translatedArticles) {
+  const alias = translatedVisuals.get(item.slug);
+  assert.ok(alias && alias.sourceSlug === sourceSlugs.get(item.key), 'Missing or wrong translated research photo: ' + item.slug);
+  assert.ok(alias.alt.length >= 55, 'Missing translated alt text: ' + item.slug);
+  const src = visuals.get(alias.sourceSlug);
+  assert.ok(src, 'Translated source photo missing: ' + item.slug);
+  const listing = await readFile(path.join(root, 'dist/kz', item.language, 'research/topics/research-reviews/index.html'), 'utf8');
+  assert.ok(listing.includes('src="' + base + src + '"'), 'Translated listing lacks source photo: ' + item.slug);
+  assert.ok(listing.includes('/kz/' + item.language + '/research/' + item.slug + '/'), 'Translated listing lacks article route: ' + item.slug);
+}
+assert.equal(translatedVisuals.size, translatedArticles.length, 'Translated photo registry must match published translated research articles');
+console.log('Translated research card photo QA passed: ' + translatedArticles.length + ' articles.');

@@ -52,6 +52,20 @@ const researchCardVisuals: Record<string, ResearchCardVisual> = {
   },
 };
 
+// Translated articles reuse the exact licensed photo of their Russian source.
+// Keep source registry distinct; translated alt text follows the page language.
+const translatedResearchCardVisuals: Record<string, { sourceSlug: string; alt: string }> = {
+  'how-autistic-development-changes-with-age': { sourceSlug: 'kak-menyaetsya-razvitie-autichnyh-lyudey-s-vozrastom', alt: 'People talking together on a bridge, illustrating different life paths, not research participants.' },
+  'autizmi-bar-adamdardyn-zhasyna-karai-damuy': { sourceSlug: 'kak-menyaetsya-razvitie-autichnyh-lyudey-s-vozrastom', alt: 'Көпір үстінде адамдар әңгімелесіп тұр. Бұл әртүрлі өмір жолдарының көрінісі, зерттеуге қатысушылар емес.' },
+  'why-autism-differs-four-research-profiles': { sourceSlug: 'pochemu-autizm-u-vseh-proyavlyaetsya-po-raznomu', alt: 'Colourful laboratory tubes illustrate research into diversity, not samples from the study participants.' },
+  'autizm-nege-arturli-tort-zertteu-toby': { sourceSlug: 'pochemu-autizm-u-vseh-proyavlyaetsya-po-raznomu', alt: 'Зертханадағы түрлі түсті сынауықтар әртүрлілікті зерттеуді бейнелейді, зерттеу қатысушыларының үлгілері емес.' },
+  'genes-and-autism-102-risk-genes': { sourceSlug: 'geny-i-autizm-102-gena-riska', alt: 'A researcher handles laboratory samples with a pipette, illustrating genetic research rather than material from the original study.' },
+  'gender-zhane-autizm-102-kauip-geni': { sourceSlug: 'geny-i-autizm-102-gena-riska', alt: 'Зерттеуші тамшуырмен зертхана үлгілерін өңдеп жатыр. Бұл генетикалық зерттеудің көрінісі, бастапқы зерттеу материалдары емес.' },
+};
+
 export function getResearchCardVisual(slug: string): ResearchCardVisual | undefined {
-  return researchCardVisuals[slug];
+  const translation = translatedResearchCardVisuals[slug];
+  if (!translation) return researchCardVisuals[slug];
+  const source = researchCardVisuals[translation.sourceSlug];
+  return source ? { src: source.src, alt: translation.alt } : undefined;
 }
