@@ -22,7 +22,7 @@ conflictOfInterest: "No conflicts of interest declared."
 publishedAt: 2026-11-16
 originalPublishedAt: "2026-09-18T16:33:14Z"
 displayPublishedAt: "2026-09-18T16:33:14Z"
-updatedAt: 2026-11-16
+updatedAt: 2026-11-21
 reviewDueAt: 2027-03-18
 draft: false
 versionNote: "16 November 2026: Editorial source-to-translation check of factual content, citations, article structure, numeric claims and language-specific diagram. No independent native-speaker or external clinical review was performed."
@@ -53,7 +53,7 @@ sources:
     accessedAt: 2026-09-27
 ---
 
-[← Development, interaction and play](/kz/en/parents/)
+[← Development, interaction and play](/kz/en/parents/development-interaction-and-play/)
 
 A child is trying to open a box of toys, but the lid will not move. An adult notices the difficulty and offers help. The child may ask using a word, gesture, pointing to the box or selecting a message on an augmentative and alternative communication (AAC) system. The adult responds and helps open the box.
 
@@ -116,7 +116,7 @@ The AFIRM practical guide (2017) explains how to choose a target, identify every
 
 NICE CG170 recommends considering specialist social-communication interventions using play-based strategies to support joint attention, engagement and reciprocal communication. These should fit the child's development and involve trained professionals, with parents, educators or peers participating as appropriate. NICE does not establish the effectiveness of every intervention just because it is called "naturalistic" or "play-based".
 
-Naturalistic Intervention and naturalistic developmental behavioural interventions (NDBI) share some principles but are not interchangeable terms. [Read about NDBI (Russian version)](/kz/ru/parents/ndbi/).
+Naturalistic Intervention and naturalistic developmental behavioural interventions (NDBI) share some principles but are not interchangeable terms. [Read about NDBI](/kz/en/parents/naturalistic-developmental-behavioral-interventions/).
 
 ## How to tell whether a skill helps in everyday life
 
@@ -161,6 +161,6 @@ In Kazakhstan, similar strategies may appear within communication, educational a
 
 ## Continue reading
 
-[Next: NDBI, naturalistic developmental behavioural interventions (Russian version)](/kz/ru/parents/ndbi/)
+[Next: NDBI, naturalistic developmental behavioural interventions](/kz/en/parents/naturalistic-developmental-behavioral-interventions/)
 
-[← Development, interaction and play](/kz/en/parents/)
+[← Development, interaction and play](/kz/en/parents/development-interaction-and-play/)
