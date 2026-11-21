@@ -243,15 +243,36 @@ for (const lang of locales) {
   check(html.includes('href="' + base + lang + '/about/contact/"'), id + ': contact link missing');
 }
 
-const rusResearch = path.join(dist, 'kz', 'ru', 'research');
-const slug = (await readdir(rusResearch, { withFileTypes: true }))
-  .find(entry => entry.isDirectory())?.name;
-assert.ok(slug, 'At least one published Russian research article is required');
-const article = await readFile(path.join(rusResearch, slug, 'index.html'), 'utf8');
-check(article.includes('data-translation-missing'), 'Russian research: missing translation state must be disclosed');
-for (const target of ['kk','en']) {
-  check(article.includes('href="' + base + target + '/research/"'),
-    'Russian research: missing translation must link to ' + target + ' research section');
+// Test actual published translation groups instead of assuming the first
+// directory entry is a Russian-only article. Both available translations
+// and genuine section fallbacks must remain correct as coverage grows.
+const researchEntries = [];
+for (const filename of (await readdir('src/content/research')).filter(name => /\.mdx?$/.test(name))) {
+  const raw = await readFile(path.join('src/content/research', filename), 'utf8');
+  const front = raw.match(/^---\s*\r?\n([\s\S]*?)\r?\n---/)?.[1] ?? '';
+  if (frontValue(front, 'draft') !== 'false' ||
+      frontValue(front, 'translationStatus') === 'pending' ||
+      !frontValue(front, 'publishedAt')) continue;
+  researchEntries.push({
+    lang: frontValue(front, 'language'),
+    slug: frontValue(front, 'slug'),
+    key: frontValue(front, 'translationKey'),
+  });
+}
+assert.ok(researchEntries.some(item => item.lang === 'ru'), 'At least one published Russian research article is required');
+for (const entry of researchEntries) {
+  const id = 'Research ' + entry.lang + '/' + entry.slug;
+  const article = await readFile(path.join(dist, 'kz', entry.lang, 'research', entry.slug, 'index.html'), 'utf8');
+  const switcher = article.match(/<nav class="language-switcher"[\s\S]*?<\/nav>/)?.[0] ?? '';
+  for (const target of locales) {
+    const translated = researchEntries.find(item => item.key === entry.key && item.lang === target);
+    const expected = base + target + '/research/' + (translated ? translated.slug + '/' : '');
+    const link = [...switcher.matchAll(/<a\b[^>]*>/g)]
+      .map(match => match[0]).find(tag => tag.includes('lang="' + target + '"')) ?? '';
+    check(link.includes('href="' + expected + '"'), id + ': incorrect language destination for ' + target);
+    check(link.includes('data-translation-missing') === !translated,
+      id + ': incorrect missing-translation state for ' + target);
+  }
 }
 
 const css = await readFile('src/styles/home-v2.css', 'utf8');
