@@ -1529,3 +1529,18 @@ The project-owner-approved Russian raster `public/images/research/brain-auditory
 - Kazakh derivative: `public/images/research/brain-auditory-path-kk-2026-11-19.svg`, used in `src/content/pages/kz/kk/how-brain-processes-information-neural-networks.md`.
 
 Both translations remain drafts pending responsible-editor review. These derivatives are not presented as independently professionally reviewed or as separately approved replacement artwork. The Russian page and original asset remain unchanged.
+
+## Biology translation diagrams: English and Kazakh (21 November 2026)
+
+The following four vector images are text-localized derivatives of the existing AutismHub educational SVG figures. They preserve the meaning, layout and palette of the Russian project illustrations; only the human-readable labels and accessibility descriptions are translated. They are project-authored localized artwork, not imported stock or AI-generated replacement covers.
+
+| New asset | Original project SVG | Language | Usage |
+| --- | --- | --- | --- |
+| `public/images/research/autism-multidimensional-profile-en.svg` | `public/images/research/autism-multidimensional-profile.svg` | English | Research explainer on heterogeneous autism profiles |
+| `public/images/research/autism-multidimensional-profile-kk.svg` | `public/images/research/autism-multidimensional-profile.svg` | Kazakh | Same explainer |
+| `public/images/research/autism-heterogeneity-influences-en.svg` | `public/images/research/autism-heterogeneity-influences.svg` | English | Research explainer on interacting factors |
+| `public/images/research/autism-heterogeneity-influences-kk.svg` | `public/images/research/autism-heterogeneity-influences.svg` | Kazakh | Same explainer |
+
+The existing owner-approved AVIF educational diagrams for the synapse, prenatal brain development, and gut-brain axis articles remain untouched. Their text is still Russian, while the English/Kazakh articles supply corresponding translated captions, alt text and a visible translated legend. These are disclosed translation limitations, not claims of fully localized original raster art. Original cover assets and their prior licensing and attribution records remain unchanged.
+
+The owner authorised publication of these eight AI-assisted article translations on 2026-11-21. Structural, numerical, source URL and safety-text comparisons were performed. This does not constitute independent professional linguistic or clinical review.

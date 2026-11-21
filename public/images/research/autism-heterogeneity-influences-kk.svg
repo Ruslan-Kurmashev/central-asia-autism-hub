@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1100 885" lang="kk" role="img" aria-labelledby="t d">
+<title id="t">Профильдер мен қажеттіліктер неге өзгеше</title>
+<desc id="d">Өзара байланысты алты сала: генетикалық нұсқалар, нейрондық желілердің дамуы, қатар жүретін жағдайлар, коммуникация қолжетімділігі, жас пен тәжірибе, орта мен қолдау. Сызба тәрбие не орта аутизмді тудырады дегенді білдірмейді. Сандық салмақтар көрсетілмеген.</desc>
+<rect width="1100" height="885" rx="22" fill="#f0f7fc"/>
+<text x="50" y="68" font-family="Arial,DejaVu Sans,sans-serif" font-size="29" font-weight="700" fill="#17466e">Неге профильдер мен қажеттіліктер әртүрлі?</text>
+<text x="50" y="105" font-family="Arial,DejaVu Sans,sans-serif" font-size="18" fill="#53748d">Бір ғана себеп емес, өзара байланысты бірнеше деңгей</text>
+<g fill="#fff" stroke="#a8cadd" stroke-width="2"><rect x="75" y="156" width="446" height="142" rx="19"/><rect x="579" y="156" width="446" height="142" rx="19"/><rect x="75" y="333" width="446" height="142" rx="19"/><rect x="579" y="333" width="446" height="142" rx="19"/><rect x="75" y="510" width="446" height="142" rx="19"/><rect x="579" y="510" width="446" height="142" rx="19"/></g>
+<g font-family="Arial,DejaVu Sans,sans-serif" fill="#225579" font-size="21" font-weight="700"><text x="104" y="210" >Генетикалық нұсқалар</text><text x="607" y="210" >Нейрондық желілердің дамуы</text><text x="104" y="386" >Қатар жүретін жағдайлар</text><text x="607" y="386" >Коммуникация және AAC</text><text x="104" y="563" >Жас пен игерген дағдылар</text><text x="607" y="563" >Орта және қолдау</text></g>
+<g font-family="Arial,DejaVu Sans,sans-serif" fill="#4e7188" font-size="17"><text x="104" y="252" >Жиі және сирек ДНҚ нұсқалары</text><text x="607" y="252" >Әртүрлі жасушалық жолдар</text><text x="104" y="429" >Ұйқы, мазасыздық, эпилепсия</text><text x="607" y="429" >Сөз, ым, құрал және таңдау</text><text x="104" y="606" >Талап пен тәжірибе өзгеруі</text><text x="607" y="606" >Қолжетімді, болжамды орта</text></g>
+<g fill="none" stroke="#4a84ac" stroke-width="5" stroke-linecap="round"><path d="M270 667 V710 M830 667 V710 M270 710 H830 M550 710 V735"/></g>
+<rect x="190" y="735" width="720" height="90" rx="18" fill="#2f79a8"/>
+<text x="550" y="775" font-family="Arial,DejaVu Sans,sans-serif" font-size="24" font-weight="700" text-anchor="middle" fill="#fff">Жеке профиль және қажеттіліктер</text>
+<text x="550" y="804" font-family="Arial,DejaVu Sans,sans-serif" font-size="16" text-anchor="middle" fill="#e5f2fb">Биологиялық ықпал мен өмір жағдайларын ажырату қажет</text>
+</svg>

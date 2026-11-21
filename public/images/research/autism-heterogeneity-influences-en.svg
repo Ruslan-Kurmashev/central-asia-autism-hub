@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1100 885" lang="en" role="img" aria-labelledby="t d">
+<title id="t">Why profiles and needs differ</title>
+<desc id="d">Six interacting considerations: genetic variation, neural development, co-occurring conditions, accessible communication, age and experience, and the environment and support. The diagram does not mean parenting or environment causes autism. No numerical weights are assigned.</desc>
+<rect width="1100" height="885" rx="22" fill="#f0f7fc"/>
+<text x="50" y="68" font-family="Arial,DejaVu Sans,sans-serif" font-size="29" font-weight="700" fill="#17466e">Why profiles and needs do not always match</text>
+<text x="50" y="105" font-family="Arial,DejaVu Sans,sans-serif" font-size="18" fill="#53748d">Several interacting levels, not one simple cause</text>
+<g fill="#fff" stroke="#a8cadd" stroke-width="2"><rect x="75" y="156" width="446" height="142" rx="19"/><rect x="579" y="156" width="446" height="142" rx="19"/><rect x="75" y="333" width="446" height="142" rx="19"/><rect x="579" y="333" width="446" height="142" rx="19"/><rect x="75" y="510" width="446" height="142" rx="19"/><rect x="579" y="510" width="446" height="142" rx="19"/></g>
+<g font-family="Arial,DejaVu Sans,sans-serif" fill="#225579" font-size="21" font-weight="700"><text x="104" y="210" >Genetic variants</text><text x="607" y="210" >Neural-network development</text><text x="104" y="386" >Co-occurring conditions</text><text x="607" y="386" >Communication and AAC</text><text x="104" y="563" >Age and acquired skills</text><text x="607" y="563" >Environment and support</text></g>
+<g font-family="Arial,DejaVu Sans,sans-serif" fill="#4e7188" font-size="17"><text x="104" y="252" >Common and rare DNA variants</text><text x="607" y="252" >Different cellular pathways</text><text x="104" y="429" >Sleep, anxiety, epilepsy, more</text><text x="607" y="429" >Speech, gestures, devices, choice</text><text x="104" y="606" >Changing experience and demands</text><text x="607" y="606" >Accessibility and predictability</text></g>
+<g fill="none" stroke="#4a84ac" stroke-width="5" stroke-linecap="round"><path d="M270 667 V710 M830 667 V710 M270 710 H830 M550 710 V735"/></g>
+<rect x="190" y="735" width="720" height="90" rx="18" fill="#2f79a8"/>
+<text x="550" y="775" font-family="Arial,DejaVu Sans,sans-serif" font-size="24" font-weight="700" text-anchor="middle" fill="#fff">Individual profile and needs</text>
+<text x="550" y="804" font-family="Arial,DejaVu Sans,sans-serif" font-size="16" text-anchor="middle" fill="#e5f2fb">Distinguish biology from the circumstances of daily life</text>
+</svg>

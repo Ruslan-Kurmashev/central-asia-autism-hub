@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1100 875" lang="kk" role="img" aria-labelledby="t d">
+<title id="t">Аутизмнің көпөлшемді жеке профилі</title>
+<desc id="d">Жеке профильді қоршаған алты сала: қарым-қатынас, сенсорлық қабылдау, күнделікті дағдылар, зейін мен үйрену, денсаулық пен қатар жүретін жағдайлар, қызығушылықтар мен мықты тұстар. Сызықтар байланыстарды көрсетеді, ауырлық ұпайын не тұрақты түрлерді емес.</desc>
+<rect width="1100" height="875" rx="22" fill="#f1f8fc"/>
+<text x="44" y="65" font-family="Arial,DejaVu Sans,sans-serif" font-size="28" font-weight="700" fill="#17476c">«Жеңілден» «ауырға» дейінгі түзу шкала емес</text>
+<text x="44" y="100" font-family="Arial,DejaVu Sans,sans-serif" font-size="18" fill="#53758d">Профильдегі әр саланы бөлек ескеру қажет</text>
+<g fill="none" stroke="#6ca1c1" stroke-width="5" stroke-linecap="round"><path d="M554 423 L258 242 M554 423 L834 242 M554 423 L248 434 M554 423 L849 434 M554 423 L258 626 M554 423 L833 626"/></g>
+<g fill="#fff" stroke="#9ac1da" stroke-width="3"><rect x="72" y="170" width="348" height="121" rx="18"/><rect x="688" y="170" width="338" height="121" rx="18"/><rect x="72" y="362" width="348" height="121" rx="18"/><rect x="688" y="362" width="338" height="121" rx="18"/><rect x="72" y="554" width="348" height="121" rx="18"/><rect x="688" y="554" width="338" height="121" rx="18"/></g>
+<circle cx="552" cy="423" r="112" fill="#307eae" stroke="#fff" stroke-width="7"/>
+<g fill="#fff" font-family="Arial,DejaVu Sans,sans-serif" font-size="25" font-weight="700" text-anchor="middle"><text x="552" y="414" >Жеке</text><text x="552" y="447" >профиль</text></g>
+<g font-family="Arial,DejaVu Sans,sans-serif" fill="#22577b" text-anchor="middle" font-size="21" font-weight="700"><text x="246" y="222" >Қарым-қатынас</text><text x="857" y="222" >Сенсорлық қабылдау</text><text x="246" y="412" >Күнделікті дағдылар</text><text x="857" y="412" >Зейін және үйрену</text><text x="246" y="607" >Денсаулық</text><text x="857" y="607" >Қызығушылықтар</text></g>
+<g font-family="Arial,DejaVu Sans,sans-serif" fill="#50778e" text-anchor="middle" font-size="16"><text x="246" y="253" >Сөйлеу, ым-ишара, AAC</text><text x="857" y="253" >Реакциялар әртүрлі</text><text x="246" y="444" >Дербестік</text><text x="857" y="444" >Үйренудің жеке тәсілі</text><text x="246" y="639" >Ұйқы, мазасыздық, т.б.</text><text x="857" y="639" >Мықты тұстар мен қабілет</text></g>
+<rect x="44" y="735" width="1010" height="102" rx="16" fill="#deedf7"/>
+<text x="69" y="772" font-family="Arial,DejaVu Sans,sans-serif" font-size="18" font-weight="700" fill="#204d70">Ескерту:</text>
+<text x="190" y="772" font-family="Arial,DejaVu Sans,sans-serif" font-size="18" fill="#3b607b">Бұл сипаттамалар жиынтығы, бағалау шкаласы емес.</text>
+<text x="69" y="803" font-family="Arial,DejaVu Sans,sans-serif" font-size="18" fill="#3b607b">Диагноз бір болса да, қажетті қолдау әртүрлі болуы мүмкін.</text>
+</svg>
