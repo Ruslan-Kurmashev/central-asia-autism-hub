@@ -61,6 +61,12 @@ const translatedResearchCardVisuals: Record<string, { sourceSlug: string; alt: s
   'autizm-nege-arturli-tort-zertteu-toby': { sourceSlug: 'pochemu-autizm-u-vseh-proyavlyaetsya-po-raznomu', alt: 'Зертханадағы түрлі түсті сынауықтар әртүрлілікті зерттеуді бейнелейді, зерттеу қатысушыларының үлгілері емес.' },
   'genes-and-autism-102-risk-genes': { sourceSlug: 'geny-i-autizm-102-gena-riska', alt: 'A researcher handles laboratory samples with a pipette, illustrating genetic research rather than material from the original study.' },
   'gender-zhane-autizm-102-kauip-geni': { sourceSlug: 'geny-i-autizm-102-gena-riska', alt: 'Зерттеуші тамшуырмен зертхана үлгілерін өңдеп жатыр. Бұл генетикалық зерттеудің көрінісі, бастапқы зерттеу материалдары емес.' },
+  'autistic-and-non-autistic-communication-study': { sourceSlug: 'autichnym-lyudyam-trudnee-obshchatsya-issledovanie', alt: 'Young people conversing outdoors, illustrating everyday communication without assumptions about their neurotypes.' },
+  'autizmi-bar-adamdardyn-karym-katynasy-zertteu': { sourceSlug: 'autichnym-lyudyam-trudnee-obshchatsya-issledovanie', alt: 'Жастар ашық ауада әңгімелесіп тұр. Бұл күнделікті қарым-қатынастың көрінісі, олардың нейротипі туралы болжам жасалмайды.' },
+  'autism-brain-cell-specific-molecular-changes': { sourceSlug: 'chto-proishodit-v-mozge-pri-autizme-kletki', alt: 'A researcher examines a sample under a microscope, illustrating cell research rather than tissue from the original autism study.' },
+  'autizm-mi-zhasushalaryndagy-molekulalyk-ozgerister': { sourceSlug: 'chto-proishodit-v-mozge-pri-autizme-kletki', alt: 'Зерттеуші үлгіні микроскоппен қарап отыр. Бұл жасушаларды зерттеудің көрінісі, бастапқы аутизм зерттеуінің тіні емес.' },
+  'why-autism-is-identified-later-in-girls-and-women': { sourceSlug: 'pochemu-autizm-u-devochek-i-zhenshchin-vyyavlyayut-pozzhe', alt: 'A female doctor talks to a girl during a consultation, illustrating general healthcare rather than autism diagnosis of the child shown.' },
+  'kyzdar-men-aielderde-autizm-nege-kesh-anyktalady': { sourceSlug: 'pochemu-autizm-u-devochek-i-zhenshchin-vyyavlyayut-pozzhe', alt: 'Дәрігер қабылдау кезінде қыз баламен сөйлесіп отыр. Бұл жалпы медициналық кеңестің көрінісі, суреттегі балаға аутизм диагнозын қою емес.' },
 };
 
 export function getResearchCardVisual(slug: string): ResearchCardVisual | undefined {
