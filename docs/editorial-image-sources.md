@@ -1544,3 +1544,24 @@ The following four vector images are text-localized derivatives of the existing 
 The existing owner-approved AVIF educational diagrams for the synapse, prenatal brain development, and gut-brain axis articles remain untouched. Their text is still Russian, while the English/Kazakh articles supply corresponding translated captions, alt text and a visible translated legend. These are disclosed translation limitations, not claims of fully localized original raster art. Original cover assets and their prior licensing and attribution records remain unchanged.
 
 The owner authorised publication of these eight AI-assisted article translations on 2026-11-21. Structural, numerical, source URL and safety-text comparisons were performed. This does not constitute independent professional linguistic or clinical review.
+
+## English and Kazakh research literacy diagrams (21 November 2026)
+
+Original AutismHub educational SVGs from the seven Russian scientific literacy guides, localized to English and Kazakh on 21 November 2026. Project-owned educational artwork, not external photographs or copied publisher figures. Existing licensed Pexels covers and source attribution remain unchanged. The localized figures retain the graphic vocabulary, original conceptual content and accessibility descriptions. The illustrative confidence interval widths in the contradictions diagrams are corrected to match the article's description. Russian source images remain unchanged. The critical-reading figure retains the numerical results of Hviid et al. (2019), DOI https://doi.org/10.7326/M18-2101, drawn by AutismHub rather than copied from the publisher.
+
+| Localized asset | Original asset | Locale |
+| --- | --- | --- |
+| `public/images/research/research-literacy-contradictions-diagram-en.svg` | `public/images/research/research-literacy-contradictions-diagram.svg` | en |
+| `public/images/research/research-literacy-contradictions-diagram-kk.svg` | `public/images/research/research-literacy-contradictions-diagram.svg` | kk |
+| `public/images/research/research-literacy-correlation-diagram-en.svg` | `public/images/research/research-literacy-correlation-diagram.svg` | en |
+| `public/images/research/research-literacy-correlation-diagram-kk.svg` | `public/images/research/research-literacy-correlation-diagram.svg` | kk |
+| `public/images/research/research-literacy-critical-reading-diagram-en.svg` | `public/images/research/research-literacy-critical-reading-diagram.svg` | en |
+| `public/images/research/research-literacy-critical-reading-diagram-kk.svg` | `public/images/research/research-literacy-critical-reading-diagram.svg` | kk |
+| `public/images/research/research-literacy-graphs-diagram-en.svg` | `public/images/research/research-literacy-graphs-diagram.svg` | en |
+| `public/images/research/research-literacy-graphs-diagram-kk.svg` | `public/images/research/research-literacy-graphs-diagram.svg` | kk |
+| `public/images/research/research-literacy-statistics-diagram-en.svg` | `public/images/research/research-literacy-statistics-diagram.svg` | en |
+| `public/images/research/research-literacy-statistics-diagram-kk.svg` | `public/images/research/research-literacy-statistics-diagram.svg` | kk |
+| `public/images/research/research-literacy-study-designs-diagram-en.svg` | `public/images/research/research-literacy-study-designs-diagram.svg` | en |
+| `public/images/research/research-literacy-study-designs-diagram-kk.svg` | `public/images/research/research-literacy-study-designs-diagram.svg` | kk |
+| `public/images/research/research-literacy-study-process-diagram-en.svg` | `public/images/research/research-literacy-study-process-diagram.svg` | en |
+| `public/images/research/research-literacy-study-process-diagram-kk.svg` | `public/images/research/research-literacy-study-process-diagram.svg` | kk |

@@ -57,4 +57,7 @@ for(const ext of ['pdf','docx']){
  assert.ok(file.byteLength>2000,'Missing downloadable '+ext);
  assert.ok(ext==='pdf'?file.subarray(0,4).toString()==='%PDF':file.subarray(0,2).toString()==='PK','Wrong '+ext+' signature');
 }
-console.log('RESEARCH_LITERACY_OK 7 published RU guides, 7 licensed stock covers and 7 retained teaching SVG figures, 2 downloadable reader forms, published directory and nontranslated locales.');
+console.log('RESEARCH_LITERACY_OK 7 published RU guides, 7 licensed stock covers and 7 retained teaching SVG figures, 2 downloadable reader forms, published RU directory and locale routing.');
+
+// Keep the original RU gate and additionally require all released translations.
+await import('./check-research-literacy-translations.mjs');
