@@ -10,7 +10,7 @@ section: research
 topic: kazakhstan-research
 slug: which-regions-of-kazakhstan-register-autism-more-often
 translationKey: research-kazakhstan-autism-regional-registration
-translationStatus: pending
+translationStatus: checked
 audience:
   - parents
   - families
@@ -21,11 +21,12 @@ editor: Ruslan Kurmashev
 riskLevel: moderate
 disclaimerType: informational
 conflictOfInterest: "No conflict of interest declared."
+publishedAt: 2026-11-22
 originalPublishedAt: "2026-10-15T17:17:00Z"
 displayPublishedAt: "2026-10-15T17:17:00Z"
 updatedAt: 2026-11-22
 reviewDueAt: 2027-01-15
-draft: true
+draft: false
 keyPoints:
   - "The Ministry of Health figures reported by Factcheck.kz put Astana highest among three reported regions in 2025 at 712.9 registrations per 100,000 children."
   - "Kostanay and East Kazakhstan regions had rates of 492.8 and 450.0 per 100,000 children respectively."
@@ -65,7 +66,7 @@ sources:
     publicationYear: 2026
     note: "Form 10-f first registrations for children aged 0-17 in 2015-2025, historical-boundary regions and child psychiatrist staffing. Not the total caseload, regional denominator limitations apply."
     accessedAt: 2026-11-22
-versionNote: "AI-assisted translation draft of the Russian original updated 22 November 2026. Study conclusions, figures and sources preserved. Independent professional language or medical review has not been conducted. Publication and editorial approval pending."
+versionNote: "AI-assisted translation checked by the project owner and approved for publication on 22 November 2026. Original Russian publication date and scientific cautions retained. No independent professional language or clinical review is claimed."
 ---
 
 ## Why compare autism registration statistics across regions?

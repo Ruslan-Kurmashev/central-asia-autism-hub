@@ -12,3 +12,9 @@ These four files are drafts, with translationStatus pending and no publishedAt v
 | src/content/pages/kz/kk/kazakstanda-autizm-diagnozdary-nege-kobeip-zhatyr.md | 11 | 9 | 11 | 91 | 13 | 7 |
 
 The two original AutismHub SVG diagrams are reused as EN/KK text-only derivatives. Four localized SVGs preserve numeric data, graph proportions, steps, source attribution and conceptual limits. The photo covers reuse the exact already documented stock photos. The imagery provenance is recorded in docs/editorial-image-sources.md. For the draft on rising diagnoses, links to the previously prepared but not yet published statistics translations point to the existing Russian page with an explicit language label. All external paper URLs were matched with the source version. Source research: https://doi.org/10.3390/healthcare14223910, a study of first-time registrations, not population autism prevalence, and not causal proof from workforce correlations.
+
+## Publication approval (22 November 2026)
+
+The project owner explicitly confirmed reviewing all materials and instructed publication on 2026-11-22. The four EN/KK translations were promoted from `draft: true` / `translationStatus: pending` to `draft: false` / `translationStatus: checked`. Their first translation publication date is `publishedAt: 2026-11-22`, while `originalPublishedAt` and `displayPublishedAt` preserve the Russian originals' 15 October 2026 dates. The translations were AI-assisted and underwent structural, numeric and source URL comparison. Owner review does not imply independent professional translation or clinical peer review, neither is claimed. Evidence-register claims ASD-0041 and ASD-0042 remain pending until claim-specific verification.
+
+The same instruction authorises release of both updated Russian source articles in PR #268. GitHub validation, browser QA and Pages deployment must pass on the final release revision before public publication can be claimed.

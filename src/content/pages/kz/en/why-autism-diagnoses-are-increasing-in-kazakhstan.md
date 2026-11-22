@@ -10,7 +10,7 @@ section: research
 topic: kazakhstan-research
 slug: why-autism-diagnoses-are-increasing-in-kazakhstan
 translationKey: research-kazakhstan-why-autism-diagnoses-rise
-translationStatus: pending
+translationStatus: checked
 audience:
   - parents
   - families
@@ -21,11 +21,12 @@ editor: Ruslan Kurmashev
 riskLevel: moderate
 disclaimerType: informational
 conflictOfInterest: "No conflict of interest declared."
+publishedAt: 2026-11-22
 originalPublishedAt: "2026-10-15T17:34:51.756Z"
 displayPublishedAt: "2026-10-15T17:34:51.756Z"
 updatedAt: 2026-11-22
 reviewDueAt: 2027-01-15
-draft: true
+draft: false
 keyPoints:
   - "Kazakhstan registry studies show substantial increases in officially recorded autism diagnoses but do not directly measure true population prevalence."
   - "For children under 16, a registered ASD rate increased from 16.8 to 190.5 per 100,000 during 2014-2024, based on medical records rather than a population survey."
@@ -77,7 +78,7 @@ sources:
     publicationYear: 2026
     note: "Form 10-f first registrations under F84.0/F84.1/F84.5 for children aged 0-17, 2015-2025, 16 historical regions and child psychiatrist staffing. Denominator limitations apply."
     accessedAt: 2026-11-22
-versionNote: "AI-assisted translation draft of the Russian original updated 22 November 2026. Study conclusions, figures and sources preserved. Independent professional language or medical review has not been conducted. Publication and editorial approval pending."
+versionNote: "AI-assisted translation checked by the project owner and approved for publication on 22 November 2026. Original Russian publication date and scientific cautions retained. No independent professional language or clinical review is claimed."
 ---
 
 ## Why is autism discussed more often today?
