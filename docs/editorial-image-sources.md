@@ -695,7 +695,6 @@ Fourteen hand-authored AutismHub SVG assets accompany the seven Russian guides t
 | File | Provenance and limitations |
 | --- | --- |
 | `kazakhstan-regional-autism-registration-2025.svg` | Original hand-authored AutismHub SVG bar chart. Three 2025 rates of registered children with ASD per 100,000 children: Astana 712.9, Kostanay region 492.8 and East Kazakhstan region 450.0. Data attributed to Kazakhstan Ministry of Health by Factcheck.kz (23 April 2026): https://factcheck.kz/articles/faktchek-deputaty-o-roste-chisla-detey-s-autizmom-v-kazahstane . This is an administrative registry comparison, not a population survey, causal estimate or map of the full country. No generated image or borrowed publisher figure used. |
-
 | `kazakhstan-regional-autism-registration-2025-en.svg` and `kazakhstan-regional-autism-registration-2025-kk.svg` | Original AutismHub chart translated into English and Kazakh. Exact source 2025 administrative counts, bar lengths, colour palette and source attribution preserved. Neither image estimates population prevalence. Source: `kazakhstan-regional-autism-registration-2025.svg` (RU). |
 
 ## Parent speech and language development cover (15 October 2026)
@@ -709,7 +708,6 @@ Fourteen hand-authored AutismHub SVG assets accompany the seven Russian guides t
 | File | Provenance and limitations |
 | --- | --- |
 | `kazakhstan-autism-registration-pathway.svg` | Original hand-authored AutismHub SVG flow diagram illustrating hypothetical stages from noticing developmental differences to accessing professional assessment and registration. Conceptual educational artwork only: no measured flows, no patients, no population denominators, no borrowed published figures, no generative-image usage. Evidence and country-specific registry limitations are documented in Baikatov et al. (2026), https://doi.org/10.3389/fpsyt.2026.1880419. |
-
 | `kazakhstan-autism-registration-pathway-en.svg` and `kazakhstan-autism-registration-pathway-kk.svg` | English and Kazakh text-only adaptations of the original AutismHub four-step registration diagram. Geometry, colour palette and educational limitations preserved. Source: `kazakhstan-autism-registration-pathway.svg` (RU). |
 
 ## Parent daily communication and play covers (15 October 2026)
