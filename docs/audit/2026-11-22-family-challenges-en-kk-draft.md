@@ -2,7 +2,7 @@
 
 Date: 2026-11-22. Based on the unchanged Russian original `src/content/pages/kz/ru/trudnosti-semey-detey-s-autizmom-v-kazahstane.md` at blob 671904b42ca715fa989f68cbe0f26b4cdc3fa8b9, published initially on 2026-10-15T21:31:19.569Z. Translation status: `pending`, `draft: true`, no translation publishedAt yet. The original first-publication date is preserved explicitly in originalPublishedAt and displayPublishedAt. Publication requires separate owner approval.
 
-Scope: two complete translated articles, two text-localized original Autodesk SVG survey charts reusing the original source data, and the source image provenance register. No source article, existing cover, original chart, architecture or human-verified evidence status was altered.
+Scope: two complete translated articles, two text-localized original AutismHub SVG survey charts reusing the original source data, and the source image provenance register. No source article, existing cover, original chart, architecture or human-verified evidence status was altered.
 
 | Article | H2 | H3 | Text blocks | Table rows | Metadata sources |
 | --- | ---: | ---: | ---: | ---: | ---: |
