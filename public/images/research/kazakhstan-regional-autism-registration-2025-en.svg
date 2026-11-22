@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="675" viewBox="0 0 1200 675" role="img" aria-labelledby="title description">
+<title id="title">ASD registrations per 100,000 children in three Kazakhstan regions, 2025</title>
+<desc id="description">According to the Ministry of Health data reported by Factcheck.kz on 23 April 2026, the 2025 registration figures per 100,000 children were Astana 712.9, Kostanay Region 492.8, and East Kazakhstan Region 450.0. These are registration rates, not measured autism prevalence.</desc>
+<rect width="1200" height="675" fill="#f4f9fc"/>
+<rect x="38" y="36" width="1124" height="602" rx="25" fill="#ffffff" stroke="#d4e4ed" stroke-width="2"/>
+<text x="85" y="100" font-family="Arial,sans-serif" font-size="33" font-weight="700" fill="#153957">Highest ASD registration rates in 2025</text>
+<text x="85" y="143" font-family="Arial,sans-serif" font-size="21" fill="#456679">Registered children with ASD per 100,000 children</text>
+<line x1="382" y1="210" x2="382" y2="502" stroke="#c0d7e3" stroke-width="2"/>
+<g font-family="Arial,sans-serif" font-size="23" fill="#153957">
+<text x="356" y="264" text-anchor="end">Астана</text>
+<text x="356" y="365" text-anchor="end">Kostanay Region</text>
+<text x="356" y="453" text-anchor="end">East Kazakhstan</text><text x="356" y="480" text-anchor="end">Region</text>
+</g>
+<rect x="384" y="225" width="659.4" height="54" rx="9" fill="#24698a"/>
+<rect x="384" y="326" width="455.8" height="54" rx="9" fill="#4787a9"/>
+<rect x="384" y="427" width="416.3" height="54" rx="9" fill="#669bb4"/>
+<g font-family="Arial,sans-serif" font-size="25" font-weight="700" fill="#153957">
+<text x="1055" y="261">712.9</text>
+<text x="851" y="362">492.8</text>
+<text x="812" y="463">450.0</text>
+</g>
+<text x="85" y="563" font-family="Arial,sans-serif" font-size="18" fill="#456679">Administrative registrations, not measured autism prevalence. No full comparable regional table.</text>
+<text x="85" y="597" font-family="Arial,sans-serif" font-size="18" fill="#456679">Source: Kazakhstan Ministry of Health via Factcheck.kz, 23 April 2026.</text>
+</svg>
