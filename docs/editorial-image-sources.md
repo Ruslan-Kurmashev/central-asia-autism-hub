@@ -805,6 +805,7 @@ Three original editable SVGs written for AutismHub, without generated images, me
 | File | Authorship, numerical source and limitations |
 | --- | --- |
 | `kazakhstan-asd-family-support-survey-2025.svg` | Original hand-authored AutismHub SVG horizontal bar chart, based on three separately reported results from a sample of 390 parents in Imamatdinova et al. (2025), BMC Public Health: 73.3% reported insufficient state financial support; 25.4% reported leaving employment; 18.8% changing employment or schedules. Primary scientific source: https://doi.org/10.1186/s12889-025-23764-3 . Percentages refer to survey answers in the same non-probability sample; outcomes can overlap and must not be added, generalized to the national population, or interpreted as causal effects. Vector is original code, no AI-generated images, patient images, publisher figures or identifiable personal data. |
+| `kazakhstan-asd-family-support-survey-2025-en.svg` and `kazakhstan-asd-family-support-survey-2025-kk.svg` | Text-localized English and Kazakh adaptations of the original hand-authored AutismHub diagram. Original data values 73.3%, 25.4% and 18.8%, all bar widths, layout and source DOI remain unchanged. The categories can overlap and do not represent national population prevalence. No AI-generated or third-party illustration introduced. |
 
 ## Parent daily independence and self-care visuals (15 October 2026)
 
