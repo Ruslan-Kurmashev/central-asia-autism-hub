@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="680" viewBox="0 0 1200 680" role="img" aria-labelledby="title desc">
+<title id="title">Early autism identification: from parental concerns to professional assessment</title>
+<desc id="desc">Original AutismHub diagram: developmental observation, screening, follow-up and professional assessment when appropriate. A direct arrow shows that persistent concerns warrant assessment regardless of screening results. Not a diagnostic algorithm or M-CHAT-R/F reproduction.</desc>
+<rect width="1200" height="680" fill="#f2f8fb" rx="20"/>
+<rect x="36" y="34" width="1128" height="614" rx="24" fill="white" stroke="#cedfe8" stroke-width="2"/>
+<g font-family="Arial,sans-serif">
+<text x="70" y="92" font-size="33" font-weight="700" fill="#153e5a">Screening identifies concerns, it does not diagnose</text>
+<text x="70" y="132" font-size="20" fill="#4d7085">How observations guide decisions about further professional assessment</text>
+<g stroke="#9cbdd0" stroke-width="2">
+<rect x="67" y="225" width="242" height="181" rx="17" fill="#e7f1f6"/>
+<rect x="343" y="225" width="242" height="181" rx="17" fill="#e7f1f6"/>
+<rect x="619" y="225" width="242" height="181" rx="17" fill="#dcebf2"/>
+<rect x="895" y="225" width="242" height="181" rx="17" fill="#286889" stroke="#286889"/>
+</g>
+<g fill="#143e5a" text-anchor="middle" font-size="24" font-weight="700">
+<text x="188" y="289">Development</text><text x="188" y="322">observation</text>
+<text x="464" y="289">Screening</text><text x="464" y="322">for risk</text>
+<text x="740" y="289">Clarifying</text><text x="740" y="322">results</text>
+</g>
+<g fill="#f7fcff" text-anchor="middle" font-size="24" font-weight="700">
+<text x="1016" y="289">Professional</text><text x="1016" y="322">assessment</text>
+</g>
+<g fill="#516f83" text-anchor="middle" font-size="18">
+<text x="188" y="371">Family and specialist</text>
+<text x="464" y="371">Questionnaire, not diagnosis</text>
+<text x="740" y="371">Follow-up when indicated</text>
+</g>
+<text x="1016" y="371" text-anchor="middle" font-size="18" fill="#e9f6fb">Development and behaviour</text>
+<g fill="none" stroke="#2e6e90" stroke-width="5" stroke-linecap="round" stroke-linejoin="round">
+<path d="M317 317h18m-8-9 9 9-9 9"/>
+<path d="M593 317h18m-8-9 9 9-9 9"/>
+<path d="M869 317h18m-8-9 9 9-9 9"/>
+<path d="M189 412V460H1015V416"/>
+<path d="M996 434l19-20 19 20"/>
+</g>
+<rect x="67" y="483" width="1070" height="106" fill="#f2f8fb" stroke="#d6e7f0" stroke-width="2" rx="13"/>
+<text x="93" y="523" font-size="21" fill="#174967" font-weight="700">Persistent concerns warrant assessment regardless of questionnaire results.</text>
+<text x="93" y="556" font-size="18" fill="#4c7086">Positive screening does not diagnose ASD, negative screening cannot rule out developmental concerns.</text>
+<text x="71" y="623" font-size="15" fill="#56778c">Original AutismHub diagram. No diagnostic thresholds, test items or patient data.</text>
+</g>
+</svg>

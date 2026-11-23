@@ -771,6 +771,7 @@ Two original Russian-language PDFs in `public/downloads/emotions/` are created o
 | File | Provenance and scientific boundaries |
 | --- | --- |
 | `kazakhstan-autism-early-detection-pathway.svg` | Original hand-authored AutismHub educational SVG diagram (2026-10-15) illustrating the conceptual sequence from family observation through autism screening, follow-up and professional developmental assessment. It is not a diagnostic algorithm, an authorised or reproduced M-CHAT questionnaire, a personal diagnosis, or empirical flow data; no artificial image generator or borrowed figures used. Source background: Kazakhstan 2022 local M-CHAT-R/F study https://doi.org/10.23950/jcmk/11574 ; Kazakhstan 2024 observational screening study https://doi.org/10.1016/j.cegh.2024.101703 ; screening copyright and instructions https://www.mchatscreen.com/ . |
+| `kazakhstan-autism-early-detection-pathway-en.svg` and `kazakhstan-autism-early-detection-pathway-kk.svg` | English and Kazakh adaptations of the original conceptual four-stage AutismHub screening diagram. Stage positions and arrows retained. The illustrations are not a diagnostic algorithm, copies of the copyright-protected M-CHAT-R/F instrument, or medical instructions. Original source: `kazakhstan-autism-early-detection-pathway.svg`. |
 
 ## Microglia and immune system in autism: original SVG diagrams (15 October 2026)
 
@@ -851,6 +852,7 @@ The companion parent PDF `public/downloads/development/forma-nablyudeniy-poterya
 | File | Provenance and limitations |
 | --- | --- |
 | `kazakhstan-autism-caregiver-mental-health-2018.svg` | Original hand-authored AutismHub horizontal bar chart based exclusively on the DASS-21 data from Alibekova et al., Global Mental Health (2022), DOI https://doi.org/10.1017/gmh.2022.51 . Participants recruited in 2018 in Kazakhstan; values refer to 136 completed questionnaires: mild-to-extremely-severe stress symptoms 61.0%, anxiety symptoms 52.9%, depressive symptoms 53.7%. These outcomes overlap, are self-reports rather than clinical diagnoses, and are not population-representative national rates. Authored directly as code; no generated image, borrowed chart, patient record or identifiable subject. |
+| `kazakhstan-autism-caregiver-mental-health-2018-en.svg` and `kazakhstan-autism-caregiver-mental-health-2018-kk.svg` | Text-only English and Kazakh adaptations of the original AutismHub DASS-21 graphic. All three original bars retain identical widths, 61.0%, 52.9%, 53.7% values, and the 136-parent sample. The translations state that overlapping self-reported symptoms are not clinical diagnoses or national prevalence. Original source: `kazakhstan-autism-caregiver-mental-health-2018.svg`; study: https://doi.org/10.1017/gmh.2022.51 . |
 
 ## Kazakhstan inclusive education research explanatory diagram (16 October 2026)
 
