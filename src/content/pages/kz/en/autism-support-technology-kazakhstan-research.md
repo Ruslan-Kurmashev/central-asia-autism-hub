@@ -323,7 +323,7 @@ No universal rule makes a digital tool better than a simple one. One child may f
 
 Choice depends on the child's real goals and capacities, their environment and the people communicating with them.
 
-Practical principles for school adaptations are outlined in [Inclusive education in Kazakhstan: what does the research tell us?](/central-asia-autism-hub/kz/en/research/inclusive-education-kazakhstan-autism-research/). This translation is currently a draft, so its public link will become available only after review and publication.
+Practical principles for school adaptations are outlined in [Inclusive education in Kazakhstan: what does the research tell us?](/central-asia-autism-hub/kz/en/research/inclusive-education-kazakhstan-autism-research/).
 
 ## What Kazakhstan research still needs to investigate
 
