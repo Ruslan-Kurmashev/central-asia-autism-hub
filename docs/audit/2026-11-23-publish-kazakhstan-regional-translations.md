@@ -1,34 +1,37 @@
-# Publication record: six Kazakhstan research translations, 23 November 2026
+# Publication record: Kazakhstan family and statistics translations, 23 November 2026
 
 ## Scope and approval
 
-The owner explicitly requested publication of the outstanding research translation batches from draft PR #269 and #270 on 23 November 2026. The old draft PRs were not merged because their common base predates the published PR #271; the six articles and four original-project SVG localizations were transferred to a clean branch from current `main`. No change to the Russian articles, their first-publication dates, the M-CHAT-R implementation, original figures, or other site components was made in this release.
+The project owner requested publication of the outstanding research translation batches from draft PR #269 and #270. The first release candidate exposed two **duplicate Kazakh translations** through `check:translation-parity`: the regional registration and diagnosis-increase articles already had distinct, published KK versions on `main` since **22 November 2026**. The duplicate files from draft PR #270 were therefore excluded from this release, and the two existing published translations were preserved unmodified. The CI gate was not disabled.
 
-The four article groups are:
+This release publishes four new full translations from the earlier draft PR #269, using a fresh branch based on current `main`, alongside four localized SVG charts, image provenance and this audit:
 
-| Russian source article | New language versions | Original RU first publication | H2 / H3 | Table lines | Sources |
+| Russian original | New translations | Original Russian publishedAt | H2 / H3 | Table lines | Sources |
 | --- | --- | --- | ---: | ---: | ---: |
 | `statistika-autizma-kazahstan-2020-2026.md` | EN and KK | 2026-10-15T17:10:00Z | 10 / 1 | 16 | 7 |
 | `trudnosti-semey-detey-s-autizmom-v-kazahstane.md` | EN and KK | 2026-10-15T21:31:19.569Z | 12 / 14 | 38 | 8 |
-| `regiony-kazahstana-registraciya-autizma.md` | KK, existing EN unchanged | 2026-10-15T17:17:00Z | 10 / 10 | 14 | 5 |
-| `pochemu-rastet-chislo-diagnozov-autizma-v-kazahstane.md` | KK, existing EN unchanged | 2026-10-15T17:34:51.756Z | 11 / 9 | 11 | 7 |
 
-All six translated pages retain their original RU `translationKey`, `originalPublishedAt` and `displayPublishedAt`. The translations have `publishedAt: '2026-11-23'`, `updatedAt: 2026-11-23`, `draft: false` and `translationStatus: checked`. This status records responsible-editor release approval and source/numeric/structural comparison, **not independent native-language, clinical or scientific peer review**. AI assistance is not represented as human review. All Russian `publishedAt` fields are preserved.
+Already on `main`, unchanged by this release:
+
+| Russian original | Previously published Kazakh | KK publishedAt | H2 / H3 | Sources |
+| --- | --- | --- | ---: | ---: |
+| `regiony-kazahstana-registraciya-autizma.md` | `kazakstannyn-kai-onirlerinde-autizm-zhiirek-tirkeledi.md` | 2026-11-22 | 10 / 10 | 5 |
+| `pochemu-rastet-chislo-diagnozov-autizma-v-kazahstane.md` | `kazakstanda-autizm-diagnozdary-nege-kobeip-zhatyr.md` | 2026-11-22 | 11 / 9 | 7 |
+
+The four new EN/KK translations retain matching original `translationKey`, `originalPublishedAt`, and `displayPublishedAt` and have `publishedAt: '2026-11-23'`, `updatedAt: 2026-11-23`, `draft: false`, and `translationStatus: checked`. The owner explicitly requested release. This editorial release approval and structural verification is **not** independent professional Kazakh/English proofreading or clinical or scientific peer review. The original Russian `publishedAt` values remain unchanged.
 
 ## Scientific safeguards
 
-- The 17,196 children mentioned for 2026 were reported under medical monitoring, which is not an estimate of all autistic children in Kazakhstan. One separately sourced registration series runs from 3,568 in 2020 to 12,456 in 2024. Incompatible administrative series are not combined without explanation.
-- The report of 73.3% among 390 responding parents and the report of 90.79% among 239 respondents from Karaganda Region refer to separate non-probability survey samples. They are not national prevalence estimates of family hardship.
-- Registered children per 100,000 and first registrations per 100,000 are distinct measures. In Astana the values 712.9 and 221.4 must not be presented as the same indicator.
-- The 214,904 aggregate child-year observations in a registry analysis are not 214,904 unique children with ASD. Correlation between registration changes, service availability and staffing is not evidence that any one factor caused a change.
-- No translation asserts that vaccines cause autism, or that a screening tool establishes a diagnosis.
+- Kazakhstan's 2026 report of 17,196 children concerns those under medical observation, **not** the full population prevalence of autism. The 2020-2024 electronic registration series is a distinct administrative series and must not be mixed with other reporting methods without caveats.
+- Family difficulties: 73.3% of **390** respondents in one parent survey reported insufficient state support, whereas 90.79% of **239** Karaganda Region respondents in a different survey reported financial difficulties. These are separate, non-probability samples, not national rates.
+- Administrative registrations, first registrations, population prevalence, sample percentages, diagnosed cases and screened children are not interchangeable.
 
 ## Graphics and provenance
 
-This release includes text-localized EN and KK versions of the existing original AutismHub SVGs `autism-kazakhstan-registered-2020-2024.svg` and `kazakhstan-asd-family-support-survey-2025.svg`. Numerical values, bar geometry and underlying source identity are unchanged. Localized graphics are registered in `docs/editorial-image-sources.md`. The two other Kazakh SVGs referenced by the regional and diagnosis articles already existed on `main` and were reused.
+The release includes original-project English and Kazakh SVG text localizations of `autism-kazakhstan-registered-2020-2024.svg` and `kazakhstan-asd-family-support-survey-2025.svg`. Values, bar geometry, colour palette and sources were preserved. The four new SVG paths and origin notes are registered in `docs/editorial-image-sources.md`. No new AI cover was created.
 
 ## QA and limits
 
-Before writing to GitHub, all six translations were compared with their actual Russian originals for H2/H3 counts, table rows, number and URLs of source metadata, external body URLs, original publication dates, image references and forbidden editorial punctuation. These structural tests do not independently establish natural Kazakh or English phrasing or verify the underlying external primary publications afresh.
+The drafts were checked against the Russian source files for H2/H3 counts, Markdown table row counts, frontmatter source counts and external URL sets, first-publication dates, images and prohibited editorial punctuation. Structural and numeric cross-checks cannot guarantee that every Kazakh or English phrase is linguistically ideal, or substitute for independent medical validation.
 
-Final release requires GitHub CI on this exact branch after publication metadata is changed, including type-scale and full content validation, translation parity and article punctuation, plus Chromium checks of the now-published routes at supported viewport sizes. Do not call the pages publicly published until GitHub Pages deployment succeeds and the intended pages are verified. There was no independent professional linguistic or medical review.
+An initial validation run failed with `duplicate locale kk` for the two already published article groups. Both duplicate translated files were deleted from this release branch. Rerun `npm run check:translation-parity`, `npm run validate`, typography and Chromium published-page QA on the final commit. No QA gate was disabled. A Git commit alone is not proof that GitHub Pages has deployed or that live pages have been inspected.
