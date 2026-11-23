@@ -10,7 +10,7 @@ section: research
 topic: kazakhstan-research
 slug: early-autism-identification-research-kazakhstan
 translationKey: research-kazakhstan-autism-early-detection-evidence
-translationStatus: pending
+translationStatus: checked
 audience:
   - parents
   - families
@@ -22,10 +22,11 @@ riskLevel: moderate
 disclaimerType: medical
 conflictOfInterest: "No conflict of interest declared."
 originalPublishedAt: "2026-10-15T21:06:21.091Z"
+publishedAt: '2026-11-23T00:00:00Z'
 displayPublishedAt: "2026-10-15T21:06:21.091Z"
 updatedAt: 2026-11-23
 reviewDueAt: 2027-01-15
-draft: true
+draft: false
 keyPoints:
   - "Screening indicates who may need further professional assessment, but even a high M-CHAT-R/F score does not establish an autism diagnosis."
   - "A 2022 Kazakhstan study involving 171 children found high internal consistency for Russian and Kazakh questionnaire versions, without establishing sensitivity or specificity for the country."
@@ -92,7 +93,7 @@ sources:
     publicationYear: 2026
     note: "Screening does not confirm a diagnosis, and developmental concerns warrant professional assessment."
     accessedAt: 2026-10-15
-versionNote: "Full AI-assisted English translation draft, preserving Russian source data and limitations. Not independently reviewed or approved. Review discrepancy in the Russian original about the existing AutismHub M-CHAT-R first-stage page before publication."
+versionNote: "AI-assisted English translation. The project owner's 23 November 2026 publication approval followed comparison of the Russian article's tables, references, screening-versus-diagnosis distinctions and M-CHAT-R/F limitations. AutismHub offers a first-stage tool but no Follow-Up. No independent language or clinical review was conducted."
 ---
 
 ## Why does early identification matter for Kazakhstan?
