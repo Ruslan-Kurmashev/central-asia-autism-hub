@@ -675,6 +675,7 @@ Fourteen hand-authored AutismHub SVG assets accompany the seven Russian guides t
 | File | Provenance and interpretation |
 | --- | --- |
 | `autism-kazakhstan-registered-2020-2024.svg` | Original AutismHub SVG chart, drawn from the 2020-2024 counts (3,568; 4,886; 6,558; 9,611; 12,456) reported by Inbusiness.kz on 16 April 2025, citing the Kazakhstan Ministry of Health Electronic Dispensary Register: https://www.inbusiness.kz/ru/news/chislo-detej-s-autizmom-bet-rekordy-trehkratnyj-rost-za-pyat-let . Children aged 0-17. Exact yearly snapshot dates were not given. Depicts administrative registrations, not true population prevalence; no cross-source mixing, generative image, borrowed publisher figure or individual clinical records. |
+| `autism-kazakhstan-registered-2020-2024-en.svg` and `autism-kazakhstan-registered-2020-2024-kk.svg` | Text-localized English and Kazakh variants of the original project-owned registration bar chart. Five data points, scale, colour palette and interpretation limitations are unchanged. Source original: `autism-kazakhstan-registered-2020-2024.svg`. These depict registered children aged 0-17, not estimated population autism prevalence. |
 
 ## Parent development observation diary (15 October 2026)
 
@@ -805,6 +806,7 @@ Three original editable SVGs written for AutismHub, without generated images, me
 | File | Authorship, numerical source and limitations |
 | --- | --- |
 | `kazakhstan-asd-family-support-survey-2025.svg` | Original hand-authored AutismHub SVG horizontal bar chart, based on three separately reported results from a sample of 390 parents in Imamatdinova et al. (2025), BMC Public Health: 73.3% reported insufficient state financial support; 25.4% reported leaving employment; 18.8% changing employment or schedules. Primary scientific source: https://doi.org/10.1186/s12889-025-23764-3 . Percentages refer to survey answers in the same non-probability sample; outcomes can overlap and must not be added, generalized to the national population, or interpreted as causal effects. Vector is original code, no AI-generated images, patient images, publisher figures or identifiable personal data. |
+| `kazakhstan-asd-family-support-survey-2025-en.svg` and `kazakhstan-asd-family-support-survey-2025-kk.svg` | Text-localized English and Kazakh adaptations of the original hand-authored AutismHub diagram. Original data values 73.3%, 25.4% and 18.8%, all bar widths, layout and source DOI remain unchanged. The categories can overlap and do not represent national population prevalence. No AI-generated or third-party illustration introduced. |
 
 ## Parent daily independence and self-care visuals (15 October 2026)
 
