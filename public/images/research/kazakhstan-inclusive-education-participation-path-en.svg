@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="700" viewBox="0 0 1200 700" role="img" aria-labelledby="title desc">
+<title id="title">Four levels of inclusive school access and participation</title>
+<desc id="desc">Original AutismHub conceptual diagram: four questions about school access, presence, participation and accessible learning. Supporting conditions include teacher preparation, environment, communication, family collaboration and outcome assessment. Not a diagnostic scale, mandatory pathway or observed dataset.</desc>
+<rect width="1200" height="700" rx="24" fill="#f2f8fb"/>
+<rect x="35" y="32" width="1130" height="636" rx="22" fill="white" stroke="#d3e2eb" stroke-width="2"/>
+<g font-family="Arial,sans-serif">
+<text x="72" y="90" fill="#153f5d" font-size="32" font-weight="700">Inclusive education: from enrolment to participation</text>
+<text x="72" y="128" fill="#4d7087" font-size="20">An accessible school environment goes beyond paperwork</text>
+<g>
+<rect x="72" y="215" width="243" height="160" rx="17" fill="#e7f2f7" stroke="#acc9d9" stroke-width="2"/>
+<rect x="342" y="215" width="243" height="160" rx="17" fill="#e7f2f7" stroke="#acc9d9" stroke-width="2"/>
+<rect x="612" y="215" width="243" height="160" rx="17" fill="#d9ebf3" stroke="#92b9cc" stroke-width="2"/>
+<rect x="882" y="215" width="243" height="160" rx="17" fill="#28698a"/>
+</g>
+<g text-anchor="middle" font-size="25" font-weight="700" fill="#174563">
+<text x="193" y="276">Access</text>
+<text x="463" y="276">Presence</text>
+<text x="734" y="276">Participation</text>
+</g>
+<text x="1004" y="276" text-anchor="middle" font-size="25" font-weight="700" fill="white">Learning</text>
+<g text-anchor="middle" fill="#4d7187" font-size="18">
+<text x="193" y="319">Can enrol</text><text x="193" y="347">and attend</text>
+<text x="463" y="319">Conditions allow</text><text x="463" y="347">staying in class</text>
+<text x="734" y="319">Communication</text><text x="734" y="347">and shared tasks</text>
+</g>
+<g text-anchor="middle" fill="#eff9ff" font-size="18">
+<text x="1004" y="319">Can access</text><text x="1004" y="347">lesson content</text>
+</g>
+<g fill="none" stroke="#2f6f91" stroke-width="4" stroke-linecap="round" stroke-linejoin="round">
+<path d="M317 296H338M329 286L339 296L329 306"/>
+<path d="M587 296H608M599 286L609 296L599 306"/>
+<path d="M857 296H878M869 286L879 296L869 306"/>
+</g>
+<text x="74" y="448" fill="#184761" font-size="23" font-weight="700">What supports each stage</text>
+<rect x="73" y="473" width="1051" height="124" rx="13" fill="#f2f7fa" stroke="#d6e5ed"/>
+<g fill="#285b79" font-size="19">
+<text x="94" y="512">Teacher preparation</text><text x="423" y="512">Accessible environment</text><text x="752" y="512">Communication</text>
+<text x="94" y="565">Family collaboration</text><text x="545" y="565">Assess participation and learning outcomes</text>
+</g>
+<text x="73" y="636" fill="#57798b" font-size="16">AutismHub teaching model, not measured data or a rating of specific schools.</text>
+</g>
+</svg>

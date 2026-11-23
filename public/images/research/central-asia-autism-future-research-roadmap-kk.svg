@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="720" viewBox="0 0 1200 720" role="img" aria-labelledby="title desc">
+<title id="title">Орталық Азиядағы аутизм зерттеулерінің 2027-2030 жылдарға арналған үлгілік жол картасы</title>
+<desc id="desc">AutismHub жасаған тұжырымдамалық сызба. Бұл бекітілген бағдарлама емес. 2027 жылы сұрақтар, этика, әдістер; 2028 жылы шағын пилоттық тексеру; 2029-2030 жылдары тәуелсіз қайталау, салыстыру және нәтижелерді қоғамдастыққа жеткізу. Барлық кезеңде аутизмі бар адамдардың қатысуы, тілдік қолжетімділік пен деректер қауіпсіздігі қажет.</desc>
+<rect width="1200" height="720" rx="24" fill="#f3f8fb"/>
+<rect x="33" y="30" width="1134" height="656" rx="24" fill="white" stroke="#d0e2ed" stroke-width="2"/>
+<g font-family="Arial,sans-serif">
+<text x="70" y="96" font-size="32" font-weight="700" fill="#143e5b">Зерттеу идеясынан тексерілетін нәтижеге дейін</text>
+<text x="70" y="134" font-size="19" fill="#53778a">Бұл өңір елдері бекіткен жоспар емес, ықтимал кезеңдердің үлгісі</text>
+<g>
+<rect x="70" y="190" width="324" height="313" rx="17" fill="#e9f4f8" stroke="#bdd8e7" stroke-width="2"/>
+<rect x="438" y="190" width="324" height="313" rx="17" fill="#e5f0f6" stroke="#b2d1e2" stroke-width="2"/>
+<rect x="806" y="190" width="324" height="313" rx="17" fill="#e0edf4" stroke="#a8cada" stroke-width="2"/>
+</g>
+<g fill="#24698a"><rect x="92" y="215" width="119" height="43" rx="11"/><rect x="460" y="215" width="119" height="43" rx="11"/><rect x="828" y="215" width="151" height="43" rx="11"/></g>
+<g font-size="21" font-weight="700" fill="white" text-anchor="middle"><text x="151" y="244">2027</text><text x="519" y="244">2028</text><text x="903" y="244">2029-2030</text></g>
+<g font-size="25" font-weight="700" fill="#15435e">
+<text x="92" y="302">Негізін</text><text x="92" y="334">дайындау</text>
+<text x="460" y="302">Пилоттық</text><text x="460" y="334">тексеру</text>
+<text x="828" y="302">Қайталау</text><text x="828" y="334">және салыстыру</text>
+</g>
+<g font-size="19" fill="#476e84">
+<text x="92" y="383">Қоғамдастық сұрақтары</text><text x="92" y="416">Этика және келісім</text><text x="92" y="449">Әдістерді келісу</text>
+<text x="460" y="383">Шағын пилоттық жобалар</text><text x="460" y="416">Құралдарды тексеру</text><text x="460" y="449">Ашық хаттамалар</text>
+<text x="828" y="383">Бірнеше өңір</text><text x="828" y="416">Нәтижелерді салыстыру</text><text x="828" y="449">Отбасыларға есеп беру</text>
+</g>
+<g fill="none" stroke="#2e6f90" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"><path d="M400 350h31m-10-10 10 10-10 10"/><path d="M768 350h31m-10-10 10 10-10 10"/></g>
+<rect x="70" y="534" width="1060" height="98" rx="15" fill="#eef6fa" stroke="#d5e6ef" stroke-width="2"/>
+<text x="93" y="569" fill="#174864" font-size="20" font-weight="700">Әр кезеңде: аутизмі бар адамдар мен отбасылардың қатысуы, тілдік қолжетімділік,</text>
+<text x="93" y="598" fill="#174864" font-size="20" font-weight="700">дерек қауіпсіздігі, шектеулер мен теріс нәтижелерді ашық жариялау.</text>
+<text x="72" y="659" font-size="16" fill="#587a8e">AutismHub сызбасы. Мерзімдер шартты, серіктестер мен қаржыландыру бекітілмеген.</text>
+</g></svg>

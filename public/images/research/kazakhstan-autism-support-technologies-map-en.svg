@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="720" viewBox="0 0 1200 720" role="img" aria-labelledby="title desc">
+<title id="title">Types of technology studied for supporting autistic children</title>
+<desc id="desc">Original AutismHub conceptual diagram, with no ranking of effectiveness. Four categories: communication aids for self-expression, assistive technology for school access, social robots for studying interaction, and apps or VR for specific tasks. Selection starts from the child's needs, accessibility and real outcomes.</desc>
+<rect width="1200" height="720" rx="24" fill="#f2f8fb"/><rect x="30" y="30" width="1140" height="660" rx="23" fill="#fff" stroke="#d2e3eb" stroke-width="2"/>
+<g font-family="Arial,sans-serif">
+<text x="67" y="94" font-size="32" font-weight="700" fill="#123e5d">Support technology: start with needs, not devices</text>
+<text x="67" y="137" font-size="20" fill="#52758a">Four directions of research and practical development</text>
+<g stroke-width="2" stroke="#bbd6e3" fill="#eaf4f8">
+<rect x="65" y="182" width="512" height="169" rx="18"/><rect x="622" y="182" width="512" height="169" rx="18"/>
+<rect x="65" y="369" width="512" height="169" rx="18"/><rect x="622" y="369" width="512" height="169" rx="18"/>
+</g>
+<g fill="#28698a"><circle cx="112" cy="229" r="25"/><circle cx="669" cy="229" r="25"/><circle cx="112" cy="415" r="25"/><circle cx="669" cy="415" r="25"/></g>
+<g font-size="23" font-weight="700" text-anchor="middle" fill="#fff"><text x="112" y="237">01</text><text x="669" y="237">02</text><text x="112" y="423">03</text><text x="669" y="423">04</text></g>
+<g font-size="24" fill="#174762" font-weight="700">
+<text x="152" y="232">AAC and speech devices</text><text x="710" y="232">Assistive technology</text>
+<text x="152" y="417">Social robots</text><text x="710" y="417">Apps and VR</text>
+</g>
+<g font-size="19" fill="#416982">
+<text x="94" y="277">Express requests, choices,</text><text x="94" y="306">ideas and refusals.</text>
+<text x="651" y="277">Access learning activities</text><text x="651" y="306">and school life.</text>
+<text x="94" y="462">Study play activities,</text><text x="94" y="491">engagement and preferences.</text>
+<text x="651" y="462">Support specific skills and</text><text x="651" y="491">test transfer to daily life.</text>
+</g>
+<rect x="66" y="565" width="1068" height="90" rx="15" fill="#e0edf4"/>
+<text x="90" y="600" font-size="23" font-weight="700" fill="#174864">Child's need → selection → accessibility → outcome assessment</text>
+<text x="90" y="632" font-size="18" fill="#486e85">This diagram does not rank effectiveness or replace professional assessment.</text>
+<text x="67" y="681" fill="#597c91" font-size="15">Original AutismHub diagram. Scientific sources and limitations are in the article.</text>
+</g></svg>
