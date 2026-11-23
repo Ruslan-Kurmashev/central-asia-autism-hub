@@ -8,7 +8,7 @@ const checks = [
   {
     slug: 'weighted-items', risk: 'high', disclaimer: 'medical',
     references: ['25022743', 'Sleep-Related Infant Deaths'],
-    wording: ['Ключевое предупреждение о безопасности', 'для сна младенцев', 'нельзя применять для фиксации'],
+    wording: ['Важное предупреждение о безопасности', 'для сна младенцев', 'использовать изделие как фиксацию'],
   },
   {
     slug: 'feeding-therapy', risk: 'high', disclaimer: 'medical',
