@@ -20,10 +20,10 @@ editor: Ruslan Kurmashev
 riskLevel: moderate
 disclaimerType: informational
 conflictOfInterest: "No conflict of interest declared."
-versionNote: "4 November 2026: updated to reflect the Russian source's clarification of educational support without an automatic PMPK prerequisite, practical PMPK application requirements, and the different legal grounds for social services. AI-assisted semantic comparison, no independent native-language or legal review claimed."
+versionNote: "23 November 2026: updated MSE changes under Order No. 406. The historical publication date is unchanged. AI-assisted comparison, not an independent native-language or legal review."
 publishedAt: 2026-10-10
 originalPublishedAt: 2026-10-09
-updatedAt: 2026-11-09
+updatedAt: 2026-11-23
 reviewDueAt: 2026-12-01
 draft: false
 keyPoints:
@@ -76,8 +76,14 @@ sources:
     url: "https://adilet.zan.kz/rus/docs/V2300032922"
     organisation: "Adilet legal information system / Ministry of Labour and Social Protection of Kazakhstan"
     publicationYear: 2023
-    note: "Medical and social expert assessment rules as amended in 2026, including Order No. 329 of 11 August 2026."
+    note: "Includes Order No. 329 of 11 August 2026 and the later Order No. 406 of 15 October 2026, concerning referral timing, in-person examination and appeals."
     accessedAt: 2026-10-09
+  - title: "Order No. 406 of 15 October 2026 amending the rules for medical and social expert assessment"
+    url: "https://adilet.zan.kz/rus/docs/V2600040183"
+    organisation: "Adilet legal information system / Ministry of Labour and Social Protection of Kazakhstan"
+    publicationYear: 2026
+    note: "Addresses referral timing (with exceptions), in-person assessment and appeals. Enters into force ten calendar days after first official publication."
+    accessedAt: 2026-11-23
   - title: "Social Code of the Republic of Kazakhstan"
     url: "https://adilet.zan.kz/rus/docs/K2300000224"
     organisation: "Adilet legal information system"
@@ -144,9 +150,9 @@ Kazakhstan's mental health care standard provides for primary healthcare to iden
 
 For ASD, the medical diagnostic decision falls within the professional competence of a psychiatrist.
 
-For the detailed diagnostic pathway, see the [Russian-language guide to how an autism diagnosis is made in Kazakhstan](/central-asia-autism-hub/kz/ru/parents/kak-stavyat-diagnoz-autizma-v-kazakhstane/).
+For the detailed diagnostic pathway, see the [how an autism diagnosis is made in Kazakhstan](/central-asia-autism-hub/kz/en/parents/how-autism-is-diagnosed-in-kazakhstan/).
 
-To learn which tests may be relevant and which are **not routinely required** for autism diagnosis, see the [Russian-language guide to investigations when autism is suspected](/central-asia-autism-hub/kz/ru/parents/obsledovaniya-pri-podozrenii-na-autizm/).
+To learn which tests may be relevant and which are **not routinely required** for autism diagnosis, see the [investigations when autism is suspected](/central-asia-autism-hub/kz/en/parents/tests-and-assessments-for-suspected-autism-in-kazakhstan/).
 
 ## 3. If you need preschool, school or educational support
 
@@ -186,7 +192,7 @@ Consult the [official service page on gov.kz](https://www.gov.kz/services/4292?l
 
 This process is for a PMPK assessment. Access to specialist sessions, educational adjustments and other services follows separate eligibility conditions and timelines.
 
-Check the current service information on gov.kz before applying. For the distinction between a psychiatrist, PMPK, VKK and MSE, see the [Russian-language explanation of their respective roles](/central-asia-autism-hub/kz/ru/parents/psihiatr-pmpk-vkk-mse-kazakhstan/).
+Check the current service information on gov.kz before applying. For the distinction between a psychiatrist, PMPK, VKK and MSE, see the [explanation of their respective roles](/central-asia-autism-hub/kz/en/parents/psychiatrist-pmpk-vkk-mse-kazakhstan/).
 
 ## 4. What may happen after a PMPK assessment?
 
@@ -213,7 +219,7 @@ This is **not** the role of PMPK.
 
 **Medical and social expert assessment** (MSE, `МСЭ`) follows separate rules and is generally based on a referral from a medical organisation's **medical advisory commission** (VKK, `ВКК`).
 
-The MSE rules were amended during 2025 and 2026, the most recent amendments taken into account here took effect on **25 August 2026**.
+The MSE rules were amended again after August 2026. [Order No. 406 of 15 October 2026](https://adilet.zan.kz/rus/docs/V2600040183) revised, among other matters, the timing of referrals for MSE, in-person assessments and the appeal process. Exceptions apply to some referral timing rules, so a general waiting period must not be treated as universal for children. The order enters into force ten calendar days after its first official publication. Check the current rules and document requirements before applying.
 
 The rules require three conditions to be present together:
 
@@ -280,7 +286,7 @@ You may not need to start every process again. Instead, consider the immediate p
 - Which everyday challenges matter most now?
 - Which services does the family actually need?
 
-There is also a [Russian-language guide to the first 30 days after an autism diagnosis](/central-asia-autism-hub/kz/ru/parents/pervye-30-dney-posle-diagnoza-autizma-v-kazakhstane/).
+There is also a [guide to the first 30 days after an autism diagnosis](/central-asia-autism-hub/kz/en/parents/first-30-days-after-autism-diagnosis-in-kazakhstan/).
 
 ## Documents worth bringing and keeping
 

@@ -21,8 +21,8 @@ disclaimerType: medical
 conflictOfInterest: "No conflict of interest declared."
 publishedAt: 2026-10-10
 originalPublishedAt: 2026-10-09
-updatedAt: 2026-11-04
-versionNote: "4 November 2026: screening follow-up, multidisciplinary assessment, institution-based educational support and official links updated to match the Russian source. AI-assisted comparison only, no independent legal or native-language review claimed."
+updatedAt: 2026-11-23
+versionNote: "23 November 2026: corrected the link to an existing English diagnostic-assessments guide. No independent editorial or medical review is claimed."
 reviewDueAt: 2026-12-01
 draft: false
 keyPoints:
@@ -176,4 +176,4 @@ If educational adjustments are the main question, ask about PMPK assessment. See
 
 For a wider overview, read [Autism support in Kazakhstan: where to start](/central-asia-autism-hub/kz/en/help-kazakhstan/autism-support-kazakhstan-start/).
 
-The [Russian-language guide to investigations when autism is suspected](/central-asia-autism-hub/kz/ru/parents/obsledovaniya-pri-podozrenii-na-autizm/) contains more detail about diagnostic tests.
+The [investigations when autism is suspected](/central-asia-autism-hub/kz/en/parents/tests-and-assessments-for-suspected-autism-in-kazakhstan/) contains more detail about diagnostic tests.

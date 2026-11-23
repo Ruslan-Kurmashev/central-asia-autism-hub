@@ -21,8 +21,8 @@ disclaimerType: medical
 conflictOfInterest: "Мүдделер қақтығысы мәлімделмеген."
 publishedAt: 2026-10-10
 originalPublishedAt: 2026-10-09
-updatedAt: 2026-11-04
-versionNote: "2026 жылғы 4 қараша: даму скринингінен кейінгі әрекеттер, мультидисциплинарлық топ, білім беру ұйымындағы қолдау және ресми сілтемелер орысша түпнұсқамен сәйкестендірілді. AI көмегімен салыстырылды, тәуелсіз құқықтық немесе кәсіби тілдік сараптама жүргізілді деп мәлімделмейді."
+updatedAt: 2026-11-23
+versionNote: "2026 жылғы 23 қараша: диагностикаға қажетті тексерулер туралы қазақша нұсқаға сілтеме түзетілді. Тәуелсіз сараптама жүргізілген жоқ."
 reviewDueAt: 2026-12-01
 draft: false
 keyPoints:
@@ -166,7 +166,7 @@ sources:
 
 ## Келесі қадам
 
-Егер негізгі сұрақ аутизм диагностикасына қатысты болса, [Қазақстанда аутизмге күдік болғанда қандай тексерулер керек? (орыс тілінде)](/central-asia-autism-hub/kz/ru/parents/obsledovaniya-pri-podozrenii-na-autizm/) материалымен танысыңыз.
+Егер негізгі сұрақ аутизм диагностикасына қатысты болса, [Қазақстанда аутизмге күдік болғанда қандай тексерулер керек?](/central-asia-autism-hub/kz/kk/parents/kazakstanda-autizmge-kudik-bolganda-kandai-tekseruler-kerek/) материалымен танысыңыз.
 
 Егер сұрақ балабақшаға немесе мектепке қатысты болса, [балабақша](/central-asia-autism-hub/kz/kk/help-kazakhstan/autizm-balabaksha-kazakstan/) және [мектеп](/central-asia-autism-hub/kz/kk/help-kazakhstan/autizm-mektep-kazakstan/) туралы жеке нұсқаулықтарды оқыңыз.
 
