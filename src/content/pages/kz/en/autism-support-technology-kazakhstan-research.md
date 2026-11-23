@@ -10,7 +10,7 @@ section: research
 topic: kazakhstan-research
 slug: autism-support-technology-kazakhstan-research
 translationKey: research-kazakhstan-autism-support-technologies
-translationStatus: pending
+translationStatus: checked
 audience:
   - parents
   - families
@@ -22,11 +22,12 @@ riskLevel: moderate
 disclaimerType: informational
 conflictOfInterest: "No conflict of interest declared."
 originalPublishedAt: "2026-10-16T15:44:46.102Z"
+publishedAt: '2026-11-23T00:00:00Z'
 displayPublishedAt: "2026-10-16T15:44:46.102Z"
 updatedAt: 2026-11-23
 reviewDueAt: 2027-04-16
-draft: true
-versionNote: "Full AI-assisted English translation draft based on the Russian article. All study counts, tables, URLs, historical dates and limitations were compared with the source. No independent specialist language or clinical review or publication approval."
+draft: false
+versionNote: "AI-assisted full translation released with the project owner's publication approval on 23 November 2026. Compared against the Russian original for section structure, figures, tables, source URLs, dates and scientific limitations. No independent native-language, clinical or scientific review is claimed."
 keyPoints:
   - "Kazakhstan studies observed 14 children interacting with a NAO robot in 2019 and 11 children in a 2021 follow-up on engagement. Neither demonstrates long-term clinical effectiveness."
   - "APRIL is an ongoing research and development programme involving Nazarbayev University and partners. Demonstrations and expansion announcements are not independent clinical trials."

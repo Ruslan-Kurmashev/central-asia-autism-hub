@@ -10,7 +10,7 @@ section: research
 topic: kazakhstan-research
 slug: autism-research-history-kazakhstan-central-asia
 translationKey: research-central-asia-history-scientific-studies
-translationStatus: pending
+translationStatus: checked
 audience:
   - parents
   - families
@@ -22,11 +22,12 @@ riskLevel: moderate
 disclaimerType: informational
 conflictOfInterest: "No conflict of interest declared."
 originalPublishedAt: "2026-10-15T19:43:23.917Z"
+publishedAt: '2026-11-23T00:00:00Z'
 displayPublishedAt: "2026-10-15T19:43:23.917Z"
 updatedAt: 2026-11-23
 reviewDueAt: 2027-04-15
-draft: true
-versionNote: "AI-assisted complete English translation draft. All scientific figures, dates, research limitations, source URLs, headings and tables were checked against the published Russian article. No independent native-language or scientific peer review and no publication approval."
+draft: false
+versionNote: "AI-assisted full translation released with the project owner's publication approval on 23 November 2026. Compared against the Russian original for section structure, figures, tables, source URLs, dates and scientific limitations. No independent native-language, clinical or scientific review is claimed."
 keyPoints:
   - "A scoping review in Autism (online in 2023, printed in 2024) included eleven empirical studies from 2013-2021, ten from Kazakhstan and one from Uzbekistan. This is a result of search criteria, not a count of all studies available in 2026."
   - "Subsequent research has investigated screening, family wellbeing and service experiences, public awareness, administrative diagnosis trends and co-occurring medical conditions."

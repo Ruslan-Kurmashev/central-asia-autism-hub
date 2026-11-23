@@ -10,7 +10,7 @@ section: research
 topic: kazakhstan-research
 slug: inclusive-education-kazakhstan-autism-research
 translationKey: research-kazakhstan-inclusive-education-autism-evidence
-translationStatus: pending
+translationStatus: checked
 audience:
   - parents
   - families
@@ -22,11 +22,12 @@ riskLevel: moderate
 disclaimerType: informational
 conflictOfInterest: "No conflict of interest declared."
 originalPublishedAt: "2026-10-16T15:16:32.905Z"
+publishedAt: '2026-11-23T00:00:00Z'
 displayPublishedAt: "2026-10-16T15:16:32.905Z"
 updatedAt: 2026-11-23
 reviewDueAt: 2027-04-16
-draft: true
-versionNote: "AI-assisted full translation prepared from the Russian article. Scientific figures, source URLs, tables, dates and study limitations were compared with the original. Independent native-language or medical review was not performed, publication approval remains pending."
+draft: false
+versionNote: "AI-assisted full translation released with the project owner's publication approval on 23 November 2026. Compared against the Russian original for section structure, figures, tables, source URLs, dates and scientific limitations. No independent native-language, clinical or scientific review is claimed."
 keyPoints:
   - "Kazakhstan's inclusive education studies indicate that admission to school alone does not guarantee meaningful participation, appropriate adaptations or learning outcomes."
   - "In one qualitative study, 17 parents of autistic children described barriers to special and inclusive education in two cities. Their accounts are not a national estimate."

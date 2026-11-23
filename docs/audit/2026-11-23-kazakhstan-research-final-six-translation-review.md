@@ -46,3 +46,7 @@ A limited source-to-claim cross-check was completed against actual accessible sc
 - The 12 draft translations are intentionally not marked `checked`, `publishedAt` or `draft: false` in this branch. The original Russian `publishedAt` dates were preserved through `originalPublishedAt` and `displayPublishedAt`.
 - Source-level checks do not replace `npm run check:type-scale`, `npm run validate`, browser QA at 360/768/1440 px, mobile SVG-label inspection, or source-link/retraction review.
 - GitHub Actions must be checked on this branch or PR. Only successful required checks and explicit editorial approval should precede merging and public Pages verification.
+
+## Publication authorization and release metadata (23 November 2026)
+
+After this original draft audit, the project owner explicitly instructed to publish all six article pairs. All 12 language versions were moved to `draft: false` and `translationStatus: checked` following editorial source/structure/limitation parity checks. Their real translation publication date is `2026-11-23T00:00:00Z`, while the originals' `publishedAt` remain unchanged and translations retain `originalPublishedAt` and `displayPublishedAt` from the Russian sources. AI-assisted translation is not described as independent professional language or medical review. The outdated ASI safety-check phrase was replaced with the scientifically equivalent wording used in the current, unchanged ASI article, preserving the fail-closed check for inconclusive efficacy evidence.

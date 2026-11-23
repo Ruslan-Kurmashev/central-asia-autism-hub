@@ -10,7 +10,7 @@ section: research
 topic: kazakhstan-research
 slug: future-autism-research-central-asia
 translationKey: research-central-asia-autism-future-cooperation-and-methods
-translationStatus: pending
+translationStatus: checked
 audience:
   - parents
   - families
@@ -22,11 +22,12 @@ riskLevel: moderate
 disclaimerType: informational
 conflictOfInterest: "No conflict of interest declared."
 originalPublishedAt: "2026-10-16T17:07:04.254Z"
+publishedAt: '2026-11-23T00:00:00Z'
 displayPublishedAt: "2026-10-16T17:07:04.254Z"
 updatedAt: 2026-11-23
 reviewDueAt: 2027-04-16
-draft: true
-versionNote: "Full AI-assisted English draft translation of the Russian original, preserving dates, scientific figures, methodological boundaries, publication sources and the hypothetical nature of the roadmap. No independent language or scientific review, no publication approval."
+draft: false
+versionNote: "AI-assisted full translation released with the project owner's publication approval on 23 November 2026. Compared against the Russian original for section structure, figures, tables, source URLs, dates and scientific limitations. No independent native-language, clinical or scientific review is claimed."
 keyPoints:
   - "Central Asian publications cover ASD identification, registration, family experiences and some technologies. The next steps should include consistent methods, independent assessment and outcomes in everyday life."
   - "A historical review included eleven studies from 2013-2021 but does not count everything published since then."

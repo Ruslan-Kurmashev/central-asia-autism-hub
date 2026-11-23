@@ -10,7 +10,7 @@ section: research
 topic: kazakhstan-research
 slug: autism-central-asia-five-countries-statistics
 translationKey: research-central-asia-five-country-autism-statistics
-translationStatus: pending
+translationStatus: checked
 audience:
   - parents
   - families
@@ -22,11 +22,12 @@ riskLevel: moderate
 disclaimerType: informational
 conflictOfInterest: "No conflict of interest declared."
 originalPublishedAt: "2026-10-15T18:15:06.132Z"
+publishedAt: '2026-11-23T00:00:00Z'
 displayPublishedAt: "2026-10-15T18:15:06.132Z"
 updatedAt: 2026-11-23
 reviewDueAt: 2027-01-15
-draft: true
-versionNote: "AI-assisted complete English translation draft retaining the original source's figures, data types, publication dates and limitations. Structural and URL comparison performed, without independent language or scientific review. Publication approval pending."
+draft: false
+versionNote: "AI-assisted full translation released with the project owner's publication approval on 23 November 2026. Compared against the Russian original for section structure, figures, tables, source URLs, dates and scientific limitations. No independent native-language, clinical or scientific review is claimed."
 keyPoints:
   - "A single verified and comparable set of national autism prevalence estimates is not yet available for all five Central Asian countries."
   - "Kazakhstan reported 17,196 children with ASD under ongoing medical monitoring in 2026. This is an administrative count, not population prevalence."

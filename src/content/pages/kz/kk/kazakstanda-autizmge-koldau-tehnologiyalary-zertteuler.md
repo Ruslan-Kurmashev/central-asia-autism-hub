@@ -10,7 +10,7 @@ section: research
 topic: kazakhstan-research
 slug: kazakstanda-autizmge-koldau-tehnologiyalary-zertteuler
 translationKey: research-kazakhstan-autism-support-technologies
-translationStatus: pending
+translationStatus: checked
 audience:
   - parents
   - families
@@ -22,11 +22,12 @@ riskLevel: moderate
 disclaimerType: informational
 conflictOfInterest: "Мүдделер қақтығысы мәлімделген жоқ."
 originalPublishedAt: "2026-10-16T15:44:46.102Z"
+publishedAt: '2026-11-23T00:00:00Z'
 displayPublishedAt: "2026-10-16T15:44:46.102Z"
 updatedAt: 2026-11-23
 reviewDueAt: 2027-04-16
-draft: true
-versionNote: "Жасанды интеллект көмегімен орысша түпнұсқадан әзірленген толық қазақша аударма жобасы. Сандар, кестелер, ғылыми дереккөздер, күндер мен шектеулер салыстырылды. Тәуелсіз кәсіби тілдік немесе клиникалық сараптама және жариялауға мақұлдау жүргізілген жоқ."
+draft: false
+versionNote: "2026 жылғы 23 қарашада жоба иесінің жариялауға рұқсатымен шыққан, ЖИ көмегімен әзірленген толық аударма. Бөлімдер, сандар, кестелер, дереккөз сілтемелері, күндер мен ғылыми шектеулер орысша түпнұсқамен салыстырылды. Тәуелсіз кәсіби тілдік, клиникалық немесе ғылыми рецензия жүргізілген жоқ."
 keyPoints:
   - "Қазақстанда 2019 жылы 14 баланың NAO роботымен өзара әрекеті, ал 2021 жылы 11 баланың қайталанатын сабақтарға қатысуы зерттелді. Бұл жұмыстар роботтардың ұзақ мерзімді клиникалық тиімділігін дәлелдемейді."
   - "APRIL - Nazarbayev University және серіктестері дамытып жатқан зерттеу жобасы. Жоба таныстырылымдары мен кеңеюі тәуелсіз клиникалық сынаққа тең емес."

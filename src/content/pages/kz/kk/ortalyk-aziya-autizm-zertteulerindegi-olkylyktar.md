@@ -10,7 +10,7 @@ section: research
 topic: kazakhstan-research
 slug: ortalyk-aziya-autizm-zertteulerindegi-olkylyktar
 translationKey: research-central-asia-autism-evidence-gaps-and-priorities
-translationStatus: pending
+translationStatus: checked
 audience:
   - parents
   - families
@@ -22,11 +22,12 @@ riskLevel: moderate
 disclaimerType: informational
 conflictOfInterest: "Мүдделер қақтығысы мәлімделген жоқ."
 originalPublishedAt: "2026-10-16T16:44:47.367Z"
+publishedAt: '2026-11-23T00:00:00Z'
 displayPublishedAt: "2026-10-16T16:44:47.367Z"
 updatedAt: 2026-11-23
 reviewDueAt: 2027-04-16
-draft: true
-versionNote: "Жасанды интеллект көмегімен әзірленген толық қазақша аударма жобасы. Сандық мәліметтер, кестелер, ғылыми дереккөздер мен әдістемелік шектеулер орысша түпнұсқамен салыстырылды. Тәуелсіз кәсіби тілдік не ғылыми рецензия және жариялауға мақұлдау жоқ."
+draft: false
+versionNote: "2026 жылғы 23 қарашада жоба иесінің жариялауға рұқсатымен шыққан, ЖИ көмегімен әзірленген толық аударма. Бөлімдер, сандар, кестелер, дереккөз сілтемелері, күндер мен ғылыми шектеулер орысша түпнұсқамен салыстырылды. Тәуелсіз кәсіби тілдік, клиникалық немесе ғылыми рецензия жүргізілген жоқ."
 keyPoints:
   - "Zakirova-Engstrand және Yakubova шолуына (2023 жылы онлайн, 2024 жылғы санында) 2013-2021 жылдардың 11 эмпирикалық зерттеуі кірді: оны Қазақстаннан, біреуі Өзбекстаннан. Іздеу 2022 жылғы қаңтарда аяқталған."
   - "Алғашқы шолу ересек өмір немесе эпидемиологиялық бақылау инфрақұрылымы бойынша критерийге сай жұмыс таппады. Кейін Қазақстанның медициналық тіркелімі мен Тәжікстанның тіркеу зерттеулері шықты."

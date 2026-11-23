@@ -25,7 +25,7 @@ const checks = [
   },
   {
     slug: 'ayres-sensory-integration', risk: 'moderate',
-    references: ['41903087'], wording: ['ограниченной уверенностью', 'смешанными'],
+    references: ['41903087'], wording: ['не позволяют уверенно утверждать общий положительный эффект', 'смешанными'],
   },
   {
     slug: 'ndbi', risk: 'moderate',
