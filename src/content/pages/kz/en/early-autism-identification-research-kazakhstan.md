@@ -304,7 +304,7 @@ The authors' official resources are at **[mchatscreen.com](https://www.mchatscre
 
 M-CHAT-R/F is **copyright-protected**. Availability without charge for some clinical, educational or research uses does not grant unrestricted permission to copy, adapt, republish or implement the questionnaire in a commercial service.
 
-The Russian original states that AutismHub does not reproduce the full instrument or operate its own automatic screening. This wording needs editorial reconciliation with the separately described first-stage website feature. The article does not reproduce questionnaire items, make diagnoses or administer screening within this text.
+This article does not reproduce questionnaire items or administer screening. AutismHub's separate first-stage page does not conduct Follow-Up and must not be treated as the completed M-CHAT-R/F process. The official instrument and its permitted use should be checked with the rights holders.
 
 ## What evidence is still needed from Kazakhstan?
 
