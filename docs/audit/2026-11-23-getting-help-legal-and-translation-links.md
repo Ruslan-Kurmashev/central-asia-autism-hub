@@ -4,7 +4,7 @@
 The two published articles in the `getting-help` subsection and their RU/KK/EN versions were reviewed.
 
 ## Findings and changes
-1. The overview guide's claim that 25 August 2026 was the most recent MSE amendment was outdated. Official Order No. 406, dated 15 October 2026, is available at https://adilet.zan.kz/rus/docs/V2600040183. It amended the legal wording covering referral by VKK and consent to processing personal and medical data. The RU, EN and KK overview texts and bibliographies now mention that newer order.
+1. The overview guide's claim that 25 August 2026 was the most recent MSE amendment was outdated. Official Order No. 406, dated 15 October 2026, is available at https://adilet.zan.kz/rus/docs/V2600040183. It amended referral timing (with exceptions), procedures for in-person assessments, and appeals against expert conclusions. The RU, EN and KK overview texts and bibliographies now mention that newer order.
 2. Ten links that wrongly directed English and Kazakh readers to Russian-language guides were changed to corresponding already-published translated pages: four in each overview translation and one in each development-concerns translation.
 3. Translation source URLs retain the same sequence within each three-language article group. `translationKey`, `publishedAt`, `originalPublishedAt`, and `displayPublishedAt` were preserved.
 4. `updatedAt` was changed only on five files with actual revisions. The Russian development-concerns article was not edited.

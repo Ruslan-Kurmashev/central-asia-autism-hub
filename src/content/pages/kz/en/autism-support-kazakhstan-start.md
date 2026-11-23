@@ -76,13 +76,13 @@ sources:
     url: "https://adilet.zan.kz/rus/docs/V2300032922"
     organisation: "Adilet legal information system / Ministry of Labour and Social Protection of Kazakhstan"
     publicationYear: 2023
-    note: "Includes Order No. 329 of 11 August 2026 and the later Order No. 406 of 15 October 2026, concerning the grounds for MSE, data-processing consent and VKK referral."
+    note: "Includes Order No. 329 of 11 August 2026 and the later Order No. 406 of 15 October 2026, concerning referral timing, in-person examination and appeals."
     accessedAt: 2026-10-09
   - title: "Order No. 406 of 15 October 2026 amending the rules for medical and social expert assessment"
     url: "https://adilet.zan.kz/rus/docs/V2600040183"
     organisation: "Adilet legal information system / Ministry of Labour and Social Protection of Kazakhstan"
     publicationYear: 2026
-    note: "Addresses grounds for MSE, data-processing consent and VKK referral. Effective November 2026."
+    note: "Addresses referral timing (with exceptions), in-person assessment and appeals. Enters into force ten calendar days after first official publication."
     accessedAt: 2026-11-23
   - title: "Social Code of the Republic of Kazakhstan"
     url: "https://adilet.zan.kz/rus/docs/K2300000224"
@@ -219,7 +219,7 @@ This is **not** the role of PMPK.
 
 **Medical and social expert assessment** (MSE, `МСЭ`) follows separate rules and is generally based on a referral from a medical organisation's **medical advisory commission** (VKK, `ВКК`).
 
-The MSE rules were amended again after August 2026. [Order No. 406 of 15 October 2026](https://adilet.zan.kz/rus/docs/V2600040183) revised, among other matters, the grounds for conducting an assessment, referring to the medical advisory commission (VKK) referral together with consent to collect and process personal data and medical information. The amendments took effect in November 2026. Check the current rules and document requirements before applying.
+The MSE rules were amended again after August 2026. [Order No. 406 of 15 October 2026](https://adilet.zan.kz/rus/docs/V2600040183) revised, among other matters, the timing of referrals for MSE, in-person assessments and the appeal process. Exceptions apply to some referral timing rules, so a general waiting period must not be treated as universal for children. The order enters into force ten calendar days after its first official publication. Check the current rules and document requirements before applying.
 
 The rules require three conditions to be present together:
 
