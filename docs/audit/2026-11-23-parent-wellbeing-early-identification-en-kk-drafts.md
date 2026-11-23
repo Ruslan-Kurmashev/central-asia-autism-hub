@@ -1,15 +1,15 @@
-# Draft translations: parent wellbeing and early autism identification (23 November 2026)
+# Parent wellbeing and early autism identification: translation preparation and publication decision (23 November 2026)
 
-## Scope and publication status
+## Translation preparation and subsequent release
 
-Four full English (EN) and Kazakh (KK) draft translations of two existing Russian Research Explained articles, plus four localized educational SVGs. Both Russian originals are unchanged. This set is separate from PR #269 and PR #270.
+Four English (EN) and Kazakh (KK) translations of two existing Russian Research Explained articles were first committed as drafts, with four localized SVGs. The subsequent owner-approved release on 23 November 2026 changed their publication metadata and corrected one factual statement in the Russian early-identification original. This work is separate from PR #269 and PR #270.
 
 | Russian original | New translations | Original publishedAt | H2/H3 | Markdown table lines | Frontmatter scientific sources |
 | --- | --- | --- | --- | --- | --- |
 | `psihologicheskoe-blagopoluchie-roditeley-autizm-kazahstan.md` | `psychological-wellbeing-parents-autistic-children-kazakhstan.md` (EN), `kazakstandagy-autizmi-bar-balalardyn-ata-analarynyn-psihologiyalyk-al-aukaty.md` (KK) | 2026-10-16T14:22:08.196Z | 11/22 | 13 | 7 |
 | `rannee-vyyavlenie-autizma-v-kazahstane.md` | `early-autism-identification-research-kazakhstan.md` (EN), `kazakstanda-autizmdi-erte-anyktau-zertteuleri.md` (KK) | 2026-10-15T21:06:21.091Z | 12/14 | 24 | 10 |
 
-Each EN/KK draft has the same `translationKey` as its Russian original and the same `originalPublishedAt` and `displayPublishedAt`. No `publishedAt` is set in drafts, which remain `draft: true` and `translationStatus: pending`.
+All four EN/KK pages retain the Russian `translationKey`, `originalPublishedAt` and `displayPublishedAt`. At initial preparation, these were pending drafts. The project owner explicitly approved their publication on 23 November 2026. Release metadata now reads `draft: false`, `translationStatus: checked` and `publishedAt: '2026-11-23T00:00:00Z'`, reflecting the translation publication date rather than rewriting the original Russian dates. The `checked` status records responsible-editor release approval after numerical and structural cross-checking, **not** independent linguistic or clinical peer review.
 
 ## Chart provenance
 
@@ -30,14 +30,14 @@ Image origins and evidence boundaries recorded in `docs/editorial-image-sources.
 - Associations with perceived support, employment and social acceptance are not causal intervention effects. WHO educational material is not proof of programme availability or clinical effectiveness in Kazakhstan.
 - All external source URLs in both language versions matched their Russian originals in the translation-source comparison. No comprehensive new source/retraction review or human claim verification was performed here.
 
-## Pre-publication editorial issue
+## Resolved factual inconsistency about available first-stage M-CHAT-R
 
-The Russian early-identification original contains an inconsistency: it links to the site's operational first-stage M-CHAT-R page while later saying AutismHub does not run its own automatic screening. The first-stage page exists at `src/pages/kz/[lang]/tools/mchat-r.astro`. Both translations distinguish this page from the **missing Follow-Up stage** and refrain from calling first-stage scoring a diagnostic assessment. The Russian original has not been silently rewritten, but the owner should decide the final wording across all languages before publishing.
+The project owner confirmed that AutismHub already offers the initial M-CHAT-R stage. The Russian original was amended only where it had incorrectly stated that the website offers no automatic first-stage screening, and its `updatedAt` was advanced to 23 November 2026 without changing original `publishedAt`. EN and KK now accurately describe an online first-stage page at `src/pages/kz/[lang]/tools/mchat-r.astro` with score interpretation, not the two-stage M-CHAT-R/F: **no Follow-Up interview is conducted and a score is not an autism diagnosis**. This editorial correction does not assert that the instrument rightsholder licence has been independently verified, and it does not alter the instrument's actual code, licensed items, scoring or medical pathway.
 
-## Verification status
+## Verification and release status
 
 - Compared heading counts, table row counts, metadata sources, canonical original publication dates and external URLs against the Russian originals.
 - Checked localized image paths exist in the translation branch and verified each SVG's key labels, values and structure. The initially mixed-language Kazakh early-identification footer was caught and corrected before PR.
-- Drafts are excluded from public article routes. Passing a browser check does not constitute visual QA of these drafts.
-- Required CI on final commit is pending at the time this report was created. Check `npm run check:type-scale`, `npm run validate`, article punctuation, translation parity and image QA in GitHub Actions.
-- No independent native-language review, clinical review, external medical reviewer sign-off, merge or production publication has occurred.
+- The initial draft-page browser checks did not visually inspect the drafts. Release CI must now exercise the published pages, with QA screenshots reviewed where available.
+- The initial draft PR passed GitHub CI. After release metadata and Russian copy updates, final commit CI is required, including `npm run check:type-scale`, `npm run validate`, article punctuation, translation parity, published-page browser QA and image checks. Record their actual results before merging.
+- No independent native-language review, independent clinical review or external medical reviewer sign-off occurred. The owner approved publication under the one-person editorial policy. Deployment and public-page status must be verified independently after merge.
