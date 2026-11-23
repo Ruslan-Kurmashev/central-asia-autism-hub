@@ -1573,3 +1573,17 @@ Original AutismHub educational SVGs from the seven Russian scientific literacy g
 | `public/images/research/research-literacy-study-designs-diagram-kk.svg` | `public/images/research/research-literacy-study-designs-diagram.svg` | kk |
 | `public/images/research/research-literacy-study-process-diagram-en.svg` | `public/images/research/research-literacy-study-process-diagram.svg` | en |
 | `public/images/research/research-literacy-study-process-diagram-kk.svg` | `public/images/research/research-literacy-study-process-diagram.svg` | kk |
+
+
+## Central Asian research roadmap diagrams in EN and KK (23 November 2026)
+
+Four language-specific SVG derivatives of two original AutismHub diagrams were prepared for the remaining translations in the `kazakhstan-research` topic. They retain the original geometric layout, card order, years, category meanings and colour palette. Only text labels, the accessible SVG `title` and `desc` were localised. These are conceptual editorial illustrations, not measured data, established research priorities, funded programmes or official plans. The original Russian graphics remain unchanged.
+
+| New SVG | Original project artwork | Meaning and limitation |
+| --- | --- | --- |
+| `public/images/research/central-asia-autism-research-gaps-roadmap-en.svg` | `public/images/research/central-asia-autism-research-gaps-roadmap.svg` | EN: six research gaps, not a priority ranking |
+| `public/images/research/central-asia-autism-research-gaps-roadmap-kk.svg` | Same original SVG | KK: same six research gaps and limitations |
+| `public/images/research/central-asia-autism-future-research-roadmap-en.svg` | `public/images/research/central-asia-autism-future-research-roadmap.svg` | EN: hypothetical 2027-2030 stages, not an approved schedule |
+| `public/images/research/central-asia-autism-future-research-roadmap-kk.svg` | Same original SVG | KK: same hypothetical stages, including data safeguards and community participation |
+
+These SVG files do not introduce external copyright material and are not new cover images. Source photographs referenced by the translations are the existing licensed project assets. Translation, render legibility and medical-editorial sign-off are separate release checks, not assumed to have occurred because the files exist.
