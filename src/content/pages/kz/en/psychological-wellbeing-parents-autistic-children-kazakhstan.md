@@ -10,7 +10,7 @@ section: research
 topic: kazakhstan-research
 slug: psychological-wellbeing-parents-autistic-children-kazakhstan
 translationKey: research-kazakhstan-autism-parent-mental-wellbeing
-translationStatus: pending
+translationStatus: checked
 audience:
   - parents
   - families
@@ -22,10 +22,11 @@ riskLevel: moderate
 disclaimerType: medical
 conflictOfInterest: "No conflict of interest declared."
 originalPublishedAt: "2026-10-16T14:22:08.196Z"
+publishedAt: '2026-11-23T00:00:00Z'
 displayPublishedAt: "2026-10-16T14:22:08.196Z"
 updatedAt: 2026-11-23
 reviewDueAt: 2027-04-16
-draft: true
+draft: false
 keyPoints:
   - "In a 2022 study, 61.0% of 136 complete respondents reported elevated stress symptoms, 52.9% anxiety symptoms and 53.7% depressive symptoms, not clinical diagnoses."
   - "A separate study involving 327 parents found that positive parenting experiences can coexist with difficulties."
@@ -76,7 +77,7 @@ sources:
     publicationYear: 2026
     note: "WHO CST educational resource descriptions."
     accessedAt: 2026-10-16
-versionNote: "AI-assisted draft translation. Not approved or professionally reviewed. No independent language or medical review claimed."
+versionNote: "AI-assisted English translation. Source tables, external references, dates and critical evidence limitations were compared with the Russian original. Publication approved by the project owner on 23 November 2026 under the single-editor policy. No independent native-language or clinical review was conducted."
 ---
 
 ## Why is parents' psychological wellbeing a separate research question?
