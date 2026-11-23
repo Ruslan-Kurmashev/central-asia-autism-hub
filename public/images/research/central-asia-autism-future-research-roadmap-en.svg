@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="720" viewBox="0 0 1200 720" role="img" aria-labelledby="title desc">
+<title id="title">Illustrative Central Asian autism research roadmap for 2027-2030</title>
+<desc id="desc">Original AutismHub conceptual illustration, not an approved regional programme. In 2027 define community questions, ethics and methods; in 2028 pilot and document tools; in 2029-2030 repeat suitable methods, compare outcomes and report findings. Include autistic people, accessible languages, data safeguards and negative results throughout.</desc>
+<rect width="1200" height="720" rx="24" fill="#f3f8fb"/>
+<rect x="33" y="30" width="1134" height="656" rx="24" fill="white" stroke="#d0e2ed" stroke-width="2"/>
+<g font-family="Arial,sans-serif">
+<text x="70" y="96" font-size="32" font-weight="700" fill="#143e5b">From a research question to reliable evidence</text>
+<text x="70" y="134" font-size="19" fill="#53778a">An illustrative sequence, not an approved regional programme</text>
+<g>
+<rect x="70" y="190" width="324" height="313" rx="17" fill="#e9f4f8" stroke="#bdd8e7" stroke-width="2"/>
+<rect x="438" y="190" width="324" height="313" rx="17" fill="#e5f0f6" stroke="#b2d1e2" stroke-width="2"/>
+<rect x="806" y="190" width="324" height="313" rx="17" fill="#e0edf4" stroke="#a8cada" stroke-width="2"/>
+</g>
+<g fill="#24698a"><rect x="92" y="215" width="119" height="43" rx="11"/><rect x="460" y="215" width="119" height="43" rx="11"/><rect x="828" y="215" width="151" height="43" rx="11"/></g>
+<g font-size="21" font-weight="700" fill="white" text-anchor="middle"><text x="151" y="244">2027</text><text x="519" y="244">2028</text><text x="903" y="244">2029-2030</text></g>
+<g font-size="25" font-weight="700" fill="#15435e">
+<text x="92" y="302">Prepare</text><text x="92" y="334">the foundations</text>
+<text x="460" y="302">Pilot and</text><text x="460" y="334">evaluate</text>
+<text x="828" y="302">Replicate</text><text x="828" y="334">and compare</text>
+</g>
+<g font-size="19" fill="#476e84">
+<text x="92" y="383">Community priorities</text><text x="92" y="416">Ethics and consent</text><text x="92" y="449">Shared methods</text>
+<text x="460" y="383">Small pilot projects</text><text x="460" y="416">Test research tools</text><text x="460" y="449">Open protocols</text>
+<text x="828" y="383">Multiple settings</text><text x="828" y="416">Compare results</text><text x="828" y="449">Report to families</text>
+</g>
+<g fill="none" stroke="#2e6f90" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"><path d="M400 350h31m-10-10 10 10-10 10"/><path d="M768 350h31m-10-10 10 10-10 10"/></g>
+<rect x="70" y="534" width="1060" height="98" rx="15" fill="#eef6fa" stroke="#d5e6ef" stroke-width="2"/>
+<text x="93" y="569" fill="#174864" font-size="20" font-weight="700">Throughout: autistic people and families take part, with accessible languages,</text>
+<text x="93" y="598" fill="#174864" font-size="20" font-weight="700">data protection and transparent reporting of limitations and negative findings.</text>
+<text x="72" y="659" font-size="16" fill="#587a8e">Original AutismHub illustration. Dates are hypothetical; no partners or budgets are confirmed.</text>
+</g></svg>
