@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="680" viewBox="0 0 1200 680" role="img" aria-labelledby="title desc">
+<title id="title">Орталық Азия аутизм зерттеулерінің таңдамалы кезеңдері, 2013-2026</title>
+<desc id="desc">AutismHub-тың толық тізім емес, түсіндірмелі хронологиясы. 2013 жылы ата-ана бастамасы, 2019 жылы роботпен әрекет дизайны, 2024 жылы өңірлік шолу, 2025 жылы отбасы мен тіркелім зерттеулері, 2026 жылы Қазақстан мен Тәжікстан деректері көрсетілген.</desc>
+<rect width="1200" height="680" rx="20" fill="#f4f9fc"/>
+<rect x="30" y="28" width="1140" height="624" rx="22" fill="#ffffff" stroke="#d0e1ea" stroke-width="2"/>
+<g font-family="Arial,sans-serif">
+<text x="68" y="86" fill="#163d5b" font-size="31" font-weight="700">Орталық Азияда аутизм зерттеулері қалай дамыды?</text>
+<text x="68" y="124" fill="#52758a" font-size="20">Таңдамалы мақалалар, толық библиография не диагноз статистикасы емес</text>
+<line x1="118" y1="266" x2="1080" y2="266" stroke="#c0d7e3" stroke-width="8" stroke-linecap="round"/>
+<g fill="#276b8c" stroke="#fff" stroke-width="6">
+<circle cx="132" cy="266" r="18"/><circle cx="361" cy="266" r="18"/><circle cx="589" cy="266" r="18"/><circle cx="817" cy="266" r="18"/><circle cx="1045" cy="266" r="18"/>
+</g>
+<g fill="#173f5b" text-anchor="middle" font-size="28" font-weight="700">
+<text x="132" y="213">2013</text><text x="361" y="213">2019</text><text x="589" y="213">2024</text><text x="817" y="213">2025</text><text x="1045" y="213">2026</text>
+</g>
+<g fill="#eaf3f7" stroke="#d2e2eb" stroke-width="2">
+<rect x="55" y="310" width="154" height="232" rx="14"/>
+<rect x="242" y="310" width="238" height="232" rx="14"/>
+<rect x="494" y="310" width="190" height="232" rx="14"/>
+<rect x="698" y="310" width="238" height="232" rx="14"/>
+<rect x="950" y="310" width="209" height="232" rx="14"/>
+</g>
+<g fill="#1c4d6a" font-size="19" font-weight="700" text-anchor="middle">
+<text x="132" y="358">Ата-аналар</text><text x="132" y="387">және инклюзия</text>
+<text x="361" y="358">Роботпен</text><text x="361" y="387">өзара әрекетті</text><text x="361" y="416">зерттеу</text>
+<text x="589" y="358">Ғылыми шолу,</text><text x="589" y="387">скрининг,</text><text x="589" y="416">отбасылар</text>
+<text x="817" y="358">Көмекке</text><text x="817" y="387">қолжетімділік,</text><text x="817" y="416">өңірлік</text><text x="817" y="445">өзгерістер</text>
+<text x="1045" y="358">Ұлттық</text><text x="1045" y="387">тіркелімдер,</text><text x="1045" y="416">Тәжікстан</text>
+</g>
+<g fill="#52758a" font-size="16" text-anchor="middle">
+<text x="132" y="492">Сапалық</text><text x="132" y="515">зерттеу</text>
+<text x="361" y="492">Шағын іріктеме,</text><text x="361" y="515">пилоттық жұмыс</text>
+<text x="589" y="492">11 зерттеу</text><text x="589" y="515">2024 ж. шолуда</text>
+<text x="817" y="492">Ата-ана сауалнамалары</text><text x="817" y="515">мен тіркелімдер</text>
+<text x="1045" y="492">Медициналық</text><text x="1045" y="515">тіркеу талдауы</text>
+</g>
+<text x="70" y="591" fill="#496c81" font-size="18">Жылдар жарияланым күнін көрсетеді. Мақсаттар мен дәлел сапасы әртүрлі.</text>
+<text x="70" y="618" fill="#496c81" font-size="17">Дереккөздер мен шектеулер мәтінде берілген. AutismHub сызбасы, 15.10.2026.</text>
+</g>
+</svg>
