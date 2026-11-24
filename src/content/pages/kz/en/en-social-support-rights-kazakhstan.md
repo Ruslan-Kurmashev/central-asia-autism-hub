@@ -12,7 +12,7 @@ translationStatus: checked
 audience:
   - parents
   - families
-versionNote: "9 November 2026: reviewed MSE referral and appeals, special social services eligibility, separate benefit routes and deadlines. First publication date preserved. Independent legal and native-language review not claimed."
+versionNote: "9 November 2026: reviewed MSE referral and appeals, special social services eligibility, separate benefit routes and deadlines. First publication date preserved. Independent legal and native-language review not claimed. 24 November 2026: updated Order No. 406, MSE exceptions, IPAR revisions, eOtinish appeals, 2026 allowance and source list. Independent legal and native-language review remains pending."
 featuredImage: "/central-asia-autism-hub/images/editorial/photos/kz-help-007.jpg"
 featuredImageAlt: "Organised folders, papers and a notebook on a desk, representing preparation of social support documents."
 author: Ruslan Kurmashev
@@ -22,7 +22,7 @@ disclaimerType: informational
 conflictOfInterest: "No conflict of interest declared."
 publishedAt: 2026-10-10
 originalPublishedAt: 2026-10-09
-updatedAt: 2026-11-09
+updatedAt: 2026-11-24
 reviewDueAt: 2027-01-09
 draft: false
 keyPoints:
@@ -31,6 +31,9 @@ keyPoints:
   - "MSE is a separate procedure for disability determination and identifying necessary social protection measures. PMPK educational assessment does not replace it."
   - "Benefit amounts and individual service rules can change, so figures must be checked against up-to-date government sources."
   - "Eligibility for specialised social services depends on applicable grounds for need and an individual assessment, disability status and IPAR are not universal requirements for every form of service."
+  - "Order No. 406 of 15 October 2026 retains the general four-month MSE referral period for children with specified exceptions."
+  - "The monthly allowance for a person raising a child with a disability is 81,871 tenge in 2026, subject to legal eligibility requirements."
+  - "MSE expert conclusions may be challenged within three months of receipt, with a general administrative review period of 20 working days."
 evidenceLimitations: "Benefit amounts, MSE procedures, service criteria and local availability change. Source cross-check completed 9 November 2026, not an independent legal opinion. Confirm the applicable service and rates before applying."
 sources:
   - title: "Social Code of the Republic of Kazakhstan"
@@ -66,6 +69,36 @@ sources:
     organisation: "gov.kz"
     note: "Official information about eligibility and specialised social support delivered at home."
     accessedAt: 2026-11-09
+  - title: "Order No. 406 of 15 October 2026: amendments to MSE rules"
+    url: "https://adilet.zan.kz/rus/docs/V2600040183"
+    organisation: "Adilet legal information system"
+    publicationYear: 2026
+    note: "Official Russian amendment to the general referral timeframe and exceptions."
+    accessedAt: 2026-11-24
+  - title: "Labour Ministry guidance on MSE and IPAR amendments in November"
+    url: "https://www.gov.kz/org/enbek-aktobe/press/news/details/1331163?lang=ru"
+    organisation: "gov.kz / Kazakhstan Ministry of Labour"
+    publicationYear: 2026
+    note: "Official Russian guidance on remote proactive IPAR revisions."
+    accessedAt: 2026-11-24
+  - title: "Labour Ministry guidance on appeals against MSE conclusions"
+    url: "https://www.gov.kz/org/enbek-zko/press/news/details/1311609?lang=ru"
+    organisation: "gov.kz / Kazakhstan Ministry of Labour"
+    publicationYear: 2026
+    note: "Official Russian guidance on filing and considering MSE appeals."
+    accessedAt: 2026-11-24
+  - title: "eGov.kz: electronic requests through eOtinish"
+    url: "https://egov.kz/cms/ru/services/citizen_and_the_government/e_app"
+    organisation: "eGov.kz"
+    publicationYear: 2026
+    note: "Official instructions for electronic government submissions in Russian."
+    accessedAt: 2026-11-24
+  - title: "2026 allowance for raising a child with a disability"
+    url: "https://www.gov.kz/org/enbek-aktobe/press/news/details/1334844?lang=ru"
+    organisation: "gov.kz / Kazakhstan Ministry of Labour"
+    publicationYear: 2026
+    note: "Monthly benefit of 81,871 tenge for 2026, not a permanent amount."
+    accessedAt: 2026-11-24
 ---
 
 ## In brief
@@ -94,11 +127,13 @@ Healthcare and education processes can take place in parallel, but **PMPK**, Kaz
 
 Under points 4-9 of the MSE Rules, a referral from the medical organisation's medical advisory commission (VKK), with the required consent to data processing, provides the route to MSE. The referral uses form No. 031/u and is based on functional impairments and limitations in daily activities, not an autism diagnosis alone. The general rule for children's first referral specifies a period no earlier than four months after diagnosis, subject to exceptions. Confirm the applicable timing with the treating clinician and VKK.
 
+The amendments under [Order No. 406 of 15 October 2026](https://adilet.zan.kz/rus/docs/V2600040183) retain the general four-month period, with exceptions for irreversible defects, trisomy 21 (Down syndrome), and incurable conditions with severe functional impairment, no rehabilitation potential and palliative care. An autism diagnosis alone does not establish an exception. Confirm the route with the treating clinician and VKK.
+
 For a child's MSE assessment, the PMPK conclusion is submitted **if available**, not as a blanket mandatory document. The rules allow in-person and certain remote assessment procedures.
 
 Families should not be promised a particular disability classification, duration of status or set of support measures solely on the basis of an autism diagnosis.
 
-The MSE rules were updated by **Order No. 329 of 11 August 2026**, with changes effective from **25 August 2026**. The precise information and documents required depend on the circumstances. The PMPK conclusion is considered **when available**, not as a universal mandatory document for every application.
+After Order No. 329 of August 2026, [Order No. 406 of 15 October 2026](https://adilet.zan.kz/rus/docs/V2600040183) further changed the MSE rules, effective from 2 November. Required documents depend on the case. A child's PMPK conclusion is provided **if available**, not in every application.
 
 ## What is IPAR?
 
@@ -107,6 +142,8 @@ The MSE rules were updated by **Order No. 329 of 11 August 2026**, with changes 
 It identifies particular measures for rehabilitation, habilitation and support.
 
 For disability-related rehabilitation, assistive devices and support, check whether a measure is included in IPAR and which further requirements apply. IPAR is not a universal prerequisite for every specialised social service based on other legally recognised grounds of need. Article 157 of the Social Code uses the general term "individual programme".
+
+Following the November 2026 amendments, [IPAR can also be revised remotely through a proactive process for all diagnostic categories](https://www.gov.kz/org/enbek-aktobe/press/news/details/1331163?lang=ru). This revises the individual plan, not an automatic entitlement to every service. Ask the MSE office which records are required.
 
 ## Which documents and details should be checked after MSE?
 
@@ -118,6 +155,8 @@ Confirm whether:
 - the necessary measures are included in the IPAR.
 
 If the decision contains an error or unclear wording, seek clarification through the authorised agency and the prescribed procedure. **If you disagree with the MSE expert conclusion**, point 54 of the MSE Rules allows an administrative appeal no later than three months after receipt. The rules also distinguish appeals against service-delivery actions from challenges to an expert conclusion. Court review normally follows the required pre-trial administrative stage.
+
+**If you disagree with the MSE conclusion**, submit a paper complaint or use [eOtinish (official guidance in Russian)](https://egov.kz/cms/ru/services/citizen_and_the_government/e_app). State the date you received the conclusion, identify the disputed points and attach relevant records securely. **Three months** from receipt is the time limit to file the complaint. **20 working days** after registration is the general administrative review period unless a special rule applies. Keep your tracking number and avoid public disclosure of a child's medical records.
 
 Also check which measures may be arranged **proactively** and which require an individual application. Avoid sending scans of personal documents to private intermediaries without checking whether they are needed and how the information will be handled.
 
@@ -135,6 +174,8 @@ These are **different grounds for entitlement and different award procedures**. 
 **Applying for benefits:** consult the separate government pages for the [state disability benefit](https://www.gov.kz/services/3000?lang=ru) and the [allowance for a parent or guardian raising a child with a disability](https://www.gov.kz/services/3030?lang=ru). Order No. 215 states that the latter is awarded independently of household income. It has a distinct application or proactive service route. Confirm any proactive offer and bank details through official channels.
 
 The standard decision period on a complete benefit application is **seven working days**, though specified exceptions or requests for additional documents may alter this period. This is not the time needed for the MSE assessment. Amounts must be checked against current official figures rather than presented as permanent rates.
+
+**2026 example:** the [monthly allowance for a person raising a child with a disability](https://www.gov.kz/org/enbek-aktobe/press/news/details/1334844?lang=ru) is **81,871 tenge** (1.61 times the subsistence minimum). Eligibility depends on the applicable legal conditions, not on an autism diagnosis alone. This is separate from the child's state disability benefit. Recheck the amount in 2027.
 
 ## Specialised social services
 
@@ -172,19 +213,10 @@ Eligibility may depend on the child's age, disability status, IPAR, family circu
 
 A list without these qualifications can quickly become outdated or create misleading expectations.
 
-## Main official sources
-
-1. [Social Code of the Republic of Kazakhstan, including Articles 154-157, 170, 175-177 and 183-184 (official Russian text)](https://adilet.zan.kz/rus/docs/K2300000224).
-2. [MSE rules, in the version applicable after 25 August 2026 (Russian)](https://adilet.zan.kz/rus/docs/V2300032922).
-3. [gov.kz: application for the state social disability benefit (Russian)](https://www.gov.kz/services/3000?lang=ru).
-4. [gov.kz: allowance for a parent or guardian raising a child with a disability (Russian)](https://www.gov.kz/services/3030?lang=ru).
-5. [Order No. 215: rules on the allowance for raising a child with a disability (Russian)](https://adilet.zan.kz/rus/docs/V2300032851).
-6. [gov.kz: specialised social services delivered at home (Russian)](https://www.gov.kz/situations/234/intro?lang=ru).
-
 ## Your next step
 
 If the family is only beginning to consider disability assessment, start by discussing the **VKK and possible MSE pathway** with the relevant healthcare provider.
 
 If disability status has already been established, review the **IPAR** and identify the specific government services that apply.
 
-For an overview of the healthcare, education and social protection pathways, see [Autism support in Kazakhstan: where to start](/central-asia-autism-hub/kz/en/help-kazakhstan/autism-support-kazakhstan-start/).
+For an overview of the healthcare, education and social protection pathways, see [Autism support in Kazakhstan: where to start](/central-asia-autism-hub/kz/en/help-kazakhstan/autism-support-kazakhstan-start/). For a detailed explanation, see [the roles of the psychiatrist, PMPK, VKK and MSE](/central-asia-autism-hub/kz/en/parents/psychiatrist-pmpk-vkk-mse-kazakhstan/).
