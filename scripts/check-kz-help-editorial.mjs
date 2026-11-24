@@ -47,6 +47,13 @@ for (const locale of locales) {
     errors.push(locale + ': missing help-section typography on index');
   }
 
+  if (index.includes('id="section-v2-topic-map-title"')) {
+    errors.push(locale + ': redundant Kazakhstan-help topic overview must not be rendered');
+  }
+  if (!index.includes('class="section-v2__accordion"')) {
+    errors.push(locale + ': missing Kazakhstan-help article navigation');
+  }
+
   let published = 0;
   const imageOwners = new Map();
   const coversBySlug = new Map();

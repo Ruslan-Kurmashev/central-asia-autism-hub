@@ -231,6 +231,8 @@ The former standalone navigation groups `Evidence about support` and `Research p
 
 This section explains the general support landscape in Kazakhstan without presenting an incomplete professional directory.
 
+As approved on 24 November 2026, the RU, KK and EN section landing pages retain the accordion of published article groups and omit the redundant static Main topics overview. Topic definitions and article routes remain unchanged.
+
 It may include:
 
 - the general roles of healthcare and assessment services;
