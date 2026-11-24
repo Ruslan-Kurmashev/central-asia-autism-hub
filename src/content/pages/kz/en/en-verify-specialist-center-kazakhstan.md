@@ -22,18 +22,19 @@ disclaimerType: informational
 conflictOfInterest: "No conflict of interest declared."
 publishedAt: 2026-10-10
 originalPublishedAt: 2026-10-09
-updatedAt: 2026-11-07
+updatedAt: 2026-11-23
 reviewDueAt: 2026-12-01
 draft: false
 keyPoints:
   - "A centre's name or list of certificates does not tell you whether it is entitled to provide the specific service advertised."
   - "Check the organisation and the individual practitioner separately. Requirements depend on whether the service is medical, psychological, educational or another type."
   - "Where a medical licence is required, verify the licensee, status and permitted activity through the official eGov/eLicense search."
+  - "For medical services, check the centre’s licence and service address separately from the clinician’s specialty, qualifications and valid certificate for clinical practice."
   - "The 2026 Law on Psychological Activity contains phased provisions, including a registration transition, absence from a developing registry alone is not proof of a breach."
   - "Ask for written fees, goals, qualifications, cancellation terms and evidence for any claimed benefits before paying."
   - "Before psychological help begins, ask how informed consent by the client or a child's legal representative is obtained, including permission for audio or video recordings."
   - "Consumers are entitled to information about the provider and service, and service prices must be stated in writing in tenge."
-versionNote: "7 November 2026: aligned with updated Russian guidance on the psychology law commencement, psychologist professional standards, consent requirements, the register implementation report as of 30 October and consumer information rights. AI-assisted comparison, no independent legal or native-language review claimed."
+versionNote: "7 November 2026: aligned with updated Russian guidance on the psychology law commencement, psychologist professional standards, consent requirements, the register implementation report as of 30 October and consumer information rights. AI-assisted comparison, no independent legal or native-language review claimed. 23 November 2026: added medical practitioner and site-address checks, clarified psychologist registry snapshot and removed repeated bibliography. AI-assisted comparison, not independent legal or native-language review."
 evidenceLimitations: "Legal information checked against Kazakhstan official sources on 7 November 2026. Psychologist registry implementation is described from a ministry report dated 30 October 2026 and may have changed since then. Requirements depend on the service, role and legal entity. This guide is not individual legal advice and does not certify any provider. The updated English text has not undergone independent professional language or legal review."
 sources:
   - title: "Law on Psychological Activity"
@@ -93,6 +94,17 @@ sources:
     organisation: "Adilet legal information system / Ministry of Education of Kazakhstan"
     note: "Order No. 338 as amended by Order No. 173-NQ of 19 June 2026, applicability depends on the specific teaching role and organisation."
     accessedAt: 2026-10-09
+  - title: "Kazakhstan Ministry of Health: how to choose a doctor and clinic before treatment"
+    url: "https://www.gov.kz/org/dsm/press/news/details/1294714?lang=ru"
+    organisation: "Ministry of Health of the Republic of Kazakhstan"
+    publicationYear: 2026
+    note: "Ministry guidance dated 18 September 2026 on medical licensing, clinicians' specialist certificates and matching the location of care to the permit."
+    accessedAt: 2026-11-23
+  - title: "Issuance of a specialist certificate for admission to clinical practice"
+    url: "https://www.gov.kz/services/3171?lang=ru"
+    organisation: "gov.kz / Kazakhstan Ministry of Health"
+    note: "Official state-service description identifying the clinical practice certificate for medical professionals."
+    accessedAt: 2026-11-23
 ---
 
 ## In brief
@@ -129,6 +141,8 @@ Check **more than whether a document exists**. Compare:
 
 A licence issued to a different legal entity, or for a different medical service, does not establish permission to deliver the advertised service. For a company, check its BIN. For a sole proprietor, their IIN and registration details may be relevant. Enter any IIN only in the appropriate official search, and do not publish another person's IIN publicly.
 
+**If a child will undergo clinical assessment or treatment at a medical centre**, check two separate matters: the organisation's licence and the individual clinician's authority to practise in the relevant specialty. Ask about the clinician's medical qualifications and a **valid specialist certificate permitting clinical practice**. Compare the actual service address with the address specified in the centre's permit documents. These are points highlighted by [Kazakhstan's Ministry of Health on 18 September 2026](https://www.gov.kz/org/dsm/press/news/details/1294714?lang=ru). The [official certificate-issuance service](https://www.gov.kz/services/3171?lang=ru) explains the document concerned. Do not confuse this certificate with a commercial training-course certificate. If information appears inconsistent, ask the provider or relevant authority for clarification rather than inferring a violation from an advertisement alone.
+
 For practical steps, see [How to check a medical licence through eGov and eLicense](/central-asia-autism-hub/kz/en/help-kazakhstan/verify-medical-licence-kazakhstan/).
 
 ## Step 3. If it is psychological support, check current requirements
@@ -137,7 +151,7 @@ Kazakhstan adopted a separate **Law on Psychological Activity** in 2026, setting
 
 Law No. **332-VIII of 2 July 2026** took effect on **2 September 2026**, except for Article 17 on certification, which takes effect on **1 January 2028**. Article 21 provides a one-year transitional period for registering psychologists from the law's commencement, extending into September 2027.
 
-According to the [Ministry of Labour report as of 30 October 2026](https://www.gov.kz/org/karaganda-enbek/documents/details/1093740?lang=ru), the psychologist professional standard (Order No. 375) and the approved informed consent form (Order No. 365) were already adopted. The code of ethics and state registry rules were still under implementation at that reporting date. This is a **30 October snapshot**, not a claim that procedures have remained unchanged.
+According to the [Ministry of Labour report as of 30 October 2026](https://www.gov.kz/org/karaganda-enbek/documents/details/1093740?lang=ru), the psychologist professional standard (Order No. 375) and the approved informed consent form (Order No. 365) were already adopted. The code of ethics and state registry rules were still under implementation at that reporting date. This is a **30 October 2026 snapshot**. On 23 November it cannot be used to establish the registry's current operational status. Check later official rules and whether a verification service is actually available.
 
 Therefore, **absence from a developing registry alone does not establish a violation** without checking the transition and current procedure. Equally, the law must not be described as entirely inoperative. Specialist medical care is regulated separately.
 
@@ -173,7 +187,7 @@ Before paying, request:
 1. The organisation's full registered name and BIN, or the relevant sole proprietor details if the provider is an individual entrepreneur.
 2. The practitioner's name and professional role.
 3. Details of their primary professional education.
-4. The licence number and annex, if the service is medical.
+4. For a medical service, the licence and annex, the service address, and evidence of the clinician's valid certificate for the relevant specialty.
 5. Clearly defined goals of the proposed work.
 6. How progress and outcomes will be assessed.
 7. Information on risks, limits and alternatives.
@@ -210,15 +224,3 @@ Be cautious when a provider:
 To check the legal status of healthcare services, use Kazakhstan's [official licence and permit search](https://www.gov.kz/services/3173?lang=ru) and our [step-by-step guide](/central-asia-autism-hub/kz/en/help-kazakhstan/verify-medical-licence-kazakhstan/).
 
 For further questions about interventions themselves, the [Russian-language guide to choosing autism support](/central-asia-autism-hub/kz/ru/parents/kak-vybrat-spetsialista-i-pomoshch-pri-autizme/) explains how to consider evidence and fit.
-
-## Official resources to verify
-
-1. [Law No. 332-VIII on Psychological Activity, 2 July 2026 (Russian text)](https://adilet.zan.kz/rus/docs/Z2600000332).
-2. [eGov: check licences and permits](https://www.gov.kz/services/3173?lang=ru).
-3. [eGov: how to verify the validity of a licence](https://egov.kz/cms/ru/articles/bus_lic_akk/license-checking).
-4. [eGov: medical activity licence service](https://egov.kz/cms/ru/online-services/for_busunesses/2F487pass_mz).
-5. [Standard qualification characteristics for teachers, Order No. 338](https://adilet.zan.kz/rus/docs/V090005750_).
-6. [Psychologist professional standard, Order No. 375](https://adilet.zan.kz/rus/docs/G26G0000375).
-7. [Psychological assistance informed consent form, Order No. 365](https://adilet.zan.kz/rus/docs/V2600039918).
-8. [Ministry implementation report as of 30 October 2026](https://www.gov.kz/org/karaganda-enbek/documents/details/1093740?lang=ru).
-9. [Kazakhstan Consumer Protection Law](https://adilet.zan.kz/rus/docs/Z100000274_).
