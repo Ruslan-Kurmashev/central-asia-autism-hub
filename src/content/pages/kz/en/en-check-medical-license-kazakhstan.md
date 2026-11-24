@@ -13,7 +13,7 @@ audience:
   - parents
   - families
   - general
-versionNote: "10 October 2026: English translation based on the Russian guide of 9 October 2026, search criteria reflect the official eGov instructions updated on 7 April 2026."
+versionNote: "10 October 2026: English translation based on the Russian guide of 9 October 2026, search criteria reflect the official eGov instructions updated on 7 April 2026. 24 November 2026: updated official links, licence annex and address checks, practitioner certification and the medical oversight route. No independent legal or native-language review claimed."
 featuredImage: "/central-asia-autism-hub/images/editorial/photos/kz-help-004.jpg"
 featuredImageAlt: "A laptop and documents on a desk, representing a medical licensing search."
 author: Ruslan Kurmashev
@@ -23,7 +23,7 @@ disclaimerType: informational
 conflictOfInterest: "No conflict of interest declared."
 publishedAt: 2026-10-10
 originalPublishedAt: 2026-10-09
-updatedAt: 2026-10-27
+updatedAt: 2026-11-24
 reviewDueAt: 2026-12-01
 draft: false
 keyPoints:
@@ -32,24 +32,40 @@ keyPoints:
   - "The official permit and licence lookup is free. As described in eGov's April 2026 instructions, looking up documents does not require registration."
   - "A medical licence is not required for every educational or psychological activity. First establish what service is actually being offered."
   - "An existing licence does not prove the scientific effectiveness of a particular autism intervention."
+  - "Check the medical licence annex, permitted activity and service address, as well as the practitioner's clinical practice certificate where required."
+  - "For medical licensing or healthcare quality issues, contact the Medical Control Committee or its territorial department."
 evidenceLimitations: "The licence search interface, document status labels and government procedures may change. A missing result does not automatically mean a provider acts illegally. Confirm the legal entity and precise service and consult the current official state service."
 sources:
   - title: "Check permits and licences"
-    url: "https://egov.kz/cms/ru/services/proverka-razresheniy-i-licenziy"
-    organisation: "eGov.kz"
-    note: "Free official government service for checking permits and licences."
-    accessedAt: 2026-10-09
-  - title: "How to verify a licence or permit"
-    url: "https://egov.kz/cms/ru/articles/bus_lic_akk/license-checking"
-    organisation: "eGov.kz"
+    url: "https://www.gov.kz/services/3173?lang=ru"
+    organisation: "gov.kz"
     publicationYear: 2026
-    note: "Official instructions updated on 7 April 2026, describing quick and advanced licence searches."
-    accessedAt: 2026-10-09
-  - title: "Medical activity licence"
-    url: "https://egov.kz/cms/ru/online-services/for_busunesses/2F487pass_mz"
-    organisation: "eGov.kz"
-    note: "Official guidance about medical licences and annexes specifying medical activities."
-    accessedAt: 2026-10-09
+    accessedAt: 2026-11-24
+  - title: "Issuing a medical activity licence"
+    url: "https://www.gov.kz/services/3764?lang=ru"
+    organisation: "gov.kz"
+    publicationYear: 2026
+    accessedAt: 2026-11-24
+  - title: "Clinical practice admission certificate"
+    url: "https://www.gov.kz/services/3171?lang=ru"
+    organisation: "gov.kz"
+    publicationYear: 2026
+    accessedAt: 2026-11-24
+  - title: "Ministry of Health: choosing a doctor and clinic"
+    url: "https://www.gov.kz/org/dsm/press/news/details/1294714?lang=ru"
+    organisation: "Ministry of Health of Kazakhstan"
+    publicationYear: 2026
+    accessedAt: 2026-11-24
+  - title: "Reorganisation of Ministry of Health agencies"
+    url: "https://adilet.zan.kz/rus/docs/P2600000695"
+    organisation: "Government of Kazakhstan"
+    publicationYear: 2026
+    accessedAt: 2026-11-24
+  - title: "Medical Control Department: scope of enquiries and complaints"
+    url: "https://www.gov.kz/org/dkmfk-almaty-oblast/press/news/details/1308439?lang=ru"
+    organisation: "gov.kz"
+    publicationYear: 2026
+    accessedAt: 2026-11-24
 ---
 
 ## In brief
@@ -71,33 +87,31 @@ A BIN is often more useful than the advertised brand name because the brand and 
 
 ## How to check the licence
 
-1. Open the [official eGov page for checking permits and licences](https://egov.kz/cms/ru/services/proverka-razresheniy-i-licenziy).
-2. Select the online-service option to proceed to Kazakhstan's **eLicense** electronic licensing portal.
-3. On eLicense, select the function for **searching permit documents** (`Поиск разрешительных документов`).
-4. Try the quick search using the BIN, IIN, document number or other available identifiers.
-5. If there are too many results or none appear, use the advanced search. Enter the registered name, licence holder, type of activity and any other available criteria.
-6. Open the document record. Compare the holder, document number, status and permitted activity with the contract and the service being advertised.
+1. Open the [official licence and permit verification service](https://www.gov.kz/services/3173?lang=ru) (Russian) or the [eLicense portal](https://elicense.kz/).
+2. Choose the permit document search (Russian interface: `Поиск разрешительных документов`).
+3. Start with a BIN/IIN, NIKAD/UINRD or another available identifier. If you have only the licence number or registered name, use advanced search.
+4. Advanced search includes the licensee, document number, activity, issue date and status. If there is no result, remove unnecessary filters and check the identifier.
+5. Open the matching record and compare the holder, status, permitted activities, territory and special conditions. Where a PDF is available, save it and the annex with the date of verification.
 
-Official eGov guidance updated **7 April 2026** states that searching issued permits and licences on eLicense **does not require an account or registration**. Different rules may apply to other transactions on government portals.
-
-Document searches on the eLicense website are available without registration. The eGov mobile app has a separate access process that requires signing in to use the service. Interfaces can change, so check the current instructions on the official portal.
-
-### How the search works
-
-The eGov service page leads to eLicense's document search. Quick and advanced search options may include IIN, BIN, document number, licence holder, issuing authority, type of activity, issue date and current status.
-
-The official interface may change, so follow the current labels shown on the portal.
+The browser lookup is free and requires no account or sign-in. The eGov mobile app requires sign-in for this service. NIKAD and UINRD are permit-document identifiers you can request from the provider. Interface labels may change.
 
 ## What to examine in a result
 
-Check at least four details:
+Check both the licence and its annex.
 
-1. **Who owns the licence?** Does the legal entity or sole proprietor match the party receiving payment?
-2. **What is the current status?** Is the document currently valid?
-3. **What is covered?** Does it authorise the actual medical activity being offered?
-4. **Are there annexes or additional authorisations?** Do these match the claimed healthcare services?
+- Holder: does the legal entity or entrepreneur match the provider in your agreement?
+- Status: is the document valid on the date of checking?
+- Activity subtype: does the annex cover the specific healthcare service offered?
+- Address: does the place where the child will receive healthcare match the address in the permit documents?
+- Special conditions: do any restrictions affect the proposed service?
 
-Finding a document with a similar title is not enough.
+For example, a licence covering a different type of healthcare or a different location does not by itself establish authorisation for the proposed service at this branch. Request the current annex and ask the licensing authority if the scope or address is unclear.
+
+## How to check the medical practitioner
+
+A centre's licence and an individual healthcare professional's admission to clinical practice are different documents. Ask for the practitioner's name, specialty, certificate number and validity where a certificate is required for the work. Compare the specialty with the service offered. Ask to see the certificate and try the official permit document search. If the information is unavailable, ask the territorial medical control department how to verify it. A diploma or short-course certificate does not replace required admission to clinical practice.
+
+[Ministry of Health guidance on checking a clinic and doctor](https://www.gov.kz/org/dsm/press/news/details/1294714?lang=ru) and the [official clinical practice certificate service](https://www.gov.kz/services/3171?lang=ru) are in Russian. The latter describes issuance, not a separate public register of doctors.
 
 ## When to stop before paying and ask for clarification
 
@@ -132,16 +146,12 @@ It does **not** establish whether a proposed intervention is effective for autis
 
 Do not rush to accuse a provider publicly. First request the registered name, BIN, document number and clarification of which legal entity is entering into the agreement.
 
-If doubts remain, use an official government contact or complaint channel to clarify the information.
-
-## Official links
-
-- [eGov: check permits and licences (official page in Russian)](https://egov.kz/cms/ru/services/proverka-razresheniy-i-licenziy).
-- [eGov: how to verify an issued licence or permit (Russian)](https://egov.kz/cms/ru/articles/bus_lic_akk/license-checking).
-- [eGov: issuing a licence for medical activity (Russian)](https://egov.kz/cms/ru/online-services/for_busunesses/2F487pass_mz).
+If doubts remain, contact the territorial department of Kazakhstan's Ministry of Health Medical Control Committee through [eOtinish](https://eotinish.kz/). Following the reorganisation under [Government Resolution No. 695 of 3 August 2026](https://adilet.zan.kz/rus/docs/P2600000695), medical licensing and healthcare quality fall under medical control, rather than the separate Pharmacy Committee. Include the provider's registered name, BIN, address, advertised service and document number if known. Attach the search results without publishing the child's medical records openly. Seek medical care first if there is an immediate health risk.
 
 ## Next step
 
 After checking the licence, evaluate the qualifications of the **specific professional**, the service itself, evidence for the advertised method, costs and cancellation conditions.
 
 See also: [How to check an autism specialist or support centre in Kazakhstan](/central-asia-autism-hub/kz/en/help-kazakhstan/check-autism-specialist-kazakhstan/).
+
+Before paying, see [how to check the terms of a service and agreement](/central-asia-autism-hub/kz/en/help-kazakhstan/check-autism-service-before-payment-kazakhstan/).
