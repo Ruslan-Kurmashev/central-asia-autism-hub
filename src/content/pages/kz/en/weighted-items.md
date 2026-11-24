@@ -10,7 +10,7 @@ section: parents
 topic: approaches-to-support
 slug: "weighted-blankets-vests-safety"
 translationKey: parents-weighted-items
-translationStatus: "pending"
+translationStatus: checked
 audience:
   - parents
   - families
@@ -19,12 +19,13 @@ editor: Ruslan Kurmashev
 riskLevel: high
 disclaimerType: medical
 conflictOfInterest: "No conflicts of interest declared."
+publishedAt: "2026-11-24T22:20:00Z"
 originalPublishedAt: "2026-09-26T16:20:37Z"
 displayPublishedAt: "2026-09-26T16:20:37Z"
-versionNote: "24 November 2026: AI-assisted translation draft from the Russian article updated 23 November. Pending human editorial and language verification, not published."
+versionNote: "24 November 2026: AI-assisted translation of the updated Russian original. The project owner confirmed review and explicitly approved publication on 24 November 2026. No independent clinical or professional native-language review is claimed."
 updatedAt: 2026-11-24
 reviewDueAt: 2027-03-26
-draft: true
+draft: false
 keyPoints:
   - "Some children like pressure from weighted products, but comfort is not evidence of a treatment effect."
   - "A randomised trial in autistic children found no objective improvement in sleep from weighted blankets."
@@ -225,4 +226,8 @@ Some children enjoy weighted products, but evidence does not support them as uni
 
 Safety, consent, individual risk assessment and a meaningful everyday goal are essential. Do not use weighted products for infant sleep, do not restrain movement and do not leave a weighted blanket on a child after they have fallen asleep. The 10% rule does not replace a risk assessment.
 
-Related published Russian-language source articles are available in the sensory support section.
+Related published guides:
+
+- [Sensory differences and environmental adjustments](/kz/en/parents/sensory-differences-and-environmental-adjustments/)
+- [Sensory overload and environmental adjustments](/kz/en/parents/sensory-overload-environmental-adaptations/)
+- [Ayres Sensory Integration](/kz/en/parents/ayres-sensory-integration/)

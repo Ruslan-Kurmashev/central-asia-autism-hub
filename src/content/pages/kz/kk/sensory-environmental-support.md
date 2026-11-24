@@ -10,7 +10,7 @@ section: parents
 topic: approaches-to-support
 slug: "sensorlyk-erekshelikter-zhane-ortany-beiimdeu"
 translationKey: parents-sensory-environmental-support
-translationStatus: "pending"
+translationStatus: checked
 audience:
   - parents
   - families
@@ -19,12 +19,13 @@ editor: Ruslan Kurmashev
 riskLevel: moderate
 disclaimerType: informational
 conflictOfInterest: "Мүдделер қақтығысы мәлімделмеген."
+publishedAt: "2026-11-24T22:20:00Z"
 originalPublishedAt: "2026-09-19T14:45:00Z"
 displayPublishedAt: "2026-09-19T14:45:00Z"
 updatedAt: 2026-11-24
-versionNote: "2026 жылғы 24 қараша: өңделген орысша түпнұсқаның ЖИ көмегімен жасалған аударма жобасы. Тілдік және редакторлық тексеруді күтуде, жарияланбаған."
+versionNote: "2026 жылғы 24 қараша: жаңартылған орысша түпнұсқаның ЖИ көмегімен жасалған аудармасы. Жоба иесі тексерілгенін растады және 2026 жылғы 24 қарашада жариялауға тікелей рұқсат берді. Тәуелсіз клиникалық немесе кәсіби тілдік рецензия туралы мәлімдеме жасалмайды."
 reviewDueAt: 2027-03-19
-draft: true
+draft: false
 keyPoints:
   - "Сенсорлық ерекшеліктер күнделікті істерге әсер етуі мүмкін, бірақ бұл автоматты түрде терапия керек деген сөз емес."
   - "Сенсорлық себеп деп шешпес бұрын ауырсынуды, дистресті, коммуникация мен орта факторларын тексеріңіз."

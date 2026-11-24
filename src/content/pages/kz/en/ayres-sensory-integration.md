@@ -10,7 +10,7 @@ section: parents
 topic: approaches-to-support
 slug: "ayres-sensory-integration"
 translationKey: parents-ayres-sensory-integration
-translationStatus: "pending"
+translationStatus: checked
 audience:
   - parents
   - families
@@ -19,12 +19,13 @@ editor: Ruslan Kurmashev
 riskLevel: moderate
 disclaimerType: informational
 conflictOfInterest: "No conflicts of interest declared."
+publishedAt: "2026-11-24T22:20:00Z"
 originalPublishedAt: "2026-09-24T21:16:43Z"
 displayPublishedAt: "2026-09-24T21:16:43Z"
-versionNote: "24 November 2026: AI-assisted translation draft of the 23 November Russian update, including 2026 studies. Awaiting human language and editorial verification, not published."
+versionNote: "24 November 2026: AI-assisted translation of the updated Russian original. The project owner confirmed review and explicitly approved publication on 24 November 2026. No independent clinical or professional native-language review is claimed."
 updatedAt: 2026-11-24
 reviewDueAt: 2027-03-24
-draft: true
+draft: false
 keyPoints:
   - "Ayres Sensory Integration is a defined, individualised occupational therapy approach, not a name for any sensory play."
   - "Assessment, professional qualifications and treatment fidelity matter more than the presence of special equipment."
@@ -261,4 +262,4 @@ Related reading:
 - [Sensory overload and environmental adjustments](/kz/en/parents/sensory-overload-environmental-adaptations/)
 - [Weighted blankets and vests: evidence and safety](/kz/en/parents/weighted-blankets-vests-safety/)
 
-The Russian source mentions a further article on sensory strategies that remains a draft. Links here lead to related materials being prepared for translation.
+The links above lead to published companion articles. A separate guide to sensory strategies remains in draft.

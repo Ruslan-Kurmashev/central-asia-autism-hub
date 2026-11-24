@@ -10,7 +10,7 @@ section: parents
 topic: approaches-to-support
 slug: "sensorlyk-shamadan-tys-zhukteme-ortany-beiimdeu"
 translationKey: parents-sensory-overload-environmental-adaptations
-translationStatus: "pending"
+translationStatus: checked
 audience:
   - parents
   - families
@@ -19,12 +19,13 @@ editor: Ruslan Kurmashev
 riskLevel: lower
 disclaimerType: informational
 conflictOfInterest: "Мүдделер қақтығысы мәлімделмеген."
+publishedAt: "2026-11-24T22:20:00Z"
 originalPublishedAt: "2026-09-26T19:31:00Z"
 displayPublishedAt: "2026-09-26T19:31:00Z"
 updatedAt: 2026-11-24
 reviewDueAt: 2027-03-26
-draft: true
-versionNote: "2026 жылғы 24 қараша: ЖИ көмегімен жасалған аударма жобасы. Тексеру мен жариялауды күтуде."
+draft: false
+versionNote: "2026 жылғы 24 қараша: жаңартылған орысша түпнұсқаның ЖИ көмегімен жасалған аудармасы. Жоба иесі тексерілгенін растады және 2026 жылғы 24 қарашада жариялауға тікелей рұқсат берді. Тәуелсіз клиникалық немесе кәсіби тілдік рецензия туралы мәлімдеме жасалмайды."
 keyPoints:
   - "Сенсорлық жүктемеде баланы шыдауға үйреткеннен гөрі ортаны өзгерту пайдалырақ болуы мүмкін."
   - "Күнделікті ортаны бейімдеу сенсорлық интеграция терапиясына немесе арнайы мультисенсорлық бөлмеге тең емес."

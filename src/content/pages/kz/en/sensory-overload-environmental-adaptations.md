@@ -10,7 +10,7 @@ section: parents
 topic: approaches-to-support
 slug: "sensory-overload-environmental-adaptations"
 translationKey: parents-sensory-overload-environmental-adaptations
-translationStatus: "pending"
+translationStatus: checked
 audience:
   - parents
   - families
@@ -19,12 +19,13 @@ editor: Ruslan Kurmashev
 riskLevel: lower
 disclaimerType: informational
 conflictOfInterest: "No conflicts of interest declared."
+publishedAt: "2026-11-24T22:20:00Z"
 originalPublishedAt: "2026-09-26T19:31:00Z"
 displayPublishedAt: "2026-09-26T19:31:00Z"
 updatedAt: 2026-11-24
 reviewDueAt: 2027-03-26
-draft: true
-versionNote: "24 November 2026: AI-assisted translation draft pending review and publication."
+draft: false
+versionNote: "24 November 2026: AI-assisted translation of the updated Russian original. The project owner confirmed review and explicitly approved publication on 24 November 2026. No independent clinical or professional native-language review is claimed."
 keyPoints:
   - "Reducing sensory demands and adapting an environment may be more helpful than teaching a child to endure distress."
   - "Environmental adjustments are not the same as sensory integration therapy or specialist multisensory rooms."

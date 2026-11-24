@@ -10,7 +10,7 @@ section: parents
 topic: approaches-to-support
 slug: "aires-boiynsha-sensorlyk-integratsiya"
 translationKey: parents-ayres-sensory-integration
-translationStatus: "pending"
+translationStatus: checked
 audience:
   - parents
   - families
@@ -19,12 +19,13 @@ editor: Ruslan Kurmashev
 riskLevel: moderate
 disclaimerType: informational
 conflictOfInterest: "Мүдделер қақтығысы мәлімделмеген."
+publishedAt: "2026-11-24T22:20:00Z"
 originalPublishedAt: "2026-09-24T21:16:43Z"
 displayPublishedAt: "2026-09-24T21:16:43Z"
-versionNote: "2026 жылғы 24 қараша: 23 қарашадағы ғылыми жаңартуды қоса, орысша түпнұсқадан ЖИ көмегімен жасалған аударма жобасы. Тілдік және редакторлық тексеруді күтуде, жарияланбаған."
+versionNote: "2026 жылғы 24 қараша: жаңартылған орысша түпнұсқаның ЖИ көмегімен жасалған аудармасы. Жоба иесі тексерілгенін растады және 2026 жылғы 24 қарашада жариялауға тікелей рұқсат берді. Тәуелсіз клиникалық немесе кәсіби тілдік рецензия туралы мәлімдеме жасалмайды."
 updatedAt: 2026-11-24
 reviewDueAt: 2027-03-24
-draft: true
+draft: false
 keyPoints:
   - "Айрес бойынша сенсорлық интеграция - кез келген сенсорлық ойын емес, эрготерапиядағы нақты жеке тәсіл."
   - "Арнайы жабдықтан гөрі бағалау, маманның білімі және тәсіл қағидаларына сәйкестік маңызды."
@@ -261,4 +262,4 @@ ASI - эрготерапияда қолданылатын нақты жеке о
 - [Сенсорлық шамадан тыс жүктеме және ортаны бейімдеу](/kz/kk/parents/sensorlyk-shamadan-tys-zhukteme-ortany-beiimdeu/)
 - [Салмақты көрпелер мен жилеттер: дәлелдер мен қауіпсіздік](/kz/kk/parents/salmakty-korpeler-zhiletter-kauipsizdik/)
 
-Орысша түпнұсқадағы «Сенсорлық стратегиялар» мақаласы әлі жоба күйінде. Мұнда аударуға дайындалып жатқан қатысты мақалаларға сілтемелер берілді.
+Жоғарыдағы сілтемелер жарияланған қатысты материалдарға апарады. «Сенсорлық стратегиялар» туралы бөлек мақала әзірге жоба күйінде.

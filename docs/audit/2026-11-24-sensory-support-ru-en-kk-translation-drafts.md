@@ -32,3 +32,11 @@ Each was translated in full into English and Kazakh, yielding eight new Markdown
 - The present commit corrects a handful of alt descriptions and Kazakh wording identified by the draft QA.
 
 No editorial tracker row was marked as reviewed by a human.
+
+## Publication approval and release on 2026-11-24
+
+The project owner explicitly confirmed that the translations were reviewed and instructed publication in the 24 November 2026 conversation: "публикуем на сайте все првоерено." This is owner/editor approval, not evidence of independent clinical or professional native-speaker review. No external reviewer has been recorded.
+
+Eight translation frontmatters were changed together from `draft: true` and `translationStatus: pending` to `draft: false` and `translationStatus: checked`. A genuine translation publication date `2026-11-24T22:20:00Z` was added to each, while original and displayed Russian publication dates, source links, safety metadata, topic identifiers, image references and study numbers were retained. Outdated statements in two translated article pairs about companion translations being unpublished were corrected.
+
+Technical and public publication remain conditional on the required GitHub Actions validation and successful Pages deployment of this exact commit. Owner's editorial approval does not establish independent clinical or native-language review.

@@ -10,7 +10,7 @@ section: parents
 topic: approaches-to-support
 slug: "sensory-differences-and-environmental-adjustments"
 translationKey: parents-sensory-environmental-support
-translationStatus: "pending"
+translationStatus: checked
 audience:
   - parents
   - families
@@ -19,12 +19,13 @@ editor: Ruslan Kurmashev
 riskLevel: moderate
 disclaimerType: informational
 conflictOfInterest: "No conflicts of interest declared."
+publishedAt: "2026-11-24T22:20:00Z"
 originalPublishedAt: "2026-09-19T14:45:00Z"
 displayPublishedAt: "2026-09-19T14:45:00Z"
 updatedAt: 2026-11-24
-versionNote: "24 November 2026: AI-assisted translation draft of the revised Russian source. Awaiting language and editorial approval, not published."
+versionNote: "24 November 2026: AI-assisted translation of the updated Russian original. The project owner confirmed review and explicitly approved publication on 24 November 2026. No independent clinical or professional native-language review is claimed."
 reviewDueAt: 2027-03-19
-draft: true
+draft: false
 keyPoints:
   - "Sensory differences can affect daily activities, but they do not automatically indicate a need for therapy."
   - "Look for pain, distress, communication barriers and environmental triggers before assuming a sensory cause."
