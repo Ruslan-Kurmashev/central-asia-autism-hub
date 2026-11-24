@@ -12,7 +12,7 @@ translationStatus: checked
 audience:
   - parents
   - families
-versionNote: "10 October 2026: English translation of the Russian article dated 9 October 2026, reflecting Order No. 92 as amended by Order No. 144-NҚ of 29 May 2026 and the updated preschool organisation rules."
+versionNote: "10 October 2026: English translation of the Russian article dated 9 October 2026, reflecting Order No. 92 as amended by Order No. 144-NҚ of 29 May 2026 and the updated preschool organisation rules. 24 November 2026: updated the 2026 legal amendments, added region-dependent enrolment steps and written parental consent, clarified PMPK and kindergarten support, linked the English school guide, and removed the duplicate normative list. AI-assisted update without independent legal or native-language review."
 featuredImage: "/central-asia-autism-hub/images/editorial/photos/kz-help-005.jpg"
 featuredImageAlt: "Early learning toys arranged on shelves in a preschool setting."
 author: Ruslan Kurmashev
@@ -22,7 +22,7 @@ disclaimerType: informational
 conflictOfInterest: "No conflict of interest declared."
 publishedAt: 2026-10-10
 originalPublishedAt: 2026-10-09
-updatedAt: 2026-10-27
+updatedAt: 2026-11-24
 reviewDueAt: 2026-12-01
 draft: false
 keyPoints:
@@ -31,6 +31,7 @@ keyPoints:
   - "PMPK assesses special educational needs and makes recommendations, it is not a substitute for medical diagnosis."
   - "Kazakhstan's psychological and educational support rules cover preschool education, with individual support shaped by a child's needs rather than diagnosis alone."
   - "Ask how the kindergarten will support communication, transitions, sensory needs, wellbeing and progress before deciding."
+  - "Waiting lists, referrals or vouchers, and final enrolment are separate stages. Local procedures and voucher availability vary."
 evidenceLimitations: "Preschool admission procedures and available support vary by institution and region. PMPK recommendations inform an educational pathway but do not guarantee a place in a specific kindergarten. Check current national and local rules and the actual resources of the preschool."
 sources:
   - title: "Rules governing psychological and educational support services"
@@ -49,13 +50,49 @@ sources:
     url: "https://www.adilet.zan.kz/rus/docs/V2200029329"
     organisation: "Adilet legal information system / Ministry of Education of Kazakhstan"
     publicationYear: 2022
-    note: "Order No. 385 of 31 August 2022 as amended on 25 May 2026, including preschool and support arrangements."
+    note: "Preschool provisions under Order No. 385 were changed by Order No. 79-NQ of 7 April 2026 and Order No. 263-NQ of 17 September 2026, including inclusive settings and psychological and educational support."
     accessedAt: 2026-10-09
   - title: "Standard for specialised psychological and educational support"
     url: "https://adilet.zan.kz/rus/docs/V2500036137"
     organisation: "Adilet legal information system / Ministry of Education of Kazakhstan"
     publicationYear: 2025
     accessedAt: 2026-10-09
+  - title: "Preschool rules amendment, Order No. 79-NQ"
+    url: "https://adilet.zan.kz/rus/docs/V2600038367"
+    organisation: "Adilet legal information system / Kazakhstan Ministry of Education"
+    publicationYear: 2026
+    note: "Updates preschool rule paragraphs 10 and 12 under Order No. 385. Official Russian text."
+    accessedAt: 2026-11-24
+  - title: "Preschool rules amendment, Order No. 263-NQ"
+    url: "https://adilet.zan.kz/rus/docs/V2600039928"
+    organisation: "Adilet legal information system / Kazakhstan Ministry of Education"
+    publicationYear: 2026
+    note: "Updates inclusive environments and the preschool support provision in paragraph 12. Official Russian text."
+    accessedAt: 2026-11-24
+  - title: "How to join the kindergarten waiting list"
+    url: "https://www.gov.kz/situations/58/219?lang=ru"
+    organisation: "gov.kz / Kazakhstan public service"
+    publicationYear: 2026
+    note: "Official regional admission guidance in Russian."
+    accessedAt: 2026-11-24
+  - title: "Receiving a voucher notification"
+    url: "https://www.gov.kz/situations/58/220?lang=ru"
+    organisation: "gov.kz / Kazakhstan public service"
+    publicationYear: 2026
+    note: "Official voucher guidance for participating areas, in Russian."
+    accessedAt: 2026-11-24
+  - title: "Choosing a kindergarten"
+    url: "https://www.gov.kz/situations/58/221?lang=ru"
+    organisation: "gov.kz / Kazakhstan public service"
+    publicationYear: 2026
+    note: "Official government guidance on preschool selection, in Russian."
+    accessedAt: 2026-11-24
+  - title: "Enrolling a child in kindergarten"
+    url: "https://www.gov.kz/situations/58/222?lang=ru"
+    organisation: "gov.kz / Kazakhstan public service"
+    publicationYear: 2026
+    note: "Official documents and enrolment steps, conditional PMPK documentation, in Russian."
+    accessedAt: 2026-11-24
 ---
 
 ## In brief
@@ -74,6 +111,8 @@ The best route should **not be chosen on the basis of diagnosis alone**.
 
 Paragraphs 10, 12 and 13 of the preschool rules under Order No. 385 provide for age-based or specialised groups for children with special educational needs, taking PMPK recommendations into account. Admission to state preschools and private preschools with a state education order follows the prescribed process through a unified registration, queue and referral system. These rules do not guarantee a place in any particular kindergarten, so check local availability and support options.
 
+Two amendments to Order No. 385 are relevant to preschools. [Order No. 79-NQ of 7 April 2026](https://adilet.zan.kz/rus/docs/V2600038367) updated, among other provisions, paragraphs 10 and 12. [Order No. 263-NQ of 17 September 2026](https://adilet.zan.kz/rus/docs/V2600039928) addressed inclusive developmental environments and amended paragraph 12 to link preschool support, including for children with special educational needs, to the support-service rules under Order No. 92. Not every other amendment to Order No. 385 applies to preschools.
+
 ## Where should a parent start?
 
 Contact a kindergarten you are considering, or the relevant local education authority. Ask about the current admissions process, available places and forms of support.
@@ -82,11 +121,22 @@ Administrative procedures for general and specialised preschool education may di
 
 If a child needs special educational conditions, discuss assessment of those needs and **PMPK recommendations**. Medical diagnosis, educational assessment and the kindergarten's admission decision are **different processes**.
 
+**How enrolment works**
+
+1. Check with your local education authority which official application system operates in your locality. [Joining the waiting list](https://www.gov.kz/situations/58/219?lang=ru) and the process for specialised preschools may differ.
+2. Apply and monitor the application. Where voucher financing is in use, watch for a [voucher notification](https://www.gov.kz/situations/58/220?lang=ru). The government guidance for this mechanism allows two working days to confirm acceptance, but this is not a universal deadline for all admission routes.
+3. Once a referral or voucher is available, review places and [choose a kindergarten](https://www.gov.kz/situations/58/221?lang=ru) that can discuss your child's support needs.
+4. Complete [enrolment](https://www.gov.kz/situations/58/222?lang=ru) with the documents required in your circumstances and sign the relevant agreement. Medical forms and a PMPK report are required only in the cases provided for by the rules.
+
+Neither a waiting-list position nor a voucher guarantees a place in a particular preschool. Check local steps and deadlines. The linked government guidance is in Russian.
+
 ## What does PMPK do?
 
 PMPK is Kazakhstan's psychological, medical and pedagogical consultation service. It assesses special educational needs and gives recommendations about educational programmes and psychological and educational support.
 
 This does not replace a medical assessment. PMPK findings are primarily used to inform an educational pathway and the support required.
+
+The kindergarten's own support service can identify difficulties, assess educational needs and agree on adjustments with the family. If difficulties persist or specific special provisions are needed, a PMPK consultation may be recommended. PMPK advice matters where the rules require it, but it does not replace the preschool support team's work or make a PMPK report a universal condition for everyday teaching adjustments.
 
 ## What is psychological and educational support?
 
@@ -106,6 +156,8 @@ In practice, ask:
 - How will the child's communication be supported?
 - What will staff do during sensory overload or a difficult situation?
 - How will the family receive feedback?
+
+Under Order No. 92, psychological assessment, counselling and training involving a child, individually or in groups, require **written consent from a parent or legal representative**. Ask which activities are proposed and how consent will be recorded. This is different from ordinary classroom adjustments.
 
 ## Conditions worth discussing
 
@@ -146,14 +198,8 @@ Seek clarification if someone tells you that:
 - parents cannot be told the goals or arrangements of the support
 - the same intervention is compulsory for every autistic child.
 
-## Regulatory framework
-
-- [Order No. 92: rules for psychological and educational support services (official Russian text)](https://adilet.zan.kz/rus/docs/V2500036047). The consolidated rules include the May 2026 amendments.
-- [Order No. 144-NҚ of 29 May 2026: amendments to support rules (Russian)](https://adilet.zan.kz/rus/docs/V2600038856).
-- [Order No. 385: model rules for educational organisations (Russian)](https://adilet.zan.kz/rus/docs/V2200029329).
-
 ## Your next step
 
 Before choosing a kindergarten, write down **three to five specific conditions** that your child needs to participate in a normal day. Compare potential settings against those needs rather than the name of the programme alone.
 
-See also: [Autism support in Kazakhstan: where to start](/central-asia-autism-hub/kz/en/help-kazakhstan/autism-support-kazakhstan-start/).
+See also: [Autism support in Kazakhstan: where to start](/central-asia-autism-hub/kz/en/help-kazakhstan/autism-support-kazakhstan-start/). For the next stage, see [school enrolment and support in Kazakhstan](/central-asia-autism-hub/kz/en/help-kazakhstan/autism-school-enrolment-support-kazakhstan/).
