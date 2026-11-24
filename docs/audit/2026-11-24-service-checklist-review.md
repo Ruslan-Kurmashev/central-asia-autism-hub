@@ -1,0 +1,13 @@
+# Service checklist: scoped review on 2026-11-24
+
+Both articles updated in RU/EN/KK. Original dates, routes, images, translation keys and existing review statuses preserved. No unrelated changes.
+
+- Licence lookup: https://www.gov.kz/services/3173?lang=ru confirmed free browser search without sign-in, mobile sign-in, available filters and status labels. Replaced legacy eGov pages with official service cards and removed repeated in-body links.
+- Licence scope: Ministry of Health guidance dated 18 September 2026 at https://www.gov.kz/org/dsm/press/news/details/1294714?lang=ru describes annex, activity and actual address checks and individual clinical practice certificates. Official certificate service https://www.gov.kz/services/3171?lang=ru is an issuance guide, not a public clinician register.
+- Oversight: https://adilet.zan.kz/rus/docs/P2600000695 establishes split into Medical Control Committee and Pharmacy Committee. Territorial guidance https://www.gov.kz/org/dkmfk-almaty-oblast/press/news/details/1308439?lang=ru supports medical licensing and quality complaint route.
+- Consumer dispute: Article 42-5 in https://www.gov.kz/org/selhoz-satpaev/documents/details/175559?lang=ru adds two months from complaint to provider, subject to other statutory periods. Current official guidance https://www.gov.kz/situations/753/1592?lang=ru confirms the ten-calendar-day response rule. Article 686 https://old.adilet.zan.kz/rus/docs/K990000409_ and Committee explanation https://www.gov.kz/org/mti-kzpp/press/region-news/details/24149?lang=ru clarify withdrawal and actual expenses, not a guaranteed refund. Added a hypothetical ten-session example.
+- Receipt: https://www.gov.kz/memleket/entities/kgd-mangistau/press/news/details/1238963?lang=ru official 2026 requirements checked. Existing consent and 2028 certification caveats retained based on indexed text of the law on psychological activity.
+- Added ASD-0047 to ASD-0050 as pending and moved the ASD-0011 URL to the official service card. No independent review claimed.
+
+## Limitations
+Legacy eGov instruction redirected during access, and several Adilet or government news pages returned cache errors on full opening. Official indexed passages and parallel government sources support the scoped amendments, but the live eLicense result interface was not independently exercised on a real provider, no human legal or native-language review has occurred, and not every historical source was reopened successfully. The changes require final CI and owner approval before merging. No prior human review tracker statuses have been upgraded.
