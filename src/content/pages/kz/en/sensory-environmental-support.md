@@ -3,7 +3,7 @@ title: "Sensory differences and environmental adjustments"
 summary: "How sensory differences affect daily life, when changing the environment may help first and how adjustments differ from sensory therapy."
 description: "A parent guide to sensory differences, adapting everyday environments, evidence for ASI and activity schedules, safety and choosing support."
 featuredImage: "/central-asia-autism-hub/images/editorial/photos/parent-sensory-calm-space.jpg"
-featuredImageAlt: "Warm daylight falling through window curtains. An illustration of everyday surroundings, not a sensory therapy session."
+featuredImageAlt: "A daylight-lit room corner with an armchair and curtains. An example of adjustable lighting, not a sensory therapy session."
 country: kz
 language: en
 section: parents

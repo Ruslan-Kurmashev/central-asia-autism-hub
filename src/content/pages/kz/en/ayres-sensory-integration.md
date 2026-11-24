@@ -3,7 +3,7 @@ title: "Ayres Sensory Integration: what the evidence shows"
 summary: "How Ayres Sensory Integration differs from everyday sensory play, what studies from 2022-2026 found, and how to evaluate benefit and safety."
 description: "Parent guide to Ayres Sensory Integration in autism: fidelity, professional assessment, SenITA, new 2026 trials, individual goals, safety and alternatives."
 featuredImage: "/central-asia-autism-hub/images/editorial/photos/parent-sensory-swing.jpg"
-featuredImageAlt: "An occupational therapy play setting with sensory equipment. Illustrative photograph, not proof of ASI fidelity or effectiveness."
+featuredImageAlt: "Suspended indoor swings in a play setting. An illustration of movement, not a standardised Ayres Sensory Integration protocol."
 country: kz
 language: en
 section: parents
