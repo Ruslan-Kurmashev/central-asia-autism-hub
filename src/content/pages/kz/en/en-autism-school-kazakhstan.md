@@ -12,7 +12,7 @@ translationStatus: checked
 audience:
   - parents
   - families
-versionNote: "9 November 2026: clarified school-based needs assessment, PMPK recommendations, individual support plans, parental consent, teaching assistant and medical grounds for home education. Original publication date retained. Updated English wording has not undergone independent legal or native-language review."
+versionNote: "9 November 2026: clarified school-based needs assessment, PMPK recommendations, individual support plans, parental consent, teaching assistant and medical grounds for home education. Original publication date retained. Updated English wording has not undergone independent legal or native-language review. 24 November 2026: updated official links, added a future enrolment checklist and eOtinish route, aligned the start-guide cross-link and removed duplicate sources. AI-assisted comparison, no independent legal or native-language review."
 featuredImage: "/central-asia-autism-hub/images/editorial/photos/kz-help-006.jpg"
 featuredImageAlt: "A school classroom with desks, learning materials and a board."
 author: Ruslan Kurmashev
@@ -22,7 +22,7 @@ disclaimerType: informational
 conflictOfInterest: "No conflict of interest declared."
 publishedAt: 2026-10-10
 originalPublishedAt: 2026-10-09
-updatedAt: 2026-11-09
+updatedAt: 2026-11-24
 reviewDueAt: 2026-12-01
 draft: false
 keyPoints:
@@ -33,6 +33,8 @@ keyPoints:
   - "Parents can ask for specific adjustments and measurable support goals, rather than relying solely on a general promise of 'inclusion'."
   - "Some school support may be organised after assessment by the school support service, while certain specialised arrangements for children with disabilities also rely on PMPK recommendations."
   - "Written parental consent is required for the psychological activities specified in the school support rules, and individual support plans are agreed with parents."
+  - "Before a Grade 1 application, check the school catchment area, dates, application route and admission decision, and discuss the child's support needs separately."
+  - "If school admission or support is refused or left unanswered, request an explanation in writing and consider contacting the education authority through eOtinish."
 evidenceLimitations: "Staffing, available adjustments and practical support vary by school and region. Regulatory provisions do not guarantee identical implementation in every school. Check admission rules for the specific academic year and review the individual support arrangement with the education provider."
 sources:
   - title: "Rules for psychological and pedagogical support services in education organisations"
@@ -51,8 +53,8 @@ sources:
     organisation: "gov.kz / Министерство просвещения Республики Казахстан"
     publicationYear: 2026
     accessedAt: 2026-10-10
-  - title: "Admission to a general education school"
-    url: "https://www.gov.kz/situations/16/80"
+  - title: "Admission to a general education school (Russian)"
+    url: "https://www.gov.kz/situations/15/80?lang=ru"
     organisation: "gov.kz"
     note: "National first-grade admission window in 2026, region-specific staggered opening dates were announced separately."
     accessedAt: 2026-10-09
@@ -74,6 +76,17 @@ sources:
     publicationYear: 2022
     note: "Used to distinguish PMPK educational recommendations from medical indications for home education."
     accessedAt: 2026-10-09
+  - title: "School admissions application and enrolment state service (Russian)"
+    url: "https://www.gov.kz/services/5219?lang=ru"
+    organisation: "gov.kz / Kazakhstan public services"
+    publicationYear: 2026
+    note: "Official state-service description for school applications, required documents and admission decisions, in Russian."
+    accessedAt: 2026-11-24
+  - title: "Official eOtinish government requests system (Russian)"
+    url: "https://eotinish.kz/ru"
+    organisation: "eOtinish / Kazakhstan government requests"
+    note: "Official state requests and complaints platform with online government channels, in Russian."
+    accessedAt: 2026-11-24
 ---
 
 ## In brief
@@ -84,11 +97,20 @@ These are related but separate matters. They should not be determined automatica
 
 ## Starting Grade 1 in the 2026-2027 academic year
 
-According to [gov.kz](https://www.gov.kz/situations/16/80), the national first-grade admission campaign for the **2026-2027 academic year** ran from **27 May to 31 August 2026**, but applications opened [in phases by region](https://www.gov.kz/memleket/entities/tmr-roo/press/news/details/1225580?lang=ru): 27 May (Astana and specified regions), 10 June (Almaty city and another group), 18 June (Shymkent and another group), and 29 June (remaining specified regions). Parents could apply through the OQU education platform using eGov.kz or eGov Mobile authorisation, or directly at their school. State school admission also depends on the school catchment area and allocation of places. A request for a school outside the catchment area does not by itself guarantee a place. This was the schedule for **2026 only**, do not use these dates to plan applications in subsequent years.
+According to [Kazakhstan's official government guidance (in Russian)](https://www.gov.kz/situations/15/80?lang=ru), the national first-grade admission campaign for the **2026-2027 academic year** ran from **27 May to 31 August 2026**, but applications opened [in phases by region](https://www.gov.kz/memleket/entities/tmr-roo/press/news/details/1225580?lang=ru): 27 May (Astana and specified regions), 10 June (Almaty city and another group), 18 June (Shymkent and another group), and 29 June (remaining specified regions). Parents could apply through the OQU education platform using eGov.kz or eGov Mobile authorisation, or directly at their school. State school admission also depends on the school catchment area and allocation of places. A request for a school outside the catchment area does not by itself guarantee a place. This was the schedule for **2026 only**, do not use these dates to plan applications in subsequent years.
 
 Under the admission rules, children who are six years old by 1 September are enrolled regardless of their level of academic preparation. Where a child turns six **after** 1 September, admission may take place at the request of their parent or legal representative. Other enrolment situations and transfers have their own procedures and should be checked separately.
 
 Official guidance states that a school should not require documents beyond the prescribed list. If you are asked to meet an additional condition, request a reference to the specific rule and clarify the matter with the local education authority.
+
+**Steps for a future Grade 1 application**
+
+1. Check which state school covers your home address, using the school's catchment-area information or the local education authority. Admission outside the catchment area is not guaranteed.
+2. Check the official application dates and methods for the relevant academic year. Do not reuse the 2026 admissions schedule for 2027.
+3. Apply using the official service available for your area, or directly with the school where this is permitted. Check the current documents on the [government service page (Russian)](https://www.gov.kz/services/5219?lang=ru), not an unofficial checklist.
+4. Retain proof of submission and check the outcome: confirmation of admission or a reasoned refusal. Discuss educational adjustments and any additional support with the school separately.
+
+Specialised-school admissions and transfers between schools may have different procedures.
 
 ## Admission and educational support are not the same thing
 
@@ -135,7 +157,7 @@ Depending on the child, adjustments might include:
 
 Ask for a **written explanation** of the decision and the relevant legal basis. Keep copies of your application, the school's responses and any PMPK recommendations.
 
-If the issue cannot be resolved directly with the school, contact your **local education authority** or use an official government complaints channel.
+If the issue cannot be resolved directly with the school, contact your **local education authority**. You can also submit an official request through [eOtinish (Russian-language site)](https://eotinish.kz/ru): sign in, select the responsible education authority, explain the issue, attach the application and any available school response, and keep the registration number. Track the response through the system. Do not publish the child's medical records or personal information. Submitting a request does not guarantee admission or any particular support.
 
 Cases should be assessed individually. An organisational difficulty is not automatically the same as an unlawful refusal to enrol, but an unexplained verbal refusal should not be the only response a family receives.
 
@@ -156,17 +178,8 @@ PMPK assesses educational needs but its recommendation does not replace the VKK 
 7. What is the school's response to sensory overload, bullying, leaving the classroom unexpectedly or other risks?
 8. How can the child communicate pain, anxiety or a need for a break?
 
-## Official sources
-
-- [gov.kz: first-grade enrolment and regional dates for 2026-2027 (Russian)](https://www.gov.kz/situations/16/80).
-- [Order No. 4: assessment of special educational needs (Russian)](https://adilet.zan.kz/rus/docs/V2200026618).
-- [Order No. 385: model operating rules for educational organisations (Russian)](https://adilet.zan.kz/rus/docs/V2200029329).
-- [Order No. 92: psychological and pedagogical support service rules (Russian)](https://adilet.zan.kz/rus/docs/V2500036047).
-- [Order No. 144-NQ: amendments dated 29 May 2026 (Russian)](https://adilet.zan.kz/rus/docs/V2600038856).
-- [Regulations governing the medical advisory commission (Russian)](https://adilet.zan.kz/rus/docs/V2200027505).
-
 ## Your next step
 
 Before meeting school staff, prepare a short **child profile**: strengths, preferred communication methods, main difficulties, sensory needs, safety considerations and **three to five conditions** that help the child learn and take part.
 
-If you are still considering preschool, see [Autism and kindergarten in Kazakhstan: enrolment and support](/central-asia-autism-hub/kz/en/help-kazakhstan/autism-kindergarten-support-kazakhstan/).
+If you are still considering preschool, see [Autism and kindergarten in Kazakhstan: enrolment and support](/central-asia-autism-hub/kz/en/help-kazakhstan/autism-kindergarten-support-kazakhstan/). For the wider range of assessment, education and social-service routes, see [Where to start with autism support in Kazakhstan](/central-asia-autism-hub/kz/en/help-kazakhstan/autism-support-kazakhstan-start/).
