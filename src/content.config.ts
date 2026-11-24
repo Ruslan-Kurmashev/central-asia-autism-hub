@@ -104,7 +104,12 @@ function validatePagePublication(
 }
 
 const pages = defineCollection({
-  loader: glob({ pattern: '**/*.{md,mdx}', base: './src/content/pages' }),
+  loader: glob({
+    pattern: '**/*.{md,mdx}',
+    base: './src/content/pages',
+    // Public slugs can match across locales. Keep collection IDs unique by file path.
+    generateId: ({ entry }) => entry.replace(/\.(md|mdx)$/i, '').replaceAll('/', '-'),
+  }),
   schema: z
     .object({
       ...commonFields,
