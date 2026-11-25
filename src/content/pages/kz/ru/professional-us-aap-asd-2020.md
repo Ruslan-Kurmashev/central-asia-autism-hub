@@ -2,8 +2,8 @@
 title: "AAP (2020): выявление, диагностика и сопровождение детей с аутизмом - клинический доклад США"
 summary: "Профессиональный обзор клинического доклада AAP 2020 года, повторно подтверждённого в октябре 2025 года: наблюдение за развитием, скрининг в 18 и 24 месяца, диагностическая оценка и поддержка семьи."
 description: "Доклад American Academy of Pediatrics по РАС: скрининг, диагностика, сопутствующие состояния, сопровождение, статус в 2026 году и ограничения применения в Казахстане."
-featuredImage: "/central-asia-autism-hub/images/editorial/professional-us-aap-asd-2020.svg"
-featuredImageAlt: "Авторская иллюстрация клинического доклада: медицинская папка с этапами наблюдения за развитием, оценки и сопровождения."
+featuredImage: "/central-asia-autism-hub/images/editorial/guideline-flag-us.svg"
+featuredImageAlt: "Государственный флаг США - страна происхождения документа."
 country: kz
 language: ru
 section: professionals

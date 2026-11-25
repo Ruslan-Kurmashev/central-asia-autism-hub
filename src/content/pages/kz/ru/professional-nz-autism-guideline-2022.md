@@ -2,8 +2,8 @@
 title: "Новая Зеландия (2022): национальное руководство по аутизму на протяжении жизни"
 summary: "Профессиональный обзор Aotearoa New Zealand Autism Guideline третьего издания: диагностика, междисциплинарная поддержка, образование, здоровье, участие, культурный контекст и механизм обновлений."
 description: "Aotearoa New Zealand Autism Guideline 2022: рекомендации по диагностике и поддержке на протяжении жизни, культурная адаптация Māori и Pacific, актуальные приложения и применение в Казахстане."
-featuredImage: "/central-asia-autism-hub/images/editorial/professional-nz-guideline-2022.svg"
-featuredImageAlt: "Авторская векторная обложка национального руководства Новой Зеландии: документ и открытая книга о поддержке, здоровье и участии."
+featuredImage: "/central-asia-autism-hub/images/editorial/guideline-flag-nz.svg"
+featuredImageAlt: "Государственный флаг Новой Зеландии - страна происхождения документа."
 country: kz
 language: ru
 section: professionals

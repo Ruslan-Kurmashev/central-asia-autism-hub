@@ -2,8 +2,8 @@
 title: "Приказ № 4: как оценивают особые образовательные потребности"
 summary: "Порядок оценки образовательных потребностей по приказу № 4: роль педагогов, службы сопровождения, ПМПК и центров поддержки, изменения 2025 года."
 description: "Порядок оценки образовательных потребностей по приказу № 4: роль педагогов, службы сопровождения, ПМПК и центров поддержки, изменения 2025 года."
-featuredImage: "/central-asia-autism-hub/images/editorial/kz-education-education-needs-order-4.svg"
-featuredImageAlt: "Иллюстрация документа Казахстана по теме: Приказ № 4: как оценивают особые образовательные потребности. Схематичный символ в цветах AutismHub без изображения людей."
+featuredImage: "/central-asia-autism-hub/images/editorial/guideline-flag-kz.svg"
+featuredImageAlt: "Государственный флаг Казахстана - страна происхождения документа."
 country: kz
 language: ru
 section: professionals

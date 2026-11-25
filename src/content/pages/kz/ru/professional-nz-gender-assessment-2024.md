@@ -2,8 +2,8 @@
 title: "Новая Зеландия (2024): гендер и диагностическая оценка аутизма"
 summary: "Обзор официального дополнения Whaikaha 2024 года к национальному руководству: разнообразие проявлений аутизма, маскировка признаков, риск пропуска диагноза и уважительная оценка."
 description: "Aotearoa New Zealand Autism Guideline supplementary paper Gender in assessment 2024: рекомендации по разнообразию клинических проявлений и ограничения диагностики."
-featuredImage: "/central-asia-autism-hub/images/editorial/professional-nz-gender-2024.svg"
-featuredImageAlt: "Авторская иллюстрация профессиональной оценки с несколькими профилями развития и лупой, символизирующей индивидуальный подход."
+featuredImage: "/central-asia-autism-hub/images/editorial/guideline-flag-nz.svg"
+featuredImageAlt: "Государственный флаг Новой Зеландии - страна происхождения документа."
 country: kz
 language: ru
 section: professionals

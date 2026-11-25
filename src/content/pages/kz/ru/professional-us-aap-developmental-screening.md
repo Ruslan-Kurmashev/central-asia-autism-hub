@@ -2,8 +2,8 @@
 title: "AAP (2020): наблюдение за развитием и скрининг детей раннего возраста"
 summary: "Разбор отдельного клинического доклада American Academy of Pediatrics о наблюдении за развитием и стандартизированном скрининге. В апреле 2024 года доклад повторно подтверждён с обновлением ссылок и данных."
 description: "Профессиональный обзор AAP e20193449: наблюдение за развитием, общий скрининг в 9, 18 и 30 месяцев, отдельный скрининг РАС, направление и применимость к Казахстану."
-featuredImage: "/central-asia-autism-hub/images/editorial/professional-us-aap-developmental-screening.svg"
-featuredImageAlt: "Авторская векторная иллюстрация педиатрического документа, календаря профилактических осмотров и отметок контроля развития."
+featuredImage: "/central-asia-autism-hub/images/editorial/guideline-flag-us.svg"
+featuredImageAlt: "Государственный флаг США - страна происхождения документа."
 country: kz
 language: ru
 section: professionals

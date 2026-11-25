@@ -225,9 +225,9 @@ for (const [locale, copy] of Object.entries(expected)) {
   }
   if (locale === 'ru') {
     const documents = [
-      { code: 'CG128', slug: 'nice-cg128-diagnostika-autizma-u-detej', phrase: 'Скрининг не равен диагнозу', graphic: 'professional-nice-cg128.svg' },
-      { code: 'CG170', slug: 'nice-cg170-podderzhka-detej-i-podrostkov', phrase: 'Адаптация среды и процессов помощи', graphic: 'professional-nice-cg170.svg' },
-      { code: 'CG142', slug: 'nice-cg142-diagnostika-i-podderzhka-vzroslyh', phrase: 'AQ-10', graphic: 'professional-nice-cg142.svg' },
+      { code: 'CG128', slug: 'nice-cg128-diagnostika-autizma-u-detej', phrase: 'Скрининг не равен диагнозу', graphic: 'guideline-flag-gb.svg' },
+      { code: 'CG170', slug: 'nice-cg170-podderzhka-detej-i-podrostkov', phrase: 'Адаптация среды и процессов помощи', graphic: 'guideline-flag-gb.svg' },
+      { code: 'CG142', slug: 'nice-cg142-diagnostika-i-podderzhka-vzroslyh', phrase: 'AQ-10', graphic: 'guideline-flag-gb.svg' },
     ];
     for (const document of documents) {
       const content = await readFile(path.resolve('dist/kz/ru/professionals', document.slug, 'index.html'), 'utf8');
@@ -253,7 +253,7 @@ for (const [locale, copy] of Object.entries(expected)) {
       : 'Multidisciplinary coordination and family referral pathways';
   assert.ok(guidelinesPanel && toolsPanel, locale + ': resource panels missing');
   assert.ok(!guidelinesPanel.includes(multidisciplinaryLabel), locale + ': coordination roadmap must not appear under standards');
-  assert.ok(!guidelinesPanel.includes('professional-nice-cg128.svg'), locale + ': unrelated article assets should not appear in directory');
+  assert.ok(!guidelinesPanel.includes('guideline-flag-gb.svg'), locale + ': unrelated article assets should not appear in directory');
   assert.ok(!guidelinesPanel.includes('Клинические протоколы Казахстана</h4>'), locale + ': separate Kazakhstan clinical-protocol subgroup must not appear');
   assert.ok(toolsPanel.includes(multidisciplinaryLabel), locale + ': coordination roadmap must appear under tools');
   const introductoryLabel = locale === 'ru'
@@ -325,7 +325,7 @@ for (const [locale, copy] of Object.entries(expected)) {
       assert.ok(educationPage.includes('href="' + href + '"'), 'Published legal document missing category link: ' + id);
       assert.ok(!html.includes('href="' + href + '"'), 'Published Kazakhstan legal document must not appear in unrelated top-level list: ' + id);
       const article = await readFile(path.resolve('dist/kz/ru/professionals', slug, 'index.html'), 'utf8');
-      assert.ok(article.includes('kz-education-' + id + '.svg'), id + ': topic-fit hero image missing');
+      assert.ok(article.includes('guideline-flag-kz.svg'), id + ': topic-fit hero image missing');
       assert.ok(article.includes('adilet.zan.kz'), id + ': official legislative primary source missing');
       assert.ok(article.includes(phrase), id + ': main editorial content missing');
       assert.ok(article.includes('Паспорт документа'), id + ': primary legal document passport missing');
@@ -345,7 +345,7 @@ for (const [locale, copy] of Object.entries(expected)) {
       assert.ok(healthcare.includes('href="' + href + '"'), id + ': healthcare category must link published article');
       assert.ok(!html.includes('href="' + href + '"'), id + ': Kazakhstan documents, including clinical protocols, must be linked only inside the unified catalogue');
       const page = await readFile(path.resolve('dist/kz/ru/professionals', slug, 'index.html'), 'utf8');
-      assert.ok(page.includes('kz-healthcare-' + id + '.svg'), id + ': hero illustration absent');
+      assert.ok(page.includes('guideline-flag-kz.svg'), id + ': hero illustration absent');
       assert.ok(page.includes('Паспорт документа'), id + ': document passport absent');
       assert.ok(page.includes(sourceDomain), id + ': source absent');
       assert.ok(page.includes(phrase), id + ': key topic absent');
@@ -366,7 +366,7 @@ for (const [locale, copy] of Object.entries(expected)) {
       const url = '/central-asia-autism-hub/kz/ru/professionals/' + slug + '/';
       assert.ok(list.includes('href="' + url + '"'), id + ': missing category article link');
       const page = await readFile(path.resolve('dist/kz/ru/professionals', slug, 'index.html'), 'utf8');
-      assert.ok(page.includes('kz-psychology-' + id + '.svg'), id + ': missing image');
+      assert.ok(page.includes('guideline-flag-kz.svg'), id + ': missing image');
       assert.ok(page.includes('Паспорт документа'), id + ': missing passport');
       assert.ok(page.includes('adilet.zan.kz'), id + ': missing legal source');
       assert.ok(page.includes(phrase), id + ': missing essential legal point');
@@ -386,7 +386,7 @@ for (const [locale, copy] of Object.entries(expected)) {
       assert.ok(catalog.includes('href="' + href + '"'), id + ': published review not linked from social support');
       assert.ok(!html.includes('href="' + href + '"'), id + ': review should not be duplicated in top-level guidelines');
       const article = await readFile(path.resolve('dist/kz/ru/professionals', slug, 'index.html'), 'utf8');
-      assert.ok(article.includes('kz-social-' + id + '.svg'), id + ': distinct illustration missing');
+      assert.ok(article.includes('guideline-flag-kz.svg'), id + ': distinct illustration missing');
       assert.ok(article.includes('Паспорт документа'), id + ': document passport missing');
       assert.ok(article.includes(officialId), id + ': official Adilet reference missing');
       assert.ok(article.includes(check), id + ': expected concrete editorial detail absent');
@@ -405,7 +405,7 @@ for (const [locale, copy] of Object.entries(expected)) {
       assert.ok(list.includes('href="' + href + '"'), id + ': missing rights-category article link');
       assert.ok(!html.includes('href="' + href + '"'), id + ': article must not be duplicated in the top-level guidelines');
       const article = await readFile(path.resolve('dist/kz/ru/professionals', slug, 'index.html'), 'utf8');
-      assert.ok(article.includes('kz-rights-' + id + '.svg'), id + ': dedicated editorial illustration missing');
+      assert.ok(article.includes('guideline-flag-kz.svg'), id + ': dedicated editorial illustration missing');
       assert.ok(article.includes('Паспорт документа'), id + ': document passport missing');
       assert.ok(article.includes('adilet.zan.kz'), id + ': official Adilet source missing');
       assert.ok(article.includes(documentId), id + ': primary legal document ID missing');

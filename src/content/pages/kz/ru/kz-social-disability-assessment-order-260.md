@@ -2,8 +2,8 @@
 title: "Приказ № 260: медико-социальная экспертиза и установление инвалидности"
 summary: "Разбор правил МСЭ Казахстана в редакции августа 2026 года: направление через врачебно-консультативную комиссию, оценка функций и ограничений, согласие, решения и возможность обжалования."
 description: "Правила медико-социальной экспертизы РК, приказ № 260 от 2023 года: основания, МСЭ детей, решение об инвалидности и актуальные изменения 2026 года."
-featuredImage: "/central-asia-autism-hub/images/editorial/kz-social-disability-assessment-order-260.svg"
-featuredImageAlt: "Редакционная иллюстрация документа медико-социальной экспертизы с отметками комплексной оценки."
+featuredImage: "/central-asia-autism-hub/images/editorial/guideline-flag-kz.svg"
+featuredImageAlt: "Государственный флаг Казахстана - страна происхождения документа."
 country: kz
 language: ru
 section: professionals

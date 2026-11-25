@@ -2,8 +2,8 @@
 title: "Закон РК «О статусе педагога»: права, обязанности и профессиональная защита"
 summary: "Закон № 293-VI с изменениями августа 2026 года: права педагога, защита от несвойственной нагрузки, квалификация, педагогическая этика и обязанности перед обучающимися."
 description: "Закон Казахстана «О статусе педагога» № 293-VI: защита профессиональной деятельности, права, обязанности, повышение квалификации и этика в образовании."
-featuredImage: "/central-asia-autism-hub/images/editorial/kz-psychology-teacher-status-law-293.svg"
-featuredImageAlt: "Векторная иллюстрация закона, открытой книги и символа защиты профессиональных прав педагога."
+featuredImage: "/central-asia-autism-hub/images/editorial/guideline-flag-kz.svg"
+featuredImageAlt: "Государственный флаг Казахстана - страна происхождения документа."
 country: kz
 language: ru
 section: professionals

@@ -2,8 +2,8 @@
 title: "AAN (2020): клинические рекомендации по нарушениям сна у аутичных детей"
 summary: "Разбор руководства American Academy of Neurology по бессоннице и нарушениям сна у детей и подростков с РАС: оценка причин, первоочередная немедикаментозная помощь, медицинские риски и границы доказательности."
 description: "Американское клиническое руководство AAN 2020 по нарушениям сна при РАС: оценка сопутствующих состояний, поведенческие меры, осторожность с мелатонином и применение в Казахстане."
-featuredImage: "/central-asia-autism-hub/images/editorial/professional-us-aan-autism-sleep.svg"
-featuredImageAlt: "Оригинальная профессиональная векторная иллюстрация документа AAN с символами сна, часов и медицинского наблюдения."
+featuredImage: "/central-asia-autism-hub/images/editorial/guideline-flag-us.svg"
+featuredImageAlt: "Государственный флаг США - страна происхождения документа."
 country: kz
 language: ru
 section: professionals

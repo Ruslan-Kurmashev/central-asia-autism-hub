@@ -17,6 +17,13 @@ const keys = new Set();
 const imageOwnersByLocale = new Map();
 const svgArtworkOwners = new Map();
 const coverByTranslationKey = new Map();
+let flagCoversChecked = 0;
+const flagPrefix = '/central-asia-autism-hub/images/editorial/guideline-flag-';
+function guidelineFlag(key) {
+  if (/^professionals-g0[456]$/.test(key)) return 'gb';
+  if (key.startsWith('professionals-kz-')) return 'kz';
+  return key.match(/^professionals-intl-(us|au|ca|fr|nz)-/)?.[1] ?? '';
+}
 
 const field = (front, name) =>
   front.match(new RegExp('^' + name + ':\\s*(.+)$', 'm'))?.[1]
@@ -45,12 +52,15 @@ for (const locale of ['ru', 'kk', 'en']) {
     if (keys.has(locale + '/' + key)) errors.push(id + ': duplicated translation key');
     keys.add(locale + '/' + key);
     if (!image || !alt || alt.length < 20) errors.push(id + ': descriptive article image missing');
-    // Keep each professional article's hero illustration distinct. A shared
-    // cover between translations of the same article is intentional.
+    // Only document reviews may reuse their exact country flag. Other covers remain unique.
+    const countryFlag = guidelineFlag(key);
+    const approvedFlag = countryFlag && image === flagPrefix + countryFlag + '.svg';
+    if (countryFlag && !approvedFlag) errors.push(id + ': incorrect country flag for document review');
+    if (!countryFlag && image.startsWith(flagPrefix)) errors.push(id + ': country flag outside document-review scope');
     if (image) {
       const earlier = imageOwners.get(image);
-      if (earlier) errors.push(id + ': same cover reused by ' + earlier + ': ' + image);
-      imageOwners.set(image, id);
+      if (earlier && !approvedFlag) errors.push(id + ': same cover reused by ' + earlier + ': ' + image);
+      imageOwners.set(approvedFlag ? image + ':' + key : image, id);
       const counterpart = coverByTranslationKey.get(key);
       if (counterpart && counterpart !== image) {
         errors.push(id + ': translation does not share the source cover for ' + key);
@@ -109,7 +119,8 @@ for (const locale of ['ru', 'kk', 'en']) {
           } else {
             svgArtworkOwners.set(digest, { id, image });
           }
-          svgCoversChecked++;
+          if (approvedFlag) flagCoversChecked++;
+          else svgCoversChecked++;
         }
       }
     }
@@ -170,5 +181,6 @@ if (errors.length) {
     tableRowsChecked + ' Markdown table rows, ' +
     svgCoversChecked + ' verified accessible SVG covers, ' +
     photoCoversChecked + ' verified editorial photo covers, ' +
-    articleHeroesChecked + ' correctly rendered article heroes and no reused cover artwork.');
+    flagCoversChecked + ' correct country-flag heroes, ' +
+    articleHeroesChecked + ' correctly rendered article heroes and no unapproved reused cover artwork.');
 }

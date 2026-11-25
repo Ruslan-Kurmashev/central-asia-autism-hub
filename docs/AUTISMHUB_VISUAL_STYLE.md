@@ -15,6 +15,8 @@ An image must answer a concrete reader question or add necessary human context. 
 
 An AI-generated image is never automatically cleared for publication. The owner's prior restriction on generated article covers remains in force. Any illustrative exception requires a specific request and an asset review.
 
+**Owner-approved exception (25 November 2026):** professional reviews of named international and Kazakhstan documents use the plain national flag of the issuing country in its original proportions. No frame, decoration, labels or extra icons. Sharing a flag within the same jurisdiction is intentional. The introductory methodology article and other content retain their existing cover rules. Flags identify origin, not endorsement or legal applicability.
+
 ## 2. Existing repository references
 
 These are concrete assets already stored in the project and useful for comparison. File existence alone does **not** prove every visual property or character has been finally approved.

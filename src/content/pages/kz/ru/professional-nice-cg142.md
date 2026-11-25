@@ -2,8 +2,8 @@
 title: "NICE CG142: диагностика и поддержка аутичных взрослых"
 summary: "Разбор NICE CG142 для специалистов: выявление и комплексная оценка аутизма у взрослых, поддержка коммуникации, психического здоровья, повседневной самостоятельности и занятости."
 description: "NICE CG142 для специалистов: комплексная диагностическая оценка взрослых, AQ-10 и ограничения скрининга, адаптации и поддержка повседневной жизни, работа и клинические границы."
-featuredImage: "/central-asia-autism-hub/images/editorial/professional-nice-cg142.svg"
-featuredImageAlt: "Схематичная иллюстрация клинического документа, календаря и плана действий для организации поддержки взрослого человека."
+featuredImage: "/central-asia-autism-hub/images/editorial/guideline-flag-gb.svg"
+featuredImageAlt: "Государственный флаг Великобритании - страна происхождения документа."
 country: kz
 language: ru
 section: professionals

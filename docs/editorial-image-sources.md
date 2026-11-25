@@ -1587,3 +1587,19 @@ Four language-specific SVG derivatives of two original AutismHub diagrams were p
 | `public/images/research/central-asia-autism-future-research-roadmap-kk.svg` | Same original SVG | KK: same hypothetical stages, including data safeguards and community participation |
 
 These SVG files do not introduce external copyright material and are not new cover images. Source photographs referenced by the translations are the existing licensed project assets. Translation, render legibility and medical-editorial sign-off are separate release checks, not assumed to have occurred because the files exist.
+
+## Professional document flags (25 November 2026)
+
+Owner requested plain national flags, without framing or decorative additions. The 41 reviews (16 international and 25 Kazakhstan) use seven local SVGs. The 42nd methodology article is not country-specific and retains its existing cover. Historical editorial images remain in Git; no AI-generated cover is used for this change.
+
+Source: [hampusborgos/country-flags](https://github.com/hampusborgos/country-flags/tree/c09927e63705529bbf59ca6684cd9b23225dddad), Wikimedia Commons-derived flag artwork declared public domain by the repository README. Retrieved 2026-11-25. National-symbol usage rules may still apply. Only nonvisual SVG title/description metadata added; source geometry and colors are unchanged. Flags indicate the jurisdiction of the reviewed document, not endorsement.
+
+| Local asset in public/images/editorial | Source SVG |
+| --- | --- |
+| guideline-flag-gb.svg | https://github.com/hampusborgos/country-flags/blob/c09927e63705529bbf59ca6684cd9b23225dddad/svg/gb.svg |
+| guideline-flag-us.svg | https://github.com/hampusborgos/country-flags/blob/c09927e63705529bbf59ca6684cd9b23225dddad/svg/us.svg |
+| guideline-flag-au.svg | https://github.com/hampusborgos/country-flags/blob/c09927e63705529bbf59ca6684cd9b23225dddad/svg/au.svg |
+| guideline-flag-ca.svg | https://github.com/hampusborgos/country-flags/blob/c09927e63705529bbf59ca6684cd9b23225dddad/svg/ca.svg |
+| guideline-flag-fr.svg | https://github.com/hampusborgos/country-flags/blob/c09927e63705529bbf59ca6684cd9b23225dddad/svg/fr.svg |
+| guideline-flag-nz.svg | https://github.com/hampusborgos/country-flags/blob/c09927e63705529bbf59ca6684cd9b23225dddad/svg/nz.svg |
+| guideline-flag-kz.svg | https://github.com/hampusborgos/country-flags/blob/c09927e63705529bbf59ca6684cd9b23225dddad/svg/kz.svg |
