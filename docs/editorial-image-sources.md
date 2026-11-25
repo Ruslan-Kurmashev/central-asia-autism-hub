@@ -1603,3 +1603,8 @@ Source: [hampusborgos/country-flags](https://github.com/hampusborgos/country-fla
 | guideline-flag-fr.svg | https://github.com/hampusborgos/country-flags/blob/c09927e63705529bbf59ca6684cd9b23225dddad/svg/fr.svg |
 | guideline-flag-nz.svg | https://github.com/hampusborgos/country-flags/blob/c09927e63705529bbf59ca6684cd9b23225dddad/svg/nz.svg |
 | guideline-flag-kz.svg | https://github.com/hampusborgos/country-flags/blob/c09927e63705529bbf59ca6684cd9b23225dddad/svg/kz.svg |
+
+## Original parent prompting graph (2026-11-25)
+
+- Local asset: `images/editorial/diagrams/prompting-progress-example-ru.svg`.
+- Original AutismHub vector generated from the explicitly hypothetical five-day table in the RU prompting article. No actual participant data, third-party figure, photograph or research measurements are reproduced. Two distinct line styles and shapes distinguish the series. Full values and the uncompleted outcome are given in the adjacent Markdown table and alt text. The graphic is not a recommended schedule, clinical outcome or developmental norm. Scientific references support individualized selection and fading, not the numerical illustration.

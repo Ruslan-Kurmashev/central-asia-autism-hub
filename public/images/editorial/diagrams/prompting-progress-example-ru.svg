@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 560 340" role="img" aria-labelledby="chart-title chart-desc">
+<title id="chart-title">Пример наблюдения за самостоятельностью</title>
+<desc id="chart-desc">Вымышленные данные. Самостоятельно: 20, 40, 60, 80, 80 процентов. С подсказкой: 80, 60, 40, 0, 20 процентов. В четверг одно действие не выполнено. Не норматив обучения.</desc>
+<rect width="560" height="340" rx="10" fill="#ffffff"/>
+<g fill="#183b53"><text x="22" y="27">Доля действий, %</text></g>
+<g stroke="#d7e1e8" stroke-width="1">
+<path d="M66 49H526"/>
+<path d="M66 89.80000000000001H526"/>
+<path d="M66 130.6H526"/>
+<path d="M66 171.4H526"/>
+<path d="M66 212.2H526"/>
+<path d="M66 253H526"/>
+</g>
+<g fill="#365165" text-anchor="end"><text x="56" y="54">100</text><text x="56" y="94.80000000000001">80</text><text x="56" y="135.6">60</text><text x="56" y="176.4">40</text><text x="56" y="217.2">20</text><text x="56" y="258">0</text></g>
+<path d="M66 49V253H526" stroke="#536b7b" fill="none" stroke-width="1.5"/>
+<g fill="#183b53" text-anchor="middle"><text x="86" y="279">Пн</text><text x="191" y="279">Вт</text><text x="296" y="279">Ср</text><text x="401" y="279">Чт</text><text x="506" y="279">Пт</text></g>
+<g stroke="#216b59" stroke-width="3.5" fill="none" stroke-linecap="round" stroke-linejoin="round"><polyline points="86,212.2 191,171.4 296,130.6 401,89.80000000000001 506,89.80000000000001"/></g>
+<g fill="#216b59"><circle cx="86" cy="212.2" r="5"/><circle cx="191" cy="171.4" r="5"/><circle cx="296" cy="130.6" r="5"/><circle cx="401" cy="89.80000000000001" r="5"/><circle cx="506" cy="89.80000000000001" r="5"/></g>
+<g stroke="#a6501b" stroke-width="3.5" stroke-dasharray="8 5" fill="none" stroke-linecap="round" stroke-linejoin="round"><polyline points="86,89.80000000000001 191,130.6 296,171.4 401,253 506,212.2"/></g>
+<g fill="#a6501b"><rect x="82" y="85.80000000000001" width="8" height="8"/><rect x="187" y="126.6" width="8" height="8"/><rect x="292" y="167.4" width="8" height="8"/><rect x="397" y="249" width="8" height="8"/><rect x="502" y="208.2" width="8" height="8"/></g>
+<path d="M73 301h29" stroke="#216b59" stroke-width="3.5"/><circle cx="87" cy="301" r="4" fill="#216b59"/><text x="112" y="306" fill="#183b53">Самостоятельно</text>
+<path d="M322 301h29" stroke="#a6501b" stroke-width="3.5" stroke-dasharray="8 5"/><rect x="333" y="297" width="8" height="8" fill="#a6501b"/><text x="361" y="306" fill="#183b53">С подсказкой</text>
+<text x="280" y="329" text-anchor="middle" fill="#365165">Вымышленные данные, не норматив</text>
+</svg>

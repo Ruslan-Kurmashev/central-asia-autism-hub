@@ -137,3 +137,6 @@ for path,n in [make_cards(),make_plan()]:
 # Generate the toileting diary in the existing parent printable build (CI and Pages).
 import runpy
 runpy.run_path(str(ROOT / "scripts" / "build-toileting-diary.py"), run_name="__main__")
+
+# Generate the prompting diary using the same printable build.
+runpy.run_path(str(ROOT / "scripts" / "build-prompting-diary.py"), run_name="__main__")
