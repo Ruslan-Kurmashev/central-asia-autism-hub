@@ -1,0 +1,3 @@
+# Australian professional guidance: scoped review 2026-11-25
+
+Three existing Russian reviews updated. Original publication dates, slugs, translation keys, flags and review due dates preserved. Official Autism CRC pages checked for GRADE, scope, review and assent; indexed final guideline PDF passages 12, 13 and 18 and framework supporting information consulted. Full PDF visual verification not completed. Historical issuing name retained; rename announcement checked via indexed publisher text, direct page inaccessible. Four pending evidence records ASD-0061 through ASD-0064. Practical examples explicitly editorial. No new inclusive-education article or directory architecture changes in this batch. No independent clinical review. CI and deployment pending.
