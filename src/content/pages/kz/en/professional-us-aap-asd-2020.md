@@ -150,7 +150,7 @@ To compare with Kazakhstan's regulatory framework, see the [catalogue of Kazakhs
 
 ## Related materials
 
-- [AAP developmental surveillance and screening (Russian)](/central-asia-autism-hub/kz/ru/professionals/aap-nablyudenie-za-razvitiem-i-skrining-2020/)
+- [AAP developmental surveillance and screening](../aap-developmental-surveillance-screening-2020/)
 - [Comprehensive clinical assessment (Russian)](/central-asia-autism-hub/kz/ru/professionals/kompleksnaya-klinicheskaya-ocenka-autizma-etapy/)
 
 **Review limitation:** this is a reference review of a specific AAP document, not a clinical protocol of Kazakhstan, a medical prescription or an official translation of the full original.

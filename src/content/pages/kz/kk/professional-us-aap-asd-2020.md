@@ -150,7 +150,7 @@ AAP аутизмнің клиникалық белгілерін бағалау�
 
 ## Байланысты материалдар
 
-- [AAP: дамуды бақылау және скрининг (орыс тілінде)](/central-asia-autism-hub/kz/ru/professionals/aap-nablyudenie-za-razvitiem-i-skrining-2020/)
+- [AAP: дамуды бақылау және скрининг](../aap-damudy-bakylau-zhane-skrining-2020/)
 - [Кешенді клиникалық бағалау (орыс тілінде)](/central-asia-autism-hub/kz/ru/professionals/kompleksnaya-klinicheskaya-ocenka-autizma-etapy/)
 
 **Шолудың шектеуі:** бұл AAP ұйымының нақты құжатына анықтамалық шолу. Қазақстанның клиникалық хаттамасы, медициналық тағайындау немесе толық түпнұсқаның ресми аудармасы емес.
