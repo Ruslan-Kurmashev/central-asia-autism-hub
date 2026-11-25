@@ -113,7 +113,7 @@ The aim is not to make someone appear more autistic to obtain a diagnosis, but t
 
 The document can help professionals recognise diverse autism presentations and reduce stereotypes. It does not determine who is authorised to diagnose, which tools are compulsory or which procedures apply in Kazakhstan.
 
-For national requirements, see the [catalogue of Kazakhstan documents](../kazakhstan-documents/). For the full clinical context, consult the [main New Zealand guideline](https://www.whaikaha.govt.nz/resources/strategies-and-studies/guidelines/nz-autism-guideline).
+For national requirements, see the [catalogue of Kazakhstan documents](../kazakhstan-documents/). For the full clinical context, consult the [main New Zealand guideline](../new-zealand-national-autism-guideline-2022/).
 
 [Original Gender in assessment supplement (DOCX)](https://www.whaikaha.govt.nz/assets/Autism-Guideline/Autism-Guideline-Supplementary-Paper_Gender-In-Assessment_FINAL_17-May-2024-1.docx). The file is listed in the official catalogue, but could not be downloaded during this review. This review is limited to the confirmed conclusions of the published summary and explicitly identified editorial notes.
 
