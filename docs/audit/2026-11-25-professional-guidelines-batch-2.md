@@ -1,0 +1,3 @@
+# US professional guidelines: scoped audit 2026-11-25
+
+Three RU reviews amended: AAP 2020 autism clinical report (reaffirmed October 2025), AAP developmental screening (reaffirmed April 2024 with reference/data updates), AAN 2020 sleep guideline (search through December 2017). Primary publisher indexed texts and PubMed/PMC consulted. Direct full-page access limited; no independent clinical review or new official AAN status established. Added ASD-0056 to ASD-0058 pending. All seven professional articles retain original publication dates and URLs. Flag migration QA fixed for compact SVG; full changed-route QA retained with a narrow 44-route allowance; corrected two malformed trailing-slash DOI links to existing source DOI. No test disabled.

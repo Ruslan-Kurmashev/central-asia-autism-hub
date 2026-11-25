@@ -180,7 +180,7 @@ These are positive results for selected outcomes, but the sample was small, the 
 
 ### ASI with CO-OP (11 November 2026): two active approaches compared
 
-In a [trial by Yazıcıoğlu and Bumin](https://doi.org/10.3390/children13111562/), 26 autistic children aged 7-11 received either ASI plus Cognitive Orientation to daily Occupational Performance (CO-OP) or ASI alone for ten weeks.
+In a [trial by Yazıcıoğlu and Bumin](https://doi.org/10.3390/children13111562), 26 autistic children aged 7-11 received either ASI plus Cognitive Orientation to daily Occupational Performance (CO-OP) or ASI alone for ten weeks.
 
 Some executive-function and daily-occupation outcomes improved in the combined group, but there was **no statistically significant between-group difference on the overall SCOPE participation score**.
 
