@@ -195,7 +195,7 @@ Reading the Guideline бөлімінде алғашқы жарияланымна
 
 ## AutismHub байланысты материалдары
 
-- [Балалардың функционалдық күшті жақтары мен қолдау қажеттіліктерін бағалау (орыс тілінде)](/central-asia-autism-hub/kz/ru/professionals/autism-crc-framework-ocenki-potrebnostej-detej-2024/)
+- [Балалардың функционалдық күшті жақтары мен қолдау қажеттіліктерін бағалау](../autism-crc-framework-balalardyn-kushti-zhaktary-kazhettilikteri-2024/)
 - [Жеке қолдау жоспары және мониторинг (орыс тілінде)](/central-asia-autism-hub/kz/ru/professionals/individualnyj-plan-podderzhki-celi-monitoring/)
 
 ## 10. Маманның тексеру тізімі

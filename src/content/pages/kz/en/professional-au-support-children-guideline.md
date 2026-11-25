@@ -195,7 +195,7 @@ Before using a specific recommendation in professional practice, check its origi
 
 ## Related AutismHub materials
 
-- [Assessment of children's functional strengths and support needs (Russian)](/central-asia-autism-hub/kz/ru/professionals/autism-crc-framework-ocenki-potrebnostej-detej-2024/)
+- [Assessment of children's functional strengths and support needs](../autism-crc-framework-childrens-strengths-support-needs-2024/)
 - [Individual support plan and monitoring (Russian)](/central-asia-autism-hub/kz/ru/professionals/individualnyj-plan-podderzhki-celi-monitoring/)
 
 ## 10. Professional checklist
