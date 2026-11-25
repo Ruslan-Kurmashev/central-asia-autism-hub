@@ -2,8 +2,8 @@
 title: "Конвенция о правах инвалидов: обязательства Казахстана и поддержка аутичных людей"
 summary: "Что означает ратификация Конвенции о правах инвалидов законом № 288-V: равенство, разумное приспособление, доступная коммуникация, участие детей и инклюзивное образование."
 description: "Конвенция ООН о правах инвалидов в Казахстане: статьи 5, 7, 9, 21 и 24, недискриминация, доступность, AAC, разумное приспособление и образование."
-featuredImage: "/central-asia-autism-hub/images/editorial/kz-rights-disability-convention-ratification-288.svg"
-featuredImageAlt: "Оригинальная схематичная иллюстрация правового документа и символа равного участия людей с инвалидностью."
+featuredImage: "/central-asia-autism-hub/images/editorial/guideline-flag-kz.svg"
+featuredImageAlt: "Государственный флаг Казахстана - страна происхождения документа."
 country: kz
 language: ru
 section: professionals

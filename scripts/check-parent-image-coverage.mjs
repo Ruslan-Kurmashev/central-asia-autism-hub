@@ -119,7 +119,11 @@ for (const locale of ['ru', 'en', 'kk']) {
     const isWebp = extension === '.webp';
     // Efficiently compressed WebP photographs and illustrations may be below 12 KB.
     // Check their RIFF/WEBP headers and declared size rather than requiring a JPEG-sized file.
-    const minimumBytes = isVector ? 600 : isWebp ? 4096 : 12000;
+    // Plain geometric national flags can be smaller than general illustrations.
+    const isDocumentFlag = value(frontmatter, 'section') === 'professionals' &&
+      value(frontmatter, 'topic') === 'guidelines' &&
+      /^\/central-asia-autism-hub\/images\/editorial\/guideline-flag-(?:gb|us|au|ca|fr|nz|kz)\.svg$/.test(src);
+    const minimumBytes = isDocumentFlag ? 150 : isVector ? 600 : isWebp ? 4096 : 12000;
     assert.ok(image.isFile() && image.size > minimumBytes,
       `Missing, empty or truncated editorial image: ${article}: ${src}`);
     if (isWebp) {
@@ -132,6 +136,11 @@ for (const locale of ['ru', 'en', 'kk']) {
     if (isVector) {
       const svg = await readFile(localFile, 'utf8');
       assert.match(svg, /<svg\b/i, `Invalid SVG image: ${article}`);
+      if (isDocumentFlag) {
+        assert.match(svg, /<svg\b[^>]*viewBox="0 0 [1-9][0-9]* [1-9][0-9]*"/, 'Flag missing valid viewBox: ' + article);
+        assert.match(svg, /<\/svg>\s*$/, 'Incomplete flag SVG: ' + article);
+        assert.match(svg, /<(?:path|rect|polygon|circle)\b/, 'Flag has no visible geometry: ' + article);
+      }
       assert.match(svg, /<title\b/i, `SVG lacks title: ${article}`);
       assert.match(svg, /<desc\b/i, `SVG lacks description: ${article}`);
       assert.ok(!/<script\b|onload\s*=|javascript:|<foreignObject\b/i.test(svg),

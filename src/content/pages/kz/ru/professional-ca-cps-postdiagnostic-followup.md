@@ -2,8 +2,8 @@
 title: "CPS (2019): сопровождение аутичных детей после диагностики"
 summary: "Профессиональный обзор позиционного документа Canadian Paediatric Society о наблюдении за здоровьем, поддержке семьи, междисциплинарной координации и преемственности помощи после установления диагноза РАС."
 description: "Canadian Paediatric Society Post-diagnostic management and follow-up care for autism spectrum disorder: медицинское наблюдение, коммуникация, поддержка семьи и ограничения использования в Казахстане."
-featuredImage: "/central-asia-autism-hub/images/editorial/professional-ca-cps-postdiagnostic-care.svg"
-featuredImageAlt: "Авторская иллюстрация документа по сопровождению ребёнка после диагностики с координацией медицинской, семейной и образовательной помощи."
+featuredImage: "/central-asia-autism-hub/images/editorial/guideline-flag-ca.svg"
+featuredImageAlt: "Государственный флаг Канады - страна происхождения документа."
 country: kz
 language: ru
 section: professionals

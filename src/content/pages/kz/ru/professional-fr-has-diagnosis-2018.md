@@ -2,8 +2,8 @@
 title: "HAS (2018): признаки аутизма, раннее выявление и диагностический маршрут"
 summary: "Разбор рекомендаций французской Haute Autorité de santé 2018 года для специалистов первой и второй линии: настораживающие признаки, консультация, оценка и сопровождение без задержки."
 description: "HAS Франция 2018: рекомендации о раннем выявлении, диагностической оценке аутизма у детей до 18 лет и границах применения в Казахстане."
-featuredImage: "/central-asia-autism-hub/images/editorial/professional-fr-has-2018.svg"
-featuredImageAlt: "Профессиональная векторная иллюстрация французского диагностического руководства: три последовательных этапа оценки развития и направления."
+featuredImage: "/central-asia-autism-hub/images/editorial/guideline-flag-fr.svg"
+featuredImageAlt: "Государственный флаг Франции - страна происхождения документа."
 country: kz
 language: ru
 section: professionals

@@ -2,8 +2,8 @@
 title: "Autism CRC (2024): оценка функциональных сильных сторон и потребностей детей"
 summary: "Обзор National Framework for assessing children's functional strengths and support needs in Australia, версия 1.1 декабря 2024 года, для междисциплинарной оценки детей 0-12 лет независимо от наличия диагноза."
 description: "Австралийская рамочная модель Autism CRC 2024: функционирование, потребности, ICF, F-Words, профессиональные компетенции и письменный отчёт."
-featuredImage: "/central-asia-autism-hub/images/editorial/professional-au-functional-strengths.svg"
-featuredImageAlt: "Авторская векторная схема функциональных сильных сторон, потребностей ребёнка и документированного плана поддержки."
+featuredImage: "/central-asia-autism-hub/images/editorial/guideline-flag-au.svg"
+featuredImageAlt: "Государственный флаг Австралии - страна происхождения документа."
 country: kz
 language: ru
 section: professionals

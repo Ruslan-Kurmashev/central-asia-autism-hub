@@ -173,6 +173,22 @@
   object-fit: contain;
 }
 
+/* Country flags identify the issuing jurisdiction, without decoration or cropping. */
+.article-v2__hero-art.article-v2__hero-art--flag {
+  aspect-ratio: auto;
+  border: 0;
+  border-radius: 0;
+  background: transparent;
+  box-shadow: none;
+}
+
+.article-v2__hero-art.article-v2__hero-art--flag img {
+  width: 100%;
+  height: auto;
+  max-height: 24rem;
+  object-fit: contain;
+}
+
 .article-v2__hero-art--source {
   flex-direction: column;
   justify-content: center;

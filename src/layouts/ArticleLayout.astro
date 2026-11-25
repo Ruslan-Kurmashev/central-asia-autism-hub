@@ -160,7 +160,7 @@ const researchLabel: Record<Locale, string> = {
             </div>
 
             {data.featuredImage && (
-              <figure class:list={['article-v2__hero-art', researchDetails?.featuredImageCredit && 'article-v2__hero-art--source']}>
+              <figure class:list={['article-v2__hero-art', data.featuredImage.includes('/guideline-flag-') && 'article-v2__hero-art--flag', researchDetails?.featuredImageCredit && 'article-v2__hero-art--source']}>
                 {researchDetails?.featuredImageSourceUrl ? (
                   <a
                     class="article-v2__hero-original"

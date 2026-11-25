@@ -2,8 +2,8 @@
 title: "CPS (2019): раннее выявление аутизма у детей - рекомендации Канады"
 summary: "Профессиональный разбор документа Canadian Paediatric Society об отслеживании развития, ранних признаках РАС, адресном скрининге и маршруте дальнейшей оценки, с разграничением канадской и американской практики."
 description: "Канадское руководство CPS Early detection for autism spectrum disorder in young children: паспорт документа, наблюдение, скрининг и направления, ограничения применения в Казахстане."
-featuredImage: "/central-asia-autism-hub/images/editorial/professional-ca-cps-early-detection.svg"
-featuredImageAlt: "Авторская иллюстрация профессионального документа с календарём наблюдения за развитием, отметками оценки и направлением ребёнка к специалистам."
+featuredImage: "/central-asia-autism-hub/images/editorial/guideline-flag-ca.svg"
+featuredImageAlt: "Государственный флаг Канады - страна происхождения документа."
 country: kz
 language: ru
 section: professionals

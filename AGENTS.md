@@ -50,6 +50,8 @@ Read only the documents relevant to the task, but read each selected document co
 - Owner-approved exception dated 2026-10-28: a statically hosted, browser-only first-stage M-CHAT-R may be prepared. Activation requires actual permission scope for website and source repository, original RU/KK/EN instrument integrity, medical and native-language review, privacy QA and verified pages. An initial score of 3-7 is not a completed M-CHAT-R/F result; do not simulate Follow-Up without its full authorised clinical process.
 - Do not change routes, schemas, translation keys, slugs, publication filtering, or evaluation logic incidentally.
 
+- Professional document reviews use plain national flags under `docs/decisions/2026-11-25-professional-document-flags.md`. Shared flags are allowed only for matching document jurisdictions. No flag artwork changes or decorative additions.
+
 ## Mandatory typography and publication law (all changes)
 
 - Use only `--type-*` font-size tokens and `--font-*` family tokens from `src/styles/typography.css` in site CSS and Astro components.

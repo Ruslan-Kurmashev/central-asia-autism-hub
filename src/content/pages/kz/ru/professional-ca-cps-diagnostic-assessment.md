@@ -2,8 +2,8 @@
 title: "CPS (2019): стандарты диагностической оценки аутизма у детей"
 summary: "Подробный обзор канадского позиционного документа: три модели организации диагностики РАС, клинические критерии, роль ADOS-2 и ADI-R, медицинская оценка и передача результатов семье."
 description: "Canadian Paediatric Society Standards of diagnostic assessment for autism spectrum disorder: три модели диагностики, восемь этапов оценки и применимость к Казахстану."
-featuredImage: "/central-asia-autism-hub/images/editorial/professional-ca-cps-diagnostic-assessment.svg"
-featuredImageAlt: "Авторская обложка канадского профессионального документа: три ветви маршрута диагностической оценки, объединённые в клинический отчёт."
+featuredImage: "/central-asia-autism-hub/images/editorial/guideline-flag-ca.svg"
+featuredImageAlt: "Государственный флаг Канады - страна происхождения документа."
 country: kz
 language: ru
 section: professionals

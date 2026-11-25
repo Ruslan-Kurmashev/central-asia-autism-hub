@@ -2,8 +2,8 @@
 title: "Закон РК № 343: социальная и медико-педагогическая поддержка детей"
 summary: "Что регулирует закон № 343 от 11 июля 2002 года: ранняя поддержка, обязанности разных ведомств, индивидуальный подход, роль семьи и отличие коррекционной помощи от медицинской диагностики."
 description: "Закон № 343 Казахстана о социальной и медико-педагогической коррекционной поддержке детей: принципы, услуги и межведомственные обязанности в редакции 2026 года."
-featuredImage: "/central-asia-autism-hub/images/editorial/kz-social-child-correction-support-law-343.svg"
-featuredImageAlt: "Символическая иллюстрация правового документа и координации трёх служб поддержки ребёнка."
+featuredImage: "/central-asia-autism-hub/images/editorial/guideline-flag-kz.svg"
+featuredImageAlt: "Государственный флаг Казахстана - страна происхождения документа."
 country: kz
 language: ru
 section: professionals

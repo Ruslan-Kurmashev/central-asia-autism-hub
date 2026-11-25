@@ -2,8 +2,8 @@
 title: "Autism CRC: национальное руководство Австралии по оценке и диагностике аутизма (2-е издание)"
 summary: "Обзор австралийского руководства Autism CRC: 66 согласованных рекомендаций, комплексная оценка потребностей и здоровья, диагностическая оценка и участие самого человека. Обновление 2023 года одобрено NHMRC."
 description: "Австралийское руководство Autism CRC по диагностике аутизма: паспорт, 66 рекомендаций, этапы assessment и diagnostic evaluation, статус NHMRC и применимость к Казахстану."
-featuredImage: "/central-asia-autism-hub/images/editorial/professional-au-autism-crc-assessment.svg"
-featuredImageAlt: "Авторская иллюстрация австралийского руководства: документ и последовательность этапов направления, оценки потребностей и диагностического заключения."
+featuredImage: "/central-asia-autism-hub/images/editorial/guideline-flag-au.svg"
+featuredImageAlt: "Государственный флаг Австралии - страна происхождения документа."
 country: kz
 language: ru
 section: professionals

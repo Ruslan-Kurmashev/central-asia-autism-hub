@@ -13,6 +13,8 @@ This directory records explicit, owner-approved changes to product policy or tec
 
 ## Current records
 
+- [2026-11-25: Plain country flags for professional document reviews](2026-11-25-professional-document-flags.md). Shared national flags identify issuing jurisdictions, without decorative graphics. Other article-cover rules are unchanged.
+
 - [2026-11-12: Six assessment articles in RU/KK/EN](2026-11-12-parent-assessment-three-languages.md). The newly completed translations supersede the historical four-article count for KK/EN, preserving actual translation publication dates and the established six-article reading order.
 
 - [2026-11-05: Fast path for direct publication requests](2026-11-05-direct-publish-fast-path.md). A direct publication instruction triggers a prompt minimal commit and existing CI/Pages workflow without lengthy duplicate checks or polling. Mandatory safety and CI gates remain in force.

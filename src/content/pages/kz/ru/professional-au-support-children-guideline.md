@@ -2,8 +2,8 @@
 title: "Autism CRC (2023): национальное руководство Австралии по поддержке аутичных детей и их семей"
 summary: "Профессиональный обзор 84 рекомендаций Autism CRC о поддержке обучения, участия и благополучия детей 0-12 лет: цели, выбор и реализация поддержки, оценка результатов, качество и безопасность."
 description: "Национальное руководство Австралии Autism CRC 2023 года: 84 рекомендации по поддержке аутичных детей и семей, одобрение NHMRC, практика и применимость к Казахстану."
-featuredImage: "/central-asia-autism-hub/images/editorial/professional-au-autism-crc-support.svg"
-featuredImageAlt: "Авторская иллюстрация плана сопровождения с тремя взаимосвязанными элементами: обучение, участие и благополучие."
+featuredImage: "/central-asia-autism-hub/images/editorial/guideline-flag-au.svg"
+featuredImageAlt: "Государственный флаг Австралии - страна происхождения документа."
 country: kz
 language: ru
 section: professionals
