@@ -1,0 +1,3 @@
+# HAS professional guidance review, 2026-11-25
+
+Two existing Russian reviews revised. Official 2018 full text checked for age-specific signs, dedicated consultation, immediate referral, follow-up and investigations. Page 12 screenshot inspected. Official January 2026 guideline and October-hosted English translation checked for early intervention, 10-hour recommendation, annual assessment, non-recommended approaches, consensus grading and support needs. English PDF screenshot unavailable (cache miss). Original flags, URLs, first publication dates and review dates retained. Four pending claim records ASD-0072 to ASD-0075. No independent clinical review, no new articles or changes to QA. Editorial PDF standard consulted. Deployment and public verification required.
