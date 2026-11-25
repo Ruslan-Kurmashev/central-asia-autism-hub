@@ -212,6 +212,10 @@ sources:
 
 Это вымышленные примеры записей. Не следует будить ребёнка, ограничивать питьё или намеренно задерживать посещение туалета ради заполнения дневника.
 
+<a href="/central-asia-autism-hub/downloads/toileting/toileting-diary-ru.pdf" download="toileting-diary-ru.pdf">Скачать дневник наблюдения (PDF, 2 страницы)</a>
+
+На первой странице приведён пример заполнения. На второй - чистый лист для записей. Распечатайте вторую страницу столько раз, сколько нужно.
+
 Храните записи приватно. Передавайте только сведения, необходимые врачу или согласованному специалисту, через подходящий защищённый канал. Не публикуйте дневник, фотографии или подробности интимных процедур в социальных сетях и общих чатах.
 
 ## Как организовать обучение дома
@@ -331,13 +335,31 @@ sources:
 
 Ольга Князева, педагог-психолог и дефектолог, специалист по прикладному анализу поведения по данным организатора. РООИ «Перспектива», 26 августа 2021 года. Вебинар посвящён подготовке к обучению, мочеиспусканию и дефекации в горшок или унитаз.
 
-[Смотреть видео на русском языке (YouTube)](https://www.youtube.com/watch?v=zY6db1TgRdE)
+<figure class="article-video-embed" data-youtube-video="zY6db1TgRdE">
+  <div class="article-video-embed__player">
+    <button type="button" class="article-video-embed__activate" aria-label="Загрузить видео: Туалетный тренинг для детей с РАС">
+      <span class="article-video-embed__play-icon" aria-hidden="true">▶</span>
+      <span class="article-video-embed__play-label">Смотреть видео: Туалетный тренинг для детей с РАС</span>
+      <span class="article-video-embed__privacy-hint">Внешний плеер YouTube загрузится только после нажатия</span>
+    </button>
+  </div>
+  <figcaption>Видео на русском языке. После нажатия YouTube может обрабатывать технические данные по своей <a href="https://policies.google.com/privacy?hl=ru" target="_blank" rel="noopener noreferrer external">политике конфиденциальности</a>. Если плеер недоступен, <a href="https://www.youtube.com/watch?v=zY6db1TgRdE" target="_blank" rel="noopener noreferrer external">откройте оригинал на YouTube</a>.</figcaption>
+</figure>
 
 ### Запоры у детей: функциональные запоры. Советы родителям
 
 Андрей Сурков, детский гастроэнтеролог, заведующий гастроэнтерологическим отделением НМИЦ здоровья детей на момент записи. Видео знакомит родителей с темой функционального запора. Не используйте его для самостоятельного назначения лечения или исключения других причин симптомов.
 
-[Смотреть видео на русском языке (YouTube)](https://www.youtube.com/watch?v=ALSjIeXb8NM)
+<figure class="article-video-embed" data-youtube-video="ALSjIeXb8NM">
+  <div class="article-video-embed__player">
+    <button type="button" class="article-video-embed__activate" aria-label="Загрузить видео: Запоры у детей: советы родителям">
+      <span class="article-video-embed__play-icon" aria-hidden="true">▶</span>
+      <span class="article-video-embed__play-label">Смотреть видео: Запоры у детей: советы родителям</span>
+      <span class="article-video-embed__privacy-hint">Внешний плеер YouTube загрузится только после нажатия</span>
+    </button>
+  </div>
+  <figcaption>Видео на русском языке. После нажатия YouTube может обрабатывать технические данные по своей <a href="https://policies.google.com/privacy?hl=ru" target="_blank" rel="noopener noreferrer external">политике конфиденциальности</a>. Если плеер недоступен, <a href="https://www.youtube.com/watch?v=ALSjIeXb8NM" target="_blank" rel="noopener noreferrer external">откройте оригинал на YouTube</a>.</figcaption>
+</figure>
 
 ## Связанные материалы
 

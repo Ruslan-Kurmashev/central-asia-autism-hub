@@ -1,0 +1,9 @@
+# Toileting article printable and two video embeds
+
+Date: 2026-11-25. Scope: RU parent toileting article.
+
+The owner requested a downloadable diary with an example and blank page and playback of the two existing videos within the article. The diary is an original two-page A4 unscored observation aid. It is generated during the existing parent printable build from canonical print typography tokens. No names, data submission, server-side processing, storage, or online fillable form are introduced. Families retain their records locally. The existing PDF preflight includes the new document.
+
+The two existing videos use the previously reviewed article-video-embed markup and shared ArticleLayout script (docs/youtube-stimming-embed-review-2026-10-23.md). No iframe, remote thumbnail or third-party script is loaded before the visitor activates the button. The player uses youtube-nocookie.com, with the existing strict-origin-when-cross-origin referrer policy required for playback, and a titled iframe. The visitor is informed that YouTube is external and can process connection data. Direct external links remain available if JavaScript is unavailable or the owner restricts embedding. No autoplay is requested. No videos are downloaded or rehosted. Full video contents, player eligibility and playback on the public site are not confirmed. The intended audience for these resources is adult parents and caregivers. The existing editorial medical warning remains unchanged. The existing public privacy notices describe the on-demand player model.
+
+Provider documentation: https://support.google.com/youtube/answer/171780 and https://policies.google.com/privacy?hl=ru . Provider retention and downstream processing are not controlled by AutismHub. This is a scoped implementation review, not a legal compliance certification.

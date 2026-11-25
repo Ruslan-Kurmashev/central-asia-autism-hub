@@ -133,3 +133,7 @@ for path,n in [make_cards(),make_plan()]:
     if len(pdf.pages)!=n:raise RuntimeError(f"Page count wrong: {path}")
     if any(len(page.extract_text() or "")<100 for page in pdf.pages):raise RuntimeError(f"Missing selectable text: {path}")
     print(f"Self-care PDF OK: {path.name}; pages={n}; bytes={path.stat().st_size}")
+
+# Generate the toileting diary in the existing parent printable build (CI and Pages).
+import runpy
+runpy.run_path(str(ROOT / "scripts" / "build-toileting-diary.py"), run_name="__main__")
