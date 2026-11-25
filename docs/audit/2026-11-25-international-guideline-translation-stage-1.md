@@ -1,0 +1,3 @@
+# International guideline translations: batch 1
+
+Scope: 16 international source articles across six countries; 32 target-language versions. Kazakhstan documents and general introductory article excluded. Four full draft translations of both New Zealand reviews, based on RU commit ccad6bb479d79eca11d1399195e920076d33d445. Preserved source metadata, headings, checklist, tables, translationKey and flag. Original date preserved; no invented first publication date. Linked the two translated reviews within each locale. No independent clinical or native-language review; translationStatus pending, draft true. No change to release requirements. Remaining 28 translations not yet prepared.

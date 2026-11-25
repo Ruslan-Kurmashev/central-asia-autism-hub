@@ -1,0 +1,3 @@
+# International guideline translations: United Kingdom
+
+Six full draft translations (KK and EN) of NICE CG128, CG170 and CG142 from RU source commit d5918edfc88f573c3298216a2567b33bf37558c2. Preserved source metadata, original dates, flags, translation keys, headings, tables, ordered and unordered lists and checklists. Related links to existing Russian-only articles explicitly identify their language. No clinical content changes, no independent native-language or specialist review. All translations remain draft:true and translationStatus:pending. Ten of 32 planned translations prepared, including four NZ drafts. No publication date assigned before actual release. Further editorial and technical release checks required.

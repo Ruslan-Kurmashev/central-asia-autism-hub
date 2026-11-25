@@ -1,0 +1,3 @@
+# International guideline translations: Canada
+
+Six full KK/EN draft translations of the three CPS professional reviews: early detection, diagnostic assessment and post-diagnostic management. Source RU commit d5918edfc88f573c3298216a2567b33bf37558c2. Original dates, flags, keys, clinical limitations, risk levels, primary source URLs, headings, tables and checklists retained. The three-document reading sequence links to matching target-language drafts. CTFPHC 2016, CCMG 2023 and Project AIM 2023 context retained separately from original CPS 2019 statements. No new source verification or independent native-language or specialist review. All remain draft:true and translationStatus:pending. Twenty-eight of 32 planned translations prepared. No publication or new articles.
