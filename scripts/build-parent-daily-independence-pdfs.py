@@ -140,3 +140,6 @@ runpy.run_path(str(ROOT / "scripts" / "build-toileting-diary.py"), run_name="__m
 
 # Generate the prompting diary using the same printable build.
 runpy.run_path(str(ROOT / "scripts" / "build-prompting-diary.py"), run_name="__main__")
+
+# Generate the video-modeling plan in the existing parent printable build.
+runpy.run_path(str(ROOT / "scripts" / "build-video-modeling-plan.py"), run_name="__main__")

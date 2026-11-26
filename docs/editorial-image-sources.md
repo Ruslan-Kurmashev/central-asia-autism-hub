@@ -1616,3 +1616,8 @@ Source: [hampusborgos/country-flags](https://github.com/hampusborgos/country-fla
 | `photos/professional-guideline-appraisal-documents.jpg` | George Pak | https://www.pexels.com/photo/close-up-shot-of-a-person-holding-a-papers-7972282/ | https://www.pexels.com/license/ (2026-11-26) | Reviewing documents with a laptop and pen, illustrating critical appraisal rather than diagnosis. |
 
 Source page and license checked on 2026-11-26. Download and JPEG validation use the existing editorial photo sync script at build time. Resizing and compression permitted. Direct local download unavailable due to DNS resolution, so image rendering remains to be verified after deployment. Previous SVG retained as historical asset.
+
+## Original video-modeling evidence map chart (2026-11-26)
+
+- Local asset: `images/editorial/diagrams/video-modeling-evidence-map-ru.svg`.
+- Original AutismHub chart, not copied from the article. Data: McConnell et al. (2024), https://doi.org/10.1002/cl2.1405 and https://pubmed.ncbi.nlm.nih.gov/38707947/ . Counts by video intervention format: 273, 82, 61, 57, 12, 4. Total 438 studies, overlapping categories, literature search through May 2021. Values checked 2026-11-26 against the publisher and PubMed. The chart measures evidence volume, not effectiveness. Numeric values are also given in selectable article text and alt text. No third-party artwork is used.
