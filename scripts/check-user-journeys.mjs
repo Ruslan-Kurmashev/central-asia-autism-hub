@@ -390,10 +390,15 @@ try {
       verify(state.overflow <= 3, marker + ': horizontal overflow');
       verify(state.focused, marker + ': summary cannot receive keyboard focus');
       if (state.focused) {
-        await send('Input.dispatchKeyEvent', {type:'keyDown', key:'Enter', code:'Enter', windowsVirtualKeyCode:13, nativeVirtualKeyCode:13});
+        // Chromium dispatches native summary activation through the character event.
+        await send('Input.dispatchKeyEvent', {type:'keyDown', key:'Enter', code:'Enter', text:'\r', unmodifiedText:'\r', windowsVirtualKeyCode:13, nativeVirtualKeyCode:13});
         await send('Input.dispatchKeyEvent', {type:'keyUp', key:'Enter', code:'Enter', windowsVirtualKeyCode:13, nativeVirtualKeyCode:13});
         const keyboardClosed = await evaluate(() => !document.querySelector('details.professional-directory__kz-disclosure')?.open);
         verify(keyboardClosed, marker + ': Enter key did not collapse the disclosure');
+        await send('Input.dispatchKeyEvent', {type:'keyDown', key:' ', code:'Space', text:' ', unmodifiedText:' ', windowsVirtualKeyCode:32, nativeVirtualKeyCode:32});
+        await send('Input.dispatchKeyEvent', {type:'keyUp', key:' ', code:'Space', windowsVirtualKeyCode:32, nativeVirtualKeyCode:32});
+        const keyboardOpened = await evaluate(() => Boolean(document.querySelector('details.professional-directory__kz-disclosure')?.open));
+        verify(keyboardOpened, marker + ': Space key did not reopen the disclosure');
       }
       await evaluate(() => {
         const disclosure = document.querySelector('details.professional-directory__kz-disclosure');

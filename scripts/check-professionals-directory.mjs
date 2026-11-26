@@ -284,7 +284,6 @@ for (const [locale, copy] of Object.entries(expected)) {
   assert.ok(!html.includes('href="/kz/'), locale + ': unprefixed locale path');
   const base = '/central-asia-autism-hub/kz/' + locale + '/professionals/kazakhstan-documents/';
   const hubHref = base;
-  const guidelinesPanel = html.split('id="professional-guidelines"')[1]?.split('id="professional-family-communication"')[0] ?? '';
   const kzDisclosure = guidelinesPanel.match(/<details\b[^>]*class="professional-directory__kz-disclosure"[^>]*>[\s\S]*?<\/details>/)?.[0] ?? '';
   assert.ok(kzDisclosure, locale + ': missing inline Kazakhstan category disclosure');
   assert.match(kzDisclosure, /<summary\b/, locale + ': disclosure must use a native summary');
