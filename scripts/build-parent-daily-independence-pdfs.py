@@ -143,3 +143,6 @@ runpy.run_path(str(ROOT / "scripts" / "build-prompting-diary.py"), run_name="__m
 
 # Generate the video-modeling plan in the existing parent printable build.
 runpy.run_path(str(ROOT / "scripts" / "build-video-modeling-plan.py"), run_name="__main__")
+
+# Generate the self-management plan in the existing parent printable build.
+runpy.run_path(str(ROOT / "scripts" / "build-self-management-plan.py"), run_name="__main__")

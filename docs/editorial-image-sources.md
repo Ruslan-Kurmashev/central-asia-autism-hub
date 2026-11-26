@@ -1621,3 +1621,8 @@ Source page and license checked on 2026-11-26. Download and JPEG validation use 
 
 - Local asset: `images/editorial/diagrams/video-modeling-evidence-map-ru.svg`.
 - Original AutismHub chart, not copied from the article. Data: McConnell et al. (2024), https://doi.org/10.1002/cl2.1405 and https://pubmed.ncbi.nlm.nih.gov/38707947/ . Counts by video intervention format: 273, 82, 61, 57, 12, 4. Total 438 studies, overlapping categories, literature search through May 2021. Values checked 2026-11-26 against the publisher and PubMed. The chart measures evidence volume, not effectiveness. Numeric values are also given in selectable article text and alt text. No third-party artwork is used.
+
+## Original self-management evidence charts (2026-11-26)
+
+- `images/editorial/diagrams/self-management-components-ru.svg` and `images/editorial/diagrams/self-management-evidence-limits-ru.svg`: original AutismHub charts using published counts from Aydin, Sulu and Ari-Arat (2025), online 6 May 2024, https://doi.org/10.1007/s10803-024-06355-w .
+- Component counts: 11, 3, 2, 2, 1, 1 across 15 works, with overlapping categories. WWC: 9 fully or with reservations including 1 without reservations, maintenance 7, generalization 5. Counts describe research coverage and measurement, not success rates or relative effectiveness. Full-text source sections checked 2026-11-26. Values are also in article text and alt text. No third-party artwork copied.
