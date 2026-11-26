@@ -67,9 +67,9 @@ for (const locale of ['ru', 'kk', 'en']) {
       } else {
         coverByTranslationKey.set(key, image);
       }
-      // The two approved professional raster covers have distinct formats.
-      // Keep validation strict: a01 uses JPEG; a05 uses a locally hosted WebP.
+      // Only explicitly selected local raster covers are allowed; validate image bytes below.
       const approvedRasterCovers = {
+        'professionals-g01': 'professional-guideline-appraisal-documents.jpg',
         'professionals-a01': 'professional-early-referral-family-consultation.jpg',
       };
       const approvedFilename = approvedRasterCovers[key];

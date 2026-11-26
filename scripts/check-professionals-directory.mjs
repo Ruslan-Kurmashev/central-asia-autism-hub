@@ -59,7 +59,12 @@ for (const [locale, copy] of Object.entries(expected)) {
     for (const phrase of ['Практический чек-лист: семь вопросов', 'Strengthening countries', 'AGREE II', 'Международные документы и Казахстан']) {
       assert.ok(articleHtml.includes(phrase), 'First professional article missing ' + phrase);
     }
-    assert.ok(articleHtml.includes('professional-guideline-appraisal.svg'), 'Professional illustration missing');
+    const appraisalCover = '/central-asia-autism-hub/images/editorial/photos/professional-guideline-appraisal-documents.jpg';
+    const appraisalImages = [...articleHtml.matchAll(/<img\b[^>]*>/g)]
+      .filter(match => match[0].includes('src="' + appraisalCover + '"'));
+    assert.equal(appraisalImages.length, 1, 'Expected exactly one professional guideline appraisal photo');
+    assert.ok(!articleHtml.includes('src="/central-asia-autism-hub/images/editorial/professional-guideline-appraisal.svg"'),
+      'Obsolete professional guideline appraisal illustration remains');
     // Generated article navigation may mention a nearby NICE document. Check the
     // introductory article's actual source, not its related-resource links.
     const introductorySource = await readFile(path.resolve('src/content/pages/kz/ru/professional-guideline-appraisal.md'), 'utf8');
