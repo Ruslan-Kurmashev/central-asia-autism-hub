@@ -1608,3 +1608,11 @@ Source: [hampusborgos/country-flags](https://github.com/hampusborgos/country-fla
 
 - Local asset: `images/editorial/diagrams/prompting-progress-example-ru.svg`.
 - Original AutismHub vector generated from the explicitly hypothetical five-day table in the RU prompting article. No actual participant data, third-party figure, photograph or research measurements are reproduced. Two distinct line styles and shapes distinguish the series. Full values and the uncompleted outcome are given in the adjacent Markdown table and alt text. The graphic is not a recommended schedule, clinical outcome or developmental norm. Scientific references support individualized selection and fading, not the numerical illustration.
+
+## Professional guideline appraisal cover (2026-11-26)
+
+| Local file | Photographer | Original photo | License and check date | Editorial meaning |
+| --- | --- | --- | --- | --- |
+| `photos/professional-guideline-appraisal-documents.jpg` | George Pak | https://www.pexels.com/photo/close-up-shot-of-a-person-holding-a-papers-7972282/ | https://www.pexels.com/license/ (2026-11-26) | Reviewing documents with a laptop and pen, illustrating critical appraisal rather than diagnosis. |
+
+Source page and license checked on 2026-11-26. Download and JPEG validation use the existing editorial photo sync script at build time. Resizing and compression permitted. Direct local download unavailable due to DNS resolution, so image rendering remains to be verified after deployment. Previous SVG retained as historical asset.

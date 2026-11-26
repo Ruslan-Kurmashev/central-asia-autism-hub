@@ -9,6 +9,7 @@ import process from 'node:process';
 
 const folder = path.join(process.cwd(), 'public/images/editorial/photos');
 const photos = [
+  ['professional-guideline-appraisal-documents.jpg', '7972282'],
   // Licensed research-literacy photographs, see editorial-image-sources.md
   ['research-literacy-study-process-lab-notes.jpg', '8770721'],
   ['research-literacy-study-designs-research-team.jpg', '8770730'],
