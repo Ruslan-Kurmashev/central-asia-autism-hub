@@ -284,25 +284,6 @@ const forGroup = (group: Group) => {
           {group.id === 'guidelines' && (
             <>
               <li class="professional-directory__subgroup">
-                <h4>{subgroupTitles.international[locale]}</h4>
-              </li>
-              {internationalGuidelineCountries.map((country) => {
-                const published = country.documents.filter((doc) => materials.some((entry) => entry.data.translationKey === doc.translationKey)).length;
-                const countryCount = locale === 'ru'
-                  ? published > 0 ? `${published} опубликованных обзора` : `${country.documents.length} официальных документов · обзоры готовятся`
-                  : locale === 'kk'
-                    ? published > 0 ? `${published} жарияланған шолу` : `${country.documents.length} ресми құжат · шолулар әзірленуде`
-                    : published > 0 ? `${published} published reviews` : `${country.documents.length} official documents · reviews in preparation`;
-                return (
-                  <li class="professional-directory__item professional-directory__item--folder">
-                    <a class="professional-directory__item-link" href={localePath(locale, 'professionals/international-guidelines/' + country.id)}>
-                      <span class="professional-directory__item-title">{country.title[locale]} <small>{countryCount}</small></span>
-                      <span class="professional-directory__item-arrow" aria-hidden="true">→</span>
-                    </a>
-                  </li>
-                );
-              })}
-              <li class="professional-directory__subgroup">
                 <h4>{subgroupTitles.kazakhstan[locale]}</h4>
               </li>
               <li class="professional-directory__item professional-directory__item--folder professional-directory__item--disclosure">
@@ -323,6 +304,25 @@ const forGroup = (group: Group) => {
                   </ul>
                 </details>
               </li>
+              <li class="professional-directory__subgroup">
+                <h4>{subgroupTitles.international[locale]}</h4>
+              </li>
+              {internationalGuidelineCountries.map((country) => {
+                const published = country.documents.filter((doc) => materials.some((entry) => entry.data.translationKey === doc.translationKey)).length;
+                const countryCount = locale === 'ru'
+                  ? published > 0 ? `${published} опубликованных обзора` : `${country.documents.length} официальных документов · обзоры готовятся`
+                  : locale === 'kk'
+                    ? published > 0 ? `${published} жарияланған шолу` : `${country.documents.length} ресми құжат · шолулар әзірленуде`
+                    : published > 0 ? `${published} published reviews` : `${country.documents.length} official documents · reviews in preparation`;
+                return (
+                  <li class="professional-directory__item professional-directory__item--folder">
+                    <a class="professional-directory__item-link" href={localePath(locale, 'professionals/international-guidelines/' + country.id)}>
+                      <span class="professional-directory__item-title">{country.title[locale]} <small>{countryCount}</small></span>
+                      <span class="professional-directory__item-arrow" aria-hidden="true">→</span>
+                    </a>
+                  </li>
+                );
+              })}
             </>
           )}
           {extra.map((record) => (

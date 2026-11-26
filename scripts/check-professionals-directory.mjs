@@ -286,6 +286,15 @@ for (const [locale, copy] of Object.entries(expected)) {
   const hubHref = base;
   const kzDisclosure = guidelinesPanel.match(/<details\b[^>]*class="professional-directory__kz-disclosure"[^>]*>[\s\S]*?<\/details>/)?.[0] ?? '';
   assert.ok(kzDisclosure, locale + ': missing inline Kazakhstan category disclosure');
+  const introIndex = guidelinesPanel.indexOf(introductoryLabel);
+  const kazakhstanIndex = guidelinesPanel.indexOf(subgroupLabels[2]);
+  const internationalIndex = guidelinesPanel.indexOf(subgroupLabels[1]);
+  assert.ok(introIndex >= 0 && introIndex < kazakhstanIndex && kazakhstanIndex < internationalIndex,
+    locale + ': expected introductory article, Kazakhstan documents, then international guidelines');
+  const orderedFolders = [...guidelinesPanel.matchAll(/<li\b[^>]*class="[^"]*professional-directory__item--folder[^"]*"[^>]*>/g)];
+  assert.equal(orderedFolders.length, 7, locale + ': expected seven numbered folders');
+  assert.ok(orderedFolders[0][0].includes('professional-directory__item--disclosure'),
+    locale + ': Kazakhstan folder must be first, before the country folders');
   assert.match(kzDisclosure, /<summary\b/, locale + ': disclosure must use a native summary');
   assert.doesNotMatch(kzDisclosure, /<details\b[^>]*\bopen(?:[=\s>])/, locale + ': Kazakhstan categories must start collapsed');
   assert.ok(!guidelinesPanel.includes('href="' + hubHref + '"'), locale + ': Kazakhstan disclosure must not navigate to the overview');

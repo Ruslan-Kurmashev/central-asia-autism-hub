@@ -365,6 +365,9 @@ try {
         const summary = disclosure?.querySelector(':scope > summary');
         const before = location.href;
         const initiallyClosed = Boolean(disclosure && !disclosure.open);
+        const numberedRows = [...document.querySelectorAll('#professional-guidelines .professional-directory__list > li.professional-directory__item')];
+        const order = numberedRows.map(row => row.contains(disclosure) ? 'kz' : row.querySelector('a[href]')?.getAttribute('href')?.split('/').filter(Boolean).pop() || 'intro');
+        const counters = numberedRows.map(row => getComputedStyle(row).counterIncrement);
         summary?.click();
         const links = [...(disclosure?.querySelectorAll('a.professional-directory__kz-category-link[href]') || [])];
         const opened = Boolean(disclosure?.open);
@@ -375,7 +378,7 @@ try {
         summary?.click();
         summary?.focus();
         return {
-          initiallyClosed, opened, closedAgain, visible, overflow,
+          initiallyClosed, opened, closedAgain, visible, overflow, order, counters,
           unchanged: before === location.href,
           links: links.map(link => link.getAttribute('href')),
           focused: document.activeElement === summary,
@@ -388,6 +391,10 @@ try {
       verify(state.visible && JSON.stringify(state.links) === JSON.stringify(expected),
         marker + ': five visible canonical category links missing or out of order');
       verify(state.overflow <= 3, marker + ': horizontal overflow');
+      verify(state.order.length === 8 && state.order[0] !== 'kz' && JSON.stringify(state.order.slice(1)) === JSON.stringify(['kz', 'uk', 'us', 'au', 'ca', 'fr', 'nz']),
+        marker + ': incorrect numbered sequence (intro, Kazakhstan, six international countries)');
+      verify(state.counters.every(counter => counter === 'professional-item 1'),
+        marker + ': automatic sequential numbering missing');
       verify(state.focused, marker + ': summary cannot receive keyboard focus');
       if (state.focused) {
         // Chromium dispatches native summary activation through the character event.
