@@ -1626,3 +1626,8 @@ Source page and license checked on 2026-11-26. Download and JPEG validation use 
 
 - `images/editorial/diagrams/self-management-components-ru.svg` and `images/editorial/diagrams/self-management-evidence-limits-ru.svg`: original AutismHub charts using published counts from Aydin, Sulu and Ari-Arat (2025), online 6 May 2024, https://doi.org/10.1007/s10803-024-06355-w .
 - Component counts: 11, 3, 2, 2, 1, 1 across 15 works, with overlapping categories. WWC: 9 fully or with reservations including 1 without reservations, maintenance 7, generalization 5. Counts describe research coverage and measurement, not success rates or relative effectiveness. Full-text source sections checked 2026-11-26. Values are also in article text and alt text. No third-party artwork copied.
+
+## Special educator article diagrams (2026-11-26)
+
+- `images/editorial/diagrams/special-pedagog-inclusion-outcomes-ru.svg`: original AutismHub chart, eight selected outcome categories from Perrelet et al., Autism (2025), https://doi.org/10.1177/13623613251352223 . Counts 71, 56, 45, 40, 15, 12, 11, 11 across 233 empirical studies. Categories overlap and are not an effect measure. Data also in article text and alt text. Checked against accessible publisher text; not independent scientific review.
+- `images/editorial/diagrams/special-pedagog-kz-route-ru.svg`: original AutismHub schematic of possible educational support routes in Kazakhstan, based on the legal sources listed in the article, including orders 4, 385, 92 and special support standards V2400034117. Not a mandatory sequence or a guarantee of eligibility, availability or funding. Official indexed texts used where full current text was unavailable. No third-party artwork.

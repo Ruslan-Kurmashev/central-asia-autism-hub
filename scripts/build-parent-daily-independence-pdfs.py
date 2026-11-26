@@ -146,3 +146,6 @@ runpy.run_path(str(ROOT / "scripts" / "build-video-modeling-plan.py"), run_name=
 
 # Generate the self-management plan in the existing parent printable build.
 runpy.run_path(str(ROOT / "scripts" / "build-self-management-plan.py"), run_name="__main__")
+
+# Generate the special educator family checklist in the existing parent printable build.
+runpy.run_path(str(ROOT / "scripts" / "build-special-pedagog-choice.py"), run_name="__main__")
