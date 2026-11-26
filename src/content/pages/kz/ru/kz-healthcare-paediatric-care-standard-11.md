@@ -5,12 +5,12 @@ description: "Разбор стандарта педиатрической по�
 featuredImage: "/central-asia-autism-hub/images/editorial/guideline-flag-kz.svg"
 featuredImageAlt: "Государственный флаг Казахстана - страна происхождения документа."
 country: "kz"
-language: "ru"
+language: ru
 section: "professionals"
 topic: "guidelines"
 slug: "standart-pediatricheskoj-pomoshchi-m-chat-r"
 translationKey: "professionals-kz-paediatric-care-standard-11"
-translationStatus: "source"
+translationStatus: source
 audience:
   - "professionals"
 author: "Ruslan Kurmashev"

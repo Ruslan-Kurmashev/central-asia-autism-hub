@@ -5,12 +5,12 @@ description: "Разбор закона «О психологической де
 featuredImage: "/central-asia-autism-hub/images/editorial/guideline-flag-kz.svg"
 featuredImageAlt: "Государственный флаг Казахстана - страна происхождения документа."
 country: "kz"
-language: "ru"
+language: ru
 section: "professionals"
 topic: "guidelines"
 slug: "zakon-o-psihologicheskoj-deyatelnosti-332-2026"
 translationKey: "professionals-kz-psychological-activity-law-332"
-translationStatus: "source"
+translationStatus: source
 audience:
   - "professionals"
 author: "Ruslan Kurmashev"
