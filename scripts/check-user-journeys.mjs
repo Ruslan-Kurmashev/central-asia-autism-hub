@@ -348,6 +348,70 @@ try {
     }
   }
 
+  // The Kazakhstan catalogue expands on the professional guidelines page.
+  // Its five category URLs remain canonical, including on narrow screens.
+  for (const locale of locales) {
+    for (const width of widths) {
+      const marker = 'Kazakhstan documents ' + locale + ' ' + width;
+      await navigate(base + '/kz/' + locale + '/professionals/', width);
+      const entered = await evaluate(() => {
+        const link = document.querySelector('a[href="#professional-guidelines"]');
+        link?.click();
+        return Boolean(link);
+      });
+      verify(entered, marker + ': guidelines entry missing');
+      const state = await evaluate(() => {
+        const disclosure = document.querySelector('details.professional-directory__kz-disclosure');
+        const summary = disclosure?.querySelector(':scope > summary');
+        const before = location.href;
+        const initiallyClosed = Boolean(disclosure && !disclosure.open);
+        summary?.click();
+        const links = [...(disclosure?.querySelectorAll('a.professional-directory__kz-category-link[href]') || [])];
+        const opened = Boolean(disclosure?.open);
+        const visible = links.every(link => link.getBoundingClientRect().height > 0 && getComputedStyle(link).visibility !== 'hidden');
+        const overflow = document.documentElement.scrollWidth - innerWidth;
+        summary?.click();
+        const closedAgain = Boolean(disclosure && !disclosure.open);
+        summary?.click();
+        summary?.focus();
+        return {
+          initiallyClosed, opened, closedAgain, visible, overflow,
+          unchanged: before === location.href,
+          links: links.map(link => link.getAttribute('href')),
+          focused: document.activeElement === summary,
+        };
+      });
+      const expected = ['education-support', 'healthcare-diagnosis', 'psychological-practice', 'social-support', 'rights-and-data']
+        .map(id => base + '/kz/' + locale + '/professionals/kazakhstan-documents/' + id + '/');
+      verify(state.initiallyClosed && state.opened && state.closedAgain && state.unchanged,
+        marker + ': disclosure does not toggle in place');
+      verify(state.visible && JSON.stringify(state.links) === JSON.stringify(expected),
+        marker + ': five visible canonical category links missing or out of order');
+      verify(state.overflow <= 3, marker + ': horizontal overflow');
+      verify(state.focused, marker + ': summary cannot receive keyboard focus');
+      if (state.focused) {
+        await send('Input.dispatchKeyEvent', {type:'keyDown', key:'Enter', code:'Enter', windowsVirtualKeyCode:13, nativeVirtualKeyCode:13});
+        await send('Input.dispatchKeyEvent', {type:'keyUp', key:'Enter', code:'Enter', windowsVirtualKeyCode:13, nativeVirtualKeyCode:13});
+        const keyboardClosed = await evaluate(() => !document.querySelector('details.professional-directory__kz-disclosure')?.open);
+        verify(keyboardClosed, marker + ': Enter key did not collapse the disclosure');
+      }
+      await evaluate(() => {
+        const disclosure = document.querySelector('details.professional-directory__kz-disclosure');
+        if (disclosure) disclosure.open = true;
+        disclosure?.scrollIntoView({block:'start'});
+        return true;
+      });
+      await screenshot(locale, width, 'kazakhstan-documents-inline');
+      console.log('USER_JOURNEY_KZ_DOCUMENTS ' + locale + ' ' + width + ' ' + JSON.stringify(state));
+      // A subsequent viewport can reuse this document after a hash-only navigation.
+      await evaluate(() => {
+        const disclosure = document.querySelector('details.professional-directory__kz-disclosure');
+        if (disclosure) disclosure.open = false;
+        return true;
+      });
+    }
+  }
+
   // Parent support taxonomy must open on click and expose every published RU resource exactly once.
   for (const width of widths) {
     await navigate(base + '/kz/ru/parents/', width);

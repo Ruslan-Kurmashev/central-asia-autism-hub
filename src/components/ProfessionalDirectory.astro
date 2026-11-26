@@ -160,7 +160,7 @@ const groups: Group[] = [
   },
 ];
 const plannedCount = groups.reduce((total, group) => total + group.resources.length, kazakhstanDocumentCount + internationalGuidelineCount);
-const kazakhstanHubHref = localePath(locale, 'professionals/kazakhstan-documents');
+const kazakhstanPublishedCount = kazakhstanDocumentGroups.reduce((total, category) => total + category.documents.filter((doc) => materials.some((entry) => entry.data.translationKey === doc.translationKey)).length, 0);
 const publishedCount = materials.length;
 const sectionTitle = UI[locale].sections.professionals.title;
 function countLabel(n: number) {
@@ -303,13 +303,25 @@ const forGroup = (group: Group) => {
                 );
               })}
               <li class="professional-directory__subgroup">
-                <h4><a class="professional-directory__subgroup-link" href={kazakhstanHubHref}>{subgroupTitles.kazakhstan[locale]} <span aria-hidden="true">→</span></a></h4>
+                <h4>{subgroupTitles.kazakhstan[locale]}</h4>
               </li>
-              <li class="professional-directory__item professional-directory__item--folder">
-                <a class="professional-directory__item-link" href={kazakhstanHubHref}>
-                  <span class="professional-directory__item-title">{kazakhstanDocumentGroups.length} {copy.kzCategories} <small>{kazakhstanDocumentCount} {copy.kzDocs}</small></span>
-                  <span class="professional-directory__item-arrow" aria-hidden="true">→</span>
-                </a>
+              <li class="professional-directory__item professional-directory__item--folder professional-directory__item--disclosure">
+                <details class="professional-directory__kz-disclosure">
+                  <summary class="professional-directory__item-link">
+                    <span class="professional-directory__item-title">{kazakhstanDocumentGroups.length} {copy.kzCategories} <small>{locale === 'ru' ? kazakhstanPublishedCount : kazakhstanDocumentCount} {copy.kzDocs}</small></span>
+                    <span class="professional-directory__kz-chevron" aria-hidden="true"></span>
+                  </summary>
+                  <ul class="professional-directory__kz-categories">
+                    {kazakhstanDocumentGroups.map((category) => (
+                      <li>
+                        <a class="professional-directory__item-link professional-directory__kz-category-link" href={localePath(locale, 'professionals/kazakhstan-documents/' + category.id)}>
+                          <span class="professional-directory__item-title">{category.title[locale]} <small>{category.documents.length} {countLabel(category.documents.length)}</small></span>
+                          <span class="professional-directory__item-arrow" aria-hidden="true">→</span>
+                        </a>
+                      </li>
+                    ))}
+                  </ul>
+                </details>
               </li>
             </>
           )}

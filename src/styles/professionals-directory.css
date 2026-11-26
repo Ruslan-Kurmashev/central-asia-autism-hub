@@ -338,6 +338,72 @@
   font-size: var(--type-symbol);
   color: var(--color-primary);
 }
+/* Kazakhstan catalogue: native disclosure, with the original category routes. */
+.professional-directory__item--disclosure {
+  align-items: flex-start;
+}
+.professional-directory__item--disclosure::before {
+  margin-top: 0.2rem;
+}
+.professional-directory__kz-disclosure {
+  flex: 1;
+  min-width: 0;
+}
+.professional-directory__kz-disclosure > summary {
+  list-style: none;
+  cursor: pointer;
+  min-height: 2.6rem;
+  flex-direction: row;
+  align-items: center;
+}
+.professional-directory__kz-disclosure > summary::-webkit-details-marker {
+  display: none;
+}
+.professional-directory__kz-chevron {
+  display: block;
+  flex: none;
+  width: 0.7rem;
+  height: 0.7rem;
+  margin: 0 0.4rem 0.35rem;
+  border-right: 2px solid var(--color-primary);
+  border-bottom: 2px solid var(--color-primary);
+  transform: rotate(45deg);
+}
+.professional-directory__kz-disclosure[open] .professional-directory__kz-chevron {
+  margin-bottom: 0;
+  transform: rotate(225deg);
+}
+.professional-directory__kz-categories {
+  display: grid;
+  gap: 0.55rem;
+  list-style: none;
+  margin: 0.9rem 0 0;
+  padding: 0.9rem 0 0;
+  border-top: 1px solid var(--color-border);
+}
+.professional-directory__kz-categories > li {
+  min-width: 0;
+}
+.professional-directory__kz-categories .professional-directory__kz-category-link {
+  min-width: 0;
+  min-height: 2.75rem;
+  flex-direction: row;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.8rem;
+  border: 1px solid var(--color-border);
+  border-radius: 0.65rem;
+  background: var(--color-surface-soft);
+}
+.professional-directory__kz-category-link:hover {
+  border-color: var(--color-primary);
+}
+.professional-directory__kz-category-link .professional-directory__item-title {
+  font-size: var(--type-body);
+}
+.professional-directory__kz-category-link .professional-directory__item-arrow {
+  flex: none;
+}
 @media (max-width: 54rem) {
   .professional-directory__grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));

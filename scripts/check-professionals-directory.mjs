@@ -284,7 +284,13 @@ for (const [locale, copy] of Object.entries(expected)) {
   assert.ok(!html.includes('href="/kz/'), locale + ': unprefixed locale path');
   const base = '/central-asia-autism-hub/kz/' + locale + '/professionals/kazakhstan-documents/';
   const hubHref = base;
-  assert.ok(html.includes('href="' + hubHref + '"'), locale + ': Kazakhstan subgroup must open five-category hub');
+  const guidelinesPanel = html.split('id="professional-guidelines"')[1]?.split('id="professional-family-communication"')[0] ?? '';
+  const kzDisclosure = guidelinesPanel.match(/<details\b[^>]*class="professional-directory__kz-disclosure"[^>]*>[\s\S]*?<\/details>/)?.[0] ?? '';
+  assert.ok(kzDisclosure, locale + ': missing inline Kazakhstan category disclosure');
+  assert.match(kzDisclosure, /<summary\b/, locale + ': disclosure must use a native summary');
+  assert.doesNotMatch(kzDisclosure, /<details\b[^>]*\bopen(?:[=\s>])/, locale + ': Kazakhstan categories must start collapsed');
+  assert.ok(!guidelinesPanel.includes('href="' + hubHref + '"'), locale + ': Kazakhstan disclosure must not navigate to the overview');
+  assert.equal((kzDisclosure.match(/professional-directory__kz-category-link/g) ?? []).length, 5, locale + ': expected five inline Kazakhstan category links');
   assert.equal((html.match(/professional-directory__item--folder/g) ?? []).length, 7, locale + ': expected six international country folders and one Kazakhstan catalogue');
   assert.ok(!html.includes('Правовые требования к психологической деятельности в Казахстане'), locale + ': old Kazakhstan placeholder remains on professional landing');
 
@@ -305,6 +311,7 @@ for (const [locale, copy] of Object.entries(expected)) {
   for (const [category, expectedCount] of categoryData) {
     const href = base + category + '/';
     assert.ok(hub.includes('href="' + href + '"'), locale + ': missing category link: ' + category);
+    assert.equal(kzDisclosure.split('href="' + href + '"').length - 1, 1, locale + ': inline Kazakhstan category link must occur once: ' + category);
     const categoryHtml = await readFile(path.resolve('dist/kz', locale, 'professionals/kazakhstan-documents', category, 'index.html'), 'utf8');
     assert.ok(categoryHtml.includes('href="' + hubHref + '"'), locale + ': missing back-to-categories link: ' + category);
     assert.equal((categoryHtml.match(/class="kz-documents__entry"/g) ?? []).length, expectedCount, locale + ': incorrect document count for ' + category);
