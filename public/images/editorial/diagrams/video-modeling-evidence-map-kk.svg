@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 698" role="img" aria-labelledby="chart-title chart-desc">
+<title id="chart-title">Бейне форматтары бойынша зерттеулер саны</title>
+<desc id="chart-desc">McConnell және әріптестері, 2024: алты формат бойынша 273, 82, 61, 57, 12 және 4 зерттеу. Барлығы 438 зерттеу, санаттар қабаттасады. Тиімділік көрсеткіші емес.</desc>
+<rect width="720" height="698" rx="14" fill="#ffffff"/>
+<g fill="#183b53" font-family="DejaVu Sans, Arial, sans-serif" font-size="24">
+<text x="30" y="42" font-weight="700">Бейне форматтары бойынша зерттеулер саны</text>
+<text x="30" y="89">Бейнемодельдеу</text><rect x="30" y="103.5" width="562.50" height="27" rx="3" fill="#397d96"/><text x="605.50" y="126" font-weight="700">273</text>
+<text x="30" y="171.5">Өзін бейнемодельдеу</text><rect x="30" y="186" width="168.96" height="27" rx="3" fill="#397d96"/><text x="211.96" y="208.5" font-weight="700">82</text>
+<text x="30" y="254">Бірінші адам көзқарасынан бейне</text><rect x="30" y="268.5" width="125.69" height="27" rx="3" fill="#397d96"/><text x="168.69" y="291" font-weight="700">61</text>
+<text x="30" y="336.5">Бейне арқылы көмек</text><rect x="30" y="351" width="117.45" height="27" rx="3" fill="#397d96"/><text x="160.45" y="373.5" font-weight="700">57</text>
+<text x="30" y="419">Бейне кері байланыс</text><rect x="30" y="433.5" width="24.73" height="27" rx="3" fill="#397d96"/><text x="67.73" y="456" font-weight="700">12</text>
+<text x="30" y="501.5">Компьютерлік бейнеоқыту</text><rect x="30" y="516" width="8.24" height="27" rx="3" fill="#397d96"/><text x="51.24" y="538.5" font-weight="700">4</text>
+<text x="30" y="601">Барлығы 438 зерттеу. Санаттар қабаттасады.</text>
+<text x="30" y="636">McConnell et al., 2024. DOI 10.1002/cl2.1405</text>
+<text x="30" y="671">Іздеу: 2021 ж. мамыр. Тиімділік көрсеткіші емес.</text>
+</g></svg>

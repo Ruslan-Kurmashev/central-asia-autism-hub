@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 660 658" role="img" aria-labelledby="chart-title chart-desc">
+<title id="chart-title">Өзін-өзі басқару құрамдастары</title>
+<desc id="chart-desc">15 зерттеу. Өзін-өзі бақылау 11, өзіне нұсқау беру 3, өздігінен тіркеу 2, өзін-өзі нығайту 2, дербес таңдау 1, өзін-өзі бағалау 1. Санаттар қабаттасады.</desc>
+<rect width="660" height="658" rx="12" fill="#ffffff"/>
+<g fill="#183b53" font-family="DejaVu Sans, Arial, sans-serif" font-size="24">
+<text x="24" y="36" font-weight="700">Өзін-өзі басқару құрамдастары</text>
+<text x="24" y="66">15 жұмыстың ішіндегі саны</text>
+<text x="24" y="105">Өзін-өзі бақылау</text>
+<rect x="24" y="117" width="475" height="25" rx="3" fill="#edf2f6"/>
+<rect x="24" y="117" width="348.333" height="25" rx="3" fill="#397d96"/>
+<text x="511" y="139" font-weight="700">15-тен 11</text>
+<text x="24" y="181">Өзіне нұсқау беру</text>
+<rect x="24" y="193" width="475" height="25" rx="3" fill="#edf2f6"/>
+<rect x="24" y="193" width="95.000" height="25" rx="3" fill="#397d96"/>
+<text x="511" y="215" font-weight="700">15-тен 3</text>
+<text x="24" y="257">Өздігінен тіркеу</text>
+<rect x="24" y="269" width="475" height="25" rx="3" fill="#edf2f6"/>
+<rect x="24" y="269" width="63.333" height="25" rx="3" fill="#397d96"/>
+<text x="511" y="291" font-weight="700">15-тен 2</text>
+<text x="24" y="333">Өзін-өзі нығайту</text>
+<rect x="24" y="345" width="475" height="25" rx="3" fill="#edf2f6"/>
+<rect x="24" y="345" width="63.333" height="25" rx="3" fill="#397d96"/>
+<text x="511" y="367" font-weight="700">15-тен 2</text>
+<text x="24" y="409">Дербес таңдау</text>
+<rect x="24" y="421" width="475" height="25" rx="3" fill="#edf2f6"/>
+<rect x="24" y="421" width="31.667" height="25" rx="3" fill="#397d96"/>
+<text x="511" y="443" font-weight="700">15-тен 1</text>
+<text x="24" y="485">Өзін-өзі бағалау</text>
+<rect x="24" y="497" width="475" height="25" rx="3" fill="#edf2f6"/>
+<rect x="24" y="497" width="31.667" height="25" rx="3" fill="#397d96"/>
+<text x="511" y="519" font-weight="700">15-тен 1</text>
+<text x="24" y="564" font-size="23">Санаттар қабаттасады.</text>
+<text x="24" y="596" font-size="23">Зерттелу жиілігі, тиімділік емес.</text>
+<text x="24" y="628" font-size="23">Aydin et al., 2025 (онлайн 2024).</text>
+</g></svg>

@@ -1631,3 +1631,11 @@ Source page and license checked on 2026-11-26. Download and JPEG validation use 
 
 - `images/editorial/diagrams/special-pedagog-inclusion-outcomes-ru.svg`: original AutismHub chart, eight selected outcome categories from Perrelet et al., Autism (2025), https://doi.org/10.1177/13623613251352223 . Counts 71, 56, 45, 40, 15, 12, 11, 11 across 233 empirical studies. Categories overlap and are not an effect measure. Data also in article text and alt text. Checked against accessible publisher text; not independent scientific review.
 - `images/editorial/diagrams/special-pedagog-kz-route-ru.svg`: original AutismHub schematic of possible educational support routes in Kazakhstan, based on the legal sources listed in the article, including orders 4, 385, 92 and special support standards V2400034117. Not a mandatory sequence or a guarantee of eligibility, availability or funding. Official indexed texts used where full current text was unavailable. No third-party artwork.
+
+
+## Kazakh and English localizations of daily living illustrations (2026-11-27)
+
+- The twelve `-kk.svg` and `-en.svg` versions of `prompting-progress-example`, `video-modeling-evidence-map`, `self-management-components`, `self-management-evidence-limits`, `special-pedagog-inclusion-outcomes` and `special-pedagog-kz-route` are language adaptations of the original AutismHub diagrams registered above. Original data, geometry and source attribution retained; no new third-party artwork.
+- Existing photographs are reused unchanged with translated alternative text; their original licensing records remain applicable.
+- The ten localized family PDF resources are translations of the five existing Russian resource generators, with A4 layout and original print tokens; the reproducible generator is `scripts/build-daily-skills-localized-pdfs.py`. They are educational materials, not diagnostic instruments.
+- Translation and structural/visual checks were AI-assisted. No independent language, clinical or legal review is claimed; article status remains pending until documented editorial verification. Two external videos remain Russian-language, explicitly labelled.
