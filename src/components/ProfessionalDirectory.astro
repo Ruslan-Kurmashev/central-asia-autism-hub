@@ -338,3 +338,17 @@ const forGroup = (group: Group) => {
     );
   })}
 </div>
+
+<script>
+  // Only an explicit return link opens the catalogue. Normal entry remains collapsed.
+  const params = new URLSearchParams(window.location.search);
+  if (params.get('documents') === 'kazakhstan' && window.location.hash === '#professional-guidelines') {
+    const disclosure = document.querySelector<HTMLDetailsElement>('.professional-directory__kz-disclosure');
+    if (disclosure) {
+      disclosure.open = true;
+      const summary = disclosure.querySelector('summary');
+      summary?.focus({ preventScroll: true });
+      summary?.scrollIntoView({ block: 'center' });
+    }
+  }
+</script>

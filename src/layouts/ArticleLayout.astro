@@ -5,7 +5,7 @@ import { kazakhstanDocumentGroups } from '../data/kazakhstan-professional-docume
 import { internationalGuidelineCountries } from '../data/international-professional-guidelines';
 import { CONTENT_UI, DATE_LOCALES } from '../i18n/content';
 import { UI } from '../i18n/ui';
-import { articlePath, localePath, sectionPath } from '../lib/urls';
+import { articlePath, localePath, sectionPath, kazakhstanDocumentsPath } from '../lib/urls';
 import { selectArticleSections } from '../lib/article-outline.mjs';
 import { SITE, type Locale } from '../site.config';
 import '../styles/article-v2.css';
@@ -31,14 +31,14 @@ const researchDetails = entry.collection === 'research' ? entry.data : null;
 const locale = data.language;
 const copy = CONTENT_UI[locale];
 const sectionCopy = UI[locale].sections[data.section];
-// Restore the full three-level document route on all 25 Kazakhstan professional
+// Preserve the document breadcrumbs for all Kazakhstan professional
 // reviews. The category is looked up by translationKey rather than by slug so
 // reviewed translations can retain the same navigational hierarchy later.
 const kazakhstanGroup = data.section === 'professionals'
   ? kazakhstanDocumentGroups.find(group =>
       group.documents.some(document => document.translationKey === data.translationKey))
   : undefined;
-const kazakhstanHubPath = kazakhstanGroup ? localePath(locale, 'professionals/kazakhstan-documents') : undefined;
+const kazakhstanHubPath = kazakhstanGroup ? kazakhstanDocumentsPath(locale) : undefined;
 const kazakhstanGroupPath = kazakhstanGroup
   ? localePath(locale, 'professionals/kazakhstan-documents/' + kazakhstanGroup.id)
   : undefined;

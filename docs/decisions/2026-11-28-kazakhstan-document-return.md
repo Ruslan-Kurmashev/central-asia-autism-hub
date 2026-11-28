@@ -1,0 +1,5 @@
+# Kazakhstan document return navigation
+
+Owner decision, 2026-11-28: remove the redundant card overview from the normal Kazakhstan document navigation. The professional Guidelines panel already contains a native disclosure listing the five groups and their counts. Category links open the existing category lists, and individual articles retain their original routes and category return links. The category back button and Kazakhstan breadcrumb return to the Guidelines panel with the disclosure expanded. Normal entry remains collapsed. Keep the old overview URL for direct legacy access without linking to it from the new return path.
+
+Applies to RU, KK and EN. No content, source, translation status, publication date or category count changes are authorised. This supersedes the overview breadcrumb destination in section 9.2 of the information architecture. Implementation affects the URL helper, shared professional directory, category component, article layout, static QA and Chromium journey QA. Deployment and live verification are separate release steps.

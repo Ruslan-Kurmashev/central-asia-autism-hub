@@ -13,6 +13,8 @@ This directory records explicit, owner-approved changes to product policy or tec
 
 ## Current records
 
+- [2026-11-28: Kazakhstan document return navigation](2026-11-28-kazakhstan-document-return.md). Return links reopen the inline five-category catalogue rather than the separate card overview, retaining all canonical article and category URLs.
+
 - [2026-11-25: Plain country flags for professional document reviews](2026-11-25-professional-document-flags.md). Shared national flags identify issuing jurisdictions, without decorative graphics. Other article-cover rules are unchanged.
 
 - [2026-11-12: Six assessment articles in RU/KK/EN](2026-11-12-parent-assessment-three-languages.md). The newly completed translations supersede the historical four-article count for KK/EN, preserving actual translation publication dates and the established six-article reading order.

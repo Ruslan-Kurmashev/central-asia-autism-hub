@@ -10,6 +10,7 @@ import path from 'node:path';
 const root = path.resolve('src/content/pages/kz/ru');
 const siteRoot = '/central-asia-autism-hub/kz/ru/professionals/';
 const hubHref = siteRoot + 'kazakhstan-documents/';
+const returnHref = siteRoot + '?documents=kazakhstan#professional-guidelines';
 const groups = [
   { id: 'education-support', prefix: 'kz-education-', count: 9 },
   { id: 'healthcare-diagnosis', prefix: 'kz-healthcare-', count: 5 },
@@ -47,7 +48,9 @@ for (const group of groups) {
   const matching = filenames.filter(name => name.startsWith(group.prefix));
   assert.equal(matching.length, group.count, group.id + ': incorrect number of review files');
   assert.ok(overview.includes('href="' + categoryHref + '"'), group.id + ': missing overview link');
-  assert.ok(categoryHtml.includes('href="' + hubHref + '"'), group.id + ': missing return to index');
+  assert.ok(categoryHtml.includes('class="kz-documents__back" href="' + returnHref + '"'), group.id + ': missing return to expanded inline groups');
+  assert.ok(categoryHtml.includes('href="' + returnHref + '"'), group.id + ': missing inline groups breadcrumb');
+  assert.ok(!categoryHtml.includes('href="' + hubHref + '"'), group.id + ': redundant card overview link remains');
 
   for (const filename of matching) {
     const raw = await readFile(path.join(root, filename), 'utf8');
@@ -105,8 +108,9 @@ for (const group of groups) {
     );
     assert.ok(categoryHtml.includes('href="' + articleHref + '"'),
       filename + ': category must link article');
-    assert.ok(articleHtml.includes('href="' + hubHref + '"'),
-      filename + ': article breadcrumb must include Kazakhstan document overview');
+    assert.ok(articleHtml.includes('href="' + returnHref + '"'),
+      filename + ': article breadcrumb must return to expanded inline groups');
+    assert.ok(!articleHtml.includes('href="' + hubHref + '"'), filename + ': redundant overview link remains');
     assert.ok(articleHtml.includes('href="' + categoryHref + '"'),
       filename + ': article breadcrumb/back link must include its own category');
     assert.ok(articleHtml.includes('class="article-v2__back" href="' + categoryHref + '"'),

@@ -415,6 +415,30 @@ try {
       });
       await screenshot(locale, width, 'kazakhstan-documents-inline');
       console.log('USER_JOURNEY_KZ_DOCUMENTS ' + locale + ' ' + width + ' ' + JSON.stringify(state));
+      // Follow the real category return link and verify the same inline list reopens.
+      await navigate(expected[0], width);
+      const backHref = await evaluate(() => document.querySelector('a.kz-documents__back')?.getAttribute('href'));
+      const returnHref = base + '/kz/' + locale + '/professionals/?documents=kazakhstan#professional-guidelines';
+      verify(backHref === returnHref, marker + ': category return link must bypass the card overview');
+      await navigate(returnHref, width);
+      const returned = await evaluate(() => {
+        const disclosure = document.querySelector('details.professional-directory__kz-disclosure');
+        const links = [...(disclosure?.querySelectorAll('a.professional-directory__kz-category-link') || [])];
+        return {
+          open: Boolean(disclosure?.open),
+          links: links.map(link => link.getAttribute('href')),
+          counts: links.map(link => Number(link.querySelector('small')?.textContent?.trim().split(/\\s+/)[0])),
+          visible: links.every(link => link.getBoundingClientRect().height > 0),
+          overflow: document.documentElement.scrollWidth - innerWidth,
+          hash: location.hash,
+          count: Number(disclosure?.querySelector('summary small')?.textContent?.trim().split(/\\s+/)[0]),
+        };
+      });
+      verify(returned.open && returned.visible && returned.hash === '#professional-guidelines', marker + ': return did not reopen inline groups');
+      verify(JSON.stringify(returned.links) === JSON.stringify(expected) && JSON.stringify(returned.counts) === JSON.stringify([9, 5, 6, 5, 6]) && returned.count === 31, marker + ': incorrect returned catalogue links or counts');
+      verify(returned.overflow <= 3, marker + ': returned catalogue horizontal overflow');
+      await screenshot(locale, width, 'kazakhstan-documents-return');
+      console.log('USER_JOURNEY_KZ_DOCUMENTS_RETURN ' + locale + ' ' + width + ' ' + JSON.stringify(returned));
       // A subsequent viewport can reuse this document after a hash-only navigation.
       await evaluate(() => {
         const disclosure = document.querySelector('details.professional-directory__kz-disclosure');

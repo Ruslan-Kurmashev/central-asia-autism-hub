@@ -284,6 +284,7 @@ for (const [locale, copy] of Object.entries(expected)) {
   assert.ok(!html.includes('href="/kz/'), locale + ': unprefixed locale path');
   const base = '/central-asia-autism-hub/kz/' + locale + '/professionals/kazakhstan-documents/';
   const hubHref = base;
+  const returnHref = '/central-asia-autism-hub/kz/' + locale + '/professionals/?documents=kazakhstan#professional-guidelines';
   const kzDisclosure = guidelinesPanel.match(/<details\b[^>]*class="professional-directory__kz-disclosure"[^>]*>[\s\S]*?<\/details>/)?.[0] ?? '';
   assert.ok(kzDisclosure, locale + ': missing inline Kazakhstan category disclosure');
   const introIndex = guidelinesPanel.indexOf(introductoryLabel);
@@ -321,7 +322,8 @@ for (const [locale, copy] of Object.entries(expected)) {
     assert.ok(hub.includes('href="' + href + '"'), locale + ': missing category link: ' + category);
     assert.equal(kzDisclosure.split('href="' + href + '"').length - 1, 1, locale + ': inline Kazakhstan category link must occur once: ' + category);
     const categoryHtml = await readFile(path.resolve('dist/kz', locale, 'professionals/kazakhstan-documents', category, 'index.html'), 'utf8');
-    assert.ok(categoryHtml.includes('href="' + hubHref + '"'), locale + ': missing back-to-categories link: ' + category);
+    assert.ok(categoryHtml.includes('class="kz-documents__back" href="' + returnHref + '"'), locale + ': missing back-to-expanded-categories link: ' + category);
+    assert.ok(!categoryHtml.includes('href="' + hubHref + '"'), locale + ': redundant card overview link: ' + category);
     assert.equal((categoryHtml.match(/class="kz-documents__entry"/g) ?? []).length, expectedCount, locale + ': incorrect document count for ' + category);
     const publishedHere = locale === 'ru' ? expectedCount : 0;
     assert.equal((categoryHtml.match(/class="kz-documents__status"/g) ?? []).length, expectedCount - publishedHere, locale + ': unpublished document statuses incorrect for ' + category);

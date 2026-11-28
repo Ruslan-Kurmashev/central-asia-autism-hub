@@ -5,7 +5,7 @@ import {
   type KazakhstanDocumentGroupId, type KazakhstanDocumentGroup,
 } from '../data/kazakhstan-professional-documents';
 import { UI } from '../i18n/ui';
-import { articlePath, localePath, sectionPath } from '../lib/urls';
+import { articlePath, localePath, sectionPath, kazakhstanDocumentsPath } from '../lib/urls';
 import type { Locale } from '../site.config';
 import '../styles/kazakhstan-professional-documents.css';
 
@@ -45,7 +45,7 @@ const copy = {
     completeNote: 'Published reviews do not constitute an official register of laws in force or an independent legal audit. Check current primary legislation before applying any rule.',
   },
 }[locale];
-const overviewPath = localePath(locale, 'professionals/kazakhstan-documents');
+const overviewPath = kazakhstanDocumentsPath(locale);
 const professionalsPath = sectionPath(locale, 'professionals') + '#professional-guidelines';
 const recordsFor = (group: KazakhstanDocumentGroup) => group.documents.map((document) => ({
   document, published: materials.find((material) => material.data.translationKey === document.translationKey),

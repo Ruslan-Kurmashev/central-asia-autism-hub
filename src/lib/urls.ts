@@ -19,6 +19,11 @@ export function sectionPath(locale: Locale, section: Section): string {
   return localePath(locale, section);
 }
 
+// Return to the existing Guidelines panel with the Kazakhstan disclosure expanded.
+export function kazakhstanDocumentsPath(locale: Locale): string {
+  return sectionPath(locale, 'professionals') + '?documents=kazakhstan#professional-guidelines';
+}
+
 export function articlePath(
   locale: Locale,
   section: Section,
