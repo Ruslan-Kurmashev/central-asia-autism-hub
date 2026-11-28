@@ -10,7 +10,7 @@ section: parents
 topic: approaches-to-support
 slug: obuchenie-povsednevnym-navykam
 translationKey: parents-daily-living-skills-training
-translationStatus: pending
+translationStatus: checked
 audience:
   - parents
   - families
@@ -21,9 +21,10 @@ disclaimerType: medical
 conflictOfInterest: "No conflict of interest has been declared."
 originalPublishedAt: "2026-09-30T22:04:00+01:00"
 displayPublishedAt: "2026-09-30T22:04:00+01:00"
-updatedAt: 2026-11-25
+publishedAt: 2026-11-28
+updatedAt: 2026-11-28
 reviewDueAt: 2027-03-30
-draft: true
+draft: false
 keyPoints:
   - "ADL and IADL are categories of everyday activities, not a specific autism therapy."
   - "Choose a specific skill based on the person's own needs and preferences."
@@ -214,19 +215,19 @@ A prompt may involve pointing to the relevant object, giving a short verbal inst
 
 Provide enough help without giving more than necessary. If a gesture enables the person to complete the action, continuous verbal guidance may be unnecessary. Physical assistance requires particular attention to consent, bodily autonomy and safety. Do not hold a person's hands to force them to complete a task.
 
-[Read more: prompting and prompt fading (Russian)](/kz/ru/parents/prompting-and-prompt-fading/).
+[Read more: prompting and prompt fading](/kz/en/parents/prompting-and-prompt-fading/).
 
 ### Teaching through demonstration and video modelling
 
 An adult can demonstrate a specific action or offer a short video showing it. After watching, the person tries the action with suitable support. If the full sequence is difficult to remember, it can be shown in sections.
 
-Video modelling has been studied as a way to teach functional living skills. This does not guarantee that any activity will be learnt after watching a video. [Read more about video modelling (Russian)](/kz/ru/parents/video-modeling/).
+Video modelling has been studied as a way to teach functional living skills. This does not guarantee that any activity will be learnt after watching a video. [Read more about video modelling](/kz/en/parents/video-modeling/).
 
 ### Self-management and executive function support
 
 When starting an activity, moving to the next step, remembering the sequence or finishing a task is difficult, external organisation aids may help. For example, a teenager may start a timer, check a shopping list or mark completed steps on a checklist independently.
 
-These supports do not necessarily need to be removed. If the person uses them independently, they can remain part of everyday life. [Read more about self-management (Russian)](/kz/ru/parents/self-management/).
+These supports do not necessarily need to be removed. If the person uses them independently, they can remain part of everyday life. [Read more about self-management](/kz/en/parents/self-management/).
 
 ### Environmental adaptations and natural reinforcement
 
@@ -260,7 +261,7 @@ A visual sequence may help the person prepare for brushing their teeth. However,
 
 ### Toileting
 
-When teaching toileting skills, consider constipation, pain, urinary problems, toilet accessibility and the ability to communicate the need to use the toilet. Do not punish accidents, restrict drinking or hold a child on the toilet. [Separate article on toileting skills (Russian)](/kz/ru/parents/obuchenie-tualetnym-navykam-pri-autizme/).
+When teaching toileting skills, consider constipation, pain, urinary problems, toilet accessibility and the ability to communicate the need to use the toilet. Do not punish accidents, restrict drinking or hold a child on the toilet. [Separate article on toileting skills](/kz/en/parents/obuchenie-tualetnym-navykam-pri-autizme/).
 
 ## How to assess outcomes and skill generalisation
 
@@ -323,10 +324,10 @@ Before starting work with a professional, consider asking:
 
 ## Related materials
 
-- [Occupational therapy in autism (Russian)](/kz/ru/parents/ergoterapiya-pri-autizme/)
-- [Toileting skills training in autism (Russian)](/kz/ru/parents/obuchenie-tualetnym-navykam-pri-autizme/)
-- [Prompting and prompt fading (Russian)](/kz/ru/parents/prompting-and-prompt-fading/)
-- [Teaching through demonstration and video modelling (Russian)](/kz/ru/parents/video-modeling/)
-- [Self-management (Russian)](/kz/ru/parents/self-management/)
-- [Special educators and defectologists (Russian)](/kz/ru/parents/special-pedagog-defektolog/)
+- [Occupational therapy in autism](/kz/en/parents/ergoterapiya-pri-autizme/)
+- [Toileting skills training in autism](/kz/en/parents/obuchenie-tualetnym-navykam-pri-autizme/)
+- [Prompting and prompt fading](/kz/en/parents/prompting-and-prompt-fading/)
+- [Teaching through demonstration and video modelling](/kz/en/parents/video-modeling/)
+- [Self-management](/kz/en/parents/self-management/)
+- [Special educators and defectologists](/kz/en/parents/special-pedagog-defektolog/)
 - [How to tell whether the chosen support is helping](/kz/en/parents/how-to-monitor-autism-support-outcomes/)

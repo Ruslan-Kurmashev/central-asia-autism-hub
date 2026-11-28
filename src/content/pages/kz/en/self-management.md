@@ -18,7 +18,7 @@ section: parents
 topic: approaches-to-support
 slug: self-management
 translationKey: parents-self-management
-translationStatus: pending
+translationStatus: checked
 audience:
 - parents
 - families
@@ -28,9 +28,10 @@ riskLevel: lower
 disclaimerType: informational
 originalPublishedAt: '2026-09-18'
 displayPublishedAt: '2026-09-18'
-updatedAt: '2026-11-26'
+publishedAt: 2026-11-28
+updatedAt: 2026-11-28
 reviewDueAt: '2027-03-18'
-draft: true
+draft: false
 sources:
 - title: 'Evidence-Based Practices for Children, Youth, and Young Adults with Autism: Third Generation Review'
   url: https://pmc.ncbi.nlm.nih.gov/articles/PMC8510990/
@@ -154,7 +155,7 @@ When choosing a digital tool, first consider simple local device functions. Appl
 
 General principles of goal selection, teaching strategies and observing outcomes are described in [AFIRM materials](https://eric.ed.gov/?id=ED595396). This sequence is adapted for families and is not a mandatory research protocol.
 
-There is no universal number of attempts, days or seconds to wait. Assistance may be increased again when needed. Do not remove necessary care, supervision or communication aids merely to reduce prompting scores. Further reading: [prompting and prompt fading (in Russian)](/kz/ru/parents/prompting-and-prompt-fading/).
+There is no universal number of attempts, days or seconds to wait. Assistance may be increased again when needed. Do not remove necessary care, supervision or communication aids merely to reduce prompting scores. Further reading: [prompting and prompt fading](/kz/en/parents/prompting-and-prompt-fading/).
 
 ## Practical examples for families
 
@@ -253,9 +254,9 @@ In a [2026 study](https://doi.org/10.1002/jaba.70053) of five participants with 
 
 The document contains a completed example plan, a blank checklist sheet, an example of observing tool use and a blank observation sheet. This is original AutismHub organisational material, not a diagnostic tool or standardised assessment. Keep records with the family and share only necessary information while respecting privacy.
 
-- [Teaching daily living skills (in Russian)](/kz/ru/parents/obuchenie-povsednevnym-navykam/)
-- [Prompting and prompt fading (in Russian)](/kz/ru/parents/prompting-and-prompt-fading/)
-- [Learning through modelling and video modelling (in Russian)](/kz/ru/parents/video-modeling/)
+- [Teaching daily living skills](/kz/en/parents/obuchenie-povsednevnym-navykam/)
+- [Prompting and prompt fading](/kz/en/parents/prompting-and-prompt-fading/)
+- [Learning through modelling and video modelling](/kz/en/parents/video-modeling/)
 - [Reinforcement](/kz/en/parents/reinforcement-parent-guide/)
 - [How to tell whether the chosen support is helping](/kz/en/parents/how-to-monitor-autism-support-outcomes/)
 

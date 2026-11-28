@@ -18,7 +18,7 @@ section: parents
 topic: approaches-to-support
 slug: video-modeling
 translationKey: parents-video-modeling
-translationStatus: pending
+translationStatus: checked
 audience:
 - parents
 - families
@@ -28,9 +28,10 @@ riskLevel: lower
 disclaimerType: informational
 originalPublishedAt: '2026-09-18'
 displayPublishedAt: '2026-09-18'
-updatedAt: '2026-11-26'
+publishedAt: 2026-11-28
+updatedAt: 2026-11-28
 reviewDueAt: '2027-03-18'
-draft: true
+draft: false
 sources:
 - title: 'Evidence-Based Practices for Children, Youth, and Young Adults with Autism: Third Generation Review'
   url: https://pmc.ncbi.nlm.nih.gov/articles/PMC8510990/
@@ -183,7 +184,7 @@ sources:
 
 Үлгі көрсеткеннен кейін әрекетті орындауға мүмкіндік беріңіз. Көмек керек болса, қолжетімді, қысымсыз бағыттаушы көмекті қолданыңыз. Басқа қадамдарды өздігінен орындауға қалдырып, бір қиын қадамға көмектесуге болады. Бас тарту немесе жайсыздық болса, үйрету әрекетін тоқтатып, не кедергі екенін анықтаңыз. Қателер үшін жазаламаңыз.
 
-Бейне тұрақты ыңғайлы нұсқаулыққа айналса, оны автоматты түрде алып тастамаңыз. Ересектің қосымша еске салуынсыз бейнеге өздігінен жүгіну бейімдеумен дербес орындау болып есептелуі мүмкін. Толығырақ: [бағыттаушы көмек және оны біртіндеп азайту (орыс тілінде)](/kz/ru/parents/prompting-and-prompt-fading/).
+Бейне тұрақты ыңғайлы нұсқаулыққа айналса, оны автоматты түрде алып тастамаңыз. Ересектің қосымша еске салуынсыз бейнеге өздігінен жүгіну бейімдеумен дербес орындау болып есептелуі мүмкін. Толығырақ: [бағыттаушы көмек және оны біртіндеп азайту](/kz/kk/parents/prompting-and-prompt-fading/).
 
 ## Баланың келісімі және бейнежазбалардың қауіпсіздігі
 
@@ -249,8 +250,8 @@ Campbell картасы оқу нәтижелері жөніндегі зерт�
 
 ## Байланысты материалдар
 
-- [Күнделікті өмір дағдыларын үйрету (орыс тілінде)](/kz/ru/parents/obuchenie-povsednevnym-navykam/)
-- [Бағыттаушы көмек және оны біртіндеп азайту (орыс тілінде)](/kz/ru/parents/prompting-and-prompt-fading/)
+- [Күнделікті өмір дағдыларын үйрету](/kz/kk/parents/obuchenie-povsednevnym-navykam/)
+- [Бағыттаушы көмек және оны біртіндеп азайту](/kz/kk/parents/prompting-and-prompt-fading/)
 - [Нығайту](/kz/kk/parents/kusheitu-ata-analarga/)
 - [Таңдалған қолдау көмектесіп жатқанын қалай түсінуге болады? (орыс тілінде)](/kz/ru/parents/kak-ponyat-pomogaet-li-podderzhka/)
 

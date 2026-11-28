@@ -19,7 +19,7 @@ section: parents
 topic: approaches-to-support
 slug: ergoterapiya-pri-autizme
 translationKey: parents-occupational-therapy
-translationStatus: pending
+translationStatus: checked
 audience:
 - parents
 - families
@@ -29,9 +29,10 @@ riskLevel: moderate
 disclaimerType: medical
 originalPublishedAt: '2026-09-30T18:18:00+01:00'
 displayPublishedAt: '2026-09-30T18:18:00+01:00'
-updatedAt: '2026-11-25'
+publishedAt: 2026-11-28
+updatedAt: 2026-11-28
 reviewDueAt: '2027-03-30'
-draft: true
+draft: false
 sources:
 - title: Occupational Therapy Practice Guidelines for Autistic People Across the Lifespan
   url: https://doi.org/10.5014/ajot.2024.078301
@@ -121,7 +122,7 @@ sources:
   accessedAt: '2026-11-25'
 ---
 
-[← Дербестік және күнделікті өмір дағдылары (орыс тілінде)](/kz/ru/parents/samostoyatelnost-i-povsednevnye-navyki/)
+[← Дербестік және күнделікті өмір дағдылары](/kz/kk/parents/obuchenie-povsednevnym-navykam/)
 
 ## Эрготерапия деген не?
 
@@ -166,7 +167,7 @@ sources:
 
 Кейбір тапсырмалар әрекеттер ретін жаттықтыруды қажет етеді, ал басқаларын бейімдеу арқылы орындау жеңілірек. Мысалы, бала күрделі түймелері мен сыдырмалары жоқ киімді өзі кие алса, барлық бекіткіш түрлерін меңгергенін күтпей-ақ сондай киімді тұрақты пайдалануға болады.
 
-Үйрету тәсілдері [«Аутизм кезінде күнделікті өмір дағдыларын үйрету» (орыс тілінде)](/kz/ru/parents/obuchenie-povsednevnym-navykam/) мақаласында толығырақ қарастырылған.
+Үйрету тәсілдері [«Аутизм кезінде күнделікті өмір дағдыларын үйрету»](/kz/kk/parents/obuchenie-povsednevnym-navykam/) мақаласында толығырақ қарастырылған.
 
 ## Ғылыми зерттеулер не көрсетеді?
 
@@ -263,9 +264,9 @@ sources:
 
 ## Байланысты материалдар
 
-- [Аутизм кезінде күнделікті өмір дағдыларын үйрету (орыс тілінде)](/kz/ru/parents/obuchenie-povsednevnym-navykam/)
-- [Аутизм кезінде дәретхана дағдыларын үйрету (орыс тілінде)](/kz/ru/parents/obuchenie-tualetnym-navykam-pri-autizme/)
+- [Аутизм кезінде күнделікті өмір дағдыларын үйрету](/kz/kk/parents/obuchenie-povsednevnym-navykam/)
+- [Аутизм кезінде дәретхана дағдыларын үйрету](/kz/kk/parents/obuchenie-tualetnym-navykam-pri-autizme/)
 - [Айрес бойынша сенсорлық интеграция](/kz/kk/parents/aires-boiynsha-sensorlyk-integratsiya/)
 - [Сенсорлық ерекшеліктер және ортаны бейімдеу](/kz/kk/parents/sensorlyk-erekshelikter-zhane-ortany-beiimdeu/)
-- [Арнайы педагог және дефектолог (орыс тілінде)](/kz/ru/parents/special-pedagog-defektolog/)
+- [Арнайы педагог және дефектолог](/kz/kk/parents/special-pedagog-defektolog/)
 - [Таңдалған қолдау көмектесіп жатқанын қалай түсінуге болады? (орыс тілінде)](/kz/ru/parents/kak-ponyat-pomogaet-li-podderzhka/)

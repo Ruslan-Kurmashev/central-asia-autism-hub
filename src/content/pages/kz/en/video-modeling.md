@@ -18,7 +18,7 @@ section: parents
 topic: approaches-to-support
 slug: video-modeling
 translationKey: parents-video-modeling
-translationStatus: pending
+translationStatus: checked
 audience:
 - parents
 - families
@@ -28,9 +28,10 @@ riskLevel: lower
 disclaimerType: informational
 originalPublishedAt: '2026-09-18'
 displayPublishedAt: '2026-09-18'
-updatedAt: '2026-11-26'
+publishedAt: 2026-11-28
+updatedAt: 2026-11-28
 reviewDueAt: '2027-03-18'
-draft: true
+draft: false
 sources:
 - title: 'Evidence-Based Practices for Children, Youth, and Young Adults with Autism: Third Generation Review'
   url: https://pmc.ncbi.nlm.nih.gov/articles/PMC8510990/
@@ -183,7 +184,7 @@ Offer the recording in a suitable setting where objects and familiar communicati
 
 After the demonstration, provide an opportunity to perform the action. If assistance is needed, use an accessible, unobtrusive prompt. Help with one difficult step while leaving other steps available for independent performance. If the child refuses or experiences discomfort, stop the teaching attempt and establish what is creating a barrier. Do not punish mistakes.
 
-If video has become a convenient permanent instruction, do not automatically remove it. Independently accessing the video without an additional adult reminder may count as independent performance with an adaptation. Further reading: [prompting and prompt fading (in Russian)](/kz/ru/parents/prompting-and-prompt-fading/).
+If video has become a convenient permanent instruction, do not automatically remove it. Independently accessing the video without an additional adult reminder may count as independent performance with an adaptation. Further reading: [prompting and prompt fading](/kz/en/parents/prompting-and-prompt-fading/).
 
 ## Child consent and recording safety
 
@@ -249,8 +250,8 @@ A [description of video modelling by the Federal Resource Centre of MSUPE (in Ru
 
 ## Related materials
 
-- [Teaching daily living skills (in Russian)](/kz/ru/parents/obuchenie-povsednevnym-navykam/)
-- [Prompting and prompt fading (in Russian)](/kz/ru/parents/prompting-and-prompt-fading/)
+- [Teaching daily living skills](/kz/en/parents/obuchenie-povsednevnym-navykam/)
+- [Prompting and prompt fading](/kz/en/parents/prompting-and-prompt-fading/)
 - [Reinforcement](/kz/en/parents/reinforcement-parent-guide/)
 - [How to tell whether the chosen support is helping](/kz/en/parents/how-to-monitor-autism-support-outcomes/)
 

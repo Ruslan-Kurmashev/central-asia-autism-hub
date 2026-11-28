@@ -18,7 +18,7 @@ section: parents
 topic: approaches-to-support
 slug: self-management
 translationKey: parents-self-management
-translationStatus: pending
+translationStatus: checked
 audience:
 - parents
 - families
@@ -28,9 +28,10 @@ riskLevel: lower
 disclaimerType: informational
 originalPublishedAt: '2026-09-18'
 displayPublishedAt: '2026-09-18'
-updatedAt: '2026-11-26'
+publishedAt: 2026-11-28
+updatedAt: 2026-11-28
 reviewDueAt: '2027-03-18'
-draft: true
+draft: false
 sources:
 - title: 'Evidence-Based Practices for Children, Youth, and Young Adults with Autism: Third Generation Review'
   url: https://pmc.ncbi.nlm.nih.gov/articles/PMC8510990/
@@ -154,7 +155,7 @@ sources:
 
 Мақсат таңдаудың, стратегияны үйретудің және нәтижені бақылаудың жалпы қағидалары [AFIRM материалдарында](https://eric.ed.gov/?id=ED595396) сипатталған. Бұл әрекеттер реті отбасыларға бейімделген, міндетті зерттеу хаттамасы емес.
 
-Әмбебап әрекет саны, күн саны немесе күту секундтары жоқ. Қажет болса, көмекті қайта көбейтуге болады. Бағыттаушы көмек көрсеткішін азайту үшін қажетті күтімді, қадағалауды немесе коммуникация құралдарын алып тастамаңыз. Толығырақ: [бағыттаушы көмек және оны біртіндеп азайту (орыс тілінде)](/kz/ru/parents/prompting-and-prompt-fading/).
+Әмбебап әрекет саны, күн саны немесе күту секундтары жоқ. Қажет болса, көмекті қайта көбейтуге болады. Бағыттаушы көмек көрсеткішін азайту үшін қажетті күтімді, қадағалауды немесе коммуникация құралдарын алып тастамаңыз. Толығырақ: [бағыттаушы көмек және оны біртіндеп азайту](/kz/kk/parents/prompting-and-prompt-fading/).
 
 ## Отбасына арналған практикалық мысалдар
 
@@ -253,9 +254,9 @@ sources:
 
 Құжатта жоспардың толтырылған үлгісі, тексеру тізімі бар бос парақ, құралды пайдалануды бақылау мысалы және бос бақылау парағы бар. Бұл AutismHub-тың өзіндік ұйымдастыру материалы, диагностикалық құрал немесе стандартталған бағалау емес. Жазбаларды отбасында сақтап, құпиялылықты сақтай отырып тек қажетті мәліметтерді беріңіз.
 
-- [Күнделікті өмір дағдыларын үйрету (орыс тілінде)](/kz/ru/parents/obuchenie-povsednevnym-navykam/)
-- [Бағыттаушы көмек және оны біртіндеп азайту (орыс тілінде)](/kz/ru/parents/prompting-and-prompt-fading/)
-- [Үлгі көрсету және бейнемодельдеу арқылы үйрету (орыс тілінде)](/kz/ru/parents/video-modeling/)
+- [Күнделікті өмір дағдыларын үйрету](/kz/kk/parents/obuchenie-povsednevnym-navykam/)
+- [Бағыттаушы көмек және оны біртіндеп азайту](/kz/kk/parents/prompting-and-prompt-fading/)
+- [Үлгі көрсету және бейнемодельдеу арқылы үйрету](/kz/kk/parents/video-modeling/)
 - [Нығайту](/kz/kk/parents/kusheitu-ata-analarga/)
 - [Таңдалған қолдау көмектесіп жатқанын қалай түсінуге болады? (орыс тілінде)](/kz/ru/parents/kak-ponyat-pomogaet-li-podderzhka/)
 

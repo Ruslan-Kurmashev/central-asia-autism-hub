@@ -20,7 +20,7 @@ section: parents
 topic: approaches-to-support
 slug: obuchenie-tualetnym-navykam-pri-autizme
 translationKey: parents-toileting-interventions
-translationStatus: pending
+translationStatus: checked
 audience:
 - parents
 - families
@@ -30,9 +30,10 @@ riskLevel: high
 disclaimerType: medical
 originalPublishedAt: '2026-10-01T11:53:00+01:00'
 displayPublishedAt: '2026-10-01T11:53:00+01:00'
-updatedAt: '2026-11-25'
+publishedAt: 2026-11-28
+updatedAt: 2026-11-28
 reviewDueAt: '2027-04-01'
-draft: true
+draft: false
 sources:
 - title: Identification, Evaluation, and Management of Children With Autism Spectrum Disorder
   url: https://doi.org/10.1542/peds.2019-3447
@@ -140,7 +141,7 @@ sources:
   accessedAt: '2026-11-25'
 ---
 
-[← Дербестік және күнделікті өмір дағдылары (орыс тілінде)](/kz/ru/parents/samostoyatelnost-i-povsednevnye-navyki/)
+[← Дербестік және күнделікті өмір дағдылары](/kz/kk/parents/obuchenie-povsednevnym-navykam/)
 
 ## Дәретхана дағдысына не кіреді?
 
@@ -240,7 +241,7 @@ sources:
 
 Көмек қажет болғанда ұсыныңыз және артық бағыттаушы көмекті біртіндеп азайтыңыз. Әрекетті қауіпсіз немесе ыңғайлы орындауға мүмкіндік беретін бейімдеуді алып тастамаңыз.
 
-Толығырақ: [күнделікті өмір дағдыларын үйрету (орыс тілінде)](/kz/ru/parents/obuchenie-povsednevnym-navykam/) және [бағыттаушы көмек және оны біртіндеп азайту (орыс тілінде)](/kz/ru/parents/prompting-and-prompt-fading/).
+Толығырақ: [күнделікті өмір дағдыларын үйрету](/kz/kk/parents/obuchenie-povsednevnym-navykam/) және [бағыттаушы көмек және оны біртіндеп азайту](/kz/kk/parents/prompting-and-prompt-fading/).
 
 ## Кесте, бағыттаушы көмек және ынталандыру
 
@@ -365,9 +366,9 @@ sources:
 
 ## Байланысты материалдар
 
-- [Аутизм кезінде күнделікті өмір дағдыларын үйрету (орыс тілінде)](/kz/ru/parents/obuchenie-povsednevnym-navykam/)
-- [Аутизм кезіндегі эрготерапия (орыс тілінде)](/kz/ru/parents/ergoterapiya-pri-autizme/)
-- [Бағыттаушы көмек және оны біртіндеп азайту (орыс тілінде)](/kz/ru/parents/prompting-and-prompt-fading/)
+- [Аутизм кезінде күнделікті өмір дағдыларын үйрету](/kz/kk/parents/obuchenie-povsednevnym-navykam/)
+- [Аутизм кезіндегі эрготерапия](/kz/kk/parents/ergoterapiya-pri-autizme/)
+- [Бағыттаушы көмек және оны біртіндеп азайту](/kz/kk/parents/prompting-and-prompt-fading/)
 - [Нығайту](/kz/kk/parents/kusheitu-ata-analarga/)
 - [Сенсорлық ерекшеліктер және ортаны бейімдеу](/kz/kk/parents/sensorlyk-erekshelikter-zhane-ortany-beiimdeu/)
 - [Таңдалған қолдау көмектесіп жатқанын қалай түсінуге болады? (орыс тілінде)](/kz/ru/parents/kak-ponyat-pomogaet-li-podderzhka/)

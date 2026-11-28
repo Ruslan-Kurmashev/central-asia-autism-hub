@@ -1,5 +1,5 @@
 /**
- * The Kazakhstan legal/professional library has 25 RU reviewed entries across
+ * The Kazakhstan legal/professional library has 31 RU reviewed entries across
  * five categories. This checks the *rendered* links and source metadata;
  * it does not certify the legal accuracy or current force of any document.
  */
@@ -11,11 +11,11 @@ const root = path.resolve('src/content/pages/kz/ru');
 const siteRoot = '/central-asia-autism-hub/kz/ru/professionals/';
 const hubHref = siteRoot + 'kazakhstan-documents/';
 const groups = [
-  { id: 'education-support', prefix: 'kz-education-', count: 8 },
+  { id: 'education-support', prefix: 'kz-education-', count: 9 },
   { id: 'healthcare-diagnosis', prefix: 'kz-healthcare-', count: 5 },
-  { id: 'psychological-practice', prefix: 'kz-psychology-', count: 3 },
+  { id: 'psychological-practice', prefix: 'kz-psychology-', count: 6 },
   { id: 'social-support', prefix: 'kz-social-', count: 5 },
-  { id: 'rights-and-data', prefix: 'kz-rights-', count: 4 },
+  { id: 'rights-and-data', prefix: 'kz-rights-', count: 6 },
 ];
 const field = (frontmatter, key) =>
   frontmatter.match(new RegExp('^' + key + ':\\s*"?([^"\\n]+)"?\\s*$', 'm'))?.[1]?.trim();
@@ -25,9 +25,9 @@ const overview = await readFile('dist/kz/ru/professionals/kazakhstan-documents/i
 const siteCss = await readFile('src/styles/article-v2.css', 'utf8');
 const catalogCss = await readFile('src/styles/kazakhstan-professional-documents.css', 'utf8');
 
-assert.ok(overview.includes('<strong>25</strong> материалов'), 'Russian overview must describe published reviews, not a publication plan');
-assert.ok(!overview.includes('25 документов в плане'), 'Russian overview incorrectly presents published material as pending');
-assert.ok(overview.includes('Опубликовано: <strong>25</strong>'), 'Full Russian catalog must show 25 published reviews');
+assert.ok(overview.includes('<strong>31</strong> материал'), 'Russian overview must describe published reviews, not a publication plan');
+assert.ok(!overview.includes('31 документов в плане'), 'Russian overview incorrectly presents published material as pending');
+assert.ok(overview.includes('Опубликовано: <strong>31</strong>'), 'Full Russian catalog must show 31 published reviews');
 assert.ok(siteCss.includes('.article-v2.kz-professionals-document-body .article-v2__body table'),
   'Kazakhstan professional articles need mobile table overflow protection');
 assert.ok(siteCss.includes('overflow-x: auto;'), 'Wide legal tables must scroll within their viewport on mobile');
@@ -119,7 +119,7 @@ for (const group of groups) {
   }
 }
 
-assert.equal(checked, 25, 'Expected 25 individual RU Kazakhstan legal reviews');
+assert.equal(checked, 31, 'Expected 31 individual RU Kazakhstan legal reviews');
 for (const locale of ['kk', 'en']) {
   const localizedOverview = await readFile(
     path.resolve('dist/kz', locale, 'professionals/kazakhstan-documents/index.html'),
@@ -129,4 +129,4 @@ for (const locale of ['kk', 'en']) {
     locale + ': do not mark unreviewed translation as published');
 }
 
-console.log('Kazakhstan professional library QA: 25 published RU reviews, 5 correct category breadcrumbs and back links, 25 covers, source provenance, mobile CSS safeguards; KK/EN pending.');
+console.log('Kazakhstan professional library QA: 31 published RU reviews, 5 correct category breadcrumbs and back links, 31 covers, source provenance, mobile CSS safeguards; KK/EN pending.');

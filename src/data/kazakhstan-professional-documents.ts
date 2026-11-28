@@ -55,6 +55,7 @@ export const kazakhstanDocumentGroups: KazakhstanDocumentGroup[] = [
       document('pmpk-services-rules','P0','Правила оказания услуг психолого-медико-педагогической консультации (ПМПК)','Психологиялық-медициналық-педагогикалық консультация (ПМПК) қызметтері қағидалары','Rules for psycho-medical-pedagogical consultation services'),
       document('psychological-support-centres-264','P1','Приказ № 264: центры психологической поддержки','№ 264 бұйрық: психологиялық қолдау орталықтары','Order No. 264: psychological support centres'),
       document('special-support-state-order-532','P1','Приказ № 532: государственный образовательный заказ на специальную поддержку','№ 532 бұйрық: арнайы қолдауға мемлекеттік білім беру тапсырысы','Order No. 532: public procurement of special educational support'),
+      document('education-bullying-prevention-order-506','P0','Приказ № 506: профилактика буллинга ребёнка','№ 506 бұйрық: баланы жәбірлеудің (буллингтің) алдын алу','Order No. 506: prevention of child bullying'),
     ],
   },
   {
@@ -95,6 +96,9 @@ export const kazakhstanDocumentGroups: KazakhstanDocumentGroup[] = [
       document('psychological-activity-law-332','P0','Закон РК «О психологической деятельности» № 332-VIII','ҚР «Психологиялық қызмет туралы» заңы № 332-VIII','Law on Psychological Practice No. 332-VIII'),
       document('teacher-qualifications-order-338','P1','Приказ № 338: квалификационные характеристики педагогов','№ 338 бұйрық: педагогтер лауазымдарының біліктілік сипаттамалары','Order No. 338: qualification requirements for education professionals'),
       document('teacher-status-law-293','P1','Закон РК «О статусе педагога» № 293-VI','ҚР «Педагог мәртебесі туралы» заңы № 293-VI','Law on the Status of Teachers No. 293-VI'),
+      document('psychology-professional-standard-order-375','P0','Приказ № 375: профессиональный стандарт психолога','№ 375 бұйрық: психологтің кәсіптік стандарты','Order No. 375: professional standard for psychologists'),
+      document('psychology-ethics-code-order-434','P0','Приказ № 434: Кодекс этики психологов','№ 434 бұйрық: психологтердің әдеп кодексі','Order No. 434: code of ethics for psychologists'),
+      document('psychology-informed-consent-order-365','P0','Приказ № 365: информированное согласие на психологическую помощь','№ 365 бұйрық: психологиялық көмек алуға ақпараттандырылған келісім','Order No. 365: informed consent to psychological assistance'),
     ],
   },
   {
@@ -136,6 +140,8 @@ export const kazakhstanDocumentGroups: KazakhstanDocumentGroup[] = [
       document('personal-data-law-94','P0','Закон РК «О персональных данных и их защите» № 94-V','ҚР «Дербес деректер және оларды қорғау туралы» заңы № 94-V','Law on Personal Data and Its Protection No. 94-V'),
       document('disability-convention-ratification-288','P1','Закон № 288-V: ратификация Конвенции о правах инвалидов','№ 288-V заң: Мүгедектердің құқықтары туралы конвенцияны ратификациялау','Law No. 288-V: ratification of the Convention on the Rights of Persons with Disabilities'),
       document('inclusion-policy-2025-2030','P2','Концепция инклюзивной политики Казахстана на 2025-2030 годы','Қазақстанның 2025-2030 жылдарға арналған инклюзивті саясат тұжырымдамасы','Kazakhstan Inclusive Policy Concept 2025-2030'),
+      document('rights-child-violence-protection-38874','P0','Совместный приказ (рег. № 38874): выявление насилия над детьми и организация помощи','Бірлескен бұйрық (тіркеу № 38874): балаларға қатысты зорлық-зомбылықты анықтау және көмек көрсету','Joint order (registration No. 38874): identifying violence against children and providing assistance'),
+      document('rights-digital-code-255','P1','Цифровой кодекс № 255-VIII: доступность и цифровые права','№ 255-VIII Цифрлық кодекс: қолжетімділік және цифрлық құқықтар','Digital Code No. 255-VIII: accessibility and digital rights'),
     ],
   },
 ];

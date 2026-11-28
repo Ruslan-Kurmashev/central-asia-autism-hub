@@ -18,7 +18,7 @@ section: parents
 topic: approaches-to-support
 slug: special-pedagog-defektolog
 translationKey: parents-special-pedagog-defectologist
-translationStatus: pending
+translationStatus: checked
 audience:
 - parents
 - families
@@ -28,9 +28,10 @@ riskLevel: moderate
 disclaimerType: informational
 originalPublishedAt: '2026-10-01T12:00:00+01:00'
 displayPublishedAt: '2026-10-01T12:00:00+01:00'
-updatedAt: '2026-11-26'
+publishedAt: 2026-11-28
+updatedAt: 2026-11-28
 reviewDueAt: '2027-04-01'
-draft: true
+draft: false
 sources:
 - title: Об утверждении Профессиональных стандартов для педагогов организаций образования
   url: https://old.adilet.zan.kz/rus/docs/G25HP000031
@@ -136,7 +137,7 @@ sources:
   accessedAt: '2026-11-26'
 ---
 
-[← Дербестік және күнделікті өмір дағдылары (орыс тілінде)](/kz/ru/parents/samostoyatelnost-i-povsednevnye-navyki/)
+[← Дербестік және күнделікті өмір дағдылары](/kz/kk/parents/obuchenie-povsednevnym-navykam/)
 
 ## Арнайы педагог және дефектолог деген кім?
 
@@ -274,11 +275,11 @@ sources:
 
 Байланысты мақалалар:
 
-- [Күнделікті өмір дағдыларын үйрету (орыс тілінде)](/kz/ru/parents/obuchenie-povsednevnym-navykam/)
-- [Көмекші нұсқаулар және оларды біртіндеп азайту (орыс тілінде)](/kz/ru/parents/prompting-and-prompt-fading/)
-- [Үлгі көрсету және бейнемодельдеу арқылы үйрету (орыс тілінде)](/kz/ru/parents/video-modeling/)
-- [Өзін-өзі басқару (орыс тілінде)](/kz/ru/parents/self-management/)
+- [Күнделікті өмір дағдыларын үйрету](/kz/kk/parents/obuchenie-povsednevnym-navykam/)
+- [Көмекші нұсқаулар және оларды біртіндеп азайту](/kz/kk/parents/prompting-and-prompt-fading/)
+- [Үлгі көрсету және бейнемодельдеу арқылы үйрету](/kz/kk/parents/video-modeling/)
+- [Өзін-өзі басқару](/kz/kk/parents/self-management/)
 - [AAC](/kz/kk/parents/aac-balamaly-kosymsha-kommunikatsiya/)
-- [Эрготерапия (орыс тілінде)](/kz/ru/parents/ergoterapiya-pri-autizme/)
+- [Эрготерапия](/kz/kk/parents/ergoterapiya-pri-autizme/)
 
-[← Дербестік және күнделікті өмір дағдылары (орыс тілінде)](/kz/ru/parents/samostoyatelnost-i-povsednevnye-navyki/)
+[← Дербестік және күнделікті өмір дағдылары](/kz/kk/parents/obuchenie-povsednevnym-navykam/)

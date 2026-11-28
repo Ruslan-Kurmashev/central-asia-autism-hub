@@ -17,7 +17,7 @@ section: parents
 topic: approaches-to-support
 slug: prompting-and-prompt-fading
 translationKey: parents-prompting-and-prompt-fading
-translationStatus: pending
+translationStatus: checked
 audience:
 - parents
 - families
@@ -27,9 +27,10 @@ riskLevel: moderate
 disclaimerType: medical
 originalPublishedAt: '2026-09-18'
 displayPublishedAt: '2026-09-18'
-updatedAt: '2026-11-25'
+publishedAt: 2026-11-28
+updatedAt: 2026-11-28
 reviewDueAt: '2027-03-18'
-draft: true
+draft: false
 sources:
 - title: A Comparison of the Effects of Two Prompt-Fading Strategies on Skill Acquisition in Children with Autism Spectrum Disorders
   url: https://pubmed.ncbi.nlm.nih.gov/27606243/
@@ -262,8 +263,8 @@ The most defensible conclusion is to select support individually, track independ
 
 ## Related materials
 
-- [Teaching daily living skills (in Russian)](/kz/ru/parents/obuchenie-povsednevnym-navykam/)
-- [Occupational therapy in autism (in Russian)](/kz/ru/parents/ergoterapiya-pri-autizme/)
+- [Teaching daily living skills](/kz/en/parents/obuchenie-povsednevnym-navykam/)
+- [Occupational therapy in autism](/kz/en/parents/ergoterapiya-pri-autizme/)
 - [Reinforcement](/kz/en/parents/reinforcement-parent-guide/)
 - [Differential reinforcement](/kz/en/parents/differential-reinforcement-guide/)
 - [Functional communication training (FCT, in Russian)](/kz/en/parents/fct-functional-communication-training/)

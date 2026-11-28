@@ -19,7 +19,7 @@ section: parents
 topic: approaches-to-support
 slug: ergoterapiya-pri-autizme
 translationKey: parents-occupational-therapy
-translationStatus: pending
+translationStatus: checked
 audience:
 - parents
 - families
@@ -29,9 +29,10 @@ riskLevel: moderate
 disclaimerType: medical
 originalPublishedAt: '2026-09-30T18:18:00+01:00'
 displayPublishedAt: '2026-09-30T18:18:00+01:00'
-updatedAt: '2026-11-25'
+publishedAt: 2026-11-28
+updatedAt: 2026-11-28
 reviewDueAt: '2027-03-30'
-draft: true
+draft: false
 sources:
 - title: Occupational Therapy Practice Guidelines for Autistic People Across the Lifespan
   url: https://doi.org/10.5014/ajot.2024.078301
@@ -121,7 +122,7 @@ sources:
   accessedAt: '2026-11-25'
 ---
 
-[← Independence and daily living skills (in Russian)](/kz/ru/parents/samostoyatelnost-i-povsednevnye-navyki/)
+[← Independence and daily living skills](/kz/en/parents/obuchenie-povsednevnym-navykam/)
 
 ## What is occupational therapy?
 
@@ -166,7 +167,7 @@ The examples below illustrate possible approaches. They are not an individual tr
 
 Some tasks require practice of sequential actions, whereas others are more readily addressed through adaptation. For example, if a child can dress using clothing without difficult fasteners, such clothing can be used permanently without waiting for the child to master every type of fastener.
 
-Detailed teaching approaches are discussed in [Teaching daily living skills in autism (in Russian)](/kz/ru/parents/obuchenie-povsednevnym-navykam/).
+Detailed teaching approaches are discussed in [Teaching daily living skills in autism](/kz/en/parents/obuchenie-povsednevnym-navykam/).
 
 ## What does the research say?
 
@@ -263,9 +264,9 @@ Promises to cure autism, the same programme for every child, disregard for refus
 
 ## Related materials
 
-- [Teaching daily living skills in autism (in Russian)](/kz/ru/parents/obuchenie-povsednevnym-navykam/)
-- [Teaching toileting skills in autism (in Russian)](/kz/ru/parents/obuchenie-tualetnym-navykam-pri-autizme/)
+- [Teaching daily living skills in autism](/kz/en/parents/obuchenie-povsednevnym-navykam/)
+- [Teaching toileting skills in autism](/kz/en/parents/obuchenie-tualetnym-navykam-pri-autizme/)
 - [Ayres Sensory Integration](/kz/en/parents/ayres-sensory-integration/)
 - [Sensory differences and environmental adaptation](/kz/en/parents/sensory-differences-and-environmental-adjustments/)
-- [Special education teacher and defectologist (in Russian)](/kz/ru/parents/special-pedagog-defektolog/)
+- [Special education teacher and defectologist](/kz/en/parents/special-pedagog-defektolog/)
 - [How to tell whether the chosen support is helping](/kz/en/parents/how-to-monitor-autism-support-outcomes/)

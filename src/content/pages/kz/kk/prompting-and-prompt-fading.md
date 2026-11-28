@@ -17,7 +17,7 @@ section: parents
 topic: approaches-to-support
 slug: prompting-and-prompt-fading
 translationKey: parents-prompting-and-prompt-fading
-translationStatus: pending
+translationStatus: checked
 audience:
 - parents
 - families
@@ -27,9 +27,10 @@ riskLevel: moderate
 disclaimerType: medical
 originalPublishedAt: '2026-09-18'
 displayPublishedAt: '2026-09-18'
-updatedAt: '2026-11-25'
+publishedAt: 2026-11-28
+updatedAt: 2026-11-28
 reviewDueAt: '2027-03-18'
-draft: true
+draft: false
 sources:
 - title: A Comparison of the Effects of Two Prompt-Fading Strategies on Skill Acquisition in Children with Autism Spectrum Disorders
   url: https://pubmed.ncbi.nlm.nih.gov/27606243/
@@ -262,8 +263,8 @@ AAC, көзілдірік, есту аппараттары, бейімделге
 
 ## Байланысты материалдар
 
-- [Күнделікті өмір дағдыларын үйрету (орыс тілінде)](/kz/ru/parents/obuchenie-povsednevnym-navykam/)
-- [Аутизм кезіндегі эрготерапия (орыс тілінде)](/kz/ru/parents/ergoterapiya-pri-autizme/)
+- [Күнделікті өмір дағдыларын үйрету](/kz/kk/parents/obuchenie-povsednevnym-navykam/)
+- [Аутизм кезіндегі эрготерапия](/kz/kk/parents/ergoterapiya-pri-autizme/)
 - [Нығайту](/kz/kk/parents/kusheitu-ata-analarga/)
 - [Дифференциалды нығайту](/kz/kk/parents/saralangan-kusheitu/)
 - [Функционалдық коммуникацияны үйрету (FCT, орыс тілінде)](/kz/kk/parents/fct-funktsionaldyk-kommunikatsiya/)

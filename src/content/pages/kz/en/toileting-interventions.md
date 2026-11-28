@@ -20,7 +20,7 @@ section: parents
 topic: approaches-to-support
 slug: obuchenie-tualetnym-navykam-pri-autizme
 translationKey: parents-toileting-interventions
-translationStatus: pending
+translationStatus: checked
 audience:
 - parents
 - families
@@ -30,9 +30,10 @@ riskLevel: high
 disclaimerType: medical
 originalPublishedAt: '2026-10-01T11:53:00+01:00'
 displayPublishedAt: '2026-10-01T11:53:00+01:00'
-updatedAt: '2026-11-25'
+publishedAt: 2026-11-28
+updatedAt: 2026-11-28
 reviewDueAt: '2027-04-01'
-draft: true
+draft: false
 sources:
 - title: Identification, Evaluation, and Management of Children With Autism Spectrum Disorder
   url: https://doi.org/10.1542/peds.2019-3447
@@ -140,7 +141,7 @@ sources:
   accessedAt: '2026-11-25'
 ---
 
-[← Independence and daily living skills (in Russian)](/kz/ru/parents/samostoyatelnost-i-povsednevnye-navyki/)
+[← Independence and daily living skills](/kz/en/parents/obuchenie-povsednevnym-navykam/)
 
 ## What does toileting involve?
 
@@ -240,7 +241,7 @@ Use short, familiar instructions. Actions involving clothing, using the toilet, 
 
 Offer help when needed and gradually reduce unnecessary prompts. Do not remove an adaptation that allows a task to be performed safely or comfortably.
 
-Further reading: [teaching daily living skills (in Russian)](/kz/ru/parents/obuchenie-povsednevnym-navykam/) and [prompting and prompt fading (in Russian)](/kz/ru/parents/prompting-and-prompt-fading/).
+Further reading: [teaching daily living skills](/kz/en/parents/obuchenie-povsednevnym-navykam/) and [prompting and prompt fading](/kz/en/parents/prompting-and-prompt-fading/).
 
 ## Scheduling, prompts and encouragement
 
@@ -365,9 +366,9 @@ Andrey Surkov, paediatric gastroenterologist and head of the gastroenterology de
 
 ## Related materials
 
-- [Teaching daily living skills in autism (in Russian)](/kz/ru/parents/obuchenie-povsednevnym-navykam/)
-- [Occupational therapy in autism (in Russian)](/kz/ru/parents/ergoterapiya-pri-autizme/)
-- [Prompting and prompt fading (in Russian)](/kz/ru/parents/prompting-and-prompt-fading/)
+- [Teaching daily living skills in autism](/kz/en/parents/obuchenie-povsednevnym-navykam/)
+- [Occupational therapy in autism](/kz/en/parents/ergoterapiya-pri-autizme/)
+- [Prompting and prompt fading](/kz/en/parents/prompting-and-prompt-fading/)
 - [Reinforcement](/kz/en/parents/reinforcement-parent-guide/)
 - [Sensory differences and environmental adaptation](/kz/en/parents/sensory-differences-and-environmental-adjustments/)
 - [How to tell whether the chosen support is helping](/kz/en/parents/how-to-monitor-autism-support-outcomes/)

@@ -18,7 +18,7 @@ section: parents
 topic: approaches-to-support
 slug: special-pedagog-defektolog
 translationKey: parents-special-pedagog-defectologist
-translationStatus: pending
+translationStatus: checked
 audience:
 - parents
 - families
@@ -28,9 +28,10 @@ riskLevel: moderate
 disclaimerType: informational
 originalPublishedAt: '2026-10-01T12:00:00+01:00'
 displayPublishedAt: '2026-10-01T12:00:00+01:00'
-updatedAt: '2026-11-26'
+publishedAt: 2026-11-28
+updatedAt: 2026-11-28
 reviewDueAt: '2027-04-01'
-draft: true
+draft: false
 sources:
 - title: Об утверждении Профессиональных стандартов для педагогов организаций образования
   url: https://old.adilet.zan.kz/rus/docs/G25HP000031
@@ -136,7 +137,7 @@ sources:
   accessedAt: '2026-11-26'
 ---
 
-[← Independence and daily living skills (in Russian)](/kz/ru/parents/samostoyatelnost-i-povsednevnye-navyki/)
+[← Independence and daily living skills](/kz/en/parents/obuchenie-povsednevnym-navykam/)
 
 ## Who is a special educator or defectologist?
 
@@ -274,11 +275,11 @@ The document contains consultation questions, an example plan and a blank sheet 
 
 Related articles:
 
-- [Learning daily living skills (in Russian)](/kz/ru/parents/obuchenie-povsednevnym-navykam/)
-- [Prompting and prompt fading (in Russian)](/kz/ru/parents/prompting-and-prompt-fading/)
-- [Learning through demonstration and video modelling (in Russian)](/kz/ru/parents/video-modeling/)
-- [Self-management (in Russian)](/kz/ru/parents/self-management/)
+- [Learning daily living skills](/kz/en/parents/obuchenie-povsednevnym-navykam/)
+- [Prompting and prompt fading](/kz/en/parents/prompting-and-prompt-fading/)
+- [Learning through demonstration and video modelling](/kz/en/parents/video-modeling/)
+- [Self-management](/kz/en/parents/self-management/)
 - [AAC](/kz/en/parents/aac-communication-guide/)
-- [Occupational therapy (in Russian)](/kz/ru/parents/ergoterapiya-pri-autizme/)
+- [Occupational therapy](/kz/en/parents/ergoterapiya-pri-autizme/)
 
-[← Independence and daily living skills (in Russian)](/kz/ru/parents/samostoyatelnost-i-povsednevnye-navyki/)
+[← Independence and daily living skills](/kz/en/parents/obuchenie-povsednevnym-navykam/)
