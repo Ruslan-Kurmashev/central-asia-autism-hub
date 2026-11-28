@@ -21,7 +21,7 @@ const expected = {
     back: 'All areas', pending: 'In preparation', cardWord: 'resources', training: 'Training for professionals', published: 0,
   },
 };
-const counts = [42, 6, 12, 3, 3, 5];
+const counts = [48, 6, 12, 3, 3, 5];
 const ids = ['guidelines', 'family-communication', 'assessment-context', 'evidence-support', 'ethics', 'practice-tools'];
 // CSS emitted assets are content-hashed. The HTML must reference our directory stylesheet
 // indirectly via Astro's static asset pipeline.
@@ -304,17 +304,17 @@ for (const [locale, copy] of Object.entries(expected)) {
 
   const hub = await readFile(path.resolve('dist/kz', locale, 'professionals/kazakhstan-documents/index.html'), 'utf8');
   assert.equal((hub.match(/class="kz-documents__card"/g) ?? []).length, 5, locale + ': expected five Kazakhstan document categories');
-  assert.ok(hub.includes('<strong>25</strong>'), locale + ': roadmap must state 25 planned documents');
-  const kazakhDocumentPublicationCount = locale === 'ru' ? 25 : 0;
+  assert.ok(hub.includes('<strong>31</strong>'), locale + ': roadmap must state 31 planned documents');
+  const kazakhDocumentPublicationCount = locale === 'ru' ? 31 : 0;
   assert.ok(hub.includes('Опубликовано: <strong>' + kazakhDocumentPublicationCount + '</strong>') ||
     hub.includes((locale === 'en' ? 'Published' : locale === 'kk' ? 'Жарияланғаны' : 'Опубликовано') + ': <strong>' + kazakhDocumentPublicationCount + '</strong>'),
     locale + ': published Kazakhstan article count is incorrect');
   const categoryData = [
-    ['education-support', 8],
+    ['education-support', 9],
     ['healthcare-diagnosis', 5],
-    ['psychological-practice', 3],
+    ['psychological-practice', 6],
     ['social-support', 5],
-    ['rights-and-data', 4],
+    ['rights-and-data', 6],
   ];
   for (const [category, expectedCount] of categoryData) {
     const href = base + category + '/';
@@ -323,7 +323,7 @@ for (const [locale, copy] of Object.entries(expected)) {
     const categoryHtml = await readFile(path.resolve('dist/kz', locale, 'professionals/kazakhstan-documents', category, 'index.html'), 'utf8');
     assert.ok(categoryHtml.includes('href="' + hubHref + '"'), locale + ': missing back-to-categories link: ' + category);
     assert.equal((categoryHtml.match(/class="kz-documents__entry"/g) ?? []).length, expectedCount, locale + ': incorrect document count for ' + category);
-    const publishedHere = locale === 'ru' ? (category === 'education-support' ? 8 : category === 'healthcare-diagnosis' ? 5 : category === 'psychological-practice' ? 3 : category === 'social-support' ? 5 : category === 'rights-and-data' ? 4 : 0) : 0;
+    const publishedHere = locale === 'ru' ? expectedCount : 0;
     assert.equal((categoryHtml.match(/class="kz-documents__status"/g) ?? []).length, expectedCount - publishedHere, locale + ': unpublished document statuses incorrect for ' + category);
     assert.equal((categoryHtml.match(/class="kz-documents__article-link"/g) ?? []).length, publishedHere, locale + ': published documents must link to real articles only for ' + category);
     assert.ok(!categoryHtml.includes('href="undefined"'), locale + ': undefined link in ' + category);
@@ -338,6 +338,7 @@ for (const [locale, copy] of Object.entries(expected)) {
       ['pmpk-services-rules', 'gosusluga-pmpk-pravila-obrashcheniya-i-rezultat', '30 календарных дней'],
       ['psychological-support-centres-264', 'prikaz-264-centry-psihologicheskoj-podderzhki', 'Основные задачи'],
       ['special-support-state-order-532', 'prikaz-532-gosudarstvennyj-zakaz-specialnoj-podderzhki', 'Кто участвует в процедуре'],
+      ['education-bullying-prevention-order-506', 'prikaz-506-profilaktika-bullinga', '21 ноября 2026 года'],
     ];
     const educationPage = await readFile(path.resolve('dist/kz/ru/professionals/kazakhstan-documents/education-support/index.html'), 'utf8');
     for (const [id, slug, phrase] of publishedDocs) {
@@ -381,10 +382,14 @@ for (const [locale, copy] of Object.entries(expected)) {
       ['psychological-activity-law-332', 'zakon-o-psihologicheskoj-deyatelnosti-332-2026', '2028'],
       ['teacher-qualifications-order-338', 'prikaz-338-kvalifikacionnye-trebovaniya-k-pedagogam', 'Педагог-психолог'],
       ['teacher-status-law-293', 'zakon-o-statuse-pedagoga-prava-i-obyazannosti', 'Статья 6'],
+      ['psychology-professional-standard-order-375', 'prikaz-375-professionalnyj-standart-psihologa', '2634-1-006'],
+      ['psychology-ethics-code-order-434', 'prikaz-434-kodeks-etiki-psihologov', '17 ноября 2026 года'],
+      ['psychology-informed-consent-order-365', 'prikaz-365-informirovannoe-soglasie', '18 лет'],
     ];
     for (const [id, slug, phrase] of published) {
       const url = '/central-asia-autism-hub/kz/ru/professionals/' + slug + '/';
       assert.ok(list.includes('href="' + url + '"'), id + ': missing category article link');
+      assert.ok(!html.includes('href="' + url + '"'), id + ': review must not be duplicated in top-level guidelines');
       const page = await readFile(path.resolve('dist/kz/ru/professionals', slug, 'index.html'), 'utf8');
       assert.ok(page.includes('guideline-flag-kz.svg'), id + ': missing image');
       assert.ok(page.includes('Паспорт документа'), id + ': missing passport');
@@ -419,6 +424,8 @@ for (const [locale, copy] of Object.entries(expected)) {
       ['personal-data-law-94', 'zakon-94-personalnye-dannye-detej-konfidencialnost', 'Статья 19-1', 'Z1300000094'],
       ['disability-convention-ratification-288', 'konvenciya-o-pravah-invalidov-kazahstan-ratifikaciya', 'Статья 24', 'Z1500000288'],
       ['inclusion-policy-2025-2030', 'koncepciya-inklyuzivnoj-politiki-kazahstan-2025-2030', '2030', 'P2400001143'],
+      ['rights-child-violence-protection-38874', 'pravila-zashchity-detey-ot-nasiliya-38874', 'кейс-менеджер', 'V2600038874'],
+      ['rights-digital-code-255', 'cifrovoj-kodeks-255-cifrovye-prava', 'Статья 43', 'K2600000255'],
     ];
     for (const [id, slug, phrase, documentId] of reviews) {
       const href = '/central-asia-autism-hub/kz/ru/professionals/' + slug + '/';
@@ -434,5 +441,5 @@ for (const [locale, copy] of Object.entries(expected)) {
     const policy = await readFile(path.resolve('dist/kz/ru/professionals/koncepciya-inklyuzivnoj-politiki-kazahstan-2025-2030/index.html'), 'utf8');
     assert.ok(policy.includes('плановыми целями') || policy.includes('плановых целей') || policy.includes('плановые цели'), 'Inclusion concept must clearly label planned rather than achieved indicators');
   }
-  console.log('Professional directory ' + locale + ': 6 directions, 5 Kazakhstan categories, 25 planned documents and ' + kazakhDocumentPublicationCount + ' locally published reviews.');
+  console.log('Professional directory ' + locale + ': 6 directions, 5 Kazakhstan categories, 31 planned documents and ' + kazakhDocumentPublicationCount + ' locally published reviews.');
 }

@@ -19,6 +19,7 @@ riskLevel: moderate
 disclaimerType: informational
 conflictOfInterest: "Сведения о конфликте интересов подлежат подтверждению ответственным редактором. Материал не является официальным толкованием законодательства."
 publishedAt: 2026-11-27
+updatedAt: 2026-11-28
 reviewDueAt: 2026-12-27
 draft: false
 keyPoints:
