@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 660 658" role="img" aria-labelledby="chart-title chart-desc">
+<title id="chart-title">Self-management components</title>
+<desc id="chart-desc">15 studies. Self-monitoring 11, self-instruction 3, self-recording 2, self-reinforcement 2, independent choice 1, self-evaluation 1. Categories overlap.</desc>
+<rect width="660" height="658" rx="12" fill="#ffffff"/>
+<g fill="#183b53" font-family="DejaVu Sans, Arial, sans-serif" font-size="24">
+<text x="24" y="36" font-weight="700">Self-management components</text>
+<text x="24" y="66">Studies out of 15</text>
+<text x="24" y="105">Self-monitoring</text>
+<rect x="24" y="117" width="475" height="25" rx="3" fill="#edf2f6"/>
+<rect x="24" y="117" width="348.333" height="25" rx="3" fill="#397d96"/>
+<text x="511" y="139" font-weight="700">11 of 15</text>
+<text x="24" y="181">Self-instruction</text>
+<rect x="24" y="193" width="475" height="25" rx="3" fill="#edf2f6"/>
+<rect x="24" y="193" width="95.000" height="25" rx="3" fill="#397d96"/>
+<text x="511" y="215" font-weight="700">3 of 15</text>
+<text x="24" y="257">Self-recording</text>
+<rect x="24" y="269" width="475" height="25" rx="3" fill="#edf2f6"/>
+<rect x="24" y="269" width="63.333" height="25" rx="3" fill="#397d96"/>
+<text x="511" y="291" font-weight="700">2 of 15</text>
+<text x="24" y="333">Self-reinforcement</text>
+<rect x="24" y="345" width="475" height="25" rx="3" fill="#edf2f6"/>
+<rect x="24" y="345" width="63.333" height="25" rx="3" fill="#397d96"/>
+<text x="511" y="367" font-weight="700">2 of 15</text>
+<text x="24" y="409">Independent choice</text>
+<rect x="24" y="421" width="475" height="25" rx="3" fill="#edf2f6"/>
+<rect x="24" y="421" width="31.667" height="25" rx="3" fill="#397d96"/>
+<text x="511" y="443" font-weight="700">1 of 15</text>
+<text x="24" y="485">Self-evaluation</text>
+<rect x="24" y="497" width="475" height="25" rx="3" fill="#edf2f6"/>
+<rect x="24" y="497" width="31.667" height="25" rx="3" fill="#397d96"/>
+<text x="511" y="519" font-weight="700">1 of 15</text>
+<text x="24" y="564" font-size="23">Categories overlap.</text>
+<text x="24" y="596" font-size="23">Frequency of study, not effectiveness.</text>
+<text x="24" y="628" font-size="23">Aydin et al., 2025 (online 2024).</text>
+</g></svg>
